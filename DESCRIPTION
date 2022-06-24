@@ -1,10 +1,10 @@
 Package: raylibr
-Title: What the Package Does (One Line, Title Case)
+Title: R Wrapper for 'Raylib'
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Jeroen", "Janssens", email = "jeroen@jeroenjanssens.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-5878-8924"))
+Description: This package wraps Raylib, a simple and easy-to-use library to enjoy videogames programming.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
