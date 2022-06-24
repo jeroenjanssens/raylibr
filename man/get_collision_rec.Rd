@@ -17,3 +17,8 @@ A rectangle
 \description{
 Get collision rectangle for two rectangles collision.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Rectangle GetCollisionRec(Rectangle rec1, Rectangle rec2);}
+}

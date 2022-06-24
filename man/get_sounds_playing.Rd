@@ -12,3 +12,8 @@ An integer
 \description{
 Get number of sounds playing in the multichannel.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{int GetSoundsPlaying(void);}
+}

@@ -15,3 +15,8 @@ A string
 \description{
 Get the human-readable, UTF-8 encoded name of the primary monitor.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{const char *GetMonitorName(int monitor);}
+}

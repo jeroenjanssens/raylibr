@@ -22,3 +22,8 @@ draw_circle_sector(center, radius, start_angle, end_angle, segments, color)
 \description{
 Draw a piece of a circle.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawCircleSector(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color);}
+}

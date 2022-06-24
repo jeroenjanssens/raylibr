@@ -18,3 +18,8 @@ draw_triangle(v_1, v_2, v_3, color)
 \description{
 Draw a color-filled triangle (vertex in counter-clockwise order!).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawTriangle(Vector2 v1, Vector2 v2, Vector2 v3, Color color);}
+}

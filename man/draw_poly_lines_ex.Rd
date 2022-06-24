@@ -22,3 +22,8 @@ draw_poly_lines_ex(center, sides, radius, rotation, line_thick, color)
 \description{
 Draw a polygon outline of n sides with extended parameters.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawPolyLinesEx(Vector2 center, int sides, float radius, float rotation, float lineThick, Color color);}
+}

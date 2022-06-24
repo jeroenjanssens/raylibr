@@ -15,3 +15,8 @@ A color
 \description{
 Get Color from normalized values \link{0..1}.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Color ColorFromNormalized(Vector4 normalized);}
+}

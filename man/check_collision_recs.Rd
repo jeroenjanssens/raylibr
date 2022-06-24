@@ -17,3 +17,8 @@ A logical
 \description{
 Check collision between two rectangles.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{bool CheckCollisionRecs(Rectangle rec1, Rectangle rec2);}
+}

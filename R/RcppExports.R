@@ -9,6 +9,10 @@
 #' @param height An integer
 #' @param title A string
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void InitWindow(int width, int height, const char *title);`
+#'
 #' @export
 init_window <- function(width, height, title) {
     invisible(.Call(`_raylibr_init_window`, width, height, title))
@@ -20,6 +24,10 @@ init_window <- function(width, height, title) {
 #'
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool WindowShouldClose(void);`
+#'
 #' @export
 window_should_close <- function() {
     .Call(`_raylibr_window_should_close`)
@@ -29,6 +37,10 @@ window_should_close <- function() {
 #'
 #' Close window and unload OpenGL context.
 #'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void CloseWindow(void);`
 #'
 #' @export
 close_window <- function() {
@@ -41,6 +53,10 @@ close_window <- function() {
 #'
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsWindowReady(void);`
+#'
 #' @export
 is_window_ready <- function() {
     .Call(`_raylibr_is_window_ready`)
@@ -51,6 +67,10 @@ is_window_ready <- function() {
 #' Check if window is currently fullscreen.
 #'
 #' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsWindowFullscreen(void);`
 #'
 #' @export
 is_window_fullscreen <- function() {
@@ -63,6 +83,10 @@ is_window_fullscreen <- function() {
 #'
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsWindowHidden(void);`
+#'
 #' @export
 is_window_hidden <- function() {
     .Call(`_raylibr_is_window_hidden`)
@@ -73,6 +97,10 @@ is_window_hidden <- function() {
 #' Check if window is currently minimized (only PLATFORM_DESKTOP).
 #'
 #' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsWindowMinimized(void);`
 #'
 #' @export
 is_window_minimized <- function() {
@@ -85,6 +113,10 @@ is_window_minimized <- function() {
 #'
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsWindowMaximized(void);`
+#'
 #' @export
 is_window_maximized <- function() {
     .Call(`_raylibr_is_window_maximized`)
@@ -96,6 +128,10 @@ is_window_maximized <- function() {
 #'
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsWindowFocused(void);`
+#'
 #' @export
 is_window_focused <- function() {
     .Call(`_raylibr_is_window_focused`)
@@ -106,6 +142,10 @@ is_window_focused <- function() {
 #' Check if window has been resized last frame.
 #'
 #' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsWindowResized(void);`
 #'
 #' @export
 is_window_resized <- function() {
@@ -119,6 +159,10 @@ is_window_resized <- function() {
 #' @param flag A unsigned int
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsWindowState(unsigned int flag);`
+#'
 #' @export
 is_window_state <- function(flag) {
     .Call(`_raylibr_is_window_state`, flag)
@@ -129,6 +173,10 @@ is_window_state <- function(flag) {
 #' Set window configuration state using flags.
 #'
 #' @param flags A unsigned int
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetWindowState(unsigned int flags);`
 #'
 #' @export
 set_window_state <- function(flags) {
@@ -141,6 +189,10 @@ set_window_state <- function(flags) {
 #'
 #' @param flags A unsigned int
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void ClearWindowState(unsigned int flags);`
+#'
 #' @export
 clear_window_state <- function(flags) {
     invisible(.Call(`_raylibr_clear_window_state`, flags))
@@ -150,6 +202,10 @@ clear_window_state <- function(flags) {
 #'
 #' Toggle window state: fullscreen/windowed (only PLATFORM_DESKTOP).
 #'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void ToggleFullscreen(void);`
 #'
 #' @export
 toggle_fullscreen <- function() {
@@ -161,6 +217,10 @@ toggle_fullscreen <- function() {
 #' Set window state: maximized, if resizable (only PLATFORM_DESKTOP).
 #'
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void MaximizeWindow(void);`
+#'
 #' @export
 maximize_window <- function() {
     invisible(.Call(`_raylibr_maximize_window`))
@@ -171,6 +231,10 @@ maximize_window <- function() {
 #' Set window state: minimized, if resizable (only PLATFORM_DESKTOP).
 #'
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void MinimizeWindow(void);`
+#'
 #' @export
 minimize_window <- function() {
     invisible(.Call(`_raylibr_minimize_window`))
@@ -180,6 +244,10 @@ minimize_window <- function() {
 #'
 #' Set window state: not minimized/maximized (only PLATFORM_DESKTOP).
 #'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void RestoreWindow(void);`
 #'
 #' @export
 restore_window <- function() {
@@ -192,6 +260,10 @@ restore_window <- function() {
 #'
 #' @param image A image
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetWindowIcon(Image image);`
+#'
 #' @export
 set_window_icon <- function(image) {
     invisible(.Call(`_raylibr_set_window_icon`, image))
@@ -202,6 +274,10 @@ set_window_icon <- function(image) {
 #' Set title for window (only PLATFORM_DESKTOP).
 #'
 #' @param title A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetWindowTitle(const char *title);`
 #'
 #' @export
 set_window_title <- function(title) {
@@ -215,6 +291,10 @@ set_window_title <- function(title) {
 #' @param x An integer
 #' @param y An integer
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetWindowPosition(int x, int y);`
+#'
 #' @export
 set_window_position <- function(x, y) {
     invisible(.Call(`_raylibr_set_window_position`, x, y))
@@ -225,6 +305,10 @@ set_window_position <- function(x, y) {
 #' Set monitor for the current window (fullscreen mode).
 #'
 #' @param monitor An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetWindowMonitor(int monitor);`
 #'
 #' @export
 set_window_monitor <- function(monitor) {
@@ -238,6 +322,10 @@ set_window_monitor <- function(monitor) {
 #' @param width An integer
 #' @param height An integer
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetWindowMinSize(int width, int height);`
+#'
 #' @export
 set_window_min_size <- function(width, height) {
     invisible(.Call(`_raylibr_set_window_min_size`, width, height))
@@ -250,6 +338,10 @@ set_window_min_size <- function(width, height) {
 #' @param width An integer
 #' @param height An integer
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetWindowSize(int width, int height);`
+#'
 #' @export
 set_window_size <- function(width, height) {
     invisible(.Call(`_raylibr_set_window_size`, width, height))
@@ -260,6 +352,10 @@ set_window_size <- function(width, height) {
 #' Get current screen width.
 #'
 #' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int GetScreenWidth(void);`
 #'
 #' @export
 get_screen_width <- function() {
@@ -272,6 +368,10 @@ get_screen_width <- function() {
 #'
 #' @return An integer
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int GetScreenHeight(void);`
+#'
 #' @export
 get_screen_height <- function() {
     .Call(`_raylibr_get_screen_height`)
@@ -283,6 +383,10 @@ get_screen_height <- function() {
 #'
 #' @return An integer
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int GetMonitorCount(void);`
+#'
 #' @export
 get_monitor_count <- function() {
     .Call(`_raylibr_get_monitor_count`)
@@ -293,6 +397,10 @@ get_monitor_count <- function() {
 #' Get current connected monitor.
 #'
 #' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int GetCurrentMonitor(void);`
 #'
 #' @export
 get_current_monitor <- function() {
@@ -306,6 +414,10 @@ get_current_monitor <- function() {
 #' @param monitor An integer
 #' @return A numeric vector of length 2
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Vector2 GetMonitorPosition(int monitor);`
+#'
 #' @export
 get_monitor_position <- function(monitor) {
     .Call(`_raylibr_get_monitor_position`, monitor)
@@ -317,6 +429,10 @@ get_monitor_position <- function(monitor) {
 #'
 #' @param monitor An integer
 #' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int GetMonitorWidth(int monitor);`
 #'
 #' @export
 get_monitor_width <- function(monitor) {
@@ -330,6 +446,10 @@ get_monitor_width <- function(monitor) {
 #' @param monitor An integer
 #' @return An integer
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int GetMonitorHeight(int monitor);`
+#'
 #' @export
 get_monitor_height <- function(monitor) {
     .Call(`_raylibr_get_monitor_height`, monitor)
@@ -341,6 +461,10 @@ get_monitor_height <- function(monitor) {
 #'
 #' @param monitor An integer
 #' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int GetMonitorPhysicalWidth(int monitor);`
 #'
 #' @export
 get_monitor_physical_width <- function(monitor) {
@@ -354,6 +478,10 @@ get_monitor_physical_width <- function(monitor) {
 #' @param monitor An integer
 #' @return An integer
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int GetMonitorPhysicalHeight(int monitor);`
+#'
 #' @export
 get_monitor_physical_height <- function(monitor) {
     .Call(`_raylibr_get_monitor_physical_height`, monitor)
@@ -366,6 +494,10 @@ get_monitor_physical_height <- function(monitor) {
 #' @param monitor An integer
 #' @return An integer
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int GetMonitorRefreshRate(int monitor);`
+#'
 #' @export
 get_monitor_refresh_rate <- function(monitor) {
     .Call(`_raylibr_get_monitor_refresh_rate`, monitor)
@@ -377,6 +509,10 @@ get_monitor_refresh_rate <- function(monitor) {
 #'
 #' @return A numeric vector of length 2
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Vector2 GetWindowPosition(void);`
+#'
 #' @export
 get_window_position <- function() {
     .Call(`_raylibr_get_window_position`)
@@ -387,6 +523,10 @@ get_window_position <- function() {
 #' Get window scale DPI factor.
 #'
 #' @return A numeric vector of length 2
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Vector2 GetWindowScaleDPI(void);`
 #'
 #' @export
 get_window_scale_dpi <- function() {
@@ -400,6 +540,10 @@ get_window_scale_dpi <- function() {
 #' @param monitor An integer
 #' @return A string
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `const char *GetMonitorName(int monitor);`
+#'
 #' @export
 get_monitor_name <- function(monitor) {
     .Call(`_raylibr_get_monitor_name`, monitor)
@@ -410,6 +554,10 @@ get_monitor_name <- function(monitor) {
 #' Shows cursor.
 #'
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void ShowCursor(void);`
+#'
 #' @export
 show_cursor <- function() {
     invisible(.Call(`_raylibr_show_cursor`))
@@ -419,6 +567,10 @@ show_cursor <- function() {
 #'
 #' Hides cursor.
 #'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void HideCursor(void);`
 #'
 #' @export
 hide_cursor <- function() {
@@ -431,6 +583,10 @@ hide_cursor <- function() {
 #'
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsCursorHidden(void);`
+#'
 #' @export
 is_cursor_hidden <- function() {
     .Call(`_raylibr_is_cursor_hidden`)
@@ -441,6 +597,10 @@ is_cursor_hidden <- function() {
 #' Enables cursor (unlock cursor).
 #'
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void EnableCursor(void);`
+#'
 #' @export
 enable_cursor <- function() {
     invisible(.Call(`_raylibr_enable_cursor`))
@@ -450,6 +610,10 @@ enable_cursor <- function() {
 #'
 #' Disables cursor (lock cursor).
 #'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DisableCursor(void);`
 #'
 #' @export
 disable_cursor <- function() {
@@ -462,6 +626,10 @@ disable_cursor <- function() {
 #'
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsCursorOnScreen(void);`
+#'
 #' @export
 is_cursor_on_screen <- function() {
     .Call(`_raylibr_is_cursor_on_screen`)
@@ -473,6 +641,10 @@ is_cursor_on_screen <- function() {
 #'
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void ClearBackground(Color color);`
+#'
 #' @export
 clear_background <- function(color) {
     invisible(.Call(`_raylibr_clear_background`, color))
@@ -483,6 +655,10 @@ clear_background <- function(color) {
 #' Setup canvas (framebuffer) to start drawing.
 #'
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void BeginDrawing(void);`
+#'
 #' @export
 begin_drawing <- function() {
     invisible(.Call(`_raylibr_begin_drawing`))
@@ -492,6 +668,10 @@ begin_drawing <- function() {
 #'
 #' End canvas drawing and swap buffers (double buffering).
 #'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void EndDrawing(void);`
 #'
 #' @export
 end_drawing <- function() {
@@ -504,6 +684,10 @@ end_drawing <- function() {
 #'
 #' @param camera A camera_2d
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void BeginMode2D(Camera2D camera);`
+#'
 #' @export
 begin_mode_2d <- function(camera) {
     invisible(.Call(`_raylibr_begin_mode_2d`, camera))
@@ -513,6 +697,10 @@ begin_mode_2d <- function(camera) {
 #'
 #' Ends 2D mode with custom camera.
 #'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void EndMode2D(void);`
 #'
 #' @export
 end_mode_2d <- function() {
@@ -525,6 +713,10 @@ end_mode_2d <- function() {
 #'
 #' @param camera A camera_3d
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void BeginMode3D(Camera3D camera);`
+#'
 #' @export
 begin_mode_3d <- function(camera) {
     invisible(.Call(`_raylibr_begin_mode_3d`, camera))
@@ -534,6 +726,10 @@ begin_mode_3d <- function(camera) {
 #'
 #' Ends 3D mode and returns to default 2D orthographic mode.
 #'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void EndMode3D(void);`
 #'
 #' @export
 end_mode_3d <- function() {
@@ -547,6 +743,10 @@ end_mode_3d <- function() {
 #' @param camera A camera_3d
 #' @return A numeric matrix of 4 by 4
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Matrix GetCameraMatrix(Camera camera);`
+#'
 #' @export
 get_camera_matrix <- function(camera) {
     .Call(`_raylibr_get_camera_matrix`, camera)
@@ -558,6 +758,10 @@ get_camera_matrix <- function(camera) {
 #'
 #' @param camera A camera_2d
 #' @return A numeric matrix of 4 by 4
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Matrix GetCameraMatrix2D(Camera2D camera);`
 #'
 #' @export
 get_camera_matrix_2d <- function(camera) {
@@ -571,6 +775,10 @@ get_camera_matrix_2d <- function(camera) {
 #' @param position A numeric vector of length 3
 #' @param camera A camera_3d
 #' @return A numeric vector of length 2
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Vector2 GetWorldToScreen(Vector3 position, Camera camera);`
 #'
 #' @export
 get_world_to_screen <- function(position, camera) {
@@ -587,6 +795,10 @@ get_world_to_screen <- function(position, camera) {
 #' @param height An integer
 #' @return A numeric vector of length 2
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Vector2 GetWorldToScreenEx(Vector3 position, Camera camera, int width, int height);`
+#'
 #' @export
 get_world_to_screen_ex <- function(position, camera, width, height) {
     .Call(`_raylibr_get_world_to_screen_ex`, position, camera, width, height)
@@ -599,6 +811,10 @@ get_world_to_screen_ex <- function(position, camera, width, height) {
 #' @param position A numeric vector of length 2
 #' @param camera A camera_2d
 #' @return A numeric vector of length 2
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Vector2 GetWorldToScreen2D(Vector2 position, Camera2D camera);`
 #'
 #' @export
 get_world_to_screen_2d <- function(position, camera) {
@@ -613,6 +829,10 @@ get_world_to_screen_2d <- function(position, camera) {
 #' @param camera A camera_2d
 #' @return A numeric vector of length 2
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Vector2 GetScreenToWorld2D(Vector2 position, Camera2D camera);`
+#'
 #' @export
 get_screen_to_world_2d <- function(position, camera) {
     .Call(`_raylibr_get_screen_to_world_2d`, position, camera)
@@ -623,6 +843,10 @@ get_screen_to_world_2d <- function(position, camera) {
 #' Set target FPS (maximum).
 #'
 #' @param fps An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetTargetFPS(int fps);`
 #'
 #' @export
 set_target_fps <- function(fps) {
@@ -635,6 +859,10 @@ set_target_fps <- function(fps) {
 #'
 #' @return An integer
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int GetFPS(void);`
+#'
 #' @export
 get_fps <- function() {
     .Call(`_raylibr_get_fps`)
@@ -646,6 +874,10 @@ get_fps <- function() {
 #'
 #' @return A number
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `float GetFrameTime(void);`
+#'
 #' @export
 get_frame_time <- function() {
     .Call(`_raylibr_get_frame_time`)
@@ -656,6 +888,10 @@ get_frame_time <- function() {
 #' Get elapsed time in seconds since InitWindow().
 #'
 #' @return A double
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `double GetTime(void);`
 #'
 #' @export
 get_time <- function() {
@@ -670,6 +906,10 @@ get_time <- function() {
 #' @param max An integer
 #' @return An integer
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int GetRandomValue(int min, int max);`
+#'
 #' @export
 get_random_value <- function(min, max) {
     .Call(`_raylibr_get_random_value`, min, max)
@@ -680,6 +920,10 @@ get_random_value <- function(min, max) {
 #' Takes a screenshot of current screen (filename extension defines format).
 #'
 #' @param file_name A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void TakeScreenshot(const char *fileName);`
 #'
 #' @export
 take_screenshot <- function(file_name) {
@@ -693,6 +937,10 @@ take_screenshot <- function(file_name) {
 #' @param key An integer
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsKeyPressed(int key);`
+#'
 #' @export
 is_key_pressed <- function(key) {
     .Call(`_raylibr_is_key_pressed`, key)
@@ -704,6 +952,10 @@ is_key_pressed <- function(key) {
 #'
 #' @param key An integer
 #' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsKeyDown(int key);`
 #'
 #' @export
 is_key_down <- function(key) {
@@ -717,6 +969,10 @@ is_key_down <- function(key) {
 #' @param key An integer
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsKeyReleased(int key);`
+#'
 #' @export
 is_key_released <- function(key) {
     .Call(`_raylibr_is_key_released`, key)
@@ -729,6 +985,10 @@ is_key_released <- function(key) {
 #' @param key An integer
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsKeyUp(int key);`
+#'
 #' @export
 is_key_up <- function(key) {
     .Call(`_raylibr_is_key_up`, key)
@@ -739,6 +999,10 @@ is_key_up <- function(key) {
 #' Set a custom key to exit program (default is ESC).
 #'
 #' @param key An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetExitKey(int key);`
 #'
 #' @export
 set_exit_key <- function(key) {
@@ -751,6 +1015,10 @@ set_exit_key <- function(key) {
 #'
 #' @return An integer
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int GetKeyPressed(void);`
+#'
 #' @export
 get_key_pressed <- function() {
     .Call(`_raylibr_get_key_pressed`)
@@ -761,6 +1029,10 @@ get_key_pressed <- function() {
 #' Get char pressed (unicode), call it multiple times for chars queued, returns 0 when the queue is empty.
 #'
 #' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int GetCharPressed(void);`
 #'
 #' @export
 get_char_pressed <- function() {
@@ -774,6 +1046,10 @@ get_char_pressed <- function() {
 #' @param button An integer
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsMouseButtonPressed(int button);`
+#'
 #' @export
 is_mouse_button_pressed <- function(button) {
     .Call(`_raylibr_is_mouse_button_pressed`, button)
@@ -785,6 +1061,10 @@ is_mouse_button_pressed <- function(button) {
 #'
 #' @param button An integer
 #' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsMouseButtonDown(int button);`
 #'
 #' @export
 is_mouse_button_down <- function(button) {
@@ -798,6 +1078,10 @@ is_mouse_button_down <- function(button) {
 #' @param button An integer
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsMouseButtonReleased(int button);`
+#'
 #' @export
 is_mouse_button_released <- function(button) {
     .Call(`_raylibr_is_mouse_button_released`, button)
@@ -810,6 +1094,10 @@ is_mouse_button_released <- function(button) {
 #' @param button An integer
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsMouseButtonUp(int button);`
+#'
 #' @export
 is_mouse_button_up <- function(button) {
     .Call(`_raylibr_is_mouse_button_up`, button)
@@ -820,6 +1108,10 @@ is_mouse_button_up <- function(button) {
 #' Get mouse position X.
 #'
 #' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int GetMouseX(void);`
 #'
 #' @export
 get_mouse_x <- function() {
@@ -832,6 +1124,10 @@ get_mouse_x <- function() {
 #'
 #' @return An integer
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int GetMouseY(void);`
+#'
 #' @export
 get_mouse_y <- function() {
     .Call(`_raylibr_get_mouse_y`)
@@ -843,6 +1139,10 @@ get_mouse_y <- function() {
 #'
 #' @return A numeric vector of length 2
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Vector2 GetMousePosition(void);`
+#'
 #' @export
 get_mouse_position <- function() {
     .Call(`_raylibr_get_mouse_position`)
@@ -853,6 +1153,10 @@ get_mouse_position <- function() {
 #' Get mouse delta between frames.
 #'
 #' @return A numeric vector of length 2
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Vector2 GetMouseDelta(void);`
 #'
 #' @export
 get_mouse_delta <- function() {
@@ -866,6 +1170,10 @@ get_mouse_delta <- function() {
 #' @param x An integer
 #' @param y An integer
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetMousePosition(int x, int y);`
+#'
 #' @export
 set_mouse_position <- function(x, y) {
     invisible(.Call(`_raylibr_set_mouse_position`, x, y))
@@ -877,6 +1185,10 @@ set_mouse_position <- function(x, y) {
 #'
 #' @param offset_x An integer
 #' @param offset_y An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetMouseOffset(int offsetX, int offsetY);`
 #'
 #' @export
 set_mouse_offset <- function(offset_x, offset_y) {
@@ -890,6 +1202,10 @@ set_mouse_offset <- function(offset_x, offset_y) {
 #' @param scale_x A number
 #' @param scale_y A number
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetMouseScale(float scaleX, float scaleY);`
+#'
 #' @export
 set_mouse_scale <- function(scale_x, scale_y) {
     invisible(.Call(`_raylibr_set_mouse_scale`, scale_x, scale_y))
@@ -900,6 +1216,10 @@ set_mouse_scale <- function(scale_x, scale_y) {
 #' Get mouse wheel movement Y.
 #'
 #' @return A number
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `float GetMouseWheelMove(void);`
 #'
 #' @export
 get_mouse_wheel_move <- function() {
@@ -912,6 +1232,10 @@ get_mouse_wheel_move <- function() {
 #'
 #' @param cursor An integer
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetMouseCursor(int cursor);`
+#'
 #' @export
 set_mouse_cursor <- function(cursor) {
     invisible(.Call(`_raylibr_set_mouse_cursor`, cursor))
@@ -922,6 +1246,10 @@ set_mouse_cursor <- function(cursor) {
 #' Set camera pan key to combine with mouse movement (free camera).
 #'
 #' @param key_pan An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetCameraPanControl(int keyPan);`
 #'
 #' @export
 set_camera_pan_control <- function(key_pan) {
@@ -934,6 +1262,10 @@ set_camera_pan_control <- function(key_pan) {
 #'
 #' @param key_alt An integer
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetCameraAltControl(int keyAlt);`
+#'
 #' @export
 set_camera_alt_control <- function(key_alt) {
     invisible(.Call(`_raylibr_set_camera_alt_control`, key_alt))
@@ -944,6 +1276,10 @@ set_camera_alt_control <- function(key_alt) {
 #' Set camera smooth zoom key to combine with mouse (free camera).
 #'
 #' @param key_smooth_zoom An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetCameraSmoothZoomControl(int keySmoothZoom);`
 #'
 #' @export
 set_camera_smooth_zoom_control <- function(key_smooth_zoom) {
@@ -961,6 +1297,10 @@ set_camera_smooth_zoom_control <- function(key_smooth_zoom) {
 #' @param key_up An integer
 #' @param key_down An integer
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetCameraMoveControls(int keyFront, int keyBack, int keyRight, int keyLeft, int keyUp, int keyDown);`
+#'
 #' @export
 set_camera_move_controls <- function(key_front, key_back, key_right, key_left, key_up, key_down) {
     invisible(.Call(`_raylibr_set_camera_move_controls`, key_front, key_back, key_right, key_left, key_up, key_down))
@@ -972,6 +1312,10 @@ set_camera_move_controls <- function(key_front, key_back, key_right, key_left, k
 #'
 #' @param texture A texture
 #' @param source A rectangle
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetShapesTexture(Texture2D texture, Rectangle source);`
 #'
 #' @export
 set_shapes_texture <- function(texture, source) {
@@ -986,6 +1330,10 @@ set_shapes_texture <- function(texture, source) {
 #' @param pos_y An integer
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawPixel(int posX, int posY, Color color);`
+#'
 #' @export
 draw_pixel <- function(pos_x, pos_y, color) {
     invisible(.Call(`_raylibr_draw_pixel`, pos_x, pos_y, color))
@@ -997,6 +1345,10 @@ draw_pixel <- function(pos_x, pos_y, color) {
 #'
 #' @param position A numeric vector of length 2
 #' @param color A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawPixelV(Vector2 position, Color color);`
 #'
 #' @export
 draw_pixel_v <- function(position, color) {
@@ -1013,6 +1365,10 @@ draw_pixel_v <- function(position, color) {
 #' @param end_pos_y An integer
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawLine(int startPosX, int startPosY, int endPosX, int endPosY, Color color);`
+#'
 #' @export
 draw_line <- function(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color) {
     invisible(.Call(`_raylibr_draw_line`, start_pos_x, start_pos_y, end_pos_x, end_pos_y, color))
@@ -1025,6 +1381,10 @@ draw_line <- function(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color) {
 #' @param start_pos A numeric vector of length 2
 #' @param end_pos A numeric vector of length 2
 #' @param color A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawLineV(Vector2 startPos, Vector2 endPos, Color color);`
 #'
 #' @export
 draw_line_v <- function(start_pos, end_pos, color) {
@@ -1040,6 +1400,10 @@ draw_line_v <- function(start_pos, end_pos, color) {
 #' @param thick A number
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawLineEx(Vector2 startPos, Vector2 endPos, float thick, Color color);`
+#'
 #' @export
 draw_line_ex <- function(start_pos, end_pos, thick, color) {
     invisible(.Call(`_raylibr_draw_line_ex`, start_pos, end_pos, thick, color))
@@ -1053,6 +1417,10 @@ draw_line_ex <- function(start_pos, end_pos, thick, color) {
 #' @param end_pos A numeric vector of length 2
 #' @param thick A number
 #' @param color A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawLineBezier(Vector2 startPos, Vector2 endPos, float thick, Color color);`
 #'
 #' @export
 draw_line_bezier <- function(start_pos, end_pos, thick, color) {
@@ -1068,6 +1436,10 @@ draw_line_bezier <- function(start_pos, end_pos, thick, color) {
 #' @param control_pos A numeric vector of length 2
 #' @param thick A number
 #' @param color A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawLineBezierQuad(Vector2 startPos, Vector2 endPos, Vector2 controlPos, float thick, Color color);`
 #'
 #' @export
 draw_line_bezier_quad <- function(start_pos, end_pos, control_pos, thick, color) {
@@ -1085,6 +1457,10 @@ draw_line_bezier_quad <- function(start_pos, end_pos, control_pos, thick, color)
 #' @param thick A number
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawLineBezierCubic(Vector2 startPos, Vector2 endPos, Vector2 startControlPos, Vector2 endControlPos, float thick, Color color);`
+#'
 #' @export
 draw_line_bezier_cubic <- function(start_pos, end_pos, start_control_pos, end_control_pos, thick, color) {
     invisible(.Call(`_raylibr_draw_line_bezier_cubic`, start_pos, end_pos, start_control_pos, end_control_pos, thick, color))
@@ -1098,6 +1474,10 @@ draw_line_bezier_cubic <- function(start_pos, end_pos, start_control_pos, end_co
 #' @param center_y An integer
 #' @param radius A number
 #' @param color A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawCircle(int centerX, int centerY, float radius, Color color);`
 #'
 #' @export
 draw_circle <- function(center_x, center_y, radius, color) {
@@ -1115,6 +1495,10 @@ draw_circle <- function(center_x, center_y, radius, color) {
 #' @param segments An integer
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawCircleSector(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color);`
+#'
 #' @export
 draw_circle_sector <- function(center, radius, start_angle, end_angle, segments, color) {
     invisible(.Call(`_raylibr_draw_circle_sector`, center, radius, start_angle, end_angle, segments, color))
@@ -1131,6 +1515,10 @@ draw_circle_sector <- function(center, radius, start_angle, end_angle, segments,
 #' @param segments An integer
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawCircleSectorLines(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color);`
+#'
 #' @export
 draw_circle_sector_lines <- function(center, radius, start_angle, end_angle, segments, color) {
     invisible(.Call(`_raylibr_draw_circle_sector_lines`, center, radius, start_angle, end_angle, segments, color))
@@ -1146,6 +1534,10 @@ draw_circle_sector_lines <- function(center, radius, start_angle, end_angle, seg
 #' @param color_1 A color
 #' @param color_2 A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawCircleGradient(int centerX, int centerY, float radius, Color color1, Color color2);`
+#'
 #' @export
 draw_circle_gradient <- function(center_x, center_y, radius, color_1, color_2) {
     invisible(.Call(`_raylibr_draw_circle_gradient`, center_x, center_y, radius, color_1, color_2))
@@ -1158,6 +1550,10 @@ draw_circle_gradient <- function(center_x, center_y, radius, color_1, color_2) {
 #' @param center A numeric vector of length 2
 #' @param radius A number
 #' @param color A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawCircleV(Vector2 center, float radius, Color color);`
 #'
 #' @export
 draw_circle_v <- function(center, radius, color) {
@@ -1172,6 +1568,10 @@ draw_circle_v <- function(center, radius, color) {
 #' @param center_y An integer
 #' @param radius A number
 #' @param color A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawCircleLines(int centerX, int centerY, float radius, Color color);`
 #'
 #' @export
 draw_circle_lines <- function(center_x, center_y, radius, color) {
@@ -1188,6 +1588,10 @@ draw_circle_lines <- function(center_x, center_y, radius, color) {
 #' @param radius_v A number
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawEllipse(int centerX, int centerY, float radiusH, float radiusV, Color color);`
+#'
 #' @export
 draw_ellipse <- function(center_x, center_y, radius_h, radius_v, color) {
     invisible(.Call(`_raylibr_draw_ellipse`, center_x, center_y, radius_h, radius_v, color))
@@ -1202,6 +1606,10 @@ draw_ellipse <- function(center_x, center_y, radius_h, radius_v, color) {
 #' @param radius_h A number
 #' @param radius_v A number
 #' @param color A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawEllipseLines(int centerX, int centerY, float radiusH, float radiusV, Color color);`
 #'
 #' @export
 draw_ellipse_lines <- function(center_x, center_y, radius_h, radius_v, color) {
@@ -1220,6 +1628,10 @@ draw_ellipse_lines <- function(center_x, center_y, radius_h, radius_v, color) {
 #' @param segments An integer
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawRing(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color);`
+#'
 #' @export
 draw_ring <- function(center, inner_radius, outer_radius, start_angle, end_angle, segments, color) {
     invisible(.Call(`_raylibr_draw_ring`, center, inner_radius, outer_radius, start_angle, end_angle, segments, color))
@@ -1237,6 +1649,10 @@ draw_ring <- function(center, inner_radius, outer_radius, start_angle, end_angle
 #' @param segments An integer
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawRingLines(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color);`
+#'
 #' @export
 draw_ring_lines <- function(center, inner_radius, outer_radius, start_angle, end_angle, segments, color) {
     invisible(.Call(`_raylibr_draw_ring_lines`, center, inner_radius, outer_radius, start_angle, end_angle, segments, color))
@@ -1252,6 +1668,10 @@ draw_ring_lines <- function(center, inner_radius, outer_radius, start_angle, end
 #' @param height An integer
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawRectangle(int posX, int posY, int width, int height, Color color);`
+#'
 #' @export
 draw_rectangle <- function(pos_x, pos_y, width, height, color) {
     invisible(.Call(`_raylibr_draw_rectangle`, pos_x, pos_y, width, height, color))
@@ -1265,6 +1685,10 @@ draw_rectangle <- function(pos_x, pos_y, width, height, color) {
 #' @param size A numeric vector of length 2
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawRectangleV(Vector2 position, Vector2 size, Color color);`
+#'
 #' @export
 draw_rectangle_v <- function(position, size, color) {
     invisible(.Call(`_raylibr_draw_rectangle_v`, position, size, color))
@@ -1276,6 +1700,10 @@ draw_rectangle_v <- function(position, size, color) {
 #'
 #' @param rec A rectangle
 #' @param color A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawRectangleRec(Rectangle rec, Color color);`
 #'
 #' @export
 draw_rectangle_rec <- function(rec, color) {
@@ -1290,6 +1718,10 @@ draw_rectangle_rec <- function(rec, color) {
 #' @param origin A numeric vector of length 2
 #' @param rotation A number
 #' @param color A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawRectanglePro(Rectangle rec, Vector2 origin, float rotation, Color color);`
 #'
 #' @export
 draw_rectangle_pro <- function(rec, origin, rotation, color) {
@@ -1307,6 +1739,10 @@ draw_rectangle_pro <- function(rec, origin, rotation, color) {
 #' @param color_1 A color
 #' @param color_2 A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawRectangleGradientV(int posX, int posY, int width, int height, Color color1, Color color2);`
+#'
 #' @export
 draw_rectangle_gradient_v <- function(pos_x, pos_y, width, height, color_1, color_2) {
     invisible(.Call(`_raylibr_draw_rectangle_gradient_v`, pos_x, pos_y, width, height, color_1, color_2))
@@ -1323,6 +1759,10 @@ draw_rectangle_gradient_v <- function(pos_x, pos_y, width, height, color_1, colo
 #' @param color_1 A color
 #' @param color_2 A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawRectangleGradientH(int posX, int posY, int width, int height, Color color1, Color color2);`
+#'
 #' @export
 draw_rectangle_gradient_h <- function(pos_x, pos_y, width, height, color_1, color_2) {
     invisible(.Call(`_raylibr_draw_rectangle_gradient_h`, pos_x, pos_y, width, height, color_1, color_2))
@@ -1337,6 +1777,10 @@ draw_rectangle_gradient_h <- function(pos_x, pos_y, width, height, color_1, colo
 #' @param col_2 A color
 #' @param col_3 A color
 #' @param col_4 A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawRectangleGradientEx(Rectangle rec, Color col1, Color col2, Color col3, Color col4);`
 #'
 #' @export
 draw_rectangle_gradient_ex <- function(rec, col_1, col_2, col_3, col_4) {
@@ -1353,6 +1797,10 @@ draw_rectangle_gradient_ex <- function(rec, col_1, col_2, col_3, col_4) {
 #' @param height An integer
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawRectangleLines(int posX, int posY, int width, int height, Color color);`
+#'
 #' @export
 draw_rectangle_lines <- function(pos_x, pos_y, width, height, color) {
     invisible(.Call(`_raylibr_draw_rectangle_lines`, pos_x, pos_y, width, height, color))
@@ -1365,6 +1813,10 @@ draw_rectangle_lines <- function(pos_x, pos_y, width, height, color) {
 #' @param rec A rectangle
 #' @param line_thick A number
 #' @param color A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawRectangleLinesEx(Rectangle rec, float lineThick, Color color);`
 #'
 #' @export
 draw_rectangle_lines_ex <- function(rec, line_thick, color) {
@@ -1379,6 +1831,10 @@ draw_rectangle_lines_ex <- function(rec, line_thick, color) {
 #' @param roundness A number
 #' @param segments An integer
 #' @param color A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawRectangleRounded(Rectangle rec, float roundness, int segments, Color color);`
 #'
 #' @export
 draw_rectangle_rounded <- function(rec, roundness, segments, color) {
@@ -1395,6 +1851,10 @@ draw_rectangle_rounded <- function(rec, roundness, segments, color) {
 #' @param line_thick A number
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawRectangleRoundedLines(Rectangle rec, float roundness, int segments, float lineThick, Color color);`
+#'
 #' @export
 draw_rectangle_rounded_lines <- function(rec, roundness, segments, line_thick, color) {
     invisible(.Call(`_raylibr_draw_rectangle_rounded_lines`, rec, roundness, segments, line_thick, color))
@@ -1409,6 +1869,10 @@ draw_rectangle_rounded_lines <- function(rec, roundness, segments, line_thick, c
 #' @param v_3 A numeric vector of length 2
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawTriangle(Vector2 v1, Vector2 v2, Vector2 v3, Color color);`
+#'
 #' @export
 draw_triangle <- function(v_1, v_2, v_3, color) {
     invisible(.Call(`_raylibr_draw_triangle`, v_1, v_2, v_3, color))
@@ -1422,6 +1886,10 @@ draw_triangle <- function(v_1, v_2, v_3, color) {
 #' @param v_2 A numeric vector of length 2
 #' @param v_3 A numeric vector of length 2
 #' @param color A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawTriangleLines(Vector2 v1, Vector2 v2, Vector2 v3, Color color);`
 #'
 #' @export
 draw_triangle_lines <- function(v_1, v_2, v_3, color) {
@@ -1438,6 +1906,10 @@ draw_triangle_lines <- function(v_1, v_2, v_3, color) {
 #' @param rotation A number
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawPoly(Vector2 center, int sides, float radius, float rotation, Color color);`
+#'
 #' @export
 draw_poly <- function(center, sides, radius, rotation, color) {
     invisible(.Call(`_raylibr_draw_poly`, center, sides, radius, rotation, color))
@@ -1452,6 +1924,10 @@ draw_poly <- function(center, sides, radius, rotation, color) {
 #' @param radius A number
 #' @param rotation A number
 #' @param color A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawPolyLines(Vector2 center, int sides, float radius, float rotation, Color color);`
 #'
 #' @export
 draw_poly_lines <- function(center, sides, radius, rotation, color) {
@@ -1469,6 +1945,10 @@ draw_poly_lines <- function(center, sides, radius, rotation, color) {
 #' @param line_thick A number
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawPolyLinesEx(Vector2 center, int sides, float radius, float rotation, float lineThick, Color color);`
+#'
 #' @export
 draw_poly_lines_ex <- function(center, sides, radius, rotation, line_thick, color) {
     invisible(.Call(`_raylibr_draw_poly_lines_ex`, center, sides, radius, rotation, line_thick, color))
@@ -1481,6 +1961,10 @@ draw_poly_lines_ex <- function(center, sides, radius, rotation, line_thick, colo
 #' @param rec_1 A rectangle
 #' @param rec_2 A rectangle
 #' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool CheckCollisionRecs(Rectangle rec1, Rectangle rec2);`
 #'
 #' @export
 check_collision_recs <- function(rec_1, rec_2) {
@@ -1497,6 +1981,10 @@ check_collision_recs <- function(rec_1, rec_2) {
 #' @param radius_2 A number
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool CheckCollisionCircles(Vector2 center1, float radius1, Vector2 center2, float radius2);`
+#'
 #' @export
 check_collision_circles <- function(center_1, radius_1, center_2, radius_2) {
     .Call(`_raylibr_check_collision_circles`, center_1, radius_1, center_2, radius_2)
@@ -1511,6 +1999,10 @@ check_collision_circles <- function(center_1, radius_1, center_2, radius_2) {
 #' @param rec A rectangle
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool CheckCollisionCircleRec(Vector2 center, float radius, Rectangle rec);`
+#'
 #' @export
 check_collision_circle_rec <- function(center, radius, rec) {
     .Call(`_raylibr_check_collision_circle_rec`, center, radius, rec)
@@ -1523,6 +2015,10 @@ check_collision_circle_rec <- function(center, radius, rec) {
 #' @param point A numeric vector of length 2
 #' @param rec A rectangle
 #' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool CheckCollisionPointRec(Vector2 point, Rectangle rec);`
 #'
 #' @export
 check_collision_point_rec <- function(point, rec) {
@@ -1537,6 +2033,10 @@ check_collision_point_rec <- function(point, rec) {
 #' @param center A numeric vector of length 2
 #' @param radius A number
 #' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool CheckCollisionPointCircle(Vector2 point, Vector2 center, float radius);`
 #'
 #' @export
 check_collision_point_circle <- function(point, center, radius) {
@@ -1553,6 +2053,10 @@ check_collision_point_circle <- function(point, center, radius) {
 #' @param p_3 A numeric vector of length 2
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool CheckCollisionPointTriangle(Vector2 point, Vector2 p1, Vector2 p2, Vector2 p3);`
+#'
 #' @export
 check_collision_point_triangle <- function(point, p_1, p_2, p_3) {
     .Call(`_raylibr_check_collision_point_triangle`, point, p_1, p_2, p_3)
@@ -1568,6 +2072,10 @@ check_collision_point_triangle <- function(point, p_1, p_2, p_3) {
 #' @param threshold An integer
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool CheckCollisionPointLine(Vector2 point, Vector2 p1, Vector2 p2, int threshold);`
+#'
 #' @export
 check_collision_point_line <- function(point, p_1, p_2, threshold) {
     .Call(`_raylibr_check_collision_point_line`, point, p_1, p_2, threshold)
@@ -1581,6 +2089,10 @@ check_collision_point_line <- function(point, p_1, p_2, threshold) {
 #' @param rec_2 A rectangle
 #' @return A rectangle
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Rectangle GetCollisionRec(Rectangle rec1, Rectangle rec2);`
+#'
 #' @export
 get_collision_rec <- function(rec_1, rec_2) {
     .Call(`_raylibr_get_collision_rec`, rec_1, rec_2)
@@ -1592,6 +2104,10 @@ get_collision_rec <- function(rec_1, rec_2) {
 #'
 #' @param file_name A string
 #' @return A image
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Image LoadImage(const char *fileName);`
 #'
 #' @export
 load_image <- function(file_name) {
@@ -1609,6 +2125,10 @@ load_image <- function(file_name) {
 #' @param header_size An integer
 #' @return A image
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Image LoadImageRaw(const char *fileName, int width, int height, int format, int headerSize);`
+#'
 #' @export
 load_image_raw <- function(file_name, width, height, format, header_size) {
     .Call(`_raylibr_load_image_raw`, file_name, width, height, format, header_size)
@@ -1621,6 +2141,10 @@ load_image_raw <- function(file_name, width, height, format, header_size) {
 #' @param texture A texture
 #' @return A image
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Image LoadImageFromTexture(Texture2D texture);`
+#'
 #' @export
 load_image_from_texture <- function(texture) {
     .Call(`_raylibr_load_image_from_texture`, texture)
@@ -1632,6 +2156,10 @@ load_image_from_texture <- function(texture) {
 #'
 #' @return A image
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Image LoadImageFromScreen(void);`
+#'
 #' @export
 load_image_from_screen <- function() {
     .Call(`_raylibr_load_image_from_screen`)
@@ -1642,6 +2170,10 @@ load_image_from_screen <- function() {
 #' Unload image from CPU memory (RAM).
 #'
 #' @param image A image
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void UnloadImage(Image image);`
 #'
 #' @export
 unload_image <- function(image) {
@@ -1656,6 +2188,10 @@ unload_image <- function(image) {
 #' @param file_name A string
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool ExportImage(Image image, const char *fileName);`
+#'
 #' @export
 export_image <- function(image, file_name) {
     .Call(`_raylibr_export_image`, image, file_name)
@@ -1668,6 +2204,10 @@ export_image <- function(image, file_name) {
 #' @param image A image
 #' @param file_name A string
 #' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool ExportImageAsCode(Image image, const char *fileName);`
 #'
 #' @export
 export_image_as_code <- function(image, file_name) {
@@ -1682,6 +2222,10 @@ export_image_as_code <- function(image, file_name) {
 #' @param height An integer
 #' @param color A color
 #' @return A image
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Image GenImageColor(int width, int height, Color color);`
 #'
 #' @export
 gen_image_color <- function(width, height, color) {
@@ -1698,6 +2242,10 @@ gen_image_color <- function(width, height, color) {
 #' @param bottom A color
 #' @return A image
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Image GenImageGradientV(int width, int height, Color top, Color bottom);`
+#'
 #' @export
 gen_image_gradient_v <- function(width, height, top, bottom) {
     .Call(`_raylibr_gen_image_gradient_v`, width, height, top, bottom)
@@ -1712,6 +2260,10 @@ gen_image_gradient_v <- function(width, height, top, bottom) {
 #' @param left A color
 #' @param right A color
 #' @return A image
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Image GenImageGradientH(int width, int height, Color left, Color right);`
 #'
 #' @export
 gen_image_gradient_h <- function(width, height, left, right) {
@@ -1728,6 +2280,10 @@ gen_image_gradient_h <- function(width, height, left, right) {
 #' @param inner A color
 #' @param outer A color
 #' @return A image
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Image GenImageGradientRadial(int width, int height, float density, Color inner, Color outer);`
 #'
 #' @export
 gen_image_gradient_radial <- function(width, height, density, inner, outer) {
@@ -1746,6 +2302,10 @@ gen_image_gradient_radial <- function(width, height, density, inner, outer) {
 #' @param col_2 A color
 #' @return A image
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Image GenImageChecked(int width, int height, int checksX, int checksY, Color col1, Color col2);`
+#'
 #' @export
 gen_image_checked <- function(width, height, checks_x, checks_y, col_1, col_2) {
     .Call(`_raylibr_gen_image_checked`, width, height, checks_x, checks_y, col_1, col_2)
@@ -1759,6 +2319,10 @@ gen_image_checked <- function(width, height, checks_x, checks_y, col_1, col_2) {
 #' @param height An integer
 #' @param factor A number
 #' @return A image
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Image GenImageWhiteNoise(int width, int height, float factor);`
 #'
 #' @export
 gen_image_white_noise <- function(width, height, factor) {
@@ -1774,6 +2338,10 @@ gen_image_white_noise <- function(width, height, factor) {
 #' @param tile_size An integer
 #' @return A image
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Image GenImageCellular(int width, int height, int tileSize);`
+#'
 #' @export
 gen_image_cellular <- function(width, height, tile_size) {
     .Call(`_raylibr_gen_image_cellular`, width, height, tile_size)
@@ -1786,6 +2354,10 @@ gen_image_cellular <- function(width, height, tile_size) {
 #' @param file_name A string
 #' @return A texture
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Texture2D LoadTexture(const char *fileName);`
+#'
 #' @export
 load_texture <- function(file_name) {
     .Call(`_raylibr_load_texture`, file_name)
@@ -1797,6 +2369,10 @@ load_texture <- function(file_name) {
 #'
 #' @param image A image
 #' @return A texture
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Texture2D LoadTextureFromImage(Image image);`
 #'
 #' @export
 load_texture_from_image <- function(image) {
@@ -1812,6 +2388,10 @@ load_texture_from_image <- function(image) {
 #' @param pos_y An integer
 #' @param tint A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawTexture(Texture2D texture, int posX, int posY, Color tint);`
+#'
 #' @export
 draw_texture <- function(texture, pos_x, pos_y, tint) {
     invisible(.Call(`_raylibr_draw_texture`, texture, pos_x, pos_y, tint))
@@ -1825,6 +2405,10 @@ draw_texture <- function(texture, pos_x, pos_y, tint) {
 #' @param alpha A number
 #' @return A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Color Fade(Color color, float alpha);`
+#'
 #' @export
 fade <- function(color, alpha) {
     .Call(`_raylibr_fade`, color, alpha)
@@ -1836,6 +2420,10 @@ fade <- function(color, alpha) {
 #'
 #' @param color A color
 #' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int ColorToInt(Color color);`
 #'
 #' @export
 color_to_int <- function(color) {
@@ -1849,6 +2437,10 @@ color_to_int <- function(color) {
 #' @param color A color
 #' @return A numeric vector of length 4
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Vector4 ColorNormalize(Color color);`
+#'
 #' @export
 color_normalize <- function(color) {
     .Call(`_raylibr_color_normalize`, color)
@@ -1861,6 +2453,10 @@ color_normalize <- function(color) {
 #' @param normalized A numeric vector of length 4
 #' @return A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Color ColorFromNormalized(Vector4 normalized);`
+#'
 #' @export
 color_from_normalized <- function(normalized) {
     .Call(`_raylibr_color_from_normalized`, normalized)
@@ -1872,6 +2468,10 @@ color_from_normalized <- function(normalized) {
 #'
 #' @param color A color
 #' @return A numeric vector of length 3
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Vector3 ColorToHSV(Color color);`
 #'
 #' @export
 color_to_hsv <- function(color) {
@@ -1887,6 +2487,10 @@ color_to_hsv <- function(color) {
 #' @param value A number
 #' @return A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Color ColorFromHSV(float hue, float saturation, float value);`
+#'
 #' @export
 color_from_hsv <- function(hue, saturation, value) {
     .Call(`_raylibr_color_from_hsv`, hue, saturation, value)
@@ -1899,6 +2503,10 @@ color_from_hsv <- function(hue, saturation, value) {
 #' @param color A color
 #' @param alpha A number
 #' @return A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Color ColorAlpha(Color color, float alpha);`
 #'
 #' @export
 color_alpha <- function(color, alpha) {
@@ -1914,6 +2522,10 @@ color_alpha <- function(color, alpha) {
 #' @param tint A color
 #' @return A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Color ColorAlphaBlend(Color dst, Color src, Color tint);`
+#'
 #' @export
 color_alpha_blend <- function(dst, src, tint) {
     .Call(`_raylibr_color_alpha_blend`, dst, src, tint)
@@ -1926,6 +2538,10 @@ color_alpha_blend <- function(dst, src, tint) {
 #' @param hex_value A unsigned int
 #' @return A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Color GetColor(unsigned int hexValue);`
+#'
 #' @export
 get_color <- function(hex_value) {
     .Call(`_raylibr_get_color`, hex_value)
@@ -1936,6 +2552,10 @@ get_color <- function(hex_value) {
 #' Get the default Font.
 #'
 #' @return A font
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Font GetFontDefault(void);`
 #'
 #' @export
 get_font_default <- function() {
@@ -1949,6 +2569,10 @@ get_font_default <- function() {
 #' @param file_name A string
 #' @return A font
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Font LoadFont(const char *fileName);`
+#'
 #' @export
 load_font <- function(file_name) {
     .Call(`_raylibr_load_font`, file_name)
@@ -1959,6 +2583,10 @@ load_font <- function(file_name) {
 #' Unload Font from GPU memory (VRAM).
 #'
 #' @param font A font
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void UnloadFont(Font font);`
 #'
 #' @export
 unload_font <- function(font) {
@@ -1971,6 +2599,10 @@ unload_font <- function(font) {
 #'
 #' @param pos_x An integer
 #' @param pos_y An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawFPS(int posX, int posY);`
 #'
 #' @export
 draw_fps <- function(pos_x, pos_y) {
@@ -1986,6 +2618,10 @@ draw_fps <- function(pos_x, pos_y) {
 #' @param pos_y An integer
 #' @param font_size An integer
 #' @param color A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawText(const char *text, int posX, int posY, int fontSize, Color color);`
 #'
 #' @export
 draw_text <- function(text, pos_x, pos_y, font_size, color) {
@@ -2003,6 +2639,10 @@ draw_text <- function(text, pos_x, pos_y, font_size, color) {
 #' @param spacing A number
 #' @param tint A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawTextEx(Font font, const char *text, Vector2 position, float fontSize, float spacing, Color tint);`
+#'
 #' @export
 draw_text_ex <- function(font, text, position, font_size, spacing, tint) {
     invisible(.Call(`_raylibr_draw_text_ex`, font, text, position, font_size, spacing, tint))
@@ -2015,6 +2655,10 @@ draw_text_ex <- function(font, text, position, font_size, spacing, tint) {
 #' @param text A string
 #' @param font_size An integer
 #' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int MeasureText(const char *text, int fontSize);`
 #'
 #' @export
 measure_text <- function(text, font_size) {
@@ -2031,6 +2675,10 @@ measure_text <- function(text, font_size) {
 #' @param spacing A number
 #' @return A numeric vector of length 2
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Vector2 MeasureTextEx(Font font, const char *text, float fontSize, float spacing);`
+#'
 #' @export
 measure_text_ex <- function(font, text, font_size, spacing) {
     .Call(`_raylibr_measure_text_ex`, font, text, font_size, spacing)
@@ -2046,6 +2694,10 @@ measure_text_ex <- function(font, text, font_size, spacing) {
 #' @param length A number
 #' @param color A color
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawCube(Vector3 position, float width, float height, float length, Color color);`
+#'
 #' @export
 draw_cube <- function(position, width, height, length, color) {
     invisible(.Call(`_raylibr_draw_cube`, position, width, height, length, color))
@@ -2058,6 +2710,10 @@ draw_cube <- function(position, width, height, length, color) {
 #' @param slices An integer
 #' @param spacing A number
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void DrawGrid(int slices, float spacing);`
+#'
 #' @export
 draw_grid <- function(slices, spacing) {
     invisible(.Call(`_raylibr_draw_grid`, slices, spacing))
@@ -2068,6 +2724,10 @@ draw_grid <- function(slices, spacing) {
 #' Initialize audio device and context.
 #'
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void InitAudioDevice(void);`
+#'
 #' @export
 init_audio_device <- function() {
     invisible(.Call(`_raylibr_init_audio_device`))
@@ -2077,6 +2737,10 @@ init_audio_device <- function() {
 #'
 #' Close the audio device and context.
 #'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void CloseAudioDevice(void);`
 #'
 #' @export
 close_audio_device <- function() {
@@ -2089,6 +2753,10 @@ close_audio_device <- function() {
 #'
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsAudioDeviceReady(void);`
+#'
 #' @export
 is_audio_device_ready <- function() {
     .Call(`_raylibr_is_audio_device_ready`)
@@ -2099,6 +2767,10 @@ is_audio_device_ready <- function() {
 #' Set master volume (listener).
 #'
 #' @param volume A number
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetMasterVolume(float volume);`
 #'
 #' @export
 set_master_volume <- function(volume) {
@@ -2112,6 +2784,10 @@ set_master_volume <- function(volume) {
 #' @param file_name A string
 #' @return A wave
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Wave LoadWave(const char *fileName);`
+#'
 #' @export
 load_wave <- function(file_name) {
     .Call(`_raylibr_load_wave`, file_name)
@@ -2123,6 +2799,10 @@ load_wave <- function(file_name) {
 #'
 #' @param file_name A string
 #' @return A sound
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Sound LoadSound(const char *fileName);`
 #'
 #' @export
 load_sound <- function(file_name) {
@@ -2136,6 +2816,10 @@ load_sound <- function(file_name) {
 #' @param wave A wave
 #' @return A sound
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Sound LoadSoundFromWave(Wave wave);`
+#'
 #' @export
 load_sound_from_wave <- function(wave) {
     .Call(`_raylibr_load_sound_from_wave`, wave)
@@ -2146,6 +2830,10 @@ load_sound_from_wave <- function(wave) {
 #' Unload wave data.
 #'
 #' @param wave A wave
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void UnloadWave(Wave wave);`
 #'
 #' @export
 unload_wave <- function(wave) {
@@ -2158,6 +2846,10 @@ unload_wave <- function(wave) {
 #'
 #' @param sound A sound
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void UnloadSound(Sound sound);`
+#'
 #' @export
 unload_sound <- function(sound) {
     invisible(.Call(`_raylibr_unload_sound`, sound))
@@ -2168,6 +2860,10 @@ unload_sound <- function(sound) {
 #' Play a sound.
 #'
 #' @param sound A sound
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void PlaySound(Sound sound);`
 #'
 #' @export
 play_sound <- function(sound) {
@@ -2180,6 +2876,10 @@ play_sound <- function(sound) {
 #'
 #' @param sound A sound
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void StopSound(Sound sound);`
+#'
 #' @export
 stop_sound <- function(sound) {
     invisible(.Call(`_raylibr_stop_sound`, sound))
@@ -2190,6 +2890,10 @@ stop_sound <- function(sound) {
 #' Pause a sound.
 #'
 #' @param sound A sound
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void PauseSound(Sound sound);`
 #'
 #' @export
 pause_sound <- function(sound) {
@@ -2202,6 +2906,10 @@ pause_sound <- function(sound) {
 #'
 #' @param sound A sound
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void ResumeSound(Sound sound);`
+#'
 #' @export
 resume_sound <- function(sound) {
     invisible(.Call(`_raylibr_resume_sound`, sound))
@@ -2213,6 +2921,10 @@ resume_sound <- function(sound) {
 #'
 #' @param sound A sound
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void PlaySoundMulti(Sound sound);`
+#'
 #' @export
 play_sound_multi <- function(sound) {
     invisible(.Call(`_raylibr_play_sound_multi`, sound))
@@ -2222,6 +2934,10 @@ play_sound_multi <- function(sound) {
 #'
 #' Stop any sound playing (using multichannel buffer pool).
 #'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void StopSoundMulti(void);`
 #'
 #' @export
 stop_sound_multi <- function() {
@@ -2233,6 +2949,10 @@ stop_sound_multi <- function() {
 #' Get number of sounds playing in the multichannel.
 #'
 #' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `int GetSoundsPlaying(void);`
 #'
 #' @export
 get_sounds_playing <- function() {
@@ -2246,6 +2966,10 @@ get_sounds_playing <- function() {
 #' @param sound A sound
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsSoundPlaying(Sound sound);`
+#'
 #' @export
 is_sound_playing <- function(sound) {
     .Call(`_raylibr_is_sound_playing`, sound)
@@ -2257,6 +2981,10 @@ is_sound_playing <- function(sound) {
 #'
 #' @param sound A sound
 #' @param volume A number
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetSoundVolume(Sound sound, float volume);`
 #'
 #' @export
 set_sound_volume <- function(sound, volume) {
@@ -2270,6 +2998,10 @@ set_sound_volume <- function(sound, volume) {
 #' @param sound A sound
 #' @param pitch A number
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetSoundPitch(Sound sound, float pitch);`
+#'
 #' @export
 set_sound_pitch <- function(sound, pitch) {
     invisible(.Call(`_raylibr_set_sound_pitch`, sound, pitch))
@@ -2282,6 +3014,10 @@ set_sound_pitch <- function(sound, pitch) {
 #' @param file_name A string
 #' @return A music
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Music LoadMusicStream(const char *fileName);`
+#'
 #' @export
 load_music_stream <- function(file_name) {
     .Call(`_raylibr_load_music_stream`, file_name)
@@ -2293,6 +3029,10 @@ load_music_stream <- function(file_name) {
 #'
 #' @param music A music
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void UnloadMusicStream(Music music);`
+#'
 #' @export
 unload_music_stream <- function(music) {
     invisible(.Call(`_raylibr_unload_music_stream`, music))
@@ -2303,6 +3043,10 @@ unload_music_stream <- function(music) {
 #' Start music playing.
 #'
 #' @param music A music
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void PlayMusicStream(Music music);`
 #'
 #' @export
 play_music_stream <- function(music) {
@@ -2316,6 +3060,10 @@ play_music_stream <- function(music) {
 #' @param music A music
 #' @return A logical
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `bool IsMusicStreamPlaying(Music music);`
+#'
 #' @export
 is_music_stream_playing <- function(music) {
     .Call(`_raylibr_is_music_stream_playing`, music)
@@ -2326,6 +3074,10 @@ is_music_stream_playing <- function(music) {
 #' Updates buffers for music streaming.
 #'
 #' @param music A music
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void UpdateMusicStream(Music music);`
 #'
 #' @export
 update_music_stream <- function(music) {
@@ -2338,6 +3090,10 @@ update_music_stream <- function(music) {
 #'
 #' @param music A music
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void StopMusicStream(Music music);`
+#'
 #' @export
 stop_music_stream <- function(music) {
     invisible(.Call(`_raylibr_stop_music_stream`, music))
@@ -2349,6 +3105,10 @@ stop_music_stream <- function(music) {
 #'
 #' @param music A music
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void PauseMusicStream(Music music);`
+#'
 #' @export
 pause_music_stream <- function(music) {
     invisible(.Call(`_raylibr_pause_music_stream`, music))
@@ -2359,6 +3119,10 @@ pause_music_stream <- function(music) {
 #' Resume playing paused music.
 #'
 #' @param music A music
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void ResumeMusicStream(Music music);`
 #'
 #' @export
 resume_music_stream <- function(music) {
@@ -2372,6 +3136,10 @@ resume_music_stream <- function(music) {
 #' @param music A music
 #' @param position A number
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SeekMusicStream(Music music, float position);`
+#'
 #' @export
 seek_music_stream <- function(music, position) {
     invisible(.Call(`_raylibr_seek_music_stream`, music, position))
@@ -2383,6 +3151,10 @@ seek_music_stream <- function(music, position) {
 #'
 #' @param music A music
 #' @param volume A number
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetMusicVolume(Music music, float volume);`
 #'
 #' @export
 set_music_volume <- function(music, volume) {
@@ -2396,6 +3168,10 @@ set_music_volume <- function(music, volume) {
 #' @param music A music
 #' @param pitch A number
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `void SetMusicPitch(Music music, float pitch);`
+#'
 #' @export
 set_music_pitch <- function(music, pitch) {
     invisible(.Call(`_raylibr_set_music_pitch`, music, pitch))
@@ -2407,6 +3183,10 @@ set_music_pitch <- function(music, pitch) {
 #'
 #' @param music A music
 #' @return A number
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `float GetMusicTimeLength(Music music);`
 #'
 #' @export
 get_music_time_length <- function(music) {
@@ -2420,6 +3200,10 @@ get_music_time_length <- function(music) {
 #' @param music A music
 #' @return A number
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `float GetMusicTimePlayed(Music music);`
+#'
 #' @export
 get_music_time_played <- function(music) {
     .Call(`_raylibr_get_music_time_played`, music)
@@ -2432,6 +3216,10 @@ get_music_time_played <- function(music) {
 #' @param v_1 A numeric vector of length 2
 #' @param v_2 A numeric vector of length 2
 #' @return A number
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `float Vector2Angle(Vector2 v1, Vector2 v2);`
 #'
 #' @export
 vector_2_angle <- function(v_1, v_2) {
@@ -2447,6 +3235,10 @@ vector_2_angle <- function(v_1, v_2) {
 #' @param max_distance A number
 #' @return A numeric vector of length 2
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Vector2 Vector2MoveTowards(Vector2 v, Vector2 target, float maxDistance);`
+#'
 #' @export
 vector_2_move_towards <- function(v, target, max_distance) {
     .Call(`_raylibr_vector_2_move_towards`, v, target, max_distance)
@@ -2460,6 +3252,10 @@ vector_2_move_towards <- function(v, target, max_distance) {
 #' @param v_2 A numeric vector of length 2
 #' @return A number
 #'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `float Vector2Distance(Vector2 v1, Vector2 v2);`
+#'
 #' @export
 vector_2_distance <- function(v_1, v_2) {
     .Call(`_raylibr_vector_2_distance`, v_1, v_2)
@@ -2472,6 +3268,10 @@ vector_2_distance <- function(v_1, v_2) {
 #' @param v A numeric vector of length 2
 #' @param angle A number
 #' @return A numeric vector of length 2
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Vector2 Vector2Rotate(Vector2 v, float angle);`
 #'
 #' @export
 vector_2_rotate <- function(v, angle) {

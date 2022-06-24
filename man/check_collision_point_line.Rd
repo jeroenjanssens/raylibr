@@ -21,3 +21,8 @@ A logical
 \description{
 Check if point belongs to line created between two points \link{p1} and \link{p2} with defined margin in pixels \link{threshold}.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{bool CheckCollisionPointLine(Vector2 point, Vector2 p1, Vector2 p2, int threshold);}
+}

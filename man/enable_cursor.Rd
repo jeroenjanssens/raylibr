@@ -9,3 +9,8 @@ enable_cursor()
 \description{
 Enables cursor (unlock cursor).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void EnableCursor(void);}
+}

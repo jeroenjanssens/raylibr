@@ -15,3 +15,8 @@ A music
 \description{
 Load music stream from file.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Music LoadMusicStream(const char *fileName);}
+}

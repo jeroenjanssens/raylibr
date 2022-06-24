@@ -12,3 +12,8 @@ set_master_volume(volume)
 \description{
 Set master volume (listener).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetMasterVolume(float volume);}
+}

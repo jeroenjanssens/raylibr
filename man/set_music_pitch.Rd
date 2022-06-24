@@ -14,3 +14,8 @@ set_music_pitch(music, pitch)
 \description{
 Set pitch for a music (1.0 is base level).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetMusicPitch(Music music, float pitch);}
+}

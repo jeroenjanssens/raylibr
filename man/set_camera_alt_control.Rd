@@ -12,3 +12,8 @@ set_camera_alt_control(key_alt)
 \description{
 Set camera alt key to combine with mouse movement (free camera).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetCameraAltControl(int keyAlt);}
+}

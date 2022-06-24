@@ -15,3 +15,8 @@ A number
 \description{
 Get music time length (in seconds).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{float GetMusicTimeLength(Music music);}
+}

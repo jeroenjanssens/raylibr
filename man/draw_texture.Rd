@@ -18,3 +18,8 @@ draw_texture(texture, pos_x, pos_y, tint)
 \description{
 Draw a Texture2D.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawTexture(Texture2D texture, int posX, int posY, Color tint);}
+}

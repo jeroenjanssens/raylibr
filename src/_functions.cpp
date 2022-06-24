@@ -10,6 +10,10 @@
 //' @param height An integer
 //' @param title A string
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void InitWindow(int width, int height, const char *title);`
+//'
 //' @export
 // [[Rcpp::export]]
 void init_window(int width, int height, const char * title) {
@@ -22,6 +26,10 @@ void init_window(int width, int height, const char * title) {
 //'
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool WindowShouldClose(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool window_should_close() {
@@ -32,6 +40,10 @@ bool window_should_close() {
 //'
 //' Close window and unload OpenGL context.
 //'
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void CloseWindow(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -45,6 +57,10 @@ void close_window() {
 //'
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsWindowReady(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool is_window_ready() {
@@ -56,6 +72,10 @@ bool is_window_ready() {
 //' Check if window is currently fullscreen.
 //'
 //' @return A logical
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsWindowFullscreen(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -69,6 +89,10 @@ bool is_window_fullscreen() {
 //'
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsWindowHidden(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool is_window_hidden() {
@@ -80,6 +104,10 @@ bool is_window_hidden() {
 //' Check if window is currently minimized (only PLATFORM_DESKTOP).
 //'
 //' @return A logical
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsWindowMinimized(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -93,6 +121,10 @@ bool is_window_minimized() {
 //'
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsWindowMaximized(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool is_window_maximized() {
@@ -105,6 +137,10 @@ bool is_window_maximized() {
 //'
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsWindowFocused(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool is_window_focused() {
@@ -116,6 +152,10 @@ bool is_window_focused() {
 //' Check if window has been resized last frame.
 //'
 //' @return A logical
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsWindowResized(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -130,6 +170,10 @@ bool is_window_resized() {
 //' @param flag A unsigned int
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsWindowState(unsigned int flag);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool is_window_state(unsigned int flag) {
@@ -141,6 +185,10 @@ bool is_window_state(unsigned int flag) {
 //' Set window configuration state using flags.
 //'
 //' @param flags A unsigned int
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetWindowState(unsigned int flags);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -154,6 +202,10 @@ void set_window_state(unsigned int flags) {
 //'
 //' @param flags A unsigned int
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void ClearWindowState(unsigned int flags);`
+//'
 //' @export
 // [[Rcpp::export]]
 void clear_window_state(unsigned int flags) {
@@ -164,6 +216,10 @@ void clear_window_state(unsigned int flags) {
 //'
 //' Toggle window state: fullscreen/windowed (only PLATFORM_DESKTOP).
 //'
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void ToggleFullscreen(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -176,6 +232,10 @@ void toggle_fullscreen() {
 //' Set window state: maximized, if resizable (only PLATFORM_DESKTOP).
 //'
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void MaximizeWindow(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 void maximize_window() {
@@ -187,6 +247,10 @@ void maximize_window() {
 //' Set window state: minimized, if resizable (only PLATFORM_DESKTOP).
 //'
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void MinimizeWindow(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 void minimize_window() {
@@ -197,6 +261,10 @@ void minimize_window() {
 //'
 //' Set window state: not minimized/maximized (only PLATFORM_DESKTOP).
 //'
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void RestoreWindow(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -210,6 +278,10 @@ void restore_window() {
 //'
 //' @param image A image
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetWindowIcon(Image image);`
+//'
 //' @export
 // [[Rcpp::export]]
 void set_window_icon(Image image) {
@@ -221,6 +293,10 @@ void set_window_icon(Image image) {
 //' Set title for window (only PLATFORM_DESKTOP).
 //'
 //' @param title A string
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetWindowTitle(const char *title);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -235,6 +311,10 @@ void set_window_title(const char * title) {
 //' @param x An integer
 //' @param y An integer
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetWindowPosition(int x, int y);`
+//'
 //' @export
 // [[Rcpp::export]]
 void set_window_position(int x, int y) {
@@ -246,6 +326,10 @@ void set_window_position(int x, int y) {
 //' Set monitor for the current window (fullscreen mode).
 //'
 //' @param monitor An integer
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetWindowMonitor(int monitor);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -260,6 +344,10 @@ void set_window_monitor(int monitor) {
 //' @param width An integer
 //' @param height An integer
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetWindowMinSize(int width, int height);`
+//'
 //' @export
 // [[Rcpp::export]]
 void set_window_min_size(int width, int height) {
@@ -273,6 +361,10 @@ void set_window_min_size(int width, int height) {
 //' @param width An integer
 //' @param height An integer
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetWindowSize(int width, int height);`
+//'
 //' @export
 // [[Rcpp::export]]
 void set_window_size(int width, int height) {
@@ -284,6 +376,10 @@ void set_window_size(int width, int height) {
 //' Get current screen width.
 //'
 //' @return An integer
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int GetScreenWidth(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -297,6 +393,10 @@ int get_screen_width() {
 //'
 //' @return An integer
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int GetScreenHeight(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 int get_screen_height() {
@@ -309,6 +409,10 @@ int get_screen_height() {
 //'
 //' @return An integer
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int GetMonitorCount(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 int get_monitor_count() {
@@ -320,6 +424,10 @@ int get_monitor_count() {
 //' Get current connected monitor.
 //'
 //' @return An integer
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int GetCurrentMonitor(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -334,6 +442,10 @@ int get_current_monitor() {
 //' @param monitor An integer
 //' @return A numeric vector of length 2
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Vector2 GetMonitorPosition(int monitor);`
+//'
 //' @export
 // [[Rcpp::export]]
 Vector2 get_monitor_position(int monitor) {
@@ -346,6 +458,10 @@ Vector2 get_monitor_position(int monitor) {
 //'
 //' @param monitor An integer
 //' @return An integer
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int GetMonitorWidth(int monitor);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -360,6 +476,10 @@ int get_monitor_width(int monitor) {
 //' @param monitor An integer
 //' @return An integer
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int GetMonitorHeight(int monitor);`
+//'
 //' @export
 // [[Rcpp::export]]
 int get_monitor_height(int monitor) {
@@ -372,6 +492,10 @@ int get_monitor_height(int monitor) {
 //'
 //' @param monitor An integer
 //' @return An integer
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int GetMonitorPhysicalWidth(int monitor);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -386,6 +510,10 @@ int get_monitor_physical_width(int monitor) {
 //' @param monitor An integer
 //' @return An integer
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int GetMonitorPhysicalHeight(int monitor);`
+//'
 //' @export
 // [[Rcpp::export]]
 int get_monitor_physical_height(int monitor) {
@@ -399,6 +527,10 @@ int get_monitor_physical_height(int monitor) {
 //' @param monitor An integer
 //' @return An integer
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int GetMonitorRefreshRate(int monitor);`
+//'
 //' @export
 // [[Rcpp::export]]
 int get_monitor_refresh_rate(int monitor) {
@@ -411,6 +543,10 @@ int get_monitor_refresh_rate(int monitor) {
 //'
 //' @return A numeric vector of length 2
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Vector2 GetWindowPosition(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 Vector2 get_window_position() {
@@ -422,6 +558,10 @@ Vector2 get_window_position() {
 //' Get window scale DPI factor.
 //'
 //' @return A numeric vector of length 2
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Vector2 GetWindowScaleDPI(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -436,6 +576,10 @@ Vector2 get_window_scale_dpi() {
 //' @param monitor An integer
 //' @return A string
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `const char *GetMonitorName(int monitor);`
+//'
 //' @export
 // [[Rcpp::export]]
 const char * get_monitor_name(int monitor) {
@@ -447,6 +591,10 @@ const char * get_monitor_name(int monitor) {
 //' Shows cursor.
 //'
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void ShowCursor(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 void show_cursor() {
@@ -457,6 +605,10 @@ void show_cursor() {
 //'
 //' Hides cursor.
 //'
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void HideCursor(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -470,6 +622,10 @@ void hide_cursor() {
 //'
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsCursorHidden(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool is_cursor_hidden() {
@@ -481,6 +637,10 @@ bool is_cursor_hidden() {
 //' Enables cursor (unlock cursor).
 //'
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void EnableCursor(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 void enable_cursor() {
@@ -491,6 +651,10 @@ void enable_cursor() {
 //'
 //' Disables cursor (lock cursor).
 //'
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DisableCursor(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -504,6 +668,10 @@ void disable_cursor() {
 //'
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsCursorOnScreen(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool is_cursor_on_screen() {
@@ -516,6 +684,10 @@ bool is_cursor_on_screen() {
 //'
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void ClearBackground(Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void clear_background(Color color) {
@@ -527,6 +699,10 @@ void clear_background(Color color) {
 //' Setup canvas (framebuffer) to start drawing.
 //'
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void BeginDrawing(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 void begin_drawing() {
@@ -537,6 +713,10 @@ void begin_drawing() {
 //'
 //' End canvas drawing and swap buffers (double buffering).
 //'
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void EndDrawing(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -550,6 +730,10 @@ void end_drawing() {
 //'
 //' @param camera A camera_2d
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void BeginMode2D(Camera2D camera);`
+//'
 //' @export
 // [[Rcpp::export]]
 void begin_mode_2d(Camera2D camera) {
@@ -560,6 +744,10 @@ void begin_mode_2d(Camera2D camera) {
 //'
 //' Ends 2D mode with custom camera.
 //'
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void EndMode2D(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -573,6 +761,10 @@ void end_mode_2d() {
 //'
 //' @param camera A camera_3d
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void BeginMode3D(Camera3D camera);`
+//'
 //' @export
 // [[Rcpp::export]]
 void begin_mode_3d(Camera3D camera) {
@@ -583,6 +775,10 @@ void begin_mode_3d(Camera3D camera) {
 //'
 //' Ends 3D mode and returns to default 2D orthographic mode.
 //'
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void EndMode3D(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -597,6 +793,10 @@ void end_mode_3d() {
 //' @param camera A camera_3d
 //' @return A numeric matrix of 4 by 4
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Matrix GetCameraMatrix(Camera camera);`
+//'
 //' @export
 // [[Rcpp::export]]
 RaylibMatrix get_camera_matrix(Camera3D camera) {
@@ -609,6 +809,10 @@ RaylibMatrix get_camera_matrix(Camera3D camera) {
 //'
 //' @param camera A camera_2d
 //' @return A numeric matrix of 4 by 4
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Matrix GetCameraMatrix2D(Camera2D camera);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -623,6 +827,10 @@ RaylibMatrix get_camera_matrix_2d(Camera2D camera) {
 //' @param position A numeric vector of length 3
 //' @param camera A camera_3d
 //' @return A numeric vector of length 2
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Vector2 GetWorldToScreen(Vector3 position, Camera camera);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -640,6 +848,10 @@ Vector2 get_world_to_screen(Vector3 position, Camera3D camera) {
 //' @param height An integer
 //' @return A numeric vector of length 2
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Vector2 GetWorldToScreenEx(Vector3 position, Camera camera, int width, int height);`
+//'
 //' @export
 // [[Rcpp::export]]
 Vector2 get_world_to_screen_ex(Vector3 position, Camera3D camera, int width, int height) {
@@ -653,6 +865,10 @@ Vector2 get_world_to_screen_ex(Vector3 position, Camera3D camera, int width, int
 //' @param position A numeric vector of length 2
 //' @param camera A camera_2d
 //' @return A numeric vector of length 2
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Vector2 GetWorldToScreen2D(Vector2 position, Camera2D camera);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -668,6 +884,10 @@ Vector2 get_world_to_screen_2d(Vector2 position, Camera2D camera) {
 //' @param camera A camera_2d
 //' @return A numeric vector of length 2
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Vector2 GetScreenToWorld2D(Vector2 position, Camera2D camera);`
+//'
 //' @export
 // [[Rcpp::export]]
 Vector2 get_screen_to_world_2d(Vector2 position, Camera2D camera) {
@@ -679,6 +899,10 @@ Vector2 get_screen_to_world_2d(Vector2 position, Camera2D camera) {
 //' Set target FPS (maximum).
 //'
 //' @param fps An integer
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetTargetFPS(int fps);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -692,6 +916,10 @@ void set_target_fps(int fps) {
 //'
 //' @return An integer
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int GetFPS(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 int get_fps() {
@@ -704,6 +932,10 @@ int get_fps() {
 //'
 //' @return A number
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `float GetFrameTime(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 float get_frame_time() {
@@ -715,6 +947,10 @@ float get_frame_time() {
 //' Get elapsed time in seconds since InitWindow().
 //'
 //' @return A double
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `double GetTime(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -730,6 +966,10 @@ double get_time() {
 //' @param max An integer
 //' @return An integer
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int GetRandomValue(int min, int max);`
+//'
 //' @export
 // [[Rcpp::export]]
 int get_random_value(int min, int max) {
@@ -741,6 +981,10 @@ int get_random_value(int min, int max) {
 //' Takes a screenshot of current screen (filename extension defines format).
 //'
 //' @param file_name A string
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void TakeScreenshot(const char *fileName);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -755,6 +999,10 @@ void take_screenshot(const char * file_name) {
 //' @param key An integer
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsKeyPressed(int key);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool is_key_pressed(int key) {
@@ -767,6 +1015,10 @@ bool is_key_pressed(int key) {
 //'
 //' @param key An integer
 //' @return A logical
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsKeyDown(int key);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -781,6 +1033,10 @@ bool is_key_down(int key) {
 //' @param key An integer
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsKeyReleased(int key);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool is_key_released(int key) {
@@ -794,6 +1050,10 @@ bool is_key_released(int key) {
 //' @param key An integer
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsKeyUp(int key);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool is_key_up(int key) {
@@ -805,6 +1065,10 @@ bool is_key_up(int key) {
 //' Set a custom key to exit program (default is ESC).
 //'
 //' @param key An integer
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetExitKey(int key);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -818,6 +1082,10 @@ void set_exit_key(int key) {
 //'
 //' @return An integer
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int GetKeyPressed(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 int get_key_pressed() {
@@ -829,6 +1097,10 @@ int get_key_pressed() {
 //' Get char pressed (unicode), call it multiple times for chars queued, returns 0 when the queue is empty.
 //'
 //' @return An integer
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int GetCharPressed(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -843,6 +1115,10 @@ int get_char_pressed() {
 //' @param button An integer
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsMouseButtonPressed(int button);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool is_mouse_button_pressed(int button) {
@@ -855,6 +1131,10 @@ bool is_mouse_button_pressed(int button) {
 //'
 //' @param button An integer
 //' @return A logical
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsMouseButtonDown(int button);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -869,6 +1149,10 @@ bool is_mouse_button_down(int button) {
 //' @param button An integer
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsMouseButtonReleased(int button);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool is_mouse_button_released(int button) {
@@ -882,6 +1166,10 @@ bool is_mouse_button_released(int button) {
 //' @param button An integer
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsMouseButtonUp(int button);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool is_mouse_button_up(int button) {
@@ -893,6 +1181,10 @@ bool is_mouse_button_up(int button) {
 //' Get mouse position X.
 //'
 //' @return An integer
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int GetMouseX(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -906,6 +1198,10 @@ int get_mouse_x() {
 //'
 //' @return An integer
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int GetMouseY(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 int get_mouse_y() {
@@ -918,6 +1214,10 @@ int get_mouse_y() {
 //'
 //' @return A numeric vector of length 2
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Vector2 GetMousePosition(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 Vector2 get_mouse_position() {
@@ -929,6 +1229,10 @@ Vector2 get_mouse_position() {
 //' Get mouse delta between frames.
 //'
 //' @return A numeric vector of length 2
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Vector2 GetMouseDelta(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -943,6 +1247,10 @@ Vector2 get_mouse_delta() {
 //' @param x An integer
 //' @param y An integer
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetMousePosition(int x, int y);`
+//'
 //' @export
 // [[Rcpp::export]]
 void set_mouse_position(int x, int y) {
@@ -955,6 +1263,10 @@ void set_mouse_position(int x, int y) {
 //'
 //' @param offset_x An integer
 //' @param offset_y An integer
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetMouseOffset(int offsetX, int offsetY);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -969,6 +1281,10 @@ void set_mouse_offset(int offset_x, int offset_y) {
 //' @param scale_x A number
 //' @param scale_y A number
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetMouseScale(float scaleX, float scaleY);`
+//'
 //' @export
 // [[Rcpp::export]]
 void set_mouse_scale(float scale_x, float scale_y) {
@@ -980,6 +1296,10 @@ void set_mouse_scale(float scale_x, float scale_y) {
 //' Get mouse wheel movement Y.
 //'
 //' @return A number
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `float GetMouseWheelMove(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -993,6 +1313,10 @@ float get_mouse_wheel_move() {
 //'
 //' @param cursor An integer
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetMouseCursor(int cursor);`
+//'
 //' @export
 // [[Rcpp::export]]
 void set_mouse_cursor(int cursor) {
@@ -1004,6 +1328,10 @@ void set_mouse_cursor(int cursor) {
 //' Set camera pan key to combine with mouse movement (free camera).
 //'
 //' @param key_pan An integer
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetCameraPanControl(int keyPan);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1017,6 +1345,10 @@ void set_camera_pan_control(int key_pan) {
 //'
 //' @param key_alt An integer
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetCameraAltControl(int keyAlt);`
+//'
 //' @export
 // [[Rcpp::export]]
 void set_camera_alt_control(int key_alt) {
@@ -1028,6 +1360,10 @@ void set_camera_alt_control(int key_alt) {
 //' Set camera smooth zoom key to combine with mouse (free camera).
 //'
 //' @param key_smooth_zoom An integer
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetCameraSmoothZoomControl(int keySmoothZoom);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1046,6 +1382,10 @@ void set_camera_smooth_zoom_control(int key_smooth_zoom) {
 //' @param key_up An integer
 //' @param key_down An integer
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetCameraMoveControls(int keyFront, int keyBack, int keyRight, int keyLeft, int keyUp, int keyDown);`
+//'
 //' @export
 // [[Rcpp::export]]
 void set_camera_move_controls(int key_front, int key_back, int key_right, int key_left, int key_up, int key_down) {
@@ -1058,6 +1398,10 @@ void set_camera_move_controls(int key_front, int key_back, int key_right, int ke
 //'
 //' @param texture A texture
 //' @param source A rectangle
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetShapesTexture(Texture2D texture, Rectangle source);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1073,6 +1417,10 @@ void set_shapes_texture(Texture texture, Rectangle source) {
 //' @param pos_y An integer
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawPixel(int posX, int posY, Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_pixel(int pos_x, int pos_y, Color color) {
@@ -1085,6 +1433,10 @@ void draw_pixel(int pos_x, int pos_y, Color color) {
 //'
 //' @param position A numeric vector of length 2
 //' @param color A color
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawPixelV(Vector2 position, Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1102,6 +1454,10 @@ void draw_pixel_v(Vector2 position, Color color) {
 //' @param end_pos_y An integer
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawLine(int startPosX, int startPosY, int endPosX, int endPosY, Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_line(int start_pos_x, int start_pos_y, int end_pos_x, int end_pos_y, Color color) {
@@ -1115,6 +1471,10 @@ void draw_line(int start_pos_x, int start_pos_y, int end_pos_x, int end_pos_y, C
 //' @param start_pos A numeric vector of length 2
 //' @param end_pos A numeric vector of length 2
 //' @param color A color
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawLineV(Vector2 startPos, Vector2 endPos, Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1131,6 +1491,10 @@ void draw_line_v(Vector2 start_pos, Vector2 end_pos, Color color) {
 //' @param thick A number
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawLineEx(Vector2 startPos, Vector2 endPos, float thick, Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_line_ex(Vector2 start_pos, Vector2 end_pos, float thick, Color color) {
@@ -1145,6 +1509,10 @@ void draw_line_ex(Vector2 start_pos, Vector2 end_pos, float thick, Color color) 
 //' @param end_pos A numeric vector of length 2
 //' @param thick A number
 //' @param color A color
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawLineBezier(Vector2 startPos, Vector2 endPos, float thick, Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1161,6 +1529,10 @@ void draw_line_bezier(Vector2 start_pos, Vector2 end_pos, float thick, Color col
 //' @param control_pos A numeric vector of length 2
 //' @param thick A number
 //' @param color A color
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawLineBezierQuad(Vector2 startPos, Vector2 endPos, Vector2 controlPos, float thick, Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1179,6 +1551,10 @@ void draw_line_bezier_quad(Vector2 start_pos, Vector2 end_pos, Vector2 control_p
 //' @param thick A number
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawLineBezierCubic(Vector2 startPos, Vector2 endPos, Vector2 startControlPos, Vector2 endControlPos, float thick, Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_line_bezier_cubic(Vector2 start_pos, Vector2 end_pos, Vector2 start_control_pos, Vector2 end_control_pos, float thick, Color color) {
@@ -1193,6 +1569,10 @@ void draw_line_bezier_cubic(Vector2 start_pos, Vector2 end_pos, Vector2 start_co
 //' @param center_y An integer
 //' @param radius A number
 //' @param color A color
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawCircle(int centerX, int centerY, float radius, Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1211,6 +1591,10 @@ void draw_circle(int center_x, int center_y, float radius, Color color) {
 //' @param segments An integer
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawCircleSector(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_circle_sector(Vector2 center, float radius, float start_angle, float end_angle, int segments, Color color) {
@@ -1228,6 +1612,10 @@ void draw_circle_sector(Vector2 center, float radius, float start_angle, float e
 //' @param segments An integer
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawCircleSectorLines(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_circle_sector_lines(Vector2 center, float radius, float start_angle, float end_angle, int segments, Color color) {
@@ -1244,6 +1632,10 @@ void draw_circle_sector_lines(Vector2 center, float radius, float start_angle, f
 //' @param color_1 A color
 //' @param color_2 A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawCircleGradient(int centerX, int centerY, float radius, Color color1, Color color2);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_circle_gradient(int center_x, int center_y, float radius, Color color_1, Color color_2) {
@@ -1257,6 +1649,10 @@ void draw_circle_gradient(int center_x, int center_y, float radius, Color color_
 //' @param center A numeric vector of length 2
 //' @param radius A number
 //' @param color A color
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawCircleV(Vector2 center, float radius, Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1272,6 +1668,10 @@ void draw_circle_v(Vector2 center, float radius, Color color) {
 //' @param center_y An integer
 //' @param radius A number
 //' @param color A color
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawCircleLines(int centerX, int centerY, float radius, Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1289,6 +1689,10 @@ void draw_circle_lines(int center_x, int center_y, float radius, Color color) {
 //' @param radius_v A number
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawEllipse(int centerX, int centerY, float radiusH, float radiusV, Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_ellipse(int center_x, int center_y, float radius_h, float radius_v, Color color) {
@@ -1304,6 +1708,10 @@ void draw_ellipse(int center_x, int center_y, float radius_h, float radius_v, Co
 //' @param radius_h A number
 //' @param radius_v A number
 //' @param color A color
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawEllipseLines(int centerX, int centerY, float radiusH, float radiusV, Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1323,6 +1731,10 @@ void draw_ellipse_lines(int center_x, int center_y, float radius_h, float radius
 //' @param segments An integer
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawRing(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_ring(Vector2 center, float inner_radius, float outer_radius, float start_angle, float end_angle, int segments, Color color) {
@@ -1341,6 +1753,10 @@ void draw_ring(Vector2 center, float inner_radius, float outer_radius, float sta
 //' @param segments An integer
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawRingLines(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_ring_lines(Vector2 center, float inner_radius, float outer_radius, float start_angle, float end_angle, int segments, Color color) {
@@ -1357,6 +1773,10 @@ void draw_ring_lines(Vector2 center, float inner_radius, float outer_radius, flo
 //' @param height An integer
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawRectangle(int posX, int posY, int width, int height, Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_rectangle(int pos_x, int pos_y, int width, int height, Color color) {
@@ -1371,6 +1791,10 @@ void draw_rectangle(int pos_x, int pos_y, int width, int height, Color color) {
 //' @param size A numeric vector of length 2
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawRectangleV(Vector2 position, Vector2 size, Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_rectangle_v(Vector2 position, Vector2 size, Color color) {
@@ -1383,6 +1807,10 @@ void draw_rectangle_v(Vector2 position, Vector2 size, Color color) {
 //'
 //' @param rec A rectangle
 //' @param color A color
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawRectangleRec(Rectangle rec, Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1398,6 +1826,10 @@ void draw_rectangle_rec(Rectangle rec, Color color) {
 //' @param origin A numeric vector of length 2
 //' @param rotation A number
 //' @param color A color
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawRectanglePro(Rectangle rec, Vector2 origin, float rotation, Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1416,6 +1848,10 @@ void draw_rectangle_pro(Rectangle rec, Vector2 origin, float rotation, Color col
 //' @param color_1 A color
 //' @param color_2 A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawRectangleGradientV(int posX, int posY, int width, int height, Color color1, Color color2);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_rectangle_gradient_v(int pos_x, int pos_y, int width, int height, Color color_1, Color color_2) {
@@ -1433,6 +1869,10 @@ void draw_rectangle_gradient_v(int pos_x, int pos_y, int width, int height, Colo
 //' @param color_1 A color
 //' @param color_2 A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawRectangleGradientH(int posX, int posY, int width, int height, Color color1, Color color2);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_rectangle_gradient_h(int pos_x, int pos_y, int width, int height, Color color_1, Color color_2) {
@@ -1448,6 +1888,10 @@ void draw_rectangle_gradient_h(int pos_x, int pos_y, int width, int height, Colo
 //' @param col_2 A color
 //' @param col_3 A color
 //' @param col_4 A color
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawRectangleGradientEx(Rectangle rec, Color col1, Color col2, Color col3, Color col4);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1465,6 +1909,10 @@ void draw_rectangle_gradient_ex(Rectangle rec, Color col_1, Color col_2, Color c
 //' @param height An integer
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawRectangleLines(int posX, int posY, int width, int height, Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_rectangle_lines(int pos_x, int pos_y, int width, int height, Color color) {
@@ -1478,6 +1926,10 @@ void draw_rectangle_lines(int pos_x, int pos_y, int width, int height, Color col
 //' @param rec A rectangle
 //' @param line_thick A number
 //' @param color A color
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawRectangleLinesEx(Rectangle rec, float lineThick, Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1493,6 +1945,10 @@ void draw_rectangle_lines_ex(Rectangle rec, float line_thick, Color color) {
 //' @param roundness A number
 //' @param segments An integer
 //' @param color A color
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawRectangleRounded(Rectangle rec, float roundness, int segments, Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1510,6 +1966,10 @@ void draw_rectangle_rounded(Rectangle rec, float roundness, int segments, Color 
 //' @param line_thick A number
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawRectangleRoundedLines(Rectangle rec, float roundness, int segments, float lineThick, Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_rectangle_rounded_lines(Rectangle rec, float roundness, int segments, float line_thick, Color color) {
@@ -1525,6 +1985,10 @@ void draw_rectangle_rounded_lines(Rectangle rec, float roundness, int segments, 
 //' @param v_3 A numeric vector of length 2
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawTriangle(Vector2 v1, Vector2 v2, Vector2 v3, Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_triangle(Vector2 v_1, Vector2 v_2, Vector2 v_3, Color color) {
@@ -1539,6 +2003,10 @@ void draw_triangle(Vector2 v_1, Vector2 v_2, Vector2 v_3, Color color) {
 //' @param v_2 A numeric vector of length 2
 //' @param v_3 A numeric vector of length 2
 //' @param color A color
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawTriangleLines(Vector2 v1, Vector2 v2, Vector2 v3, Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1556,6 +2024,10 @@ void draw_triangle_lines(Vector2 v_1, Vector2 v_2, Vector2 v_3, Color color) {
 //' @param rotation A number
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawPoly(Vector2 center, int sides, float radius, float rotation, Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_poly(Vector2 center, int sides, float radius, float rotation, Color color) {
@@ -1571,6 +2043,10 @@ void draw_poly(Vector2 center, int sides, float radius, float rotation, Color co
 //' @param radius A number
 //' @param rotation A number
 //' @param color A color
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawPolyLines(Vector2 center, int sides, float radius, float rotation, Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1589,6 +2065,10 @@ void draw_poly_lines(Vector2 center, int sides, float radius, float rotation, Co
 //' @param line_thick A number
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawPolyLinesEx(Vector2 center, int sides, float radius, float rotation, float lineThick, Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_poly_lines_ex(Vector2 center, int sides, float radius, float rotation, float line_thick, Color color) {
@@ -1602,6 +2082,10 @@ void draw_poly_lines_ex(Vector2 center, int sides, float radius, float rotation,
 //' @param rec_1 A rectangle
 //' @param rec_2 A rectangle
 //' @return A logical
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool CheckCollisionRecs(Rectangle rec1, Rectangle rec2);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1619,6 +2103,10 @@ bool check_collision_recs(Rectangle rec_1, Rectangle rec_2) {
 //' @param radius_2 A number
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool CheckCollisionCircles(Vector2 center1, float radius1, Vector2 center2, float radius2);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool check_collision_circles(Vector2 center_1, float radius_1, Vector2 center_2, float radius_2) {
@@ -1634,6 +2122,10 @@ bool check_collision_circles(Vector2 center_1, float radius_1, Vector2 center_2,
 //' @param rec A rectangle
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool CheckCollisionCircleRec(Vector2 center, float radius, Rectangle rec);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool check_collision_circle_rec(Vector2 center, float radius, Rectangle rec) {
@@ -1647,6 +2139,10 @@ bool check_collision_circle_rec(Vector2 center, float radius, Rectangle rec) {
 //' @param point A numeric vector of length 2
 //' @param rec A rectangle
 //' @return A logical
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool CheckCollisionPointRec(Vector2 point, Rectangle rec);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1662,6 +2158,10 @@ bool check_collision_point_rec(Vector2 point, Rectangle rec) {
 //' @param center A numeric vector of length 2
 //' @param radius A number
 //' @return A logical
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool CheckCollisionPointCircle(Vector2 point, Vector2 center, float radius);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1679,6 +2179,10 @@ bool check_collision_point_circle(Vector2 point, Vector2 center, float radius) {
 //' @param p_3 A numeric vector of length 2
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool CheckCollisionPointTriangle(Vector2 point, Vector2 p1, Vector2 p2, Vector2 p3);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool check_collision_point_triangle(Vector2 point, Vector2 p_1, Vector2 p_2, Vector2 p_3) {
@@ -1695,6 +2199,10 @@ bool check_collision_point_triangle(Vector2 point, Vector2 p_1, Vector2 p_2, Vec
 //' @param threshold An integer
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool CheckCollisionPointLine(Vector2 point, Vector2 p1, Vector2 p2, int threshold);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool check_collision_point_line(Vector2 point, Vector2 p_1, Vector2 p_2, int threshold) {
@@ -1709,6 +2217,10 @@ bool check_collision_point_line(Vector2 point, Vector2 p_1, Vector2 p_2, int thr
 //' @param rec_2 A rectangle
 //' @return A rectangle
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Rectangle GetCollisionRec(Rectangle rec1, Rectangle rec2);`
+//'
 //' @export
 // [[Rcpp::export]]
 Rectangle get_collision_rec(Rectangle rec_1, Rectangle rec_2) {
@@ -1721,6 +2233,10 @@ Rectangle get_collision_rec(Rectangle rec_1, Rectangle rec_2) {
 //'
 //' @param file_name A string
 //' @return A image
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Image LoadImage(const char *fileName);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1739,6 +2255,10 @@ Image load_image(const char * file_name) {
 //' @param header_size An integer
 //' @return A image
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Image LoadImageRaw(const char *fileName, int width, int height, int format, int headerSize);`
+//'
 //' @export
 // [[Rcpp::export]]
 Image load_image_raw(const char * file_name, int width, int height, int format, int header_size) {
@@ -1752,6 +2272,10 @@ Image load_image_raw(const char * file_name, int width, int height, int format, 
 //' @param texture A texture
 //' @return A image
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Image LoadImageFromTexture(Texture2D texture);`
+//'
 //' @export
 // [[Rcpp::export]]
 Image load_image_from_texture(Texture texture) {
@@ -1764,6 +2288,10 @@ Image load_image_from_texture(Texture texture) {
 //'
 //' @return A image
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Image LoadImageFromScreen(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 Image load_image_from_screen() {
@@ -1775,6 +2303,10 @@ Image load_image_from_screen() {
 //' Unload image from CPU memory (RAM).
 //'
 //' @param image A image
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void UnloadImage(Image image);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1790,6 +2322,10 @@ void unload_image(Image image) {
 //' @param file_name A string
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool ExportImage(Image image, const char *fileName);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool export_image(Image image, const char * file_name) {
@@ -1803,6 +2339,10 @@ bool export_image(Image image, const char * file_name) {
 //' @param image A image
 //' @param file_name A string
 //' @return A logical
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool ExportImageAsCode(Image image, const char *fileName);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1818,6 +2358,10 @@ bool export_image_as_code(Image image, const char * file_name) {
 //' @param height An integer
 //' @param color A color
 //' @return A image
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Image GenImageColor(int width, int height, Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1835,6 +2379,10 @@ Image gen_image_color(int width, int height, Color color) {
 //' @param bottom A color
 //' @return A image
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Image GenImageGradientV(int width, int height, Color top, Color bottom);`
+//'
 //' @export
 // [[Rcpp::export]]
 Image gen_image_gradient_v(int width, int height, Color top, Color bottom) {
@@ -1850,6 +2398,10 @@ Image gen_image_gradient_v(int width, int height, Color top, Color bottom) {
 //' @param left A color
 //' @param right A color
 //' @return A image
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Image GenImageGradientH(int width, int height, Color left, Color right);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1867,6 +2419,10 @@ Image gen_image_gradient_h(int width, int height, Color left, Color right) {
 //' @param inner A color
 //' @param outer A color
 //' @return A image
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Image GenImageGradientRadial(int width, int height, float density, Color inner, Color outer);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1886,6 +2442,10 @@ Image gen_image_gradient_radial(int width, int height, float density, Color inne
 //' @param col_2 A color
 //' @return A image
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Image GenImageChecked(int width, int height, int checksX, int checksY, Color col1, Color col2);`
+//'
 //' @export
 // [[Rcpp::export]]
 Image gen_image_checked(int width, int height, int checks_x, int checks_y, Color col_1, Color col_2) {
@@ -1900,6 +2460,10 @@ Image gen_image_checked(int width, int height, int checks_x, int checks_y, Color
 //' @param height An integer
 //' @param factor A number
 //' @return A image
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Image GenImageWhiteNoise(int width, int height, float factor);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1916,6 +2480,10 @@ Image gen_image_white_noise(int width, int height, float factor) {
 //' @param tile_size An integer
 //' @return A image
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Image GenImageCellular(int width, int height, int tileSize);`
+//'
 //' @export
 // [[Rcpp::export]]
 Image gen_image_cellular(int width, int height, int tile_size) {
@@ -1929,6 +2497,10 @@ Image gen_image_cellular(int width, int height, int tile_size) {
 //' @param file_name A string
 //' @return A texture
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Texture2D LoadTexture(const char *fileName);`
+//'
 //' @export
 // [[Rcpp::export]]
 Texture load_texture(const char * file_name) {
@@ -1941,6 +2513,10 @@ Texture load_texture(const char * file_name) {
 //'
 //' @param image A image
 //' @return A texture
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Texture2D LoadTextureFromImage(Image image);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1957,6 +2533,10 @@ Texture load_texture_from_image(Image image) {
 //' @param pos_y An integer
 //' @param tint A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawTexture(Texture2D texture, int posX, int posY, Color tint);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_texture(Texture texture, int pos_x, int pos_y, Color tint) {
@@ -1971,6 +2551,10 @@ void draw_texture(Texture texture, int pos_x, int pos_y, Color tint) {
 //' @param alpha A number
 //' @return A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Color Fade(Color color, float alpha);`
+//'
 //' @export
 // [[Rcpp::export]]
 Color fade(Color color, float alpha) {
@@ -1983,6 +2567,10 @@ Color fade(Color color, float alpha) {
 //'
 //' @param color A color
 //' @return An integer
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int ColorToInt(Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -1997,6 +2585,10 @@ int color_to_int(Color color) {
 //' @param color A color
 //' @return A numeric vector of length 4
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Vector4 ColorNormalize(Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 Vector4 color_normalize(Color color) {
@@ -2010,6 +2602,10 @@ Vector4 color_normalize(Color color) {
 //' @param normalized A numeric vector of length 4
 //' @return A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Color ColorFromNormalized(Vector4 normalized);`
+//'
 //' @export
 // [[Rcpp::export]]
 Color color_from_normalized(Vector4 normalized) {
@@ -2022,6 +2618,10 @@ Color color_from_normalized(Vector4 normalized) {
 //'
 //' @param color A color
 //' @return A numeric vector of length 3
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Vector3 ColorToHSV(Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2038,6 +2638,10 @@ Vector3 color_to_hsv(Color color) {
 //' @param value A number
 //' @return A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Color ColorFromHSV(float hue, float saturation, float value);`
+//'
 //' @export
 // [[Rcpp::export]]
 Color color_from_hsv(float hue, float saturation, float value) {
@@ -2051,6 +2655,10 @@ Color color_from_hsv(float hue, float saturation, float value) {
 //' @param color A color
 //' @param alpha A number
 //' @return A color
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Color ColorAlpha(Color color, float alpha);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2067,6 +2675,10 @@ Color color_alpha(Color color, float alpha) {
 //' @param tint A color
 //' @return A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Color ColorAlphaBlend(Color dst, Color src, Color tint);`
+//'
 //' @export
 // [[Rcpp::export]]
 Color color_alpha_blend(Color dst, Color src, Color tint) {
@@ -2080,6 +2692,10 @@ Color color_alpha_blend(Color dst, Color src, Color tint) {
 //' @param hex_value A unsigned int
 //' @return A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Color GetColor(unsigned int hexValue);`
+//'
 //' @export
 // [[Rcpp::export]]
 Color get_color(unsigned int hex_value) {
@@ -2091,6 +2707,10 @@ Color get_color(unsigned int hex_value) {
 //' Get the default Font.
 //'
 //' @return A font
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Font GetFontDefault(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2105,6 +2725,10 @@ Font get_font_default() {
 //' @param file_name A string
 //' @return A font
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Font LoadFont(const char *fileName);`
+//'
 //' @export
 // [[Rcpp::export]]
 Font load_font(const char * file_name) {
@@ -2116,6 +2740,10 @@ Font load_font(const char * file_name) {
 //' Unload Font from GPU memory (VRAM).
 //'
 //' @param font A font
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void UnloadFont(Font font);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2129,6 +2757,10 @@ void unload_font(Font font) {
 //'
 //' @param pos_x An integer
 //' @param pos_y An integer
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawFPS(int posX, int posY);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2145,6 +2777,10 @@ void draw_fps(int pos_x, int pos_y) {
 //' @param pos_y An integer
 //' @param font_size An integer
 //' @param color A color
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawText(const char *text, int posX, int posY, int fontSize, Color color);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2163,6 +2799,10 @@ void draw_text(const char * text, int pos_x, int pos_y, int font_size, Color col
 //' @param spacing A number
 //' @param tint A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawTextEx(Font font, const char *text, Vector2 position, float fontSize, float spacing, Color tint);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_text_ex(Font font, const char * text, Vector2 position, float font_size, float spacing, Color tint) {
@@ -2176,6 +2816,10 @@ void draw_text_ex(Font font, const char * text, Vector2 position, float font_siz
 //' @param text A string
 //' @param font_size An integer
 //' @return An integer
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int MeasureText(const char *text, int fontSize);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2193,6 +2837,10 @@ int measure_text(const char * text, int font_size) {
 //' @param spacing A number
 //' @return A numeric vector of length 2
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Vector2 MeasureTextEx(Font font, const char *text, float fontSize, float spacing);`
+//'
 //' @export
 // [[Rcpp::export]]
 Vector2 measure_text_ex(Font font, const char * text, float font_size, float spacing) {
@@ -2209,6 +2857,10 @@ Vector2 measure_text_ex(Font font, const char * text, float font_size, float spa
 //' @param length A number
 //' @param color A color
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawCube(Vector3 position, float width, float height, float length, Color color);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_cube(Vector3 position, float width, float height, float length, Color color) {
@@ -2222,6 +2874,10 @@ void draw_cube(Vector3 position, float width, float height, float length, Color 
 //' @param slices An integer
 //' @param spacing A number
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void DrawGrid(int slices, float spacing);`
+//'
 //' @export
 // [[Rcpp::export]]
 void draw_grid(int slices, float spacing) {
@@ -2233,6 +2889,10 @@ void draw_grid(int slices, float spacing) {
 //' Initialize audio device and context.
 //'
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void InitAudioDevice(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 void init_audio_device() {
@@ -2243,6 +2903,10 @@ void init_audio_device() {
 //'
 //' Close the audio device and context.
 //'
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void CloseAudioDevice(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2256,6 +2920,10 @@ void close_audio_device() {
 //'
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsAudioDeviceReady(void);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool is_audio_device_ready() {
@@ -2267,6 +2935,10 @@ bool is_audio_device_ready() {
 //' Set master volume (listener).
 //'
 //' @param volume A number
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetMasterVolume(float volume);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2281,6 +2953,10 @@ void set_master_volume(float volume) {
 //' @param file_name A string
 //' @return A wave
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Wave LoadWave(const char *fileName);`
+//'
 //' @export
 // [[Rcpp::export]]
 Wave load_wave(const char * file_name) {
@@ -2293,6 +2969,10 @@ Wave load_wave(const char * file_name) {
 //'
 //' @param file_name A string
 //' @return A sound
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Sound LoadSound(const char *fileName);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2307,6 +2987,10 @@ Sound load_sound(const char * file_name) {
 //' @param wave A wave
 //' @return A sound
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Sound LoadSoundFromWave(Wave wave);`
+//'
 //' @export
 // [[Rcpp::export]]
 Sound load_sound_from_wave(Wave wave) {
@@ -2318,6 +3002,10 @@ Sound load_sound_from_wave(Wave wave) {
 //' Unload wave data.
 //'
 //' @param wave A wave
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void UnloadWave(Wave wave);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2331,6 +3019,10 @@ void unload_wave(Wave wave) {
 //'
 //' @param sound A sound
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void UnloadSound(Sound sound);`
+//'
 //' @export
 // [[Rcpp::export]]
 void unload_sound(Sound sound) {
@@ -2342,6 +3034,10 @@ void unload_sound(Sound sound) {
 //' Play a sound.
 //'
 //' @param sound A sound
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void PlaySound(Sound sound);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2355,6 +3051,10 @@ void play_sound(Sound sound) {
 //'
 //' @param sound A sound
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void StopSound(Sound sound);`
+//'
 //' @export
 // [[Rcpp::export]]
 void stop_sound(Sound sound) {
@@ -2366,6 +3066,10 @@ void stop_sound(Sound sound) {
 //' Pause a sound.
 //'
 //' @param sound A sound
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void PauseSound(Sound sound);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2379,6 +3083,10 @@ void pause_sound(Sound sound) {
 //'
 //' @param sound A sound
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void ResumeSound(Sound sound);`
+//'
 //' @export
 // [[Rcpp::export]]
 void resume_sound(Sound sound) {
@@ -2391,6 +3099,10 @@ void resume_sound(Sound sound) {
 //'
 //' @param sound A sound
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void PlaySoundMulti(Sound sound);`
+//'
 //' @export
 // [[Rcpp::export]]
 void play_sound_multi(Sound sound) {
@@ -2401,6 +3113,10 @@ void play_sound_multi(Sound sound) {
 //'
 //' Stop any sound playing (using multichannel buffer pool).
 //'
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void StopSoundMulti(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2413,6 +3129,10 @@ void stop_sound_multi() {
 //' Get number of sounds playing in the multichannel.
 //'
 //' @return An integer
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `int GetSoundsPlaying(void);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2427,6 +3147,10 @@ int get_sounds_playing() {
 //' @param sound A sound
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsSoundPlaying(Sound sound);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool is_sound_playing(Sound sound) {
@@ -2439,6 +3163,10 @@ bool is_sound_playing(Sound sound) {
 //'
 //' @param sound A sound
 //' @param volume A number
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetSoundVolume(Sound sound, float volume);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2453,6 +3181,10 @@ void set_sound_volume(Sound sound, float volume) {
 //' @param sound A sound
 //' @param pitch A number
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetSoundPitch(Sound sound, float pitch);`
+//'
 //' @export
 // [[Rcpp::export]]
 void set_sound_pitch(Sound sound, float pitch) {
@@ -2466,6 +3198,10 @@ void set_sound_pitch(Sound sound, float pitch) {
 //' @param file_name A string
 //' @return A music
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Music LoadMusicStream(const char *fileName);`
+//'
 //' @export
 // [[Rcpp::export]]
 Music load_music_stream(const char * file_name) {
@@ -2478,6 +3214,10 @@ Music load_music_stream(const char * file_name) {
 //'
 //' @param music A music
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void UnloadMusicStream(Music music);`
+//'
 //' @export
 // [[Rcpp::export]]
 void unload_music_stream(Music music) {
@@ -2489,6 +3229,10 @@ void unload_music_stream(Music music) {
 //' Start music playing.
 //'
 //' @param music A music
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void PlayMusicStream(Music music);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2503,6 +3247,10 @@ void play_music_stream(Music music) {
 //' @param music A music
 //' @return A logical
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `bool IsMusicStreamPlaying(Music music);`
+//'
 //' @export
 // [[Rcpp::export]]
 bool is_music_stream_playing(Music music) {
@@ -2514,6 +3262,10 @@ bool is_music_stream_playing(Music music) {
 //' Updates buffers for music streaming.
 //'
 //' @param music A music
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void UpdateMusicStream(Music music);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2527,6 +3279,10 @@ void update_music_stream(Music music) {
 //'
 //' @param music A music
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void StopMusicStream(Music music);`
+//'
 //' @export
 // [[Rcpp::export]]
 void stop_music_stream(Music music) {
@@ -2539,6 +3295,10 @@ void stop_music_stream(Music music) {
 //'
 //' @param music A music
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void PauseMusicStream(Music music);`
+//'
 //' @export
 // [[Rcpp::export]]
 void pause_music_stream(Music music) {
@@ -2550,6 +3310,10 @@ void pause_music_stream(Music music) {
 //' Resume playing paused music.
 //'
 //' @param music A music
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void ResumeMusicStream(Music music);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2564,6 +3328,10 @@ void resume_music_stream(Music music) {
 //' @param music A music
 //' @param position A number
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SeekMusicStream(Music music, float position);`
+//'
 //' @export
 // [[Rcpp::export]]
 void seek_music_stream(Music music, float position) {
@@ -2576,6 +3344,10 @@ void seek_music_stream(Music music, float position) {
 //'
 //' @param music A music
 //' @param volume A number
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetMusicVolume(Music music, float volume);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2590,6 +3362,10 @@ void set_music_volume(Music music, float volume) {
 //' @param music A music
 //' @param pitch A number
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `void SetMusicPitch(Music music, float pitch);`
+//'
 //' @export
 // [[Rcpp::export]]
 void set_music_pitch(Music music, float pitch) {
@@ -2602,6 +3378,10 @@ void set_music_pitch(Music music, float pitch) {
 //'
 //' @param music A music
 //' @return A number
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `float GetMusicTimeLength(Music music);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2616,6 +3396,10 @@ float get_music_time_length(Music music) {
 //' @param music A music
 //' @return A number
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `float GetMusicTimePlayed(Music music);`
+//'
 //' @export
 // [[Rcpp::export]]
 float get_music_time_played(Music music) {
@@ -2629,6 +3413,10 @@ float get_music_time_played(Music music) {
 //' @param v_1 A numeric vector of length 2
 //' @param v_2 A numeric vector of length 2
 //' @return A number
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `float Vector2Angle(Vector2 v1, Vector2 v2);`
 //'
 //' @export
 // [[Rcpp::export]]
@@ -2645,6 +3433,10 @@ float vector_2_angle(Vector2 v_1, Vector2 v_2) {
 //' @param max_distance A number
 //' @return A numeric vector of length 2
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Vector2 Vector2MoveTowards(Vector2 v, Vector2 target, float maxDistance);`
+//'
 //' @export
 // [[Rcpp::export]]
 Vector2 vector_2_move_towards(Vector2 v, Vector2 target, float max_distance) {
@@ -2659,6 +3451,10 @@ Vector2 vector_2_move_towards(Vector2 v, Vector2 target, float max_distance) {
 //' @param v_2 A numeric vector of length 2
 //' @return A number
 //'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `float Vector2Distance(Vector2 v1, Vector2 v2);`
+//'
 //' @export
 // [[Rcpp::export]]
 float vector_2_distance(Vector2 v_1, Vector2 v_2) {
@@ -2672,6 +3468,10 @@ float vector_2_distance(Vector2 v_1, Vector2 v_2) {
 //' @param v A numeric vector of length 2
 //' @param angle A number
 //' @return A numeric vector of length 2
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Vector2 Vector2Rotate(Vector2 v, float angle);`
 //'
 //' @export
 // [[Rcpp::export]]

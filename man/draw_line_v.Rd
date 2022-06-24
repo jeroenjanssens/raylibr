@@ -16,3 +16,8 @@ draw_line_v(start_pos, end_pos, color)
 \description{
 Draw a line (Vector version).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawLineV(Vector2 startPos, Vector2 endPos, Color color);}
+}

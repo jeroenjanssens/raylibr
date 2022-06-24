@@ -16,3 +16,8 @@ draw_pixel(pos_x, pos_y, color)
 \description{
 Draw a pixel.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawPixel(int posX, int posY, Color color);}
+}

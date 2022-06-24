@@ -12,3 +12,8 @@ A logical
 \description{
 Check if window is currently focused (only PLATFORM_DESKTOP).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{bool IsWindowFocused(void);}
+}

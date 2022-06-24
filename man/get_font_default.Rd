@@ -12,3 +12,8 @@ A font
 \description{
 Get the default Font.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Font GetFontDefault(void);}
+}

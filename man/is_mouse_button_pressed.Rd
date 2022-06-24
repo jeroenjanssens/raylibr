@@ -15,3 +15,8 @@ A logical
 \description{
 Check if a mouse button has been pressed once.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{bool IsMouseButtonPressed(int button);}
+}

@@ -12,3 +12,8 @@ set_window_monitor(monitor)
 \description{
 Set monitor for the current window (fullscreen mode).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetWindowMonitor(int monitor);}
+}

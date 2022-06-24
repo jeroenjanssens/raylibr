@@ -14,3 +14,8 @@ set_window_size(width, height)
 \description{
 Set window dimensions.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetWindowSize(int width, int height);}
+}

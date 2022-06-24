@@ -15,3 +15,8 @@ An integer
 \description{
 Get hexadecimal value for a Color.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{int ColorToInt(Color color);}
+}

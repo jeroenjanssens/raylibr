@@ -21,3 +21,8 @@ A logical
 \description{
 Check collision between two circles.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{bool CheckCollisionCircles(Vector2 center1, float radius1, Vector2 center2, float radius2);}
+}

@@ -9,3 +9,8 @@ stop_sound_multi()
 \description{
 Stop any sound playing (using multichannel buffer pool).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void StopSoundMulti(void);}
+}

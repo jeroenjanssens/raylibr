@@ -17,3 +17,8 @@ A logical
 \description{
 Export image data to file, returns true on success.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{bool ExportImage(Image image, const char *fileName);}
+}

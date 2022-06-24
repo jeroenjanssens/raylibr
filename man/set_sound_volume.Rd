@@ -14,3 +14,8 @@ set_sound_volume(sound, volume)
 \description{
 Set volume for a sound (1.0 is max level).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetSoundVolume(Sound sound, float volume);}
+}

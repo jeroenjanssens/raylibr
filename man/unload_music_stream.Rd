@@ -12,3 +12,8 @@ unload_music_stream(music)
 \description{
 Unload music stream.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void UnloadMusicStream(Music music);}
+}

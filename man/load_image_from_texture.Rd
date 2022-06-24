@@ -15,3 +15,8 @@ A image
 \description{
 Load image from GPU texture data.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Image LoadImageFromTexture(Texture2D texture);}
+}

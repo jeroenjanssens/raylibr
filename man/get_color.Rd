@@ -15,3 +15,8 @@ A color
 \description{
 Get Color structure from hexadecimal value.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Color GetColor(unsigned int hexValue);}
+}

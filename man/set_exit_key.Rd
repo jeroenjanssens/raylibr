@@ -12,3 +12,8 @@ set_exit_key(key)
 \description{
 Set a custom key to exit program (default is ESC).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetExitKey(int key);}
+}

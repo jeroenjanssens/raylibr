@@ -18,3 +18,8 @@ draw_circle(center_x, center_y, radius, color)
 \description{
 Draw a color-filled circle.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawCircle(int centerX, int centerY, float radius, Color color);}
+}

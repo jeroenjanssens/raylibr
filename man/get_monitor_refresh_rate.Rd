@@ -15,3 +15,8 @@ An integer
 \description{
 Get specified monitor refresh rate.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{int GetMonitorRefreshRate(int monitor);}
+}

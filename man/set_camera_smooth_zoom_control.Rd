@@ -12,3 +12,8 @@ set_camera_smooth_zoom_control(key_smooth_zoom)
 \description{
 Set camera smooth zoom key to combine with mouse (free camera).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetCameraSmoothZoomControl(int keySmoothZoom);}
+}

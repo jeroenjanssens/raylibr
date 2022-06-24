@@ -23,3 +23,8 @@ A image
 \description{
 Generate image: radial gradient.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Image GenImageGradientRadial(int width, int height, float density, Color inner, Color outer);}
+}

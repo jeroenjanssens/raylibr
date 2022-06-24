@@ -12,3 +12,8 @@ An integer
 \description{
 Get current screen width.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{int GetScreenWidth(void);}
+}

@@ -22,3 +22,8 @@ draw_text_ex(font, text, position, font_size, spacing, tint)
 \description{
 Draw text using font and additional parameters.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawTextEx(Font font, const char *text, Vector2 position, float fontSize, float spacing, Color tint);}
+}

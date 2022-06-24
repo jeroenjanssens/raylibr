@@ -12,3 +12,8 @@ An integer
 \description{
 Get mouse position X.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{int GetMouseX(void);}
+}

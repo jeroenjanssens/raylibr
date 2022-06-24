@@ -20,3 +20,8 @@ draw_line(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color)
 \description{
 Draw a line.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawLine(int startPosX, int startPosY, int endPosX, int endPosY, Color color);}
+}

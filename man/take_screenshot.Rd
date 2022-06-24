@@ -12,3 +12,8 @@ take_screenshot(file_name)
 \description{
 Takes a screenshot of current screen (filename extension defines format).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void TakeScreenshot(const char *fileName);}
+}

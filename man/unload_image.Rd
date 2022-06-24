@@ -12,3 +12,8 @@ unload_image(image)
 \description{
 Unload image from CPU memory (RAM).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void UnloadImage(Image image);}
+}

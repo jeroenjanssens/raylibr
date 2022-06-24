@@ -15,3 +15,8 @@ A texture
 \description{
 Load texture from image data.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Texture2D LoadTextureFromImage(Image image);}
+}

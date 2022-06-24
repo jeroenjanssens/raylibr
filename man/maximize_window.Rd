@@ -9,3 +9,8 @@ maximize_window()
 \description{
 Set window state: maximized, if resizable (only PLATFORM_DESKTOP).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void MaximizeWindow(void);}
+}

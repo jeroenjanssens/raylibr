@@ -12,3 +12,8 @@ stop_sound(sound)
 \description{
 Stop playing a sound.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void StopSound(Sound sound);}
+}

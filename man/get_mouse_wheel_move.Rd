@@ -12,3 +12,8 @@ A number
 \description{
 Get mouse wheel movement Y.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{float GetMouseWheelMove(void);}
+}

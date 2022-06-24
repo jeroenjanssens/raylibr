@@ -20,3 +20,8 @@ draw_cube(position, width, height, length, color)
 \description{
 Draw cube.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawCube(Vector3 position, float width, float height, float length, Color color);}
+}

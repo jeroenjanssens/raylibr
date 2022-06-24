@@ -15,3 +15,8 @@ A logical
 \description{
 Check if one specific window flag is enabled.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{bool IsWindowState(unsigned int flag);}
+}

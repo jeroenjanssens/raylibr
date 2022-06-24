@@ -15,3 +15,8 @@ A numeric matrix of 4 by 4
 \description{
 Get camera transform matrix (view matrix).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Matrix GetCameraMatrix(Camera camera);}
+}

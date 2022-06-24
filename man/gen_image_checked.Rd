@@ -25,3 +25,8 @@ A image
 \description{
 Generate image: checked.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Image GenImageChecked(int width, int height, int checksX, int checksY, Color col1, Color col2);}
+}

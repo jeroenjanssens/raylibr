@@ -9,3 +9,8 @@ end_mode_3d()
 \description{
 Ends 3D mode and returns to default 2D orthographic mode.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void EndMode3D(void);}
+}

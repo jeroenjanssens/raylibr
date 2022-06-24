@@ -14,3 +14,8 @@ draw_pixel_v(position, color)
 \description{
 Draw a pixel (Vector version).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawPixelV(Vector2 position, Color color);}
+}

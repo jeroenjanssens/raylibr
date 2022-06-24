@@ -19,3 +19,8 @@ A logical
 \description{
 Check collision between circle and rectangle.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{bool CheckCollisionCircleRec(Vector2 center, float radius, Rectangle rec);}
+}

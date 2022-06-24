@@ -12,3 +12,8 @@ set_mouse_cursor(cursor)
 \description{
 Set mouse cursor.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetMouseCursor(int cursor);}
+}

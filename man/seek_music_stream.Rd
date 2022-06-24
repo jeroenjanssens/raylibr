@@ -14,3 +14,8 @@ seek_music_stream(music, position)
 \description{
 Seek music to a position (in seconds).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SeekMusicStream(Music music, float position);}
+}

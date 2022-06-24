@@ -9,3 +9,8 @@ end_mode_2d()
 \description{
 Ends 2D mode with custom camera.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void EndMode2D(void);}
+}

@@ -20,3 +20,8 @@ draw_poly_lines(center, sides, radius, rotation, color)
 \description{
 Draw a polygon outline of n sides.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawPolyLines(Vector2 center, int sides, float radius, float rotation, Color color);}
+}

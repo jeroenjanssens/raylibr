@@ -29,3 +29,8 @@ draw_line_bezier_cubic(
 \description{
 Draw line using cubic bezier curves with 2 control points.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawLineBezierCubic(Vector2 startPos, Vector2 endPos, Vector2 startControlPos, Vector2 endControlPos, float thick, Color color);}
+}

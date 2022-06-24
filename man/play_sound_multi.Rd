@@ -12,3 +12,8 @@ play_sound_multi(sound)
 \description{
 Play a sound (using multichannel buffer pool).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void PlaySoundMulti(Sound sound);}
+}

@@ -17,3 +17,8 @@ A logical
 \description{
 Export image as code file defining an array of bytes, returns true on success.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{bool ExportImageAsCode(Image image, const char *fileName);}
+}

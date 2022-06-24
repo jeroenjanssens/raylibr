@@ -20,3 +20,8 @@ draw_rectangle_lines(pos_x, pos_y, width, height, color)
 \description{
 Draw rectangle outline.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawRectangleLines(int posX, int posY, int width, int height, Color color);}
+}

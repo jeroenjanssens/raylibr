@@ -15,3 +15,8 @@ A image
 \description{
 Load image from file into CPU memory (RAM).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Image LoadImage(const char *fileName);}
+}

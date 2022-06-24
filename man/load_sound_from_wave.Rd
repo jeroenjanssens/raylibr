@@ -15,3 +15,8 @@ A sound
 \description{
 Load sound from wave data.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Sound LoadSoundFromWave(Wave wave);}
+}

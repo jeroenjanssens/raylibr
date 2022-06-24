@@ -20,3 +20,8 @@ draw_rectangle_rounded_lines(rec, roundness, segments, line_thick, color)
 \description{
 Draw rectangle with rounded edges outline.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawRectangleRoundedLines(Rectangle rec, float roundness, int segments, float lineThick, Color color);}
+}

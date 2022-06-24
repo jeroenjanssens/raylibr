@@ -17,3 +17,8 @@ A number
 \description{
 .
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{float Vector2Angle(Vector2 v1, Vector2 v2);}
+}

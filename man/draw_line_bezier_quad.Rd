@@ -20,3 +20,8 @@ draw_line_bezier_quad(start_pos, end_pos, control_pos, thick, color)
 \description{
 Draw line using quadratic bezier curves with a control point.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawLineBezierQuad(Vector2 startPos, Vector2 endPos, Vector2 controlPos, float thick, Color color);}
+}

@@ -20,3 +20,8 @@ draw_rectangle(pos_x, pos_y, width, height, color)
 \description{
 Draw a color-filled rectangle.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawRectangle(int posX, int posY, int width, int height, Color color);}
+}

@@ -29,3 +29,8 @@ set_camera_move_controls(
 \description{
 Set camera move controls (1st person and 3rd person cameras).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetCameraMoveControls(int keyFront, int keyBack, int keyRight, int keyLeft, int keyUp, int keyDown);}
+}

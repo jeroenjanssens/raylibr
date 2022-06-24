@@ -19,3 +19,8 @@ A logical
 \description{
 Check if point is inside circle.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{bool CheckCollisionPointCircle(Vector2 point, Vector2 center, float radius);}
+}

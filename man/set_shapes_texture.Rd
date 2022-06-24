@@ -14,3 +14,8 @@ set_shapes_texture(texture, source)
 \description{
 Set texture and rectangle to be used on shapes drawing.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetShapesTexture(Texture2D texture, Rectangle source);}
+}

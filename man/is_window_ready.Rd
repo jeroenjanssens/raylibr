@@ -12,3 +12,8 @@ A logical
 \description{
 Check if window has been initialized successfully.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{bool IsWindowReady(void);}
+}

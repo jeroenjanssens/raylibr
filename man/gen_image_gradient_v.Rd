@@ -21,3 +21,8 @@ A image
 \description{
 Generate image: vertical gradient.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Image GenImageGradientV(int width, int height, Color top, Color bottom);}
+}

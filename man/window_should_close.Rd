@@ -12,3 +12,8 @@ A logical
 \description{
 Check if KEY_ESCAPE pressed or Close icon pressed.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{bool WindowShouldClose(void);}
+}

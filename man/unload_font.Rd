@@ -12,3 +12,8 @@ unload_font(font)
 \description{
 Unload Font from GPU memory (VRAM).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void UnloadFont(Font font);}
+}

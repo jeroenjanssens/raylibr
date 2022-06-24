@@ -20,3 +20,8 @@ draw_poly(center, sides, radius, rotation, color)
 \description{
 Draw a regular polygon (Vector version).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawPoly(Vector2 center, int sides, float radius, float rotation, Color color);}
+}

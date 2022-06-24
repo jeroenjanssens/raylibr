@@ -14,3 +14,8 @@ set_mouse_scale(scale_x, scale_y)
 \description{
 Set mouse scaling.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetMouseScale(float scaleX, float scaleY);}
+}

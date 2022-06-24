@@ -12,3 +12,8 @@ stop_music_stream(music)
 \description{
 Stop music playing.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void StopMusicStream(Music music);}
+}

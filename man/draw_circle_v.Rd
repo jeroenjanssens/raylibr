@@ -16,3 +16,8 @@ draw_circle_v(center, radius, color)
 \description{
 Draw a color-filled circle (Vector version).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawCircleV(Vector2 center, float radius, Color color);}
+}

@@ -12,3 +12,8 @@ A image
 \description{
 Load image from screen buffer and (screenshot).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Image LoadImageFromScreen(void);}
+}

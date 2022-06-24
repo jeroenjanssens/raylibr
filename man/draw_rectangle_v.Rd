@@ -16,3 +16,8 @@ draw_rectangle_v(position, size, color)
 \description{
 Draw a color-filled rectangle (Vector version).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawRectangleV(Vector2 position, Vector2 size, Color color);}
+}

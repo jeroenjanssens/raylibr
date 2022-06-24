@@ -17,3 +17,8 @@ A logical
 \description{
 Check if point is inside rectangle.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{bool CheckCollisionPointRec(Vector2 point, Rectangle rec);}
+}

@@ -32,3 +32,8 @@ draw_ring(
 \description{
 Draw ring.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawRing(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color);}
+}

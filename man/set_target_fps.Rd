@@ -12,3 +12,8 @@ set_target_fps(fps)
 \description{
 Set target FPS (maximum).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetTargetFPS(int fps);}
+}

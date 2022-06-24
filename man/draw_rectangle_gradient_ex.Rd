@@ -20,3 +20,8 @@ draw_rectangle_gradient_ex(rec, col_1, col_2, col_3, col_4)
 \description{
 Draw a gradient-filled rectangle with custom vertex colors.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawRectangleGradientEx(Rectangle rec, Color col1, Color col2, Color col3, Color col4);}
+}

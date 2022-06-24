@@ -12,3 +12,8 @@ A logical
 \description{
 Check if cursor is not visible.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{bool IsCursorHidden(void);}
+}

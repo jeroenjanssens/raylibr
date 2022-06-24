@@ -18,3 +18,8 @@ draw_rectangle_pro(rec, origin, rotation, color)
 \description{
 Draw a color-filled rectangle with pro parameters.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawRectanglePro(Rectangle rec, Vector2 origin, float rotation, Color color);}
+}

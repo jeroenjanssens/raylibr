@@ -18,3 +18,8 @@ draw_circle_lines(center_x, center_y, radius, color)
 \description{
 Draw circle outline.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawCircleLines(int centerX, int centerY, float radius, Color color);}
+}

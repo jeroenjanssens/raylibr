@@ -91,6 +91,7 @@ parse_fun <- function(x) {
   comment <- paste0(str_replace(parts[2], regex(" *// *"), ""), ".")
 
   list(
+    code = code,
     name = extract_fun(code),
     ret = extract_return(code),
     params = extract_params(code),
@@ -136,6 +137,10 @@ make_rcpp_fun <- function(d) {
        //' {d$comment}
        //'
        {make_rd_params(d$params)}{make_rd_value(d$ret)}//'
+       //' @note This function has been auto-generated from the following Raylib function definition:
+       //'
+       //' `{d$code}`
+       //'
        //' @export
        // [[Rcpp::export]]
        {d$ret} {make_rcpp_name(d$name)}({make_rcpp_params(d$params)}) {{

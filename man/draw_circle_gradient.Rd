@@ -20,3 +20,8 @@ draw_circle_gradient(center_x, center_y, radius, color_1, color_2)
 \description{
 Draw a gradient-filled circle.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawCircleGradient(int centerX, int centerY, float radius, Color color1, Color color2);}
+}

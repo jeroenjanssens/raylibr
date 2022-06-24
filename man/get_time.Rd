@@ -12,3 +12,8 @@ A double
 \description{
 Get elapsed time in seconds since InitWindow().
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{double GetTime(void);}
+}

@@ -14,3 +14,8 @@ set_window_min_size(width, height)
 \description{
 Set window minimum dimensions (for FLAG_WINDOW_RESIZABLE).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetWindowMinSize(int width, int height);}
+}

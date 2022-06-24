@@ -14,3 +14,8 @@ set_mouse_position(x, y)
 \description{
 Set mouse position XY.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetMousePosition(int x, int y);}
+}

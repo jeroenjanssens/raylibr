@@ -19,3 +19,8 @@ A color
 \description{
 Get a Color from HSV values, hue \link{0..360}, saturation/value \link{0..1}.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Color ColorFromHSV(float hue, float saturation, float value);}
+}

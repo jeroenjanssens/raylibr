@@ -12,3 +12,8 @@ set_window_title(title)
 \description{
 Set title for window (only PLATFORM_DESKTOP).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetWindowTitle(const char *title);}
+}

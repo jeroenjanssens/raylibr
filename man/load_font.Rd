@@ -15,3 +15,8 @@ A font
 \description{
 Load font from file into GPU memory (VRAM).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Font LoadFont(const char *fileName);}
+}

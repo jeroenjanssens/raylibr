@@ -17,3 +17,8 @@ A numeric vector of length 2
 \description{
 Get the screen space position for a 3d world space position.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Vector2 GetWorldToScreen(Vector3 position, Camera camera);}
+}

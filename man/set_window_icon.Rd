@@ -12,3 +12,8 @@ set_window_icon(image)
 \description{
 Set icon for window (only PLATFORM_DESKTOP).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetWindowIcon(Image image);}
+}

@@ -22,3 +22,8 @@ draw_rectangle_gradient_h(pos_x, pos_y, width, height, color_1, color_2)
 \description{
 Draw a horizontal-gradient-filled rectangle.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawRectangleGradientH(int posX, int posY, int width, int height, Color color1, Color color2);}
+}

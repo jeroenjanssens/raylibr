@@ -20,3 +20,8 @@ draw_ellipse(center_x, center_y, radius_h, radius_v, color)
 \description{
 Draw ellipse.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawEllipse(int centerX, int centerY, float radiusH, float radiusV, Color color);}
+}

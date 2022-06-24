@@ -12,3 +12,8 @@ update_music_stream(music)
 \description{
 Updates buffers for music streaming.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void UpdateMusicStream(Music music);}
+}

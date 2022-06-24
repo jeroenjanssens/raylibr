@@ -14,3 +14,8 @@ draw_grid(slices, spacing)
 \description{
 Draw a grid (centered at (0, 0, 0)).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawGrid(int slices, float spacing);}
+}

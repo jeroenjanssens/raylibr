@@ -15,3 +15,8 @@ An integer
 \description{
 Get specified monitor height (max available by monitor).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{int GetMonitorHeight(int monitor);}
+}

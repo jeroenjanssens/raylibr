@@ -9,3 +9,8 @@ hide_cursor()
 \description{
 Hides cursor.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void HideCursor(void);}
+}

@@ -12,3 +12,8 @@ set_camera_pan_control(key_pan)
 \description{
 Set camera pan key to combine with mouse movement (free camera).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetCameraPanControl(int keyPan);}
+}

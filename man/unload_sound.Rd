@@ -12,3 +12,8 @@ unload_sound(sound)
 \description{
 Unload sound.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void UnloadSound(Sound sound);}
+}

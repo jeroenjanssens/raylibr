@@ -9,3 +9,8 @@ end_drawing()
 \description{
 End canvas drawing and swap buffers (double buffering).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void EndDrawing(void);}
+}

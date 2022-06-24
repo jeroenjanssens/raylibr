@@ -17,3 +17,8 @@ A color
 \description{
 Get color with alpha applied, alpha goes from 0.0f to 1.0f.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Color Fade(Color color, float alpha);}
+}

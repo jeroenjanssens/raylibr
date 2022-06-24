@@ -19,3 +19,8 @@ A color
 \description{
 Get src alpha-blended into dst color with tint.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Color ColorAlphaBlend(Color dst, Color src, Color tint);}
+}

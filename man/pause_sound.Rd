@@ -12,3 +12,8 @@ pause_sound(sound)
 \description{
 Pause a sound.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void PauseSound(Sound sound);}
+}

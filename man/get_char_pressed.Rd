@@ -12,3 +12,8 @@ An integer
 \description{
 Get char pressed (unicode), call it multiple times for chars queued, returns 0 when the queue is empty.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{int GetCharPressed(void);}
+}

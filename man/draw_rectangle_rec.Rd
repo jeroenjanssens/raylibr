@@ -14,3 +14,8 @@ draw_rectangle_rec(rec, color)
 \description{
 Draw a color-filled rectangle.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawRectangleRec(Rectangle rec, Color color);}
+}

@@ -9,3 +9,8 @@ init_audio_device()
 \description{
 Initialize audio device and context.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void InitAudioDevice(void);}
+}

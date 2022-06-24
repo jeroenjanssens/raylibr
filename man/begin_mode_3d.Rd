@@ -12,3 +12,8 @@ begin_mode_3d(camera)
 \description{
 Begin 3D mode with custom camera (3D).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void BeginMode3D(Camera3D camera);}
+}

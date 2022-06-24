@@ -16,3 +16,8 @@ init_window(width, height, title)
 \description{
 Initialize window and OpenGL context.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void InitWindow(int width, int height, const char *title);}
+}

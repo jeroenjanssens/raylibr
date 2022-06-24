@@ -16,3 +16,8 @@ draw_rectangle_lines_ex(rec, line_thick, color)
 \description{
 Draw rectangle outline with extended parameters.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawRectangleLinesEx(Rectangle rec, float lineThick, Color color);}
+}

@@ -14,3 +14,8 @@ set_sound_pitch(sound, pitch)
 \description{
 Set pitch for a sound (1.0 is base level).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetSoundPitch(Sound sound, float pitch);}
+}

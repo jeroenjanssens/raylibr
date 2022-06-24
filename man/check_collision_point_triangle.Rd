@@ -21,3 +21,8 @@ A logical
 \description{
 Check if point is inside a triangle.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{bool CheckCollisionPointTriangle(Vector2 point, Vector2 p1, Vector2 p2, Vector2 p3);}
+}

@@ -19,3 +19,8 @@ A numeric vector of length 2
 \description{
 .
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{Vector2 Vector2MoveTowards(Vector2 v, Vector2 target, float maxDistance);}
+}

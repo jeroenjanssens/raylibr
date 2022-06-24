@@ -12,3 +12,8 @@ clear_background(color)
 \description{
 Set background color (framebuffer clear color).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void ClearBackground(Color color);}
+}

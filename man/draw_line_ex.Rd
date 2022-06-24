@@ -18,3 +18,8 @@ draw_line_ex(start_pos, end_pos, thick, color)
 \description{
 Draw a line defining thickness.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawLineEx(Vector2 startPos, Vector2 endPos, float thick, Color color);}
+}

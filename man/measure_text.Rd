@@ -17,3 +17,8 @@ An integer
 \description{
 Measure string width for default font.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{int MeasureText(const char *text, int fontSize);}
+}

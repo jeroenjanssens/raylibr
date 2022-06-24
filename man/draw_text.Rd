@@ -20,3 +20,8 @@ draw_text(text, pos_x, pos_y, font_size, color)
 \description{
 Draw text (using default font).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void DrawText(const char *text, int posX, int posY, int fontSize, Color color);}
+}

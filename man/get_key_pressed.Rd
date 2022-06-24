@@ -12,3 +12,8 @@ An integer
 \description{
 Get key pressed (keycode), call it multiple times for keys queued, returns 0 when the queue is empty.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{int GetKeyPressed(void);}
+}

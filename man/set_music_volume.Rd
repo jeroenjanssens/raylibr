@@ -14,3 +14,8 @@ set_music_volume(music, volume)
 \description{
 Set volume for music (1.0 is max level).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void SetMusicVolume(Music music, float volume);}
+}

@@ -9,3 +9,8 @@ minimize_window()
 \description{
 Set window state: minimized, if resizable (only PLATFORM_DESKTOP).
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{void MinimizeWindow(void);}
+}

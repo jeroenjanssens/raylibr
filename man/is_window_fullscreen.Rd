@@ -12,3 +12,8 @@ A logical
 \description{
 Check if window is currently fullscreen.
 }
+\note{
+This function has been auto-generated from the following Raylib function definition:
+
+\verb{bool IsWindowFullscreen(void);}
+}
