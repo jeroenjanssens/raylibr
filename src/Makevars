@@ -1,0 +1,2 @@
+PKG_LIBS = -L/opt/homebrew/Cellar/raylib/4.0.0/lib -lraylib
+PKG_CPPFLAGS = -I/opt/homebrew/Cellar/raylib/4.0.0/include
