@@ -1,4 +1,4 @@
-# Generate src/_wrappers.cpp
+# Generate src/_functions.cpp
 
 source(here::here("bin", "gen_utils.R"))
 

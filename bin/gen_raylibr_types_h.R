@@ -1,7 +1,6 @@
-# Generate src/_wrappers.cpp
+# Generate inst/include/raylibr_types.h
 
 source(here::here("bin", "gen_utils.R"))
-
 
 filename <- here::here("inst", "include", "raylibr_types.h")
 Sys.chmod(filename, "644")
