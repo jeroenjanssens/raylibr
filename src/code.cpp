@@ -211,6 +211,10 @@ Font load_font_ex(const char * file_name, int font_size) {
   return LoadFontEx(file_name, font_size, 0, 0);
 }
 
-
+//' @export
+// [[Rcpp::export]]
+void image_draw_pixel(Image &dst, int posX, int posY, Color color) {
+  ImageDrawPixel(&dst, posX, posY, color);
+}
 
 

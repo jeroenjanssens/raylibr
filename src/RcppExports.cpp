@@ -1647,6 +1647,18 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// get_image_alpha_border
+Rectangle get_image_alpha_border(Image image, float threshold);
+RcppExport SEXP _raylibr_get_image_alpha_border(SEXP imageSEXP, SEXP thresholdSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Image >::type image(imageSEXP);
+    Rcpp::traits::input_parameter< float >::type threshold(thresholdSEXP);
+    rcpp_result_gen = Rcpp::wrap(get_image_alpha_border(image, threshold));
+    return rcpp_result_gen;
+END_RCPP
+}
 // load_texture
 Texture load_texture(const char * file_name);
 RcppExport SEXP _raylibr_load_texture(SEXP file_nameSEXP) {
@@ -2339,6 +2351,125 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// image_draw_pixel
+void image_draw_pixel(Image& dst, int posX, int posY, Color color);
+RcppExport SEXP _raylibr_image_draw_pixel(SEXP dstSEXP, SEXP posXSEXP, SEXP posYSEXP, SEXP colorSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Image& >::type dst(dstSEXP);
+    Rcpp::traits::input_parameter< int >::type posX(posXSEXP);
+    Rcpp::traits::input_parameter< int >::type posY(posYSEXP);
+    Rcpp::traits::input_parameter< Color >::type color(colorSEXP);
+    image_draw_pixel(dst, posX, posY, color);
+    return R_NilValue;
+END_RCPP
+}
+// rectangle_get_x
+float rectangle_get_x(Rectangle o);
+RcppExport SEXP _raylibr_rectangle_get_x(SEXP oSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rectangle >::type o(oSEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle_get_x(o));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rectangle_get_y
+float rectangle_get_y(Rectangle o);
+RcppExport SEXP _raylibr_rectangle_get_y(SEXP oSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rectangle >::type o(oSEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle_get_y(o));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rectangle_get_width
+float rectangle_get_width(Rectangle o);
+RcppExport SEXP _raylibr_rectangle_get_width(SEXP oSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rectangle >::type o(oSEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle_get_width(o));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rectangle_get_height
+float rectangle_get_height(Rectangle o);
+RcppExport SEXP _raylibr_rectangle_get_height(SEXP oSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rectangle >::type o(oSEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle_get_height(o));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rectangle_set_x
+Rectangle rectangle_set_x(Rectangle o, float x);
+RcppExport SEXP _raylibr_rectangle_set_x(SEXP oSEXP, SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rectangle >::type o(oSEXP);
+    Rcpp::traits::input_parameter< float >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle_set_x(o, x));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rectangle_set_y
+Rectangle rectangle_set_y(Rectangle o, float y);
+RcppExport SEXP _raylibr_rectangle_set_y(SEXP oSEXP, SEXP ySEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rectangle >::type o(oSEXP);
+    Rcpp::traits::input_parameter< float >::type y(ySEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle_set_y(o, y));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rectangle_set_width
+Rectangle rectangle_set_width(Rectangle o, float width);
+RcppExport SEXP _raylibr_rectangle_set_width(SEXP oSEXP, SEXP widthSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rectangle >::type o(oSEXP);
+    Rcpp::traits::input_parameter< float >::type width(widthSEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle_set_width(o, width));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rectangle_set_height
+Rectangle rectangle_set_height(Rectangle o, float height);
+RcppExport SEXP _raylibr_rectangle_set_height(SEXP oSEXP, SEXP heightSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rectangle >::type o(oSEXP);
+    Rcpp::traits::input_parameter< float >::type height(heightSEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle_set_height(o, height));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rectangle
+Rectangle rectangle(float x, float y, float width, float height);
+RcppExport SEXP _raylibr_rectangle(SEXP xSEXP, SEXP ySEXP, SEXP widthSEXP, SEXP heightSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< float >::type x(xSEXP);
+    Rcpp::traits::input_parameter< float >::type y(ySEXP);
+    Rcpp::traits::input_parameter< float >::type width(widthSEXP);
+    Rcpp::traits::input_parameter< float >::type height(heightSEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle(x, y, width, height));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_init_window", (DL_FUNC) &_raylibr_init_window, 3},
@@ -2483,6 +2614,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_gen_image_checked", (DL_FUNC) &_raylibr_gen_image_checked, 6},
     {"_raylibr_gen_image_white_noise", (DL_FUNC) &_raylibr_gen_image_white_noise, 3},
     {"_raylibr_gen_image_cellular", (DL_FUNC) &_raylibr_gen_image_cellular, 3},
+    {"_raylibr_get_image_alpha_border", (DL_FUNC) &_raylibr_get_image_alpha_border, 2},
     {"_raylibr_load_texture", (DL_FUNC) &_raylibr_load_texture, 1},
     {"_raylibr_load_texture_from_image", (DL_FUNC) &_raylibr_load_texture_from_image, 1},
     {"_raylibr_draw_texture", (DL_FUNC) &_raylibr_draw_texture, 4},
@@ -2545,6 +2677,16 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_draw_circles", (DL_FUNC) &_raylibr_draw_circles, 4},
     {"_raylibr_camera_3d", (DL_FUNC) &_raylibr_camera_3d, 5},
     {"_raylibr_load_font_ex", (DL_FUNC) &_raylibr_load_font_ex, 2},
+    {"_raylibr_image_draw_pixel", (DL_FUNC) &_raylibr_image_draw_pixel, 4},
+    {"_raylibr_rectangle_get_x", (DL_FUNC) &_raylibr_rectangle_get_x, 1},
+    {"_raylibr_rectangle_get_y", (DL_FUNC) &_raylibr_rectangle_get_y, 1},
+    {"_raylibr_rectangle_get_width", (DL_FUNC) &_raylibr_rectangle_get_width, 1},
+    {"_raylibr_rectangle_get_height", (DL_FUNC) &_raylibr_rectangle_get_height, 1},
+    {"_raylibr_rectangle_set_x", (DL_FUNC) &_raylibr_rectangle_set_x, 2},
+    {"_raylibr_rectangle_set_y", (DL_FUNC) &_raylibr_rectangle_set_y, 2},
+    {"_raylibr_rectangle_set_width", (DL_FUNC) &_raylibr_rectangle_set_width, 2},
+    {"_raylibr_rectangle_set_height", (DL_FUNC) &_raylibr_rectangle_set_height, 2},
+    {"_raylibr_rectangle", (DL_FUNC) &_raylibr_rectangle, 4},
     {NULL, NULL, 0}
 };
 

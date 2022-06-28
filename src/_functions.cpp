@@ -2490,6 +2490,24 @@ Image gen_image_cellular(int width, int height, int tile_size) {
   return GenImageCellular(width, height, tile_size);
 }
 
+//' Get image alpha border
+//'
+//' Get image alpha border rectangle.
+//'
+//' @param image A image
+//' @param threshold A number
+//' @return A rectangle
+//'
+//' @note This function has been auto-generated from the following Raylib function definition:
+//'
+//' `Rectangle GetImageAlphaBorder(Image image, float threshold);`
+//'
+//' @export
+// [[Rcpp::export]]
+Rectangle get_image_alpha_border(Image image, float threshold) {
+  return GetImageAlphaBorder(image, threshold);
+}
+
 //' Load texture
 //'
 //' Load texture from file into GPU memory (VRAM).

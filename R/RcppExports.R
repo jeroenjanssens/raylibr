@@ -2347,6 +2347,23 @@ gen_image_cellular <- function(width, height, tile_size) {
     .Call(`_raylibr_gen_image_cellular`, width, height, tile_size)
 }
 
+#' Get image alpha border
+#'
+#' Get image alpha border rectangle.
+#'
+#' @param image A image
+#' @param threshold A number
+#' @return A rectangle
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' `Rectangle GetImageAlphaBorder(Image image, float threshold);`
+#'
+#' @export
+get_image_alpha_border <- function(image, threshold) {
+    .Call(`_raylibr_get_image_alpha_border`, image, threshold)
+}
+
 #' Load texture
 #'
 #' Load texture from file into GPU memory (VRAM).
@@ -3304,5 +3321,47 @@ camera_3d <- function(position, target, up, fovy = 70.0, projection = 0L) {
 #' @export
 load_font_ex <- function(file_name, font_size) {
     .Call(`_raylibr_load_font_ex`, file_name, font_size)
+}
+
+#' @export
+image_draw_pixel <- function(dst, posX, posY, color) {
+    invisible(.Call(`_raylibr_image_draw_pixel`, dst, posX, posY, color))
+}
+
+rectangle_get_x <- function(o) {
+    .Call(`_raylibr_rectangle_get_x`, o)
+}
+
+rectangle_get_y <- function(o) {
+    .Call(`_raylibr_rectangle_get_y`, o)
+}
+
+rectangle_get_width <- function(o) {
+    .Call(`_raylibr_rectangle_get_width`, o)
+}
+
+rectangle_get_height <- function(o) {
+    .Call(`_raylibr_rectangle_get_height`, o)
+}
+
+rectangle_set_x <- function(o, x) {
+    .Call(`_raylibr_rectangle_set_x`, o, x)
+}
+
+rectangle_set_y <- function(o, y) {
+    .Call(`_raylibr_rectangle_set_y`, o, y)
+}
+
+rectangle_set_width <- function(o, width) {
+    .Call(`_raylibr_rectangle_set_width`, o, width)
+}
+
+rectangle_set_height <- function(o, height) {
+    .Call(`_raylibr_rectangle_set_height`, o, height)
+}
+
+#' @export
+rectangle <- function(x, y, width, height) {
+    .Call(`_raylibr_rectangle`, x, y, width, height)
 }
 

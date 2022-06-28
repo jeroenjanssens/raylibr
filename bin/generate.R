@@ -42,8 +42,6 @@ structs_custom <-
     "Camera3D"
   )
 
-
-
 # Get function name from definition
 extract_fun <- function(x) {
   str_extract(x, regex("( |\\*)[A-Za-z0-9]*\\(", TRUE)) %>%
