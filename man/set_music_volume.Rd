@@ -7,9 +7,9 @@
 set_music_volume(music, volume)
 }
 \arguments{
-\item{music}{A music}
+\item{music}{A music.}
 
-\item{volume}{A number}
+\item{volume}{A number.}
 }
 \description{
 Set volume for music (1.0 is max level).

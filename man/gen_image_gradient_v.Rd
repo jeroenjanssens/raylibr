@@ -7,13 +7,13 @@
 gen_image_gradient_v(width, height, top, bottom)
 }
 \arguments{
-\item{width}{An integer}
+\item{width}{An integer.}
 
-\item{height}{An integer}
+\item{height}{An integer.}
 
-\item{top}{A color}
+\item{top}{A color.}
 
-\item{bottom}{A color}
+\item{bottom}{A color.}
 }
 \value{
 A image

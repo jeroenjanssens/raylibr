@@ -7,11 +7,11 @@
 gen_image_white_noise(width, height, factor)
 }
 \arguments{
-\item{width}{An integer}
+\item{width}{An integer.}
 
-\item{height}{An integer}
+\item{height}{An integer.}
 
-\item{factor}{A number}
+\item{factor}{A number.}
 }
 \value{
 A image

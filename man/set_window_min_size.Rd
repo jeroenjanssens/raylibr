@@ -7,9 +7,9 @@
 set_window_min_size(width, height)
 }
 \arguments{
-\item{width}{An integer}
+\item{width}{An integer.}
 
-\item{height}{An integer}
+\item{height}{An integer.}
 }
 \description{
 Set window minimum dimensions (for FLAG_WINDOW_RESIZABLE).

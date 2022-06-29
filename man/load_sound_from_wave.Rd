@@ -7,7 +7,7 @@
 load_sound_from_wave(wave)
 }
 \arguments{
-\item{wave}{A wave}
+\item{wave}{A wave.}
 }
 \value{
 A sound

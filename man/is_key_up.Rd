@@ -7,7 +7,7 @@
 is_key_up(key)
 }
 \arguments{
-\item{key}{An integer}
+\item{key}{An integer.}
 }
 \value{
 A logical

@@ -7,11 +7,11 @@
 draw_rectangle_v(position, size, color)
 }
 \arguments{
-\item{position}{A numeric vector of length 2}
+\item{position}{A numeric vector of length 2.}
 
-\item{size}{A numeric vector of length 2}
+\item{size}{A numeric vector of length 2.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw a color-filled rectangle (Vector version).

@@ -7,9 +7,9 @@
 get_collision_rec(rec_1, rec_2)
 }
 \arguments{
-\item{rec_1}{A rectangle}
+\item{rec_1}{A rectangle.}
 
-\item{rec_2}{A rectangle}
+\item{rec_2}{A rectangle.}
 }
 \value{
 A rectangle

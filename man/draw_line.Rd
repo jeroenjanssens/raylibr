@@ -7,15 +7,15 @@
 draw_line(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color)
 }
 \arguments{
-\item{start_pos_x}{An integer}
+\item{start_pos_x}{An integer.}
 
-\item{start_pos_y}{An integer}
+\item{start_pos_y}{An integer.}
 
-\item{end_pos_x}{An integer}
+\item{end_pos_x}{An integer.}
 
-\item{end_pos_y}{An integer}
+\item{end_pos_y}{An integer.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw a line.

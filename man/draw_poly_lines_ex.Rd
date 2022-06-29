@@ -7,17 +7,17 @@
 draw_poly_lines_ex(center, sides, radius, rotation, line_thick, color)
 }
 \arguments{
-\item{center}{A numeric vector of length 2}
+\item{center}{A numeric vector of length 2.}
 
-\item{sides}{An integer}
+\item{sides}{An integer.}
 
-\item{radius}{A number}
+\item{radius}{A number.}
 
-\item{rotation}{A number}
+\item{rotation}{A number.}
 
-\item{line_thick}{A number}
+\item{line_thick}{A number.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw a polygon outline of n sides with extended parameters.

@@ -7,11 +7,11 @@
 check_collision_circle_rec(center, radius, rec)
 }
 \arguments{
-\item{center}{A numeric vector of length 2}
+\item{center}{A numeric vector of length 2.}
 
-\item{radius}{A number}
+\item{radius}{A number.}
 
-\item{rec}{A rectangle}
+\item{rec}{A rectangle.}
 }
 \value{
 A logical

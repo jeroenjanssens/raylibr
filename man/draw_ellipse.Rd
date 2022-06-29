@@ -7,15 +7,15 @@
 draw_ellipse(center_x, center_y, radius_h, radius_v, color)
 }
 \arguments{
-\item{center_x}{An integer}
+\item{center_x}{An integer.}
 
-\item{center_y}{An integer}
+\item{center_y}{An integer.}
 
-\item{radius_h}{A number}
+\item{radius_h}{A number.}
 
-\item{radius_v}{A number}
+\item{radius_v}{A number.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw ellipse.

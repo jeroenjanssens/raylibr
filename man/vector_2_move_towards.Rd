@@ -7,11 +7,11 @@
 vector_2_move_towards(v, target, max_distance)
 }
 \arguments{
-\item{v}{A numeric vector of length 2}
+\item{v}{A numeric vector of length 2.}
 
-\item{target}{A numeric vector of length 2}
+\item{target}{A numeric vector of length 2.}
 
-\item{max_distance}{A number}
+\item{max_distance}{A number.}
 }
 \value{
 A numeric vector of length 2

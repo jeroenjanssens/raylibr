@@ -7,9 +7,9 @@
 set_sound_pitch(sound, pitch)
 }
 \arguments{
-\item{sound}{A sound}
+\item{sound}{A sound.}
 
-\item{pitch}{A number}
+\item{pitch}{A number.}
 }
 \description{
 Set pitch for a sound (1.0 is base level).

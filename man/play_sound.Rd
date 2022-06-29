@@ -7,7 +7,7 @@
 play_sound(sound)
 }
 \arguments{
-\item{sound}{A sound}
+\item{sound}{A sound.}
 }
 \description{
 Play a sound.

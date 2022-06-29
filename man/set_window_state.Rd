@@ -7,7 +7,7 @@
 set_window_state(flags)
 }
 \arguments{
-\item{flags}{A unsigned int}
+\item{flags}{A non-negative integer.}
 }
 \description{
 Set window configuration state using flags.

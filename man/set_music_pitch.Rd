@@ -7,9 +7,9 @@
 set_music_pitch(music, pitch)
 }
 \arguments{
-\item{music}{A music}
+\item{music}{A music.}
 
-\item{pitch}{A number}
+\item{pitch}{A number.}
 }
 \description{
 Set pitch for a music (1.0 is base level).

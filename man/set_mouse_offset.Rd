@@ -7,9 +7,9 @@
 set_mouse_offset(offset_x, offset_y)
 }
 \arguments{
-\item{offset_x}{An integer}
+\item{offset_x}{An integer.}
 
-\item{offset_y}{An integer}
+\item{offset_y}{An integer.}
 }
 \description{
 Set mouse offset.

@@ -7,13 +7,13 @@
 draw_triangle(v_1, v_2, v_3, color)
 }
 \arguments{
-\item{v_1}{A numeric vector of length 2}
+\item{v_1}{A numeric vector of length 2.}
 
-\item{v_2}{A numeric vector of length 2}
+\item{v_2}{A numeric vector of length 2.}
 
-\item{v_3}{A numeric vector of length 2}
+\item{v_3}{A numeric vector of length 2.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw a color-filled triangle (vertex in counter-clockwise order!).

@@ -7,7 +7,7 @@
 get_color(hex_value)
 }
 \arguments{
-\item{hex_value}{A unsigned int}
+\item{hex_value}{A non-negative integer.}
 }
 \value{
 A color

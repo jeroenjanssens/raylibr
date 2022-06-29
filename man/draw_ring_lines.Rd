@@ -15,19 +15,19 @@ draw_ring_lines(
 )
 }
 \arguments{
-\item{center}{A numeric vector of length 2}
+\item{center}{A numeric vector of length 2.}
 
-\item{inner_radius}{A number}
+\item{inner_radius}{A number.}
 
-\item{outer_radius}{A number}
+\item{outer_radius}{A number.}
 
-\item{start_angle}{A number}
+\item{start_angle}{A number.}
 
-\item{end_angle}{A number}
+\item{end_angle}{A number.}
 
-\item{segments}{An integer}
+\item{segments}{An integer.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw ring outline.

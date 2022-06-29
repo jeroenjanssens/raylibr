@@ -7,15 +7,15 @@
 load_image_raw(file_name, width, height, format, header_size)
 }
 \arguments{
-\item{file_name}{A string}
+\item{file_name}{A string.}
 
-\item{width}{An integer}
+\item{width}{An integer.}
 
-\item{height}{An integer}
+\item{height}{An integer.}
 
-\item{format}{An integer}
+\item{format}{An integer.}
 
-\item{header_size}{An integer}
+\item{header_size}{An integer.}
 }
 \value{
 A image

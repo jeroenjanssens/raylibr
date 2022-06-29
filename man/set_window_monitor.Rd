@@ -7,7 +7,7 @@
 set_window_monitor(monitor)
 }
 \arguments{
-\item{monitor}{An integer}
+\item{monitor}{An integer.}
 }
 \description{
 Set monitor for the current window (fullscreen mode).

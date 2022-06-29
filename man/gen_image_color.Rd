@@ -7,11 +7,11 @@
 gen_image_color(width, height, color)
 }
 \arguments{
-\item{width}{An integer}
+\item{width}{An integer.}
 
-\item{height}{An integer}
+\item{height}{An integer.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \value{
 A image

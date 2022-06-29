@@ -7,15 +7,15 @@
 draw_rectangle_lines(pos_x, pos_y, width, height, color)
 }
 \arguments{
-\item{pos_x}{An integer}
+\item{pos_x}{An integer.}
 
-\item{pos_y}{An integer}
+\item{pos_y}{An integer.}
 
-\item{width}{An integer}
+\item{width}{An integer.}
 
-\item{height}{An integer}
+\item{height}{An integer.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw rectangle outline.

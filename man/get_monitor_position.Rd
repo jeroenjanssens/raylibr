@@ -7,7 +7,7 @@
 get_monitor_position(monitor)
 }
 \arguments{
-\item{monitor}{An integer}
+\item{monitor}{An integer.}
 }
 \value{
 A numeric vector of length 2

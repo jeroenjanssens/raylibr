@@ -14,17 +14,17 @@ draw_circle_sector_lines(
 )
 }
 \arguments{
-\item{center}{A numeric vector of length 2}
+\item{center}{A numeric vector of length 2.}
 
-\item{radius}{A number}
+\item{radius}{A number.}
 
-\item{start_angle}{A number}
+\item{start_angle}{A number.}
 
-\item{end_angle}{A number}
+\item{end_angle}{A number.}
 
-\item{segments}{An integer}
+\item{segments}{An integer.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw circle sector outline.

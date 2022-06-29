@@ -7,7 +7,7 @@
 is_mouse_button_released(button)
 }
 \arguments{
-\item{button}{An integer}
+\item{button}{An integer.}
 }
 \value{
 A logical

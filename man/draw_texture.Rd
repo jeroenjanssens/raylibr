@@ -7,13 +7,13 @@
 draw_texture(texture, pos_x, pos_y, tint)
 }
 \arguments{
-\item{texture}{A texture}
+\item{texture}{A texture.}
 
-\item{pos_x}{An integer}
+\item{pos_x}{An integer.}
 
-\item{pos_y}{An integer}
+\item{pos_y}{An integer.}
 
-\item{tint}{A color}
+\item{tint}{A color.}
 }
 \description{
 Draw a Texture2D.

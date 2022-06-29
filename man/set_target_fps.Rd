@@ -7,7 +7,7 @@
 set_target_fps(fps)
 }
 \arguments{
-\item{fps}{An integer}
+\item{fps}{An integer.}
 }
 \description{
 Set target FPS (maximum).

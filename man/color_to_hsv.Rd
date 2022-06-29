@@ -7,7 +7,7 @@
 color_to_hsv(color)
 }
 \arguments{
-\item{color}{A color}
+\item{color}{A color.}
 }
 \value{
 A numeric vector of length 3

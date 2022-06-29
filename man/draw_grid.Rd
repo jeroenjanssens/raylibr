@@ -7,9 +7,9 @@
 draw_grid(slices, spacing)
 }
 \arguments{
-\item{slices}{An integer}
+\item{slices}{An integer.}
 
-\item{spacing}{A number}
+\item{spacing}{A number.}
 }
 \description{
 Draw a grid (centered at (0, 0, 0)).

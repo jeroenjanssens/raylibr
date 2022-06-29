@@ -7,13 +7,13 @@
 check_collision_point_triangle(point, p_1, p_2, p_3)
 }
 \arguments{
-\item{point}{A numeric vector of length 2}
+\item{point}{A numeric vector of length 2.}
 
-\item{p_1}{A numeric vector of length 2}
+\item{p_1}{A numeric vector of length 2.}
 
-\item{p_2}{A numeric vector of length 2}
+\item{p_2}{A numeric vector of length 2.}
 
-\item{p_3}{A numeric vector of length 2}
+\item{p_3}{A numeric vector of length 2.}
 }
 \value{
 A logical

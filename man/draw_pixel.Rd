@@ -7,11 +7,11 @@
 draw_pixel(pos_x, pos_y, color)
 }
 \arguments{
-\item{pos_x}{An integer}
+\item{pos_x}{An integer.}
 
-\item{pos_y}{An integer}
+\item{pos_y}{An integer.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw a pixel.

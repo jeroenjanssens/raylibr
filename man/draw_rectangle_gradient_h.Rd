@@ -7,17 +7,17 @@
 draw_rectangle_gradient_h(pos_x, pos_y, width, height, color_1, color_2)
 }
 \arguments{
-\item{pos_x}{An integer}
+\item{pos_x}{An integer.}
 
-\item{pos_y}{An integer}
+\item{pos_y}{An integer.}
 
-\item{width}{An integer}
+\item{width}{An integer.}
 
-\item{height}{An integer}
+\item{height}{An integer.}
 
-\item{color_1}{A color}
+\item{color_1}{A color.}
 
-\item{color_2}{A color}
+\item{color_2}{A color.}
 }
 \description{
 Draw a horizontal-gradient-filled rectangle.

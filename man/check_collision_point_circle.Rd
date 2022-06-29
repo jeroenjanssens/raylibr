@@ -7,11 +7,11 @@
 check_collision_point_circle(point, center, radius)
 }
 \arguments{
-\item{point}{A numeric vector of length 2}
+\item{point}{A numeric vector of length 2.}
 
-\item{center}{A numeric vector of length 2}
+\item{center}{A numeric vector of length 2.}
 
-\item{radius}{A number}
+\item{radius}{A number.}
 }
 \value{
 A logical

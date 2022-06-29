@@ -7,9 +7,9 @@
 export_image_as_code(image, file_name)
 }
 \arguments{
-\item{image}{A image}
+\item{image}{A image.}
 
-\item{file_name}{A string}
+\item{file_name}{A string.}
 }
 \value{
 A logical

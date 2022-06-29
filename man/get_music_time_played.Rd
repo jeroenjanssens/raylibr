@@ -7,7 +7,7 @@
 get_music_time_played(music)
 }
 \arguments{
-\item{music}{A music}
+\item{music}{A music.}
 }
 \value{
 A number

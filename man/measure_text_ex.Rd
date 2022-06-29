@@ -7,13 +7,13 @@
 measure_text_ex(font, text, font_size, spacing)
 }
 \arguments{
-\item{font}{A font}
+\item{font}{A font.}
 
-\item{text}{A string}
+\item{text}{A string.}
 
-\item{font_size}{A number}
+\item{font_size}{A number.}
 
-\item{spacing}{A number}
+\item{spacing}{A number.}
 }
 \value{
 A numeric vector of length 2

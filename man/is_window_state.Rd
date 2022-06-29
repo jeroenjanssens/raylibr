@@ -7,7 +7,7 @@
 is_window_state(flag)
 }
 \arguments{
-\item{flag}{A unsigned int}
+\item{flag}{A non-negative integer.}
 }
 \value{
 A logical

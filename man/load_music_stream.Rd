@@ -7,7 +7,7 @@
 load_music_stream(file_name)
 }
 \arguments{
-\item{file_name}{A string}
+\item{file_name}{A string.}
 }
 \value{
 A music

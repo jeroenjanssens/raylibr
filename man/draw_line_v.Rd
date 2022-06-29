@@ -7,11 +7,11 @@
 draw_line_v(start_pos, end_pos, color)
 }
 \arguments{
-\item{start_pos}{A numeric vector of length 2}
+\item{start_pos}{A numeric vector of length 2.}
 
-\item{end_pos}{A numeric vector of length 2}
+\item{end_pos}{A numeric vector of length 2.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw a line (Vector version).

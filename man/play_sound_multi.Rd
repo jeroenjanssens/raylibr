@@ -7,7 +7,7 @@
 play_sound_multi(sound)
 }
 \arguments{
-\item{sound}{A sound}
+\item{sound}{A sound.}
 }
 \description{
 Play a sound (using multichannel buffer pool).

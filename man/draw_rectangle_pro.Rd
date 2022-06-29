@@ -7,13 +7,13 @@
 draw_rectangle_pro(rec, origin, rotation, color)
 }
 \arguments{
-\item{rec}{A rectangle}
+\item{rec}{A rectangle.}
 
-\item{origin}{A numeric vector of length 2}
+\item{origin}{A numeric vector of length 2.}
 
-\item{rotation}{A number}
+\item{rotation}{A number.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw a color-filled rectangle with pro parameters.

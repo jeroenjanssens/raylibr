@@ -7,7 +7,7 @@
 set_master_volume(volume)
 }
 \arguments{
-\item{volume}{A number}
+\item{volume}{A number.}
 }
 \description{
 Set master volume (listener).

@@ -7,9 +7,9 @@
 color_alpha(color, alpha)
 }
 \arguments{
-\item{color}{A color}
+\item{color}{A color.}
 
-\item{alpha}{A number}
+\item{alpha}{A number.}
 }
 \value{
 A color

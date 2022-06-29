@@ -7,7 +7,7 @@
 is_music_stream_playing(music)
 }
 \arguments{
-\item{music}{A music}
+\item{music}{A music.}
 }
 \value{
 A logical

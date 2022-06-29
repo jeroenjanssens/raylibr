@@ -7,9 +7,9 @@
 draw_pixel_v(position, color)
 }
 \arguments{
-\item{position}{A numeric vector of length 2}
+\item{position}{A numeric vector of length 2.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw a pixel (Vector version).

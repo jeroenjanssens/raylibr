@@ -7,7 +7,7 @@
 set_window_icon(image)
 }
 \arguments{
-\item{image}{A image}
+\item{image}{A image.}
 }
 \description{
 Set icon for window (only PLATFORM_DESKTOP).

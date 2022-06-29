@@ -7,7 +7,7 @@
 set_camera_alt_control(key_alt)
 }
 \arguments{
-\item{key_alt}{An integer}
+\item{key_alt}{An integer.}
 }
 \description{
 Set camera alt key to combine with mouse movement (free camera).

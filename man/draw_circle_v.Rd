@@ -7,11 +7,11 @@
 draw_circle_v(center, radius, color)
 }
 \arguments{
-\item{center}{A numeric vector of length 2}
+\item{center}{A numeric vector of length 2.}
 
-\item{radius}{A number}
+\item{radius}{A number.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw a color-filled circle (Vector version).

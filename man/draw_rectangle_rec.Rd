@@ -7,9 +7,9 @@
 draw_rectangle_rec(rec, color)
 }
 \arguments{
-\item{rec}{A rectangle}
+\item{rec}{A rectangle.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw a color-filled rectangle.

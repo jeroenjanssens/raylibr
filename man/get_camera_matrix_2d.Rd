@@ -7,7 +7,7 @@
 get_camera_matrix_2d(camera)
 }
 \arguments{
-\item{camera}{A camera_2d}
+\item{camera}{A camera_2d.}
 }
 \value{
 A numeric matrix of 4 by 4

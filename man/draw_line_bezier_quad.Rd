@@ -7,15 +7,15 @@
 draw_line_bezier_quad(start_pos, end_pos, control_pos, thick, color)
 }
 \arguments{
-\item{start_pos}{A numeric vector of length 2}
+\item{start_pos}{A numeric vector of length 2.}
 
-\item{end_pos}{A numeric vector of length 2}
+\item{end_pos}{A numeric vector of length 2.}
 
-\item{control_pos}{A numeric vector of length 2}
+\item{control_pos}{A numeric vector of length 2.}
 
-\item{thick}{A number}
+\item{thick}{A number.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw line using quadratic bezier curves with a control point.

@@ -7,13 +7,13 @@
 draw_line_ex(start_pos, end_pos, thick, color)
 }
 \arguments{
-\item{start_pos}{A numeric vector of length 2}
+\item{start_pos}{A numeric vector of length 2.}
 
-\item{end_pos}{A numeric vector of length 2}
+\item{end_pos}{A numeric vector of length 2.}
 
-\item{thick}{A number}
+\item{thick}{A number.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw a line defining thickness.

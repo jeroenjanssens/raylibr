@@ -7,7 +7,7 @@
 set_camera_pan_control(key_pan)
 }
 \arguments{
-\item{key_pan}{An integer}
+\item{key_pan}{An integer.}
 }
 \description{
 Set camera pan key to combine with mouse movement (free camera).

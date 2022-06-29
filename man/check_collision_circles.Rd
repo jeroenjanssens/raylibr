@@ -7,13 +7,13 @@
 check_collision_circles(center_1, radius_1, center_2, radius_2)
 }
 \arguments{
-\item{center_1}{A numeric vector of length 2}
+\item{center_1}{A numeric vector of length 2.}
 
-\item{radius_1}{A number}
+\item{radius_1}{A number.}
 
-\item{center_2}{A numeric vector of length 2}
+\item{center_2}{A numeric vector of length 2.}
 
-\item{radius_2}{A number}
+\item{radius_2}{A number.}
 }
 \value{
 A logical

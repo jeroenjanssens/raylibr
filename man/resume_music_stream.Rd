@@ -7,7 +7,7 @@
 resume_music_stream(music)
 }
 \arguments{
-\item{music}{A music}
+\item{music}{A music.}
 }
 \description{
 Resume playing paused music.

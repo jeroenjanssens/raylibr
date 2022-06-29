@@ -7,7 +7,7 @@
 set_exit_key(key)
 }
 \arguments{
-\item{key}{An integer}
+\item{key}{An integer.}
 }
 \description{
 Set a custom key to exit program (default is ESC).

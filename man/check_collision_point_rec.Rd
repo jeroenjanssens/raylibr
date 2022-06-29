@@ -7,9 +7,9 @@
 check_collision_point_rec(point, rec)
 }
 \arguments{
-\item{point}{A numeric vector of length 2}
+\item{point}{A numeric vector of length 2.}
 
-\item{rec}{A rectangle}
+\item{rec}{A rectangle.}
 }
 \value{
 A logical

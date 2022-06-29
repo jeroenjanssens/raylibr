@@ -7,7 +7,7 @@
 unload_wave(wave)
 }
 \arguments{
-\item{wave}{A wave}
+\item{wave}{A wave.}
 }
 \description{
 Unload wave data.

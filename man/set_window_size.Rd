@@ -7,9 +7,9 @@
 set_window_size(width, height)
 }
 \arguments{
-\item{width}{An integer}
+\item{width}{An integer.}
 
-\item{height}{An integer}
+\item{height}{An integer.}
 }
 \description{
 Set window dimensions.

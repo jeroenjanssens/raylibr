@@ -7,7 +7,7 @@
 set_camera_smooth_zoom_control(key_smooth_zoom)
 }
 \arguments{
-\item{key_smooth_zoom}{An integer}
+\item{key_smooth_zoom}{An integer.}
 }
 \description{
 Set camera smooth zoom key to combine with mouse (free camera).

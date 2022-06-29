@@ -7,15 +7,15 @@
 draw_rectangle_rounded_lines(rec, roundness, segments, line_thick, color)
 }
 \arguments{
-\item{rec}{A rectangle}
+\item{rec}{A rectangle.}
 
-\item{roundness}{A number}
+\item{roundness}{A number.}
 
-\item{segments}{An integer}
+\item{segments}{An integer.}
 
-\item{line_thick}{A number}
+\item{line_thick}{A number.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw rectangle with rounded edges outline.

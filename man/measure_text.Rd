@@ -7,9 +7,9 @@
 measure_text(text, font_size)
 }
 \arguments{
-\item{text}{A string}
+\item{text}{A string.}
 
-\item{font_size}{An integer}
+\item{font_size}{An integer.}
 }
 \value{
 An integer

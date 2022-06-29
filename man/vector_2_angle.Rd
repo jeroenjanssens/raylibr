@@ -7,9 +7,9 @@
 vector_2_angle(v_1, v_2)
 }
 \arguments{
-\item{v_1}{A numeric vector of length 2}
+\item{v_1}{A numeric vector of length 2.}
 
-\item{v_2}{A numeric vector of length 2}
+\item{v_2}{A numeric vector of length 2.}
 }
 \value{
 A number

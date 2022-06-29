@@ -7,15 +7,15 @@
 draw_rectangle_gradient_ex(rec, col_1, col_2, col_3, col_4)
 }
 \arguments{
-\item{rec}{A rectangle}
+\item{rec}{A rectangle.}
 
-\item{col_1}{A color}
+\item{col_1}{A color.}
 
-\item{col_2}{A color}
+\item{col_2}{A color.}
 
-\item{col_3}{A color}
+\item{col_3}{A color.}
 
-\item{col_4}{A color}
+\item{col_4}{A color.}
 }
 \description{
 Draw a gradient-filled rectangle with custom vertex colors.

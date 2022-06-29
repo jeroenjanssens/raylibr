@@ -7,15 +7,15 @@
 gen_image_gradient_radial(width, height, density, inner, outer)
 }
 \arguments{
-\item{width}{An integer}
+\item{width}{An integer.}
 
-\item{height}{An integer}
+\item{height}{An integer.}
 
-\item{density}{A number}
+\item{density}{A number.}
 
-\item{inner}{A color}
+\item{inner}{A color.}
 
-\item{outer}{A color}
+\item{outer}{A color.}
 }
 \value{
 A image

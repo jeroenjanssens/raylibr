@@ -7,11 +7,11 @@
 init_window(width, height, title)
 }
 \arguments{
-\item{width}{An integer}
+\item{width}{An integer.}
 
-\item{height}{An integer}
+\item{height}{An integer.}
 
-\item{title}{A string}
+\item{title}{A string.}
 }
 \description{
 Initialize window and OpenGL context.

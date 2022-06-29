@@ -7,9 +7,9 @@
 vector_2_rotate(v, angle)
 }
 \arguments{
-\item{v}{A numeric vector of length 2}
+\item{v}{A numeric vector of length 2.}
 
-\item{angle}{A number}
+\item{angle}{A number.}
 }
 \value{
 A numeric vector of length 2

@@ -7,11 +7,11 @@
 color_alpha_blend(dst, src, tint)
 }
 \arguments{
-\item{dst}{A color}
+\item{dst}{A color.}
 
-\item{src}{A color}
+\item{src}{A color.}
 
-\item{tint}{A color}
+\item{tint}{A color.}
 }
 \value{
 A color

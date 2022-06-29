@@ -7,7 +7,7 @@
 stop_sound(sound)
 }
 \arguments{
-\item{sound}{A sound}
+\item{sound}{A sound.}
 }
 \description{
 Stop playing a sound.

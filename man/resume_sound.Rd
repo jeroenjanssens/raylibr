@@ -7,7 +7,7 @@
 resume_sound(sound)
 }
 \arguments{
-\item{sound}{A sound}
+\item{sound}{A sound.}
 }
 \description{
 Resume a paused sound.

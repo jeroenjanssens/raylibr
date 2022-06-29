@@ -7,15 +7,15 @@
 draw_cube(position, width, height, length, color)
 }
 \arguments{
-\item{position}{A numeric vector of length 3}
+\item{position}{A numeric vector of length 3.}
 
-\item{width}{A number}
+\item{width}{A number.}
 
-\item{height}{A number}
+\item{height}{A number.}
 
-\item{length}{A number}
+\item{length}{A number.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw cube.

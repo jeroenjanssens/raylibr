@@ -7,9 +7,9 @@
 get_random_value(min, max)
 }
 \arguments{
-\item{min}{An integer}
+\item{min}{An integer.}
 
-\item{max}{An integer}
+\item{max}{An integer.}
 }
 \value{
 An integer

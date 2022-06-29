@@ -7,9 +7,9 @@
 set_window_position(x, y)
 }
 \arguments{
-\item{x}{An integer}
+\item{x}{An integer.}
 
-\item{y}{An integer}
+\item{y}{An integer.}
 }
 \description{
 Set window position on screen (only PLATFORM_DESKTOP).

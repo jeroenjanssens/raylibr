@@ -7,13 +7,13 @@
 gen_image_gradient_h(width, height, left, right)
 }
 \arguments{
-\item{width}{An integer}
+\item{width}{An integer.}
 
-\item{height}{An integer}
+\item{height}{An integer.}
 
-\item{left}{A color}
+\item{left}{A color.}
 
-\item{right}{A color}
+\item{right}{A color.}
 }
 \value{
 A image

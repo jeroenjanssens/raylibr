@@ -7,17 +7,17 @@
 draw_text_ex(font, text, position, font_size, spacing, tint)
 }
 \arguments{
-\item{font}{A font}
+\item{font}{A font.}
 
-\item{text}{A string}
+\item{text}{A string.}
 
-\item{position}{A numeric vector of length 2}
+\item{position}{A numeric vector of length 2.}
 
-\item{font_size}{A number}
+\item{font_size}{A number.}
 
-\item{spacing}{A number}
+\item{spacing}{A number.}
 
-\item{tint}{A color}
+\item{tint}{A color.}
 }
 \description{
 Draw text using font and additional parameters.

@@ -7,7 +7,7 @@
 color_from_normalized(normalized)
 }
 \arguments{
-\item{normalized}{A numeric vector of length 4}
+\item{normalized}{A numeric vector of length 4.}
 }
 \value{
 A color

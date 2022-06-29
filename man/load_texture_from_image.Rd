@@ -7,7 +7,7 @@
 load_texture_from_image(image)
 }
 \arguments{
-\item{image}{A image}
+\item{image}{A image.}
 }
 \value{
 A texture

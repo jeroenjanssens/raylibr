@@ -7,7 +7,7 @@
 set_mouse_cursor(cursor)
 }
 \arguments{
-\item{cursor}{An integer}
+\item{cursor}{An integer.}
 }
 \description{
 Set mouse cursor.

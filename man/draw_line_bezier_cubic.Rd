@@ -14,17 +14,17 @@ draw_line_bezier_cubic(
 )
 }
 \arguments{
-\item{start_pos}{A numeric vector of length 2}
+\item{start_pos}{A numeric vector of length 2.}
 
-\item{end_pos}{A numeric vector of length 2}
+\item{end_pos}{A numeric vector of length 2.}
 
-\item{start_control_pos}{A numeric vector of length 2}
+\item{start_control_pos}{A numeric vector of length 2.}
 
-\item{end_control_pos}{A numeric vector of length 2}
+\item{end_control_pos}{A numeric vector of length 2.}
 
-\item{thick}{A number}
+\item{thick}{A number.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw line using cubic bezier curves with 2 control points.

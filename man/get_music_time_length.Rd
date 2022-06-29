@@ -7,7 +7,7 @@
 get_music_time_length(music)
 }
 \arguments{
-\item{music}{A music}
+\item{music}{A music.}
 }
 \value{
 A number

@@ -7,7 +7,7 @@
 take_screenshot(file_name)
 }
 \arguments{
-\item{file_name}{A string}
+\item{file_name}{A string.}
 }
 \description{
 Takes a screenshot of current screen (filename extension defines format).

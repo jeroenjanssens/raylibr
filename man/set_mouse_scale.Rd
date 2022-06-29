@@ -7,9 +7,9 @@
 set_mouse_scale(scale_x, scale_y)
 }
 \arguments{
-\item{scale_x}{A number}
+\item{scale_x}{A number.}
 
-\item{scale_y}{A number}
+\item{scale_y}{A number.}
 }
 \description{
 Set mouse scaling.

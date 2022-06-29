@@ -7,7 +7,7 @@
 clear_window_state(flags)
 }
 \arguments{
-\item{flags}{A unsigned int}
+\item{flags}{A non-negative integer.}
 }
 \description{
 Clear window configuration state flags.

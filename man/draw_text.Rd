@@ -7,15 +7,15 @@
 draw_text(text, pos_x, pos_y, font_size, color)
 }
 \arguments{
-\item{text}{A string}
+\item{text}{A string.}
 
-\item{pos_x}{An integer}
+\item{pos_x}{An integer.}
 
-\item{pos_y}{An integer}
+\item{pos_y}{An integer.}
 
-\item{font_size}{An integer}
+\item{font_size}{An integer.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw text (using default font).

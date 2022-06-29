@@ -7,9 +7,9 @@
 get_world_to_screen(position, camera)
 }
 \arguments{
-\item{position}{A numeric vector of length 3}
+\item{position}{A numeric vector of length 3.}
 
-\item{camera}{A camera_3d}
+\item{camera}{A camera_3d.}
 }
 \value{
 A numeric vector of length 2

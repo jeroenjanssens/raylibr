@@ -7,7 +7,7 @@
 pause_music_stream(music)
 }
 \arguments{
-\item{music}{A music}
+\item{music}{A music.}
 }
 \description{
 Pause music playing.

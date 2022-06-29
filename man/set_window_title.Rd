@@ -7,7 +7,7 @@
 set_window_title(title)
 }
 \arguments{
-\item{title}{A string}
+\item{title}{A string.}
 }
 \description{
 Set title for window (only PLATFORM_DESKTOP).

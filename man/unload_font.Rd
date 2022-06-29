@@ -7,7 +7,7 @@
 unload_font(font)
 }
 \arguments{
-\item{font}{A font}
+\item{font}{A font.}
 }
 \description{
 Unload Font from GPU memory (VRAM).

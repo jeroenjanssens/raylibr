@@ -7,7 +7,7 @@
 is_sound_playing(sound)
 }
 \arguments{
-\item{sound}{A sound}
+\item{sound}{A sound.}
 }
 \value{
 A logical

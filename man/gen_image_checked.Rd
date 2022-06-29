@@ -7,17 +7,17 @@
 gen_image_checked(width, height, checks_x, checks_y, col_1, col_2)
 }
 \arguments{
-\item{width}{An integer}
+\item{width}{An integer.}
 
-\item{height}{An integer}
+\item{height}{An integer.}
 
-\item{checks_x}{An integer}
+\item{checks_x}{An integer.}
 
-\item{checks_y}{An integer}
+\item{checks_y}{An integer.}
 
-\item{col_1}{A color}
+\item{col_1}{A color.}
 
-\item{col_2}{A color}
+\item{col_2}{A color.}
 }
 \value{
 A image

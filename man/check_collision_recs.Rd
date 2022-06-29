@@ -7,9 +7,9 @@
 check_collision_recs(rec_1, rec_2)
 }
 \arguments{
-\item{rec_1}{A rectangle}
+\item{rec_1}{A rectangle.}
 
-\item{rec_2}{A rectangle}
+\item{rec_2}{A rectangle.}
 }
 \value{
 A logical

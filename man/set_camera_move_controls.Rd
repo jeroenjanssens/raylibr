@@ -14,17 +14,17 @@ set_camera_move_controls(
 )
 }
 \arguments{
-\item{key_front}{An integer}
+\item{key_front}{An integer.}
 
-\item{key_back}{An integer}
+\item{key_back}{An integer.}
 
-\item{key_right}{An integer}
+\item{key_right}{An integer.}
 
-\item{key_left}{An integer}
+\item{key_left}{An integer.}
 
-\item{key_up}{An integer}
+\item{key_up}{An integer.}
 
-\item{key_down}{An integer}
+\item{key_down}{An integer.}
 }
 \description{
 Set camera move controls (1st person and 3rd person cameras).

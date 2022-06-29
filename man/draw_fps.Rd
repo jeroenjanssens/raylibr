@@ -7,9 +7,9 @@
 draw_fps(pos_x, pos_y)
 }
 \arguments{
-\item{pos_x}{An integer}
+\item{pos_x}{An integer.}
 
-\item{pos_y}{An integer}
+\item{pos_y}{An integer.}
 }
 \description{
 Draw current FPS.

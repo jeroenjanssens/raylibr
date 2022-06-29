@@ -7,9 +7,9 @@
 set_sound_volume(sound, volume)
 }
 \arguments{
-\item{sound}{A sound}
+\item{sound}{A sound.}
 
-\item{volume}{A number}
+\item{volume}{A number.}
 }
 \description{
 Set volume for a sound (1.0 is max level).

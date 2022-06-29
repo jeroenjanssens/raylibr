@@ -7,15 +7,15 @@
 draw_poly(center, sides, radius, rotation, color)
 }
 \arguments{
-\item{center}{A numeric vector of length 2}
+\item{center}{A numeric vector of length 2.}
 
-\item{sides}{An integer}
+\item{sides}{An integer.}
 
-\item{radius}{A number}
+\item{radius}{A number.}
 
-\item{rotation}{A number}
+\item{rotation}{A number.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw a regular polygon (Vector version).

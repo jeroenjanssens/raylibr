@@ -7,7 +7,7 @@
 begin_mode_3d(camera)
 }
 \arguments{
-\item{camera}{A camera_3d}
+\item{camera}{A camera_3d.}
 }
 \description{
 Begin 3D mode with custom camera (3D).

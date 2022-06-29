@@ -7,11 +7,11 @@
 color_from_hsv(hue, saturation, value)
 }
 \arguments{
-\item{hue}{A number}
+\item{hue}{A number.}
 
-\item{saturation}{A number}
+\item{saturation}{A number.}
 
-\item{value}{A number}
+\item{value}{A number.}
 }
 \value{
 A color

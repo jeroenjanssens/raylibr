@@ -7,9 +7,9 @@
 set_shapes_texture(texture, source)
 }
 \arguments{
-\item{texture}{A texture}
+\item{texture}{A texture.}
 
-\item{source}{A rectangle}
+\item{source}{A rectangle.}
 }
 \description{
 Set texture and rectangle to be used on shapes drawing.

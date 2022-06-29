@@ -7,7 +7,7 @@
 color_to_int(color)
 }
 \arguments{
-\item{color}{A color}
+\item{color}{A color.}
 }
 \value{
 An integer

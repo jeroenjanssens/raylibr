@@ -7,11 +7,11 @@
 gen_image_cellular(width, height, tile_size)
 }
 \arguments{
-\item{width}{An integer}
+\item{width}{An integer.}
 
-\item{height}{An integer}
+\item{height}{An integer.}
 
-\item{tile_size}{An integer}
+\item{tile_size}{An integer.}
 }
 \value{
 A image

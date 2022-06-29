@@ -7,13 +7,13 @@
 draw_circle_lines(center_x, center_y, radius, color)
 }
 \arguments{
-\item{center_x}{An integer}
+\item{center_x}{An integer.}
 
-\item{center_y}{An integer}
+\item{center_y}{An integer.}
 
-\item{radius}{A number}
+\item{radius}{A number.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw circle outline.

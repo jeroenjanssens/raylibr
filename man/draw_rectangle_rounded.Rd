@@ -7,13 +7,13 @@
 draw_rectangle_rounded(rec, roundness, segments, color)
 }
 \arguments{
-\item{rec}{A rectangle}
+\item{rec}{A rectangle.}
 
-\item{roundness}{A number}
+\item{roundness}{A number.}
 
-\item{segments}{An integer}
+\item{segments}{An integer.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw rectangle with rounded edges.

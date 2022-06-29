@@ -7,9 +7,9 @@
 get_image_alpha_border(image, threshold)
 }
 \arguments{
-\item{image}{A image}
+\item{image}{A image.}
 
-\item{threshold}{A number}
+\item{threshold}{A number.}
 }
 \value{
 A rectangle

@@ -7,15 +7,15 @@
 draw_circle_gradient(center_x, center_y, radius, color_1, color_2)
 }
 \arguments{
-\item{center_x}{An integer}
+\item{center_x}{An integer.}
 
-\item{center_y}{An integer}
+\item{center_y}{An integer.}
 
-\item{radius}{A number}
+\item{radius}{A number.}
 
-\item{color_1}{A color}
+\item{color_1}{A color.}
 
-\item{color_2}{A color}
+\item{color_2}{A color.}
 }
 \description{
 Draw a gradient-filled circle.

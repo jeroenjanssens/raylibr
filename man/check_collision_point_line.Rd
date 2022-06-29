@@ -7,13 +7,13 @@
 check_collision_point_line(point, p_1, p_2, threshold)
 }
 \arguments{
-\item{point}{A numeric vector of length 2}
+\item{point}{A numeric vector of length 2.}
 
-\item{p_1}{A numeric vector of length 2}
+\item{p_1}{A numeric vector of length 2.}
 
-\item{p_2}{A numeric vector of length 2}
+\item{p_2}{A numeric vector of length 2.}
 
-\item{threshold}{An integer}
+\item{threshold}{An integer.}
 }
 \value{
 A logical

@@ -7,7 +7,7 @@
 clear_background(color)
 }
 \arguments{
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Set background color (framebuffer clear color).

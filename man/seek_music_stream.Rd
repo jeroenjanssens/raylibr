@@ -7,9 +7,9 @@
 seek_music_stream(music, position)
 }
 \arguments{
-\item{music}{A music}
+\item{music}{A music.}
 
-\item{position}{A number}
+\item{position}{A number.}
 }
 \description{
 Seek music to a position (in seconds).

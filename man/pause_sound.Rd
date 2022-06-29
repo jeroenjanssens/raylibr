@@ -7,7 +7,7 @@
 pause_sound(sound)
 }
 \arguments{
-\item{sound}{A sound}
+\item{sound}{A sound.}
 }
 \description{
 Pause a sound.

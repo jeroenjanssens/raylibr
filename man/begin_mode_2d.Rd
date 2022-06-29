@@ -7,7 +7,7 @@
 begin_mode_2d(camera)
 }
 \arguments{
-\item{camera}{A camera_2d}
+\item{camera}{A camera_2d.}
 }
 \description{
 Begin 2D mode with custom camera (2D).

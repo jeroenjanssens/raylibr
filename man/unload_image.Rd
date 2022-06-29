@@ -7,7 +7,7 @@
 unload_image(image)
 }
 \arguments{
-\item{image}{A image}
+\item{image}{A image.}
 }
 \description{
 Unload image from CPU memory (RAM).

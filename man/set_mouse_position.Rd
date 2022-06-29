@@ -7,9 +7,9 @@
 set_mouse_position(x, y)
 }
 \arguments{
-\item{x}{An integer}
+\item{x}{An integer.}
 
-\item{y}{An integer}
+\item{y}{An integer.}
 }
 \description{
 Set mouse position XY.

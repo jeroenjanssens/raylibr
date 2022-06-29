@@ -7,11 +7,11 @@
 draw_rectangle_lines_ex(rec, line_thick, color)
 }
 \arguments{
-\item{rec}{A rectangle}
+\item{rec}{A rectangle.}
 
-\item{line_thick}{A number}
+\item{line_thick}{A number.}
 
-\item{color}{A color}
+\item{color}{A color.}
 }
 \description{
 Draw rectangle outline with extended parameters.

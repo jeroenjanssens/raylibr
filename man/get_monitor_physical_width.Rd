@@ -7,7 +7,7 @@
 get_monitor_physical_width(monitor)
 }
 \arguments{
-\item{monitor}{An integer}
+\item{monitor}{An integer.}
 }
 \value{
 An integer

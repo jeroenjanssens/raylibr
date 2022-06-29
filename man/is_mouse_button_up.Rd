@@ -7,7 +7,7 @@
 is_mouse_button_up(button)
 }
 \arguments{
-\item{button}{An integer}
+\item{button}{An integer.}
 }
 \value{
 A logical
