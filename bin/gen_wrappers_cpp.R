@@ -18,10 +18,10 @@ writeLines(c(
   ""),
   con)
 
-  for (name in sort(structs_generate)) {
-    writeLines(indent(make_as(name)), con)
-    writeLines(indent(make_wrap(name)), con)
-  }
+for (name in sort(structs_generate)) {
+  writeLines(indent(make_as(name)), con)
+  writeLines(indent(make_wrap(name)), con)
+}
 
 writeLines("}\n", con)
 

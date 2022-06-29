@@ -1,9 +1,37 @@
+# Do not edit by hand
+
+#' Rectangle
+#'
+#' Create a new `rectangle` object.
+#'
+#' @param x A number. Rectangle top-left corner position x.
+#' @param y A number. Rectangle top-left corner position y.
+#' @param width A number. Rectangle width.
+#' @param height A number. Rectangle height.
+#'
+#' @note This object has been auto-generated from the following Raylib struct definition:
+#'
+#' ```
+#' typedef struct Rectangle {
+#'     float x;                // Rectangle top-left corner position x
+#'     float y;                // Rectangle top-left corner position y
+#'     float width;            // Rectangle width
+#'     float height;           // Rectangle height
+#' } Rectangle;
+#' ```
+
+#' @rdname rectangle
+#' @export
+rectangle <- function(x, y, width, height) {
+  rectangle_(x, y, width, height)
+}
+
 rectangle_set <- function(o, field, value) {
-  do.call(paste0("rectangle_set_", field), args = list(o, value))
+  do.call(paste0("rectangle_set_", field, "_"), args = list(o, value))
 }
 
 rectangle_get <- function(o, field) {
-  do.call(paste0("rectangle_get_", field), args = list(o))
+  do.call(paste0("rectangle_get_", field, "_"), args = list(o))
 }
 
 #' @export
@@ -16,11 +44,6 @@ rectangle_get <- function(o, field) {
   rectangle_set(o, field, value)
 }
 
-#' Autocomplete helper for \code{rectangle} objects
-#'
-#' @param x object
-#' @param pattern current pattern to match
-#'
 #' @importFrom utils .DollarNames
 #' @export
 .DollarNames.rectangle <- function(x, pattern) {
@@ -54,4 +77,3 @@ as.character.rectangle <- function(x, ...) {
   res <- paste(fields, values, sep = " = ", collapse = ", ")
   paste0("rectangle(", res, ")")
 }
-

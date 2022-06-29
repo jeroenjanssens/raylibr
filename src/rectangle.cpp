@@ -1,83 +1,67 @@
+// Do not edit by hand. This code is generated from the following definition in raylib.h:
+
+// typedef struct Rectangle {
+//     float x;                // Rectangle top-left corner position x
+//     float y;                // Rectangle top-left corner position y
+//     float width;            // Rectangle width
+//     float height;           // Rectangle height
+// } Rectangle;
+
 #include "raylibr.h"
 
 // [[Rcpp::plugins(cpp11)]]
 
-// From raylib.h:
-// Rectangle, 4 components
-// typedef struct Rectangle {
-//   float x;                // Rectangle top-left corner position x
-//   float y;                // Rectangle top-left corner position y
-//   float width;            // Rectangle width
-//   float height;           // Rectangle height
-// } Rectangle;
-
-// From raylib_types.h:
-// template <> SEXP wrap(const Rectangle& x);
-// template <> Rectangle as(SEXP);
-
-// From gen_wrappers.cpp:
-// template <> Rectangle as(SEXP x) {
-//   return *XPtr<Rectangle>(x);
-// };
-// template <> SEXP wrap(const Rectangle& x) {
-//   Rectangle *ptr = new Rectangle;
-//   (*ptr) = x;
-//   XPtr<Rectangle>xptr = XPtr<Rectangle>(ptr, true);
-//   xptr.attr("class") = "rectangle";
-//   return xptr;
-// };
-
 // [[Rcpp::export]]
-float rectangle_get_x(Rectangle o) {
-  return o.x;
+Rectangle rectangle_(float x, float y, float width, float height) {
+  Rectangle obj = {};
+  obj.x = x;
+  obj.y = y;
+  obj.width = width;
+  obj.height = height;
+  return obj;
 }
 
 // [[Rcpp::export]]
-float rectangle_get_y(Rectangle o) {
-  return o.y;
+float rectangle_get_x_(Rectangle obj) {
+  return obj.x;
 }
 
 // [[Rcpp::export]]
-float rectangle_get_width(Rectangle o) {
-  return o.width;
+Rectangle rectangle_set_x_(Rectangle obj, float x) {
+  obj.x = x;
+  return obj;
 }
 
 // [[Rcpp::export]]
-float rectangle_get_height(Rectangle o) {
-  return o.height;
+float rectangle_get_y_(Rectangle obj) {
+  return obj.y;
 }
 
 // [[Rcpp::export]]
-Rectangle rectangle_set_x(Rectangle o, float x) {
-  o.x = x;
-  return o;
+Rectangle rectangle_set_y_(Rectangle obj, float y) {
+  obj.y = y;
+  return obj;
 }
 
 // [[Rcpp::export]]
-Rectangle rectangle_set_y(Rectangle o, float y) {
-  o.y = y;
-  return o;
+float rectangle_get_width_(Rectangle obj) {
+  return obj.width;
 }
 
 // [[Rcpp::export]]
-Rectangle rectangle_set_width(Rectangle o, float width) {
-  o.width = width;
-  return o;
+Rectangle rectangle_set_width_(Rectangle obj, float width) {
+  obj.width = width;
+  return obj;
 }
 
 // [[Rcpp::export]]
-Rectangle rectangle_set_height(Rectangle o, float height) {
-  o.height = height;
-  return o;
+float rectangle_get_height_(Rectangle obj) {
+  return obj.height;
 }
 
-//' @export
 // [[Rcpp::export]]
-Rectangle rectangle(float x, float y, float width, float height) {
-  Rectangle o = {};
-  o.x = x;
-  o.y = y;
-  o.width = width;
-  o.height = height;
-  return o;
+Rectangle rectangle_set_height_(Rectangle obj, float height) {
+  obj.height = height;
+  return obj;
 }
+

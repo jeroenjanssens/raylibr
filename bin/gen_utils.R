@@ -19,7 +19,10 @@ structs_generate <-
     "Texture",
     "Font",
     "RenderTexture",
+    "NPatchInfo",
+    "GlyphInfo",
     "Camera2D",
+    "Camera3D",
     "Mesh",
     "Shader",
     "MaterialMap",
@@ -38,8 +41,7 @@ structs_custom <-
     "Vector2",
     "Vector3",
     "Vector4",
-    "RaylibMatrix",
-    "Camera3D"
+    "RaylibMatrix"
   )
 
 # Get function name from function definition
@@ -62,16 +64,17 @@ extract_param_type_name <- function(p) {
 
   parts[[1]] <- alias_type(parts[[1]])
 
-  print(parts)
   if (parts[[1]] == "void") {
     list(
       name = "",
-      type = "void"
+      type = "void",
+      default = NA
     )
   } else {
     list(
       name = tail(parts, 1),
-      type = str_c(head(parts, -1), collapse = " ")
+      type = str_c(head(parts, -1), collapse = " "),
+      default = NA
     )
   }
 }
@@ -104,6 +107,7 @@ parse_fun <- function(x) {
 # Generate function documentation for types
 make_rd_type <- function(x) {
   case_when(x == "int" ~ "An integer",
+            x == "unsigned int" ~ "A non-negative integer",
             x == "float" ~ "A number",
             x == "bool" ~ "A logical",
             x == "const char *" ~ "A string",
@@ -115,11 +119,11 @@ make_rd_type <- function(x) {
 }
 
 # Generate function documentation for parameters
-make_rd_params <- function(params) {
+make_rd_params <- function(params, comment = "//") {
   if (params[[1]]$type == "void") return("")
   params[[1]]$type <- alias_type(params[[1]]$type)
 
-  map_chr(params, ~ glue("//' @param {make_rcpp_name(.$name)} {make_rd_type(.$type)}")) %>%
+  map_chr(params, ~ glue("{comment}' @param {make_rcpp_name(.$name)} {make_rd_type(.$type)}.{ifelse(is.null(.$comment), '', paste0(' ', .$comment, '.'))}{ifelse(is.na(.$default), '', paste0(' Default: `', deparse(.$default), '`.'))}")) %>%
   str_c(collapse = "\n") %>%
     paste0("\n")
 }
@@ -132,6 +136,20 @@ make_rd_value <- function(ret) {
   } else {
     glue("//' @return {make_rd_type(ret)}\n\n")
   }
+}
+
+make_r_params <- function(params) {
+  parts <- c()
+
+  for (p in params) {
+    if (is.na(p$default)) {
+      parts <- c(parts, p$name)
+    } else {
+      parts <- c(parts, glue("{p$name} = {deparse(p$default)}"))
+    }
+  }
+
+  paste0(parts, collapse = ", ")
 }
 
 # Construct Rcpp code for function parameters

@@ -42,6 +42,18 @@ namespace Rcpp {
     return xptr;
   };
   
+  template <> Camera3D as(SEXP x) {
+    return *XPtr<Camera3D>(x);
+  };
+  
+  template <> SEXP wrap(const Camera3D& x) {
+    Camera3D *ptr = new Camera3D;
+    (*ptr) = x;
+    XPtr<Camera3D>xptr = XPtr<Camera3D>(ptr, true);
+    xptr.attr("class") = "camera_3d";
+    return xptr;
+  };
+  
   template <> Font as(SEXP x) {
     return *XPtr<Font>(x);
   };
@@ -51,6 +63,18 @@ namespace Rcpp {
     (*ptr) = x;
     XPtr<Font>xptr = XPtr<Font>(ptr, true);
     xptr.attr("class") = "font";
+    return xptr;
+  };
+  
+  template <> GlyphInfo as(SEXP x) {
+    return *XPtr<GlyphInfo>(x);
+  };
+  
+  template <> SEXP wrap(const GlyphInfo& x) {
+    GlyphInfo *ptr = new GlyphInfo;
+    (*ptr) = x;
+    XPtr<GlyphInfo>xptr = XPtr<GlyphInfo>(ptr, true);
+    xptr.attr("class") = "glyph_info";
     return xptr;
   };
   
@@ -135,6 +159,18 @@ namespace Rcpp {
     (*ptr) = x;
     XPtr<Music>xptr = XPtr<Music>(ptr, true);
     xptr.attr("class") = "music";
+    return xptr;
+  };
+  
+  template <> NPatchInfo as(SEXP x) {
+    return *XPtr<NPatchInfo>(x);
+  };
+  
+  template <> SEXP wrap(const NPatchInfo& x) {
+    NPatchInfo *ptr = new NPatchInfo;
+    (*ptr) = x;
+    XPtr<NPatchInfo>xptr = XPtr<NPatchInfo>(ptr, true);
+    xptr.attr("class") = "npatch_info";
     return xptr;
   };
   

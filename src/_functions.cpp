@@ -6,9 +6,9 @@
 //'
 //' Initialize window and OpenGL context.
 //'
-//' @param width An integer
-//' @param height An integer
-//' @param title A string
+//' @param width An integer.
+//' @param height An integer.
+//' @param title A string.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -167,7 +167,7 @@ bool is_window_resized() {
 //'
 //' Check if one specific window flag is enabled.
 //'
-//' @param flag A unsigned int
+//' @param flag A non-negative integer.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -184,7 +184,7 @@ bool is_window_state(unsigned int flag) {
 //'
 //' Set window configuration state using flags.
 //'
-//' @param flags A unsigned int
+//' @param flags A non-negative integer.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -200,7 +200,7 @@ void set_window_state(unsigned int flags) {
 //'
 //' Clear window configuration state flags.
 //'
-//' @param flags A unsigned int
+//' @param flags A non-negative integer.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -276,7 +276,7 @@ void restore_window() {
 //'
 //' Set icon for window (only PLATFORM_DESKTOP).
 //'
-//' @param image A image
+//' @param image A image.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -292,7 +292,7 @@ void set_window_icon(Image image) {
 //'
 //' Set title for window (only PLATFORM_DESKTOP).
 //'
-//' @param title A string
+//' @param title A string.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -308,8 +308,8 @@ void set_window_title(const char * title) {
 //'
 //' Set window position on screen (only PLATFORM_DESKTOP).
 //'
-//' @param x An integer
-//' @param y An integer
+//' @param x An integer.
+//' @param y An integer.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -325,7 +325,7 @@ void set_window_position(int x, int y) {
 //'
 //' Set monitor for the current window (fullscreen mode).
 //'
-//' @param monitor An integer
+//' @param monitor An integer.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -341,8 +341,8 @@ void set_window_monitor(int monitor) {
 //'
 //' Set window minimum dimensions (for FLAG_WINDOW_RESIZABLE).
 //'
-//' @param width An integer
-//' @param height An integer
+//' @param width An integer.
+//' @param height An integer.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -358,8 +358,8 @@ void set_window_min_size(int width, int height) {
 //'
 //' Set window dimensions.
 //'
-//' @param width An integer
-//' @param height An integer
+//' @param width An integer.
+//' @param height An integer.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -439,7 +439,7 @@ int get_current_monitor() {
 //'
 //' Get specified monitor position.
 //'
-//' @param monitor An integer
+//' @param monitor An integer.
 //' @return A numeric vector of length 2
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -456,7 +456,7 @@ Vector2 get_monitor_position(int monitor) {
 //'
 //' Get specified monitor width (max available by monitor).
 //'
-//' @param monitor An integer
+//' @param monitor An integer.
 //' @return An integer
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -473,7 +473,7 @@ int get_monitor_width(int monitor) {
 //'
 //' Get specified monitor height (max available by monitor).
 //'
-//' @param monitor An integer
+//' @param monitor An integer.
 //' @return An integer
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -490,7 +490,7 @@ int get_monitor_height(int monitor) {
 //'
 //' Get specified monitor physical width in millimetres.
 //'
-//' @param monitor An integer
+//' @param monitor An integer.
 //' @return An integer
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -507,7 +507,7 @@ int get_monitor_physical_width(int monitor) {
 //'
 //' Get specified monitor physical height in millimetres.
 //'
-//' @param monitor An integer
+//' @param monitor An integer.
 //' @return An integer
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -524,7 +524,7 @@ int get_monitor_physical_height(int monitor) {
 //'
 //' Get specified monitor refresh rate.
 //'
-//' @param monitor An integer
+//' @param monitor An integer.
 //' @return An integer
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -573,7 +573,7 @@ Vector2 get_window_scale_dpi() {
 //'
 //' Get the human-readable, UTF-8 encoded name of the primary monitor.
 //'
-//' @param monitor An integer
+//' @param monitor An integer.
 //' @return A string
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -682,7 +682,7 @@ bool is_cursor_on_screen() {
 //'
 //' Set background color (framebuffer clear color).
 //'
-//' @param color A color
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -728,7 +728,7 @@ void end_drawing() {
 //'
 //' Begin 2D mode with custom camera (2D).
 //'
-//' @param camera A camera_2d
+//' @param camera A camera_2d.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -759,7 +759,7 @@ void end_mode_2d() {
 //'
 //' Begin 3D mode with custom camera (3D).
 //'
-//' @param camera A camera_3d
+//' @param camera A camera_3d.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -790,7 +790,7 @@ void end_mode_3d() {
 //'
 //' Get camera transform matrix (view matrix).
 //'
-//' @param camera A camera_3d
+//' @param camera A camera_3d.
 //' @return A numeric matrix of 4 by 4
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -807,7 +807,7 @@ RaylibMatrix get_camera_matrix(Camera3D camera) {
 //'
 //' Get camera 2d transform matrix.
 //'
-//' @param camera A camera_2d
+//' @param camera A camera_2d.
 //' @return A numeric matrix of 4 by 4
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -824,8 +824,8 @@ RaylibMatrix get_camera_matrix_2d(Camera2D camera) {
 //'
 //' Get the screen space position for a 3d world space position.
 //'
-//' @param position A numeric vector of length 3
-//' @param camera A camera_3d
+//' @param position A numeric vector of length 3.
+//' @param camera A camera_3d.
 //' @return A numeric vector of length 2
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -842,10 +842,10 @@ Vector2 get_world_to_screen(Vector3 position, Camera3D camera) {
 //'
 //' Get size position for a 3d world space position.
 //'
-//' @param position A numeric vector of length 3
-//' @param camera A camera_3d
-//' @param width An integer
-//' @param height An integer
+//' @param position A numeric vector of length 3.
+//' @param camera A camera_3d.
+//' @param width An integer.
+//' @param height An integer.
 //' @return A numeric vector of length 2
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -862,8 +862,8 @@ Vector2 get_world_to_screen_ex(Vector3 position, Camera3D camera, int width, int
 //'
 //' Get the screen space position for a 2d camera world space position.
 //'
-//' @param position A numeric vector of length 2
-//' @param camera A camera_2d
+//' @param position A numeric vector of length 2.
+//' @param camera A camera_2d.
 //' @return A numeric vector of length 2
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -880,8 +880,8 @@ Vector2 get_world_to_screen_2d(Vector2 position, Camera2D camera) {
 //'
 //' Get the world space position for a 2d camera screen space position.
 //'
-//' @param position A numeric vector of length 2
-//' @param camera A camera_2d
+//' @param position A numeric vector of length 2.
+//' @param camera A camera_2d.
 //' @return A numeric vector of length 2
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -898,7 +898,7 @@ Vector2 get_screen_to_world_2d(Vector2 position, Camera2D camera) {
 //'
 //' Set target FPS (maximum).
 //'
-//' @param fps An integer
+//' @param fps An integer.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -962,8 +962,8 @@ double get_time() {
 //'
 //' Get a random value between min and max (both included).
 //'
-//' @param min An integer
-//' @param max An integer
+//' @param min An integer.
+//' @param max An integer.
 //' @return An integer
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -980,7 +980,7 @@ int get_random_value(int min, int max) {
 //'
 //' Takes a screenshot of current screen (filename extension defines format).
 //'
-//' @param file_name A string
+//' @param file_name A string.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -996,7 +996,7 @@ void take_screenshot(const char * file_name) {
 //'
 //' Check if a key has been pressed once.
 //'
-//' @param key An integer
+//' @param key An integer.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -1013,7 +1013,7 @@ bool is_key_pressed(int key) {
 //'
 //' Check if a key is being pressed.
 //'
-//' @param key An integer
+//' @param key An integer.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -1030,7 +1030,7 @@ bool is_key_down(int key) {
 //'
 //' Check if a key has been released once.
 //'
-//' @param key An integer
+//' @param key An integer.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -1047,7 +1047,7 @@ bool is_key_released(int key) {
 //'
 //' Check if a key is NOT being pressed.
 //'
-//' @param key An integer
+//' @param key An integer.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -1064,7 +1064,7 @@ bool is_key_up(int key) {
 //'
 //' Set a custom key to exit program (default is ESC).
 //'
-//' @param key An integer
+//' @param key An integer.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1112,7 +1112,7 @@ int get_char_pressed() {
 //'
 //' Check if a mouse button has been pressed once.
 //'
-//' @param button An integer
+//' @param button An integer.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -1129,7 +1129,7 @@ bool is_mouse_button_pressed(int button) {
 //'
 //' Check if a mouse button is being pressed.
 //'
-//' @param button An integer
+//' @param button An integer.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -1146,7 +1146,7 @@ bool is_mouse_button_down(int button) {
 //'
 //' Check if a mouse button has been released once.
 //'
-//' @param button An integer
+//' @param button An integer.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -1163,7 +1163,7 @@ bool is_mouse_button_released(int button) {
 //'
 //' Check if a mouse button is NOT being pressed.
 //'
-//' @param button An integer
+//' @param button An integer.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -1244,8 +1244,8 @@ Vector2 get_mouse_delta() {
 //'
 //' Set mouse position XY.
 //'
-//' @param x An integer
-//' @param y An integer
+//' @param x An integer.
+//' @param y An integer.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1261,8 +1261,8 @@ void set_mouse_position(int x, int y) {
 //'
 //' Set mouse offset.
 //'
-//' @param offset_x An integer
-//' @param offset_y An integer
+//' @param offset_x An integer.
+//' @param offset_y An integer.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1278,8 +1278,8 @@ void set_mouse_offset(int offset_x, int offset_y) {
 //'
 //' Set mouse scaling.
 //'
-//' @param scale_x A number
-//' @param scale_y A number
+//' @param scale_x A number.
+//' @param scale_y A number.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1311,7 +1311,7 @@ float get_mouse_wheel_move() {
 //'
 //' Set mouse cursor.
 //'
-//' @param cursor An integer
+//' @param cursor An integer.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1327,7 +1327,7 @@ void set_mouse_cursor(int cursor) {
 //'
 //' Set camera pan key to combine with mouse movement (free camera).
 //'
-//' @param key_pan An integer
+//' @param key_pan An integer.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1343,7 +1343,7 @@ void set_camera_pan_control(int key_pan) {
 //'
 //' Set camera alt key to combine with mouse movement (free camera).
 //'
-//' @param key_alt An integer
+//' @param key_alt An integer.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1359,7 +1359,7 @@ void set_camera_alt_control(int key_alt) {
 //'
 //' Set camera smooth zoom key to combine with mouse (free camera).
 //'
-//' @param key_smooth_zoom An integer
+//' @param key_smooth_zoom An integer.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1375,12 +1375,12 @@ void set_camera_smooth_zoom_control(int key_smooth_zoom) {
 //'
 //' Set camera move controls (1st person and 3rd person cameras).
 //'
-//' @param key_front An integer
-//' @param key_back An integer
-//' @param key_right An integer
-//' @param key_left An integer
-//' @param key_up An integer
-//' @param key_down An integer
+//' @param key_front An integer.
+//' @param key_back An integer.
+//' @param key_right An integer.
+//' @param key_left An integer.
+//' @param key_up An integer.
+//' @param key_down An integer.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1396,8 +1396,8 @@ void set_camera_move_controls(int key_front, int key_back, int key_right, int ke
 //'
 //' Set texture and rectangle to be used on shapes drawing.
 //'
-//' @param texture A texture
-//' @param source A rectangle
+//' @param texture A texture.
+//' @param source A rectangle.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1413,9 +1413,9 @@ void set_shapes_texture(Texture texture, Rectangle source) {
 //'
 //' Draw a pixel.
 //'
-//' @param pos_x An integer
-//' @param pos_y An integer
-//' @param color A color
+//' @param pos_x An integer.
+//' @param pos_y An integer.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1431,8 +1431,8 @@ void draw_pixel(int pos_x, int pos_y, Color color) {
 //'
 //' Draw a pixel (Vector version).
 //'
-//' @param position A numeric vector of length 2
-//' @param color A color
+//' @param position A numeric vector of length 2.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1448,11 +1448,11 @@ void draw_pixel_v(Vector2 position, Color color) {
 //'
 //' Draw a line.
 //'
-//' @param start_pos_x An integer
-//' @param start_pos_y An integer
-//' @param end_pos_x An integer
-//' @param end_pos_y An integer
-//' @param color A color
+//' @param start_pos_x An integer.
+//' @param start_pos_y An integer.
+//' @param end_pos_x An integer.
+//' @param end_pos_y An integer.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1468,9 +1468,9 @@ void draw_line(int start_pos_x, int start_pos_y, int end_pos_x, int end_pos_y, C
 //'
 //' Draw a line (Vector version).
 //'
-//' @param start_pos A numeric vector of length 2
-//' @param end_pos A numeric vector of length 2
-//' @param color A color
+//' @param start_pos A numeric vector of length 2.
+//' @param end_pos A numeric vector of length 2.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1486,10 +1486,10 @@ void draw_line_v(Vector2 start_pos, Vector2 end_pos, Color color) {
 //'
 //' Draw a line defining thickness.
 //'
-//' @param start_pos A numeric vector of length 2
-//' @param end_pos A numeric vector of length 2
-//' @param thick A number
-//' @param color A color
+//' @param start_pos A numeric vector of length 2.
+//' @param end_pos A numeric vector of length 2.
+//' @param thick A number.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1505,10 +1505,10 @@ void draw_line_ex(Vector2 start_pos, Vector2 end_pos, float thick, Color color) 
 //'
 //' Draw a line using cubic-bezier curves in-out.
 //'
-//' @param start_pos A numeric vector of length 2
-//' @param end_pos A numeric vector of length 2
-//' @param thick A number
-//' @param color A color
+//' @param start_pos A numeric vector of length 2.
+//' @param end_pos A numeric vector of length 2.
+//' @param thick A number.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1524,11 +1524,11 @@ void draw_line_bezier(Vector2 start_pos, Vector2 end_pos, float thick, Color col
 //'
 //' Draw line using quadratic bezier curves with a control point.
 //'
-//' @param start_pos A numeric vector of length 2
-//' @param end_pos A numeric vector of length 2
-//' @param control_pos A numeric vector of length 2
-//' @param thick A number
-//' @param color A color
+//' @param start_pos A numeric vector of length 2.
+//' @param end_pos A numeric vector of length 2.
+//' @param control_pos A numeric vector of length 2.
+//' @param thick A number.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1544,12 +1544,12 @@ void draw_line_bezier_quad(Vector2 start_pos, Vector2 end_pos, Vector2 control_p
 //'
 //' Draw line using cubic bezier curves with 2 control points.
 //'
-//' @param start_pos A numeric vector of length 2
-//' @param end_pos A numeric vector of length 2
-//' @param start_control_pos A numeric vector of length 2
-//' @param end_control_pos A numeric vector of length 2
-//' @param thick A number
-//' @param color A color
+//' @param start_pos A numeric vector of length 2.
+//' @param end_pos A numeric vector of length 2.
+//' @param start_control_pos A numeric vector of length 2.
+//' @param end_control_pos A numeric vector of length 2.
+//' @param thick A number.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1565,10 +1565,10 @@ void draw_line_bezier_cubic(Vector2 start_pos, Vector2 end_pos, Vector2 start_co
 //'
 //' Draw a color-filled circle.
 //'
-//' @param center_x An integer
-//' @param center_y An integer
-//' @param radius A number
-//' @param color A color
+//' @param center_x An integer.
+//' @param center_y An integer.
+//' @param radius A number.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1584,12 +1584,12 @@ void draw_circle(int center_x, int center_y, float radius, Color color) {
 //'
 //' Draw a piece of a circle.
 //'
-//' @param center A numeric vector of length 2
-//' @param radius A number
-//' @param start_angle A number
-//' @param end_angle A number
-//' @param segments An integer
-//' @param color A color
+//' @param center A numeric vector of length 2.
+//' @param radius A number.
+//' @param start_angle A number.
+//' @param end_angle A number.
+//' @param segments An integer.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1605,12 +1605,12 @@ void draw_circle_sector(Vector2 center, float radius, float start_angle, float e
 //'
 //' Draw circle sector outline.
 //'
-//' @param center A numeric vector of length 2
-//' @param radius A number
-//' @param start_angle A number
-//' @param end_angle A number
-//' @param segments An integer
-//' @param color A color
+//' @param center A numeric vector of length 2.
+//' @param radius A number.
+//' @param start_angle A number.
+//' @param end_angle A number.
+//' @param segments An integer.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1626,11 +1626,11 @@ void draw_circle_sector_lines(Vector2 center, float radius, float start_angle, f
 //'
 //' Draw a gradient-filled circle.
 //'
-//' @param center_x An integer
-//' @param center_y An integer
-//' @param radius A number
-//' @param color_1 A color
-//' @param color_2 A color
+//' @param center_x An integer.
+//' @param center_y An integer.
+//' @param radius A number.
+//' @param color_1 A color.
+//' @param color_2 A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1646,9 +1646,9 @@ void draw_circle_gradient(int center_x, int center_y, float radius, Color color_
 //'
 //' Draw a color-filled circle (Vector version).
 //'
-//' @param center A numeric vector of length 2
-//' @param radius A number
-//' @param color A color
+//' @param center A numeric vector of length 2.
+//' @param radius A number.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1664,10 +1664,10 @@ void draw_circle_v(Vector2 center, float radius, Color color) {
 //'
 //' Draw circle outline.
 //'
-//' @param center_x An integer
-//' @param center_y An integer
-//' @param radius A number
-//' @param color A color
+//' @param center_x An integer.
+//' @param center_y An integer.
+//' @param radius A number.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1683,11 +1683,11 @@ void draw_circle_lines(int center_x, int center_y, float radius, Color color) {
 //'
 //' Draw ellipse.
 //'
-//' @param center_x An integer
-//' @param center_y An integer
-//' @param radius_h A number
-//' @param radius_v A number
-//' @param color A color
+//' @param center_x An integer.
+//' @param center_y An integer.
+//' @param radius_h A number.
+//' @param radius_v A number.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1703,11 +1703,11 @@ void draw_ellipse(int center_x, int center_y, float radius_h, float radius_v, Co
 //'
 //' Draw ellipse outline.
 //'
-//' @param center_x An integer
-//' @param center_y An integer
-//' @param radius_h A number
-//' @param radius_v A number
-//' @param color A color
+//' @param center_x An integer.
+//' @param center_y An integer.
+//' @param radius_h A number.
+//' @param radius_v A number.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1723,13 +1723,13 @@ void draw_ellipse_lines(int center_x, int center_y, float radius_h, float radius
 //'
 //' Draw ring.
 //'
-//' @param center A numeric vector of length 2
-//' @param inner_radius A number
-//' @param outer_radius A number
-//' @param start_angle A number
-//' @param end_angle A number
-//' @param segments An integer
-//' @param color A color
+//' @param center A numeric vector of length 2.
+//' @param inner_radius A number.
+//' @param outer_radius A number.
+//' @param start_angle A number.
+//' @param end_angle A number.
+//' @param segments An integer.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1745,13 +1745,13 @@ void draw_ring(Vector2 center, float inner_radius, float outer_radius, float sta
 //'
 //' Draw ring outline.
 //'
-//' @param center A numeric vector of length 2
-//' @param inner_radius A number
-//' @param outer_radius A number
-//' @param start_angle A number
-//' @param end_angle A number
-//' @param segments An integer
-//' @param color A color
+//' @param center A numeric vector of length 2.
+//' @param inner_radius A number.
+//' @param outer_radius A number.
+//' @param start_angle A number.
+//' @param end_angle A number.
+//' @param segments An integer.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1767,11 +1767,11 @@ void draw_ring_lines(Vector2 center, float inner_radius, float outer_radius, flo
 //'
 //' Draw a color-filled rectangle.
 //'
-//' @param pos_x An integer
-//' @param pos_y An integer
-//' @param width An integer
-//' @param height An integer
-//' @param color A color
+//' @param pos_x An integer.
+//' @param pos_y An integer.
+//' @param width An integer.
+//' @param height An integer.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1787,9 +1787,9 @@ void draw_rectangle(int pos_x, int pos_y, int width, int height, Color color) {
 //'
 //' Draw a color-filled rectangle (Vector version).
 //'
-//' @param position A numeric vector of length 2
-//' @param size A numeric vector of length 2
-//' @param color A color
+//' @param position A numeric vector of length 2.
+//' @param size A numeric vector of length 2.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1805,8 +1805,8 @@ void draw_rectangle_v(Vector2 position, Vector2 size, Color color) {
 //'
 //' Draw a color-filled rectangle.
 //'
-//' @param rec A rectangle
-//' @param color A color
+//' @param rec A rectangle.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1822,10 +1822,10 @@ void draw_rectangle_rec(Rectangle rec, Color color) {
 //'
 //' Draw a color-filled rectangle with pro parameters.
 //'
-//' @param rec A rectangle
-//' @param origin A numeric vector of length 2
-//' @param rotation A number
-//' @param color A color
+//' @param rec A rectangle.
+//' @param origin A numeric vector of length 2.
+//' @param rotation A number.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1841,12 +1841,12 @@ void draw_rectangle_pro(Rectangle rec, Vector2 origin, float rotation, Color col
 //'
 //' Draw a vertical-gradient-filled rectangle.
 //'
-//' @param pos_x An integer
-//' @param pos_y An integer
-//' @param width An integer
-//' @param height An integer
-//' @param color_1 A color
-//' @param color_2 A color
+//' @param pos_x An integer.
+//' @param pos_y An integer.
+//' @param width An integer.
+//' @param height An integer.
+//' @param color_1 A color.
+//' @param color_2 A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1862,12 +1862,12 @@ void draw_rectangle_gradient_v(int pos_x, int pos_y, int width, int height, Colo
 //'
 //' Draw a horizontal-gradient-filled rectangle.
 //'
-//' @param pos_x An integer
-//' @param pos_y An integer
-//' @param width An integer
-//' @param height An integer
-//' @param color_1 A color
-//' @param color_2 A color
+//' @param pos_x An integer.
+//' @param pos_y An integer.
+//' @param width An integer.
+//' @param height An integer.
+//' @param color_1 A color.
+//' @param color_2 A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1883,11 +1883,11 @@ void draw_rectangle_gradient_h(int pos_x, int pos_y, int width, int height, Colo
 //'
 //' Draw a gradient-filled rectangle with custom vertex colors.
 //'
-//' @param rec A rectangle
-//' @param col_1 A color
-//' @param col_2 A color
-//' @param col_3 A color
-//' @param col_4 A color
+//' @param rec A rectangle.
+//' @param col_1 A color.
+//' @param col_2 A color.
+//' @param col_3 A color.
+//' @param col_4 A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1903,11 +1903,11 @@ void draw_rectangle_gradient_ex(Rectangle rec, Color col_1, Color col_2, Color c
 //'
 //' Draw rectangle outline.
 //'
-//' @param pos_x An integer
-//' @param pos_y An integer
-//' @param width An integer
-//' @param height An integer
-//' @param color A color
+//' @param pos_x An integer.
+//' @param pos_y An integer.
+//' @param width An integer.
+//' @param height An integer.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1923,9 +1923,9 @@ void draw_rectangle_lines(int pos_x, int pos_y, int width, int height, Color col
 //'
 //' Draw rectangle outline with extended parameters.
 //'
-//' @param rec A rectangle
-//' @param line_thick A number
-//' @param color A color
+//' @param rec A rectangle.
+//' @param line_thick A number.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1941,10 +1941,10 @@ void draw_rectangle_lines_ex(Rectangle rec, float line_thick, Color color) {
 //'
 //' Draw rectangle with rounded edges.
 //'
-//' @param rec A rectangle
-//' @param roundness A number
-//' @param segments An integer
-//' @param color A color
+//' @param rec A rectangle.
+//' @param roundness A number.
+//' @param segments An integer.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1960,11 +1960,11 @@ void draw_rectangle_rounded(Rectangle rec, float roundness, int segments, Color 
 //'
 //' Draw rectangle with rounded edges outline.
 //'
-//' @param rec A rectangle
-//' @param roundness A number
-//' @param segments An integer
-//' @param line_thick A number
-//' @param color A color
+//' @param rec A rectangle.
+//' @param roundness A number.
+//' @param segments An integer.
+//' @param line_thick A number.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1980,10 +1980,10 @@ void draw_rectangle_rounded_lines(Rectangle rec, float roundness, int segments, 
 //'
 //' Draw a color-filled triangle (vertex in counter-clockwise order!).
 //'
-//' @param v_1 A numeric vector of length 2
-//' @param v_2 A numeric vector of length 2
-//' @param v_3 A numeric vector of length 2
-//' @param color A color
+//' @param v_1 A numeric vector of length 2.
+//' @param v_2 A numeric vector of length 2.
+//' @param v_3 A numeric vector of length 2.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -1999,10 +1999,10 @@ void draw_triangle(Vector2 v_1, Vector2 v_2, Vector2 v_3, Color color) {
 //'
 //' Draw triangle outline (vertex in counter-clockwise order!).
 //'
-//' @param v_1 A numeric vector of length 2
-//' @param v_2 A numeric vector of length 2
-//' @param v_3 A numeric vector of length 2
-//' @param color A color
+//' @param v_1 A numeric vector of length 2.
+//' @param v_2 A numeric vector of length 2.
+//' @param v_3 A numeric vector of length 2.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -2018,11 +2018,11 @@ void draw_triangle_lines(Vector2 v_1, Vector2 v_2, Vector2 v_3, Color color) {
 //'
 //' Draw a regular polygon (Vector version).
 //'
-//' @param center A numeric vector of length 2
-//' @param sides An integer
-//' @param radius A number
-//' @param rotation A number
-//' @param color A color
+//' @param center A numeric vector of length 2.
+//' @param sides An integer.
+//' @param radius A number.
+//' @param rotation A number.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -2038,11 +2038,11 @@ void draw_poly(Vector2 center, int sides, float radius, float rotation, Color co
 //'
 //' Draw a polygon outline of n sides.
 //'
-//' @param center A numeric vector of length 2
-//' @param sides An integer
-//' @param radius A number
-//' @param rotation A number
-//' @param color A color
+//' @param center A numeric vector of length 2.
+//' @param sides An integer.
+//' @param radius A number.
+//' @param rotation A number.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -2058,12 +2058,12 @@ void draw_poly_lines(Vector2 center, int sides, float radius, float rotation, Co
 //'
 //' Draw a polygon outline of n sides with extended parameters.
 //'
-//' @param center A numeric vector of length 2
-//' @param sides An integer
-//' @param radius A number
-//' @param rotation A number
-//' @param line_thick A number
-//' @param color A color
+//' @param center A numeric vector of length 2.
+//' @param sides An integer.
+//' @param radius A number.
+//' @param rotation A number.
+//' @param line_thick A number.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -2079,8 +2079,8 @@ void draw_poly_lines_ex(Vector2 center, int sides, float radius, float rotation,
 //'
 //' Check collision between two rectangles.
 //'
-//' @param rec_1 A rectangle
-//' @param rec_2 A rectangle
+//' @param rec_1 A rectangle.
+//' @param rec_2 A rectangle.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2097,10 +2097,10 @@ bool check_collision_recs(Rectangle rec_1, Rectangle rec_2) {
 //'
 //' Check collision between two circles.
 //'
-//' @param center_1 A numeric vector of length 2
-//' @param radius_1 A number
-//' @param center_2 A numeric vector of length 2
-//' @param radius_2 A number
+//' @param center_1 A numeric vector of length 2.
+//' @param radius_1 A number.
+//' @param center_2 A numeric vector of length 2.
+//' @param radius_2 A number.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2117,9 +2117,9 @@ bool check_collision_circles(Vector2 center_1, float radius_1, Vector2 center_2,
 //'
 //' Check collision between circle and rectangle.
 //'
-//' @param center A numeric vector of length 2
-//' @param radius A number
-//' @param rec A rectangle
+//' @param center A numeric vector of length 2.
+//' @param radius A number.
+//' @param rec A rectangle.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2136,8 +2136,8 @@ bool check_collision_circle_rec(Vector2 center, float radius, Rectangle rec) {
 //'
 //' Check if point is inside rectangle.
 //'
-//' @param point A numeric vector of length 2
-//' @param rec A rectangle
+//' @param point A numeric vector of length 2.
+//' @param rec A rectangle.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2154,9 +2154,9 @@ bool check_collision_point_rec(Vector2 point, Rectangle rec) {
 //'
 //' Check if point is inside circle.
 //'
-//' @param point A numeric vector of length 2
-//' @param center A numeric vector of length 2
-//' @param radius A number
+//' @param point A numeric vector of length 2.
+//' @param center A numeric vector of length 2.
+//' @param radius A number.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2173,10 +2173,10 @@ bool check_collision_point_circle(Vector2 point, Vector2 center, float radius) {
 //'
 //' Check if point is inside a triangle.
 //'
-//' @param point A numeric vector of length 2
-//' @param p_1 A numeric vector of length 2
-//' @param p_2 A numeric vector of length 2
-//' @param p_3 A numeric vector of length 2
+//' @param point A numeric vector of length 2.
+//' @param p_1 A numeric vector of length 2.
+//' @param p_2 A numeric vector of length 2.
+//' @param p_3 A numeric vector of length 2.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2193,10 +2193,10 @@ bool check_collision_point_triangle(Vector2 point, Vector2 p_1, Vector2 p_2, Vec
 //'
 //' Check if point belongs to line created between two points [p1] and [p2] with defined margin in pixels [threshold].
 //'
-//' @param point A numeric vector of length 2
-//' @param p_1 A numeric vector of length 2
-//' @param p_2 A numeric vector of length 2
-//' @param threshold An integer
+//' @param point A numeric vector of length 2.
+//' @param p_1 A numeric vector of length 2.
+//' @param p_2 A numeric vector of length 2.
+//' @param threshold An integer.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2213,8 +2213,8 @@ bool check_collision_point_line(Vector2 point, Vector2 p_1, Vector2 p_2, int thr
 //'
 //' Get collision rectangle for two rectangles collision.
 //'
-//' @param rec_1 A rectangle
-//' @param rec_2 A rectangle
+//' @param rec_1 A rectangle.
+//' @param rec_2 A rectangle.
 //' @return A rectangle
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2231,7 +2231,7 @@ Rectangle get_collision_rec(Rectangle rec_1, Rectangle rec_2) {
 //'
 //' Load image from file into CPU memory (RAM).
 //'
-//' @param file_name A string
+//' @param file_name A string.
 //' @return A image
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2248,11 +2248,11 @@ Image load_image(const char * file_name) {
 //'
 //' Load image from RAW file data.
 //'
-//' @param file_name A string
-//' @param width An integer
-//' @param height An integer
-//' @param format An integer
-//' @param header_size An integer
+//' @param file_name A string.
+//' @param width An integer.
+//' @param height An integer.
+//' @param format An integer.
+//' @param header_size An integer.
 //' @return A image
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2269,7 +2269,7 @@ Image load_image_raw(const char * file_name, int width, int height, int format, 
 //'
 //' Load image from GPU texture data.
 //'
-//' @param texture A texture
+//' @param texture A texture.
 //' @return A image
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2302,7 +2302,7 @@ Image load_image_from_screen() {
 //'
 //' Unload image from CPU memory (RAM).
 //'
-//' @param image A image
+//' @param image A image.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -2318,8 +2318,8 @@ void unload_image(Image image) {
 //'
 //' Export image data to file, returns true on success.
 //'
-//' @param image A image
-//' @param file_name A string
+//' @param image A image.
+//' @param file_name A string.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2336,8 +2336,8 @@ bool export_image(Image image, const char * file_name) {
 //'
 //' Export image as code file defining an array of bytes, returns true on success.
 //'
-//' @param image A image
-//' @param file_name A string
+//' @param image A image.
+//' @param file_name A string.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2354,9 +2354,9 @@ bool export_image_as_code(Image image, const char * file_name) {
 //'
 //' Generate image: plain color.
 //'
-//' @param width An integer
-//' @param height An integer
-//' @param color A color
+//' @param width An integer.
+//' @param height An integer.
+//' @param color A color.
 //' @return A image
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2373,10 +2373,10 @@ Image gen_image_color(int width, int height, Color color) {
 //'
 //' Generate image: vertical gradient.
 //'
-//' @param width An integer
-//' @param height An integer
-//' @param top A color
-//' @param bottom A color
+//' @param width An integer.
+//' @param height An integer.
+//' @param top A color.
+//' @param bottom A color.
 //' @return A image
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2393,10 +2393,10 @@ Image gen_image_gradient_v(int width, int height, Color top, Color bottom) {
 //'
 //' Generate image: horizontal gradient.
 //'
-//' @param width An integer
-//' @param height An integer
-//' @param left A color
-//' @param right A color
+//' @param width An integer.
+//' @param height An integer.
+//' @param left A color.
+//' @param right A color.
 //' @return A image
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2413,11 +2413,11 @@ Image gen_image_gradient_h(int width, int height, Color left, Color right) {
 //'
 //' Generate image: radial gradient.
 //'
-//' @param width An integer
-//' @param height An integer
-//' @param density A number
-//' @param inner A color
-//' @param outer A color
+//' @param width An integer.
+//' @param height An integer.
+//' @param density A number.
+//' @param inner A color.
+//' @param outer A color.
 //' @return A image
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2434,12 +2434,12 @@ Image gen_image_gradient_radial(int width, int height, float density, Color inne
 //'
 //' Generate image: checked.
 //'
-//' @param width An integer
-//' @param height An integer
-//' @param checks_x An integer
-//' @param checks_y An integer
-//' @param col_1 A color
-//' @param col_2 A color
+//' @param width An integer.
+//' @param height An integer.
+//' @param checks_x An integer.
+//' @param checks_y An integer.
+//' @param col_1 A color.
+//' @param col_2 A color.
 //' @return A image
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2456,9 +2456,9 @@ Image gen_image_checked(int width, int height, int checks_x, int checks_y, Color
 //'
 //' Generate image: white noise.
 //'
-//' @param width An integer
-//' @param height An integer
-//' @param factor A number
+//' @param width An integer.
+//' @param height An integer.
+//' @param factor A number.
 //' @return A image
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2475,9 +2475,9 @@ Image gen_image_white_noise(int width, int height, float factor) {
 //'
 //' Generate image: cellular algorithm, bigger tileSize means bigger cells.
 //'
-//' @param width An integer
-//' @param height An integer
-//' @param tile_size An integer
+//' @param width An integer.
+//' @param height An integer.
+//' @param tile_size An integer.
 //' @return A image
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2494,8 +2494,8 @@ Image gen_image_cellular(int width, int height, int tile_size) {
 //'
 //' Get image alpha border rectangle.
 //'
-//' @param image A image
-//' @param threshold A number
+//' @param image A image.
+//' @param threshold A number.
 //' @return A rectangle
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2512,7 +2512,7 @@ Rectangle get_image_alpha_border(Image image, float threshold) {
 //'
 //' Load texture from file into GPU memory (VRAM).
 //'
-//' @param file_name A string
+//' @param file_name A string.
 //' @return A texture
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2529,7 +2529,7 @@ Texture load_texture(const char * file_name) {
 //'
 //' Load texture from image data.
 //'
-//' @param image A image
+//' @param image A image.
 //' @return A texture
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2546,10 +2546,10 @@ Texture load_texture_from_image(Image image) {
 //'
 //' Draw a Texture2D.
 //'
-//' @param texture A texture
-//' @param pos_x An integer
-//' @param pos_y An integer
-//' @param tint A color
+//' @param texture A texture.
+//' @param pos_x An integer.
+//' @param pos_y An integer.
+//' @param tint A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -2565,8 +2565,8 @@ void draw_texture(Texture texture, int pos_x, int pos_y, Color tint) {
 //'
 //' Get color with alpha applied, alpha goes from 0.0f to 1.0f.
 //'
-//' @param color A color
-//' @param alpha A number
+//' @param color A color.
+//' @param alpha A number.
 //' @return A color
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2583,7 +2583,7 @@ Color fade(Color color, float alpha) {
 //'
 //' Get hexadecimal value for a Color.
 //'
-//' @param color A color
+//' @param color A color.
 //' @return An integer
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2600,7 +2600,7 @@ int color_to_int(Color color) {
 //'
 //' Get Color normalized as float [0..1].
 //'
-//' @param color A color
+//' @param color A color.
 //' @return A numeric vector of length 4
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2617,7 +2617,7 @@ Vector4 color_normalize(Color color) {
 //'
 //' Get Color from normalized values [0..1].
 //'
-//' @param normalized A numeric vector of length 4
+//' @param normalized A numeric vector of length 4.
 //' @return A color
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2634,7 +2634,7 @@ Color color_from_normalized(Vector4 normalized) {
 //'
 //' Get HSV values for a Color, hue [0..360], saturation/value [0..1].
 //'
-//' @param color A color
+//' @param color A color.
 //' @return A numeric vector of length 3
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2651,9 +2651,9 @@ Vector3 color_to_hsv(Color color) {
 //'
 //' Get a Color from HSV values, hue [0..360], saturation/value [0..1].
 //'
-//' @param hue A number
-//' @param saturation A number
-//' @param value A number
+//' @param hue A number.
+//' @param saturation A number.
+//' @param value A number.
 //' @return A color
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2670,8 +2670,8 @@ Color color_from_hsv(float hue, float saturation, float value) {
 //'
 //' Get color with alpha applied, alpha goes from 0.0f to 1.0f.
 //'
-//' @param color A color
-//' @param alpha A number
+//' @param color A color.
+//' @param alpha A number.
 //' @return A color
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2688,9 +2688,9 @@ Color color_alpha(Color color, float alpha) {
 //'
 //' Get src alpha-blended into dst color with tint.
 //'
-//' @param dst A color
-//' @param src A color
-//' @param tint A color
+//' @param dst A color.
+//' @param src A color.
+//' @param tint A color.
 //' @return A color
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2707,7 +2707,7 @@ Color color_alpha_blend(Color dst, Color src, Color tint) {
 //'
 //' Get Color structure from hexadecimal value.
 //'
-//' @param hex_value A unsigned int
+//' @param hex_value A non-negative integer.
 //' @return A color
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2740,7 +2740,7 @@ Font get_font_default() {
 //'
 //' Load font from file into GPU memory (VRAM).
 //'
-//' @param file_name A string
+//' @param file_name A string.
 //' @return A font
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2757,7 +2757,7 @@ Font load_font(const char * file_name) {
 //'
 //' Unload Font from GPU memory (VRAM).
 //'
-//' @param font A font
+//' @param font A font.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -2773,8 +2773,8 @@ void unload_font(Font font) {
 //'
 //' Draw current FPS.
 //'
-//' @param pos_x An integer
-//' @param pos_y An integer
+//' @param pos_x An integer.
+//' @param pos_y An integer.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -2790,11 +2790,11 @@ void draw_fps(int pos_x, int pos_y) {
 //'
 //' Draw text (using default font).
 //'
-//' @param text A string
-//' @param pos_x An integer
-//' @param pos_y An integer
-//' @param font_size An integer
-//' @param color A color
+//' @param text A string.
+//' @param pos_x An integer.
+//' @param pos_y An integer.
+//' @param font_size An integer.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -2810,12 +2810,12 @@ void draw_text(const char * text, int pos_x, int pos_y, int font_size, Color col
 //'
 //' Draw text using font and additional parameters.
 //'
-//' @param font A font
-//' @param text A string
-//' @param position A numeric vector of length 2
-//' @param font_size A number
-//' @param spacing A number
-//' @param tint A color
+//' @param font A font.
+//' @param text A string.
+//' @param position A numeric vector of length 2.
+//' @param font_size A number.
+//' @param spacing A number.
+//' @param tint A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -2831,8 +2831,8 @@ void draw_text_ex(Font font, const char * text, Vector2 position, float font_siz
 //'
 //' Measure string width for default font.
 //'
-//' @param text A string
-//' @param font_size An integer
+//' @param text A string.
+//' @param font_size An integer.
 //' @return An integer
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2849,10 +2849,10 @@ int measure_text(const char * text, int font_size) {
 //'
 //' Measure string size for Font.
 //'
-//' @param font A font
-//' @param text A string
-//' @param font_size A number
-//' @param spacing A number
+//' @param font A font.
+//' @param text A string.
+//' @param font_size A number.
+//' @param spacing A number.
 //' @return A numeric vector of length 2
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2869,11 +2869,11 @@ Vector2 measure_text_ex(Font font, const char * text, float font_size, float spa
 //'
 //' Draw cube.
 //'
-//' @param position A numeric vector of length 3
-//' @param width A number
-//' @param height A number
-//' @param length A number
-//' @param color A color
+//' @param position A numeric vector of length 3.
+//' @param width A number.
+//' @param height A number.
+//' @param length A number.
+//' @param color A color.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -2889,8 +2889,8 @@ void draw_cube(Vector3 position, float width, float height, float length, Color 
 //'
 //' Draw a grid (centered at (0, 0, 0)).
 //'
-//' @param slices An integer
-//' @param spacing A number
+//' @param slices An integer.
+//' @param spacing A number.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -2952,7 +2952,7 @@ bool is_audio_device_ready() {
 //'
 //' Set master volume (listener).
 //'
-//' @param volume A number
+//' @param volume A number.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -2968,7 +2968,7 @@ void set_master_volume(float volume) {
 //'
 //' Load wave data from file.
 //'
-//' @param file_name A string
+//' @param file_name A string.
 //' @return A wave
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -2985,7 +2985,7 @@ Wave load_wave(const char * file_name) {
 //'
 //' Load sound from file.
 //'
-//' @param file_name A string
+//' @param file_name A string.
 //' @return A sound
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -3002,7 +3002,7 @@ Sound load_sound(const char * file_name) {
 //'
 //' Load sound from wave data.
 //'
-//' @param wave A wave
+//' @param wave A wave.
 //' @return A sound
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -3019,7 +3019,7 @@ Sound load_sound_from_wave(Wave wave) {
 //'
 //' Unload wave data.
 //'
-//' @param wave A wave
+//' @param wave A wave.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3035,7 +3035,7 @@ void unload_wave(Wave wave) {
 //'
 //' Unload sound.
 //'
-//' @param sound A sound
+//' @param sound A sound.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3051,7 +3051,7 @@ void unload_sound(Sound sound) {
 //'
 //' Play a sound.
 //'
-//' @param sound A sound
+//' @param sound A sound.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3067,7 +3067,7 @@ void play_sound(Sound sound) {
 //'
 //' Stop playing a sound.
 //'
-//' @param sound A sound
+//' @param sound A sound.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3083,7 +3083,7 @@ void stop_sound(Sound sound) {
 //'
 //' Pause a sound.
 //'
-//' @param sound A sound
+//' @param sound A sound.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3099,7 +3099,7 @@ void pause_sound(Sound sound) {
 //'
 //' Resume a paused sound.
 //'
-//' @param sound A sound
+//' @param sound A sound.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3115,7 +3115,7 @@ void resume_sound(Sound sound) {
 //'
 //' Play a sound (using multichannel buffer pool).
 //'
-//' @param sound A sound
+//' @param sound A sound.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3162,7 +3162,7 @@ int get_sounds_playing() {
 //'
 //' Check if a sound is currently playing.
 //'
-//' @param sound A sound
+//' @param sound A sound.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -3179,8 +3179,8 @@ bool is_sound_playing(Sound sound) {
 //'
 //' Set volume for a sound (1.0 is max level).
 //'
-//' @param sound A sound
-//' @param volume A number
+//' @param sound A sound.
+//' @param volume A number.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3196,8 +3196,8 @@ void set_sound_volume(Sound sound, float volume) {
 //'
 //' Set pitch for a sound (1.0 is base level).
 //'
-//' @param sound A sound
-//' @param pitch A number
+//' @param sound A sound.
+//' @param pitch A number.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3213,7 +3213,7 @@ void set_sound_pitch(Sound sound, float pitch) {
 //'
 //' Load music stream from file.
 //'
-//' @param file_name A string
+//' @param file_name A string.
 //' @return A music
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -3230,7 +3230,7 @@ Music load_music_stream(const char * file_name) {
 //'
 //' Unload music stream.
 //'
-//' @param music A music
+//' @param music A music.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3246,7 +3246,7 @@ void unload_music_stream(Music music) {
 //'
 //' Start music playing.
 //'
-//' @param music A music
+//' @param music A music.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3262,7 +3262,7 @@ void play_music_stream(Music music) {
 //'
 //' Check if music is playing.
 //'
-//' @param music A music
+//' @param music A music.
 //' @return A logical
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -3279,7 +3279,7 @@ bool is_music_stream_playing(Music music) {
 //'
 //' Updates buffers for music streaming.
 //'
-//' @param music A music
+//' @param music A music.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3295,7 +3295,7 @@ void update_music_stream(Music music) {
 //'
 //' Stop music playing.
 //'
-//' @param music A music
+//' @param music A music.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3311,7 +3311,7 @@ void stop_music_stream(Music music) {
 //'
 //' Pause music playing.
 //'
-//' @param music A music
+//' @param music A music.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3327,7 +3327,7 @@ void pause_music_stream(Music music) {
 //'
 //' Resume playing paused music.
 //'
-//' @param music A music
+//' @param music A music.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3343,8 +3343,8 @@ void resume_music_stream(Music music) {
 //'
 //' Seek music to a position (in seconds).
 //'
-//' @param music A music
-//' @param position A number
+//' @param music A music.
+//' @param position A number.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3360,8 +3360,8 @@ void seek_music_stream(Music music, float position) {
 //'
 //' Set volume for music (1.0 is max level).
 //'
-//' @param music A music
-//' @param volume A number
+//' @param music A music.
+//' @param volume A number.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3377,8 +3377,8 @@ void set_music_volume(Music music, float volume) {
 //'
 //' Set pitch for a music (1.0 is base level).
 //'
-//' @param music A music
-//' @param pitch A number
+//' @param music A music.
+//' @param pitch A number.
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
 //'
@@ -3394,7 +3394,7 @@ void set_music_pitch(Music music, float pitch) {
 //'
 //' Get music time length (in seconds).
 //'
-//' @param music A music
+//' @param music A music.
 //' @return A number
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -3411,7 +3411,7 @@ float get_music_time_length(Music music) {
 //'
 //' Get current music time played (in seconds).
 //'
-//' @param music A music
+//' @param music A music.
 //' @return A number
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -3428,8 +3428,8 @@ float get_music_time_played(Music music) {
 //'
 //' .
 //'
-//' @param v_1 A numeric vector of length 2
-//' @param v_2 A numeric vector of length 2
+//' @param v_1 A numeric vector of length 2.
+//' @param v_2 A numeric vector of length 2.
 //' @return A number
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -3446,9 +3446,9 @@ float vector_2_angle(Vector2 v_1, Vector2 v_2) {
 //'
 //' .
 //'
-//' @param v A numeric vector of length 2
-//' @param target A numeric vector of length 2
-//' @param max_distance A number
+//' @param v A numeric vector of length 2.
+//' @param target A numeric vector of length 2.
+//' @param max_distance A number.
 //' @return A numeric vector of length 2
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -3465,8 +3465,8 @@ Vector2 vector_2_move_towards(Vector2 v, Vector2 target, float max_distance) {
 //'
 //' .
 //'
-//' @param v_1 A numeric vector of length 2
-//' @param v_2 A numeric vector of length 2
+//' @param v_1 A numeric vector of length 2.
+//' @param v_2 A numeric vector of length 2.
 //' @return A number
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:
@@ -3483,8 +3483,8 @@ float vector_2_distance(Vector2 v_1, Vector2 v_2) {
 //'
 //' .
 //'
-//' @param v A numeric vector of length 2
-//' @param angle A number
+//' @param v A numeric vector of length 2.
+//' @param angle A number.
 //' @return A numeric vector of length 2
 //'
 //' @note This function has been auto-generated from the following Raylib function definition:

@@ -131,39 +131,13 @@ namespace Rcpp {
         break;
       }
       default: {
-        stop("Incompatible Color provided");
+        stop("Incompatible color provided");
       }
     }
 
     return color;
   };
 
-  template <> Camera3D as(SEXP x) {
-    // Convert R object to C struct
-    //return *XPtr<Camera3D>(x);
-
-    List l = List(x);
-
-    Camera3D camera;
-    camera.position = as<Vector3>(wrap(l["position"]));
-    camera.target = as<Vector3>(wrap(l["target"]));
-    camera.up = as<Vector3>(wrap(l["up"]));
-    camera.fovy = as<float>(wrap(l["fovy"]));
-    camera.projection = as<int>(wrap(l["projection"]));
-
-    return camera;
-  };
-
-  template <> SEXP wrap(const Camera3D& x) {
-    // Convert C struct to R object
-    List l = List::create(_["position"] =  as<NumericVector>(wrap(x.position)),
-                          _["target"] =  as<NumericVector>(wrap(x.target)),
-                          _["up"] = as<NumericVector>(wrap(x.up)),
-                          _["fovy"] = as<float>(wrap(x.fovy)),
-                          _["projection"] = as<int>(wrap(x.projection)));
-    l.attr("class") = "camera";
-    return wrap(l);
-  };
 }
 
 //' @export
@@ -180,23 +154,6 @@ void draw_circles(NumericVector x, NumericVector y, NumericVector radius, List c
   for(int i = 0; i < x.size(); i++) {
     DrawCircle(x[i], y[i], radius[i], colors[i]);
   }
-}
-
-//' Camera
-//' @export
-// [[Rcpp::export]]
-Camera3D camera_3d(Vector3 position,
-                   Vector3 target,
-                   Vector3 up,
-                   float fovy = 70.0,
-                   int projection = 0) {
-  Camera3D camera;
-  camera.position = position;
-  camera.target = target;
-  camera.up = up;
-  camera.fovy = fovy;
-  camera.projection = projection;
-  return camera;
 }
 
 //' Load font ex

@@ -32,6 +32,9 @@ namespace Rcpp {
   template <> SEXP wrap(const Font& x);
   template <> Font as(SEXP);
   
+  template <> SEXP wrap(const GlyphInfo& x);
+  template <> GlyphInfo as(SEXP);
+  
   template <> SEXP wrap(const Image& x);
   template <> Image as(SEXP);
   
@@ -52,6 +55,9 @@ namespace Rcpp {
   
   template <> SEXP wrap(const Music& x);
   template <> Music as(SEXP);
+  
+  template <> SEXP wrap(const NPatchInfo& x);
+  template <> NPatchInfo as(SEXP);
   
   template <> SEXP wrap(const RaylibMatrix& x);
   template <> RaylibMatrix as(SEXP);
