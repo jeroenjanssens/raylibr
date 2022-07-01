@@ -247,14 +247,14 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// color
-Color color(Color c);
-RcppExport SEXP _raylibr_color(SEXP cSEXP) {
+// as_color
+Color as_color(Color x);
+RcppExport SEXP _raylibr_as_color(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Color >::type c(cSEXP);
-    rcpp_result_gen = Rcpp::wrap(color(c));
+    Rcpp::traits::input_parameter< Color >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(as_color(x));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -294,6 +294,112 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< Color >::type color(colorSEXP);
     image_draw_pixel(dst, posX, posY, color);
     return R_NilValue;
+END_RCPP
+}
+// color_
+Color color_(unsigned int r, unsigned int g, unsigned int b, unsigned int a);
+RcppExport SEXP _raylibr_color_(SEXP rSEXP, SEXP gSEXP, SEXP bSEXP, SEXP aSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< unsigned int >::type r(rSEXP);
+    Rcpp::traits::input_parameter< unsigned int >::type g(gSEXP);
+    Rcpp::traits::input_parameter< unsigned int >::type b(bSEXP);
+    Rcpp::traits::input_parameter< unsigned int >::type a(aSEXP);
+    rcpp_result_gen = Rcpp::wrap(color_(r, g, b, a));
+    return rcpp_result_gen;
+END_RCPP
+}
+// color_get_r_
+unsigned int color_get_r_(Color obj);
+RcppExport SEXP _raylibr_color_get_r_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Color >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(color_get_r_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// color_set_r_
+Color color_set_r_(Color obj, unsigned int r);
+RcppExport SEXP _raylibr_color_set_r_(SEXP objSEXP, SEXP rSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Color >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< unsigned int >::type r(rSEXP);
+    rcpp_result_gen = Rcpp::wrap(color_set_r_(obj, r));
+    return rcpp_result_gen;
+END_RCPP
+}
+// color_get_g_
+unsigned int color_get_g_(Color obj);
+RcppExport SEXP _raylibr_color_get_g_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Color >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(color_get_g_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// color_set_g_
+Color color_set_g_(Color obj, unsigned int g);
+RcppExport SEXP _raylibr_color_set_g_(SEXP objSEXP, SEXP gSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Color >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< unsigned int >::type g(gSEXP);
+    rcpp_result_gen = Rcpp::wrap(color_set_g_(obj, g));
+    return rcpp_result_gen;
+END_RCPP
+}
+// color_get_b_
+unsigned int color_get_b_(Color obj);
+RcppExport SEXP _raylibr_color_get_b_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Color >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(color_get_b_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// color_set_b_
+Color color_set_b_(Color obj, unsigned int b);
+RcppExport SEXP _raylibr_color_set_b_(SEXP objSEXP, SEXP bSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Color >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< unsigned int >::type b(bSEXP);
+    rcpp_result_gen = Rcpp::wrap(color_set_b_(obj, b));
+    return rcpp_result_gen;
+END_RCPP
+}
+// color_get_a_
+unsigned int color_get_a_(Color obj);
+RcppExport SEXP _raylibr_color_get_a_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Color >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(color_get_a_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// color_set_a_
+Color color_set_a_(Color obj, unsigned int a);
+RcppExport SEXP _raylibr_color_set_a_(SEXP objSEXP, SEXP aSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Color >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< unsigned int >::type a(aSEXP);
+    rcpp_result_gen = Rcpp::wrap(color_set_a_(obj, a));
+    return rcpp_result_gen;
 END_RCPP
 }
 // init_window_
@@ -3349,10 +3455,19 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_camera_3d_set_fovy_", (DL_FUNC) &_raylibr_camera_3d_set_fovy_, 2},
     {"_raylibr_camera_3d_get_projection_", (DL_FUNC) &_raylibr_camera_3d_get_projection_, 1},
     {"_raylibr_camera_3d_set_projection_", (DL_FUNC) &_raylibr_camera_3d_set_projection_, 2},
-    {"_raylibr_color", (DL_FUNC) &_raylibr_color, 1},
+    {"_raylibr_as_color", (DL_FUNC) &_raylibr_as_color, 1},
     {"_raylibr_draw_circles", (DL_FUNC) &_raylibr_draw_circles, 4},
     {"_raylibr_load_font_ex", (DL_FUNC) &_raylibr_load_font_ex, 2},
     {"_raylibr_image_draw_pixel", (DL_FUNC) &_raylibr_image_draw_pixel, 4},
+    {"_raylibr_color_", (DL_FUNC) &_raylibr_color_, 4},
+    {"_raylibr_color_get_r_", (DL_FUNC) &_raylibr_color_get_r_, 1},
+    {"_raylibr_color_set_r_", (DL_FUNC) &_raylibr_color_set_r_, 2},
+    {"_raylibr_color_get_g_", (DL_FUNC) &_raylibr_color_get_g_, 1},
+    {"_raylibr_color_set_g_", (DL_FUNC) &_raylibr_color_set_g_, 2},
+    {"_raylibr_color_get_b_", (DL_FUNC) &_raylibr_color_get_b_, 1},
+    {"_raylibr_color_set_b_", (DL_FUNC) &_raylibr_color_set_b_, 2},
+    {"_raylibr_color_get_a_", (DL_FUNC) &_raylibr_color_get_a_, 1},
+    {"_raylibr_color_set_a_", (DL_FUNC) &_raylibr_color_set_a_, 2},
     {"_raylibr_init_window_", (DL_FUNC) &_raylibr_init_window_, 3},
     {"_raylibr_window_should_close_", (DL_FUNC) &_raylibr_window_should_close_, 0},
     {"_raylibr_close_window_", (DL_FUNC) &_raylibr_close_window_, 0},

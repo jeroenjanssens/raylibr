@@ -2,10 +2,10 @@
 % Please edit documentation in R/RcppExports.R
 \name{draw_circles}
 \alias{draw_circles}
-\title{Draw Circle}
+\title{Draw circles}
 \usage{
 draw_circles(x, y, radius, colors)
 }
 \description{
-Draw Circle
+Draw circles
 }

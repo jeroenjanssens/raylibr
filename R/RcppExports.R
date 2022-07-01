@@ -81,12 +81,18 @@ camera_3d_set_projection_ <- function(obj, projection) {
     .Call(`_raylibr_camera_3d_set_projection_`, obj, projection)
 }
 
+#' Coerce a string or a number to a color
+#'
+#' @param x Object to be coerced. Can be a valid R color (see `colors()`) or a hexademical.
+#'
+#' @return A color
+#'
 #' @export
-color <- function(c) {
-    .Call(`_raylibr_color`, c)
+as_color <- function(x) {
+    .Call(`_raylibr_as_color`, x)
 }
 
-#' Draw Circle
+#' Draw circles
 #' @export
 draw_circles <- function(x, y, radius, colors) {
     invisible(.Call(`_raylibr_draw_circles`, x, y, radius, colors))
@@ -106,6 +112,42 @@ load_font_ex <- function(file_name, font_size) {
 #' @export
 image_draw_pixel <- function(dst, posX, posY, color) {
     invisible(.Call(`_raylibr_image_draw_pixel`, dst, posX, posY, color))
+}
+
+color_ <- function(r, g, b, a) {
+    .Call(`_raylibr_color_`, r, g, b, a)
+}
+
+color_get_r_ <- function(obj) {
+    .Call(`_raylibr_color_get_r_`, obj)
+}
+
+color_set_r_ <- function(obj, r) {
+    .Call(`_raylibr_color_set_r_`, obj, r)
+}
+
+color_get_g_ <- function(obj) {
+    .Call(`_raylibr_color_get_g_`, obj)
+}
+
+color_set_g_ <- function(obj, g) {
+    .Call(`_raylibr_color_set_g_`, obj, g)
+}
+
+color_get_b_ <- function(obj) {
+    .Call(`_raylibr_color_get_b_`, obj)
+}
+
+color_set_b_ <- function(obj, b) {
+    .Call(`_raylibr_color_set_b_`, obj, b)
+}
+
+color_get_a_ <- function(obj) {
+    .Call(`_raylibr_color_get_a_`, obj)
+}
+
+color_set_a_ <- function(obj, a) {
+    .Call(`_raylibr_color_set_a_`, obj, a)
 }
 
 init_window_ <- function(width, height, title) {

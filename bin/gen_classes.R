@@ -4,6 +4,7 @@ source(here::here("bin", "gen_utils.R"))
 
 structs_generate <-
   c("Rectangle",
+    "Color",
     # "Image",
     "Texture",
     # "Font",
@@ -59,7 +60,8 @@ for (line in lines) {
         class_name = class_name,
         struct_name = struct_name,
         properties = properties,
-        struct_lines = struct_lines
+        struct_lines = struct_lines,
+        create_is_function = TRUE
       )
 
       # reset
@@ -83,14 +85,19 @@ for (line in lines) {
   }
 }
 
-classes$camera_3d$properties$fovy$default <- 70
-classes$camera_3d$properties$projection$default <- 0
-classes$camera_3d$properties$target$default <- (c(0, 0, 0))
-classes$camera_3d$properties$up$default <- c(0, 1, 0)
-classes$camera_3d$properties$projection$comment <- "Camera projection: either `camera_projection$perspective` (0) or `camera_projection$orthographic` (1)"
+
+# Customizations ----------------------------------------------------------
 
 classes$camera_2d$properties$zoom$default <- 1.0
 classes$camera_2d$properties$zoom$comment <- "Camera zoom (scaling)"
+
+classes$camera_3d$properties$fovy$default <- 70
+classes$camera_3d$properties$target$default <- (c(0, 0, 0))
+classes$camera_3d$properties$up$default <- c(0, 1, 0)
+classes$camera_3d$properties$projection$default <- 0
+classes$camera_3d$properties$projection$comment <- "Camera projection: either `camera_projection$perspective` (0) or `camera_projection$orthographic` (1)"
+
+classes$color$create_is_function <- FALSE
 
 # Generate R files --------------------------------------------------------
 
@@ -214,12 +221,17 @@ for (cls in classes) {
       res <- paste(fields, values, sep = \" = \", collapse = \", \")
       paste0(\"{cls$class_name}(\", res, \")\")
     }}
-
-    #' @export
-    is_{cls$class_name} <- function(x) {{
-      typeof(x) == \"externalptr\" && class(x) == \"{cls$class_name}\"
-    }}
 "), con)
+
+  if (cls$create_is_function) {
+    writeLines(glue("
+
+      #' @export
+      is_{cls$class_name} <- function(x) {{
+        typeof(x) == \"externalptr\" && class(x) == \"{cls$class_name}\"
+      }}
+"), con)
+  }
 
   close(con)
   # Sys.chmod(filename, "444")

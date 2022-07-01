@@ -55,6 +55,10 @@ is_music <- function(x) {
   class(x) == "music"
 }
 
+is_unsigned_char <- function(x) {
+  is_number(x) && x >= 0 && x <= 255
+}
+
 friendly_typeof <- function(x) {
   len <- length(x)
   cls <- class(x)

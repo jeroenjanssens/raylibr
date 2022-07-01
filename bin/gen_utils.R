@@ -10,6 +10,7 @@ alias_type <- function(x) {
             x == "RenderTexture2D" ~ "RenderTexture",
             x == "Texture2D" ~ "Texture",
             x == "TextureCubemap" ~ "Texture",
+            x == "unsigned char" ~ "unsigned int",
             TRUE ~ x)
 }
 
@@ -62,7 +63,7 @@ extract_param_type_name <- function(p) {
   parts <- str_split(p, " ") %>%
     unlist()
 
-  parts[[1]] <- alias_type(parts[[1]])
+  # parts[[1]] <- alias_type(parts[[1]])
 
   if (parts[[1]] == "void") {
     list(
@@ -73,7 +74,7 @@ extract_param_type_name <- function(p) {
   } else {
     list(
       name = tail(parts, 1),
-      type = str_c(head(parts, -1), collapse = " "),
+      type = alias_type(str_c(head(parts, -1), collapse = " ")),
       default = NA
     )
   }
@@ -109,6 +110,7 @@ parse_fun <- function(x) {
 make_rd_type <- function(x) {
   case_when(x == "int" ~ "An integer",
             x == "unsigned int" ~ "A non-negative integer",
+            x == "unsigned char" ~ "An integer between 0 and 255",
             x == "float" ~ "A number",
             x == "bool" ~ "A logical",
             x == "const char *" ~ "A string",
@@ -186,8 +188,8 @@ make_r_params <- function(params) {
 # Construct Rcpp code for function parameters
 make_rcpp_params <- function(params) {
   if (params[[1]]$type == "void") return("")
-  params[[1]]$type <- alias_type(params[[1]]$type)
-  map_chr(params, ~ paste0(.$type, " ", make_rcpp_name(.$name))) %>%
+  # params[[1]]$type <- alias_type(params[[1]]$type)
+  map_chr(params, ~ paste0(alias_type(.$type), " ", make_rcpp_name(.$name))) %>%
   str_c(collapse = ", ") %>%
   str_trim()
 }

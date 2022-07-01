@@ -82,19 +82,20 @@ namespace Rcpp {
       };
   };
 
-
   template <> SEXP wrap(const Color& x) {
-    List l = List::create(_["r"] = as<int>(wrap(x.r)),
-                          _["g"] = as<int>(wrap(x.g)),
-                          _["b"] = as<int>(wrap(x.b)),
-                          _["a"] = as<int>(wrap(x.a)));
-    l.attr("class") = "color";
-    return wrap(l);
+    Color *ptr = new Color;
+    (*ptr) = x;
+    XPtr<Color>xptr = XPtr<Color>(ptr, true);
+    xptr.attr("class") = "color";
+    return xptr;
   };
 
   template <> Color as(SEXP x) {
     Color color;
     switch(TYPEOF(x)) {
+      case EXTPTRSXP: {
+        return *XPtr<Color>(x);
+      }
       case VECSXP: {
         List y = List(x);
         try {
@@ -140,14 +141,20 @@ namespace Rcpp {
 
 }
 
+//' Coerce a string or a number to a color
+//'
+//' @param x Object to be coerced. Can be a valid R color (see `colors()`) or a hexademical.
+//'
+//' @return A color
+//'
 //' @export
 // [[Rcpp::export]]
-Color color(Color c) {
-  return c;
+Color as_color(Color x) {
+  return x;
 }
 
 
-//' Draw Circle
+//' Draw circles
 //' @export
 // [[Rcpp::export]]
 void draw_circles(NumericVector x, NumericVector y, NumericVector radius, List colors) {
