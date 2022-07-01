@@ -17,11 +17,14 @@ texture(id, width, height, mipmaps, format)
 
 \item{format}{An integer. Data format (PixelFormat type).}
 }
+\value{
+A texture
+}
 \description{
 Create a new \code{texture} object.
 }
 \note{
-This object has been auto-generated from the following Raylib struct definition:
+This class has been auto-generated from the following Raylib struct definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{typedef struct Texture \{
     unsigned int id;        // OpenGL texture id

@@ -12,4 +12,6 @@ RoxygenNote: 7.2.0
 LinkingTo: 
     Rcpp
 Imports: 
-    Rcpp
+    Rcpp,
+    rlang,
+    utils

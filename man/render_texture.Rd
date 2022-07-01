@@ -13,11 +13,14 @@ render_texture(id, texture, depth)
 
 \item{depth}{A texture. Depth buffer attachment texture.}
 }
+\value{
+A render_texture
+}
 \description{
 Create a new \code{render_texture} object.
 }
 \note{
-This object has been auto-generated from the following Raylib struct definition:
+This class has been auto-generated from the following Raylib struct definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{typedef struct RenderTexture \{
     unsigned int id;        // OpenGL framebuffer object id

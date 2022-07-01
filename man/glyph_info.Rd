@@ -4,24 +4,27 @@
 \alias{glyph_info}
 \title{Glyph info}
 \usage{
-glyph_info(value, offsetX, offsetY, advanceX, image)
+glyph_info(value, offset_x, offset_y, advance_x, image)
 }
 \arguments{
 \item{value}{An integer. Character value (Unicode).}
-
-\item{image}{A image. Character image data.}
 
 \item{offset_x}{An integer. Character offset X when drawing.}
 
 \item{offset_y}{An integer. Character offset Y when drawing.}
 
 \item{advance_x}{An integer. Character advance position X.}
+
+\item{image}{an image. Character image data.}
+}
+\value{
+A glyph_info
 }
 \description{
 Create a new \code{glyph_info} object.
 }
 \note{
-This object has been auto-generated from the following Raylib struct definition:
+This class has been auto-generated from the following Raylib struct definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{typedef struct GlyphInfo \{
     int value;              // Character value (Unicode)

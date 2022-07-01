@@ -8,7 +8,9 @@
 #' @param color A color. Material map color.
 #' @param value A number. Material map value.
 #'
-#' @note This object has been auto-generated from the following Raylib struct definition:
+#' @return A material_map
+#'
+#' @note This class has been auto-generated from the following Raylib struct definition:
 #'
 #' ```
 #' typedef struct MaterialMap {
@@ -17,19 +19,41 @@
 #'     float value;            // Material map value
 #' } MaterialMap;
 #' ```
-
+#'
 #' @rdname material_map
 #' @export
 material_map <- function(texture, color, value) {
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  if (!is_float(value)) abort(paste0('`value` must be a number, not ', friendly_typeof(value), '.'), call = NULL)
   material_map_(texture, color, value)
 }
 
 material_map_set <- function(o, field, value) {
-  do.call(paste0("material_map_set_", field, "_"), args = list(o, value))
+  if (field == "texture") {
+    if (!is_texture(value)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(value), '.'), call = NULL)
+    material_map_set_texture_(o, value)
+  } else if (field == "color") {
+    if (!is_color(value)) abort(paste0('`color` must be a color, not ', friendly_typeof(value), '.'), call = NULL)
+    material_map_set_color_(o, value)
+  } else if (field == "value") {
+    if (!is_float(value)) abort(paste0('`value` must be a number, not ', friendly_typeof(value), '.'), call = NULL)
+    material_map_set_value_(o, value)
+  } else {
+    abort(paste0("`material_map` has no property ", field , "."), call = NULL)
+  }
 }
 
 material_map_get <- function(o, field) {
-  do.call(paste0("material_map_get_", field, "_"), args = list(o))
+  if (field == "texture") {
+    material_map_get_texture_(o)
+  } else if (field == "color") {
+    material_map_get_color_(o)
+  } else if (field == "value") {
+    material_map_get_value_(o)
+  } else {
+    abort(paste0("`material_map` has no property ", field , "."), call = NULL)
+  }
 }
 
 #' @export
@@ -42,7 +66,6 @@ material_map_get <- function(o, field) {
   material_map_set(o, field, value)
 }
 
-#' @importFrom utils .DollarNames
 #' @export
 .DollarNames.material_map <- function(x, pattern) {
   c("texture", "color", "value")
@@ -74,4 +97,9 @@ as.character.material_map <- function(x, ...) {
   }, character(1))
   res <- paste(fields, values, sep = " = ", collapse = ", ")
   paste0("material_map(", res, ")")
+}
+
+#' @export
+is_material_map <- function(x) {
+  typeof(x) == "externalptr" && class(x) == "material_map"
 }

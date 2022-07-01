@@ -19,11 +19,14 @@ npatch_info(source, left, top, right, bottom, layout)
 
 \item{layout}{An integer. Layout of the n-patch: 3x3, 1x3 or 3x1.}
 }
+\value{
+A npatch_info
+}
 \description{
 Create a new \code{npatch_info} object.
 }
 \note{
-This object has been auto-generated from the following Raylib struct definition:
+This class has been auto-generated from the following Raylib struct definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{typedef struct NPatchInfo \{
     Rectangle source;       // Texture source rectangle

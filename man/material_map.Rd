@@ -13,11 +13,14 @@ material_map(texture, color, value)
 
 \item{value}{A number. Material map value.}
 }
+\value{
+A material_map
+}
 \description{
 Create a new \code{material_map} object.
 }
 \note{
-This object has been auto-generated from the following Raylib struct definition:
+This class has been auto-generated from the following Raylib struct definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{typedef struct MaterialMap \{
     Texture2D texture;      // Material map texture

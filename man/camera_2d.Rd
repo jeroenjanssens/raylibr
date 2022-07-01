@@ -15,11 +15,14 @@ camera_2d(offset, target, rotation, zoom = 1)
 
 \item{zoom}{A number. Camera zoom (scaling). Default: \code{1}.}
 }
+\value{
+A camera_2d
+}
 \description{
 Create a new \code{camera_2d} object.
 }
 \note{
-This object has been auto-generated from the following Raylib struct definition:
+This class has been auto-generated from the following Raylib struct definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{typedef struct Camera2D \{
     Vector2 offset;         // Camera offset (displacement from target)

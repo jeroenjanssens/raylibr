@@ -4,10 +4,12 @@
 #'
 #' Create a new `sound` object.
 #'
-#' @param stream A audio_stream. Audio stream.
+#' @param stream an audio_stream. Audio stream.
 #' @param frame_count A non-negative integer. Total number of frames (considering channels).
 #'
-#' @note This object has been auto-generated from the following Raylib struct definition:
+#' @return A sound
+#'
+#' @note This class has been auto-generated from the following Raylib struct definition:
 #'
 #' ```
 #' typedef struct Sound {
@@ -15,19 +17,35 @@
 #'     unsigned int frameCount;    // Total number of frames (considering channels)
 #' } Sound;
 #' ```
-
+#'
 #' @rdname sound
 #' @export
-sound <- function(stream, frameCount) {
+sound <- function(stream, frame_count) {
+  if (!is_audio_stream(stream)) abort(paste0('`stream` must be an audio_stream, not ', friendly_typeof(stream), '.'), call = NULL)
+  if (!is_unsigned_int(frame_count)) abort(paste0('`frame_count` must be a non-negative integer, not ', friendly_typeof(frame_count), '.'), call = NULL)
   sound_(stream, frame_count)
 }
 
 sound_set <- function(o, field, value) {
-  do.call(paste0("sound_set_", field, "_"), args = list(o, value))
+  if (field == "stream") {
+    if (!is_audio_stream(value)) abort(paste0('`stream` must be an audio_stream, not ', friendly_typeof(value), '.'), call = NULL)
+    sound_set_stream_(o, value)
+  } else if (field == "frame_count") {
+    if (!is_unsigned_int(value)) abort(paste0('`frame_count` must be a non-negative integer, not ', friendly_typeof(value), '.'), call = NULL)
+    sound_set_frame_count_(o, value)
+  } else {
+    abort(paste0("`sound` has no property ", field , "."), call = NULL)
+  }
 }
 
 sound_get <- function(o, field) {
-  do.call(paste0("sound_get_", field, "_"), args = list(o))
+  if (field == "stream") {
+    sound_get_stream_(o)
+  } else if (field == "frame_count") {
+    sound_get_frame_count_(o)
+  } else {
+    abort(paste0("`sound` has no property ", field , "."), call = NULL)
+  }
 }
 
 #' @export
@@ -40,7 +58,6 @@ sound_get <- function(o, field) {
   sound_set(o, field, value)
 }
 
-#' @importFrom utils .DollarNames
 #' @export
 .DollarNames.sound <- function(x, pattern) {
   c("stream", "frame_count")
@@ -72,4 +89,9 @@ as.character.sound <- function(x, ...) {
   }, character(1))
   res <- paste(fields, values, sep = " = ", collapse = ", ")
   paste0("sound(", res, ")")
+}
+
+#' @export
+is_sound <- function(x) {
+  typeof(x) == "externalptr" && class(x) == "sound"
 }

@@ -4,24 +4,33 @@
 \alias{camera_3d}
 \title{Camera 3d}
 \usage{
-camera_3d(position, target, up, fovy = 70, projection = 0)
+camera_3d(
+  position,
+  target = c(0, 0, 0),
+  up = c(0, 1, 0),
+  fovy = 70,
+  projection = 0
+)
 }
 \arguments{
 \item{position}{A numeric vector of length 3. Camera position.}
 
-\item{target}{A numeric vector of length 3. Camera target it looks-at.}
+\item{target}{A numeric vector of length 3. Camera target it looks-at. Default: \code{c(0, 0, 0)}.}
 
-\item{up}{A numeric vector of length 3. Camera up vector (rotation over its axis).}
+\item{up}{A numeric vector of length 3. Camera up vector (rotation over its axis). Default: \code{c(0, 1, 0)}.}
 
 \item{fovy}{A number. Camera field-of-view apperture in Y (degrees) in perspective, used as near plane width in orthographic. Default: \code{70}.}
 
 \item{projection}{An integer. Camera projection: either \code{camera_projection$perspective} (0) or \code{camera_projection$orthographic} (1). Default: \code{0}.}
 }
+\value{
+A camera_3d
+}
 \description{
 Create a new \code{camera_3d} object.
 }
 \note{
-This object has been auto-generated from the following Raylib struct definition:
+This class has been auto-generated from the following Raylib struct definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{typedef struct Camera3D \{
     Vector3 position;       // Camera position

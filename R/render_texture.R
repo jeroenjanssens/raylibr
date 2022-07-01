@@ -8,7 +8,9 @@
 #' @param texture A texture. Color buffer attachment texture.
 #' @param depth A texture. Depth buffer attachment texture.
 #'
-#' @note This object has been auto-generated from the following Raylib struct definition:
+#' @return A render_texture
+#'
+#' @note This class has been auto-generated from the following Raylib struct definition:
 #'
 #' ```
 #' typedef struct RenderTexture {
@@ -17,19 +19,41 @@
 #'     Texture depth;          // Depth buffer attachment texture
 #' } RenderTexture;
 #' ```
-
+#'
 #' @rdname render_texture
 #' @export
 render_texture <- function(id, texture, depth) {
+  if (!is_unsigned_int(id)) abort(paste0('`id` must be a non-negative integer, not ', friendly_typeof(id), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_texture(depth)) abort(paste0('`depth` must be a texture, not ', friendly_typeof(depth), '.'), call = NULL)
   render_texture_(id, texture, depth)
 }
 
 render_texture_set <- function(o, field, value) {
-  do.call(paste0("render_texture_set_", field, "_"), args = list(o, value))
+  if (field == "id") {
+    if (!is_unsigned_int(value)) abort(paste0('`id` must be a non-negative integer, not ', friendly_typeof(value), '.'), call = NULL)
+    render_texture_set_id_(o, value)
+  } else if (field == "texture") {
+    if (!is_texture(value)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(value), '.'), call = NULL)
+    render_texture_set_texture_(o, value)
+  } else if (field == "depth") {
+    if (!is_texture(value)) abort(paste0('`depth` must be a texture, not ', friendly_typeof(value), '.'), call = NULL)
+    render_texture_set_depth_(o, value)
+  } else {
+    abort(paste0("`render_texture` has no property ", field , "."), call = NULL)
+  }
 }
 
 render_texture_get <- function(o, field) {
-  do.call(paste0("render_texture_get_", field, "_"), args = list(o))
+  if (field == "id") {
+    render_texture_get_id_(o)
+  } else if (field == "texture") {
+    render_texture_get_texture_(o)
+  } else if (field == "depth") {
+    render_texture_get_depth_(o)
+  } else {
+    abort(paste0("`render_texture` has no property ", field , "."), call = NULL)
+  }
 }
 
 #' @export
@@ -42,7 +66,6 @@ render_texture_get <- function(o, field) {
   render_texture_set(o, field, value)
 }
 
-#' @importFrom utils .DollarNames
 #' @export
 .DollarNames.render_texture <- function(x, pattern) {
   c("id", "texture", "depth")
@@ -74,4 +97,9 @@ as.character.render_texture <- function(x, ...) {
   }, character(1))
   res <- paste(fields, values, sep = " = ", collapse = ", ")
   paste0("render_texture(", res, ")")
+}
+
+#' @export
+is_render_texture <- function(x) {
+  typeof(x) == "externalptr" && class(x) == "render_texture"
 }

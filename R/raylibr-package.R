@@ -2,7 +2,9 @@
 "_PACKAGE"
 
 ## usethis namespace: start
-#' @useDynLib raylibr, .registration = TRUE
 #' @importFrom Rcpp sourceCpp
+#' @importFrom rlang abort
+#' @importFrom utils .DollarNames
+#' @useDynLib raylibr, .registration = TRUE
 ## usethis namespace: end
 NULL

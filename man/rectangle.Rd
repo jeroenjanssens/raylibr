@@ -15,11 +15,14 @@ rectangle(x, y, width, height)
 
 \item{height}{A number. Rectangle height.}
 }
+\value{
+A rectangle
+}
 \description{
 Create a new \code{rectangle} object.
 }
 \note{
-This object has been auto-generated from the following Raylib struct definition:
+This class has been auto-generated from the following Raylib struct definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{typedef struct Rectangle \{
     float x;                // Rectangle top-left corner position x

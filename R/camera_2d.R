@@ -9,7 +9,9 @@
 #' @param rotation A number. Camera rotation in degrees.
 #' @param zoom A number. Camera zoom (scaling). Default: `1`.
 #'
-#' @note This object has been auto-generated from the following Raylib struct definition:
+#' @return A camera_2d
+#'
+#' @note This class has been auto-generated from the following Raylib struct definition:
 #'
 #' ```
 #' typedef struct Camera2D {
@@ -19,19 +21,47 @@
 #'     float zoom;             // Camera zoom (scaling), should be 1.0f by default
 #' } Camera2D;
 #' ```
-
+#'
 #' @rdname camera_2d
 #' @export
 camera_2d <- function(offset, target, rotation, zoom = 1) {
+  if (!is_vector_2(offset)) abort(paste0('`offset` must be a numeric vector of length 2, not ', friendly_typeof(offset), '.'), call = NULL)
+  if (!is_vector_2(target)) abort(paste0('`target` must be a numeric vector of length 2, not ', friendly_typeof(target), '.'), call = NULL)
+  if (!is_float(rotation)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(rotation), '.'), call = NULL)
+  if (!is_float(zoom)) abort(paste0('`zoom` must be a number, not ', friendly_typeof(zoom), '.'), call = NULL)
   camera_2d_(offset, target, rotation, zoom)
 }
 
 camera_2d_set <- function(o, field, value) {
-  do.call(paste0("camera_2d_set_", field, "_"), args = list(o, value))
+  if (field == "offset") {
+    if (!is_vector_2(value)) abort(paste0('`offset` must be a numeric vector of length 2, not ', friendly_typeof(value), '.'), call = NULL)
+    camera_2d_set_offset_(o, value)
+  } else if (field == "target") {
+    if (!is_vector_2(value)) abort(paste0('`target` must be a numeric vector of length 2, not ', friendly_typeof(value), '.'), call = NULL)
+    camera_2d_set_target_(o, value)
+  } else if (field == "rotation") {
+    if (!is_float(value)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(value), '.'), call = NULL)
+    camera_2d_set_rotation_(o, value)
+  } else if (field == "zoom") {
+    if (!is_float(value)) abort(paste0('`zoom` must be a number, not ', friendly_typeof(value), '.'), call = NULL)
+    camera_2d_set_zoom_(o, value)
+  } else {
+    abort(paste0("`camera_2d` has no property ", field , "."), call = NULL)
+  }
 }
 
 camera_2d_get <- function(o, field) {
-  do.call(paste0("camera_2d_get_", field, "_"), args = list(o))
+  if (field == "offset") {
+    camera_2d_get_offset_(o)
+  } else if (field == "target") {
+    camera_2d_get_target_(o)
+  } else if (field == "rotation") {
+    camera_2d_get_rotation_(o)
+  } else if (field == "zoom") {
+    camera_2d_get_zoom_(o)
+  } else {
+    abort(paste0("`camera_2d` has no property ", field , "."), call = NULL)
+  }
 }
 
 #' @export
@@ -44,7 +74,6 @@ camera_2d_get <- function(o, field) {
   camera_2d_set(o, field, value)
 }
 
-#' @importFrom utils .DollarNames
 #' @export
 .DollarNames.camera_2d <- function(x, pattern) {
   c("offset", "target", "rotation", "zoom")
@@ -76,4 +105,9 @@ as.character.camera_2d <- function(x, ...) {
   }, character(1))
   res <- paste(fields, values, sep = " = ", collapse = ", ")
   paste0("camera_2d(", res, ")")
+}
+
+#' @export
+is_camera_2d <- function(x) {
+  typeof(x) == "externalptr" && class(x) == "camera_2d"
 }

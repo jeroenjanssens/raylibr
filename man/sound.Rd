@@ -4,18 +4,21 @@
 \alias{sound}
 \title{Sound}
 \usage{
-sound(stream, frameCount)
+sound(stream, frame_count)
 }
 \arguments{
-\item{stream}{A audio_stream. Audio stream.}
+\item{stream}{an audio_stream. Audio stream.}
 
 \item{frame_count}{A non-negative integer. Total number of frames (considering channels).}
+}
+\value{
+A sound
 }
 \description{
 Create a new \code{sound} object.
 }
 \note{
-This object has been auto-generated from the following Raylib struct definition:
+This class has been auto-generated from the following Raylib struct definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{typedef struct Sound \{
     AudioStream stream;         // Audio stream

@@ -85,7 +85,8 @@ for (line in lines) {
 
 classes$camera_3d$properties$fovy$default <- 70
 classes$camera_3d$properties$projection$default <- 0
-
+classes$camera_3d$properties$target$default <- (c(0, 0, 0))
+classes$camera_3d$properties$up$default <- c(0, 1, 0)
 classes$camera_3d$properties$projection$comment <- "Camera projection: either `camera_projection$perspective` (0) or `camera_projection$orthographic` (1)"
 
 classes$camera_2d$properties$zoom$default <- 1.0
@@ -109,26 +110,66 @@ for (cls in classes) {
     #'
     #' Create a new `{cls$class_name}` object.
     #'
-    {make_rd_params(cls$properties, comment = '#')}#'
-    #' @note This object has been auto-generated from the following Raylib struct definition:
+    {make_rd_params(cls$properties, comment = '#')}
+    #'
+    {make_rd_value(cls$class_name, comment = '#')}#'
+    #' @note This class has been auto-generated from the following Raylib struct definition:
     #'
 "), con)
 
-  writeLines(c("#' ```", str_c("#' ", cls$struct_lines, ""), "#' ```", ""), con)
+  writeLines(c("#' ```", str_c("#' ", cls$struct_lines, ""), "#' ```", "#'"), con)
 
   writeLines(glue("
     #' @rdname {cls$class_name}
     #' @export
     {cls$class_name} <- function({make_r_params(cls$properties)}) {{
-      {cls$class_name}_({paste0(names(cls$properties), collapse = \", \")})
+    {make_checks(cls$properties)}  {cls$class_name}_({paste0(names(cls$properties), collapse = \", \")})
     }}
 
     {cls$class_name}_set <- function(o, field, value) {{
-      do.call(paste0(\"{cls$class_name}_set_\", field, \"_\"), args = list(o, value))
+"), con)
+
+    # {cls$class_name}_set <- function(o, field, value) {{
+    #   do.call(paste0(\"{cls$class_name}_set_\", field, \"_\"), args = list(o, value))
+
+  use_else <- FALSE
+  s <- ""
+  for (prop in cls$properties) {
+    s <- paste0(s, glue("
+      {ifelse(use_else, 'else ', '')}if (field == \"{prop$rcpp_name}\") {{
+        {make_check(prop$rcpp_name, prop$type, 'value')}
+        {cls$class_name}_set_{prop$rcpp_name}_(o, value)
+      }} "))
+    use_else <- TRUE
+  }
+  s <- paste0(s, glue("
+    else {{
+      abort(paste0(\"`{cls$class_name}` has no property \", field , \".\"), call = NULL)
+    }}"))
+  writeLines(indent(s), con)
+
+  writeLines(glue("
     }}
 
     {cls$class_name}_get <- function(o, field) {{
-      do.call(paste0(\"{cls$class_name}_get_\", field, \"_\"), args = list(o))
+"), con)
+
+  use_else <- FALSE
+  s <- ""
+  for (prop in cls$properties) {
+    s <- paste0(s, glue("
+      {ifelse(use_else, 'else ', '')}if (field == \"{prop$rcpp_name}\") {{
+        {cls$class_name}_get_{prop$rcpp_name}_(o)
+      }} "))
+    use_else <- TRUE
+  }
+  s <- paste0(s, glue("
+    else {{
+      abort(paste0(\"`{cls$class_name}` has no property \", field , \".\"), call = NULL)
+    }}"))
+  writeLines(indent(s), con)
+
+  writeLines(glue("
     }}
 
     #' @export
@@ -141,7 +182,6 @@ for (cls in classes) {
       {cls$class_name}_set(o, field, value)
     }}
 
-    #' @importFrom utils .DollarNames
     #' @export
     .DollarNames.{cls$class_name} <- function(x, pattern) {{
       {deparse(names(cls$properties))}
@@ -174,16 +214,22 @@ for (cls in classes) {
       res <- paste(fields, values, sep = \" = \", collapse = \", \")
       paste0(\"{cls$class_name}(\", res, \")\")
     }}
+
+    #' @export
+    is_{cls$class_name} <- function(x) {{
+      typeof(x) == \"externalptr\" && class(x) == \"{cls$class_name}\"
+    }}
 "), con)
 
   close(con)
   # Sys.chmod(filename, "444")
 }
 
+# Generate Cpp files ------------------------------------------------------
 
 for (cls in classes) {
 
-  # Create R/{class_name}.R
+  # Create src/{class_name}.cpp
 
   filename <- here::here("src", glue("{cls$class_name}.cpp"))
   Sys.chmod(filename, "644")
