@@ -20,6 +20,9 @@ namespace Rcpp {
   template <> SEXP wrap(const BoneInfo& x);
   template <> BoneInfo as(SEXP);
   
+  template <> SEXP wrap(const BoundingBox& x);
+  template <> BoundingBox as(SEXP);
+  
   template <> SEXP wrap(const Camera2D& x);
   template <> Camera2D as(SEXP);
   
@@ -59,6 +62,9 @@ namespace Rcpp {
   template <> SEXP wrap(const NPatchInfo& x);
   template <> NPatchInfo as(SEXP);
   
+  template <> SEXP wrap(const RayCollision& x);
+  template <> RayCollision as(SEXP);
+  
   template <> SEXP wrap(const RaylibMatrix& x);
   template <> RaylibMatrix as(SEXP);
   
@@ -76,6 +82,9 @@ namespace Rcpp {
   
   template <> SEXP wrap(const Texture& x);
   template <> Texture as(SEXP);
+  
+  template <> SEXP wrap(const Transform& x);
+  template <> Transform as(SEXP);
   
   template <> SEXP wrap(const Vector2& x);
   template <> Vector2 as(SEXP);

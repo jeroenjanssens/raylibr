@@ -11,6 +11,64 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
+// bounding_box_
+BoundingBox bounding_box_(Vector3 min, Vector3 max);
+RcppExport SEXP _raylibr_bounding_box_(SEXP minSEXP, SEXP maxSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Vector3 >::type min(minSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type max(maxSEXP);
+    rcpp_result_gen = Rcpp::wrap(bounding_box_(min, max));
+    return rcpp_result_gen;
+END_RCPP
+}
+// bounding_box_get_min_
+Vector3 bounding_box_get_min_(BoundingBox obj);
+RcppExport SEXP _raylibr_bounding_box_get_min_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< BoundingBox >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(bounding_box_get_min_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// bounding_box_set_min_
+BoundingBox bounding_box_set_min_(BoundingBox obj, Vector3 min);
+RcppExport SEXP _raylibr_bounding_box_set_min_(SEXP objSEXP, SEXP minSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< BoundingBox >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type min(minSEXP);
+    rcpp_result_gen = Rcpp::wrap(bounding_box_set_min_(obj, min));
+    return rcpp_result_gen;
+END_RCPP
+}
+// bounding_box_get_max_
+Vector3 bounding_box_get_max_(BoundingBox obj);
+RcppExport SEXP _raylibr_bounding_box_get_max_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< BoundingBox >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(bounding_box_get_max_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// bounding_box_set_max_
+BoundingBox bounding_box_set_max_(BoundingBox obj, Vector3 max);
+RcppExport SEXP _raylibr_bounding_box_set_max_(SEXP objSEXP, SEXP maxSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< BoundingBox >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type max(maxSEXP);
+    rcpp_result_gen = Rcpp::wrap(bounding_box_set_max_(obj, max));
+    return rcpp_result_gen;
+END_RCPP
+}
 // camera_2d_
 Camera2D camera_2d_(Vector2 offset, Vector2 target, float rotation, float zoom);
 RcppExport SEXP _raylibr_camera_2d_(SEXP offsetSEXP, SEXP targetSEXP, SEXP rotationSEXP, SEXP zoomSEXP) {
@@ -3057,6 +3115,112 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// ray_collision_
+RayCollision ray_collision_(bool hit, float distance, Vector3 point, Vector3 normal);
+RcppExport SEXP _raylibr_ray_collision_(SEXP hitSEXP, SEXP distanceSEXP, SEXP pointSEXP, SEXP normalSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< bool >::type hit(hitSEXP);
+    Rcpp::traits::input_parameter< float >::type distance(distanceSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type point(pointSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type normal(normalSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_(hit, distance, point, normal));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_collision_get_hit_
+bool ray_collision_get_hit_(RayCollision obj);
+RcppExport SEXP _raylibr_ray_collision_get_hit_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_get_hit_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_collision_set_hit_
+RayCollision ray_collision_set_hit_(RayCollision obj, bool hit);
+RcppExport SEXP _raylibr_ray_collision_set_hit_(SEXP objSEXP, SEXP hitSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< bool >::type hit(hitSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_set_hit_(obj, hit));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_collision_get_distance_
+float ray_collision_get_distance_(RayCollision obj);
+RcppExport SEXP _raylibr_ray_collision_get_distance_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_get_distance_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_collision_set_distance_
+RayCollision ray_collision_set_distance_(RayCollision obj, float distance);
+RcppExport SEXP _raylibr_ray_collision_set_distance_(SEXP objSEXP, SEXP distanceSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< float >::type distance(distanceSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_set_distance_(obj, distance));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_collision_get_point_
+Vector3 ray_collision_get_point_(RayCollision obj);
+RcppExport SEXP _raylibr_ray_collision_get_point_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_get_point_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_collision_set_point_
+RayCollision ray_collision_set_point_(RayCollision obj, Vector3 point);
+RcppExport SEXP _raylibr_ray_collision_set_point_(SEXP objSEXP, SEXP pointSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type point(pointSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_set_point_(obj, point));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_collision_get_normal_
+Vector3 ray_collision_get_normal_(RayCollision obj);
+RcppExport SEXP _raylibr_ray_collision_get_normal_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_get_normal_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_collision_set_normal_
+RayCollision ray_collision_set_normal_(RayCollision obj, Vector3 normal);
+RcppExport SEXP _raylibr_ray_collision_set_normal_(SEXP objSEXP, SEXP normalSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type normal(normalSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_set_normal_(obj, normal));
+    return rcpp_result_gen;
+END_RCPP
+}
 // rectangle_
 Rectangle rectangle_(float x, float y, float width, float height);
 RcppExport SEXP _raylibr_rectangle_(SEXP xSEXP, SEXP ySEXP, SEXP widthSEXP, SEXP heightSEXP) {
@@ -3433,8 +3597,95 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// transform_
+Transform transform_(Vector3 translation, Vector4 rotation, Vector3 scale);
+RcppExport SEXP _raylibr_transform_(SEXP translationSEXP, SEXP rotationSEXP, SEXP scaleSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Vector3 >::type translation(translationSEXP);
+    Rcpp::traits::input_parameter< Vector4 >::type rotation(rotationSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type scale(scaleSEXP);
+    rcpp_result_gen = Rcpp::wrap(transform_(translation, rotation, scale));
+    return rcpp_result_gen;
+END_RCPP
+}
+// transform_get_translation_
+Vector3 transform_get_translation_(Transform obj);
+RcppExport SEXP _raylibr_transform_get_translation_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(transform_get_translation_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// transform_set_translation_
+Transform transform_set_translation_(Transform obj, Vector3 translation);
+RcppExport SEXP _raylibr_transform_set_translation_(SEXP objSEXP, SEXP translationSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type translation(translationSEXP);
+    rcpp_result_gen = Rcpp::wrap(transform_set_translation_(obj, translation));
+    return rcpp_result_gen;
+END_RCPP
+}
+// transform_get_rotation_
+Vector4 transform_get_rotation_(Transform obj);
+RcppExport SEXP _raylibr_transform_get_rotation_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(transform_get_rotation_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// transform_set_rotation_
+Transform transform_set_rotation_(Transform obj, Vector4 rotation);
+RcppExport SEXP _raylibr_transform_set_rotation_(SEXP objSEXP, SEXP rotationSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Vector4 >::type rotation(rotationSEXP);
+    rcpp_result_gen = Rcpp::wrap(transform_set_rotation_(obj, rotation));
+    return rcpp_result_gen;
+END_RCPP
+}
+// transform_get_scale_
+Vector3 transform_get_scale_(Transform obj);
+RcppExport SEXP _raylibr_transform_get_scale_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(transform_get_scale_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// transform_set_scale_
+Transform transform_set_scale_(Transform obj, Vector3 scale);
+RcppExport SEXP _raylibr_transform_set_scale_(SEXP objSEXP, SEXP scaleSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type scale(scaleSEXP);
+    rcpp_result_gen = Rcpp::wrap(transform_set_scale_(obj, scale));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_raylibr_bounding_box_", (DL_FUNC) &_raylibr_bounding_box_, 2},
+    {"_raylibr_bounding_box_get_min_", (DL_FUNC) &_raylibr_bounding_box_get_min_, 1},
+    {"_raylibr_bounding_box_set_min_", (DL_FUNC) &_raylibr_bounding_box_set_min_, 2},
+    {"_raylibr_bounding_box_get_max_", (DL_FUNC) &_raylibr_bounding_box_get_max_, 1},
+    {"_raylibr_bounding_box_set_max_", (DL_FUNC) &_raylibr_bounding_box_set_max_, 2},
     {"_raylibr_camera_2d_", (DL_FUNC) &_raylibr_camera_2d_, 4},
     {"_raylibr_camera_2d_get_offset_", (DL_FUNC) &_raylibr_camera_2d_get_offset_, 1},
     {"_raylibr_camera_2d_set_offset_", (DL_FUNC) &_raylibr_camera_2d_set_offset_, 2},
@@ -3700,6 +3951,15 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_npatch_info_set_bottom_", (DL_FUNC) &_raylibr_npatch_info_set_bottom_, 2},
     {"_raylibr_npatch_info_get_layout_", (DL_FUNC) &_raylibr_npatch_info_get_layout_, 1},
     {"_raylibr_npatch_info_set_layout_", (DL_FUNC) &_raylibr_npatch_info_set_layout_, 2},
+    {"_raylibr_ray_collision_", (DL_FUNC) &_raylibr_ray_collision_, 4},
+    {"_raylibr_ray_collision_get_hit_", (DL_FUNC) &_raylibr_ray_collision_get_hit_, 1},
+    {"_raylibr_ray_collision_set_hit_", (DL_FUNC) &_raylibr_ray_collision_set_hit_, 2},
+    {"_raylibr_ray_collision_get_distance_", (DL_FUNC) &_raylibr_ray_collision_get_distance_, 1},
+    {"_raylibr_ray_collision_set_distance_", (DL_FUNC) &_raylibr_ray_collision_set_distance_, 2},
+    {"_raylibr_ray_collision_get_point_", (DL_FUNC) &_raylibr_ray_collision_get_point_, 1},
+    {"_raylibr_ray_collision_set_point_", (DL_FUNC) &_raylibr_ray_collision_set_point_, 2},
+    {"_raylibr_ray_collision_get_normal_", (DL_FUNC) &_raylibr_ray_collision_get_normal_, 1},
+    {"_raylibr_ray_collision_set_normal_", (DL_FUNC) &_raylibr_ray_collision_set_normal_, 2},
     {"_raylibr_rectangle_", (DL_FUNC) &_raylibr_rectangle_, 4},
     {"_raylibr_rectangle_get_x_", (DL_FUNC) &_raylibr_rectangle_get_x_, 1},
     {"_raylibr_rectangle_set_x_", (DL_FUNC) &_raylibr_rectangle_set_x_, 2},
@@ -3732,6 +3992,13 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_texture_set_mipmaps_", (DL_FUNC) &_raylibr_texture_set_mipmaps_, 2},
     {"_raylibr_texture_get_format_", (DL_FUNC) &_raylibr_texture_get_format_, 1},
     {"_raylibr_texture_set_format_", (DL_FUNC) &_raylibr_texture_set_format_, 2},
+    {"_raylibr_transform_", (DL_FUNC) &_raylibr_transform_, 3},
+    {"_raylibr_transform_get_translation_", (DL_FUNC) &_raylibr_transform_get_translation_, 1},
+    {"_raylibr_transform_set_translation_", (DL_FUNC) &_raylibr_transform_set_translation_, 2},
+    {"_raylibr_transform_get_rotation_", (DL_FUNC) &_raylibr_transform_get_rotation_, 1},
+    {"_raylibr_transform_set_rotation_", (DL_FUNC) &_raylibr_transform_set_rotation_, 2},
+    {"_raylibr_transform_get_scale_", (DL_FUNC) &_raylibr_transform_get_scale_, 1},
+    {"_raylibr_transform_set_scale_", (DL_FUNC) &_raylibr_transform_set_scale_, 2},
     {NULL, NULL, 0}
 };
 

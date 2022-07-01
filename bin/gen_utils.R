@@ -34,7 +34,10 @@ structs_generate <-
     "Wave",
     "AudioStream",
     "Sound",
-    "Music"
+    "Music",
+    "RayCollision",
+    "BoundingBox",
+    "Transform"
   )
 
 structs_custom <-

@@ -22,7 +22,10 @@ structs_generate <-
     # "ModelAnimation",
     # "Wave",
     # "AudioStream",
-    "Sound"
+    "Sound",
+    "RayCollision",
+    "Transform",
+    "BoundingBox"
     # "Music"
   )
 # Parse structs in raylib.h -----------------------------------------------

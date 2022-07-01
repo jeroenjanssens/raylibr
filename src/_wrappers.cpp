@@ -30,6 +30,18 @@ namespace Rcpp {
     return xptr;
   };
   
+  template <> BoundingBox as(SEXP x) {
+    return *XPtr<BoundingBox>(x);
+  };
+  
+  template <> SEXP wrap(const BoundingBox& x) {
+    BoundingBox *ptr = new BoundingBox;
+    (*ptr) = x;
+    XPtr<BoundingBox>xptr = XPtr<BoundingBox>(ptr, true);
+    xptr.attr("class") = "bounding_box";
+    return xptr;
+  };
+  
   template <> Camera2D as(SEXP x) {
     return *XPtr<Camera2D>(x);
   };
@@ -174,6 +186,18 @@ namespace Rcpp {
     return xptr;
   };
   
+  template <> RayCollision as(SEXP x) {
+    return *XPtr<RayCollision>(x);
+  };
+  
+  template <> SEXP wrap(const RayCollision& x) {
+    RayCollision *ptr = new RayCollision;
+    (*ptr) = x;
+    XPtr<RayCollision>xptr = XPtr<RayCollision>(ptr, true);
+    xptr.attr("class") = "ray_collision";
+    return xptr;
+  };
+  
   template <> Rectangle as(SEXP x) {
     return *XPtr<Rectangle>(x);
   };
@@ -231,6 +255,18 @@ namespace Rcpp {
     (*ptr) = x;
     XPtr<Texture>xptr = XPtr<Texture>(ptr, true);
     xptr.attr("class") = "texture";
+    return xptr;
+  };
+  
+  template <> Transform as(SEXP x) {
+    return *XPtr<Transform>(x);
+  };
+  
+  template <> SEXP wrap(const Transform& x) {
+    Transform *ptr = new Transform;
+    (*ptr) = x;
+    XPtr<Transform>xptr = XPtr<Transform>(ptr, true);
+    xptr.attr("class") = "transform";
     return xptr;
   };
   
