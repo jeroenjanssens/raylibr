@@ -5,9 +5,7 @@ music <- load_music_stream("demo/mini1111.xm")
 
 init_window(900, 600, "R & Raylib: Waving Cubes and Music")
 
-cam <- camera_3d(position = c(30, 20, 30),
-                 target = c(0, 0, 0),
-                 up = c(0, 1, 0))
+cam <- camera_3d(position = c(30, 20, 30))
 
 num_blocks <- 15
 blocks <- seq(num_blocks) - 1
