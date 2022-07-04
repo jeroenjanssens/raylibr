@@ -11,6 +11,22 @@
 
 // [[Rcpp::plugins(cpp11)]]
 
+namespace Rcpp {
+
+  template <> Camera2D as(SEXP x) {
+    return *XPtr<Camera2D>(x);
+  };
+  
+  template <> SEXP wrap(const Camera2D& x) {
+    Camera2D *ptr = new Camera2D;
+    (*ptr) = x;
+    XPtr<Camera2D>xptr = XPtr<Camera2D>(ptr, true);
+    xptr.attr("class") = "camera_2d";
+    return xptr;
+  };
+  
+}
+
 // [[Rcpp::export]]
 Camera2D camera_2d_(Vector2 offset, Vector2 target, float rotation, float zoom) {
   Camera2D obj = {};

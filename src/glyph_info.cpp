@@ -12,6 +12,22 @@
 
 // [[Rcpp::plugins(cpp11)]]
 
+namespace Rcpp {
+
+  template <> GlyphInfo as(SEXP x) {
+    return *XPtr<GlyphInfo>(x);
+  };
+  
+  template <> SEXP wrap(const GlyphInfo& x) {
+    GlyphInfo *ptr = new GlyphInfo;
+    (*ptr) = x;
+    XPtr<GlyphInfo>xptr = XPtr<GlyphInfo>(ptr, true);
+    xptr.attr("class") = "glyph_info";
+    return xptr;
+  };
+  
+}
+
 // [[Rcpp::export]]
 GlyphInfo glyph_info_(int value, int offset_x, int offset_y, int advance_x, Image image) {
   GlyphInfo obj = {};

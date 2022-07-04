@@ -9,6 +9,22 @@
 
 // [[Rcpp::plugins(cpp11)]]
 
+namespace Rcpp {
+
+  template <> Sound as(SEXP x) {
+    return *XPtr<Sound>(x);
+  };
+  
+  template <> SEXP wrap(const Sound& x) {
+    Sound *ptr = new Sound;
+    (*ptr) = x;
+    XPtr<Sound>xptr = XPtr<Sound>(ptr, true);
+    xptr.attr("class") = "sound";
+    return xptr;
+  };
+  
+}
+
 // [[Rcpp::export]]
 Sound sound_(AudioStream stream, unsigned int frame_count) {
   Sound obj = {};

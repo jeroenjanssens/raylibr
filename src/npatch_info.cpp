@@ -13,6 +13,22 @@
 
 // [[Rcpp::plugins(cpp11)]]
 
+namespace Rcpp {
+
+  template <> NPatchInfo as(SEXP x) {
+    return *XPtr<NPatchInfo>(x);
+  };
+  
+  template <> SEXP wrap(const NPatchInfo& x) {
+    NPatchInfo *ptr = new NPatchInfo;
+    (*ptr) = x;
+    XPtr<NPatchInfo>xptr = XPtr<NPatchInfo>(ptr, true);
+    xptr.attr("class") = "npatch_info";
+    return xptr;
+  };
+  
+}
+
 // [[Rcpp::export]]
 NPatchInfo npatch_info_(Rectangle source, int left, int top, int right, int bottom, int layout) {
   NPatchInfo obj = {};

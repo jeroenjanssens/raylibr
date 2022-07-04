@@ -10,6 +10,22 @@
 
 // [[Rcpp::plugins(cpp11)]]
 
+namespace Rcpp {
+
+  template <> MaterialMap as(SEXP x) {
+    return *XPtr<MaterialMap>(x);
+  };
+  
+  template <> SEXP wrap(const MaterialMap& x) {
+    MaterialMap *ptr = new MaterialMap;
+    (*ptr) = x;
+    XPtr<MaterialMap>xptr = XPtr<MaterialMap>(ptr, true);
+    xptr.attr("class") = "material_map";
+    return xptr;
+  };
+  
+}
+
 // [[Rcpp::export]]
 MaterialMap material_map_(Texture texture, Color color, float value) {
   MaterialMap obj = {};

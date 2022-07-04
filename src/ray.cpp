@@ -9,6 +9,22 @@
 
 // [[Rcpp::plugins(cpp11)]]
 
+namespace Rcpp {
+
+  template <> Ray as(SEXP x) {
+    return *XPtr<Ray>(x);
+  };
+  
+  template <> SEXP wrap(const Ray& x) {
+    Ray *ptr = new Ray;
+    (*ptr) = x;
+    XPtr<Ray>xptr = XPtr<Ray>(ptr, true);
+    xptr.attr("class") = "ray";
+    return xptr;
+  };
+  
+}
+
 // [[Rcpp::export]]
 Ray ray_(Vector3 position, Vector3 direction) {
   Ray obj = {};

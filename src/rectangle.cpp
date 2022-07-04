@@ -11,6 +11,22 @@
 
 // [[Rcpp::plugins(cpp11)]]
 
+namespace Rcpp {
+
+  template <> Rectangle as(SEXP x) {
+    return *XPtr<Rectangle>(x);
+  };
+  
+  template <> SEXP wrap(const Rectangle& x) {
+    Rectangle *ptr = new Rectangle;
+    (*ptr) = x;
+    XPtr<Rectangle>xptr = XPtr<Rectangle>(ptr, true);
+    xptr.attr("class") = "rectangle";
+    return xptr;
+  };
+  
+}
+
 // [[Rcpp::export]]
 Rectangle rectangle_(float x, float y, float width, float height) {
   Rectangle obj = {};

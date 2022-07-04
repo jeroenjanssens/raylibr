@@ -101,23 +101,6 @@ camera_3d_set_projection_ <- function(obj, projection) {
     .Call(`_raylibr_camera_3d_set_projection_`, obj, projection)
 }
 
-#' Coerce a string or a number to a color
-#'
-#' @param x Object to be coerced. Can be a valid R color (see `colors()`) or a hexademical.
-#'
-#' @return A color
-#'
-#' @export
-as_color <- function(x) {
-    .Call(`_raylibr_as_color`, x)
-}
-
-#' Draw circles
-#' @export
-draw_circles <- function(x, y, radius, colors) {
-    invisible(.Call(`_raylibr_draw_circles`, x, y, radius, colors))
-}
-
 color_ <- function(r, g, b, a) {
     .Call(`_raylibr_color_`, r, g, b, a)
 }
@@ -152,6 +135,17 @@ color_get_a_ <- function(obj) {
 
 color_set_a_ <- function(obj, a) {
     .Call(`_raylibr_color_set_a_`, obj, a)
+}
+
+#' Coerce a string or a number to a color
+#'
+#' @param x Object to be coerced. Can be a valid R color (see `colors()`) or a hexademical.
+#'
+#' @return A color
+#'
+#' @export
+as_color <- function(x) {
+    .Call(`_raylibr_as_color`, x)
 }
 
 init_window_ <- function(width, height, title) {

@@ -12,6 +12,22 @@
 
 // [[Rcpp::plugins(cpp11)]]
 
+namespace Rcpp {
+
+  template <> Camera3D as(SEXP x) {
+    return *XPtr<Camera3D>(x);
+  };
+  
+  template <> SEXP wrap(const Camera3D& x) {
+    Camera3D *ptr = new Camera3D;
+    (*ptr) = x;
+    XPtr<Camera3D>xptr = XPtr<Camera3D>(ptr, true);
+    xptr.attr("class") = "camera_3d";
+    return xptr;
+  };
+  
+}
+
 // [[Rcpp::export]]
 Camera3D camera_3d_(Vector3 position, Vector3 target, Vector3 up, float fovy, int projection) {
   Camera3D obj = {};

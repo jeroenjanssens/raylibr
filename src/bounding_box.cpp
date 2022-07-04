@@ -9,6 +9,22 @@
 
 // [[Rcpp::plugins(cpp11)]]
 
+namespace Rcpp {
+
+  template <> BoundingBox as(SEXP x) {
+    return *XPtr<BoundingBox>(x);
+  };
+  
+  template <> SEXP wrap(const BoundingBox& x) {
+    BoundingBox *ptr = new BoundingBox;
+    (*ptr) = x;
+    XPtr<BoundingBox>xptr = XPtr<BoundingBox>(ptr, true);
+    xptr.attr("class") = "bounding_box";
+    return xptr;
+  };
+  
+}
+
 // [[Rcpp::export]]
 BoundingBox bounding_box_(Vector3 min, Vector3 max) {
   BoundingBox obj = {};

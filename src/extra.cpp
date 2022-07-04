@@ -152,33 +152,3 @@ namespace Rcpp {
 Color as_color(Color x) {
   return x;
 }
-
-
-//' Draw circles
-//' @export
-// [[Rcpp::export]]
-void draw_circles(NumericVector x, NumericVector y, NumericVector radius, List colors) {
-  for(int i = 0; i < x.size(); i++) {
-    DrawCircle(x[i], y[i], radius[i], colors[i]);
-  }
-}
-
-// //' Load font ex
-// //'
-// //' @param file_name A string
-// //' @param font_size An integer
-// //' @return A font
-// //'
-// //' @export
-// // [[Rcpp::export]]
-// Font load_font_ex(const char * file_name, int font_size) {
-//   return LoadFontEx(file_name, font_size, 0, 0);
-// }
-
-// //' @export
-// // [[Rcpp::export]]
-// void image_draw_pixel(Image &dst, int posX, int posY, Color color) {
-//   ImageDrawPixel(&dst, posX, posY, color);
-// }
-
-

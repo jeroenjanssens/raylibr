@@ -951,7 +951,7 @@ end_mode_3d <- function() {
 #'
 #' @export
 begin_texture_mode <- function(target) {
-  if (!is_render_texture(target)) abort(paste0('`target` must be a render_texture_2d, not ', friendly_typeof(target), '.'), call = NULL)
+  if (!is_render_texture(target)) abort(paste0('`target` must be a render_texture, not ', friendly_typeof(target), '.'), call = NULL)
   begin_texture_mode_(target)
 }
 
@@ -1105,7 +1105,7 @@ end_vr_stereo_mode <- function() {
 #'
 #' @export
 get_camera_matrix <- function(camera) {
-  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera, not ', friendly_typeof(camera), '.'), call = NULL)
+  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
   get_camera_matrix_(camera)
 }
 
@@ -1147,7 +1147,7 @@ get_camera_matrix_2d <- function(camera) {
 #' @export
 get_world_to_screen <- function(position, camera) {
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera, not ', friendly_typeof(camera), '.'), call = NULL)
+  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
   get_world_to_screen_(position, camera)
 }
 
@@ -1171,7 +1171,7 @@ get_world_to_screen <- function(position, camera) {
 #' @export
 get_world_to_screen_ex <- function(position, camera, width, height) {
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera, not ', friendly_typeof(camera), '.'), call = NULL)
+  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
   if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
   if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
   get_world_to_screen_ex_(position, camera, width, height)
@@ -2526,7 +2526,7 @@ set_camera_move_controls <- function(key_front, key_back, key_right, key_left, k
 #'
 #' @export
 set_shapes_texture <- function(texture, source) {
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture_2d, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_rectangle(source)) abort(paste0('`source` must be a rectangle, not ', friendly_typeof(source), '.'), call = NULL)
   set_shapes_texture_(texture, source)
 }
@@ -3705,7 +3705,7 @@ load_image_raw <- function(file_name, width, height, format, header_size) {
 #'
 #' @export
 load_image_from_texture <- function(texture) {
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture_2d, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   load_image_from_texture_(texture)
 }
 
@@ -5058,7 +5058,7 @@ gen_texture_mipmaps <- function(texture) {
 #'
 #' @export
 set_texture_filter <- function(texture, filter) {
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture_2d, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_int(filter)) abort(paste0('`filter` must be an integer, not ', friendly_typeof(filter), '.'), call = NULL)
   set_texture_filter_(texture, filter)
 }
@@ -5079,7 +5079,7 @@ set_texture_filter <- function(texture, filter) {
 #'
 #' @export
 set_texture_wrap <- function(texture, wrap) {
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture_2d, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_int(wrap)) abort(paste0('`wrap` must be an integer, not ', friendly_typeof(wrap), '.'), call = NULL)
   set_texture_wrap_(texture, wrap)
 }
@@ -5102,7 +5102,7 @@ set_texture_wrap <- function(texture, wrap) {
 #'
 #' @export
 draw_texture <- function(texture, pos_x, pos_y, tint) {
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture_2d, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
   if (!is_int(pos_y)) abort(paste0('`pos_y` must be an integer, not ', friendly_typeof(pos_y), '.'), call = NULL)
   if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
@@ -5126,7 +5126,7 @@ draw_texture <- function(texture, pos_x, pos_y, tint) {
 #'
 #' @export
 draw_texture_v <- function(texture, position, tint) {
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture_2d, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
   draw_texture_v_(texture, position, tint)
@@ -5151,7 +5151,7 @@ draw_texture_v <- function(texture, position, tint) {
 #'
 #' @export
 draw_texture_ex <- function(texture, position, rotation, scale, tint) {
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture_2d, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_float(rotation)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(rotation), '.'), call = NULL)
   if (!is_float(scale)) abort(paste0('`scale` must be a number, not ', friendly_typeof(scale), '.'), call = NULL)
@@ -5177,7 +5177,7 @@ draw_texture_ex <- function(texture, position, rotation, scale, tint) {
 #'
 #' @export
 draw_texture_rec <- function(texture, source, position, tint) {
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture_2d, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_rectangle(source)) abort(paste0('`source` must be a rectangle, not ', friendly_typeof(source), '.'), call = NULL)
   if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
@@ -5203,7 +5203,7 @@ draw_texture_rec <- function(texture, source, position, tint) {
 #'
 #' @export
 draw_texture_quad <- function(texture, tiling, offset, quad, tint) {
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture_2d, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_vector_2(tiling)) abort(paste0('`tiling` must be a numeric vector of length 2, not ', friendly_typeof(tiling), '.'), call = NULL)
   if (!is_vector_2(offset)) abort(paste0('`offset` must be a numeric vector of length 2, not ', friendly_typeof(offset), '.'), call = NULL)
   if (!is_rectangle(quad)) abort(paste0('`quad` must be a rectangle, not ', friendly_typeof(quad), '.'), call = NULL)
@@ -5232,7 +5232,7 @@ draw_texture_quad <- function(texture, tiling, offset, quad, tint) {
 #'
 #' @export
 draw_texture_tiled <- function(texture, source, dest, origin, rotation, scale, tint) {
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture_2d, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_rectangle(source)) abort(paste0('`source` must be a rectangle, not ', friendly_typeof(source), '.'), call = NULL)
   if (!is_rectangle(dest)) abort(paste0('`dest` must be a rectangle, not ', friendly_typeof(dest), '.'), call = NULL)
   if (!is_vector_2(origin)) abort(paste0('`origin` must be a numeric vector of length 2, not ', friendly_typeof(origin), '.'), call = NULL)
@@ -5262,7 +5262,7 @@ draw_texture_tiled <- function(texture, source, dest, origin, rotation, scale, t
 #'
 #' @export
 draw_texture_pro <- function(texture, source, dest, origin, rotation, tint) {
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture_2d, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_rectangle(source)) abort(paste0('`source` must be a rectangle, not ', friendly_typeof(source), '.'), call = NULL)
   if (!is_rectangle(dest)) abort(paste0('`dest` must be a rectangle, not ', friendly_typeof(dest), '.'), call = NULL)
   if (!is_vector_2(origin)) abort(paste0('`origin` must be a numeric vector of length 2, not ', friendly_typeof(origin), '.'), call = NULL)
@@ -5291,7 +5291,7 @@ draw_texture_pro <- function(texture, source, dest, origin, rotation, tint) {
 #'
 #' @export
 draw_texture_npatch <- function(texture, n_patch_info, dest, origin, rotation, tint) {
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture_2d, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_npatch_info(n_patch_info)) abort(paste0('`n_patch_info` must be a npatch_info, not ', friendly_typeof(n_patch_info), '.'), call = NULL)
   if (!is_rectangle(dest)) abort(paste0('`dest` must be a rectangle, not ', friendly_typeof(dest), '.'), call = NULL)
   if (!is_vector_2(origin)) abort(paste0('`origin` must be a numeric vector of length 2, not ', friendly_typeof(origin), '.'), call = NULL)
@@ -5320,7 +5320,7 @@ draw_texture_npatch <- function(texture, n_patch_info, dest, origin, rotation, t
 #'
 #' @export
 draw_texture_poly <- function(texture, center, points, texcoords, point_count, tint) {
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture_2d, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
   if (!is_vector_2(points)) abort(paste0('`points` must be a numeric vector of length 2, not ', friendly_typeof(points), '.'), call = NULL)
   if (!is_vector_2(texcoords)) abort(paste0('`texcoords` must be a numeric vector of length 2, not ', friendly_typeof(texcoords), '.'), call = NULL)
@@ -6289,7 +6289,7 @@ draw_cube_wires_v <- function(position, size, color) {
 #'
 #' @export
 draw_cube_texture <- function(texture, position, width, height, length, color) {
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture_2d, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_float(width)) abort(paste0('`width` must be a number, not ', friendly_typeof(width), '.'), call = NULL)
   if (!is_float(height)) abort(paste0('`height` must be a number, not ', friendly_typeof(height), '.'), call = NULL)
@@ -6319,7 +6319,7 @@ draw_cube_texture <- function(texture, position, width, height, length, color) {
 #'
 #' @export
 draw_cube_texture_rec <- function(texture, source, position, width, height, length, color) {
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture_2d, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_rectangle(source)) abort(paste0('`source` must be a rectangle, not ', friendly_typeof(source), '.'), call = NULL)
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_float(width)) abort(paste0('`width` must be a number, not ', friendly_typeof(width), '.'), call = NULL)
@@ -6765,8 +6765,8 @@ draw_bounding_box <- function(box, color) {
 #'
 #' @export
 draw_billboard <- function(camera, texture, position, size, tint) {
-  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera, not ', friendly_typeof(camera), '.'), call = NULL)
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture_2d, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_float(size)) abort(paste0('`size` must be a number, not ', friendly_typeof(size), '.'), call = NULL)
   if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)

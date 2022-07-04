@@ -14,40 +14,40 @@ alias_type <- function(x) {
             TRUE ~ x)
 }
 
-structs_generate <-
-  c("Rectangle",
-    "Image",
-    "Texture",
-    "Font",
-    "RenderTexture",
-    "NPatchInfo",
-    "GlyphInfo",
-    "Camera2D",
-    "Camera3D",
-    "Mesh",
-    "Shader",
-    "Ray",
-    "MaterialMap",
-    "Material",
-    "BoneInfo",
-    "Model",
-    "ModelAnimation",
-    "Wave",
-    "AudioStream",
-    "Sound",
-    "Music",
-    "RayCollision",
-    "BoundingBox",
-    "Transform"
-  )
-
-structs_custom <-
-  c("Color",
-    "Vector2",
-    "Vector3",
-    "Vector4",
-    "RaylibMatrix"
-  )
+# structs_generate <-
+#   c("Rectangle",
+#     "Image",
+#     "Texture",
+#     "Font",
+#     "RenderTexture",
+#     "NPatchInfo",
+#     "GlyphInfo",
+#     "Camera2D",
+#     "Camera3D",
+#     "Mesh",
+#     "Shader",
+#     "Ray",
+#     "MaterialMap",
+#     "Material",
+#     "BoneInfo",
+#     "Model",
+#     "ModelAnimation",
+#     "Wave",
+#     "AudioStream",
+#     "Sound",
+#     "Music",
+#     "RayCollision",
+#     "BoundingBox",
+#     "Transform"
+#   )
+#
+# structs_custom <-
+#   c("Color",
+#     "Vector2",
+#     "Vector3",
+#     "Vector4",
+#     "RaylibMatrix"
+#   )
 
 # Get function name from function definition
 extract_fun <- function(x) {

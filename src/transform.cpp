@@ -10,6 +10,22 @@
 
 // [[Rcpp::plugins(cpp11)]]
 
+namespace Rcpp {
+
+  template <> Transform as(SEXP x) {
+    return *XPtr<Transform>(x);
+  };
+  
+  template <> SEXP wrap(const Transform& x) {
+    Transform *ptr = new Transform;
+    (*ptr) = x;
+    XPtr<Transform>xptr = XPtr<Transform>(ptr, true);
+    xptr.attr("class") = "transform";
+    return xptr;
+  };
+  
+}
+
 // [[Rcpp::export]]
 Transform transform_(Vector3 translation, Vector4 rotation, Vector3 scale) {
   Transform obj = {};

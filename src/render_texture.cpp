@@ -10,6 +10,22 @@
 
 // [[Rcpp::plugins(cpp11)]]
 
+namespace Rcpp {
+
+  template <> RenderTexture as(SEXP x) {
+    return *XPtr<RenderTexture>(x);
+  };
+  
+  template <> SEXP wrap(const RenderTexture& x) {
+    RenderTexture *ptr = new RenderTexture;
+    (*ptr) = x;
+    XPtr<RenderTexture>xptr = XPtr<RenderTexture>(ptr, true);
+    xptr.attr("class") = "render_texture";
+    return xptr;
+  };
+  
+}
+
 // [[Rcpp::export]]
 RenderTexture render_texture_(unsigned int id, Texture texture, Texture depth) {
   RenderTexture obj = {};

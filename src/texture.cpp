@@ -12,6 +12,22 @@
 
 // [[Rcpp::plugins(cpp11)]]
 
+namespace Rcpp {
+
+  template <> Texture as(SEXP x) {
+    return *XPtr<Texture>(x);
+  };
+  
+  template <> SEXP wrap(const Texture& x) {
+    Texture *ptr = new Texture;
+    (*ptr) = x;
+    XPtr<Texture>xptr = XPtr<Texture>(ptr, true);
+    xptr.attr("class") = "texture";
+    return xptr;
+  };
+  
+}
+
 // [[Rcpp::export]]
 Texture texture_(unsigned int id, int width, int height, int mipmaps, int format) {
   Texture obj = {};

@@ -11,6 +11,22 @@
 
 // [[Rcpp::plugins(cpp11)]]
 
+namespace Rcpp {
+
+  template <> RayCollision as(SEXP x) {
+    return *XPtr<RayCollision>(x);
+  };
+  
+  template <> SEXP wrap(const RayCollision& x) {
+    RayCollision *ptr = new RayCollision;
+    (*ptr) = x;
+    XPtr<RayCollision>xptr = XPtr<RayCollision>(ptr, true);
+    xptr.attr("class") = "ray_collision";
+    return xptr;
+  };
+  
+}
+
 // [[Rcpp::export]]
 RayCollision ray_collision_(bool hit, float distance, Vector3 point, Vector3 normal) {
   RayCollision obj = {};

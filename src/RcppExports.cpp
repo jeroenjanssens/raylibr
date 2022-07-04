@@ -305,30 +305,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// as_color
-Color as_color(Color x);
-RcppExport SEXP _raylibr_as_color(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Color >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(as_color(x));
-    return rcpp_result_gen;
-END_RCPP
-}
-// draw_circles
-void draw_circles(NumericVector x, NumericVector y, NumericVector radius, List colors);
-RcppExport SEXP _raylibr_draw_circles(SEXP xSEXP, SEXP ySEXP, SEXP radiusSEXP, SEXP colorsSEXP) {
-BEGIN_RCPP
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericVector >::type x(xSEXP);
-    Rcpp::traits::input_parameter< NumericVector >::type y(ySEXP);
-    Rcpp::traits::input_parameter< NumericVector >::type radius(radiusSEXP);
-    Rcpp::traits::input_parameter< List >::type colors(colorsSEXP);
-    draw_circles(x, y, radius, colors);
-    return R_NilValue;
-END_RCPP
-}
 // color_
 Color color_(unsigned int r, unsigned int g, unsigned int b, unsigned int a);
 RcppExport SEXP _raylibr_color_(SEXP rSEXP, SEXP gSEXP, SEXP bSEXP, SEXP aSEXP) {
@@ -432,6 +408,17 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< Color >::type obj(objSEXP);
     Rcpp::traits::input_parameter< unsigned int >::type a(aSEXP);
     rcpp_result_gen = Rcpp::wrap(color_set_a_(obj, a));
+    return rcpp_result_gen;
+END_RCPP
+}
+// as_color
+Color as_color(Color x);
+RcppExport SEXP _raylibr_as_color(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Color >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(as_color(x));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -5445,8 +5432,6 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_camera_3d_set_fovy_", (DL_FUNC) &_raylibr_camera_3d_set_fovy_, 2},
     {"_raylibr_camera_3d_get_projection_", (DL_FUNC) &_raylibr_camera_3d_get_projection_, 1},
     {"_raylibr_camera_3d_set_projection_", (DL_FUNC) &_raylibr_camera_3d_set_projection_, 2},
-    {"_raylibr_as_color", (DL_FUNC) &_raylibr_as_color, 1},
-    {"_raylibr_draw_circles", (DL_FUNC) &_raylibr_draw_circles, 4},
     {"_raylibr_color_", (DL_FUNC) &_raylibr_color_, 4},
     {"_raylibr_color_get_r_", (DL_FUNC) &_raylibr_color_get_r_, 1},
     {"_raylibr_color_set_r_", (DL_FUNC) &_raylibr_color_set_r_, 2},
@@ -5456,6 +5441,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_color_set_b_", (DL_FUNC) &_raylibr_color_set_b_, 2},
     {"_raylibr_color_get_a_", (DL_FUNC) &_raylibr_color_get_a_, 1},
     {"_raylibr_color_set_a_", (DL_FUNC) &_raylibr_color_set_a_, 2},
+    {"_raylibr_as_color", (DL_FUNC) &_raylibr_as_color, 1},
     {"_raylibr_init_window_", (DL_FUNC) &_raylibr_init_window_, 3},
     {"_raylibr_window_should_close_", (DL_FUNC) &_raylibr_window_should_close_, 0},
     {"_raylibr_close_window_", (DL_FUNC) &_raylibr_close_window_, 0},
