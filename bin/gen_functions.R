@@ -79,14 +79,14 @@ writeLines(glue("
 "), con)
 
 for(fun in funs) {
-  pt <- map_chr(fun$params, ~ make_rcpp_name(.$name)) %>%
-    str_c(collapse = ", ")
-  if (pt == "void") pt <- ""
+  # pt <- map_chr(fun$params, ~ make_rcpp_name(.$name)) %>%
+  #   str_c(collapse = ", ")
+  # if (pt == "void") pt <- ""
 
   writeLines(glue("
        // [[Rcpp::export]]
        {fun$ret} {make_rcpp_name(fun$name)}_({make_rcpp_params(fun$params)}) {{
-         return {fun$name}({pt});
+         return {fun$name}({make_rcpp_params(fun$params, types = FALSE)});
        }}
 
        "), con)

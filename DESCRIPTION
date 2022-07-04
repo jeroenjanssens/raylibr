@@ -12,6 +12,7 @@ RoxygenNote: 7.2.0
 LinkingTo: 
     Rcpp
 Imports: 
+    glue,
     Rcpp,
     rlang,
     utils

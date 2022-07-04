@@ -118,22 +118,6 @@ draw_circles <- function(x, y, radius, colors) {
     invisible(.Call(`_raylibr_draw_circles`, x, y, radius, colors))
 }
 
-#' Load font ex
-#'
-#' @param file_name A string
-#' @param font_size An integer
-#' @return A font
-#'
-#' @export
-load_font_ex <- function(file_name, font_size) {
-    .Call(`_raylibr_load_font_ex`, file_name, font_size)
-}
-
-#' @export
-image_draw_pixel <- function(dst, posX, posY, color) {
-    invisible(.Call(`_raylibr_image_draw_pixel`, dst, posX, posY, color))
-}
-
 color_ <- function(r, g, b, a) {
     .Call(`_raylibr_color_`, r, g, b, a)
 }
@@ -366,6 +350,38 @@ end_mode_3d_ <- function() {
     invisible(.Call(`_raylibr_end_mode_3d_`))
 }
 
+begin_texture_mode_ <- function(target) {
+    invisible(.Call(`_raylibr_begin_texture_mode_`, target))
+}
+
+end_texture_mode_ <- function() {
+    invisible(.Call(`_raylibr_end_texture_mode_`))
+}
+
+end_shader_mode_ <- function() {
+    invisible(.Call(`_raylibr_end_shader_mode_`))
+}
+
+begin_blend_mode_ <- function(mode) {
+    invisible(.Call(`_raylibr_begin_blend_mode_`, mode))
+}
+
+end_blend_mode_ <- function() {
+    invisible(.Call(`_raylibr_end_blend_mode_`))
+}
+
+begin_scissor_mode_ <- function(x, y, width, height) {
+    invisible(.Call(`_raylibr_begin_scissor_mode_`, x, y, width, height))
+}
+
+end_scissor_mode_ <- function() {
+    invisible(.Call(`_raylibr_end_scissor_mode_`))
+}
+
+end_vr_stereo_mode_ <- function() {
+    invisible(.Call(`_raylibr_end_vr_stereo_mode_`))
+}
+
 get_camera_matrix_ <- function(camera) {
     .Call(`_raylibr_get_camera_matrix_`, camera)
 }
@@ -414,6 +430,54 @@ take_screenshot_ <- function(file_name) {
     invisible(.Call(`_raylibr_take_screenshot_`, file_name))
 }
 
+set_trace_log_level_ <- function(log_level) {
+    invisible(.Call(`_raylibr_set_trace_log_level_`, log_level))
+}
+
+get_file_extension_ <- function(file_name) {
+    .Call(`_raylibr_get_file_extension_`, file_name)
+}
+
+get_file_name_ <- function(file_path) {
+    .Call(`_raylibr_get_file_name_`, file_path)
+}
+
+get_file_name_without_ext_ <- function(file_path) {
+    .Call(`_raylibr_get_file_name_without_ext_`, file_path)
+}
+
+get_directory_path_ <- function(file_path) {
+    .Call(`_raylibr_get_directory_path_`, file_path)
+}
+
+get_prev_directory_path_ <- function(dir_path) {
+    .Call(`_raylibr_get_prev_directory_path_`, dir_path)
+}
+
+get_working_directory_ <- function() {
+    .Call(`_raylibr_get_working_directory_`)
+}
+
+clear_directory_files_ <- function() {
+    invisible(.Call(`_raylibr_clear_directory_files_`))
+}
+
+change_directory_ <- function(dir) {
+    .Call(`_raylibr_change_directory_`, dir)
+}
+
+is_file_dropped_ <- function() {
+    .Call(`_raylibr_is_file_dropped_`)
+}
+
+clear_dropped_files_ <- function() {
+    invisible(.Call(`_raylibr_clear_dropped_files_`))
+}
+
+get_file_mod_time_ <- function(file_name) {
+    .Call(`_raylibr_get_file_mod_time_`, file_name)
+}
+
 is_key_pressed_ <- function(key) {
     .Call(`_raylibr_is_key_pressed_`, key)
 }
@@ -440,6 +504,46 @@ get_key_pressed_ <- function() {
 
 get_char_pressed_ <- function() {
     .Call(`_raylibr_get_char_pressed_`)
+}
+
+is_gamepad_available_ <- function(gamepad) {
+    .Call(`_raylibr_is_gamepad_available_`, gamepad)
+}
+
+get_gamepad_name_ <- function(gamepad) {
+    .Call(`_raylibr_get_gamepad_name_`, gamepad)
+}
+
+is_gamepad_button_pressed_ <- function(gamepad, button) {
+    .Call(`_raylibr_is_gamepad_button_pressed_`, gamepad, button)
+}
+
+is_gamepad_button_down_ <- function(gamepad, button) {
+    .Call(`_raylibr_is_gamepad_button_down_`, gamepad, button)
+}
+
+is_gamepad_button_released_ <- function(gamepad, button) {
+    .Call(`_raylibr_is_gamepad_button_released_`, gamepad, button)
+}
+
+is_gamepad_button_up_ <- function(gamepad, button) {
+    .Call(`_raylibr_is_gamepad_button_up_`, gamepad, button)
+}
+
+get_gamepad_button_pressed_ <- function() {
+    .Call(`_raylibr_get_gamepad_button_pressed_`)
+}
+
+get_gamepad_axis_count_ <- function(gamepad) {
+    .Call(`_raylibr_get_gamepad_axis_count_`, gamepad)
+}
+
+get_gamepad_axis_movement_ <- function(gamepad, axis) {
+    .Call(`_raylibr_get_gamepad_axis_movement_`, gamepad, axis)
+}
+
+set_gamepad_mappings_ <- function(mappings) {
+    .Call(`_raylibr_set_gamepad_mappings_`, mappings)
 }
 
 is_mouse_button_pressed_ <- function(button) {
@@ -492,6 +596,58 @@ get_mouse_wheel_move_ <- function() {
 
 set_mouse_cursor_ <- function(cursor) {
     invisible(.Call(`_raylibr_set_mouse_cursor_`, cursor))
+}
+
+get_touch_x_ <- function() {
+    .Call(`_raylibr_get_touch_x_`)
+}
+
+get_touch_y_ <- function() {
+    .Call(`_raylibr_get_touch_y_`)
+}
+
+get_touch_position_ <- function(index) {
+    .Call(`_raylibr_get_touch_position_`, index)
+}
+
+get_touch_point_id_ <- function(index) {
+    .Call(`_raylibr_get_touch_point_id_`, index)
+}
+
+get_touch_point_count_ <- function() {
+    .Call(`_raylibr_get_touch_point_count_`)
+}
+
+set_gestures_enabled_ <- function(flags) {
+    invisible(.Call(`_raylibr_set_gestures_enabled_`, flags))
+}
+
+is_gesture_detected_ <- function(gesture) {
+    .Call(`_raylibr_is_gesture_detected_`, gesture)
+}
+
+get_gesture_detected_ <- function() {
+    .Call(`_raylibr_get_gesture_detected_`)
+}
+
+get_gesture_hold_duration_ <- function() {
+    .Call(`_raylibr_get_gesture_hold_duration_`)
+}
+
+get_gesture_drag_vector_ <- function() {
+    .Call(`_raylibr_get_gesture_drag_vector_`)
+}
+
+get_gesture_drag_angle_ <- function() {
+    .Call(`_raylibr_get_gesture_drag_angle_`)
+}
+
+get_gesture_pinch_vector_ <- function() {
+    .Call(`_raylibr_get_gesture_pinch_vector_`)
+}
+
+get_gesture_pinch_angle_ <- function() {
+    .Call(`_raylibr_get_gesture_pinch_angle_`)
 }
 
 set_camera_pan_control_ <- function(key_pan) {
@@ -674,6 +830,10 @@ check_collision_point_triangle_ <- function(point, p_1, p_2, p_3) {
     .Call(`_raylibr_check_collision_point_triangle_`, point, p_1, p_2, p_3)
 }
 
+check_collision_lines_ <- function(start_pos_1, end_pos_1, start_pos_2, end_pos_2, collision_point) {
+    .Call(`_raylibr_check_collision_lines_`, start_pos_1, end_pos_1, start_pos_2, end_pos_2, collision_point)
+}
+
 check_collision_point_line_ <- function(point, p_1, p_2, threshold) {
     .Call(`_raylibr_check_collision_point_line_`, point, p_1, p_2, threshold)
 }
@@ -738,8 +898,180 @@ gen_image_cellular_ <- function(width, height, tile_size) {
     .Call(`_raylibr_gen_image_cellular_`, width, height, tile_size)
 }
 
+image_copy_ <- function(image) {
+    .Call(`_raylibr_image_copy_`, image)
+}
+
+image_from_image_ <- function(image, rec) {
+    .Call(`_raylibr_image_from_image_`, image, rec)
+}
+
+image_text_ <- function(text, font_size, color) {
+    .Call(`_raylibr_image_text_`, text, font_size, color)
+}
+
+image_text_ex_ <- function(font, text, font_size, spacing, tint) {
+    .Call(`_raylibr_image_text_ex_`, font, text, font_size, spacing, tint)
+}
+
+image_format_ <- function(image, new_format) {
+    invisible(.Call(`_raylibr_image_format_`, image, new_format))
+}
+
+image_to_pot_ <- function(image, fill) {
+    invisible(.Call(`_raylibr_image_to_pot_`, image, fill))
+}
+
+image_crop_ <- function(image, crop) {
+    invisible(.Call(`_raylibr_image_crop_`, image, crop))
+}
+
+image_alpha_crop_ <- function(image, threshold) {
+    invisible(.Call(`_raylibr_image_alpha_crop_`, image, threshold))
+}
+
+image_alpha_clear_ <- function(image, color, threshold) {
+    invisible(.Call(`_raylibr_image_alpha_clear_`, image, color, threshold))
+}
+
+image_alpha_mask_ <- function(image, alpha_mask) {
+    invisible(.Call(`_raylibr_image_alpha_mask_`, image, alpha_mask))
+}
+
+image_alpha_premultiply_ <- function(image) {
+    invisible(.Call(`_raylibr_image_alpha_premultiply_`, image))
+}
+
+image_resize_ <- function(image, new_width, new_height) {
+    invisible(.Call(`_raylibr_image_resize_`, image, new_width, new_height))
+}
+
+image_resize_nn_ <- function(image, new_width, new_height) {
+    invisible(.Call(`_raylibr_image_resize_nn_`, image, new_width, new_height))
+}
+
+image_resize_canvas_ <- function(image, new_width, new_height, offset_x, offset_y, fill) {
+    invisible(.Call(`_raylibr_image_resize_canvas_`, image, new_width, new_height, offset_x, offset_y, fill))
+}
+
+image_mipmaps_ <- function(image) {
+    invisible(.Call(`_raylibr_image_mipmaps_`, image))
+}
+
+image_dither_ <- function(image, r_bpp, g_bpp, b_bpp, a_bpp) {
+    invisible(.Call(`_raylibr_image_dither_`, image, r_bpp, g_bpp, b_bpp, a_bpp))
+}
+
+image_flip_vertical_ <- function(image) {
+    invisible(.Call(`_raylibr_image_flip_vertical_`, image))
+}
+
+image_flip_horizontal_ <- function(image) {
+    invisible(.Call(`_raylibr_image_flip_horizontal_`, image))
+}
+
+image_rotate_cw_ <- function(image) {
+    invisible(.Call(`_raylibr_image_rotate_cw_`, image))
+}
+
+image_rotate_ccw_ <- function(image) {
+    invisible(.Call(`_raylibr_image_rotate_ccw_`, image))
+}
+
+image_color_tint_ <- function(image, color) {
+    invisible(.Call(`_raylibr_image_color_tint_`, image, color))
+}
+
+image_color_invert_ <- function(image) {
+    invisible(.Call(`_raylibr_image_color_invert_`, image))
+}
+
+image_color_grayscale_ <- function(image) {
+    invisible(.Call(`_raylibr_image_color_grayscale_`, image))
+}
+
+image_color_contrast_ <- function(image, contrast) {
+    invisible(.Call(`_raylibr_image_color_contrast_`, image, contrast))
+}
+
+image_color_brightness_ <- function(image, brightness) {
+    invisible(.Call(`_raylibr_image_color_brightness_`, image, brightness))
+}
+
+image_color_replace_ <- function(image, color, replace) {
+    invisible(.Call(`_raylibr_image_color_replace_`, image, color, replace))
+}
+
+unload_image_colors_ <- function(colors) {
+    invisible(.Call(`_raylibr_unload_image_colors_`, colors))
+}
+
+unload_image_palette_ <- function(colors) {
+    invisible(.Call(`_raylibr_unload_image_palette_`, colors))
+}
+
 get_image_alpha_border_ <- function(image, threshold) {
     .Call(`_raylibr_get_image_alpha_border_`, image, threshold)
+}
+
+get_image_color_ <- function(image, x, y) {
+    .Call(`_raylibr_get_image_color_`, image, x, y)
+}
+
+image_clear_background_ <- function(dst, color) {
+    invisible(.Call(`_raylibr_image_clear_background_`, dst, color))
+}
+
+image_draw_pixel_ <- function(dst, pos_x, pos_y, color) {
+    invisible(.Call(`_raylibr_image_draw_pixel_`, dst, pos_x, pos_y, color))
+}
+
+image_draw_pixel_v_ <- function(dst, position, color) {
+    invisible(.Call(`_raylibr_image_draw_pixel_v_`, dst, position, color))
+}
+
+image_draw_line_ <- function(dst, start_pos_x, start_pos_y, end_pos_x, end_pos_y, color) {
+    invisible(.Call(`_raylibr_image_draw_line_`, dst, start_pos_x, start_pos_y, end_pos_x, end_pos_y, color))
+}
+
+image_draw_line_v_ <- function(dst, start, end, color) {
+    invisible(.Call(`_raylibr_image_draw_line_v_`, dst, start, end, color))
+}
+
+image_draw_circle_ <- function(dst, center_x, center_y, radius, color) {
+    invisible(.Call(`_raylibr_image_draw_circle_`, dst, center_x, center_y, radius, color))
+}
+
+image_draw_circle_v_ <- function(dst, center, radius, color) {
+    invisible(.Call(`_raylibr_image_draw_circle_v_`, dst, center, radius, color))
+}
+
+image_draw_rectangle_ <- function(dst, pos_x, pos_y, width, height, color) {
+    invisible(.Call(`_raylibr_image_draw_rectangle_`, dst, pos_x, pos_y, width, height, color))
+}
+
+image_draw_rectangle_v_ <- function(dst, position, size, color) {
+    invisible(.Call(`_raylibr_image_draw_rectangle_v_`, dst, position, size, color))
+}
+
+image_draw_rectangle_rec_ <- function(dst, rec, color) {
+    invisible(.Call(`_raylibr_image_draw_rectangle_rec_`, dst, rec, color))
+}
+
+image_draw_rectangle_lines_ <- function(dst, rec, thick, color) {
+    invisible(.Call(`_raylibr_image_draw_rectangle_lines_`, dst, rec, thick, color))
+}
+
+image_draw_ <- function(dst, src, src_rec, dst_rec, tint) {
+    invisible(.Call(`_raylibr_image_draw_`, dst, src, src_rec, dst_rec, tint))
+}
+
+image_draw_text_ <- function(dst, text, pos_x, pos_y, font_size, color) {
+    invisible(.Call(`_raylibr_image_draw_text_`, dst, text, pos_x, pos_y, font_size, color))
+}
+
+image_draw_text_ex_ <- function(dst, font, text, position, font_size, spacing, tint) {
+    invisible(.Call(`_raylibr_image_draw_text_ex_`, dst, font, text, position, font_size, spacing, tint))
 }
 
 load_texture_ <- function(file_name) {
@@ -750,8 +1082,52 @@ load_texture_from_image_ <- function(image) {
     .Call(`_raylibr_load_texture_from_image_`, image)
 }
 
+gen_texture_mipmaps_ <- function(texture) {
+    invisible(.Call(`_raylibr_gen_texture_mipmaps_`, texture))
+}
+
+set_texture_filter_ <- function(texture, filter) {
+    invisible(.Call(`_raylibr_set_texture_filter_`, texture, filter))
+}
+
+set_texture_wrap_ <- function(texture, wrap) {
+    invisible(.Call(`_raylibr_set_texture_wrap_`, texture, wrap))
+}
+
 draw_texture_ <- function(texture, pos_x, pos_y, tint) {
     invisible(.Call(`_raylibr_draw_texture_`, texture, pos_x, pos_y, tint))
+}
+
+draw_texture_v_ <- function(texture, position, tint) {
+    invisible(.Call(`_raylibr_draw_texture_v_`, texture, position, tint))
+}
+
+draw_texture_ex_ <- function(texture, position, rotation, scale, tint) {
+    invisible(.Call(`_raylibr_draw_texture_ex_`, texture, position, rotation, scale, tint))
+}
+
+draw_texture_rec_ <- function(texture, source, position, tint) {
+    invisible(.Call(`_raylibr_draw_texture_rec_`, texture, source, position, tint))
+}
+
+draw_texture_quad_ <- function(texture, tiling, offset, quad, tint) {
+    invisible(.Call(`_raylibr_draw_texture_quad_`, texture, tiling, offset, quad, tint))
+}
+
+draw_texture_tiled_ <- function(texture, source, dest, origin, rotation, scale, tint) {
+    invisible(.Call(`_raylibr_draw_texture_tiled_`, texture, source, dest, origin, rotation, scale, tint))
+}
+
+draw_texture_pro_ <- function(texture, source, dest, origin, rotation, tint) {
+    invisible(.Call(`_raylibr_draw_texture_pro_`, texture, source, dest, origin, rotation, tint))
+}
+
+draw_texture_npatch_ <- function(texture, n_patch_info, dest, origin, rotation, tint) {
+    invisible(.Call(`_raylibr_draw_texture_npatch_`, texture, n_patch_info, dest, origin, rotation, tint))
+}
+
+draw_texture_poly_ <- function(texture, center, points, texcoords, point_count, tint) {
+    invisible(.Call(`_raylibr_draw_texture_poly_`, texture, center, points, texcoords, point_count, tint))
 }
 
 fade_ <- function(color, alpha) {
@@ -790,12 +1166,28 @@ get_color_ <- function(hex_value) {
     .Call(`_raylibr_get_color_`, hex_value)
 }
 
+get_pixel_data_size_ <- function(width, height, format) {
+    .Call(`_raylibr_get_pixel_data_size_`, width, height, format)
+}
+
 get_font_default_ <- function() {
     .Call(`_raylibr_get_font_default_`)
 }
 
 load_font_ <- function(file_name) {
     .Call(`_raylibr_load_font_`, file_name)
+}
+
+load_font_ex_ <- function(file_name, font_size, font_chars, glyph_count) {
+    .Call(`_raylibr_load_font_ex_`, file_name, font_size, font_chars, glyph_count)
+}
+
+load_font_from_image_ <- function(image, key, first_char) {
+    .Call(`_raylibr_load_font_from_image_`, image, key, first_char)
+}
+
+unload_font_data_ <- function(chars, glyph_count) {
+    invisible(.Call(`_raylibr_unload_font_data_`, chars, glyph_count))
 }
 
 unload_font_ <- function(font) {
@@ -814,6 +1206,14 @@ draw_text_ex_ <- function(font, text, position, font_size, spacing, tint) {
     invisible(.Call(`_raylibr_draw_text_ex_`, font, text, position, font_size, spacing, tint))
 }
 
+draw_text_pro_ <- function(font, text, position, origin, rotation, font_size, spacing, tint) {
+    invisible(.Call(`_raylibr_draw_text_pro_`, font, text, position, origin, rotation, font_size, spacing, tint))
+}
+
+draw_text_codepoint_ <- function(font, codepoint, position, font_size, tint) {
+    invisible(.Call(`_raylibr_draw_text_codepoint_`, font, codepoint, position, font_size, tint))
+}
+
 measure_text_ <- function(text, font_size) {
     .Call(`_raylibr_measure_text_`, text, font_size)
 }
@@ -822,12 +1222,168 @@ measure_text_ex_ <- function(font, text, font_size, spacing) {
     .Call(`_raylibr_measure_text_ex_`, font, text, font_size, spacing)
 }
 
+get_glyph_index_ <- function(font, codepoint) {
+    .Call(`_raylibr_get_glyph_index_`, font, codepoint)
+}
+
+get_glyph_info_ <- function(font, codepoint) {
+    .Call(`_raylibr_get_glyph_info_`, font, codepoint)
+}
+
+get_glyph_atlas_rec_ <- function(font, codepoint) {
+    .Call(`_raylibr_get_glyph_atlas_rec_`, font, codepoint)
+}
+
+text_append_ <- function(text, append, position) {
+    invisible(.Call(`_raylibr_text_append_`, text, append, position))
+}
+
+text_find_index_ <- function(text, find) {
+    .Call(`_raylibr_text_find_index_`, text, find)
+}
+
+text_to_upper_ <- function(text) {
+    .Call(`_raylibr_text_to_upper_`, text)
+}
+
+text_to_lower_ <- function(text) {
+    .Call(`_raylibr_text_to_lower_`, text)
+}
+
+text_to_pascal_ <- function(text) {
+    .Call(`_raylibr_text_to_pascal_`, text)
+}
+
+text_to_integer_ <- function(text) {
+    .Call(`_raylibr_text_to_integer_`, text)
+}
+
+draw_line_3d_ <- function(start_pos, end_pos, color) {
+    invisible(.Call(`_raylibr_draw_line_3d_`, start_pos, end_pos, color))
+}
+
+draw_point_3d_ <- function(position, color) {
+    invisible(.Call(`_raylibr_draw_point_3d_`, position, color))
+}
+
+draw_circle_3d_ <- function(center, radius, rotation_axis, rotation_angle, color) {
+    invisible(.Call(`_raylibr_draw_circle_3d_`, center, radius, rotation_axis, rotation_angle, color))
+}
+
+draw_triangle_3d_ <- function(v_1, v_2, v_3, color) {
+    invisible(.Call(`_raylibr_draw_triangle_3d_`, v_1, v_2, v_3, color))
+}
+
+draw_triangle_strip_3d_ <- function(points, point_count, color) {
+    invisible(.Call(`_raylibr_draw_triangle_strip_3d_`, points, point_count, color))
+}
+
 draw_cube_ <- function(position, width, height, length, color) {
     invisible(.Call(`_raylibr_draw_cube_`, position, width, height, length, color))
 }
 
+draw_cube_v_ <- function(position, size, color) {
+    invisible(.Call(`_raylibr_draw_cube_v_`, position, size, color))
+}
+
+draw_cube_wires_ <- function(position, width, height, length, color) {
+    invisible(.Call(`_raylibr_draw_cube_wires_`, position, width, height, length, color))
+}
+
+draw_cube_wires_v_ <- function(position, size, color) {
+    invisible(.Call(`_raylibr_draw_cube_wires_v_`, position, size, color))
+}
+
+draw_cube_texture_ <- function(texture, position, width, height, length, color) {
+    invisible(.Call(`_raylibr_draw_cube_texture_`, texture, position, width, height, length, color))
+}
+
+draw_cube_texture_rec_ <- function(texture, source, position, width, height, length, color) {
+    invisible(.Call(`_raylibr_draw_cube_texture_rec_`, texture, source, position, width, height, length, color))
+}
+
+draw_sphere_ <- function(center_pos, radius, color) {
+    invisible(.Call(`_raylibr_draw_sphere_`, center_pos, radius, color))
+}
+
+draw_sphere_ex_ <- function(center_pos, radius, rings, slices, color) {
+    invisible(.Call(`_raylibr_draw_sphere_ex_`, center_pos, radius, rings, slices, color))
+}
+
+draw_sphere_wires_ <- function(center_pos, radius, rings, slices, color) {
+    invisible(.Call(`_raylibr_draw_sphere_wires_`, center_pos, radius, rings, slices, color))
+}
+
+draw_cylinder_ <- function(position, radius_top, radius_bottom, height, slices, color) {
+    invisible(.Call(`_raylibr_draw_cylinder_`, position, radius_top, radius_bottom, height, slices, color))
+}
+
+draw_cylinder_ex_ <- function(start_pos, end_pos, start_radius, end_radius, sides, color) {
+    invisible(.Call(`_raylibr_draw_cylinder_ex_`, start_pos, end_pos, start_radius, end_radius, sides, color))
+}
+
+draw_cylinder_wires_ <- function(position, radius_top, radius_bottom, height, slices, color) {
+    invisible(.Call(`_raylibr_draw_cylinder_wires_`, position, radius_top, radius_bottom, height, slices, color))
+}
+
+draw_cylinder_wires_ex_ <- function(start_pos, end_pos, start_radius, end_radius, sides, color) {
+    invisible(.Call(`_raylibr_draw_cylinder_wires_ex_`, start_pos, end_pos, start_radius, end_radius, sides, color))
+}
+
+draw_plane_ <- function(center_pos, size, color) {
+    invisible(.Call(`_raylibr_draw_plane_`, center_pos, size, color))
+}
+
+draw_ray_ <- function(ray, color) {
+    invisible(.Call(`_raylibr_draw_ray_`, ray, color))
+}
+
 draw_grid_ <- function(slices, spacing) {
     invisible(.Call(`_raylibr_draw_grid_`, slices, spacing))
+}
+
+load_model_ <- function(file_name) {
+    .Call(`_raylibr_load_model_`, file_name)
+}
+
+unload_model_ <- function(model) {
+    invisible(.Call(`_raylibr_unload_model_`, model))
+}
+
+get_model_bounding_box_ <- function(model) {
+    .Call(`_raylibr_get_model_bounding_box_`, model)
+}
+
+draw_model_ <- function(model, position, scale, tint) {
+    invisible(.Call(`_raylibr_draw_model_`, model, position, scale, tint))
+}
+
+draw_model_ex_ <- function(model, position, rotation_axis, rotation_angle, scale, tint) {
+    invisible(.Call(`_raylibr_draw_model_ex_`, model, position, rotation_axis, rotation_angle, scale, tint))
+}
+
+draw_model_wires_ <- function(model, position, scale, tint) {
+    invisible(.Call(`_raylibr_draw_model_wires_`, model, position, scale, tint))
+}
+
+draw_bounding_box_ <- function(box, color) {
+    invisible(.Call(`_raylibr_draw_bounding_box_`, box, color))
+}
+
+draw_billboard_ <- function(camera, texture, position, size, tint) {
+    invisible(.Call(`_raylibr_draw_billboard_`, camera, texture, position, size, tint))
+}
+
+check_collision_spheres_ <- function(center_1, radius_1, center_2, radius_2) {
+    .Call(`_raylibr_check_collision_spheres_`, center_1, radius_1, center_2, radius_2)
+}
+
+check_collision_boxes_ <- function(box_1, box_2) {
+    .Call(`_raylibr_check_collision_boxes_`, box_1, box_2)
+}
+
+check_collision_box_sphere_ <- function(box, center, radius) {
+    .Call(`_raylibr_check_collision_box_sphere_`, box, center, radius)
 }
 
 init_audio_device_ <- function() {
@@ -1096,6 +1652,26 @@ npatch_info_get_layout_ <- function(obj) {
 
 npatch_info_set_layout_ <- function(obj, layout) {
     .Call(`_raylibr_npatch_info_set_layout_`, obj, layout)
+}
+
+ray_ <- function(position, direction) {
+    .Call(`_raylibr_ray_`, position, direction)
+}
+
+ray_get_position_ <- function(obj) {
+    .Call(`_raylibr_ray_get_position_`, obj)
+}
+
+ray_set_position_ <- function(obj, position) {
+    .Call(`_raylibr_ray_set_position_`, obj, position)
+}
+
+ray_get_direction_ <- function(obj) {
+    .Call(`_raylibr_ray_get_direction_`, obj)
+}
+
+ray_set_direction_ <- function(obj, direction) {
+    .Call(`_raylibr_ray_set_direction_`, obj, direction)
 }
 
 ray_collision_ <- function(hit, distance, point, normal) {

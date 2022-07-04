@@ -163,22 +163,22 @@ void draw_circles(NumericVector x, NumericVector y, NumericVector radius, List c
   }
 }
 
-//' Load font ex
-//'
-//' @param file_name A string
-//' @param font_size An integer
-//' @return A font
-//'
-//' @export
-// [[Rcpp::export]]
-Font load_font_ex(const char * file_name, int font_size) {
-  return LoadFontEx(file_name, font_size, 0, 0);
-}
+// //' Load font ex
+// //'
+// //' @param file_name A string
+// //' @param font_size An integer
+// //' @return A font
+// //'
+// //' @export
+// // [[Rcpp::export]]
+// Font load_font_ex(const char * file_name, int font_size) {
+//   return LoadFontEx(file_name, font_size, 0, 0);
+// }
 
-//' @export
-// [[Rcpp::export]]
-void image_draw_pixel(Image &dst, int posX, int posY, Color color) {
-  ImageDrawPixel(&dst, posX, posY, color);
-}
+// //' @export
+// // [[Rcpp::export]]
+// void image_draw_pixel(Image &dst, int posX, int posY, Color color) {
+//   ImageDrawPixel(&dst, posX, posY, color);
+// }
 
 

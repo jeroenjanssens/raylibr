@@ -26,4 +26,4 @@ for (name in sort(structs_generate)) {
 writeLines("}\n", con)
 
 close(con)
-Sys.chmod(filename, "444")
+# Sys.chmod(filename, "444")

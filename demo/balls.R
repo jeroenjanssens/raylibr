@@ -10,14 +10,7 @@ ys <- runif(n, sizes, height-sizes)
 dxs <- rnorm(n)
 dys <- rnorm(n)
 cs <- sample(colors(), n)
-
-lower_alpha <- function(x) {
-  x <- color(x)
-  x$a <- 200
-  x
-}
-
-cs <- purrr::map(cs, lower_alpha)
+cs <- purrr::map(cs, ~ fade(., 0.7))
 
 set_target_fps(100)
 init_window(width, height, "Bouncing Balls")
@@ -34,8 +27,11 @@ while (!window_should_close()) {
 
   begin_drawing()
   clear_background("white")
-  draw_circles(xs, ys, sizes, cs)
-  draw_text(paste0("fps: ", get_fps()), 20, 20, 20, list(b=200, a=200))
+  # draw_circles(xs, ys, sizes, cs)
+  for (i in seq(n)) {
+    draw_circle(xs[i], ys[i], sizes[i], cs[[i]])
+  }
+  draw_text(paste0("fps: ", get_fps()), 20, 20, 20, "blue")
   end_drawing()
 }
 

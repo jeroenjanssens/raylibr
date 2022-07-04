@@ -26,6 +26,7 @@ structs_generate <-
     "Camera3D",
     "Mesh",
     "Shader",
+    "Ray",
     "MaterialMap",
     "Material",
     "BoneInfo",
@@ -63,24 +64,33 @@ extract_return <- function(x)  {
 
 # Get name and type from parameter
 extract_param_type_name <- function(p) {
-  parts <- str_split(p, " ") %>%
-    unlist()
+  p <- str_replace_all(p, "\\*([^ ])", "\\* \\1")
+  parts <- unlist(str_split(p, " "))
+  name <- tail(parts, 1)
+  type <- alias_type(str_c(head(parts, -1), collapse = " "))
+  default <- NA
+  pointer <- FALSE
 
-  # parts[[1]] <- alias_type(parts[[1]])
+  if (name == "void" && type == "") {
+    name <- ""
+    type <- "void"
+  } else if (type %in% c("void *", "const char *")) {
 
-  if (parts[[1]] == "void") {
-    list(
-      name = "",
-      type = "void",
-      default = NA
-    )
-  } else {
-    list(
-      name = tail(parts, 1),
-      type = alias_type(str_c(head(parts, -1), collapse = " ")),
-      default = NA
-    )
+  } else if (str_ends(type, " \\*")) {
+    type <- alias_type(str_replace_all(type, " \\*$", ""))
+    pointer <- TRUE
   }
+  # else if (str_starts(name, "\\*")) {
+  #   name <- str_replace_all(name, "^\\*", "")
+  #   pointer <- TRUE
+  # }
+
+  list(
+    name = name,
+    type = type,
+    default = default,
+    pointer = pointer
+  )
 }
 
 # Extract a list of all parameters
@@ -129,7 +139,7 @@ make_rd_type <- function(x) {
 
 
 get_is_function <- function(type) {
-  paste0("is_", stringr::str_replace_all(stringr::str_replace_all(make_rcpp_name(type), fixed("*"), "pointer"), " ", "_"))
+  paste0("is_", stringr::str_replace_all(stringr::str_replace_all(make_rcpp_name(alias_type(type)), fixed("*"), "pointer"), " ", "_"))
 }
 
 make_check <- function(field, type, argname = field) {
@@ -189,12 +199,15 @@ make_r_params <- function(params) {
 }
 
 # Construct Rcpp code for function parameters
-make_rcpp_params <- function(params) {
+make_rcpp_params <- function(params, types = TRUE) {
   if (params[[1]]$type == "void") return("")
-  # params[[1]]$type <- alias_type(params[[1]]$type)
-  map_chr(params, ~ paste0(alias_type(.$type), " ", make_rcpp_name(.$name))) %>%
-  str_c(collapse = ", ") %>%
-  str_trim()
+
+  s <- c()
+  for (p in params) {
+    s <- c(s, glue("{ifelse(types, paste0(alias_type(p$type), ' '), '')}{ifelse(p$pointer, '&', '')}{make_rcpp_name(p$name)}"))
+  }
+
+  str_c(s, collapse = ", ")
 }
 
 # Construct Rccp code for complete function

@@ -38,4 +38,4 @@ writeLines(c(
 
 flush(con)
 close(con)
-Sys.chmod(filename, "444")
+#  Sys.chmod(filename, "444")

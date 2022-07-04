@@ -9,7 +9,7 @@ namespace Rcpp {
   template <> AudioStream as(SEXP x) {
     return *XPtr<AudioStream>(x);
   };
-  
+
   template <> SEXP wrap(const AudioStream& x) {
     AudioStream *ptr = new AudioStream;
     (*ptr) = x;
@@ -17,11 +17,11 @@ namespace Rcpp {
     xptr.attr("class") = "audio_stream";
     return xptr;
   };
-  
+
   template <> BoneInfo as(SEXP x) {
     return *XPtr<BoneInfo>(x);
   };
-  
+
   template <> SEXP wrap(const BoneInfo& x) {
     BoneInfo *ptr = new BoneInfo;
     (*ptr) = x;
@@ -29,11 +29,11 @@ namespace Rcpp {
     xptr.attr("class") = "bone_info";
     return xptr;
   };
-  
+
   template <> BoundingBox as(SEXP x) {
     return *XPtr<BoundingBox>(x);
   };
-  
+
   template <> SEXP wrap(const BoundingBox& x) {
     BoundingBox *ptr = new BoundingBox;
     (*ptr) = x;
@@ -41,11 +41,11 @@ namespace Rcpp {
     xptr.attr("class") = "bounding_box";
     return xptr;
   };
-  
+
   template <> Camera2D as(SEXP x) {
     return *XPtr<Camera2D>(x);
   };
-  
+
   template <> SEXP wrap(const Camera2D& x) {
     Camera2D *ptr = new Camera2D;
     (*ptr) = x;
@@ -53,11 +53,11 @@ namespace Rcpp {
     xptr.attr("class") = "camera_2d";
     return xptr;
   };
-  
+
   template <> Camera3D as(SEXP x) {
     return *XPtr<Camera3D>(x);
   };
-  
+
   template <> SEXP wrap(const Camera3D& x) {
     Camera3D *ptr = new Camera3D;
     (*ptr) = x;
@@ -65,11 +65,11 @@ namespace Rcpp {
     xptr.attr("class") = "camera_3d";
     return xptr;
   };
-  
+
   template <> Font as(SEXP x) {
     return *XPtr<Font>(x);
   };
-  
+
   template <> SEXP wrap(const Font& x) {
     Font *ptr = new Font;
     (*ptr) = x;
@@ -77,11 +77,11 @@ namespace Rcpp {
     xptr.attr("class") = "font";
     return xptr;
   };
-  
+
   template <> GlyphInfo as(SEXP x) {
     return *XPtr<GlyphInfo>(x);
   };
-  
+
   template <> SEXP wrap(const GlyphInfo& x) {
     GlyphInfo *ptr = new GlyphInfo;
     (*ptr) = x;
@@ -89,11 +89,11 @@ namespace Rcpp {
     xptr.attr("class") = "glyph_info";
     return xptr;
   };
-  
+
   template <> Image as(SEXP x) {
     return *XPtr<Image>(x);
   };
-  
+
   template <> SEXP wrap(const Image& x) {
     Image *ptr = new Image;
     (*ptr) = x;
@@ -101,11 +101,11 @@ namespace Rcpp {
     xptr.attr("class") = "image";
     return xptr;
   };
-  
+
   template <> Material as(SEXP x) {
     return *XPtr<Material>(x);
   };
-  
+
   template <> SEXP wrap(const Material& x) {
     Material *ptr = new Material;
     (*ptr) = x;
@@ -113,11 +113,11 @@ namespace Rcpp {
     xptr.attr("class") = "material";
     return xptr;
   };
-  
+
   template <> MaterialMap as(SEXP x) {
     return *XPtr<MaterialMap>(x);
   };
-  
+
   template <> SEXP wrap(const MaterialMap& x) {
     MaterialMap *ptr = new MaterialMap;
     (*ptr) = x;
@@ -125,11 +125,11 @@ namespace Rcpp {
     xptr.attr("class") = "material_map";
     return xptr;
   };
-  
+
   template <> Mesh as(SEXP x) {
     return *XPtr<Mesh>(x);
   };
-  
+
   template <> SEXP wrap(const Mesh& x) {
     Mesh *ptr = new Mesh;
     (*ptr) = x;
@@ -137,11 +137,11 @@ namespace Rcpp {
     xptr.attr("class") = "mesh";
     return xptr;
   };
-  
+
   template <> Model as(SEXP x) {
     return *XPtr<Model>(x);
   };
-  
+
   template <> SEXP wrap(const Model& x) {
     Model *ptr = new Model;
     (*ptr) = x;
@@ -149,11 +149,11 @@ namespace Rcpp {
     xptr.attr("class") = "model";
     return xptr;
   };
-  
+
   template <> ModelAnimation as(SEXP x) {
     return *XPtr<ModelAnimation>(x);
   };
-  
+
   template <> SEXP wrap(const ModelAnimation& x) {
     ModelAnimation *ptr = new ModelAnimation;
     (*ptr) = x;
@@ -161,11 +161,11 @@ namespace Rcpp {
     xptr.attr("class") = "model_animation";
     return xptr;
   };
-  
+
   template <> Music as(SEXP x) {
     return *XPtr<Music>(x);
   };
-  
+
   template <> SEXP wrap(const Music& x) {
     Music *ptr = new Music;
     (*ptr) = x;
@@ -173,11 +173,11 @@ namespace Rcpp {
     xptr.attr("class") = "music";
     return xptr;
   };
-  
+
   template <> NPatchInfo as(SEXP x) {
     return *XPtr<NPatchInfo>(x);
   };
-  
+
   template <> SEXP wrap(const NPatchInfo& x) {
     NPatchInfo *ptr = new NPatchInfo;
     (*ptr) = x;
@@ -185,11 +185,23 @@ namespace Rcpp {
     xptr.attr("class") = "npatch_info";
     return xptr;
   };
-  
+
+  template <> Ray as(SEXP x) {
+    return *XPtr<Ray>(x);
+  };
+
+  template <> SEXP wrap(const Ray& x) {
+    Ray *ptr = new Ray;
+    (*ptr) = x;
+    XPtr<Ray>xptr = XPtr<Ray>(ptr, true);
+    xptr.attr("class") = "ray";
+    return xptr;
+  };
+
   template <> RayCollision as(SEXP x) {
     return *XPtr<RayCollision>(x);
   };
-  
+
   template <> SEXP wrap(const RayCollision& x) {
     RayCollision *ptr = new RayCollision;
     (*ptr) = x;
@@ -197,11 +209,11 @@ namespace Rcpp {
     xptr.attr("class") = "ray_collision";
     return xptr;
   };
-  
+
   template <> Rectangle as(SEXP x) {
     return *XPtr<Rectangle>(x);
   };
-  
+
   template <> SEXP wrap(const Rectangle& x) {
     Rectangle *ptr = new Rectangle;
     (*ptr) = x;
@@ -209,11 +221,11 @@ namespace Rcpp {
     xptr.attr("class") = "rectangle";
     return xptr;
   };
-  
+
   template <> RenderTexture as(SEXP x) {
     return *XPtr<RenderTexture>(x);
   };
-  
+
   template <> SEXP wrap(const RenderTexture& x) {
     RenderTexture *ptr = new RenderTexture;
     (*ptr) = x;
@@ -221,11 +233,11 @@ namespace Rcpp {
     xptr.attr("class") = "render_texture";
     return xptr;
   };
-  
+
   template <> Shader as(SEXP x) {
     return *XPtr<Shader>(x);
   };
-  
+
   template <> SEXP wrap(const Shader& x) {
     Shader *ptr = new Shader;
     (*ptr) = x;
@@ -233,11 +245,11 @@ namespace Rcpp {
     xptr.attr("class") = "shader";
     return xptr;
   };
-  
+
   template <> Sound as(SEXP x) {
     return *XPtr<Sound>(x);
   };
-  
+
   template <> SEXP wrap(const Sound& x) {
     Sound *ptr = new Sound;
     (*ptr) = x;
@@ -245,11 +257,11 @@ namespace Rcpp {
     xptr.attr("class") = "sound";
     return xptr;
   };
-  
+
   template <> Texture as(SEXP x) {
     return *XPtr<Texture>(x);
   };
-  
+
   template <> SEXP wrap(const Texture& x) {
     Texture *ptr = new Texture;
     (*ptr) = x;
@@ -257,11 +269,11 @@ namespace Rcpp {
     xptr.attr("class") = "texture";
     return xptr;
   };
-  
+
   template <> Transform as(SEXP x) {
     return *XPtr<Transform>(x);
   };
-  
+
   template <> SEXP wrap(const Transform& x) {
     Transform *ptr = new Transform;
     (*ptr) = x;
@@ -269,11 +281,11 @@ namespace Rcpp {
     xptr.attr("class") = "transform";
     return xptr;
   };
-  
+
   template <> Wave as(SEXP x) {
     return *XPtr<Wave>(x);
   };
-  
+
   template <> SEXP wrap(const Wave& x) {
     Wave *ptr = new Wave;
     (*ptr) = x;
@@ -281,6 +293,6 @@ namespace Rcpp {
     xptr.attr("class") = "wave";
     return xptr;
   };
-  
+
 }
 

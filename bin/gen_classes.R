@@ -25,7 +25,8 @@ structs_generate <-
     "Sound",
     "RayCollision",
     "Transform",
-    "BoundingBox"
+    "BoundingBox",
+    "Ray"
     # "Music"
   )
 # Parse structs in raylib.h -----------------------------------------------
@@ -64,6 +65,7 @@ for (line in lines) {
         struct_name = struct_name,
         properties = properties,
         struct_lines = struct_lines,
+        create_constructor = TRUE,
         create_is_function = TRUE
       )
 
@@ -100,7 +102,13 @@ classes$camera_3d$properties$up$default <- c(0, 1, 0)
 classes$camera_3d$properties$projection$default <- 0
 classes$camera_3d$properties$projection$comment <- "Camera projection: either `camera_projection$perspective` (0) or `camera_projection$orthographic` (1)"
 
+classes$vector_2 <- NULL
+
 classes$color$create_is_function <- FALSE
+#classes$image$create_constructor <- FALSE
+#classes$image$properties$data <- NULL
+
+
 
 # Generate R files --------------------------------------------------------
 
@@ -129,13 +137,18 @@ for (cls in classes) {
 
   writeLines(c("#' ```", str_c("#' ", cls$struct_lines, ""), "#' ```", "#'"), con)
 
-  writeLines(glue("
-    #' @rdname {cls$class_name}
-    #' @export
-    {cls$class_name} <- function({make_r_params(cls$properties)}) {{
-    {make_checks(cls$properties)}  {cls$class_name}_({paste0(names(cls$properties), collapse = \", \")})
-    }}
+  if (cls$create_constructor) {
+    writeLines(glue("
+      #' @rdname {cls$class_name}
+      #' @export
+      {cls$class_name} <- function({make_r_params(cls$properties)}) {{
+      {make_checks(cls$properties)}  {cls$class_name}_({paste0(names(cls$properties), collapse = \", \")})
+      }}
 
+"), con)
+  }
+
+  writeLines(glue("
     {cls$class_name}_set <- function(o, field, value) {{
 "), con)
 

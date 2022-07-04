@@ -51,6 +51,10 @@ is_const_char_pointer <- function(x) {
   is.character(x) && length(x) == 1
 }
 
+is_void_pointer <- function(x) {
+  TRUE
+}
+
 is_music <- function(x) {
   class(x) == "music"
 }

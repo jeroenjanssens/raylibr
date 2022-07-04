@@ -2,6 +2,7 @@
 "_PACKAGE"
 
 ## usethis namespace: start
+#' @importFrom glue glue
 #' @importFrom Rcpp sourceCpp
 #' @importFrom rlang abort
 #' @importFrom utils .DollarNames
