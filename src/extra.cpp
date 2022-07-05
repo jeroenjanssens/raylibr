@@ -173,3 +173,8 @@ void set_shader_value_vector_3_(Shader shader, int loc_index, Vector3 &value) {
 void set_shader_value_vector_4_(Shader shader, int loc_index, Vector4 &value) {
   return SetShaderValue(shader, loc_index, &value, SHADER_UNIFORM_VEC4);
 }
+
+// [[Rcpp::export]]
+Font load_font_ex_(const char * file_name, int font_size) {
+  return LoadFontEx(file_name, font_size, 0, 0);
+}

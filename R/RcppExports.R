@@ -164,6 +164,10 @@ set_shader_value_vector_4_ <- function(shader, loc_index, value) {
     invisible(.Call(`_raylibr_set_shader_value_vector_4_`, shader, loc_index, value))
 }
 
+load_font_ex_ <- function(file_name, font_size) {
+    .Call(`_raylibr_load_font_ex_`, file_name, font_size)
+}
+
 init_window_ <- function(width, height, title) {
     invisible(.Call(`_raylibr_init_window_`, width, height, title))
 }
@@ -1262,10 +1266,6 @@ get_font_default_ <- function() {
 
 load_font_ <- function(file_name) {
     .Call(`_raylibr_load_font_`, file_name)
-}
-
-load_font_ex_ <- function(file_name, font_size, font_chars, glyph_count) {
-    .Call(`_raylibr_load_font_ex_`, file_name, font_size, font_chars, glyph_count)
 }
 
 load_font_from_image_ <- function(image, key, first_char) {

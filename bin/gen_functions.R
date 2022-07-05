@@ -27,7 +27,6 @@ funs$init_window$params$title$default <- "Raylibr"
 
 funs$text_replace$params$text$const_cast <- "char *"
 
-
 # Generate R functions ----------------------------------------------------
 
 filename <- here::here("R", glue("functions.R"))

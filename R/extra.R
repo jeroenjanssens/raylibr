@@ -23,3 +23,26 @@ set_shader_value <- function(shader, loc_index, value) {
     abort(paste0('`value` must be a number or a numerical vector of length 2, 3, or 4, not ', friendly_typeof(value), '.'), call = NULL)
   }
 }
+
+
+#' Load font ex
+#'
+#' Load font from file with extended parameters.
+#'
+#' @param file_name A string.
+#' @param font_size An integer.
+#'
+#' @return A font
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Font LoadFontEx(const char *fileName, int fontSize, int *fontChars, int glyphCount);
+#' ```
+#'
+#' @export
+load_font_ex <- function(file_name, font_size) {
+  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
+  if (!is_int(font_size)) abort(paste0('`font_size` must be an integer, not ', friendly_typeof(font_size), '.'), call = NULL)
+  load_font_ex_(file_name, font_size)
+}

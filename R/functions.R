@@ -5980,32 +5980,6 @@ load_font <- function(file_name) {
   load_font_(file_name)
 }
 
-#' Load font ex
-#'
-#' Load font from file with extended parameters.
-#'
-#' @param file_name A string.
-#' @param font_size An integer.
-#' @param font_chars An integer.
-#' @param glyph_count An integer.
-#'
-#' @return A font
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' Font LoadFontEx(const char *fileName, int fontSize, int *fontChars, int glyphCount);
-#' ```
-#'
-#' @export
-load_font_ex <- function(file_name, font_size, font_chars, glyph_count) {
-  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
-  if (!is_int(font_size)) abort(paste0('`font_size` must be an integer, not ', friendly_typeof(font_size), '.'), call = NULL)
-  if (!is_int(font_chars)) abort(paste0('`font_chars` must be an integer, not ', friendly_typeof(font_chars), '.'), call = NULL)
-  if (!is_int(glyph_count)) abort(paste0('`glyph_count` must be an integer, not ', friendly_typeof(glyph_count), '.'), call = NULL)
-  load_font_ex_(file_name, font_size, font_chars, glyph_count)
-}
-
 #' Load font from image
 #'
 #' Load font from Image (XNA style).

@@ -1378,11 +1378,6 @@ Font load_font_(const char * file_name) {
 }
 
 // [[Rcpp::export]]
-Font load_font_ex_(const char * file_name, int font_size, int &font_chars, int glyph_count) {
-  return LoadFontEx(file_name, font_size, &font_chars, glyph_count);
-}
-
-// [[Rcpp::export]]
 Font load_font_from_image_(Image image, Color key, int first_char) {
   return LoadFontFromImage(image, key, first_char);
 }

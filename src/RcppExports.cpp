@@ -470,6 +470,18 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// load_font_ex_
+Font load_font_ex_(const char * file_name, int font_size);
+RcppExport SEXP _raylibr_load_font_ex_(SEXP file_nameSEXP, SEXP font_sizeSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const char * >::type file_name(file_nameSEXP);
+    Rcpp::traits::input_parameter< int >::type font_size(font_sizeSEXP);
+    rcpp_result_gen = Rcpp::wrap(load_font_ex_(file_name, font_size));
+    return rcpp_result_gen;
+END_RCPP
+}
 // init_window_
 void init_window_(int width, int height, const char * title);
 RcppExport SEXP _raylibr_init_window_(SEXP widthSEXP, SEXP heightSEXP, SEXP titleSEXP) {
@@ -3634,20 +3646,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// load_font_ex_
-Font load_font_ex_(const char * file_name, int font_size, int& font_chars, int glyph_count);
-RcppExport SEXP _raylibr_load_font_ex_(SEXP file_nameSEXP, SEXP font_sizeSEXP, SEXP font_charsSEXP, SEXP glyph_countSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const char * >::type file_name(file_nameSEXP);
-    Rcpp::traits::input_parameter< int >::type font_size(font_sizeSEXP);
-    Rcpp::traits::input_parameter< int& >::type font_chars(font_charsSEXP);
-    Rcpp::traits::input_parameter< int >::type glyph_count(glyph_countSEXP);
-    rcpp_result_gen = Rcpp::wrap(load_font_ex_(file_name, font_size, font_chars, glyph_count));
-    return rcpp_result_gen;
-END_RCPP
-}
 // load_font_from_image_
 Font load_font_from_image_(Image image, Color key, int first_char);
 RcppExport SEXP _raylibr_load_font_from_image_(SEXP imageSEXP, SEXP keySEXP, SEXP first_charSEXP) {
@@ -5721,6 +5719,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_set_shader_value_vector_2_", (DL_FUNC) &_raylibr_set_shader_value_vector_2_, 3},
     {"_raylibr_set_shader_value_vector_3_", (DL_FUNC) &_raylibr_set_shader_value_vector_3_, 3},
     {"_raylibr_set_shader_value_vector_4_", (DL_FUNC) &_raylibr_set_shader_value_vector_4_, 3},
+    {"_raylibr_load_font_ex_", (DL_FUNC) &_raylibr_load_font_ex_, 2},
     {"_raylibr_init_window_", (DL_FUNC) &_raylibr_init_window_, 3},
     {"_raylibr_window_should_close_", (DL_FUNC) &_raylibr_window_should_close_, 0},
     {"_raylibr_close_window_", (DL_FUNC) &_raylibr_close_window_, 0},
@@ -5996,7 +5995,6 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_get_pixel_data_size_", (DL_FUNC) &_raylibr_get_pixel_data_size_, 3},
     {"_raylibr_get_font_default_", (DL_FUNC) &_raylibr_get_font_default_, 0},
     {"_raylibr_load_font_", (DL_FUNC) &_raylibr_load_font_, 1},
-    {"_raylibr_load_font_ex_", (DL_FUNC) &_raylibr_load_font_ex_, 4},
     {"_raylibr_load_font_from_image_", (DL_FUNC) &_raylibr_load_font_from_image_, 3},
     {"_raylibr_unload_font_data_", (DL_FUNC) &_raylibr_unload_font_data_, 2},
     {"_raylibr_unload_font_", (DL_FUNC) &_raylibr_unload_font_, 1},
