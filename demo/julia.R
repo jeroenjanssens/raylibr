@@ -10,10 +10,7 @@ points_of_interest <- list(
   c(-0.70176, -0.3842)
 )
 
-screen_width <- 800
-screen_height <- 450
-
-init_window(screen_width, screen_height, "raylibr demo - julia sets")
+init_window(960, 540, "raylibr demo - julia sets")
 
 s <- load_shader("", here("demo", "julia_set.fs"))
 
@@ -66,7 +63,7 @@ while (!window_should_close()) {
       if (is_mouse_button_down(mouse_button$right)) zoom <- zoom / 1.003
 
       mouse_pos <- get_mouse_position()
-      offset_speed <- mouse_pos - c(screen_width, screen_height) / 2
+      offset_speed <- mouse_pos - (c(get_screen_width(), get_screen_height()) / 2)
       offset <- offset + get_frame_time() * offset_speed
     } else {
       offset_speed <- c(0, 0)
@@ -89,6 +86,15 @@ while (!window_should_close()) {
   begin_shader_mode(s)
   draw_texture_ex(target$texture, c(0, 0), 0, 1, "white")
   end_shader_mode()
+
+  if (show_controls) {
+    draw_text("Press mouse buttons right/left to zoom in/out and move", 10, 15, 12, "white");
+    draw_text("Press Enter to toggle these controls", 10, 30, 12, "white");
+    draw_text("Press [1 - 6] to change point of interest", 10, 45, 12, "white");
+    draw_text("Press Left or Right to change speed", 10, 60, 12, "white");
+    draw_text("Press Space to pause movement animation", 10, 75, 12, "white");
+  }
+
   end_drawing()
 
 }
