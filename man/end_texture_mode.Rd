@@ -15,3 +15,46 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void EndTextureMode(void);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other texture functions: 
+\code{\link{begin_texture_mode}()},
+\code{\link{draw_cube_texture_rec}()},
+\code{\link{draw_cube_texture}()},
+\code{\link{draw_texture_ex}()},
+\code{\link{draw_texture_npatch}()},
+\code{\link{draw_texture_poly}()},
+\code{\link{draw_texture_pro}()},
+\code{\link{draw_texture_quad}()},
+\code{\link{draw_texture_rec}()},
+\code{\link{draw_texture_tiled}()},
+\code{\link{draw_texture_v}()},
+\code{\link{draw_texture}()},
+\code{\link{gen_texture_mipmaps}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_render_texture}()},
+\code{\link{load_texture_from_image}()},
+\code{\link{load_texture}()},
+\code{\link{set_shader_value_texture}()},
+\code{\link{set_shapes_texture}()},
+\code{\link{set_texture_filter}()},
+\code{\link{set_texture_wrap}()},
+\code{\link{unload_render_texture}()},
+\code{\link{unload_texture}()}
+
+Other mode functions: 
+\code{\link{begin_blend_mode}()},
+\code{\link{begin_mode_2d}()},
+\code{\link{begin_mode_3d}()},
+\code{\link{begin_scissor_mode}()},
+\code{\link{begin_shader_mode}()},
+\code{\link{begin_texture_mode}()},
+\code{\link{end_blend_mode}()},
+\code{\link{end_mode_2d}()},
+\code{\link{end_mode_3d}()},
+\code{\link{end_scissor_mode}()},
+\code{\link{end_shader_mode}()},
+\code{\link{end_vr_stereo_mode}()},
+\code{\link{set_camera_mode}()}
+}
+\concept{mode functions}
+\concept{texture functions}

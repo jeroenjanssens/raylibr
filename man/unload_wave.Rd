@@ -18,3 +18,11 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void UnloadWave(Wave wave);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other wave functions: 
+\code{\link{export_wave_as_code}()},
+\code{\link{export_wave}()},
+\code{\link{load_sound_from_wave}()},
+\code{\link{load_wave}()}
+}
+\concept{wave functions}

@@ -18,3 +18,20 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void BeginBlendMode(int mode);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other mode functions: 
+\code{\link{begin_mode_2d}()},
+\code{\link{begin_mode_3d}()},
+\code{\link{begin_scissor_mode}()},
+\code{\link{begin_shader_mode}()},
+\code{\link{begin_texture_mode}()},
+\code{\link{end_blend_mode}()},
+\code{\link{end_mode_2d}()},
+\code{\link{end_mode_3d}()},
+\code{\link{end_scissor_mode}()},
+\code{\link{end_shader_mode}()},
+\code{\link{end_texture_mode}()},
+\code{\link{end_vr_stereo_mode}()},
+\code{\link{set_camera_mode}()}
+}
+\concept{mode functions}

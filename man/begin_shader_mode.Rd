@@ -18,3 +18,31 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void BeginShaderMode(Shader shader);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other shader functions: 
+\code{\link{end_shader_mode}()},
+\code{\link{get_shader_location_attrib}()},
+\code{\link{get_shader_location}()},
+\code{\link{load_shader_from_memory}()},
+\code{\link{load_shader}()},
+\code{\link{set_shader_value_matrix}()},
+\code{\link{set_shader_value_texture}()},
+\code{\link{unload_shader}()}
+
+Other mode functions: 
+\code{\link{begin_blend_mode}()},
+\code{\link{begin_mode_2d}()},
+\code{\link{begin_mode_3d}()},
+\code{\link{begin_scissor_mode}()},
+\code{\link{begin_texture_mode}()},
+\code{\link{end_blend_mode}()},
+\code{\link{end_mode_2d}()},
+\code{\link{end_mode_3d}()},
+\code{\link{end_scissor_mode}()},
+\code{\link{end_shader_mode}()},
+\code{\link{end_texture_mode}()},
+\code{\link{end_vr_stereo_mode}()},
+\code{\link{set_camera_mode}()}
+}
+\concept{mode functions}
+\concept{shader functions}

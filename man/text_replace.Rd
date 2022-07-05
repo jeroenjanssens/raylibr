@@ -25,3 +25,24 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{char *TextReplace(char *text, const char *replace, const char *by);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other text functions: 
+\code{\link{draw_text_codepoint}()},
+\code{\link{draw_text_ex}()},
+\code{\link{draw_text_pro}()},
+\code{\link{draw_text}()},
+\code{\link{image_draw_text_ex}()},
+\code{\link{image_draw_text}()},
+\code{\link{image_text_ex}()},
+\code{\link{image_text}()},
+\code{\link{load_file_text}()},
+\code{\link{measure_text_ex}()},
+\code{\link{measure_text}()},
+\code{\link{text_find_index}()},
+\code{\link{text_insert}()},
+\code{\link{text_to_integer}()},
+\code{\link{text_to_lower}()},
+\code{\link{text_to_pascal}()},
+\code{\link{text_to_upper}()}
+}
+\concept{text functions}

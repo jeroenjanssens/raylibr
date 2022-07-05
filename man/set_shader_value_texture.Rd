@@ -22,3 +22,41 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void SetShaderValueTexture(Shader shader, int locIndex, Texture2D texture);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other shader functions: 
+\code{\link{begin_shader_mode}()},
+\code{\link{end_shader_mode}()},
+\code{\link{get_shader_location_attrib}()},
+\code{\link{get_shader_location}()},
+\code{\link{load_shader_from_memory}()},
+\code{\link{load_shader}()},
+\code{\link{set_shader_value_matrix}()},
+\code{\link{unload_shader}()}
+
+Other texture functions: 
+\code{\link{begin_texture_mode}()},
+\code{\link{draw_cube_texture_rec}()},
+\code{\link{draw_cube_texture}()},
+\code{\link{draw_texture_ex}()},
+\code{\link{draw_texture_npatch}()},
+\code{\link{draw_texture_poly}()},
+\code{\link{draw_texture_pro}()},
+\code{\link{draw_texture_quad}()},
+\code{\link{draw_texture_rec}()},
+\code{\link{draw_texture_tiled}()},
+\code{\link{draw_texture_v}()},
+\code{\link{draw_texture}()},
+\code{\link{end_texture_mode}()},
+\code{\link{gen_texture_mipmaps}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_render_texture}()},
+\code{\link{load_texture_from_image}()},
+\code{\link{load_texture}()},
+\code{\link{set_shapes_texture}()},
+\code{\link{set_texture_filter}()},
+\code{\link{set_texture_wrap}()},
+\code{\link{unload_render_texture}()},
+\code{\link{unload_texture}()}
+}
+\concept{shader functions}
+\concept{texture functions}

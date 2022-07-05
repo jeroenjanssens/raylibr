@@ -23,3 +23,14 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsFileExtension(const char *fileName, const char *ext);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other file functions: 
+\code{\link{file_exists}()},
+\code{\link{get_file_extension}()},
+\code{\link{get_file_mod_time}()},
+\code{\link{get_file_name_without_ext}()},
+\code{\link{get_file_name}()},
+\code{\link{is_file_dropped}()},
+\code{\link{load_file_text}()}
+}
+\concept{file functions}

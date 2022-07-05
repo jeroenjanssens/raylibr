@@ -21,3 +21,19 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsMouseButtonReleased(int button);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other mouse functions: 
+\code{\link{get_mouse_delta}()},
+\code{\link{get_mouse_position}()},
+\code{\link{get_mouse_wheel_move}()},
+\code{\link{get_mouse_x}()},
+\code{\link{get_mouse_y}()},
+\code{\link{is_mouse_button_down}()},
+\code{\link{is_mouse_button_pressed}()},
+\code{\link{is_mouse_button_up}()},
+\code{\link{set_mouse_cursor}()},
+\code{\link{set_mouse_offset}()},
+\code{\link{set_mouse_position}()},
+\code{\link{set_mouse_scale}()}
+}
+\concept{mouse functions}

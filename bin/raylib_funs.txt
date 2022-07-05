@@ -550,12 +550,12 @@ RLAPI void DrawBillboard(Camera camera, Texture2D texture, Vector3 position, flo
 RLAPI bool CheckCollisionSpheres(Vector3 center1, float radius1, Vector3 center2, float radius2);       // Check collision between two spheres
 RLAPI bool CheckCollisionBoxes(BoundingBox box1, BoundingBox box2);                                     // Check collision between two bounding boxes
 RLAPI bool CheckCollisionBoxSphere(BoundingBox box, Vector3 center, float radius);                      // Check collision between box and sphere
-# RLAPI RayCollision GetRayCollisionSphere(Ray ray, Vector3 center, float radius);                        // Get collision info between ray and sphere
-# RLAPI RayCollision GetRayCollisionBox(Ray ray, BoundingBox box);                                        // Get collision info between ray and box
-# RLAPI RayCollision GetRayCollisionModel(Ray ray, Model model);                                          // Get collision info between ray and model
-# RLAPI RayCollision GetRayCollisionMesh(Ray ray, Mesh mesh, Matrix transform);                           // Get collision info between ray and mesh
-# RLAPI RayCollision GetRayCollisionTriangle(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3);                // Get collision info between ray and triangle
-# RLAPI RayCollision GetRayCollisionQuad(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3, Vector3 p4);        // Get collision info between ray and quad
+RLAPI RayCollision GetRayCollisionSphere(Ray ray, Vector3 center, float radius);                        // Get collision info between ray and sphere
+RLAPI RayCollision GetRayCollisionBox(Ray ray, BoundingBox box);                                        // Get collision info between ray and box
+RLAPI RayCollision GetRayCollisionModel(Ray ray, Model model);                                          // Get collision info between ray and model
+RLAPI RayCollision GetRayCollisionMesh(Ray ray, Mesh mesh, Matrix transform);                           // Get collision info between ray and mesh
+RLAPI RayCollision GetRayCollisionTriangle(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3);                // Get collision info between ray and triangle
+RLAPI RayCollision GetRayCollisionQuad(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3, Vector3 p4);        // Get collision info between ray and quad
 #
 # //------------------------------------------------------------------------------------
 # // Audio Loading and Playing Functions (Module: audio)
@@ -575,8 +575,8 @@ RLAPI Sound LoadSoundFromWave(Wave wave);                             // Load so
 # RLAPI void UpdateSound(Sound sound, const void *data, int sampleCount); // Update sound buffer with new data
 RLAPI void UnloadWave(Wave wave);                                     // Unload wave data
 RLAPI void UnloadSound(Sound sound);                                  // Unload sound
-# RLAPI bool ExportWave(Wave wave, const char *fileName);               // Export wave data to file, returns true on success
-# RLAPI bool ExportWaveAsCode(Wave wave, const char *fileName);         // Export wave sample data to code (.h), returns true on success
+RLAPI bool ExportWave(Wave wave, const char *fileName);               // Export wave data to file, returns true on success
+RLAPI bool ExportWaveAsCode(Wave wave, const char *fileName);         // Export wave sample data to code (.h), returns true on success
 #
 # // Wave/Sound management functions
 RLAPI void PlaySound(Sound sound);                                    // Play a sound
@@ -611,18 +611,18 @@ RLAPI void SetMusicPitch(Music music, float pitch);                   // Set pit
 RLAPI float GetMusicTimeLength(Music music);                          // Get music time length (in seconds)
 RLAPI float GetMusicTimePlayed(Music music);                          // Get current music time played (in seconds)
 # // AudioStream management functions
-# RLAPI AudioStream LoadAudioStream(unsigned int sampleRate, unsigned int sampleSize, unsigned int channels); // Load audio stream (to stream raw audio pcm data)
-# RLAPI void UnloadAudioStream(AudioStream stream);                      // Unload audio stream and free memory
+RLAPI AudioStream LoadAudioStream(unsigned int sampleRate, unsigned int sampleSize, unsigned int channels); // Load audio stream (to stream raw audio pcm data)
+RLAPI void UnloadAudioStream(AudioStream stream);                      // Unload audio stream and free memory
 # RLAPI void UpdateAudioStream(AudioStream stream, const void *data, int frameCount); // Update audio stream buffers with data
-# RLAPI bool IsAudioStreamProcessed(AudioStream stream);                // Check if any audio stream buffers requires refill
-# RLAPI void PlayAudioStream(AudioStream stream);                       // Play audio stream
-# RLAPI void PauseAudioStream(AudioStream stream);                      // Pause audio stream
-# RLAPI void ResumeAudioStream(AudioStream stream);                     // Resume audio stream
-# RLAPI bool IsAudioStreamPlaying(AudioStream stream);                  // Check if audio stream is playing
-# RLAPI void StopAudioStream(AudioStream stream);                       // Stop audio stream
-# RLAPI void SetAudioStreamVolume(AudioStream stream, float volume);    // Set volume for audio stream (1.0 is max level)
-# RLAPI void SetAudioStreamPitch(AudioStream stream, float pitch);      // Set pitch for audio stream (1.0 is base level)
-# RLAPI void SetAudioStreamBufferSizeDefault(int size);                 // Default size for new audio streams
+RLAPI bool IsAudioStreamProcessed(AudioStream stream);                // Check if any audio stream buffers requires refill
+RLAPI void PlayAudioStream(AudioStream stream);                       // Play audio stream
+RLAPI void PauseAudioStream(AudioStream stream);                      // Pause audio stream
+RLAPI void ResumeAudioStream(AudioStream stream);                     // Resume audio stream
+RLAPI bool IsAudioStreamPlaying(AudioStream stream);                  // Check if audio stream is playing
+RLAPI void StopAudioStream(AudioStream stream);                       // Stop audio stream
+RLAPI void SetAudioStreamVolume(AudioStream stream, float volume);    // Set volume for audio stream (1.0 is max level)
+RLAPI void SetAudioStreamPitch(AudioStream stream, float pitch);      // Set pitch for audio stream (1.0 is base level)
+RLAPI void SetAudioStreamBufferSizeDefault(int size);                 // Default size for new audio streams
 RMAPI float Vector2Angle(Vector2 v1, Vector2 v2);
 RMAPI Vector2 Vector2MoveTowards(Vector2 v, Vector2 target, float maxDistance);
 RMAPI float Vector2Distance(Vector2 v1, Vector2 v2);

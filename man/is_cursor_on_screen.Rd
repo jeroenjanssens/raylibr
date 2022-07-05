@@ -18,3 +18,23 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsCursorOnScreen(void);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other cursor functions: 
+\code{\link{disable_cursor}()},
+\code{\link{enable_cursor}()},
+\code{\link{hide_cursor}()},
+\code{\link{is_cursor_hidden}()},
+\code{\link{set_mouse_cursor}()},
+\code{\link{show_cursor}()}
+
+Other screen functions: 
+\code{\link{get_screen_height}()},
+\code{\link{get_screen_to_world_2d}()},
+\code{\link{get_screen_width}()},
+\code{\link{get_world_to_screen_2d}()},
+\code{\link{get_world_to_screen_ex}()},
+\code{\link{get_world_to_screen}()},
+\code{\link{load_image_from_screen}()}
+}
+\concept{cursor functions}
+\concept{screen functions}

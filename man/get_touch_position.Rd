@@ -21,3 +21,11 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Vector2 GetTouchPosition(int index);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other touch functions: 
+\code{\link{get_touch_point_count}()},
+\code{\link{get_touch_point_id}()},
+\code{\link{get_touch_x}()},
+\code{\link{get_touch_y}()}
+}
+\concept{touch functions}

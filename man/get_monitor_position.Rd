@@ -21,3 +21,16 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Vector2 GetMonitorPosition(int monitor);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other monitor functions: 
+\code{\link{get_current_monitor}()},
+\code{\link{get_monitor_count}()},
+\code{\link{get_monitor_height}()},
+\code{\link{get_monitor_name}()},
+\code{\link{get_monitor_physical_height}()},
+\code{\link{get_monitor_physical_width}()},
+\code{\link{get_monitor_refresh_rate}()},
+\code{\link{get_monitor_width}()},
+\code{\link{set_window_monitor}()}
+}
+\concept{monitor functions}

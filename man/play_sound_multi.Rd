@@ -18,3 +18,18 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void PlaySoundMulti(Sound sound);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other sound functions: 
+\code{\link{is_sound_playing}()},
+\code{\link{load_sound_from_wave}()},
+\code{\link{load_sound}()},
+\code{\link{pause_sound}()},
+\code{\link{play_sound}()},
+\code{\link{resume_sound}()},
+\code{\link{set_sound_pitch}()},
+\code{\link{set_sound_volume}()},
+\code{\link{stop_sound_multi}()},
+\code{\link{stop_sound}()},
+\code{\link{unload_sound}()}
+}
+\concept{sound functions}

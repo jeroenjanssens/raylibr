@@ -12,6 +12,11 @@ for (line in lines) {
   if (str_starts(line, "#")) next
   line <- str_replace(line, regex(" ?R[LM]API ?"), "")
   fun <- parse_fun(line)
+
+  # Family documention
+  parts <- unlist(str_split(make_rcpp_name(fun$name), "_"))
+  fun$families <- parts[parts %in% families]
+
   funs <- append(funs, list(fun))
   names(funs)[length(funs)] <- make_rcpp_name(fun$name)
 }
@@ -26,6 +31,8 @@ funs$init_window$params$height$default <- 480
 funs$init_window$params$title$default <- "Raylibr"
 
 funs$text_replace$params$text$const_cast <- "char *"
+
+funs$get_char_pressed$families <- "key"
 
 # Generate R functions ----------------------------------------------------
 
@@ -54,7 +61,7 @@ for(fun in funs) {
     #' ```
     #' {fun$code}
     #' ```
-    #'
+    {make_rd_families(fun$families)}
     #' @export
     {make_rcpp_name(fun$name)} <- function({make_r_params(fun$params)}) {{
     {make_checks(fun$params)}  {make_rcpp_name(fun$name)}_({paste0(names(fun$params), collapse = \", \")})

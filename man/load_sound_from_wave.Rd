@@ -21,3 +21,25 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Sound LoadSoundFromWave(Wave wave);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other sound functions: 
+\code{\link{is_sound_playing}()},
+\code{\link{load_sound}()},
+\code{\link{pause_sound}()},
+\code{\link{play_sound_multi}()},
+\code{\link{play_sound}()},
+\code{\link{resume_sound}()},
+\code{\link{set_sound_pitch}()},
+\code{\link{set_sound_volume}()},
+\code{\link{stop_sound_multi}()},
+\code{\link{stop_sound}()},
+\code{\link{unload_sound}()}
+
+Other wave functions: 
+\code{\link{export_wave_as_code}()},
+\code{\link{export_wave}()},
+\code{\link{load_wave}()},
+\code{\link{unload_wave}()}
+}
+\concept{sound functions}
+\concept{wave functions}

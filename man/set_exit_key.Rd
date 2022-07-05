@@ -18,3 +18,13 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void SetExitKey(int key);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other key functions: 
+\code{\link{get_char_pressed}()},
+\code{\link{get_key_pressed}()},
+\code{\link{is_key_down}()},
+\code{\link{is_key_pressed}()},
+\code{\link{is_key_released}()},
+\code{\link{is_key_up}()}
+}
+\concept{key functions}

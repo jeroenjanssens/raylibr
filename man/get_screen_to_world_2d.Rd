@@ -23,3 +23,20 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Vector2 GetScreenToWorld2D(Vector2 position, Camera2D camera);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other screen functions: 
+\code{\link{get_screen_height}()},
+\code{\link{get_screen_width}()},
+\code{\link{get_world_to_screen_2d}()},
+\code{\link{get_world_to_screen_ex}()},
+\code{\link{get_world_to_screen}()},
+\code{\link{is_cursor_on_screen}()},
+\code{\link{load_image_from_screen}()}
+
+Other world functions: 
+\code{\link{get_world_to_screen_2d}()},
+\code{\link{get_world_to_screen_ex}()},
+\code{\link{get_world_to_screen}()}
+}
+\concept{screen functions}
+\concept{world functions}

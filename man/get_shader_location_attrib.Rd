@@ -23,3 +23,15 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{int GetShaderLocationAttrib(Shader shader, const char *attribName);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other shader functions: 
+\code{\link{begin_shader_mode}()},
+\code{\link{end_shader_mode}()},
+\code{\link{get_shader_location}()},
+\code{\link{load_shader_from_memory}()},
+\code{\link{load_shader}()},
+\code{\link{set_shader_value_matrix}()},
+\code{\link{set_shader_value_texture}()},
+\code{\link{unload_shader}()}
+}
+\concept{shader functions}

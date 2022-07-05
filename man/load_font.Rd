@@ -21,3 +21,11 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Font LoadFont(const char *fileName);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other font functions: 
+\code{\link{get_font_default}()},
+\code{\link{load_font_from_image}()},
+\code{\link{unload_font_data}()},
+\code{\link{unload_font}()}
+}
+\concept{font functions}

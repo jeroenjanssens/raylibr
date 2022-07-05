@@ -1638,6 +1638,36 @@ bool check_collision_box_sphere_(BoundingBox box, Vector3 center, float radius) 
 }
 
 // [[Rcpp::export]]
+RayCollision get_ray_collision_sphere_(Ray ray, Vector3 center, float radius) {
+  return GetRayCollisionSphere(ray, center, radius);
+}
+
+// [[Rcpp::export]]
+RayCollision get_ray_collision_box_(Ray ray, BoundingBox box) {
+  return GetRayCollisionBox(ray, box);
+}
+
+// [[Rcpp::export]]
+RayCollision get_ray_collision_model_(Ray ray, Model model) {
+  return GetRayCollisionModel(ray, model);
+}
+
+// [[Rcpp::export]]
+RayCollision get_ray_collision_mesh_(Ray ray, Mesh mesh, RaylibMatrix transform) {
+  return GetRayCollisionMesh(ray, mesh, transform);
+}
+
+// [[Rcpp::export]]
+RayCollision get_ray_collision_triangle_(Ray ray, Vector3 p_1, Vector3 p_2, Vector3 p_3) {
+  return GetRayCollisionTriangle(ray, p_1, p_2, p_3);
+}
+
+// [[Rcpp::export]]
+RayCollision get_ray_collision_quad_(Ray ray, Vector3 p_1, Vector3 p_2, Vector3 p_3, Vector3 p_4) {
+  return GetRayCollisionQuad(ray, p_1, p_2, p_3, p_4);
+}
+
+// [[Rcpp::export]]
 void init_audio_device_() {
   return InitAudioDevice();
 }
@@ -1680,6 +1710,16 @@ void unload_wave_(Wave wave) {
 // [[Rcpp::export]]
 void unload_sound_(Sound sound) {
   return UnloadSound(sound);
+}
+
+// [[Rcpp::export]]
+bool export_wave_(Wave wave, const char * file_name) {
+  return ExportWave(wave, file_name);
+}
+
+// [[Rcpp::export]]
+bool export_wave_as_code_(Wave wave, const char * file_name) {
+  return ExportWaveAsCode(wave, file_name);
 }
 
 // [[Rcpp::export]]
@@ -1795,6 +1835,61 @@ float get_music_time_length_(Music music) {
 // [[Rcpp::export]]
 float get_music_time_played_(Music music) {
   return GetMusicTimePlayed(music);
+}
+
+// [[Rcpp::export]]
+AudioStream load_audio_stream_(unsigned int sample_rate, unsigned int sample_size, unsigned int channels) {
+  return LoadAudioStream(sample_rate, sample_size, channels);
+}
+
+// [[Rcpp::export]]
+void unload_audio_stream_(AudioStream stream) {
+  return UnloadAudioStream(stream);
+}
+
+// [[Rcpp::export]]
+bool is_audio_stream_processed_(AudioStream stream) {
+  return IsAudioStreamProcessed(stream);
+}
+
+// [[Rcpp::export]]
+void play_audio_stream_(AudioStream stream) {
+  return PlayAudioStream(stream);
+}
+
+// [[Rcpp::export]]
+void pause_audio_stream_(AudioStream stream) {
+  return PauseAudioStream(stream);
+}
+
+// [[Rcpp::export]]
+void resume_audio_stream_(AudioStream stream) {
+  return ResumeAudioStream(stream);
+}
+
+// [[Rcpp::export]]
+bool is_audio_stream_playing_(AudioStream stream) {
+  return IsAudioStreamPlaying(stream);
+}
+
+// [[Rcpp::export]]
+void stop_audio_stream_(AudioStream stream) {
+  return StopAudioStream(stream);
+}
+
+// [[Rcpp::export]]
+void set_audio_stream_volume_(AudioStream stream, float volume) {
+  return SetAudioStreamVolume(stream, volume);
+}
+
+// [[Rcpp::export]]
+void set_audio_stream_pitch_(AudioStream stream, float pitch) {
+  return SetAudioStreamPitch(stream, pitch);
+}
+
+// [[Rcpp::export]]
+void set_audio_stream_buffer_size_default_(int size) {
+  return SetAudioStreamBufferSizeDefault(size);
 }
 
 // [[Rcpp::export]]

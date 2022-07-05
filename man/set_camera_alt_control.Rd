@@ -18,3 +18,14 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void SetCameraAltControl(int keyAlt);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other camera functions: 
+\code{\link{get_camera_matrix_2d}()},
+\code{\link{get_camera_matrix}()},
+\code{\link{set_camera_mode}()},
+\code{\link{set_camera_move_controls}()},
+\code{\link{set_camera_pan_control}()},
+\code{\link{set_camera_smooth_zoom_control}()},
+\code{\link{update_camera}()}
+}
+\concept{camera functions}

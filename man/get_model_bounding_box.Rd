@@ -21,3 +21,13 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{BoundingBox GetModelBoundingBox(Model model);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other model functions: 
+\code{\link{draw_model_ex}()},
+\code{\link{draw_model_wires}()},
+\code{\link{draw_model}()},
+\code{\link{get_ray_collision_model}()},
+\code{\link{load_model}()},
+\code{\link{unload_model}()}
+}
+\concept{model functions}

@@ -18,3 +18,9 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{int GetFPS(void);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other fps functions: 
+\code{\link{draw_fps}()},
+\code{\link{set_target_fps}()}
+}
+\concept{fps functions}

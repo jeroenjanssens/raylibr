@@ -18,3 +18,14 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{int GetScreenWidth(void);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other screen functions: 
+\code{\link{get_screen_height}()},
+\code{\link{get_screen_to_world_2d}()},
+\code{\link{get_world_to_screen_2d}()},
+\code{\link{get_world_to_screen_ex}()},
+\code{\link{get_world_to_screen}()},
+\code{\link{is_cursor_on_screen}()},
+\code{\link{load_image_from_screen}()}
+}
+\concept{screen functions}

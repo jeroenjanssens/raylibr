@@ -18,3 +18,13 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsCursorHidden(void);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other cursor functions: 
+\code{\link{disable_cursor}()},
+\code{\link{enable_cursor}()},
+\code{\link{hide_cursor}()},
+\code{\link{is_cursor_on_screen}()},
+\code{\link{set_mouse_cursor}()},
+\code{\link{show_cursor}()}
+}
+\concept{cursor functions}

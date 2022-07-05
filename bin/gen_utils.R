@@ -3,6 +3,8 @@ library(purrr)
 library(glue)
 library(dplyr)
 
+families <- c("window", "screen", "monitor", "fps", "cursor", "mode", "shader", "file", "directory", "key", "gamepad", "mouse", "touch", "camera", "draw", "line", "circle", "rectangle", "collision", "image", "color", "text", "texture", "font", "model", "mesh", "material", "audio", "volume", "init", "sound", "wave", "music", "stream", "world")
+
 alias_type <- function(x) {
   case_when(x == "Camera" ~ "Camera3D",
             x == "Quaternion" ~ "Vector4",
@@ -14,6 +16,9 @@ alias_type <- function(x) {
             x == "char *" ~ "const char *",
             TRUE ~ x)
 }
+
+# test_fun <- "draw_texture_ex"
+
 
 # structs_generate <-
 #   c("Rectangle",
@@ -255,6 +260,17 @@ make_rd_name <- function(x) {
   str_replace_all(x, regex("([a-z])([0-9A-Z])"), regex("\\1 \\2")) %>%
   stringr::str_replace_all(regex("([0-9])([^_]{2,})"), regex("\\1 \\2")) %>%
   str_to_sentence()
+}
+
+make_rd_families <- function(fams) {
+  if (length(fams) < 1) return("#'")
+
+  s <- c("#'")
+  for (fam in fams) {
+    s <- c(s, glue("#' @family {fam} functions"))
+  }
+  s <- c(s, "#'")
+  str_c(s, collapse = "\n")
 }
 
 make_as <- function(name) {

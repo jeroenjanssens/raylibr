@@ -21,3 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{const char *GetPrevDirectoryPath(const char *dirPath);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other directory functions: 
+\code{\link{change_directory}()},
+\code{\link{clear_directory_files}()},
+\code{\link{directory_exists}()},
+\code{\link{get_directory_path}()},
+\code{\link{get_working_directory}()}
+}
+\concept{directory functions}

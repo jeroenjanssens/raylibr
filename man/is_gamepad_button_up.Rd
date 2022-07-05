@@ -23,3 +23,16 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsGamepadButtonUp(int gamepad, int button);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other gamepad functions: 
+\code{\link{get_gamepad_axis_count}()},
+\code{\link{get_gamepad_axis_movement}()},
+\code{\link{get_gamepad_button_pressed}()},
+\code{\link{get_gamepad_name}()},
+\code{\link{is_gamepad_available}()},
+\code{\link{is_gamepad_button_down}()},
+\code{\link{is_gamepad_button_pressed}()},
+\code{\link{is_gamepad_button_released}()},
+\code{\link{set_gamepad_mappings}()}
+}
+\concept{gamepad functions}

@@ -21,3 +21,34 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{char *LoadFileText(const char *fileName);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other file functions: 
+\code{\link{file_exists}()},
+\code{\link{get_file_extension}()},
+\code{\link{get_file_mod_time}()},
+\code{\link{get_file_name_without_ext}()},
+\code{\link{get_file_name}()},
+\code{\link{is_file_dropped}()},
+\code{\link{is_file_extension}()}
+
+Other text functions: 
+\code{\link{draw_text_codepoint}()},
+\code{\link{draw_text_ex}()},
+\code{\link{draw_text_pro}()},
+\code{\link{draw_text}()},
+\code{\link{image_draw_text_ex}()},
+\code{\link{image_draw_text}()},
+\code{\link{image_text_ex}()},
+\code{\link{image_text}()},
+\code{\link{measure_text_ex}()},
+\code{\link{measure_text}()},
+\code{\link{text_find_index}()},
+\code{\link{text_insert}()},
+\code{\link{text_replace}()},
+\code{\link{text_to_integer}()},
+\code{\link{text_to_lower}()},
+\code{\link{text_to_pascal}()},
+\code{\link{text_to_upper}()}
+}
+\concept{file functions}
+\concept{text functions}

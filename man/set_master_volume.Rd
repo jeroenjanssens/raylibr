@@ -18,3 +18,10 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void SetMasterVolume(float volume);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other volume functions: 
+\code{\link{set_audio_stream_volume}()},
+\code{\link{set_music_volume}()},
+\code{\link{set_sound_volume}()}
+}
+\concept{volume functions}

@@ -21,3 +21,22 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Vector3 ColorToHSV(Color color);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other color functions: 
+\code{\link{color_alpha_blend}()},
+\code{\link{color_alpha}()},
+\code{\link{color_from_hsv}()},
+\code{\link{color_from_normalized}()},
+\code{\link{color_normalize}()},
+\code{\link{color_to_int}()},
+\code{\link{gen_image_color}()},
+\code{\link{get_color}()},
+\code{\link{get_image_color}()},
+\code{\link{image_color_brightness}()},
+\code{\link{image_color_contrast}()},
+\code{\link{image_color_grayscale}()},
+\code{\link{image_color_invert}()},
+\code{\link{image_color_replace}()},
+\code{\link{image_color_tint}()}
+}
+\concept{color functions}

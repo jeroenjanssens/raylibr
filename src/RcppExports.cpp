@@ -4311,6 +4311,85 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// get_ray_collision_sphere_
+RayCollision get_ray_collision_sphere_(Ray ray, Vector3 center, float radius);
+RcppExport SEXP _raylibr_get_ray_collision_sphere_(SEXP raySEXP, SEXP centerSEXP, SEXP radiusSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Ray >::type ray(raySEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type center(centerSEXP);
+    Rcpp::traits::input_parameter< float >::type radius(radiusSEXP);
+    rcpp_result_gen = Rcpp::wrap(get_ray_collision_sphere_(ray, center, radius));
+    return rcpp_result_gen;
+END_RCPP
+}
+// get_ray_collision_box_
+RayCollision get_ray_collision_box_(Ray ray, BoundingBox box);
+RcppExport SEXP _raylibr_get_ray_collision_box_(SEXP raySEXP, SEXP boxSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Ray >::type ray(raySEXP);
+    Rcpp::traits::input_parameter< BoundingBox >::type box(boxSEXP);
+    rcpp_result_gen = Rcpp::wrap(get_ray_collision_box_(ray, box));
+    return rcpp_result_gen;
+END_RCPP
+}
+// get_ray_collision_model_
+RayCollision get_ray_collision_model_(Ray ray, Model model);
+RcppExport SEXP _raylibr_get_ray_collision_model_(SEXP raySEXP, SEXP modelSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Ray >::type ray(raySEXP);
+    Rcpp::traits::input_parameter< Model >::type model(modelSEXP);
+    rcpp_result_gen = Rcpp::wrap(get_ray_collision_model_(ray, model));
+    return rcpp_result_gen;
+END_RCPP
+}
+// get_ray_collision_mesh_
+RayCollision get_ray_collision_mesh_(Ray ray, Mesh mesh, RaylibMatrix transform);
+RcppExport SEXP _raylibr_get_ray_collision_mesh_(SEXP raySEXP, SEXP meshSEXP, SEXP transformSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Ray >::type ray(raySEXP);
+    Rcpp::traits::input_parameter< Mesh >::type mesh(meshSEXP);
+    Rcpp::traits::input_parameter< RaylibMatrix >::type transform(transformSEXP);
+    rcpp_result_gen = Rcpp::wrap(get_ray_collision_mesh_(ray, mesh, transform));
+    return rcpp_result_gen;
+END_RCPP
+}
+// get_ray_collision_triangle_
+RayCollision get_ray_collision_triangle_(Ray ray, Vector3 p_1, Vector3 p_2, Vector3 p_3);
+RcppExport SEXP _raylibr_get_ray_collision_triangle_(SEXP raySEXP, SEXP p_1SEXP, SEXP p_2SEXP, SEXP p_3SEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Ray >::type ray(raySEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type p_1(p_1SEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type p_2(p_2SEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type p_3(p_3SEXP);
+    rcpp_result_gen = Rcpp::wrap(get_ray_collision_triangle_(ray, p_1, p_2, p_3));
+    return rcpp_result_gen;
+END_RCPP
+}
+// get_ray_collision_quad_
+RayCollision get_ray_collision_quad_(Ray ray, Vector3 p_1, Vector3 p_2, Vector3 p_3, Vector3 p_4);
+RcppExport SEXP _raylibr_get_ray_collision_quad_(SEXP raySEXP, SEXP p_1SEXP, SEXP p_2SEXP, SEXP p_3SEXP, SEXP p_4SEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Ray >::type ray(raySEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type p_1(p_1SEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type p_2(p_2SEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type p_3(p_3SEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type p_4(p_4SEXP);
+    rcpp_result_gen = Rcpp::wrap(get_ray_collision_quad_(ray, p_1, p_2, p_3, p_4));
+    return rcpp_result_gen;
+END_RCPP
+}
 // init_audio_device_
 void init_audio_device_();
 RcppExport SEXP _raylibr_init_audio_device_() {
@@ -4400,6 +4479,30 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< Sound >::type sound(soundSEXP);
     unload_sound_(sound);
     return R_NilValue;
+END_RCPP
+}
+// export_wave_
+bool export_wave_(Wave wave, const char * file_name);
+RcppExport SEXP _raylibr_export_wave_(SEXP waveSEXP, SEXP file_nameSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Wave >::type wave(waveSEXP);
+    Rcpp::traits::input_parameter< const char * >::type file_name(file_nameSEXP);
+    rcpp_result_gen = Rcpp::wrap(export_wave_(wave, file_name));
+    return rcpp_result_gen;
+END_RCPP
+}
+// export_wave_as_code_
+bool export_wave_as_code_(Wave wave, const char * file_name);
+RcppExport SEXP _raylibr_export_wave_as_code_(SEXP waveSEXP, SEXP file_nameSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Wave >::type wave(waveSEXP);
+    Rcpp::traits::input_parameter< const char * >::type file_name(file_nameSEXP);
+    rcpp_result_gen = Rcpp::wrap(export_wave_as_code_(wave, file_name));
+    return rcpp_result_gen;
 END_RCPP
 }
 // play_sound_
@@ -4639,6 +4742,123 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< Music >::type music(musicSEXP);
     rcpp_result_gen = Rcpp::wrap(get_music_time_played_(music));
     return rcpp_result_gen;
+END_RCPP
+}
+// load_audio_stream_
+AudioStream load_audio_stream_(unsigned int sample_rate, unsigned int sample_size, unsigned int channels);
+RcppExport SEXP _raylibr_load_audio_stream_(SEXP sample_rateSEXP, SEXP sample_sizeSEXP, SEXP channelsSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< unsigned int >::type sample_rate(sample_rateSEXP);
+    Rcpp::traits::input_parameter< unsigned int >::type sample_size(sample_sizeSEXP);
+    Rcpp::traits::input_parameter< unsigned int >::type channels(channelsSEXP);
+    rcpp_result_gen = Rcpp::wrap(load_audio_stream_(sample_rate, sample_size, channels));
+    return rcpp_result_gen;
+END_RCPP
+}
+// unload_audio_stream_
+void unload_audio_stream_(AudioStream stream);
+RcppExport SEXP _raylibr_unload_audio_stream_(SEXP streamSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< AudioStream >::type stream(streamSEXP);
+    unload_audio_stream_(stream);
+    return R_NilValue;
+END_RCPP
+}
+// is_audio_stream_processed_
+bool is_audio_stream_processed_(AudioStream stream);
+RcppExport SEXP _raylibr_is_audio_stream_processed_(SEXP streamSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< AudioStream >::type stream(streamSEXP);
+    rcpp_result_gen = Rcpp::wrap(is_audio_stream_processed_(stream));
+    return rcpp_result_gen;
+END_RCPP
+}
+// play_audio_stream_
+void play_audio_stream_(AudioStream stream);
+RcppExport SEXP _raylibr_play_audio_stream_(SEXP streamSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< AudioStream >::type stream(streamSEXP);
+    play_audio_stream_(stream);
+    return R_NilValue;
+END_RCPP
+}
+// pause_audio_stream_
+void pause_audio_stream_(AudioStream stream);
+RcppExport SEXP _raylibr_pause_audio_stream_(SEXP streamSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< AudioStream >::type stream(streamSEXP);
+    pause_audio_stream_(stream);
+    return R_NilValue;
+END_RCPP
+}
+// resume_audio_stream_
+void resume_audio_stream_(AudioStream stream);
+RcppExport SEXP _raylibr_resume_audio_stream_(SEXP streamSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< AudioStream >::type stream(streamSEXP);
+    resume_audio_stream_(stream);
+    return R_NilValue;
+END_RCPP
+}
+// is_audio_stream_playing_
+bool is_audio_stream_playing_(AudioStream stream);
+RcppExport SEXP _raylibr_is_audio_stream_playing_(SEXP streamSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< AudioStream >::type stream(streamSEXP);
+    rcpp_result_gen = Rcpp::wrap(is_audio_stream_playing_(stream));
+    return rcpp_result_gen;
+END_RCPP
+}
+// stop_audio_stream_
+void stop_audio_stream_(AudioStream stream);
+RcppExport SEXP _raylibr_stop_audio_stream_(SEXP streamSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< AudioStream >::type stream(streamSEXP);
+    stop_audio_stream_(stream);
+    return R_NilValue;
+END_RCPP
+}
+// set_audio_stream_volume_
+void set_audio_stream_volume_(AudioStream stream, float volume);
+RcppExport SEXP _raylibr_set_audio_stream_volume_(SEXP streamSEXP, SEXP volumeSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< AudioStream >::type stream(streamSEXP);
+    Rcpp::traits::input_parameter< float >::type volume(volumeSEXP);
+    set_audio_stream_volume_(stream, volume);
+    return R_NilValue;
+END_RCPP
+}
+// set_audio_stream_pitch_
+void set_audio_stream_pitch_(AudioStream stream, float pitch);
+RcppExport SEXP _raylibr_set_audio_stream_pitch_(SEXP streamSEXP, SEXP pitchSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< AudioStream >::type stream(streamSEXP);
+    Rcpp::traits::input_parameter< float >::type pitch(pitchSEXP);
+    set_audio_stream_pitch_(stream, pitch);
+    return R_NilValue;
+END_RCPP
+}
+// set_audio_stream_buffer_size_default_
+void set_audio_stream_buffer_size_default_(int size);
+RcppExport SEXP _raylibr_set_audio_stream_buffer_size_default_(SEXP sizeSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type size(sizeSEXP);
+    set_audio_stream_buffer_size_default_(size);
+    return R_NilValue;
 END_RCPP
 }
 // vector_2_angle_
@@ -6047,6 +6267,12 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_check_collision_spheres_", (DL_FUNC) &_raylibr_check_collision_spheres_, 4},
     {"_raylibr_check_collision_boxes_", (DL_FUNC) &_raylibr_check_collision_boxes_, 2},
     {"_raylibr_check_collision_box_sphere_", (DL_FUNC) &_raylibr_check_collision_box_sphere_, 3},
+    {"_raylibr_get_ray_collision_sphere_", (DL_FUNC) &_raylibr_get_ray_collision_sphere_, 3},
+    {"_raylibr_get_ray_collision_box_", (DL_FUNC) &_raylibr_get_ray_collision_box_, 2},
+    {"_raylibr_get_ray_collision_model_", (DL_FUNC) &_raylibr_get_ray_collision_model_, 2},
+    {"_raylibr_get_ray_collision_mesh_", (DL_FUNC) &_raylibr_get_ray_collision_mesh_, 3},
+    {"_raylibr_get_ray_collision_triangle_", (DL_FUNC) &_raylibr_get_ray_collision_triangle_, 4},
+    {"_raylibr_get_ray_collision_quad_", (DL_FUNC) &_raylibr_get_ray_collision_quad_, 5},
     {"_raylibr_init_audio_device_", (DL_FUNC) &_raylibr_init_audio_device_, 0},
     {"_raylibr_close_audio_device_", (DL_FUNC) &_raylibr_close_audio_device_, 0},
     {"_raylibr_is_audio_device_ready_", (DL_FUNC) &_raylibr_is_audio_device_ready_, 0},
@@ -6056,6 +6282,8 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_load_sound_from_wave_", (DL_FUNC) &_raylibr_load_sound_from_wave_, 1},
     {"_raylibr_unload_wave_", (DL_FUNC) &_raylibr_unload_wave_, 1},
     {"_raylibr_unload_sound_", (DL_FUNC) &_raylibr_unload_sound_, 1},
+    {"_raylibr_export_wave_", (DL_FUNC) &_raylibr_export_wave_, 2},
+    {"_raylibr_export_wave_as_code_", (DL_FUNC) &_raylibr_export_wave_as_code_, 2},
     {"_raylibr_play_sound_", (DL_FUNC) &_raylibr_play_sound_, 1},
     {"_raylibr_stop_sound_", (DL_FUNC) &_raylibr_stop_sound_, 1},
     {"_raylibr_pause_sound_", (DL_FUNC) &_raylibr_pause_sound_, 1},
@@ -6079,6 +6307,17 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_set_music_pitch_", (DL_FUNC) &_raylibr_set_music_pitch_, 2},
     {"_raylibr_get_music_time_length_", (DL_FUNC) &_raylibr_get_music_time_length_, 1},
     {"_raylibr_get_music_time_played_", (DL_FUNC) &_raylibr_get_music_time_played_, 1},
+    {"_raylibr_load_audio_stream_", (DL_FUNC) &_raylibr_load_audio_stream_, 3},
+    {"_raylibr_unload_audio_stream_", (DL_FUNC) &_raylibr_unload_audio_stream_, 1},
+    {"_raylibr_is_audio_stream_processed_", (DL_FUNC) &_raylibr_is_audio_stream_processed_, 1},
+    {"_raylibr_play_audio_stream_", (DL_FUNC) &_raylibr_play_audio_stream_, 1},
+    {"_raylibr_pause_audio_stream_", (DL_FUNC) &_raylibr_pause_audio_stream_, 1},
+    {"_raylibr_resume_audio_stream_", (DL_FUNC) &_raylibr_resume_audio_stream_, 1},
+    {"_raylibr_is_audio_stream_playing_", (DL_FUNC) &_raylibr_is_audio_stream_playing_, 1},
+    {"_raylibr_stop_audio_stream_", (DL_FUNC) &_raylibr_stop_audio_stream_, 1},
+    {"_raylibr_set_audio_stream_volume_", (DL_FUNC) &_raylibr_set_audio_stream_volume_, 2},
+    {"_raylibr_set_audio_stream_pitch_", (DL_FUNC) &_raylibr_set_audio_stream_pitch_, 2},
+    {"_raylibr_set_audio_stream_buffer_size_default_", (DL_FUNC) &_raylibr_set_audio_stream_buffer_size_default_, 1},
     {"_raylibr_vector_2_angle_", (DL_FUNC) &_raylibr_vector_2_angle_, 2},
     {"_raylibr_vector_2_move_towards_", (DL_FUNC) &_raylibr_vector_2_move_towards_, 3},
     {"_raylibr_vector_2_distance_", (DL_FUNC) &_raylibr_vector_2_distance_, 2},

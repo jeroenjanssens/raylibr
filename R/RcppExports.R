@@ -1476,6 +1476,30 @@ check_collision_box_sphere_ <- function(box, center, radius) {
     .Call(`_raylibr_check_collision_box_sphere_`, box, center, radius)
 }
 
+get_ray_collision_sphere_ <- function(ray, center, radius) {
+    .Call(`_raylibr_get_ray_collision_sphere_`, ray, center, radius)
+}
+
+get_ray_collision_box_ <- function(ray, box) {
+    .Call(`_raylibr_get_ray_collision_box_`, ray, box)
+}
+
+get_ray_collision_model_ <- function(ray, model) {
+    .Call(`_raylibr_get_ray_collision_model_`, ray, model)
+}
+
+get_ray_collision_mesh_ <- function(ray, mesh, transform) {
+    .Call(`_raylibr_get_ray_collision_mesh_`, ray, mesh, transform)
+}
+
+get_ray_collision_triangle_ <- function(ray, p_1, p_2, p_3) {
+    .Call(`_raylibr_get_ray_collision_triangle_`, ray, p_1, p_2, p_3)
+}
+
+get_ray_collision_quad_ <- function(ray, p_1, p_2, p_3, p_4) {
+    .Call(`_raylibr_get_ray_collision_quad_`, ray, p_1, p_2, p_3, p_4)
+}
+
 init_audio_device_ <- function() {
     invisible(.Call(`_raylibr_init_audio_device_`))
 }
@@ -1510,6 +1534,14 @@ unload_wave_ <- function(wave) {
 
 unload_sound_ <- function(sound) {
     invisible(.Call(`_raylibr_unload_sound_`, sound))
+}
+
+export_wave_ <- function(wave, file_name) {
+    .Call(`_raylibr_export_wave_`, wave, file_name)
+}
+
+export_wave_as_code_ <- function(wave, file_name) {
+    .Call(`_raylibr_export_wave_as_code_`, wave, file_name)
 }
 
 play_sound_ <- function(sound) {
@@ -1602,6 +1634,50 @@ get_music_time_length_ <- function(music) {
 
 get_music_time_played_ <- function(music) {
     .Call(`_raylibr_get_music_time_played_`, music)
+}
+
+load_audio_stream_ <- function(sample_rate, sample_size, channels) {
+    .Call(`_raylibr_load_audio_stream_`, sample_rate, sample_size, channels)
+}
+
+unload_audio_stream_ <- function(stream) {
+    invisible(.Call(`_raylibr_unload_audio_stream_`, stream))
+}
+
+is_audio_stream_processed_ <- function(stream) {
+    .Call(`_raylibr_is_audio_stream_processed_`, stream)
+}
+
+play_audio_stream_ <- function(stream) {
+    invisible(.Call(`_raylibr_play_audio_stream_`, stream))
+}
+
+pause_audio_stream_ <- function(stream) {
+    invisible(.Call(`_raylibr_pause_audio_stream_`, stream))
+}
+
+resume_audio_stream_ <- function(stream) {
+    invisible(.Call(`_raylibr_resume_audio_stream_`, stream))
+}
+
+is_audio_stream_playing_ <- function(stream) {
+    .Call(`_raylibr_is_audio_stream_playing_`, stream)
+}
+
+stop_audio_stream_ <- function(stream) {
+    invisible(.Call(`_raylibr_stop_audio_stream_`, stream))
+}
+
+set_audio_stream_volume_ <- function(stream, volume) {
+    invisible(.Call(`_raylibr_set_audio_stream_volume_`, stream, volume))
+}
+
+set_audio_stream_pitch_ <- function(stream, pitch) {
+    invisible(.Call(`_raylibr_set_audio_stream_pitch_`, stream, pitch))
+}
+
+set_audio_stream_buffer_size_default_ <- function(size) {
+    invisible(.Call(`_raylibr_set_audio_stream_buffer_size_default_`, size))
 }
 
 vector_2_angle_ <- function(v_1, v_2) {
