@@ -182,3 +182,19 @@ camera_projection <- list(
   perspective = 0,
   orthographic = 1
 )
+
+#' @export
+shader_uniform <- list(
+  float = 0,
+  vec2 = 1,
+  vec3 = 2,
+  vec4 = 3,
+  int = 4,
+  ivec2 = 5,
+  ivec3 = 6,
+  ivec4 = 7,
+  sampler2d = 8
+)
+
+
+

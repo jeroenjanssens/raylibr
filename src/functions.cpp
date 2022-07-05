@@ -258,6 +258,11 @@ void end_texture_mode_() {
 }
 
 // [[Rcpp::export]]
+void begin_shader_mode_(Shader shader) {
+  return BeginShaderMode(shader);
+}
+
+// [[Rcpp::export]]
 void end_shader_mode_() {
   return EndShaderMode();
 }
@@ -285,6 +290,41 @@ void end_scissor_mode_() {
 // [[Rcpp::export]]
 void end_vr_stereo_mode_() {
   return EndVrStereoMode();
+}
+
+// [[Rcpp::export]]
+Shader load_shader_(const char * vs_file_name, const char * fs_file_name) {
+  return LoadShader(vs_file_name, fs_file_name);
+}
+
+// [[Rcpp::export]]
+Shader load_shader_from_memory_(const char * vs_code, const char * fs_code) {
+  return LoadShaderFromMemory(vs_code, fs_code);
+}
+
+// [[Rcpp::export]]
+int get_shader_location_(Shader shader, const char * uniform_name) {
+  return GetShaderLocation(shader, uniform_name);
+}
+
+// [[Rcpp::export]]
+int get_shader_location_attrib_(Shader shader, const char * attrib_name) {
+  return GetShaderLocationAttrib(shader, attrib_name);
+}
+
+// [[Rcpp::export]]
+void set_shader_value_matrix_(Shader shader, int loc_index, RaylibMatrix mat) {
+  return SetShaderValueMatrix(shader, loc_index, mat);
+}
+
+// [[Rcpp::export]]
+void set_shader_value_texture_(Shader shader, int loc_index, Texture texture) {
+  return SetShaderValueTexture(shader, loc_index, texture);
+}
+
+// [[Rcpp::export]]
+void unload_shader_(Shader shader) {
+  return UnloadShader(shader);
 }
 
 // [[Rcpp::export]]
@@ -353,6 +393,26 @@ void set_trace_log_level_(int log_level) {
 }
 
 // [[Rcpp::export]]
+const char * load_file_text_(const char * file_name) {
+  return LoadFileText(file_name);
+}
+
+// [[Rcpp::export]]
+bool file_exists_(const char * file_name) {
+  return FileExists(file_name);
+}
+
+// [[Rcpp::export]]
+bool directory_exists_(const char * dir_path) {
+  return DirectoryExists(dir_path);
+}
+
+// [[Rcpp::export]]
+bool is_file_extension_(const char * file_name, const char * ext) {
+  return IsFileExtension(file_name, ext);
+}
+
+// [[Rcpp::export]]
 const char * get_file_extension_(const char * file_name) {
   return GetFileExtension(file_name);
 }
@@ -405,6 +465,16 @@ void clear_dropped_files_() {
 // [[Rcpp::export]]
 long get_file_mod_time_(const char * file_name) {
   return GetFileModTime(file_name);
+}
+
+// [[Rcpp::export]]
+bool save_storage_value_(unsigned int position, int value) {
+  return SaveStorageValue(position, value);
+}
+
+// [[Rcpp::export]]
+int load_storage_value_(unsigned int position) {
+  return LoadStorageValue(position);
 }
 
 // [[Rcpp::export]]
@@ -620,6 +690,16 @@ Vector2 get_gesture_pinch_vector_() {
 // [[Rcpp::export]]
 float get_gesture_pinch_angle_() {
   return GetGesturePinchAngle();
+}
+
+// [[Rcpp::export]]
+void set_camera_mode_(Camera3D camera, int mode) {
+  return SetCameraMode(camera, mode);
+}
+
+// [[Rcpp::export]]
+void update_camera_(Camera3D &camera) {
+  return UpdateCamera(&camera);
 }
 
 // [[Rcpp::export]]
@@ -1163,6 +1243,21 @@ Texture load_texture_from_image_(Image image) {
 }
 
 // [[Rcpp::export]]
+RenderTexture load_render_texture_(int width, int height) {
+  return LoadRenderTexture(width, height);
+}
+
+// [[Rcpp::export]]
+void unload_texture_(Texture texture) {
+  return UnloadTexture(texture);
+}
+
+// [[Rcpp::export]]
+void unload_render_texture_(RenderTexture target) {
+  return UnloadRenderTexture(target);
+}
+
+// [[Rcpp::export]]
 void gen_texture_mipmaps_(Texture &texture) {
   return GenTextureMipmaps(&texture);
 }
@@ -1353,8 +1448,13 @@ Rectangle get_glyph_atlas_rec_(Font font, int codepoint) {
 }
 
 // [[Rcpp::export]]
-void text_append_(char &text, const char * append, int &position) {
-  return TextAppend(&text, append, &position);
+const char * text_replace_(const char * text, const char * replace, const char * by) {
+  return TextReplace(const_cast<char *>(text), replace, by);
+}
+
+// [[Rcpp::export]]
+const char * text_insert_(const char * text, const char * insert, int position) {
+  return TextInsert(text, insert, position);
 }
 
 // [[Rcpp::export]]

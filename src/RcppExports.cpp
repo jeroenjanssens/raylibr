@@ -422,6 +422,54 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// set_shader_value_float_
+void set_shader_value_float_(Shader shader, int loc_index, float& value);
+RcppExport SEXP _raylibr_set_shader_value_float_(SEXP shaderSEXP, SEXP loc_indexSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Shader >::type shader(shaderSEXP);
+    Rcpp::traits::input_parameter< int >::type loc_index(loc_indexSEXP);
+    Rcpp::traits::input_parameter< float& >::type value(valueSEXP);
+    set_shader_value_float_(shader, loc_index, value);
+    return R_NilValue;
+END_RCPP
+}
+// set_shader_value_vector_2_
+void set_shader_value_vector_2_(Shader shader, int loc_index, Vector2& value);
+RcppExport SEXP _raylibr_set_shader_value_vector_2_(SEXP shaderSEXP, SEXP loc_indexSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Shader >::type shader(shaderSEXP);
+    Rcpp::traits::input_parameter< int >::type loc_index(loc_indexSEXP);
+    Rcpp::traits::input_parameter< Vector2& >::type value(valueSEXP);
+    set_shader_value_vector_2_(shader, loc_index, value);
+    return R_NilValue;
+END_RCPP
+}
+// set_shader_value_vector_3_
+void set_shader_value_vector_3_(Shader shader, int loc_index, Vector3& value);
+RcppExport SEXP _raylibr_set_shader_value_vector_3_(SEXP shaderSEXP, SEXP loc_indexSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Shader >::type shader(shaderSEXP);
+    Rcpp::traits::input_parameter< int >::type loc_index(loc_indexSEXP);
+    Rcpp::traits::input_parameter< Vector3& >::type value(valueSEXP);
+    set_shader_value_vector_3_(shader, loc_index, value);
+    return R_NilValue;
+END_RCPP
+}
+// set_shader_value_vector_4_
+void set_shader_value_vector_4_(Shader shader, int loc_index, Vector4& value);
+RcppExport SEXP _raylibr_set_shader_value_vector_4_(SEXP shaderSEXP, SEXP loc_indexSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Shader >::type shader(shaderSEXP);
+    Rcpp::traits::input_parameter< int >::type loc_index(loc_indexSEXP);
+    Rcpp::traits::input_parameter< Vector4& >::type value(valueSEXP);
+    set_shader_value_vector_4_(shader, loc_index, value);
+    return R_NilValue;
+END_RCPP
+}
 // init_window_
 void init_window_(int width, int height, const char * title);
 RcppExport SEXP _raylibr_init_window_(SEXP widthSEXP, SEXP heightSEXP, SEXP titleSEXP) {
@@ -931,6 +979,16 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// begin_shader_mode_
+void begin_shader_mode_(Shader shader);
+RcppExport SEXP _raylibr_begin_shader_mode_(SEXP shaderSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Shader >::type shader(shaderSEXP);
+    begin_shader_mode_(shader);
+    return R_NilValue;
+END_RCPP
+}
 // end_shader_mode_
 void end_shader_mode_();
 RcppExport SEXP _raylibr_end_shader_mode_() {
@@ -987,6 +1045,88 @@ RcppExport SEXP _raylibr_end_vr_stereo_mode_() {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     end_vr_stereo_mode_();
+    return R_NilValue;
+END_RCPP
+}
+// load_shader_
+Shader load_shader_(const char * vs_file_name, const char * fs_file_name);
+RcppExport SEXP _raylibr_load_shader_(SEXP vs_file_nameSEXP, SEXP fs_file_nameSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const char * >::type vs_file_name(vs_file_nameSEXP);
+    Rcpp::traits::input_parameter< const char * >::type fs_file_name(fs_file_nameSEXP);
+    rcpp_result_gen = Rcpp::wrap(load_shader_(vs_file_name, fs_file_name));
+    return rcpp_result_gen;
+END_RCPP
+}
+// load_shader_from_memory_
+Shader load_shader_from_memory_(const char * vs_code, const char * fs_code);
+RcppExport SEXP _raylibr_load_shader_from_memory_(SEXP vs_codeSEXP, SEXP fs_codeSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const char * >::type vs_code(vs_codeSEXP);
+    Rcpp::traits::input_parameter< const char * >::type fs_code(fs_codeSEXP);
+    rcpp_result_gen = Rcpp::wrap(load_shader_from_memory_(vs_code, fs_code));
+    return rcpp_result_gen;
+END_RCPP
+}
+// get_shader_location_
+int get_shader_location_(Shader shader, const char * uniform_name);
+RcppExport SEXP _raylibr_get_shader_location_(SEXP shaderSEXP, SEXP uniform_nameSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Shader >::type shader(shaderSEXP);
+    Rcpp::traits::input_parameter< const char * >::type uniform_name(uniform_nameSEXP);
+    rcpp_result_gen = Rcpp::wrap(get_shader_location_(shader, uniform_name));
+    return rcpp_result_gen;
+END_RCPP
+}
+// get_shader_location_attrib_
+int get_shader_location_attrib_(Shader shader, const char * attrib_name);
+RcppExport SEXP _raylibr_get_shader_location_attrib_(SEXP shaderSEXP, SEXP attrib_nameSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Shader >::type shader(shaderSEXP);
+    Rcpp::traits::input_parameter< const char * >::type attrib_name(attrib_nameSEXP);
+    rcpp_result_gen = Rcpp::wrap(get_shader_location_attrib_(shader, attrib_name));
+    return rcpp_result_gen;
+END_RCPP
+}
+// set_shader_value_matrix_
+void set_shader_value_matrix_(Shader shader, int loc_index, RaylibMatrix mat);
+RcppExport SEXP _raylibr_set_shader_value_matrix_(SEXP shaderSEXP, SEXP loc_indexSEXP, SEXP matSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Shader >::type shader(shaderSEXP);
+    Rcpp::traits::input_parameter< int >::type loc_index(loc_indexSEXP);
+    Rcpp::traits::input_parameter< RaylibMatrix >::type mat(matSEXP);
+    set_shader_value_matrix_(shader, loc_index, mat);
+    return R_NilValue;
+END_RCPP
+}
+// set_shader_value_texture_
+void set_shader_value_texture_(Shader shader, int loc_index, Texture texture);
+RcppExport SEXP _raylibr_set_shader_value_texture_(SEXP shaderSEXP, SEXP loc_indexSEXP, SEXP textureSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Shader >::type shader(shaderSEXP);
+    Rcpp::traits::input_parameter< int >::type loc_index(loc_indexSEXP);
+    Rcpp::traits::input_parameter< Texture >::type texture(textureSEXP);
+    set_shader_value_texture_(shader, loc_index, texture);
+    return R_NilValue;
+END_RCPP
+}
+// unload_shader_
+void unload_shader_(Shader shader);
+RcppExport SEXP _raylibr_unload_shader_(SEXP shaderSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Shader >::type shader(shaderSEXP);
+    unload_shader_(shader);
     return R_NilValue;
 END_RCPP
 }
@@ -1134,6 +1274,51 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// load_file_text_
+const char * load_file_text_(const char * file_name);
+RcppExport SEXP _raylibr_load_file_text_(SEXP file_nameSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const char * >::type file_name(file_nameSEXP);
+    rcpp_result_gen = Rcpp::wrap(load_file_text_(file_name));
+    return rcpp_result_gen;
+END_RCPP
+}
+// file_exists_
+bool file_exists_(const char * file_name);
+RcppExport SEXP _raylibr_file_exists_(SEXP file_nameSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const char * >::type file_name(file_nameSEXP);
+    rcpp_result_gen = Rcpp::wrap(file_exists_(file_name));
+    return rcpp_result_gen;
+END_RCPP
+}
+// directory_exists_
+bool directory_exists_(const char * dir_path);
+RcppExport SEXP _raylibr_directory_exists_(SEXP dir_pathSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const char * >::type dir_path(dir_pathSEXP);
+    rcpp_result_gen = Rcpp::wrap(directory_exists_(dir_path));
+    return rcpp_result_gen;
+END_RCPP
+}
+// is_file_extension_
+bool is_file_extension_(const char * file_name, const char * ext);
+RcppExport SEXP _raylibr_is_file_extension_(SEXP file_nameSEXP, SEXP extSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const char * >::type file_name(file_nameSEXP);
+    Rcpp::traits::input_parameter< const char * >::type ext(extSEXP);
+    rcpp_result_gen = Rcpp::wrap(is_file_extension_(file_name, ext));
+    return rcpp_result_gen;
+END_RCPP
+}
 // get_file_extension_
 const char * get_file_extension_(const char * file_name);
 RcppExport SEXP _raylibr_get_file_extension_(SEXP file_nameSEXP) {
@@ -1246,6 +1431,29 @@ BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const char * >::type file_name(file_nameSEXP);
     rcpp_result_gen = Rcpp::wrap(get_file_mod_time_(file_name));
+    return rcpp_result_gen;
+END_RCPP
+}
+// save_storage_value_
+bool save_storage_value_(unsigned int position, int value);
+RcppExport SEXP _raylibr_save_storage_value_(SEXP positionSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< unsigned int >::type position(positionSEXP);
+    Rcpp::traits::input_parameter< int >::type value(valueSEXP);
+    rcpp_result_gen = Rcpp::wrap(save_storage_value_(position, value));
+    return rcpp_result_gen;
+END_RCPP
+}
+// load_storage_value_
+int load_storage_value_(unsigned int position);
+RcppExport SEXP _raylibr_load_storage_value_(SEXP positionSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< unsigned int >::type position(positionSEXP);
+    rcpp_result_gen = Rcpp::wrap(load_storage_value_(position));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -1705,6 +1913,27 @@ BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     rcpp_result_gen = Rcpp::wrap(get_gesture_pinch_angle_());
     return rcpp_result_gen;
+END_RCPP
+}
+// set_camera_mode_
+void set_camera_mode_(Camera3D camera, int mode);
+RcppExport SEXP _raylibr_set_camera_mode_(SEXP cameraSEXP, SEXP modeSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Camera3D >::type camera(cameraSEXP);
+    Rcpp::traits::input_parameter< int >::type mode(modeSEXP);
+    set_camera_mode_(camera, mode);
+    return R_NilValue;
+END_RCPP
+}
+// update_camera_
+void update_camera_(Camera3D& camera);
+RcppExport SEXP _raylibr_update_camera_(SEXP cameraSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Camera3D& >::type camera(cameraSEXP);
+    update_camera_(camera);
+    return R_NilValue;
 END_RCPP
 }
 // set_camera_pan_control_
@@ -3075,6 +3304,38 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// load_render_texture_
+RenderTexture load_render_texture_(int width, int height);
+RcppExport SEXP _raylibr_load_render_texture_(SEXP widthSEXP, SEXP heightSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type width(widthSEXP);
+    Rcpp::traits::input_parameter< int >::type height(heightSEXP);
+    rcpp_result_gen = Rcpp::wrap(load_render_texture_(width, height));
+    return rcpp_result_gen;
+END_RCPP
+}
+// unload_texture_
+void unload_texture_(Texture texture);
+RcppExport SEXP _raylibr_unload_texture_(SEXP textureSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Texture >::type texture(textureSEXP);
+    unload_texture_(texture);
+    return R_NilValue;
+END_RCPP
+}
+// unload_render_texture_
+void unload_render_texture_(RenderTexture target);
+RcppExport SEXP _raylibr_unload_render_texture_(SEXP targetSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RenderTexture >::type target(targetSEXP);
+    unload_render_texture_(target);
+    return R_NilValue;
+END_RCPP
+}
 // gen_texture_mipmaps_
 void gen_texture_mipmaps_(Texture& texture);
 RcppExport SEXP _raylibr_gen_texture_mipmaps_(SEXP textureSEXP) {
@@ -3554,16 +3815,30 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// text_append_
-void text_append_(char& text, const char * append, int& position);
-RcppExport SEXP _raylibr_text_append_(SEXP textSEXP, SEXP appendSEXP, SEXP positionSEXP) {
+// text_replace_
+const char * text_replace_(const char * text, const char * replace, const char * by);
+RcppExport SEXP _raylibr_text_replace_(SEXP textSEXP, SEXP replaceSEXP, SEXP bySEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< char& >::type text(textSEXP);
-    Rcpp::traits::input_parameter< const char * >::type append(appendSEXP);
-    Rcpp::traits::input_parameter< int& >::type position(positionSEXP);
-    text_append_(text, append, position);
-    return R_NilValue;
+    Rcpp::traits::input_parameter< const char * >::type text(textSEXP);
+    Rcpp::traits::input_parameter< const char * >::type replace(replaceSEXP);
+    Rcpp::traits::input_parameter< const char * >::type by(bySEXP);
+    rcpp_result_gen = Rcpp::wrap(text_replace_(text, replace, by));
+    return rcpp_result_gen;
+END_RCPP
+}
+// text_insert_
+const char * text_insert_(const char * text, const char * insert, int position);
+RcppExport SEXP _raylibr_text_insert_(SEXP textSEXP, SEXP insertSEXP, SEXP positionSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const char * >::type text(textSEXP);
+    Rcpp::traits::input_parameter< const char * >::type insert(insertSEXP);
+    Rcpp::traits::input_parameter< int >::type position(positionSEXP);
+    rcpp_result_gen = Rcpp::wrap(text_insert_(text, insert, position));
+    return rcpp_result_gen;
 END_RCPP
 }
 // text_find_index_
@@ -5442,6 +5717,10 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_color_get_a_", (DL_FUNC) &_raylibr_color_get_a_, 1},
     {"_raylibr_color_set_a_", (DL_FUNC) &_raylibr_color_set_a_, 2},
     {"_raylibr_as_color", (DL_FUNC) &_raylibr_as_color, 1},
+    {"_raylibr_set_shader_value_float_", (DL_FUNC) &_raylibr_set_shader_value_float_, 3},
+    {"_raylibr_set_shader_value_vector_2_", (DL_FUNC) &_raylibr_set_shader_value_vector_2_, 3},
+    {"_raylibr_set_shader_value_vector_3_", (DL_FUNC) &_raylibr_set_shader_value_vector_3_, 3},
+    {"_raylibr_set_shader_value_vector_4_", (DL_FUNC) &_raylibr_set_shader_value_vector_4_, 3},
     {"_raylibr_init_window_", (DL_FUNC) &_raylibr_init_window_, 3},
     {"_raylibr_window_should_close_", (DL_FUNC) &_raylibr_window_should_close_, 0},
     {"_raylibr_close_window_", (DL_FUNC) &_raylibr_close_window_, 0},
@@ -5493,12 +5772,20 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_end_mode_3d_", (DL_FUNC) &_raylibr_end_mode_3d_, 0},
     {"_raylibr_begin_texture_mode_", (DL_FUNC) &_raylibr_begin_texture_mode_, 1},
     {"_raylibr_end_texture_mode_", (DL_FUNC) &_raylibr_end_texture_mode_, 0},
+    {"_raylibr_begin_shader_mode_", (DL_FUNC) &_raylibr_begin_shader_mode_, 1},
     {"_raylibr_end_shader_mode_", (DL_FUNC) &_raylibr_end_shader_mode_, 0},
     {"_raylibr_begin_blend_mode_", (DL_FUNC) &_raylibr_begin_blend_mode_, 1},
     {"_raylibr_end_blend_mode_", (DL_FUNC) &_raylibr_end_blend_mode_, 0},
     {"_raylibr_begin_scissor_mode_", (DL_FUNC) &_raylibr_begin_scissor_mode_, 4},
     {"_raylibr_end_scissor_mode_", (DL_FUNC) &_raylibr_end_scissor_mode_, 0},
     {"_raylibr_end_vr_stereo_mode_", (DL_FUNC) &_raylibr_end_vr_stereo_mode_, 0},
+    {"_raylibr_load_shader_", (DL_FUNC) &_raylibr_load_shader_, 2},
+    {"_raylibr_load_shader_from_memory_", (DL_FUNC) &_raylibr_load_shader_from_memory_, 2},
+    {"_raylibr_get_shader_location_", (DL_FUNC) &_raylibr_get_shader_location_, 2},
+    {"_raylibr_get_shader_location_attrib_", (DL_FUNC) &_raylibr_get_shader_location_attrib_, 2},
+    {"_raylibr_set_shader_value_matrix_", (DL_FUNC) &_raylibr_set_shader_value_matrix_, 3},
+    {"_raylibr_set_shader_value_texture_", (DL_FUNC) &_raylibr_set_shader_value_texture_, 3},
+    {"_raylibr_unload_shader_", (DL_FUNC) &_raylibr_unload_shader_, 1},
     {"_raylibr_get_camera_matrix_", (DL_FUNC) &_raylibr_get_camera_matrix_, 1},
     {"_raylibr_get_camera_matrix_2d_", (DL_FUNC) &_raylibr_get_camera_matrix_2d_, 1},
     {"_raylibr_get_world_to_screen_", (DL_FUNC) &_raylibr_get_world_to_screen_, 2},
@@ -5512,6 +5799,10 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_get_random_value_", (DL_FUNC) &_raylibr_get_random_value_, 2},
     {"_raylibr_take_screenshot_", (DL_FUNC) &_raylibr_take_screenshot_, 1},
     {"_raylibr_set_trace_log_level_", (DL_FUNC) &_raylibr_set_trace_log_level_, 1},
+    {"_raylibr_load_file_text_", (DL_FUNC) &_raylibr_load_file_text_, 1},
+    {"_raylibr_file_exists_", (DL_FUNC) &_raylibr_file_exists_, 1},
+    {"_raylibr_directory_exists_", (DL_FUNC) &_raylibr_directory_exists_, 1},
+    {"_raylibr_is_file_extension_", (DL_FUNC) &_raylibr_is_file_extension_, 2},
     {"_raylibr_get_file_extension_", (DL_FUNC) &_raylibr_get_file_extension_, 1},
     {"_raylibr_get_file_name_", (DL_FUNC) &_raylibr_get_file_name_, 1},
     {"_raylibr_get_file_name_without_ext_", (DL_FUNC) &_raylibr_get_file_name_without_ext_, 1},
@@ -5523,6 +5814,8 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_is_file_dropped_", (DL_FUNC) &_raylibr_is_file_dropped_, 0},
     {"_raylibr_clear_dropped_files_", (DL_FUNC) &_raylibr_clear_dropped_files_, 0},
     {"_raylibr_get_file_mod_time_", (DL_FUNC) &_raylibr_get_file_mod_time_, 1},
+    {"_raylibr_save_storage_value_", (DL_FUNC) &_raylibr_save_storage_value_, 2},
+    {"_raylibr_load_storage_value_", (DL_FUNC) &_raylibr_load_storage_value_, 1},
     {"_raylibr_is_key_pressed_", (DL_FUNC) &_raylibr_is_key_pressed_, 1},
     {"_raylibr_is_key_down_", (DL_FUNC) &_raylibr_is_key_down_, 1},
     {"_raylibr_is_key_released_", (DL_FUNC) &_raylibr_is_key_released_, 1},
@@ -5566,6 +5859,8 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_get_gesture_drag_angle_", (DL_FUNC) &_raylibr_get_gesture_drag_angle_, 0},
     {"_raylibr_get_gesture_pinch_vector_", (DL_FUNC) &_raylibr_get_gesture_pinch_vector_, 0},
     {"_raylibr_get_gesture_pinch_angle_", (DL_FUNC) &_raylibr_get_gesture_pinch_angle_, 0},
+    {"_raylibr_set_camera_mode_", (DL_FUNC) &_raylibr_set_camera_mode_, 2},
+    {"_raylibr_update_camera_", (DL_FUNC) &_raylibr_update_camera_, 1},
     {"_raylibr_set_camera_pan_control_", (DL_FUNC) &_raylibr_set_camera_pan_control_, 1},
     {"_raylibr_set_camera_alt_control_", (DL_FUNC) &_raylibr_set_camera_alt_control_, 1},
     {"_raylibr_set_camera_smooth_zoom_control_", (DL_FUNC) &_raylibr_set_camera_smooth_zoom_control_, 1},
@@ -5674,6 +5969,9 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_image_draw_text_ex_", (DL_FUNC) &_raylibr_image_draw_text_ex_, 7},
     {"_raylibr_load_texture_", (DL_FUNC) &_raylibr_load_texture_, 1},
     {"_raylibr_load_texture_from_image_", (DL_FUNC) &_raylibr_load_texture_from_image_, 1},
+    {"_raylibr_load_render_texture_", (DL_FUNC) &_raylibr_load_render_texture_, 2},
+    {"_raylibr_unload_texture_", (DL_FUNC) &_raylibr_unload_texture_, 1},
+    {"_raylibr_unload_render_texture_", (DL_FUNC) &_raylibr_unload_render_texture_, 1},
     {"_raylibr_gen_texture_mipmaps_", (DL_FUNC) &_raylibr_gen_texture_mipmaps_, 1},
     {"_raylibr_set_texture_filter_", (DL_FUNC) &_raylibr_set_texture_filter_, 2},
     {"_raylibr_set_texture_wrap_", (DL_FUNC) &_raylibr_set_texture_wrap_, 2},
@@ -5712,7 +6010,8 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_get_glyph_index_", (DL_FUNC) &_raylibr_get_glyph_index_, 2},
     {"_raylibr_get_glyph_info_", (DL_FUNC) &_raylibr_get_glyph_info_, 2},
     {"_raylibr_get_glyph_atlas_rec_", (DL_FUNC) &_raylibr_get_glyph_atlas_rec_, 2},
-    {"_raylibr_text_append_", (DL_FUNC) &_raylibr_text_append_, 3},
+    {"_raylibr_text_replace_", (DL_FUNC) &_raylibr_text_replace_, 3},
+    {"_raylibr_text_insert_", (DL_FUNC) &_raylibr_text_insert_, 3},
     {"_raylibr_text_find_index_", (DL_FUNC) &_raylibr_text_find_index_, 2},
     {"_raylibr_text_to_upper_", (DL_FUNC) &_raylibr_text_to_upper_, 1},
     {"_raylibr_text_to_lower_", (DL_FUNC) &_raylibr_text_to_lower_, 1},

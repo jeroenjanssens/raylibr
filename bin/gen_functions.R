@@ -16,10 +16,17 @@ for (line in lines) {
   names(funs)[length(funs)] <- make_rcpp_name(fun$name)
 }
 
+
+# Customizations ----------------------------------------------------------
+
+funs$clear_background$params$color$default <- "white"
+
 funs$init_window$params$width$default <- 640
 funs$init_window$params$height$default <- 480
 funs$init_window$params$title$default <- "Raylibr"
-funs$clear_background$params$color$default <- "white"
+
+funs$text_replace$params$text$const_cast <- "char *"
+
 
 # Generate R functions ----------------------------------------------------
 

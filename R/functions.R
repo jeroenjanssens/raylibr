@@ -973,6 +973,25 @@ end_texture_mode <- function() {
   end_texture_mode_()
 }
 
+#' Begin shader mode
+#'
+#' Begin custom shader drawing.
+#'
+#' @param shader A shader.
+#'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void BeginShaderMode(Shader shader);
+#' ```
+#'
+#' @export
+begin_shader_mode <- function(shader) {
+  if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
+  begin_shader_mode_(shader)
+}
+
 #' End shader mode
 #'
 #' End custom shader drawing (use default shader).
@@ -1087,6 +1106,159 @@ end_scissor_mode <- function() {
 #' @export
 end_vr_stereo_mode <- function() {
   end_vr_stereo_mode_()
+}
+
+#' Load shader
+#'
+#' Load shader from files and bind default locations.
+#'
+#' @param vs_file_name A string.
+#' @param fs_file_name A string.
+#'
+#' @return A shader
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Shader LoadShader(const char *vsFileName, const char *fsFileName);
+#' ```
+#'
+#' @export
+load_shader <- function(vs_file_name, fs_file_name) {
+  if (!is_const_char_pointer(vs_file_name)) abort(paste0('`vs_file_name` must be a string, not ', friendly_typeof(vs_file_name), '.'), call = NULL)
+  if (!is_const_char_pointer(fs_file_name)) abort(paste0('`fs_file_name` must be a string, not ', friendly_typeof(fs_file_name), '.'), call = NULL)
+  load_shader_(vs_file_name, fs_file_name)
+}
+
+#' Load shader from memory
+#'
+#' Load shader from code strings and bind default locations.
+#'
+#' @param vs_code A string.
+#' @param fs_code A string.
+#'
+#' @return A shader
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Shader LoadShaderFromMemory(const char *vsCode, const char *fsCode);
+#' ```
+#'
+#' @export
+load_shader_from_memory <- function(vs_code, fs_code) {
+  if (!is_const_char_pointer(vs_code)) abort(paste0('`vs_code` must be a string, not ', friendly_typeof(vs_code), '.'), call = NULL)
+  if (!is_const_char_pointer(fs_code)) abort(paste0('`fs_code` must be a string, not ', friendly_typeof(fs_code), '.'), call = NULL)
+  load_shader_from_memory_(vs_code, fs_code)
+}
+
+#' Get shader location
+#'
+#' Get shader uniform location.
+#'
+#' @param shader A shader.
+#' @param uniform_name A string.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int GetShaderLocation(Shader shader, const char *uniformName);
+#' ```
+#'
+#' @export
+get_shader_location <- function(shader, uniform_name) {
+  if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
+  if (!is_const_char_pointer(uniform_name)) abort(paste0('`uniform_name` must be a string, not ', friendly_typeof(uniform_name), '.'), call = NULL)
+  get_shader_location_(shader, uniform_name)
+}
+
+#' Get shader location attrib
+#'
+#' Get shader attribute location.
+#'
+#' @param shader A shader.
+#' @param attrib_name A string.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int GetShaderLocationAttrib(Shader shader, const char *attribName);
+#' ```
+#'
+#' @export
+get_shader_location_attrib <- function(shader, attrib_name) {
+  if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
+  if (!is_const_char_pointer(attrib_name)) abort(paste0('`attrib_name` must be a string, not ', friendly_typeof(attrib_name), '.'), call = NULL)
+  get_shader_location_attrib_(shader, attrib_name)
+}
+
+#' Set shader value matrix
+#'
+#' Set shader uniform value (matrix 4x4).
+#'
+#' @param shader A shader.
+#' @param loc_index An integer.
+#' @param mat A numeric matrix of 4 by 4.
+#'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetShaderValueMatrix(Shader shader, int locIndex, Matrix mat);
+#' ```
+#'
+#' @export
+set_shader_value_matrix <- function(shader, loc_index, mat) {
+  if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
+  if (!is_int(loc_index)) abort(paste0('`loc_index` must be an integer, not ', friendly_typeof(loc_index), '.'), call = NULL)
+  if (!is_raylib_matrix(mat)) abort(paste0('`mat` must be a numeric matrix of 4 by 4, not ', friendly_typeof(mat), '.'), call = NULL)
+  set_shader_value_matrix_(shader, loc_index, mat)
+}
+
+#' Set shader value texture
+#'
+#' Set shader uniform value for texture (sampler2d).
+#'
+#' @param shader A shader.
+#' @param loc_index An integer.
+#' @param texture A texture.
+#'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetShaderValueTexture(Shader shader, int locIndex, Texture2D texture);
+#' ```
+#'
+#' @export
+set_shader_value_texture <- function(shader, loc_index, texture) {
+  if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
+  if (!is_int(loc_index)) abort(paste0('`loc_index` must be an integer, not ', friendly_typeof(loc_index), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
+  set_shader_value_texture_(shader, loc_index, texture)
+}
+
+#' Unload shader
+#'
+#' Unload shader from GPU memory (VRAM).
+#'
+#' @param shader A shader.
+#'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void UnloadShader(Shader shader);
+#' ```
+#'
+#' @export
+unload_shader <- function(shader) {
+  if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
+  unload_shader_(shader)
 }
 
 #' Get camera matrix
@@ -1357,6 +1529,88 @@ set_trace_log_level <- function(log_level) {
   set_trace_log_level_(log_level)
 }
 
+#' Load file text
+#'
+#' Load text data from file (read), returns a '\0' terminated string.
+#'
+#' @param file_name A string.
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' char *LoadFileText(const char *fileName);
+#' ```
+#'
+#' @export
+load_file_text <- function(file_name) {
+  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
+  load_file_text_(file_name)
+}
+
+#' File exists
+#'
+#' Check if file exists.
+#'
+#' @param file_name A string.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool FileExists(const char *fileName);
+#' ```
+#'
+#' @export
+file_exists <- function(file_name) {
+  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
+  file_exists_(file_name)
+}
+
+#' Directory exists
+#'
+#' Check if a directory path exists.
+#'
+#' @param dir_path A string.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool DirectoryExists(const char *dirPath);
+#' ```
+#'
+#' @export
+directory_exists <- function(dir_path) {
+  if (!is_const_char_pointer(dir_path)) abort(paste0('`dir_path` must be a string, not ', friendly_typeof(dir_path), '.'), call = NULL)
+  directory_exists_(dir_path)
+}
+
+#' Is file extension
+#'
+#' Check file extension (including point: .png, .wav).
+#'
+#' @param file_name A string.
+#' @param ext A string.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool IsFileExtension(const char *fileName, const char *ext);
+#' ```
+#'
+#' @export
+is_file_extension <- function(file_name, ext) {
+  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
+  if (!is_const_char_pointer(ext)) abort(paste0('`ext` must be a string, not ', friendly_typeof(ext), '.'), call = NULL)
+  is_file_extension_(file_name, ext)
+}
+
 #' Get file extension
 #'
 #' Get pointer to extension for a filename string (includes dot: '.png').
@@ -1569,6 +1823,48 @@ clear_dropped_files <- function() {
 get_file_mod_time <- function(file_name) {
   if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
   get_file_mod_time_(file_name)
+}
+
+#' Save storage value
+#'
+#' Save integer value to storage file (to defined position), returns true on success.
+#'
+#' @param position A non-negative integer.
+#' @param value An integer.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool SaveStorageValue(unsigned int position, int value);
+#' ```
+#'
+#' @export
+save_storage_value <- function(position, value) {
+  if (!is_unsigned_int(position)) abort(paste0('`position` must be a non-negative integer, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_int(value)) abort(paste0('`value` must be an integer, not ', friendly_typeof(value), '.'), call = NULL)
+  save_storage_value_(position, value)
+}
+
+#' Load storage value
+#'
+#' Load integer value from storage file (from defined position).
+#'
+#' @param position A non-negative integer.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int LoadStorageValue(unsigned int position);
+#' ```
+#'
+#' @export
+load_storage_value <- function(position) {
+  if (!is_unsigned_int(position)) abort(paste0('`position` must be a non-negative integer, not ', friendly_typeof(position), '.'), call = NULL)
+  load_storage_value_(position)
 }
 
 #' Is key pressed
@@ -2422,6 +2718,46 @@ get_gesture_pinch_vector <- function() {
 #' @export
 get_gesture_pinch_angle <- function() {
   get_gesture_pinch_angle_()
+}
+
+#' Set camera mode
+#'
+#' Set camera mode (multiple camera modes available).
+#'
+#' @param camera A camera_3d.
+#' @param mode An integer.
+#'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetCameraMode(Camera camera, int mode);
+#' ```
+#'
+#' @export
+set_camera_mode <- function(camera, mode) {
+  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
+  if (!is_int(mode)) abort(paste0('`mode` must be an integer, not ', friendly_typeof(mode), '.'), call = NULL)
+  set_camera_mode_(camera, mode)
+}
+
+#' Update camera
+#'
+#' Update camera position for selected mode.
+#'
+#' @param camera A camera_3d.
+#'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void UpdateCamera(Camera *camera);
+#' ```
+#'
+#' @export
+update_camera <- function(camera) {
+  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
+  update_camera_(camera)
 }
 
 #' Set camera pan control
@@ -5023,6 +5359,66 @@ load_texture_from_image <- function(image) {
   load_texture_from_image_(image)
 }
 
+#' Load render texture
+#'
+#' Load texture for rendering (framebuffer).
+#'
+#' @param width An integer.
+#' @param height An integer.
+#'
+#' @return A render_texture
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' RenderTexture2D LoadRenderTexture(int width, int height);
+#' ```
+#'
+#' @export
+load_render_texture <- function(width, height) {
+  if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
+  if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
+  load_render_texture_(width, height)
+}
+
+#' Unload texture
+#'
+#' Unload texture from GPU memory (VRAM).
+#'
+#' @param texture A texture.
+#'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void UnloadTexture(Texture2D texture);
+#' ```
+#'
+#' @export
+unload_texture <- function(texture) {
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
+  unload_texture_(texture)
+}
+
+#' Unload render texture
+#'
+#' Unload render texture from GPU memory (VRAM).
+#'
+#' @param target A render_texture.
+#'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void UnloadRenderTexture(RenderTexture2D target);
+#' ```
+#'
+#' @export
+unload_render_texture <- function(target) {
+  if (!is_render_texture(target)) abort(paste0('`target` must be a render_texture, not ', friendly_typeof(target), '.'), call = NULL)
+  unload_render_texture_(target)
+}
+
 #' Gen texture mipmaps
 #'
 #' Generate GPU mipmaps for a texture.
@@ -5925,27 +6321,52 @@ get_glyph_atlas_rec <- function(font, codepoint) {
   get_glyph_atlas_rec_(font, codepoint)
 }
 
-#' Text append
+#' Text replace
 #'
-#' Append text at specific position and move cursor!.
+#' Replace text string (WARNING: memory must be freed!).
 #'
-#' @param text A char.
-#' @param append A string.
-#' @param position An integer.
+#' @param text A string.
+#' @param replace A string.
+#' @param by A string.
 #'
+#' @return A string
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' void TextAppend(char *text, const char *append, int *position);
+#' char *TextReplace(char *text, const char *replace, const char *by);
 #' ```
 #'
 #' @export
-text_append <- function(text, append, position) {
-  if (!is_char(text)) abort(paste0('`text` must be a char, not ', friendly_typeof(text), '.'), call = NULL)
-  if (!is_const_char_pointer(append)) abort(paste0('`append` must be a string, not ', friendly_typeof(append), '.'), call = NULL)
+text_replace <- function(text, replace, by) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  if (!is_const_char_pointer(replace)) abort(paste0('`replace` must be a string, not ', friendly_typeof(replace), '.'), call = NULL)
+  if (!is_const_char_pointer(by)) abort(paste0('`by` must be a string, not ', friendly_typeof(by), '.'), call = NULL)
+  text_replace_(text, replace, by)
+}
+
+#' Text insert
+#'
+#' Insert text in a position (WARNING: memory must be freed!).
+#'
+#' @param text A string.
+#' @param insert A string.
+#' @param position An integer.
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' char *TextInsert(const char *text, const char *insert, int position);
+#' ```
+#'
+#' @export
+text_insert <- function(text, insert, position) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  if (!is_const_char_pointer(insert)) abort(paste0('`insert` must be a string, not ', friendly_typeof(insert), '.'), call = NULL)
   if (!is_int(position)) abort(paste0('`position` must be an integer, not ', friendly_typeof(position), '.'), call = NULL)
-  text_append_(text, append, position)
+  text_insert_(text, insert, position)
 }
 
 #' Text find index

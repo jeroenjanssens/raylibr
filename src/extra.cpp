@@ -152,3 +152,24 @@ namespace Rcpp {
 Color as_color(Color x) {
   return x;
 }
+
+
+// [[Rcpp::export]]
+void set_shader_value_float_(Shader shader, int loc_index, float &value) {
+  return SetShaderValue(shader, loc_index, &value, SHADER_UNIFORM_FLOAT);
+}
+
+// [[Rcpp::export]]
+void set_shader_value_vector_2_(Shader shader, int loc_index, Vector2 &value) {
+  return SetShaderValue(shader, loc_index, &value, SHADER_UNIFORM_VEC2);
+}
+
+// [[Rcpp::export]]
+void set_shader_value_vector_3_(Shader shader, int loc_index, Vector3 &value) {
+  return SetShaderValue(shader, loc_index, &value, SHADER_UNIFORM_VEC3);
+}
+
+// [[Rcpp::export]]
+void set_shader_value_vector_4_(Shader shader, int loc_index, Vector4 &value) {
+  return SetShaderValue(shader, loc_index, &value, SHADER_UNIFORM_VEC4);
+}

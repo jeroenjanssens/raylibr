@@ -148,6 +148,22 @@ as_color <- function(x) {
     .Call(`_raylibr_as_color`, x)
 }
 
+set_shader_value_float_ <- function(shader, loc_index, value) {
+    invisible(.Call(`_raylibr_set_shader_value_float_`, shader, loc_index, value))
+}
+
+set_shader_value_vector_2_ <- function(shader, loc_index, value) {
+    invisible(.Call(`_raylibr_set_shader_value_vector_2_`, shader, loc_index, value))
+}
+
+set_shader_value_vector_3_ <- function(shader, loc_index, value) {
+    invisible(.Call(`_raylibr_set_shader_value_vector_3_`, shader, loc_index, value))
+}
+
+set_shader_value_vector_4_ <- function(shader, loc_index, value) {
+    invisible(.Call(`_raylibr_set_shader_value_vector_4_`, shader, loc_index, value))
+}
+
 init_window_ <- function(width, height, title) {
     invisible(.Call(`_raylibr_init_window_`, width, height, title))
 }
@@ -352,6 +368,10 @@ end_texture_mode_ <- function() {
     invisible(.Call(`_raylibr_end_texture_mode_`))
 }
 
+begin_shader_mode_ <- function(shader) {
+    invisible(.Call(`_raylibr_begin_shader_mode_`, shader))
+}
+
 end_shader_mode_ <- function() {
     invisible(.Call(`_raylibr_end_shader_mode_`))
 }
@@ -374,6 +394,34 @@ end_scissor_mode_ <- function() {
 
 end_vr_stereo_mode_ <- function() {
     invisible(.Call(`_raylibr_end_vr_stereo_mode_`))
+}
+
+load_shader_ <- function(vs_file_name, fs_file_name) {
+    .Call(`_raylibr_load_shader_`, vs_file_name, fs_file_name)
+}
+
+load_shader_from_memory_ <- function(vs_code, fs_code) {
+    .Call(`_raylibr_load_shader_from_memory_`, vs_code, fs_code)
+}
+
+get_shader_location_ <- function(shader, uniform_name) {
+    .Call(`_raylibr_get_shader_location_`, shader, uniform_name)
+}
+
+get_shader_location_attrib_ <- function(shader, attrib_name) {
+    .Call(`_raylibr_get_shader_location_attrib_`, shader, attrib_name)
+}
+
+set_shader_value_matrix_ <- function(shader, loc_index, mat) {
+    invisible(.Call(`_raylibr_set_shader_value_matrix_`, shader, loc_index, mat))
+}
+
+set_shader_value_texture_ <- function(shader, loc_index, texture) {
+    invisible(.Call(`_raylibr_set_shader_value_texture_`, shader, loc_index, texture))
+}
+
+unload_shader_ <- function(shader) {
+    invisible(.Call(`_raylibr_unload_shader_`, shader))
 }
 
 get_camera_matrix_ <- function(camera) {
@@ -428,6 +476,22 @@ set_trace_log_level_ <- function(log_level) {
     invisible(.Call(`_raylibr_set_trace_log_level_`, log_level))
 }
 
+load_file_text_ <- function(file_name) {
+    .Call(`_raylibr_load_file_text_`, file_name)
+}
+
+file_exists_ <- function(file_name) {
+    .Call(`_raylibr_file_exists_`, file_name)
+}
+
+directory_exists_ <- function(dir_path) {
+    .Call(`_raylibr_directory_exists_`, dir_path)
+}
+
+is_file_extension_ <- function(file_name, ext) {
+    .Call(`_raylibr_is_file_extension_`, file_name, ext)
+}
+
 get_file_extension_ <- function(file_name) {
     .Call(`_raylibr_get_file_extension_`, file_name)
 }
@@ -470,6 +534,14 @@ clear_dropped_files_ <- function() {
 
 get_file_mod_time_ <- function(file_name) {
     .Call(`_raylibr_get_file_mod_time_`, file_name)
+}
+
+save_storage_value_ <- function(position, value) {
+    .Call(`_raylibr_save_storage_value_`, position, value)
+}
+
+load_storage_value_ <- function(position) {
+    .Call(`_raylibr_load_storage_value_`, position)
 }
 
 is_key_pressed_ <- function(key) {
@@ -642,6 +714,14 @@ get_gesture_pinch_vector_ <- function() {
 
 get_gesture_pinch_angle_ <- function() {
     .Call(`_raylibr_get_gesture_pinch_angle_`)
+}
+
+set_camera_mode_ <- function(camera, mode) {
+    invisible(.Call(`_raylibr_set_camera_mode_`, camera, mode))
+}
+
+update_camera_ <- function(camera) {
+    invisible(.Call(`_raylibr_update_camera_`, camera))
 }
 
 set_camera_pan_control_ <- function(key_pan) {
@@ -1076,6 +1156,18 @@ load_texture_from_image_ <- function(image) {
     .Call(`_raylibr_load_texture_from_image_`, image)
 }
 
+load_render_texture_ <- function(width, height) {
+    .Call(`_raylibr_load_render_texture_`, width, height)
+}
+
+unload_texture_ <- function(texture) {
+    invisible(.Call(`_raylibr_unload_texture_`, texture))
+}
+
+unload_render_texture_ <- function(target) {
+    invisible(.Call(`_raylibr_unload_render_texture_`, target))
+}
+
 gen_texture_mipmaps_ <- function(texture) {
     invisible(.Call(`_raylibr_gen_texture_mipmaps_`, texture))
 }
@@ -1228,8 +1320,12 @@ get_glyph_atlas_rec_ <- function(font, codepoint) {
     .Call(`_raylibr_get_glyph_atlas_rec_`, font, codepoint)
 }
 
-text_append_ <- function(text, append, position) {
-    invisible(.Call(`_raylibr_text_append_`, text, append, position))
+text_replace_ <- function(text, replace, by) {
+    .Call(`_raylibr_text_replace_`, text, replace, by)
+}
+
+text_insert_ <- function(text, insert, position) {
+    .Call(`_raylibr_text_insert_`, text, insert, position)
 }
 
 text_find_index_ <- function(text, find) {

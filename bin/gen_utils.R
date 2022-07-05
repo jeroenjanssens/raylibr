@@ -11,6 +11,7 @@ alias_type <- function(x) {
             x == "Texture2D" ~ "Texture",
             x == "TextureCubemap" ~ "Texture",
             x == "unsigned char" ~ "unsigned int",
+            x == "char *" ~ "const char *",
             TRUE ~ x)
 }
 
@@ -126,6 +127,7 @@ make_rd_type <- function(x) {
             x == "unsigned char" ~ "An integer between 0 and 255",
             x == "float" ~ "A number",
             x == "bool" ~ "A logical",
+            x == "char" ~ "A string",
             x == "const char *" ~ "A string",
             x == "AudioStream" ~ "an audio_stream",
             x == "Image" ~ "an image",
@@ -204,7 +206,15 @@ make_rcpp_params <- function(params, types = TRUE) {
 
   s <- c()
   for (p in params) {
-    s <- c(s, glue("{ifelse(types, paste0(alias_type(p$type), ' '), '')}{ifelse(p$pointer, '&', '')}{make_rcpp_name(p$name)}"))
+    name <- make_rcpp_name(p$name)
+    if (p$pointer) {
+      name <- glue("&{name}")
+    }
+    if (!types && !is.null(p$const_cast)) {
+      name <- glue("const_cast<{p$const_cast}>({name})")
+    }
+
+    s <- c(s, glue("{ifelse(types, paste0(alias_type(p$type), ' '), '')}{name}"))
   }
 
   str_c(s, collapse = ", ")

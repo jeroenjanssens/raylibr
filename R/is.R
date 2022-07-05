@@ -51,7 +51,13 @@ is_const_char_pointer <- function(x) {
   is.character(x) && length(x) == 1
 }
 
+is_char <- is_const_char_pointer
+
 is_void_pointer <- function(x) {
+  TRUE
+}
+
+is_const_void <- function(x) {
   TRUE
 }
 
