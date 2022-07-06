@@ -2,33 +2,6 @@
 
 source(here::here("bin", "gen_utils.R"))
 
-structs_generate <-
-  c("Rectangle",
-    "Color",
-    # "Image",
-    "Texture",
-    # "Font",
-    "RenderTexture",
-    "NPatchInfo",
-    "GlyphInfo",
-    "Camera2D",
-    "Camera3D",
-    # "Mesh",
-    # "Shader",
-    "MaterialMap",
-    # "Material",
-    # "BoneInfo",
-    # "Model",
-    # "ModelAnimation",
-    # "Wave",
-    # "AudioStream",
-    "Sound",
-    "RayCollision",
-    "Transform",
-    "BoundingBox",
-    "Ray"
-    # "Music"
-  )
 # Parse structs in raylib.h -----------------------------------------------
 
 lines <- readLines(here::here("bin", "raylib.h.txt"))
