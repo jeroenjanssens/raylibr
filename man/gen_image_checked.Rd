@@ -20,7 +20,7 @@ gen_image_checked(width, height, checks_x, checks_y, col_1, col_2)
 \item{col_2}{A color.}
 }
 \value{
-an image
+An image
 }
 \description{
 Generate image: checked.
@@ -32,6 +32,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=color]{color()}} for creating color objects.
+
 Other image functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{export_image}()},

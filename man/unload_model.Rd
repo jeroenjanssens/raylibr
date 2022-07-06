@@ -19,6 +19,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=model]{model()}} for creating model objects.
+
 Other model functions: 
 \code{\link{draw_model_ex}()},
 \code{\link{draw_model_wires}()},

@@ -14,7 +14,7 @@ gen_image_white_noise(width, height, factor)
 \item{factor}{A number.}
 }
 \value{
-an image
+An image
 }
 \description{
 Generate image: white noise.

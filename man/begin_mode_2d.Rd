@@ -19,6 +19,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=camera_2d]{camera_2d()}} for creating camera_2d objects.
+
 Other mode functions: 
 \code{\link{begin_blend_mode}()},
 \code{\link{begin_mode_3d}()},

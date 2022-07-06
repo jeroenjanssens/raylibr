@@ -7,7 +7,7 @@
 load_font_from_image(image, key, first_char)
 }
 \arguments{
-\item{image}{an image.}
+\item{image}{An image.}
 
 \item{key}{A color.}
 
@@ -26,8 +26,13 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=image]{image()}} for creating image objects.
+
+\code{\link[=color]{color()}} for creating color objects.
+
 Other font functions: 
 \code{\link{get_font_default}()},
+\code{\link{load_font_ex}()},
 \code{\link{load_font}()},
 \code{\link{unload_font_data}()},
 \code{\link{unload_font}()}

@@ -15,13 +15,13 @@ glyph_info(value, offset_x, offset_y, advance_x, image)
 
 \item{advance_x}{An integer. Character advance position X.}
 
-\item{image}{an image. Character image data.}
+\item{image}{An image. Character image data.}
 }
 \value{
 A glyph_info
 }
 \description{
-Create a new \code{glyph_info} object.
+Create a new glyph_info object.
 }
 \note{
 This class has been auto-generated from the following Raylib struct definition:
@@ -35,3 +35,4 @@ This class has been auto-generated from the following Raylib struct definition:
 \} GlyphInfo;
 }\if{html}{\out{</div>}}
 }
+\concept{glyph_info functions}

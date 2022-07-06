@@ -22,6 +22,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=camera_3d]{camera_3d()}} for creating camera_3d objects.
+
 Other camera functions: 
 \code{\link{get_camera_matrix_2d}()},
 \code{\link{set_camera_alt_control}()},

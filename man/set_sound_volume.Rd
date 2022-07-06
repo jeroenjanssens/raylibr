@@ -21,6 +21,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=sound]{sound()}} for creating sound objects.
+
 Other sound functions: 
 \code{\link{is_sound_playing}()},
 \code{\link{load_sound_from_wave}()},
@@ -30,6 +32,7 @@ Other sound functions:
 \code{\link{play_sound}()},
 \code{\link{resume_sound}()},
 \code{\link{set_sound_pitch}()},
+\code{\link{sound}()},
 \code{\link{stop_sound_multi}()},
 \code{\link{stop_sound}()},
 \code{\link{unload_sound}()}

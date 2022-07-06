@@ -19,7 +19,7 @@ ray_collision(hit, distance, point, normal)
 A ray_collision
 }
 \description{
-Create a new \code{ray_collision} object.
+Create a new ray_collision object.
 }
 \note{
 This class has been auto-generated from the following Raylib struct definition:
@@ -32,3 +32,4 @@ This class has been auto-generated from the following Raylib struct definition:
 \} RayCollision;
 }\if{html}{\out{</div>}}
 }
+\concept{ray_collision functions}

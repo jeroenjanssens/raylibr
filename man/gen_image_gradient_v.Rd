@@ -16,7 +16,7 @@ gen_image_gradient_v(width, height, top, bottom)
 \item{bottom}{A color.}
 }
 \value{
-an image
+An image
 }
 \description{
 Generate image: vertical gradient.
@@ -28,6 +28,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=color]{color()}} for creating color objects.
+
 Other image functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{export_image}()},

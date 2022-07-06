@@ -7,7 +7,7 @@
 image_draw_rectangle(dst, pos_x, pos_y, width, height, color)
 }
 \arguments{
-\item{dst}{an image.}
+\item{dst}{An image.}
 
 \item{pos_x}{An integer.}
 
@@ -29,6 +29,10 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=image]{image()}} for creating image objects.
+
+\code{\link[=color]{color()}} for creating color objects.
+
 Other image functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{export_image}()},
@@ -192,7 +196,8 @@ Other rectangle functions:
 \code{\link{draw_rectangle}()},
 \code{\link{image_draw_rectangle_lines}()},
 \code{\link{image_draw_rectangle_rec}()},
-\code{\link{image_draw_rectangle_v}()}
+\code{\link{image_draw_rectangle_v}()},
+\code{\link{rectangle}()}
 }
 \concept{draw functions}
 \concept{image functions}

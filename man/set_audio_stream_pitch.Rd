@@ -7,7 +7,7 @@
 set_audio_stream_pitch(stream, pitch)
 }
 \arguments{
-\item{stream}{an audio_stream.}
+\item{stream}{An audio_stream.}
 
 \item{pitch}{A number.}
 }
@@ -21,6 +21,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=audio_stream]{audio_stream()}} for creating audio_stream objects.
+
 Other audio functions: 
 \code{\link{close_audio_device}()},
 \code{\link{init_audio_device}()},

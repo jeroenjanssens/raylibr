@@ -18,7 +18,7 @@ load_image_raw(file_name, width, height, format, header_size)
 \item{header_size}{An integer.}
 }
 \value{
-an image
+An image
 }
 \description{
 Load image from RAW file data.

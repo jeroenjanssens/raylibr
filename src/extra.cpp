@@ -146,7 +146,7 @@ namespace Rcpp {
 //' @param x Object to be coerced. Can be a valid R color (see `colors()`) or a hexademical.
 //'
 //' @return A color
-//'
+//' @family color functions
 //' @export
 // [[Rcpp::export]]
 Color as_color(Color x) {

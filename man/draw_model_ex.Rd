@@ -29,6 +29,10 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=model]{model()}} for creating model objects.
+
+\code{\link[=color]{color()}} for creating color objects.
+
 Other draw functions: 
 \code{\link{draw_billboard}()},
 \code{\link{draw_bounding_box}()},

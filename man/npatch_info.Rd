@@ -23,7 +23,7 @@ npatch_info(source, left, top, right, bottom, layout)
 A npatch_info
 }
 \description{
-Create a new \code{npatch_info} object.
+Create a new npatch_info object.
 }
 \note{
 This class has been auto-generated from the following Raylib struct definition:
@@ -38,3 +38,4 @@ This class has been auto-generated from the following Raylib struct definition:
 \} NPatchInfo;
 }\if{html}{\out{</div>}}
 }
+\concept{npatch_info functions}

@@ -10,7 +10,7 @@ load_image(file_name)
 \item{file_name}{A string.}
 }
 \value{
-an image
+An image
 }
 \description{
 Load image from file into CPU memory (RAM).

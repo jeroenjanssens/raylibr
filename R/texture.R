@@ -2,7 +2,7 @@
 
 #' Texture
 #'
-#' Create a new `texture` object.
+#' Create a new texture object.
 #'
 #' @param id A non-negative integer. OpenGL texture id.
 #' @param width An integer. Texture base width.
@@ -25,6 +25,9 @@
 #' ```
 #'
 #' @rdname texture
+#'
+#' @family texture functions
+#'
 #' @export
 texture <- function(id, width, height, mipmaps, format) {
   if (!is_unsigned_int(id)) abort(paste0('`id` must be a non-negative integer, not ', friendly_typeof(id), '.'), call = NULL)

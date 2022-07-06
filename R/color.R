@@ -2,7 +2,7 @@
 
 #' Color
 #'
-#' Create a new `color` object.
+#' Create a new color object.
 #'
 #' @param r A non-negative integer. Color red value.
 #' @param g A non-negative integer. Color green value.
@@ -23,6 +23,9 @@
 #' ```
 #'
 #' @rdname color
+#'
+#' @family color functions
+#'
 #' @export
 color <- function(r, g, b, a) {
   if (!is_unsigned_int(r)) abort(paste0('`r` must be a non-negative integer, not ', friendly_typeof(r), '.'), call = NULL)

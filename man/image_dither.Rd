@@ -7,7 +7,7 @@
 image_dither(image, r_bpp, g_bpp, b_bpp, a_bpp)
 }
 \arguments{
-\item{image}{an image.}
+\item{image}{An image.}
 
 \item{r_bpp}{An integer.}
 
@@ -27,6 +27,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=image]{image()}} for creating image objects.
+
 Other image functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{export_image}()},

@@ -7,7 +7,7 @@
 image_draw_pixel_v(dst, position, color)
 }
 \arguments{
-\item{dst}{an image.}
+\item{dst}{An image.}
 
 \item{position}{A numeric vector of length 2.}
 
@@ -23,6 +23,10 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=image]{image()}} for creating image objects.
+
+\code{\link[=color]{color()}} for creating color objects.
+
 Other image functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{export_image}()},

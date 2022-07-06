@@ -18,6 +18,7 @@
 #' @family init functions
 #' @family window functions
 #'
+#'
 #' @export
 init_window <- function(width = 640, height = 480, title = "Raylibr") {
   if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
@@ -42,6 +43,7 @@ init_window <- function(width = 640, height = 480, title = "Raylibr") {
 #'
 #' @family window functions
 #'
+#'
 #' @export
 window_should_close <- function() {
   window_should_close_()
@@ -61,6 +63,7 @@ window_should_close <- function() {
 #' ```
 #'
 #' @family window functions
+#'
 #'
 #' @export
 close_window <- function() {
@@ -83,6 +86,7 @@ close_window <- function() {
 #'
 #' @family window functions
 #'
+#'
 #' @export
 is_window_ready <- function() {
   is_window_ready_()
@@ -103,6 +107,7 @@ is_window_ready <- function() {
 #' ```
 #'
 #' @family window functions
+#'
 #'
 #' @export
 is_window_fullscreen <- function() {
@@ -125,6 +130,7 @@ is_window_fullscreen <- function() {
 #'
 #' @family window functions
 #'
+#'
 #' @export
 is_window_hidden <- function() {
   is_window_hidden_()
@@ -145,6 +151,7 @@ is_window_hidden <- function() {
 #' ```
 #'
 #' @family window functions
+#'
 #'
 #' @export
 is_window_minimized <- function() {
@@ -167,6 +174,7 @@ is_window_minimized <- function() {
 #'
 #' @family window functions
 #'
+#'
 #' @export
 is_window_maximized <- function() {
   is_window_maximized_()
@@ -187,6 +195,7 @@ is_window_maximized <- function() {
 #' ```
 #'
 #' @family window functions
+#'
 #'
 #' @export
 is_window_focused <- function() {
@@ -209,6 +218,7 @@ is_window_focused <- function() {
 #'
 #' @family window functions
 #'
+#'
 #' @export
 is_window_resized <- function() {
   is_window_resized_()
@@ -229,6 +239,7 @@ is_window_resized <- function() {
 #' ```
 #'
 #' @family window functions
+#'
 #'
 #' @export
 is_window_state <- function(flag) {
@@ -251,6 +262,7 @@ is_window_state <- function(flag) {
 #'
 #' @family window functions
 #'
+#'
 #' @export
 set_window_state <- function(flags) {
   if (!is_unsigned_int(flags)) abort(paste0('`flags` must be a non-negative integer, not ', friendly_typeof(flags), '.'), call = NULL)
@@ -272,6 +284,7 @@ set_window_state <- function(flags) {
 #'
 #' @family window functions
 #'
+#'
 #' @export
 clear_window_state <- function(flags) {
   if (!is_unsigned_int(flags)) abort(paste0('`flags` must be a non-negative integer, not ', friendly_typeof(flags), '.'), call = NULL)
@@ -290,6 +303,7 @@ clear_window_state <- function(flags) {
 #' ```
 #' void ToggleFullscreen(void);
 #' ```
+#'
 #'
 #' @export
 toggle_fullscreen <- function() {
@@ -311,6 +325,7 @@ toggle_fullscreen <- function() {
 #'
 #' @family window functions
 #'
+#'
 #' @export
 maximize_window <- function() {
   maximize_window_()
@@ -330,6 +345,7 @@ maximize_window <- function() {
 #' ```
 #'
 #' @family window functions
+#'
 #'
 #' @export
 minimize_window <- function() {
@@ -351,6 +367,7 @@ minimize_window <- function() {
 #'
 #' @family window functions
 #'
+#'
 #' @export
 restore_window <- function() {
   restore_window_()
@@ -360,7 +377,7 @@ restore_window <- function() {
 #'
 #' Set icon for window (only PLATFORM_DESKTOP).
 #'
-#' @param image an image.
+#' @param image An image.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -370,6 +387,9 @@ restore_window <- function() {
 #' ```
 #'
 #' @family window functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
 #'
 #' @export
 set_window_icon <- function(image) {
@@ -392,6 +412,7 @@ set_window_icon <- function(image) {
 #'
 #' @family window functions
 #'
+#'
 #' @export
 set_window_title <- function(title) {
   if (!is_const_char_pointer(title)) abort(paste0('`title` must be a string, not ', friendly_typeof(title), '.'), call = NULL)
@@ -413,6 +434,7 @@ set_window_title <- function(title) {
 #' ```
 #'
 #' @family window functions
+#'
 #'
 #' @export
 set_window_position <- function(x, y) {
@@ -437,6 +459,7 @@ set_window_position <- function(x, y) {
 #' @family window functions
 #' @family monitor functions
 #'
+#'
 #' @export
 set_window_monitor <- function(monitor) {
   if (!is_int(monitor)) abort(paste0('`monitor` must be an integer, not ', friendly_typeof(monitor), '.'), call = NULL)
@@ -458,6 +481,7 @@ set_window_monitor <- function(monitor) {
 #' ```
 #'
 #' @family window functions
+#'
 #'
 #' @export
 set_window_min_size <- function(width, height) {
@@ -482,6 +506,7 @@ set_window_min_size <- function(width, height) {
 #'
 #' @family window functions
 #'
+#'
 #' @export
 set_window_size <- function(width, height) {
   if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
@@ -505,6 +530,7 @@ set_window_size <- function(width, height) {
 #'
 #' @family screen functions
 #'
+#'
 #' @export
 get_screen_width <- function() {
   get_screen_width_()
@@ -525,6 +551,7 @@ get_screen_width <- function() {
 #' ```
 #'
 #' @family screen functions
+#'
 #'
 #' @export
 get_screen_height <- function() {
@@ -547,6 +574,7 @@ get_screen_height <- function() {
 #'
 #' @family monitor functions
 #'
+#'
 #' @export
 get_monitor_count <- function() {
   get_monitor_count_()
@@ -568,6 +596,7 @@ get_monitor_count <- function() {
 #'
 #' @family monitor functions
 #'
+#'
 #' @export
 get_current_monitor <- function() {
   get_current_monitor_()
@@ -588,6 +617,7 @@ get_current_monitor <- function() {
 #' ```
 #'
 #' @family monitor functions
+#'
 #'
 #' @export
 get_monitor_position <- function(monitor) {
@@ -611,6 +641,7 @@ get_monitor_position <- function(monitor) {
 #'
 #' @family monitor functions
 #'
+#'
 #' @export
 get_monitor_width <- function(monitor) {
   if (!is_int(monitor)) abort(paste0('`monitor` must be an integer, not ', friendly_typeof(monitor), '.'), call = NULL)
@@ -632,6 +663,7 @@ get_monitor_width <- function(monitor) {
 #' ```
 #'
 #' @family monitor functions
+#'
 #'
 #' @export
 get_monitor_height <- function(monitor) {
@@ -655,6 +687,7 @@ get_monitor_height <- function(monitor) {
 #'
 #' @family monitor functions
 #'
+#'
 #' @export
 get_monitor_physical_width <- function(monitor) {
   if (!is_int(monitor)) abort(paste0('`monitor` must be an integer, not ', friendly_typeof(monitor), '.'), call = NULL)
@@ -676,6 +709,7 @@ get_monitor_physical_width <- function(monitor) {
 #' ```
 #'
 #' @family monitor functions
+#'
 #'
 #' @export
 get_monitor_physical_height <- function(monitor) {
@@ -699,6 +733,7 @@ get_monitor_physical_height <- function(monitor) {
 #'
 #' @family monitor functions
 #'
+#'
 #' @export
 get_monitor_refresh_rate <- function(monitor) {
   if (!is_int(monitor)) abort(paste0('`monitor` must be an integer, not ', friendly_typeof(monitor), '.'), call = NULL)
@@ -721,6 +756,7 @@ get_monitor_refresh_rate <- function(monitor) {
 #'
 #' @family window functions
 #'
+#'
 #' @export
 get_window_position <- function() {
   get_window_position_()
@@ -741,6 +777,7 @@ get_window_position <- function() {
 #' ```
 #'
 #' @family window functions
+#'
 #'
 #' @export
 get_window_scale_dpi <- function() {
@@ -763,6 +800,7 @@ get_window_scale_dpi <- function() {
 #'
 #' @family monitor functions
 #'
+#'
 #' @export
 get_monitor_name <- function(monitor) {
   if (!is_int(monitor)) abort(paste0('`monitor` must be an integer, not ', friendly_typeof(monitor), '.'), call = NULL)
@@ -784,6 +822,7 @@ get_monitor_name <- function(monitor) {
 #'
 #' @family cursor functions
 #'
+#'
 #' @export
 show_cursor <- function() {
   show_cursor_()
@@ -803,6 +842,7 @@ show_cursor <- function() {
 #' ```
 #'
 #' @family cursor functions
+#'
 #'
 #' @export
 hide_cursor <- function() {
@@ -825,6 +865,7 @@ hide_cursor <- function() {
 #'
 #' @family cursor functions
 #'
+#'
 #' @export
 is_cursor_hidden <- function() {
   is_cursor_hidden_()
@@ -845,6 +886,7 @@ is_cursor_hidden <- function() {
 #'
 #' @family cursor functions
 #'
+#'
 #' @export
 enable_cursor <- function() {
   enable_cursor_()
@@ -864,6 +906,7 @@ enable_cursor <- function() {
 #' ```
 #'
 #' @family cursor functions
+#'
 #'
 #' @export
 disable_cursor <- function() {
@@ -887,6 +930,7 @@ disable_cursor <- function() {
 #' @family cursor functions
 #' @family screen functions
 #'
+#'
 #' @export
 is_cursor_on_screen <- function() {
   is_cursor_on_screen_()
@@ -904,6 +948,9 @@ is_cursor_on_screen <- function() {
 #' ```
 #' void ClearBackground(Color color);
 #' ```
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 clear_background <- function(color = "white") {
@@ -924,6 +971,7 @@ clear_background <- function(color = "white") {
 #' void BeginDrawing(void);
 #' ```
 #'
+#'
 #' @export
 begin_drawing <- function() {
   begin_drawing_()
@@ -941,6 +989,7 @@ begin_drawing <- function() {
 #' ```
 #' void EndDrawing(void);
 #' ```
+#'
 #'
 #' @export
 end_drawing <- function() {
@@ -961,6 +1010,9 @@ end_drawing <- function() {
 #' ```
 #'
 #' @family mode functions
+#'
+#'
+#' @seealso [camera_2d()] for creating camera_2d objects.
 #'
 #' @export
 begin_mode_2d <- function(camera) {
@@ -983,6 +1035,7 @@ begin_mode_2d <- function(camera) {
 #'
 #' @family mode functions
 #'
+#'
 #' @export
 end_mode_2d <- function() {
   end_mode_2d_()
@@ -1002,6 +1055,9 @@ end_mode_2d <- function() {
 #' ```
 #'
 #' @family mode functions
+#'
+#'
+#' @seealso [camera_3d()] for creating camera_3d objects.
 #'
 #' @export
 begin_mode_3d <- function(camera) {
@@ -1024,6 +1080,7 @@ begin_mode_3d <- function(camera) {
 #'
 #' @family mode functions
 #'
+#'
 #' @export
 end_mode_3d <- function() {
   end_mode_3d_()
@@ -1044,6 +1101,7 @@ end_mode_3d <- function() {
 #'
 #' @family texture functions
 #' @family mode functions
+#'
 #'
 #' @export
 begin_texture_mode <- function(target) {
@@ -1067,6 +1125,7 @@ begin_texture_mode <- function(target) {
 #' @family texture functions
 #' @family mode functions
 #'
+#'
 #' @export
 end_texture_mode <- function() {
   end_texture_mode_()
@@ -1087,6 +1146,9 @@ end_texture_mode <- function() {
 #'
 #' @family shader functions
 #' @family mode functions
+#'
+#'
+#' @seealso [shader()] for creating shader objects.
 #'
 #' @export
 begin_shader_mode <- function(shader) {
@@ -1110,6 +1172,7 @@ begin_shader_mode <- function(shader) {
 #' @family shader functions
 #' @family mode functions
 #'
+#'
 #' @export
 end_shader_mode <- function() {
   end_shader_mode_()
@@ -1129,6 +1192,7 @@ end_shader_mode <- function() {
 #' ```
 #'
 #' @family mode functions
+#'
 #'
 #' @export
 begin_blend_mode <- function(mode) {
@@ -1150,6 +1214,7 @@ begin_blend_mode <- function(mode) {
 #' ```
 #'
 #' @family mode functions
+#'
 #'
 #' @export
 end_blend_mode <- function() {
@@ -1173,6 +1238,7 @@ end_blend_mode <- function() {
 #' ```
 #'
 #' @family mode functions
+#'
 #'
 #' @export
 begin_scissor_mode <- function(x, y, width, height) {
@@ -1198,6 +1264,7 @@ begin_scissor_mode <- function(x, y, width, height) {
 #'
 #' @family mode functions
 #'
+#'
 #' @export
 end_scissor_mode <- function() {
   end_scissor_mode_()
@@ -1217,6 +1284,7 @@ end_scissor_mode <- function() {
 #' ```
 #'
 #' @family mode functions
+#'
 #'
 #' @export
 end_vr_stereo_mode <- function() {
@@ -1239,6 +1307,7 @@ end_vr_stereo_mode <- function() {
 #' ```
 #'
 #' @family shader functions
+#'
 #'
 #' @export
 load_shader <- function(vs_file_name, fs_file_name) {
@@ -1264,6 +1333,7 @@ load_shader <- function(vs_file_name, fs_file_name) {
 #'
 #' @family shader functions
 #'
+#'
 #' @export
 load_shader_from_memory <- function(vs_code, fs_code) {
   if (!is_const_char_pointer(vs_code)) abort(paste0('`vs_code` must be a string, not ', friendly_typeof(vs_code), '.'), call = NULL)
@@ -1287,6 +1357,9 @@ load_shader_from_memory <- function(vs_code, fs_code) {
 #' ```
 #'
 #' @family shader functions
+#'
+#'
+#' @seealso [shader()] for creating shader objects.
 #'
 #' @export
 get_shader_location <- function(shader, uniform_name) {
@@ -1312,6 +1385,9 @@ get_shader_location <- function(shader, uniform_name) {
 #'
 #' @family shader functions
 #'
+#'
+#' @seealso [shader()] for creating shader objects.
+#'
 #' @export
 get_shader_location_attrib <- function(shader, attrib_name) {
   if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
@@ -1335,6 +1411,9 @@ get_shader_location_attrib <- function(shader, attrib_name) {
 #' ```
 #'
 #' @family shader functions
+#'
+#'
+#' @seealso [shader()] for creating shader objects.
 #'
 #' @export
 set_shader_value_matrix <- function(shader, loc_index, mat) {
@@ -1362,6 +1441,10 @@ set_shader_value_matrix <- function(shader, loc_index, mat) {
 #' @family shader functions
 #' @family texture functions
 #'
+#'
+#' @seealso [shader()] for creating shader objects.
+#' @seealso [texture()] for creating texture objects.
+#'
 #' @export
 set_shader_value_texture <- function(shader, loc_index, texture) {
   if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
@@ -1385,6 +1468,9 @@ set_shader_value_texture <- function(shader, loc_index, texture) {
 #'
 #' @family shader functions
 #'
+#'
+#' @seealso [shader()] for creating shader objects.
+#'
 #' @export
 unload_shader <- function(shader) {
   if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
@@ -1407,6 +1493,9 @@ unload_shader <- function(shader) {
 #'
 #' @family camera functions
 #'
+#'
+#' @seealso [camera_3d()] for creating camera_3d objects.
+#'
 #' @export
 get_camera_matrix <- function(camera) {
   if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
@@ -1428,6 +1517,9 @@ get_camera_matrix <- function(camera) {
 #' ```
 #'
 #' @family camera functions
+#'
+#'
+#' @seealso [camera_2d()] for creating camera_2d objects.
 #'
 #' @export
 get_camera_matrix_2d <- function(camera) {
@@ -1452,6 +1544,9 @@ get_camera_matrix_2d <- function(camera) {
 #'
 #' @family world functions
 #' @family screen functions
+#'
+#'
+#' @seealso [camera_3d()] for creating camera_3d objects.
 #'
 #' @export
 get_world_to_screen <- function(position, camera) {
@@ -1480,6 +1575,9 @@ get_world_to_screen <- function(position, camera) {
 #' @family world functions
 #' @family screen functions
 #'
+#'
+#' @seealso [camera_3d()] for creating camera_3d objects.
+#'
 #' @export
 get_world_to_screen_ex <- function(position, camera, width, height) {
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
@@ -1507,6 +1605,9 @@ get_world_to_screen_ex <- function(position, camera, width, height) {
 #' @family world functions
 #' @family screen functions
 #'
+#'
+#' @seealso [camera_2d()] for creating camera_2d objects.
+#'
 #' @export
 get_world_to_screen_2d <- function(position, camera) {
   if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
@@ -1532,6 +1633,9 @@ get_world_to_screen_2d <- function(position, camera) {
 #' @family screen functions
 #' @family world functions
 #'
+#'
+#' @seealso [camera_2d()] for creating camera_2d objects.
+#'
 #' @export
 get_screen_to_world_2d <- function(position, camera) {
   if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
@@ -1553,6 +1657,7 @@ get_screen_to_world_2d <- function(position, camera) {
 #' ```
 #'
 #' @family fps functions
+#'
 #'
 #' @export
 set_target_fps <- function(fps) {
@@ -1576,6 +1681,7 @@ set_target_fps <- function(fps) {
 #'
 #' @family fps functions
 #'
+#'
 #' @export
 get_fps <- function() {
   get_fps_()
@@ -1595,6 +1701,7 @@ get_fps <- function() {
 #' float GetFrameTime(void);
 #' ```
 #'
+#'
 #' @export
 get_frame_time <- function() {
   get_frame_time_()
@@ -1613,6 +1720,7 @@ get_frame_time <- function() {
 #' ```
 #' double GetTime(void);
 #' ```
+#'
 #'
 #' @export
 get_time <- function() {
@@ -1634,6 +1742,7 @@ get_time <- function() {
 #' int GetRandomValue(int min, int max);
 #' ```
 #'
+#'
 #' @export
 get_random_value <- function(min, max) {
   if (!is_int(min)) abort(paste0('`min` must be an integer, not ', friendly_typeof(min), '.'), call = NULL)
@@ -1654,6 +1763,7 @@ get_random_value <- function(min, max) {
 #' void TakeScreenshot(const char *fileName);
 #' ```
 #'
+#'
 #' @export
 take_screenshot <- function(file_name) {
   if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
@@ -1672,6 +1782,7 @@ take_screenshot <- function(file_name) {
 #' ```
 #' void SetTraceLogLevel(int logLevel);
 #' ```
+#'
 #'
 #' @export
 set_trace_log_level <- function(log_level) {
@@ -1696,6 +1807,7 @@ set_trace_log_level <- function(log_level) {
 #' @family file functions
 #' @family text functions
 #'
+#'
 #' @export
 load_file_text <- function(file_name) {
   if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
@@ -1718,6 +1830,7 @@ load_file_text <- function(file_name) {
 #'
 #' @family file functions
 #'
+#'
 #' @export
 file_exists <- function(file_name) {
   if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
@@ -1739,6 +1852,7 @@ file_exists <- function(file_name) {
 #' ```
 #'
 #' @family directory functions
+#'
 #'
 #' @export
 directory_exists <- function(dir_path) {
@@ -1763,6 +1877,7 @@ directory_exists <- function(dir_path) {
 #'
 #' @family file functions
 #'
+#'
 #' @export
 is_file_extension <- function(file_name, ext) {
   if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
@@ -1786,6 +1901,7 @@ is_file_extension <- function(file_name, ext) {
 #'
 #' @family file functions
 #'
+#'
 #' @export
 get_file_extension <- function(file_name) {
   if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
@@ -1807,6 +1923,7 @@ get_file_extension <- function(file_name) {
 #' ```
 #'
 #' @family file functions
+#'
 #'
 #' @export
 get_file_name <- function(file_path) {
@@ -1830,6 +1947,7 @@ get_file_name <- function(file_path) {
 #'
 #' @family file functions
 #'
+#'
 #' @export
 get_file_name_without_ext <- function(file_path) {
   if (!is_const_char_pointer(file_path)) abort(paste0('`file_path` must be a string, not ', friendly_typeof(file_path), '.'), call = NULL)
@@ -1851,6 +1969,7 @@ get_file_name_without_ext <- function(file_path) {
 #' ```
 #'
 #' @family directory functions
+#'
 #'
 #' @export
 get_directory_path <- function(file_path) {
@@ -1874,6 +1993,7 @@ get_directory_path <- function(file_path) {
 #'
 #' @family directory functions
 #'
+#'
 #' @export
 get_prev_directory_path <- function(dir_path) {
   if (!is_const_char_pointer(dir_path)) abort(paste0('`dir_path` must be a string, not ', friendly_typeof(dir_path), '.'), call = NULL)
@@ -1896,6 +2016,7 @@ get_prev_directory_path <- function(dir_path) {
 #'
 #' @family directory functions
 #'
+#'
 #' @export
 get_working_directory <- function() {
   get_working_directory_()
@@ -1915,6 +2036,7 @@ get_working_directory <- function() {
 #' ```
 #'
 #' @family directory functions
+#'
 #'
 #' @export
 clear_directory_files <- function() {
@@ -1936,6 +2058,7 @@ clear_directory_files <- function() {
 #' ```
 #'
 #' @family directory functions
+#'
 #'
 #' @export
 change_directory <- function(dir) {
@@ -1959,6 +2082,7 @@ change_directory <- function(dir) {
 #'
 #' @family file functions
 #'
+#'
 #' @export
 is_file_dropped <- function() {
   is_file_dropped_()
@@ -1976,6 +2100,7 @@ is_file_dropped <- function() {
 #' ```
 #' void ClearDroppedFiles(void);
 #' ```
+#'
 #'
 #' @export
 clear_dropped_files <- function() {
@@ -1998,6 +2123,7 @@ clear_dropped_files <- function() {
 #'
 #' @family file functions
 #'
+#'
 #' @export
 get_file_mod_time <- function(file_name) {
   if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
@@ -2019,6 +2145,7 @@ get_file_mod_time <- function(file_name) {
 #' bool SaveStorageValue(unsigned int position, int value);
 #' ```
 #'
+#'
 #' @export
 save_storage_value <- function(position, value) {
   if (!is_unsigned_int(position)) abort(paste0('`position` must be a non-negative integer, not ', friendly_typeof(position), '.'), call = NULL)
@@ -2039,6 +2166,7 @@ save_storage_value <- function(position, value) {
 #' ```
 #' int LoadStorageValue(unsigned int position);
 #' ```
+#'
 #'
 #' @export
 load_storage_value <- function(position) {
@@ -2062,6 +2190,7 @@ load_storage_value <- function(position) {
 #'
 #' @family key functions
 #'
+#'
 #' @export
 is_key_pressed <- function(key) {
   if (!is_int(key)) abort(paste0('`key` must be an integer, not ', friendly_typeof(key), '.'), call = NULL)
@@ -2083,6 +2212,7 @@ is_key_pressed <- function(key) {
 #' ```
 #'
 #' @family key functions
+#'
 #'
 #' @export
 is_key_down <- function(key) {
@@ -2106,6 +2236,7 @@ is_key_down <- function(key) {
 #'
 #' @family key functions
 #'
+#'
 #' @export
 is_key_released <- function(key) {
   if (!is_int(key)) abort(paste0('`key` must be an integer, not ', friendly_typeof(key), '.'), call = NULL)
@@ -2128,6 +2259,7 @@ is_key_released <- function(key) {
 #'
 #' @family key functions
 #'
+#'
 #' @export
 is_key_up <- function(key) {
   if (!is_int(key)) abort(paste0('`key` must be an integer, not ', friendly_typeof(key), '.'), call = NULL)
@@ -2148,6 +2280,7 @@ is_key_up <- function(key) {
 #' ```
 #'
 #' @family key functions
+#'
 #'
 #' @export
 set_exit_key <- function(key) {
@@ -2171,6 +2304,7 @@ set_exit_key <- function(key) {
 #'
 #' @family key functions
 #'
+#'
 #' @export
 get_key_pressed <- function() {
   get_key_pressed_()
@@ -2192,6 +2326,7 @@ get_key_pressed <- function() {
 #'
 #' @family key functions
 #'
+#'
 #' @export
 get_char_pressed <- function() {
   get_char_pressed_()
@@ -2212,6 +2347,7 @@ get_char_pressed <- function() {
 #' ```
 #'
 #' @family gamepad functions
+#'
 #'
 #' @export
 is_gamepad_available <- function(gamepad) {
@@ -2235,6 +2371,7 @@ is_gamepad_available <- function(gamepad) {
 #'
 #' @family gamepad functions
 #'
+#'
 #' @export
 get_gamepad_name <- function(gamepad) {
   if (!is_int(gamepad)) abort(paste0('`gamepad` must be an integer, not ', friendly_typeof(gamepad), '.'), call = NULL)
@@ -2257,6 +2394,7 @@ get_gamepad_name <- function(gamepad) {
 #' ```
 #'
 #' @family gamepad functions
+#'
 #'
 #' @export
 is_gamepad_button_pressed <- function(gamepad, button) {
@@ -2282,6 +2420,7 @@ is_gamepad_button_pressed <- function(gamepad, button) {
 #'
 #' @family gamepad functions
 #'
+#'
 #' @export
 is_gamepad_button_down <- function(gamepad, button) {
   if (!is_int(gamepad)) abort(paste0('`gamepad` must be an integer, not ', friendly_typeof(gamepad), '.'), call = NULL)
@@ -2305,6 +2444,7 @@ is_gamepad_button_down <- function(gamepad, button) {
 #' ```
 #'
 #' @family gamepad functions
+#'
 #'
 #' @export
 is_gamepad_button_released <- function(gamepad, button) {
@@ -2330,6 +2470,7 @@ is_gamepad_button_released <- function(gamepad, button) {
 #'
 #' @family gamepad functions
 #'
+#'
 #' @export
 is_gamepad_button_up <- function(gamepad, button) {
   if (!is_int(gamepad)) abort(paste0('`gamepad` must be an integer, not ', friendly_typeof(gamepad), '.'), call = NULL)
@@ -2353,6 +2494,7 @@ is_gamepad_button_up <- function(gamepad, button) {
 #'
 #' @family gamepad functions
 #'
+#'
 #' @export
 get_gamepad_button_pressed <- function() {
   get_gamepad_button_pressed_()
@@ -2373,6 +2515,7 @@ get_gamepad_button_pressed <- function() {
 #' ```
 #'
 #' @family gamepad functions
+#'
 #'
 #' @export
 get_gamepad_axis_count <- function(gamepad) {
@@ -2397,6 +2540,7 @@ get_gamepad_axis_count <- function(gamepad) {
 #'
 #' @family gamepad functions
 #'
+#'
 #' @export
 get_gamepad_axis_movement <- function(gamepad, axis) {
   if (!is_int(gamepad)) abort(paste0('`gamepad` must be an integer, not ', friendly_typeof(gamepad), '.'), call = NULL)
@@ -2420,6 +2564,7 @@ get_gamepad_axis_movement <- function(gamepad, axis) {
 #'
 #' @family gamepad functions
 #'
+#'
 #' @export
 set_gamepad_mappings <- function(mappings) {
   if (!is_const_char_pointer(mappings)) abort(paste0('`mappings` must be a string, not ', friendly_typeof(mappings), '.'), call = NULL)
@@ -2441,6 +2586,7 @@ set_gamepad_mappings <- function(mappings) {
 #' ```
 #'
 #' @family mouse functions
+#'
 #'
 #' @export
 is_mouse_button_pressed <- function(button) {
@@ -2464,6 +2610,7 @@ is_mouse_button_pressed <- function(button) {
 #'
 #' @family mouse functions
 #'
+#'
 #' @export
 is_mouse_button_down <- function(button) {
   if (!is_int(button)) abort(paste0('`button` must be an integer, not ', friendly_typeof(button), '.'), call = NULL)
@@ -2485,6 +2632,7 @@ is_mouse_button_down <- function(button) {
 #' ```
 #'
 #' @family mouse functions
+#'
 #'
 #' @export
 is_mouse_button_released <- function(button) {
@@ -2508,6 +2656,7 @@ is_mouse_button_released <- function(button) {
 #'
 #' @family mouse functions
 #'
+#'
 #' @export
 is_mouse_button_up <- function(button) {
   if (!is_int(button)) abort(paste0('`button` must be an integer, not ', friendly_typeof(button), '.'), call = NULL)
@@ -2530,6 +2679,7 @@ is_mouse_button_up <- function(button) {
 #'
 #' @family mouse functions
 #'
+#'
 #' @export
 get_mouse_x <- function() {
   get_mouse_x_()
@@ -2550,6 +2700,7 @@ get_mouse_x <- function() {
 #' ```
 #'
 #' @family mouse functions
+#'
 #'
 #' @export
 get_mouse_y <- function() {
@@ -2572,6 +2723,7 @@ get_mouse_y <- function() {
 #'
 #' @family mouse functions
 #'
+#'
 #' @export
 get_mouse_position <- function() {
   get_mouse_position_()
@@ -2593,6 +2745,7 @@ get_mouse_position <- function() {
 #'
 #' @family mouse functions
 #'
+#'
 #' @export
 get_mouse_delta <- function() {
   get_mouse_delta_()
@@ -2613,6 +2766,7 @@ get_mouse_delta <- function() {
 #' ```
 #'
 #' @family mouse functions
+#'
 #'
 #' @export
 set_mouse_position <- function(x, y) {
@@ -2637,6 +2791,7 @@ set_mouse_position <- function(x, y) {
 #'
 #' @family mouse functions
 #'
+#'
 #' @export
 set_mouse_offset <- function(offset_x, offset_y) {
   if (!is_int(offset_x)) abort(paste0('`offset_x` must be an integer, not ', friendly_typeof(offset_x), '.'), call = NULL)
@@ -2659,6 +2814,7 @@ set_mouse_offset <- function(offset_x, offset_y) {
 #' ```
 #'
 #' @family mouse functions
+#'
 #'
 #' @export
 set_mouse_scale <- function(scale_x, scale_y) {
@@ -2683,6 +2839,7 @@ set_mouse_scale <- function(scale_x, scale_y) {
 #'
 #' @family mouse functions
 #'
+#'
 #' @export
 get_mouse_wheel_move <- function() {
   get_mouse_wheel_move_()
@@ -2703,6 +2860,7 @@ get_mouse_wheel_move <- function() {
 #'
 #' @family mouse functions
 #' @family cursor functions
+#'
 #'
 #' @export
 set_mouse_cursor <- function(cursor) {
@@ -2726,6 +2884,7 @@ set_mouse_cursor <- function(cursor) {
 #'
 #' @family touch functions
 #'
+#'
 #' @export
 get_touch_x <- function() {
   get_touch_x_()
@@ -2747,6 +2906,7 @@ get_touch_x <- function() {
 #'
 #' @family touch functions
 #'
+#'
 #' @export
 get_touch_y <- function() {
   get_touch_y_()
@@ -2767,6 +2927,7 @@ get_touch_y <- function() {
 #' ```
 #'
 #' @family touch functions
+#'
 #'
 #' @export
 get_touch_position <- function(index) {
@@ -2790,6 +2951,7 @@ get_touch_position <- function(index) {
 #'
 #' @family touch functions
 #'
+#'
 #' @export
 get_touch_point_id <- function(index) {
   if (!is_int(index)) abort(paste0('`index` must be an integer, not ', friendly_typeof(index), '.'), call = NULL)
@@ -2812,6 +2974,7 @@ get_touch_point_id <- function(index) {
 #'
 #' @family touch functions
 #'
+#'
 #' @export
 get_touch_point_count <- function() {
   get_touch_point_count_()
@@ -2829,6 +2992,7 @@ get_touch_point_count <- function() {
 #' ```
 #' void SetGesturesEnabled(unsigned int flags);
 #' ```
+#'
 #'
 #' @export
 set_gestures_enabled <- function(flags) {
@@ -2850,6 +3014,7 @@ set_gestures_enabled <- function(flags) {
 #' bool IsGestureDetected(int gesture);
 #' ```
 #'
+#'
 #' @export
 is_gesture_detected <- function(gesture) {
   if (!is_int(gesture)) abort(paste0('`gesture` must be an integer, not ', friendly_typeof(gesture), '.'), call = NULL)
@@ -2870,6 +3035,7 @@ is_gesture_detected <- function(gesture) {
 #' int GetGestureDetected(void);
 #' ```
 #'
+#'
 #' @export
 get_gesture_detected <- function() {
   get_gesture_detected_()
@@ -2888,6 +3054,7 @@ get_gesture_detected <- function() {
 #' ```
 #' float GetGestureHoldDuration(void);
 #' ```
+#'
 #'
 #' @export
 get_gesture_hold_duration <- function() {
@@ -2908,6 +3075,7 @@ get_gesture_hold_duration <- function() {
 #' Vector2 GetGestureDragVector(void);
 #' ```
 #'
+#'
 #' @export
 get_gesture_drag_vector <- function() {
   get_gesture_drag_vector_()
@@ -2926,6 +3094,7 @@ get_gesture_drag_vector <- function() {
 #' ```
 #' float GetGestureDragAngle(void);
 #' ```
+#'
 #'
 #' @export
 get_gesture_drag_angle <- function() {
@@ -2946,6 +3115,7 @@ get_gesture_drag_angle <- function() {
 #' Vector2 GetGesturePinchVector(void);
 #' ```
 #'
+#'
 #' @export
 get_gesture_pinch_vector <- function() {
   get_gesture_pinch_vector_()
@@ -2964,6 +3134,7 @@ get_gesture_pinch_vector <- function() {
 #' ```
 #' float GetGesturePinchAngle(void);
 #' ```
+#'
 #'
 #' @export
 get_gesture_pinch_angle <- function() {
@@ -2987,6 +3158,9 @@ get_gesture_pinch_angle <- function() {
 #' @family camera functions
 #' @family mode functions
 #'
+#'
+#' @seealso [camera_3d()] for creating camera_3d objects.
+#'
 #' @export
 set_camera_mode <- function(camera, mode) {
   if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
@@ -3009,6 +3183,9 @@ set_camera_mode <- function(camera, mode) {
 #'
 #' @family camera functions
 #'
+#'
+#' @seealso [camera_3d()] for creating camera_3d objects.
+#'
 #' @export
 update_camera <- function(camera) {
   if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
@@ -3029,6 +3206,7 @@ update_camera <- function(camera) {
 #' ```
 #'
 #' @family camera functions
+#'
 #'
 #' @export
 set_camera_pan_control <- function(key_pan) {
@@ -3051,6 +3229,7 @@ set_camera_pan_control <- function(key_pan) {
 #'
 #' @family camera functions
 #'
+#'
 #' @export
 set_camera_alt_control <- function(key_alt) {
   if (!is_int(key_alt)) abort(paste0('`key_alt` must be an integer, not ', friendly_typeof(key_alt), '.'), call = NULL)
@@ -3071,6 +3250,7 @@ set_camera_alt_control <- function(key_alt) {
 #' ```
 #'
 #' @family camera functions
+#'
 #'
 #' @export
 set_camera_smooth_zoom_control <- function(key_smooth_zoom) {
@@ -3097,6 +3277,7 @@ set_camera_smooth_zoom_control <- function(key_smooth_zoom) {
 #' ```
 #'
 #' @family camera functions
+#'
 #'
 #' @export
 set_camera_move_controls <- function(key_front, key_back, key_right, key_left, key_up, key_down) {
@@ -3125,6 +3306,10 @@ set_camera_move_controls <- function(key_front, key_back, key_right, key_left, k
 #'
 #' @family texture functions
 #'
+#'
+#' @seealso [texture()] for creating texture objects.
+#' @seealso [rectangle()] for creating rectangle objects.
+#'
 #' @export
 set_shapes_texture <- function(texture, source) {
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
@@ -3149,6 +3334,9 @@ set_shapes_texture <- function(texture, source) {
 #'
 #' @family draw functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_pixel <- function(pos_x, pos_y, color) {
   if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
@@ -3172,6 +3360,9 @@ draw_pixel <- function(pos_x, pos_y, color) {
 #' ```
 #'
 #' @family draw functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_pixel_v <- function(position, color) {
@@ -3199,6 +3390,9 @@ draw_pixel_v <- function(position, color) {
 #'
 #' @family draw functions
 #' @family line functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_line <- function(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color) {
@@ -3228,6 +3422,9 @@ draw_line <- function(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color) {
 #' @family draw functions
 #' @family line functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_line_v <- function(start_pos, end_pos, color) {
   if (!is_vector_2(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 2, not ', friendly_typeof(start_pos), '.'), call = NULL)
@@ -3254,6 +3451,9 @@ draw_line_v <- function(start_pos, end_pos, color) {
 #'
 #' @family draw functions
 #' @family line functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_line_ex <- function(start_pos, end_pos, thick, color) {
@@ -3283,6 +3483,9 @@ draw_line_ex <- function(start_pos, end_pos, thick, color) {
 #' @family draw functions
 #' @family line functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_line_bezier <- function(start_pos, end_pos, thick, color) {
   if (!is_vector_2(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 2, not ', friendly_typeof(start_pos), '.'), call = NULL)
@@ -3311,6 +3514,9 @@ draw_line_bezier <- function(start_pos, end_pos, thick, color) {
 #'
 #' @family draw functions
 #' @family line functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_line_bezier_quad <- function(start_pos, end_pos, control_pos, thick, color) {
@@ -3343,6 +3549,9 @@ draw_line_bezier_quad <- function(start_pos, end_pos, control_pos, thick, color)
 #' @family draw functions
 #' @family line functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_line_bezier_cubic <- function(start_pos, end_pos, start_control_pos, end_control_pos, thick, color) {
   if (!is_vector_2(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 2, not ', friendly_typeof(start_pos), '.'), call = NULL)
@@ -3373,6 +3582,9 @@ draw_line_bezier_cubic <- function(start_pos, end_pos, start_control_pos, end_co
 #' @family draw functions
 #' @family circle functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_circle <- function(center_x, center_y, radius, color) {
   if (!is_int(center_x)) abort(paste0('`center_x` must be an integer, not ', friendly_typeof(center_x), '.'), call = NULL)
@@ -3402,6 +3614,9 @@ draw_circle <- function(center_x, center_y, radius, color) {
 #'
 #' @family draw functions
 #' @family circle functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_circle_sector <- function(center, radius, start_angle, end_angle, segments, color) {
@@ -3435,6 +3650,9 @@ draw_circle_sector <- function(center, radius, start_angle, end_angle, segments,
 #' @family draw functions
 #' @family circle functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_circle_sector_lines <- function(center, radius, start_angle, end_angle, segments, color) {
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
@@ -3466,6 +3684,9 @@ draw_circle_sector_lines <- function(center, radius, start_angle, end_angle, seg
 #' @family draw functions
 #' @family circle functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_circle_gradient <- function(center_x, center_y, radius, color_1, color_2) {
   if (!is_int(center_x)) abort(paste0('`center_x` must be an integer, not ', friendly_typeof(center_x), '.'), call = NULL)
@@ -3494,6 +3715,9 @@ draw_circle_gradient <- function(center_x, center_y, radius, color_1, color_2) {
 #' @family draw functions
 #' @family circle functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_circle_v <- function(center, radius, color) {
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
@@ -3520,6 +3744,9 @@ draw_circle_v <- function(center, radius, color) {
 #'
 #' @family draw functions
 #' @family circle functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_circle_lines <- function(center_x, center_y, radius, color) {
@@ -3549,6 +3776,9 @@ draw_circle_lines <- function(center_x, center_y, radius, color) {
 #'
 #' @family draw functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_ellipse <- function(center_x, center_y, radius_h, radius_v, color) {
   if (!is_int(center_x)) abort(paste0('`center_x` must be an integer, not ', friendly_typeof(center_x), '.'), call = NULL)
@@ -3577,6 +3807,9 @@ draw_ellipse <- function(center_x, center_y, radius_h, radius_v, color) {
 #' ```
 #'
 #' @family draw functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_ellipse_lines <- function(center_x, center_y, radius_h, radius_v, color) {
@@ -3608,6 +3841,9 @@ draw_ellipse_lines <- function(center_x, center_y, radius_h, radius_v, color) {
 #' ```
 #'
 #' @family draw functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_ring <- function(center, inner_radius, outer_radius, start_angle, end_angle, segments, color) {
@@ -3642,6 +3878,9 @@ draw_ring <- function(center, inner_radius, outer_radius, start_angle, end_angle
 #'
 #' @family draw functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_ring_lines <- function(center, inner_radius, outer_radius, start_angle, end_angle, segments, color) {
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
@@ -3674,6 +3913,9 @@ draw_ring_lines <- function(center, inner_radius, outer_radius, start_angle, end
 #' @family draw functions
 #' @family rectangle functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_rectangle <- function(pos_x, pos_y, width, height, color) {
   if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
@@ -3702,6 +3944,9 @@ draw_rectangle <- function(pos_x, pos_y, width, height, color) {
 #' @family draw functions
 #' @family rectangle functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_rectangle_v <- function(position, size, color) {
   if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
@@ -3726,6 +3971,10 @@ draw_rectangle_v <- function(position, size, color) {
 #'
 #' @family draw functions
 #' @family rectangle functions
+#'
+#'
+#' @seealso [rectangle()] for creating rectangle objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_rectangle_rec <- function(rec, color) {
@@ -3752,6 +4001,10 @@ draw_rectangle_rec <- function(rec, color) {
 #'
 #' @family draw functions
 #' @family rectangle functions
+#'
+#'
+#' @seealso [rectangle()] for creating rectangle objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_rectangle_pro <- function(rec, origin, rotation, color) {
@@ -3782,6 +4035,9 @@ draw_rectangle_pro <- function(rec, origin, rotation, color) {
 #'
 #' @family draw functions
 #' @family rectangle functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_rectangle_gradient_v <- function(pos_x, pos_y, width, height, color_1, color_2) {
@@ -3815,6 +4071,9 @@ draw_rectangle_gradient_v <- function(pos_x, pos_y, width, height, color_1, colo
 #' @family draw functions
 #' @family rectangle functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_rectangle_gradient_h <- function(pos_x, pos_y, width, height, color_1, color_2) {
   if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
@@ -3846,6 +4105,10 @@ draw_rectangle_gradient_h <- function(pos_x, pos_y, width, height, color_1, colo
 #' @family draw functions
 #' @family rectangle functions
 #'
+#'
+#' @seealso [rectangle()] for creating rectangle objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_rectangle_gradient_ex <- function(rec, col_1, col_2, col_3, col_4) {
   if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
@@ -3876,6 +4139,9 @@ draw_rectangle_gradient_ex <- function(rec, col_1, col_2, col_3, col_4) {
 #' @family draw functions
 #' @family rectangle functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_rectangle_lines <- function(pos_x, pos_y, width, height, color) {
   if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
@@ -3904,6 +4170,10 @@ draw_rectangle_lines <- function(pos_x, pos_y, width, height, color) {
 #' @family draw functions
 #' @family rectangle functions
 #'
+#'
+#' @seealso [rectangle()] for creating rectangle objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_rectangle_lines_ex <- function(rec, line_thick, color) {
   if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
@@ -3930,6 +4200,10 @@ draw_rectangle_lines_ex <- function(rec, line_thick, color) {
 #'
 #' @family draw functions
 #' @family rectangle functions
+#'
+#'
+#' @seealso [rectangle()] for creating rectangle objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_rectangle_rounded <- function(rec, roundness, segments, color) {
@@ -3960,6 +4234,10 @@ draw_rectangle_rounded <- function(rec, roundness, segments, color) {
 #' @family draw functions
 #' @family rectangle functions
 #'
+#'
+#' @seealso [rectangle()] for creating rectangle objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_rectangle_rounded_lines <- function(rec, roundness, segments, line_thick, color) {
   if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
@@ -3988,6 +4266,9 @@ draw_rectangle_rounded_lines <- function(rec, roundness, segments, line_thick, c
 #'
 #' @family draw functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_triangle <- function(v_1, v_2, v_3, color) {
   if (!is_vector_2(v_1)) abort(paste0('`v_1` must be a numeric vector of length 2, not ', friendly_typeof(v_1), '.'), call = NULL)
@@ -4014,6 +4295,9 @@ draw_triangle <- function(v_1, v_2, v_3, color) {
 #' ```
 #'
 #' @family draw functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_triangle_lines <- function(v_1, v_2, v_3, color) {
@@ -4043,6 +4327,9 @@ draw_triangle_lines <- function(v_1, v_2, v_3, color) {
 #'
 #' @family draw functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_poly <- function(center, sides, radius, rotation, color) {
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
@@ -4071,6 +4358,9 @@ draw_poly <- function(center, sides, radius, rotation, color) {
 #' ```
 #'
 #' @family draw functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_poly_lines <- function(center, sides, radius, rotation, color) {
@@ -4102,6 +4392,9 @@ draw_poly_lines <- function(center, sides, radius, rotation, color) {
 #'
 #' @family draw functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_poly_lines_ex <- function(center, sides, radius, rotation, line_thick, color) {
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
@@ -4130,6 +4423,9 @@ draw_poly_lines_ex <- function(center, sides, radius, rotation, line_thick, colo
 #'
 #' @family collision functions
 #'
+#'
+#' @seealso [rectangle()] for creating rectangle objects.
+#'
 #' @export
 check_collision_recs <- function(rec_1, rec_2) {
   if (!is_rectangle(rec_1)) abort(paste0('`rec_1` must be a rectangle, not ', friendly_typeof(rec_1), '.'), call = NULL)
@@ -4155,6 +4451,7 @@ check_collision_recs <- function(rec_1, rec_2) {
 #' ```
 #'
 #' @family collision functions
+#'
 #'
 #' @export
 check_collision_circles <- function(center_1, radius_1, center_2, radius_2) {
@@ -4184,6 +4481,9 @@ check_collision_circles <- function(center_1, radius_1, center_2, radius_2) {
 #' @family collision functions
 #' @family circle functions
 #'
+#'
+#' @seealso [rectangle()] for creating rectangle objects.
+#'
 #' @export
 check_collision_circle_rec <- function(center, radius, rec) {
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
@@ -4208,6 +4508,9 @@ check_collision_circle_rec <- function(center, radius, rec) {
 #' ```
 #'
 #' @family collision functions
+#'
+#'
+#' @seealso [rectangle()] for creating rectangle objects.
 #'
 #' @export
 check_collision_point_rec <- function(point, rec) {
@@ -4235,6 +4538,7 @@ check_collision_point_rec <- function(point, rec) {
 #' @family collision functions
 #' @family circle functions
 #'
+#'
 #' @export
 check_collision_point_circle <- function(point, center, radius) {
   if (!is_vector_2(point)) abort(paste0('`point` must be a numeric vector of length 2, not ', friendly_typeof(point), '.'), call = NULL)
@@ -4261,6 +4565,7 @@ check_collision_point_circle <- function(point, center, radius) {
 #' ```
 #'
 #' @family collision functions
+#'
 #'
 #' @export
 check_collision_point_triangle <- function(point, p_1, p_2, p_3) {
@@ -4290,6 +4595,7 @@ check_collision_point_triangle <- function(point, p_1, p_2, p_3) {
 #' ```
 #'
 #' @family collision functions
+#'
 #'
 #' @export
 check_collision_lines <- function(start_pos_1, end_pos_1, start_pos_2, end_pos_2, collision_point) {
@@ -4321,6 +4627,7 @@ check_collision_lines <- function(start_pos_1, end_pos_1, start_pos_2, end_pos_2
 #' @family collision functions
 #' @family line functions
 #'
+#'
 #' @export
 check_collision_point_line <- function(point, p_1, p_2, threshold) {
   if (!is_vector_2(point)) abort(paste0('`point` must be a numeric vector of length 2, not ', friendly_typeof(point), '.'), call = NULL)
@@ -4347,6 +4654,9 @@ check_collision_point_line <- function(point, p_1, p_2, threshold) {
 #'
 #' @family collision functions
 #'
+#'
+#' @seealso [rectangle()] for creating rectangle objects.
+#'
 #' @export
 get_collision_rec <- function(rec_1, rec_2) {
   if (!is_rectangle(rec_1)) abort(paste0('`rec_1` must be a rectangle, not ', friendly_typeof(rec_1), '.'), call = NULL)
@@ -4360,7 +4670,7 @@ get_collision_rec <- function(rec_1, rec_2) {
 #'
 #' @param file_name A string.
 #'
-#' @return an image
+#' @return An image
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -4369,6 +4679,7 @@ get_collision_rec <- function(rec_1, rec_2) {
 #' ```
 #'
 #' @family image functions
+#'
 #'
 #' @export
 load_image <- function(file_name) {
@@ -4386,7 +4697,7 @@ load_image <- function(file_name) {
 #' @param format An integer.
 #' @param header_size An integer.
 #'
-#' @return an image
+#' @return An image
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -4395,6 +4706,7 @@ load_image <- function(file_name) {
 #' ```
 #'
 #' @family image functions
+#'
 #'
 #' @export
 load_image_raw <- function(file_name, width, height, format, header_size) {
@@ -4412,7 +4724,7 @@ load_image_raw <- function(file_name, width, height, format, header_size) {
 #'
 #' @param texture A texture.
 #'
-#' @return an image
+#' @return An image
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -4422,6 +4734,9 @@ load_image_raw <- function(file_name, width, height, format, header_size) {
 #'
 #' @family image functions
 #' @family texture functions
+#'
+#'
+#' @seealso [texture()] for creating texture objects.
 #'
 #' @export
 load_image_from_texture <- function(texture) {
@@ -4435,7 +4750,7 @@ load_image_from_texture <- function(texture) {
 #'
 
 #'
-#' @return an image
+#' @return An image
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -4446,6 +4761,7 @@ load_image_from_texture <- function(texture) {
 #' @family image functions
 #' @family screen functions
 #'
+#'
 #' @export
 load_image_from_screen <- function() {
   load_image_from_screen_()
@@ -4455,7 +4771,7 @@ load_image_from_screen <- function() {
 #'
 #' Unload image from CPU memory (RAM).
 #'
-#' @param image an image.
+#' @param image An image.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -4465,6 +4781,9 @@ load_image_from_screen <- function() {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
 #'
 #' @export
 unload_image <- function(image) {
@@ -4476,7 +4795,7 @@ unload_image <- function(image) {
 #'
 #' Export image data to file, returns true on success.
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param file_name A string.
 #'
 #' @return A logical
@@ -4489,6 +4808,9 @@ unload_image <- function(image) {
 #'
 #' @family image functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#'
 #' @export
 export_image <- function(image, file_name) {
   if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
@@ -4500,7 +4822,7 @@ export_image <- function(image, file_name) {
 #'
 #' Export image as code file defining an array of bytes, returns true on success.
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param file_name A string.
 #'
 #' @return A logical
@@ -4512,6 +4834,9 @@ export_image <- function(image, file_name) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
 #'
 #' @export
 export_image_as_code <- function(image, file_name) {
@@ -4528,7 +4853,7 @@ export_image_as_code <- function(image, file_name) {
 #' @param height An integer.
 #' @param color A color.
 #'
-#' @return an image
+#' @return An image
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -4538,6 +4863,9 @@ export_image_as_code <- function(image, file_name) {
 #'
 #' @family image functions
 #' @family color functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 gen_image_color <- function(width, height, color) {
@@ -4556,7 +4884,7 @@ gen_image_color <- function(width, height, color) {
 #' @param top A color.
 #' @param bottom A color.
 #'
-#' @return an image
+#' @return An image
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -4565,6 +4893,9 @@ gen_image_color <- function(width, height, color) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 gen_image_gradient_v <- function(width, height, top, bottom) {
@@ -4584,7 +4915,7 @@ gen_image_gradient_v <- function(width, height, top, bottom) {
 #' @param left A color.
 #' @param right A color.
 #'
-#' @return an image
+#' @return An image
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -4593,6 +4924,9 @@ gen_image_gradient_v <- function(width, height, top, bottom) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 gen_image_gradient_h <- function(width, height, left, right) {
@@ -4613,7 +4947,7 @@ gen_image_gradient_h <- function(width, height, left, right) {
 #' @param inner A color.
 #' @param outer A color.
 #'
-#' @return an image
+#' @return An image
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -4622,6 +4956,9 @@ gen_image_gradient_h <- function(width, height, left, right) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 gen_image_gradient_radial <- function(width, height, density, inner, outer) {
@@ -4644,7 +4981,7 @@ gen_image_gradient_radial <- function(width, height, density, inner, outer) {
 #' @param col_1 A color.
 #' @param col_2 A color.
 #'
-#' @return an image
+#' @return An image
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -4653,6 +4990,9 @@ gen_image_gradient_radial <- function(width, height, density, inner, outer) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 gen_image_checked <- function(width, height, checks_x, checks_y, col_1, col_2) {
@@ -4673,7 +5013,7 @@ gen_image_checked <- function(width, height, checks_x, checks_y, col_1, col_2) {
 #' @param height An integer.
 #' @param factor A number.
 #'
-#' @return an image
+#' @return An image
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -4682,6 +5022,7 @@ gen_image_checked <- function(width, height, checks_x, checks_y, col_1, col_2) {
 #' ```
 #'
 #' @family image functions
+#'
 #'
 #' @export
 gen_image_white_noise <- function(width, height, factor) {
@@ -4699,7 +5040,7 @@ gen_image_white_noise <- function(width, height, factor) {
 #' @param height An integer.
 #' @param tile_size An integer.
 #'
-#' @return an image
+#' @return An image
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -4708,6 +5049,7 @@ gen_image_white_noise <- function(width, height, factor) {
 #' ```
 #'
 #' @family image functions
+#'
 #'
 #' @export
 gen_image_cellular <- function(width, height, tile_size) {
@@ -4721,9 +5063,9 @@ gen_image_cellular <- function(width, height, tile_size) {
 #'
 #' Create an image duplicate (useful for transformations).
 #'
-#' @param image an image.
+#' @param image An image.
 #'
-#' @return an image
+#' @return An image
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -4732,6 +5074,9 @@ gen_image_cellular <- function(width, height, tile_size) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
 #'
 #' @export
 image_copy <- function(image) {
@@ -4743,10 +5088,10 @@ image_copy <- function(image) {
 #'
 #' Create an image from another image piece.
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param rec A rectangle.
 #'
-#' @return an image
+#' @return An image
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -4756,6 +5101,10 @@ image_copy <- function(image) {
 #'
 #' @family image functions
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [rectangle()] for creating rectangle objects.
 #'
 #' @export
 image_from_image <- function(image, rec) {
@@ -4772,7 +5121,7 @@ image_from_image <- function(image, rec) {
 #' @param font_size An integer.
 #' @param color A color.
 #'
-#' @return an image
+#' @return An image
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -4782,6 +5131,9 @@ image_from_image <- function(image, rec) {
 #'
 #' @family image functions
 #' @family text functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 image_text <- function(text, font_size, color) {
@@ -4801,7 +5153,7 @@ image_text <- function(text, font_size, color) {
 #' @param spacing A number.
 #' @param tint A color.
 #'
-#' @return an image
+#' @return An image
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -4811,6 +5163,10 @@ image_text <- function(text, font_size, color) {
 #'
 #' @family image functions
 #' @family text functions
+#'
+#'
+#' @seealso [font()] for creating font objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 image_text_ex <- function(font, text, font_size, spacing, tint) {
@@ -4826,7 +5182,7 @@ image_text_ex <- function(font, text, font_size, spacing, tint) {
 #'
 #' Convert image data to desired format.
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param new_format An integer.
 #'
 #'
@@ -4837,6 +5193,9 @@ image_text_ex <- function(font, text, font_size, spacing, tint) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
 #'
 #' @export
 image_format <- function(image, new_format) {
@@ -4849,7 +5208,7 @@ image_format <- function(image, new_format) {
 #'
 #' Convert image to POT (power-of-two).
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param fill A color.
 #'
 #'
@@ -4860,6 +5219,10 @@ image_format <- function(image, new_format) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 image_to_pot <- function(image, fill) {
@@ -4872,7 +5235,7 @@ image_to_pot <- function(image, fill) {
 #'
 #' Crop an image to a defined rectangle.
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param crop A rectangle.
 #'
 #'
@@ -4883,6 +5246,10 @@ image_to_pot <- function(image, fill) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [rectangle()] for creating rectangle objects.
 #'
 #' @export
 image_crop <- function(image, crop) {
@@ -4895,7 +5262,7 @@ image_crop <- function(image, crop) {
 #'
 #' Crop image depending on alpha value.
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param threshold A number.
 #'
 #'
@@ -4906,6 +5273,9 @@ image_crop <- function(image, crop) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
 #'
 #' @export
 image_alpha_crop <- function(image, threshold) {
@@ -4918,7 +5288,7 @@ image_alpha_crop <- function(image, threshold) {
 #'
 #' Clear alpha channel to desired color.
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param color A color.
 #' @param threshold A number.
 #'
@@ -4930,6 +5300,10 @@ image_alpha_crop <- function(image, threshold) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 image_alpha_clear <- function(image, color, threshold) {
@@ -4943,8 +5317,8 @@ image_alpha_clear <- function(image, color, threshold) {
 #'
 #' Apply alpha mask to image.
 #'
-#' @param image an image.
-#' @param alpha_mask an image.
+#' @param image An image.
+#' @param alpha_mask An image.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -4954,6 +5328,9 @@ image_alpha_clear <- function(image, color, threshold) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
 #'
 #' @export
 image_alpha_mask <- function(image, alpha_mask) {
@@ -4966,7 +5343,7 @@ image_alpha_mask <- function(image, alpha_mask) {
 #'
 #' Premultiply alpha channel.
 #'
-#' @param image an image.
+#' @param image An image.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -4976,6 +5353,9 @@ image_alpha_mask <- function(image, alpha_mask) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
 #'
 #' @export
 image_alpha_premultiply <- function(image) {
@@ -4987,7 +5367,7 @@ image_alpha_premultiply <- function(image) {
 #'
 #' Resize image (Bicubic scaling algorithm).
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param new_width An integer.
 #' @param new_height An integer.
 #'
@@ -4999,6 +5379,9 @@ image_alpha_premultiply <- function(image) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
 #'
 #' @export
 image_resize <- function(image, new_width, new_height) {
@@ -5012,7 +5395,7 @@ image_resize <- function(image, new_width, new_height) {
 #'
 #' Resize image (Nearest-Neighbor scaling algorithm).
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param new_width An integer.
 #' @param new_height An integer.
 #'
@@ -5024,6 +5407,9 @@ image_resize <- function(image, new_width, new_height) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
 #'
 #' @export
 image_resize_nn <- function(image, new_width, new_height) {
@@ -5037,7 +5423,7 @@ image_resize_nn <- function(image, new_width, new_height) {
 #'
 #' Resize canvas and fill with color.
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param new_width An integer.
 #' @param new_height An integer.
 #' @param offset_x An integer.
@@ -5052,6 +5438,10 @@ image_resize_nn <- function(image, new_width, new_height) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 image_resize_canvas <- function(image, new_width, new_height, offset_x, offset_y, fill) {
@@ -5068,7 +5458,7 @@ image_resize_canvas <- function(image, new_width, new_height, offset_x, offset_y
 #'
 #' Compute all mipmap levels for a provided image.
 #'
-#' @param image an image.
+#' @param image An image.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -5078,6 +5468,9 @@ image_resize_canvas <- function(image, new_width, new_height, offset_x, offset_y
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
 #'
 #' @export
 image_mipmaps <- function(image) {
@@ -5089,7 +5482,7 @@ image_mipmaps <- function(image) {
 #'
 #' Dither image data to 16bpp or lower (Floyd-Steinberg dithering).
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param r_bpp An integer.
 #' @param g_bpp An integer.
 #' @param b_bpp An integer.
@@ -5103,6 +5496,9 @@ image_mipmaps <- function(image) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
 #'
 #' @export
 image_dither <- function(image, r_bpp, g_bpp, b_bpp, a_bpp) {
@@ -5118,7 +5514,7 @@ image_dither <- function(image, r_bpp, g_bpp, b_bpp, a_bpp) {
 #'
 #' Flip image vertically.
 #'
-#' @param image an image.
+#' @param image An image.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -5128,6 +5524,9 @@ image_dither <- function(image, r_bpp, g_bpp, b_bpp, a_bpp) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
 #'
 #' @export
 image_flip_vertical <- function(image) {
@@ -5139,7 +5538,7 @@ image_flip_vertical <- function(image) {
 #'
 #' Flip image horizontally.
 #'
-#' @param image an image.
+#' @param image An image.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -5149,6 +5548,9 @@ image_flip_vertical <- function(image) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
 #'
 #' @export
 image_flip_horizontal <- function(image) {
@@ -5160,7 +5562,7 @@ image_flip_horizontal <- function(image) {
 #'
 #' Rotate image clockwise 90deg.
 #'
-#' @param image an image.
+#' @param image An image.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -5170,6 +5572,9 @@ image_flip_horizontal <- function(image) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
 #'
 #' @export
 image_rotate_cw <- function(image) {
@@ -5181,7 +5586,7 @@ image_rotate_cw <- function(image) {
 #'
 #' Rotate image counter-clockwise 90deg.
 #'
-#' @param image an image.
+#' @param image An image.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -5191,6 +5596,9 @@ image_rotate_cw <- function(image) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
 #'
 #' @export
 image_rotate_ccw <- function(image) {
@@ -5202,7 +5610,7 @@ image_rotate_ccw <- function(image) {
 #'
 #' Modify image color: tint.
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param color A color.
 #'
 #'
@@ -5215,6 +5623,10 @@ image_rotate_ccw <- function(image) {
 #' @family image functions
 #' @family color functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 image_color_tint <- function(image, color) {
   if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
@@ -5226,7 +5638,7 @@ image_color_tint <- function(image, color) {
 #'
 #' Modify image color: invert.
 #'
-#' @param image an image.
+#' @param image An image.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -5238,6 +5650,9 @@ image_color_tint <- function(image, color) {
 #' @family image functions
 #' @family color functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#'
 #' @export
 image_color_invert <- function(image) {
   if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
@@ -5248,7 +5663,7 @@ image_color_invert <- function(image) {
 #'
 #' Modify image color: grayscale.
 #'
-#' @param image an image.
+#' @param image An image.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -5260,6 +5675,9 @@ image_color_invert <- function(image) {
 #' @family image functions
 #' @family color functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#'
 #' @export
 image_color_grayscale <- function(image) {
   if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
@@ -5270,7 +5688,7 @@ image_color_grayscale <- function(image) {
 #'
 #' Modify image color: contrast (-100 to 100).
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param contrast A number.
 #'
 #'
@@ -5283,6 +5701,9 @@ image_color_grayscale <- function(image) {
 #' @family image functions
 #' @family color functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#'
 #' @export
 image_color_contrast <- function(image, contrast) {
   if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
@@ -5294,7 +5715,7 @@ image_color_contrast <- function(image, contrast) {
 #'
 #' Modify image color: brightness (-255 to 255).
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param brightness An integer.
 #'
 #'
@@ -5307,6 +5728,9 @@ image_color_contrast <- function(image, contrast) {
 #' @family image functions
 #' @family color functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#'
 #' @export
 image_color_brightness <- function(image, brightness) {
   if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
@@ -5318,7 +5742,7 @@ image_color_brightness <- function(image, brightness) {
 #'
 #' Modify image color: replace color.
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param color A color.
 #' @param replace A color.
 #'
@@ -5331,6 +5755,10 @@ image_color_brightness <- function(image, brightness) {
 #'
 #' @family image functions
 #' @family color functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 image_color_replace <- function(image, color, replace) {
@@ -5355,6 +5783,9 @@ image_color_replace <- function(image, color, replace) {
 #'
 #' @family image functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 unload_image_colors <- function(colors) {
   if (!is_color(colors)) abort(paste0('`colors` must be a color, not ', friendly_typeof(colors), '.'), call = NULL)
@@ -5376,6 +5807,9 @@ unload_image_colors <- function(colors) {
 #'
 #' @family image functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 unload_image_palette <- function(colors) {
   if (!is_color(colors)) abort(paste0('`colors` must be a color, not ', friendly_typeof(colors), '.'), call = NULL)
@@ -5386,7 +5820,7 @@ unload_image_palette <- function(colors) {
 #'
 #' Get image alpha border rectangle.
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param threshold A number.
 #'
 #' @return A rectangle
@@ -5399,6 +5833,9 @@ unload_image_palette <- function(colors) {
 #'
 #' @family image functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#'
 #' @export
 get_image_alpha_border <- function(image, threshold) {
   if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
@@ -5410,7 +5847,7 @@ get_image_alpha_border <- function(image, threshold) {
 #'
 #' Get image pixel color at (x, y) position.
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param x An integer.
 #' @param y An integer.
 #'
@@ -5425,6 +5862,9 @@ get_image_alpha_border <- function(image, threshold) {
 #' @family image functions
 #' @family color functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#'
 #' @export
 get_image_color <- function(image, x, y) {
   if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
@@ -5437,7 +5877,7 @@ get_image_color <- function(image, x, y) {
 #'
 #' Clear image background with given color.
 #'
-#' @param dst an image.
+#' @param dst An image.
 #' @param color A color.
 #'
 #'
@@ -5448,6 +5888,10 @@ get_image_color <- function(image, x, y) {
 #' ```
 #'
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 image_clear_background <- function(dst, color) {
@@ -5460,7 +5904,7 @@ image_clear_background <- function(dst, color) {
 #'
 #' Draw pixel within an image.
 #'
-#' @param dst an image.
+#' @param dst An image.
 #' @param pos_x An integer.
 #' @param pos_y An integer.
 #' @param color A color.
@@ -5475,6 +5919,10 @@ image_clear_background <- function(dst, color) {
 #' @family image functions
 #' @family draw functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 image_draw_pixel <- function(dst, pos_x, pos_y, color) {
   if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
@@ -5488,7 +5936,7 @@ image_draw_pixel <- function(dst, pos_x, pos_y, color) {
 #'
 #' Draw pixel within an image (Vector version).
 #'
-#' @param dst an image.
+#' @param dst An image.
 #' @param position A numeric vector of length 2.
 #' @param color A color.
 #'
@@ -5502,6 +5950,10 @@ image_draw_pixel <- function(dst, pos_x, pos_y, color) {
 #' @family image functions
 #' @family draw functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 image_draw_pixel_v <- function(dst, position, color) {
   if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
@@ -5514,7 +5966,7 @@ image_draw_pixel_v <- function(dst, position, color) {
 #'
 #' Draw line within an image.
 #'
-#' @param dst an image.
+#' @param dst An image.
 #' @param start_pos_x An integer.
 #' @param start_pos_y An integer.
 #' @param end_pos_x An integer.
@@ -5532,6 +5984,10 @@ image_draw_pixel_v <- function(dst, position, color) {
 #' @family draw functions
 #' @family line functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 image_draw_line <- function(dst, start_pos_x, start_pos_y, end_pos_x, end_pos_y, color) {
   if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
@@ -5547,7 +6003,7 @@ image_draw_line <- function(dst, start_pos_x, start_pos_y, end_pos_x, end_pos_y,
 #'
 #' Draw line within an image (Vector version).
 #'
-#' @param dst an image.
+#' @param dst An image.
 #' @param start A numeric vector of length 2.
 #' @param end A numeric vector of length 2.
 #' @param color A color.
@@ -5563,6 +6019,10 @@ image_draw_line <- function(dst, start_pos_x, start_pos_y, end_pos_x, end_pos_y,
 #' @family draw functions
 #' @family line functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 image_draw_line_v <- function(dst, start, end, color) {
   if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
@@ -5576,7 +6036,7 @@ image_draw_line_v <- function(dst, start, end, color) {
 #'
 #' Draw circle within an image.
 #'
-#' @param dst an image.
+#' @param dst An image.
 #' @param center_x An integer.
 #' @param center_y An integer.
 #' @param radius An integer.
@@ -5593,6 +6053,10 @@ image_draw_line_v <- function(dst, start, end, color) {
 #' @family draw functions
 #' @family circle functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 image_draw_circle <- function(dst, center_x, center_y, radius, color) {
   if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
@@ -5607,7 +6071,7 @@ image_draw_circle <- function(dst, center_x, center_y, radius, color) {
 #'
 #' Draw circle within an image (Vector version).
 #'
-#' @param dst an image.
+#' @param dst An image.
 #' @param center A numeric vector of length 2.
 #' @param radius An integer.
 #' @param color A color.
@@ -5623,6 +6087,10 @@ image_draw_circle <- function(dst, center_x, center_y, radius, color) {
 #' @family draw functions
 #' @family circle functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 image_draw_circle_v <- function(dst, center, radius, color) {
   if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
@@ -5636,7 +6104,7 @@ image_draw_circle_v <- function(dst, center, radius, color) {
 #'
 #' Draw rectangle within an image.
 #'
-#' @param dst an image.
+#' @param dst An image.
 #' @param pos_x An integer.
 #' @param pos_y An integer.
 #' @param width An integer.
@@ -5654,6 +6122,10 @@ image_draw_circle_v <- function(dst, center, radius, color) {
 #' @family draw functions
 #' @family rectangle functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 image_draw_rectangle <- function(dst, pos_x, pos_y, width, height, color) {
   if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
@@ -5669,7 +6141,7 @@ image_draw_rectangle <- function(dst, pos_x, pos_y, width, height, color) {
 #'
 #' Draw rectangle within an image (Vector version).
 #'
-#' @param dst an image.
+#' @param dst An image.
 #' @param position A numeric vector of length 2.
 #' @param size A numeric vector of length 2.
 #' @param color A color.
@@ -5685,6 +6157,10 @@ image_draw_rectangle <- function(dst, pos_x, pos_y, width, height, color) {
 #' @family draw functions
 #' @family rectangle functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 image_draw_rectangle_v <- function(dst, position, size, color) {
   if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
@@ -5698,7 +6174,7 @@ image_draw_rectangle_v <- function(dst, position, size, color) {
 #'
 #' Draw rectangle within an image.
 #'
-#' @param dst an image.
+#' @param dst An image.
 #' @param rec A rectangle.
 #' @param color A color.
 #'
@@ -5713,6 +6189,11 @@ image_draw_rectangle_v <- function(dst, position, size, color) {
 #' @family draw functions
 #' @family rectangle functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [rectangle()] for creating rectangle objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 image_draw_rectangle_rec <- function(dst, rec, color) {
   if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
@@ -5725,7 +6206,7 @@ image_draw_rectangle_rec <- function(dst, rec, color) {
 #'
 #' Draw rectangle lines within an image.
 #'
-#' @param dst an image.
+#' @param dst An image.
 #' @param rec A rectangle.
 #' @param thick An integer.
 #' @param color A color.
@@ -5741,6 +6222,11 @@ image_draw_rectangle_rec <- function(dst, rec, color) {
 #' @family draw functions
 #' @family rectangle functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [rectangle()] for creating rectangle objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 image_draw_rectangle_lines <- function(dst, rec, thick, color) {
   if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
@@ -5754,8 +6240,8 @@ image_draw_rectangle_lines <- function(dst, rec, thick, color) {
 #'
 #' Draw a source image within a destination image (tint applied to source).
 #'
-#' @param dst an image.
-#' @param src an image.
+#' @param dst An image.
+#' @param src An image.
 #' @param src_rec A rectangle.
 #' @param dst_rec A rectangle.
 #' @param tint A color.
@@ -5769,6 +6255,11 @@ image_draw_rectangle_lines <- function(dst, rec, thick, color) {
 #'
 #' @family image functions
 #' @family draw functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [rectangle()] for creating rectangle objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 image_draw <- function(dst, src, src_rec, dst_rec, tint) {
@@ -5784,7 +6275,7 @@ image_draw <- function(dst, src, src_rec, dst_rec, tint) {
 #'
 #' Draw text (using default font) within an image (destination).
 #'
-#' @param dst an image.
+#' @param dst An image.
 #' @param text A string.
 #' @param pos_x An integer.
 #' @param pos_y An integer.
@@ -5802,6 +6293,10 @@ image_draw <- function(dst, src, src_rec, dst_rec, tint) {
 #' @family draw functions
 #' @family text functions
 #'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 image_draw_text <- function(dst, text, pos_x, pos_y, font_size, color) {
   if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
@@ -5817,7 +6312,7 @@ image_draw_text <- function(dst, text, pos_x, pos_y, font_size, color) {
 #'
 #' Draw text (custom sprite font) within an image (destination).
 #'
-#' @param dst an image.
+#' @param dst An image.
 #' @param font A font.
 #' @param text A string.
 #' @param position A numeric vector of length 2.
@@ -5835,6 +6330,11 @@ image_draw_text <- function(dst, text, pos_x, pos_y, font_size, color) {
 #' @family image functions
 #' @family draw functions
 #' @family text functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [font()] for creating font objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 image_draw_text_ex <- function(dst, font, text, position, font_size, spacing, tint) {
@@ -5864,6 +6364,7 @@ image_draw_text_ex <- function(dst, font, text, position, font_size, spacing, ti
 #'
 #' @family texture functions
 #'
+#'
 #' @export
 load_texture <- function(file_name) {
   if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
@@ -5874,7 +6375,7 @@ load_texture <- function(file_name) {
 #'
 #' Load texture from image data.
 #'
-#' @param image an image.
+#' @param image An image.
 #'
 #' @return A texture
 #'
@@ -5886,6 +6387,9 @@ load_texture <- function(file_name) {
 #'
 #' @family texture functions
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
 #'
 #' @export
 load_texture_from_image <- function(image) {
@@ -5910,6 +6414,7 @@ load_texture_from_image <- function(image) {
 #'
 #' @family texture functions
 #'
+#'
 #' @export
 load_render_texture <- function(width, height) {
   if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
@@ -5932,6 +6437,9 @@ load_render_texture <- function(width, height) {
 #'
 #' @family texture functions
 #'
+#'
+#' @seealso [texture()] for creating texture objects.
+#'
 #' @export
 unload_texture <- function(texture) {
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
@@ -5953,6 +6461,7 @@ unload_texture <- function(texture) {
 #'
 #' @family texture functions
 #'
+#'
 #' @export
 unload_render_texture <- function(target) {
   if (!is_render_texture(target)) abort(paste0('`target` must be a render_texture, not ', friendly_typeof(target), '.'), call = NULL)
@@ -5973,6 +6482,9 @@ unload_render_texture <- function(target) {
 #' ```
 #'
 #' @family texture functions
+#'
+#'
+#' @seealso [texture()] for creating texture objects.
 #'
 #' @export
 gen_texture_mipmaps <- function(texture) {
@@ -5996,6 +6508,9 @@ gen_texture_mipmaps <- function(texture) {
 #'
 #' @family texture functions
 #'
+#'
+#' @seealso [texture()] for creating texture objects.
+#'
 #' @export
 set_texture_filter <- function(texture, filter) {
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
@@ -6018,6 +6533,9 @@ set_texture_filter <- function(texture, filter) {
 #' ```
 #'
 #' @family texture functions
+#'
+#'
+#' @seealso [texture()] for creating texture objects.
 #'
 #' @export
 set_texture_wrap <- function(texture, wrap) {
@@ -6044,6 +6562,10 @@ set_texture_wrap <- function(texture, wrap) {
 #'
 #' @family draw functions
 #' @family texture functions
+#'
+#'
+#' @seealso [texture()] for creating texture objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_texture <- function(texture, pos_x, pos_y, tint) {
@@ -6072,6 +6594,10 @@ draw_texture <- function(texture, pos_x, pos_y, tint) {
 #' @family draw functions
 #' @family texture functions
 #'
+#'
+#' @seealso [texture()] for creating texture objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_texture_v <- function(texture, position, tint) {
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
@@ -6099,6 +6625,10 @@ draw_texture_v <- function(texture, position, tint) {
 #'
 #' @family draw functions
 #' @family texture functions
+#'
+#'
+#' @seealso [texture()] for creating texture objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_texture_ex <- function(texture, position, rotation, scale, tint) {
@@ -6129,6 +6659,11 @@ draw_texture_ex <- function(texture, position, rotation, scale, tint) {
 #' @family draw functions
 #' @family texture functions
 #'
+#'
+#' @seealso [texture()] for creating texture objects.
+#' @seealso [rectangle()] for creating rectangle objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_texture_rec <- function(texture, source, position, tint) {
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
@@ -6157,6 +6692,11 @@ draw_texture_rec <- function(texture, source, position, tint) {
 #'
 #' @family draw functions
 #' @family texture functions
+#'
+#'
+#' @seealso [texture()] for creating texture objects.
+#' @seealso [rectangle()] for creating rectangle objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_texture_quad <- function(texture, tiling, offset, quad, tint) {
@@ -6189,6 +6729,11 @@ draw_texture_quad <- function(texture, tiling, offset, quad, tint) {
 #'
 #' @family draw functions
 #' @family texture functions
+#'
+#'
+#' @seealso [texture()] for creating texture objects.
+#' @seealso [rectangle()] for creating rectangle objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_texture_tiled <- function(texture, source, dest, origin, rotation, scale, tint) {
@@ -6223,6 +6768,11 @@ draw_texture_tiled <- function(texture, source, dest, origin, rotation, scale, t
 #' @family draw functions
 #' @family texture functions
 #'
+#'
+#' @seealso [texture()] for creating texture objects.
+#' @seealso [rectangle()] for creating rectangle objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_texture_pro <- function(texture, source, dest, origin, rotation, tint) {
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
@@ -6254,6 +6804,11 @@ draw_texture_pro <- function(texture, source, dest, origin, rotation, tint) {
 #'
 #' @family draw functions
 #' @family texture functions
+#'
+#'
+#' @seealso [texture()] for creating texture objects.
+#' @seealso [rectangle()] for creating rectangle objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_texture_npatch <- function(texture, n_patch_info, dest, origin, rotation, tint) {
@@ -6287,6 +6842,10 @@ draw_texture_npatch <- function(texture, n_patch_info, dest, origin, rotation, t
 #' @family draw functions
 #' @family texture functions
 #'
+#'
+#' @seealso [texture()] for creating texture objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_texture_poly <- function(texture, center, points, texcoords, point_count, tint) {
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
@@ -6313,6 +6872,9 @@ draw_texture_poly <- function(texture, center, points, texcoords, point_count, t
 #' Color Fade(Color color, float alpha);
 #' ```
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 fade <- function(color, alpha) {
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
@@ -6336,6 +6898,9 @@ fade <- function(color, alpha) {
 #'
 #' @family color functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 color_to_int <- function(color) {
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
@@ -6357,6 +6922,9 @@ color_to_int <- function(color) {
 #' ```
 #'
 #' @family color functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 color_normalize <- function(color) {
@@ -6380,6 +6948,7 @@ color_normalize <- function(color) {
 #'
 #' @family color functions
 #'
+#'
 #' @export
 color_from_normalized <- function(normalized) {
   if (!is_vector_4(normalized)) abort(paste0('`normalized` must be a numeric vector of length 4, not ', friendly_typeof(normalized), '.'), call = NULL)
@@ -6401,6 +6970,9 @@ color_from_normalized <- function(normalized) {
 #' ```
 #'
 #' @family color functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 color_to_hsv <- function(color) {
@@ -6425,6 +6997,7 @@ color_to_hsv <- function(color) {
 #' ```
 #'
 #' @family color functions
+#'
 #'
 #' @export
 color_from_hsv <- function(hue, saturation, value) {
@@ -6451,6 +7024,9 @@ color_from_hsv <- function(hue, saturation, value) {
 #'
 #' @family color functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 color_alpha <- function(color, alpha) {
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
@@ -6476,6 +7052,9 @@ color_alpha <- function(color, alpha) {
 #'
 #' @family color functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 color_alpha_blend <- function(dst, src, tint) {
   if (!is_color(dst)) abort(paste0('`dst` must be a color, not ', friendly_typeof(dst), '.'), call = NULL)
@@ -6500,6 +7079,7 @@ color_alpha_blend <- function(dst, src, tint) {
 #'
 #' @family color functions
 #'
+#'
 #' @export
 get_color <- function(hex_value) {
   if (!is_unsigned_int(hex_value)) abort(paste0('`hex_value` must be a non-negative integer, not ', friendly_typeof(hex_value), '.'), call = NULL)
@@ -6521,6 +7101,7 @@ get_color <- function(hex_value) {
 #' ```
 #' int GetPixelDataSize(int width, int height, int format);
 #' ```
+#'
 #'
 #' @export
 get_pixel_data_size <- function(width, height, format) {
@@ -6546,6 +7127,7 @@ get_pixel_data_size <- function(width, height, format) {
 #'
 #' @family font functions
 #'
+#'
 #' @export
 get_font_default <- function() {
   get_font_default_()
@@ -6567,6 +7149,7 @@ get_font_default <- function() {
 #'
 #' @family font functions
 #'
+#'
 #' @export
 load_font <- function(file_name) {
   if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
@@ -6577,7 +7160,7 @@ load_font <- function(file_name) {
 #'
 #' Load font from Image (XNA style).
 #'
-#' @param image an image.
+#' @param image An image.
 #' @param key A color.
 #' @param first_char An integer.
 #'
@@ -6591,6 +7174,10 @@ load_font <- function(file_name) {
 #'
 #' @family font functions
 #' @family image functions
+#'
+#'
+#' @seealso [image()] for creating image objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 load_font_from_image <- function(image, key, first_char) {
@@ -6616,6 +7203,7 @@ load_font_from_image <- function(image, key, first_char) {
 #'
 #' @family font functions
 #'
+#'
 #' @export
 unload_font_data <- function(chars, glyph_count) {
   if (!is_glyph_info(chars)) abort(paste0('`chars` must be a glyph_info, not ', friendly_typeof(chars), '.'), call = NULL)
@@ -6637,6 +7225,9 @@ unload_font_data <- function(chars, glyph_count) {
 #' ```
 #'
 #' @family font functions
+#'
+#'
+#' @seealso [font()] for creating font objects.
 #'
 #' @export
 unload_font <- function(font) {
@@ -6660,6 +7251,7 @@ unload_font <- function(font) {
 #'
 #' @family draw functions
 #' @family fps functions
+#'
 #'
 #' @export
 draw_fps <- function(pos_x, pos_y) {
@@ -6687,6 +7279,9 @@ draw_fps <- function(pos_x, pos_y) {
 #'
 #' @family draw functions
 #' @family text functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_text <- function(text, pos_x, pos_y, font_size, color) {
@@ -6718,6 +7313,10 @@ draw_text <- function(text, pos_x, pos_y, font_size, color) {
 #'
 #' @family draw functions
 #' @family text functions
+#'
+#'
+#' @seealso [font()] for creating font objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_text_ex <- function(font, text, position, font_size, spacing, tint) {
@@ -6753,6 +7352,10 @@ draw_text_ex <- function(font, text, position, font_size, spacing, tint) {
 #' @family draw functions
 #' @family text functions
 #'
+#'
+#' @seealso [font()] for creating font objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_text_pro <- function(font, text, position, origin, rotation, font_size, spacing, tint) {
   if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
@@ -6786,6 +7389,10 @@ draw_text_pro <- function(font, text, position, origin, rotation, font_size, spa
 #' @family draw functions
 #' @family text functions
 #'
+#'
+#' @seealso [font()] for creating font objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_text_codepoint <- function(font, codepoint, position, font_size, tint) {
   if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
@@ -6813,6 +7420,7 @@ draw_text_codepoint <- function(font, codepoint, position, font_size, tint) {
 #'
 #' @family text functions
 #'
+#'
 #' @export
 measure_text <- function(text, font_size) {
   if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
@@ -6839,6 +7447,9 @@ measure_text <- function(text, font_size) {
 #'
 #' @family text functions
 #'
+#'
+#' @seealso [font()] for creating font objects.
+#'
 #' @export
 measure_text_ex <- function(font, text, font_size, spacing) {
   if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
@@ -6863,6 +7474,9 @@ measure_text_ex <- function(font, text, font_size, spacing) {
 #' int GetGlyphIndex(Font font, int codepoint);
 #' ```
 #'
+#'
+#' @seealso [font()] for creating font objects.
+#'
 #' @export
 get_glyph_index <- function(font, codepoint) {
   if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
@@ -6885,6 +7499,9 @@ get_glyph_index <- function(font, codepoint) {
 #' GlyphInfo GetGlyphInfo(Font font, int codepoint);
 #' ```
 #'
+#'
+#' @seealso [font()] for creating font objects.
+#'
 #' @export
 get_glyph_info <- function(font, codepoint) {
   if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
@@ -6906,6 +7523,9 @@ get_glyph_info <- function(font, codepoint) {
 #' ```
 #' Rectangle GetGlyphAtlasRec(Font font, int codepoint);
 #' ```
+#'
+#'
+#' @seealso [font()] for creating font objects.
 #'
 #' @export
 get_glyph_atlas_rec <- function(font, codepoint) {
@@ -6931,6 +7551,7 @@ get_glyph_atlas_rec <- function(font, codepoint) {
 #' ```
 #'
 #' @family text functions
+#'
 #'
 #' @export
 text_replace <- function(text, replace, by) {
@@ -6958,6 +7579,7 @@ text_replace <- function(text, replace, by) {
 #'
 #' @family text functions
 #'
+#'
 #' @export
 text_insert <- function(text, insert, position) {
   if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
@@ -6983,6 +7605,7 @@ text_insert <- function(text, insert, position) {
 #'
 #' @family text functions
 #'
+#'
 #' @export
 text_find_index <- function(text, find) {
   if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
@@ -7006,6 +7629,7 @@ text_find_index <- function(text, find) {
 #'
 #' @family text functions
 #'
+#'
 #' @export
 text_to_upper <- function(text) {
   if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
@@ -7027,6 +7651,7 @@ text_to_upper <- function(text) {
 #' ```
 #'
 #' @family text functions
+#'
 #'
 #' @export
 text_to_lower <- function(text) {
@@ -7050,6 +7675,7 @@ text_to_lower <- function(text) {
 #'
 #' @family text functions
 #'
+#'
 #' @export
 text_to_pascal <- function(text) {
   if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
@@ -7071,6 +7697,7 @@ text_to_pascal <- function(text) {
 #' ```
 #'
 #' @family text functions
+#'
 #'
 #' @export
 text_to_integer <- function(text) {
@@ -7096,6 +7723,9 @@ text_to_integer <- function(text) {
 #' @family draw functions
 #' @family line functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_line_3d <- function(start_pos, end_pos, color) {
   if (!is_vector_3(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 3, not ', friendly_typeof(start_pos), '.'), call = NULL)
@@ -7119,6 +7749,9 @@ draw_line_3d <- function(start_pos, end_pos, color) {
 #' ```
 #'
 #' @family draw functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_point_3d <- function(position, color) {
@@ -7146,6 +7779,9 @@ draw_point_3d <- function(position, color) {
 #'
 #' @family draw functions
 #' @family circle functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_circle_3d <- function(center, radius, rotation_axis, rotation_angle, color) {
@@ -7175,6 +7811,9 @@ draw_circle_3d <- function(center, radius, rotation_axis, rotation_angle, color)
 #'
 #' @family draw functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_triangle_3d <- function(v_1, v_2, v_3, color) {
   if (!is_vector_3(v_1)) abort(paste0('`v_1` must be a numeric vector of length 3, not ', friendly_typeof(v_1), '.'), call = NULL)
@@ -7200,6 +7839,9 @@ draw_triangle_3d <- function(v_1, v_2, v_3, color) {
 #' ```
 #'
 #' @family draw functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_triangle_strip_3d <- function(points, point_count, color) {
@@ -7228,6 +7870,9 @@ draw_triangle_strip_3d <- function(points, point_count, color) {
 #'
 #' @family draw functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_cube <- function(position, width, height, length, color) {
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
@@ -7254,6 +7899,9 @@ draw_cube <- function(position, width, height, length, color) {
 #' ```
 #'
 #' @family draw functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_cube_v <- function(position, size, color) {
@@ -7282,6 +7930,9 @@ draw_cube_v <- function(position, size, color) {
 #'
 #' @family draw functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_cube_wires <- function(position, width, height, length, color) {
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
@@ -7308,6 +7959,9 @@ draw_cube_wires <- function(position, width, height, length, color) {
 #' ```
 #'
 #' @family draw functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_cube_wires_v <- function(position, size, color) {
@@ -7337,6 +7991,10 @@ draw_cube_wires_v <- function(position, size, color) {
 #'
 #' @family draw functions
 #' @family texture functions
+#'
+#'
+#' @seealso [texture()] for creating texture objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_cube_texture <- function(texture, position, width, height, length, color) {
@@ -7371,6 +8029,11 @@ draw_cube_texture <- function(texture, position, width, height, length, color) {
 #' @family draw functions
 #' @family texture functions
 #'
+#'
+#' @seealso [texture()] for creating texture objects.
+#' @seealso [rectangle()] for creating rectangle objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_cube_texture_rec <- function(texture, source, position, width, height, length, color) {
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
@@ -7400,6 +8063,9 @@ draw_cube_texture_rec <- function(texture, source, position, width, height, leng
 #'
 #' @family draw functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_sphere <- function(center_pos, radius, color) {
   if (!is_vector_3(center_pos)) abort(paste0('`center_pos` must be a numeric vector of length 3, not ', friendly_typeof(center_pos), '.'), call = NULL)
@@ -7426,6 +8092,9 @@ draw_sphere <- function(center_pos, radius, color) {
 #' ```
 #'
 #' @family draw functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_sphere_ex <- function(center_pos, radius, rings, slices, color) {
@@ -7456,6 +8125,9 @@ draw_sphere_ex <- function(center_pos, radius, rings, slices, color) {
 #'
 #' @family draw functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_sphere_wires <- function(center_pos, radius, rings, slices, color) {
   if (!is_vector_3(center_pos)) abort(paste0('`center_pos` must be a numeric vector of length 3, not ', friendly_typeof(center_pos), '.'), call = NULL)
@@ -7485,6 +8157,9 @@ draw_sphere_wires <- function(center_pos, radius, rings, slices, color) {
 #' ```
 #'
 #' @family draw functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_cylinder <- function(position, radius_top, radius_bottom, height, slices, color) {
@@ -7517,6 +8192,9 @@ draw_cylinder <- function(position, radius_top, radius_bottom, height, slices, c
 #'
 #' @family draw functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_cylinder_ex <- function(start_pos, end_pos, start_radius, end_radius, sides, color) {
   if (!is_vector_3(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 3, not ', friendly_typeof(start_pos), '.'), call = NULL)
@@ -7547,6 +8225,9 @@ draw_cylinder_ex <- function(start_pos, end_pos, start_radius, end_radius, sides
 #' ```
 #'
 #' @family draw functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_cylinder_wires <- function(position, radius_top, radius_bottom, height, slices, color) {
@@ -7579,6 +8260,9 @@ draw_cylinder_wires <- function(position, radius_top, radius_bottom, height, sli
 #'
 #' @family draw functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_cylinder_wires_ex <- function(start_pos, end_pos, start_radius, end_radius, sides, color) {
   if (!is_vector_3(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 3, not ', friendly_typeof(start_pos), '.'), call = NULL)
@@ -7607,6 +8291,9 @@ draw_cylinder_wires_ex <- function(start_pos, end_pos, start_radius, end_radius,
 #'
 #' @family draw functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_plane <- function(center_pos, size, color) {
   if (!is_vector_3(center_pos)) abort(paste0('`center_pos` must be a numeric vector of length 3, not ', friendly_typeof(center_pos), '.'), call = NULL)
@@ -7631,6 +8318,9 @@ draw_plane <- function(center_pos, size, color) {
 #'
 #' @family draw functions
 #'
+#'
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_ray <- function(ray, color) {
   if (!is_ray(ray)) abort(paste0('`ray` must be a ray, not ', friendly_typeof(ray), '.'), call = NULL)
@@ -7653,6 +8343,7 @@ draw_ray <- function(ray, color) {
 #' ```
 #'
 #' @family draw functions
+#'
 #'
 #' @export
 draw_grid <- function(slices, spacing) {
@@ -7677,6 +8368,7 @@ draw_grid <- function(slices, spacing) {
 #'
 #' @family model functions
 #'
+#'
 #' @export
 load_model <- function(file_name) {
   if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
@@ -7697,6 +8389,9 @@ load_model <- function(file_name) {
 #' ```
 #'
 #' @family model functions
+#'
+#'
+#' @seealso [model()] for creating model objects.
 #'
 #' @export
 unload_model <- function(model) {
@@ -7719,6 +8414,9 @@ unload_model <- function(model) {
 #' ```
 #'
 #' @family model functions
+#'
+#'
+#' @seealso [model()] for creating model objects.
 #'
 #' @export
 get_model_bounding_box <- function(model) {
@@ -7744,6 +8442,10 @@ get_model_bounding_box <- function(model) {
 #'
 #' @family draw functions
 #' @family model functions
+#'
+#'
+#' @seealso [model()] for creating model objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_model <- function(model, position, scale, tint) {
@@ -7775,6 +8477,10 @@ draw_model <- function(model, position, scale, tint) {
 #' @family draw functions
 #' @family model functions
 #'
+#'
+#' @seealso [model()] for creating model objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_model_ex <- function(model, position, rotation_axis, rotation_angle, scale, tint) {
   if (!is_model(model)) abort(paste0('`model` must be a model, not ', friendly_typeof(model), '.'), call = NULL)
@@ -7805,6 +8511,10 @@ draw_model_ex <- function(model, position, rotation_axis, rotation_angle, scale,
 #' @family draw functions
 #' @family model functions
 #'
+#'
+#' @seealso [model()] for creating model objects.
+#' @seealso [color()] for creating color objects.
+#'
 #' @export
 draw_model_wires <- function(model, position, scale, tint) {
   if (!is_model(model)) abort(paste0('`model` must be a model, not ', friendly_typeof(model), '.'), call = NULL)
@@ -7829,6 +8539,9 @@ draw_model_wires <- function(model, position, scale, tint) {
 #' ```
 #'
 #' @family draw functions
+#'
+#'
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_bounding_box <- function(box, color) {
@@ -7855,6 +8568,11 @@ draw_bounding_box <- function(box, color) {
 #' ```
 #'
 #' @family draw functions
+#'
+#'
+#' @seealso [camera_3d()] for creating camera_3d objects.
+#' @seealso [texture()] for creating texture objects.
+#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_billboard <- function(camera, texture, position, size, tint) {
@@ -7885,6 +8603,7 @@ draw_billboard <- function(camera, texture, position, size, tint) {
 #'
 #' @family collision functions
 #'
+#'
 #' @export
 check_collision_spheres <- function(center_1, radius_1, center_2, radius_2) {
   if (!is_vector_3(center_1)) abort(paste0('`center_1` must be a numeric vector of length 3, not ', friendly_typeof(center_1), '.'), call = NULL)
@@ -7911,6 +8630,7 @@ check_collision_spheres <- function(center_1, radius_1, center_2, radius_2) {
 #'
 #' @family collision functions
 #'
+#'
 #' @export
 check_collision_boxes <- function(box_1, box_2) {
   if (!is_bounding_box(box_1)) abort(paste0('`box_1` must be a bounding_box, not ', friendly_typeof(box_1), '.'), call = NULL)
@@ -7935,6 +8655,7 @@ check_collision_boxes <- function(box_1, box_2) {
 #' ```
 #'
 #' @family collision functions
+#'
 #'
 #' @export
 check_collision_box_sphere <- function(box, center, radius) {
@@ -7962,6 +8683,7 @@ check_collision_box_sphere <- function(box, center, radius) {
 #'
 #' @family collision functions
 #'
+#'
 #' @export
 get_ray_collision_sphere <- function(ray, center, radius) {
   if (!is_ray(ray)) abort(paste0('`ray` must be a ray, not ', friendly_typeof(ray), '.'), call = NULL)
@@ -7987,6 +8709,7 @@ get_ray_collision_sphere <- function(ray, center, radius) {
 #'
 #' @family collision functions
 #'
+#'
 #' @export
 get_ray_collision_box <- function(ray, box) {
   if (!is_ray(ray)) abort(paste0('`ray` must be a ray, not ', friendly_typeof(ray), '.'), call = NULL)
@@ -8011,6 +8734,9 @@ get_ray_collision_box <- function(ray, box) {
 #'
 #' @family collision functions
 #' @family model functions
+#'
+#'
+#' @seealso [model()] for creating model objects.
 #'
 #' @export
 get_ray_collision_model <- function(ray, model) {
@@ -8038,6 +8764,9 @@ get_ray_collision_model <- function(ray, model) {
 #' @family collision functions
 #' @family mesh functions
 #'
+#'
+#' @seealso [mesh()] for creating mesh objects.
+#'
 #' @export
 get_ray_collision_mesh <- function(ray, mesh, transform) {
   if (!is_ray(ray)) abort(paste0('`ray` must be a ray, not ', friendly_typeof(ray), '.'), call = NULL)
@@ -8064,6 +8793,7 @@ get_ray_collision_mesh <- function(ray, mesh, transform) {
 #' ```
 #'
 #' @family collision functions
+#'
 #'
 #' @export
 get_ray_collision_triangle <- function(ray, p_1, p_2, p_3) {
@@ -8094,6 +8824,7 @@ get_ray_collision_triangle <- function(ray, p_1, p_2, p_3) {
 #'
 #' @family collision functions
 #'
+#'
 #' @export
 get_ray_collision_quad <- function(ray, p_1, p_2, p_3, p_4) {
   if (!is_ray(ray)) abort(paste0('`ray` must be a ray, not ', friendly_typeof(ray), '.'), call = NULL)
@@ -8120,6 +8851,7 @@ get_ray_collision_quad <- function(ray, p_1, p_2, p_3, p_4) {
 #' @family init functions
 #' @family audio functions
 #'
+#'
 #' @export
 init_audio_device <- function() {
   init_audio_device_()
@@ -8139,6 +8871,7 @@ init_audio_device <- function() {
 #' ```
 #'
 #' @family audio functions
+#'
 #'
 #' @export
 close_audio_device <- function() {
@@ -8161,6 +8894,7 @@ close_audio_device <- function() {
 #'
 #' @family audio functions
 #'
+#'
 #' @export
 is_audio_device_ready <- function() {
   is_audio_device_ready_()
@@ -8180,6 +8914,7 @@ is_audio_device_ready <- function() {
 #' ```
 #'
 #' @family volume functions
+#'
 #'
 #' @export
 set_master_volume <- function(volume) {
@@ -8203,6 +8938,7 @@ set_master_volume <- function(volume) {
 #'
 #' @family wave functions
 #'
+#'
 #' @export
 load_wave <- function(file_name) {
   if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
@@ -8224,6 +8960,7 @@ load_wave <- function(file_name) {
 #' ```
 #'
 #' @family sound functions
+#'
 #'
 #' @export
 load_sound <- function(file_name) {
@@ -8248,6 +8985,9 @@ load_sound <- function(file_name) {
 #' @family sound functions
 #' @family wave functions
 #'
+#'
+#' @seealso [wave()] for creating wave objects.
+#'
 #' @export
 load_sound_from_wave <- function(wave) {
   if (!is_wave(wave)) abort(paste0('`wave` must be a wave, not ', friendly_typeof(wave), '.'), call = NULL)
@@ -8269,6 +9009,9 @@ load_sound_from_wave <- function(wave) {
 #'
 #' @family wave functions
 #'
+#'
+#' @seealso [wave()] for creating wave objects.
+#'
 #' @export
 unload_wave <- function(wave) {
   if (!is_wave(wave)) abort(paste0('`wave` must be a wave, not ', friendly_typeof(wave), '.'), call = NULL)
@@ -8289,6 +9032,9 @@ unload_wave <- function(wave) {
 #' ```
 #'
 #' @family sound functions
+#'
+#'
+#' @seealso [sound()] for creating sound objects.
 #'
 #' @export
 unload_sound <- function(sound) {
@@ -8312,6 +9058,9 @@ unload_sound <- function(sound) {
 #' ```
 #'
 #' @family wave functions
+#'
+#'
+#' @seealso [wave()] for creating wave objects.
 #'
 #' @export
 export_wave <- function(wave, file_name) {
@@ -8337,6 +9086,9 @@ export_wave <- function(wave, file_name) {
 #'
 #' @family wave functions
 #'
+#'
+#' @seealso [wave()] for creating wave objects.
+#'
 #' @export
 export_wave_as_code <- function(wave, file_name) {
   if (!is_wave(wave)) abort(paste0('`wave` must be a wave, not ', friendly_typeof(wave), '.'), call = NULL)
@@ -8359,6 +9111,9 @@ export_wave_as_code <- function(wave, file_name) {
 #'
 #' @family sound functions
 #'
+#'
+#' @seealso [sound()] for creating sound objects.
+#'
 #' @export
 play_sound <- function(sound) {
   if (!is_sound(sound)) abort(paste0('`sound` must be a sound, not ', friendly_typeof(sound), '.'), call = NULL)
@@ -8379,6 +9134,9 @@ play_sound <- function(sound) {
 #' ```
 #'
 #' @family sound functions
+#'
+#'
+#' @seealso [sound()] for creating sound objects.
 #'
 #' @export
 stop_sound <- function(sound) {
@@ -8401,6 +9159,9 @@ stop_sound <- function(sound) {
 #'
 #' @family sound functions
 #'
+#'
+#' @seealso [sound()] for creating sound objects.
+#'
 #' @export
 pause_sound <- function(sound) {
   if (!is_sound(sound)) abort(paste0('`sound` must be a sound, not ', friendly_typeof(sound), '.'), call = NULL)
@@ -8421,6 +9182,9 @@ pause_sound <- function(sound) {
 #' ```
 #'
 #' @family sound functions
+#'
+#'
+#' @seealso [sound()] for creating sound objects.
 #'
 #' @export
 resume_sound <- function(sound) {
@@ -8443,6 +9207,9 @@ resume_sound <- function(sound) {
 #'
 #' @family sound functions
 #'
+#'
+#' @seealso [sound()] for creating sound objects.
+#'
 #' @export
 play_sound_multi <- function(sound) {
   if (!is_sound(sound)) abort(paste0('`sound` must be a sound, not ', friendly_typeof(sound), '.'), call = NULL)
@@ -8464,6 +9231,7 @@ play_sound_multi <- function(sound) {
 #'
 #' @family sound functions
 #'
+#'
 #' @export
 stop_sound_multi <- function() {
   stop_sound_multi_()
@@ -8482,6 +9250,7 @@ stop_sound_multi <- function() {
 #' ```
 #' int GetSoundsPlaying(void);
 #' ```
+#'
 #'
 #' @export
 get_sounds_playing <- function() {
@@ -8503,6 +9272,9 @@ get_sounds_playing <- function() {
 #' ```
 #'
 #' @family sound functions
+#'
+#'
+#' @seealso [sound()] for creating sound objects.
 #'
 #' @export
 is_sound_playing <- function(sound) {
@@ -8527,6 +9299,9 @@ is_sound_playing <- function(sound) {
 #' @family sound functions
 #' @family volume functions
 #'
+#'
+#' @seealso [sound()] for creating sound objects.
+#'
 #' @export
 set_sound_volume <- function(sound, volume) {
   if (!is_sound(sound)) abort(paste0('`sound` must be a sound, not ', friendly_typeof(sound), '.'), call = NULL)
@@ -8549,6 +9324,9 @@ set_sound_volume <- function(sound, volume) {
 #' ```
 #'
 #' @family sound functions
+#'
+#'
+#' @seealso [sound()] for creating sound objects.
 #'
 #' @export
 set_sound_pitch <- function(sound, pitch) {
@@ -8574,6 +9352,7 @@ set_sound_pitch <- function(sound, pitch) {
 #' @family music functions
 #' @family stream functions
 #'
+#'
 #' @export
 load_music_stream <- function(file_name) {
   if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
@@ -8596,6 +9375,9 @@ load_music_stream <- function(file_name) {
 #' @family music functions
 #' @family stream functions
 #'
+#'
+#' @seealso [music()] for creating music objects.
+#'
 #' @export
 unload_music_stream <- function(music) {
   if (!is_music(music)) abort(paste0('`music` must be a music, not ', friendly_typeof(music), '.'), call = NULL)
@@ -8617,6 +9399,9 @@ unload_music_stream <- function(music) {
 #'
 #' @family music functions
 #' @family stream functions
+#'
+#'
+#' @seealso [music()] for creating music objects.
 #'
 #' @export
 play_music_stream <- function(music) {
@@ -8641,6 +9426,9 @@ play_music_stream <- function(music) {
 #' @family music functions
 #' @family stream functions
 #'
+#'
+#' @seealso [music()] for creating music objects.
+#'
 #' @export
 is_music_stream_playing <- function(music) {
   if (!is_music(music)) abort(paste0('`music` must be a music, not ', friendly_typeof(music), '.'), call = NULL)
@@ -8662,6 +9450,9 @@ is_music_stream_playing <- function(music) {
 #'
 #' @family music functions
 #' @family stream functions
+#'
+#'
+#' @seealso [music()] for creating music objects.
 #'
 #' @export
 update_music_stream <- function(music) {
@@ -8685,6 +9476,9 @@ update_music_stream <- function(music) {
 #' @family music functions
 #' @family stream functions
 #'
+#'
+#' @seealso [music()] for creating music objects.
+#'
 #' @export
 stop_music_stream <- function(music) {
   if (!is_music(music)) abort(paste0('`music` must be a music, not ', friendly_typeof(music), '.'), call = NULL)
@@ -8706,6 +9500,9 @@ stop_music_stream <- function(music) {
 #'
 #' @family music functions
 #' @family stream functions
+#'
+#'
+#' @seealso [music()] for creating music objects.
 #'
 #' @export
 pause_music_stream <- function(music) {
@@ -8729,6 +9526,9 @@ pause_music_stream <- function(music) {
 #' @family music functions
 #' @family stream functions
 #'
+#'
+#' @seealso [music()] for creating music objects.
+#'
 #' @export
 resume_music_stream <- function(music) {
   if (!is_music(music)) abort(paste0('`music` must be a music, not ', friendly_typeof(music), '.'), call = NULL)
@@ -8751,6 +9551,9 @@ resume_music_stream <- function(music) {
 #'
 #' @family music functions
 #' @family stream functions
+#'
+#'
+#' @seealso [music()] for creating music objects.
 #'
 #' @export
 seek_music_stream <- function(music, position) {
@@ -8776,6 +9579,9 @@ seek_music_stream <- function(music, position) {
 #' @family music functions
 #' @family volume functions
 #'
+#'
+#' @seealso [music()] for creating music objects.
+#'
 #' @export
 set_music_volume <- function(music, volume) {
   if (!is_music(music)) abort(paste0('`music` must be a music, not ', friendly_typeof(music), '.'), call = NULL)
@@ -8798,6 +9604,9 @@ set_music_volume <- function(music, volume) {
 #' ```
 #'
 #' @family music functions
+#'
+#'
+#' @seealso [music()] for creating music objects.
 #'
 #' @export
 set_music_pitch <- function(music, pitch) {
@@ -8822,6 +9631,9 @@ set_music_pitch <- function(music, pitch) {
 #'
 #' @family music functions
 #'
+#'
+#' @seealso [music()] for creating music objects.
+#'
 #' @export
 get_music_time_length <- function(music) {
   if (!is_music(music)) abort(paste0('`music` must be a music, not ', friendly_typeof(music), '.'), call = NULL)
@@ -8844,6 +9656,9 @@ get_music_time_length <- function(music) {
 #'
 #' @family music functions
 #'
+#'
+#' @seealso [music()] for creating music objects.
+#'
 #' @export
 get_music_time_played <- function(music) {
   if (!is_music(music)) abort(paste0('`music` must be a music, not ', friendly_typeof(music), '.'), call = NULL)
@@ -8858,7 +9673,7 @@ get_music_time_played <- function(music) {
 #' @param sample_size A non-negative integer.
 #' @param channels A non-negative integer.
 #'
-#' @return an audio_stream
+#' @return An audio_stream
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -8868,6 +9683,7 @@ get_music_time_played <- function(music) {
 #'
 #' @family audio functions
 #' @family stream functions
+#'
 #'
 #' @export
 load_audio_stream <- function(sample_rate, sample_size, channels) {
@@ -8881,7 +9697,7 @@ load_audio_stream <- function(sample_rate, sample_size, channels) {
 #'
 #' Unload audio stream and free memory.
 #'
-#' @param stream an audio_stream.
+#' @param stream An audio_stream.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -8893,6 +9709,9 @@ load_audio_stream <- function(sample_rate, sample_size, channels) {
 #' @family audio functions
 #' @family stream functions
 #'
+#'
+#' @seealso [audio_stream()] for creating audio_stream objects.
+#'
 #' @export
 unload_audio_stream <- function(stream) {
   if (!is_audio_stream(stream)) abort(paste0('`stream` must be an audio_stream, not ', friendly_typeof(stream), '.'), call = NULL)
@@ -8903,7 +9722,7 @@ unload_audio_stream <- function(stream) {
 #'
 #' Check if any audio stream buffers requires refill.
 #'
-#' @param stream an audio_stream.
+#' @param stream An audio_stream.
 #'
 #' @return A logical
 #'
@@ -8916,6 +9735,9 @@ unload_audio_stream <- function(stream) {
 #' @family audio functions
 #' @family stream functions
 #'
+#'
+#' @seealso [audio_stream()] for creating audio_stream objects.
+#'
 #' @export
 is_audio_stream_processed <- function(stream) {
   if (!is_audio_stream(stream)) abort(paste0('`stream` must be an audio_stream, not ', friendly_typeof(stream), '.'), call = NULL)
@@ -8926,7 +9748,7 @@ is_audio_stream_processed <- function(stream) {
 #'
 #' Play audio stream.
 #'
-#' @param stream an audio_stream.
+#' @param stream An audio_stream.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -8938,6 +9760,9 @@ is_audio_stream_processed <- function(stream) {
 #' @family audio functions
 #' @family stream functions
 #'
+#'
+#' @seealso [audio_stream()] for creating audio_stream objects.
+#'
 #' @export
 play_audio_stream <- function(stream) {
   if (!is_audio_stream(stream)) abort(paste0('`stream` must be an audio_stream, not ', friendly_typeof(stream), '.'), call = NULL)
@@ -8948,7 +9773,7 @@ play_audio_stream <- function(stream) {
 #'
 #' Pause audio stream.
 #'
-#' @param stream an audio_stream.
+#' @param stream An audio_stream.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -8960,6 +9785,9 @@ play_audio_stream <- function(stream) {
 #' @family audio functions
 #' @family stream functions
 #'
+#'
+#' @seealso [audio_stream()] for creating audio_stream objects.
+#'
 #' @export
 pause_audio_stream <- function(stream) {
   if (!is_audio_stream(stream)) abort(paste0('`stream` must be an audio_stream, not ', friendly_typeof(stream), '.'), call = NULL)
@@ -8970,7 +9798,7 @@ pause_audio_stream <- function(stream) {
 #'
 #' Resume audio stream.
 #'
-#' @param stream an audio_stream.
+#' @param stream An audio_stream.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -8982,6 +9810,9 @@ pause_audio_stream <- function(stream) {
 #' @family audio functions
 #' @family stream functions
 #'
+#'
+#' @seealso [audio_stream()] for creating audio_stream objects.
+#'
 #' @export
 resume_audio_stream <- function(stream) {
   if (!is_audio_stream(stream)) abort(paste0('`stream` must be an audio_stream, not ', friendly_typeof(stream), '.'), call = NULL)
@@ -8992,7 +9823,7 @@ resume_audio_stream <- function(stream) {
 #'
 #' Check if audio stream is playing.
 #'
-#' @param stream an audio_stream.
+#' @param stream An audio_stream.
 #'
 #' @return A logical
 #'
@@ -9005,6 +9836,9 @@ resume_audio_stream <- function(stream) {
 #' @family audio functions
 #' @family stream functions
 #'
+#'
+#' @seealso [audio_stream()] for creating audio_stream objects.
+#'
 #' @export
 is_audio_stream_playing <- function(stream) {
   if (!is_audio_stream(stream)) abort(paste0('`stream` must be an audio_stream, not ', friendly_typeof(stream), '.'), call = NULL)
@@ -9015,7 +9849,7 @@ is_audio_stream_playing <- function(stream) {
 #'
 #' Stop audio stream.
 #'
-#' @param stream an audio_stream.
+#' @param stream An audio_stream.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -9027,6 +9861,9 @@ is_audio_stream_playing <- function(stream) {
 #' @family audio functions
 #' @family stream functions
 #'
+#'
+#' @seealso [audio_stream()] for creating audio_stream objects.
+#'
 #' @export
 stop_audio_stream <- function(stream) {
   if (!is_audio_stream(stream)) abort(paste0('`stream` must be an audio_stream, not ', friendly_typeof(stream), '.'), call = NULL)
@@ -9037,7 +9874,7 @@ stop_audio_stream <- function(stream) {
 #'
 #' Set volume for audio stream (1.0 is max level).
 #'
-#' @param stream an audio_stream.
+#' @param stream An audio_stream.
 #' @param volume A number.
 #'
 #'
@@ -9051,6 +9888,9 @@ stop_audio_stream <- function(stream) {
 #' @family stream functions
 #' @family volume functions
 #'
+#'
+#' @seealso [audio_stream()] for creating audio_stream objects.
+#'
 #' @export
 set_audio_stream_volume <- function(stream, volume) {
   if (!is_audio_stream(stream)) abort(paste0('`stream` must be an audio_stream, not ', friendly_typeof(stream), '.'), call = NULL)
@@ -9062,7 +9902,7 @@ set_audio_stream_volume <- function(stream, volume) {
 #'
 #' Set pitch for audio stream (1.0 is base level).
 #'
-#' @param stream an audio_stream.
+#' @param stream An audio_stream.
 #' @param pitch A number.
 #'
 #'
@@ -9074,6 +9914,9 @@ set_audio_stream_volume <- function(stream, volume) {
 #'
 #' @family audio functions
 #' @family stream functions
+#'
+#'
+#' @seealso [audio_stream()] for creating audio_stream objects.
 #'
 #' @export
 set_audio_stream_pitch <- function(stream, pitch) {
@@ -9098,6 +9941,7 @@ set_audio_stream_pitch <- function(stream, pitch) {
 #' @family audio functions
 #' @family stream functions
 #'
+#'
 #' @export
 set_audio_stream_buffer_size_default <- function(size) {
   if (!is_int(size)) abort(paste0('`size` must be an integer, not ', friendly_typeof(size), '.'), call = NULL)
@@ -9118,6 +9962,7 @@ set_audio_stream_buffer_size_default <- function(size) {
 #' ```
 #' float Vector2Angle(Vector2 v1, Vector2 v2);
 #' ```
+#'
 #'
 #' @export
 vector_2_angle <- function(v_1, v_2) {
@@ -9142,6 +9987,7 @@ vector_2_angle <- function(v_1, v_2) {
 #' Vector2 Vector2MoveTowards(Vector2 v, Vector2 target, float maxDistance);
 #' ```
 #'
+#'
 #' @export
 vector_2_move_towards <- function(v, target, max_distance) {
   if (!is_vector_2(v)) abort(paste0('`v` must be a numeric vector of length 2, not ', friendly_typeof(v), '.'), call = NULL)
@@ -9165,6 +10011,7 @@ vector_2_move_towards <- function(v, target, max_distance) {
 #' float Vector2Distance(Vector2 v1, Vector2 v2);
 #' ```
 #'
+#'
 #' @export
 vector_2_distance <- function(v_1, v_2) {
   if (!is_vector_2(v_1)) abort(paste0('`v_1` must be a numeric vector of length 2, not ', friendly_typeof(v_1), '.'), call = NULL)
@@ -9186,6 +10033,7 @@ vector_2_distance <- function(v_1, v_2) {
 #' ```
 #' Vector2 Vector2Rotate(Vector2 v, float angle);
 #' ```
+#'
 #'
 #' @export
 vector_2_rotate <- function(v, angle) {

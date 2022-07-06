@@ -2,7 +2,7 @@
 
 #' Camera 3d
 #'
-#' Create a new `camera_3d` object.
+#' Create a new camera_3d object.
 #'
 #' @param position A numeric vector of length 3. Camera position.
 #' @param target A numeric vector of length 3. Camera target it looks-at. Default: `c(0, 0, 0)`.
@@ -25,6 +25,9 @@
 #' ```
 #'
 #' @rdname camera_3d
+#'
+#' @family camera_3d functions
+#'
 #' @export
 camera_3d <- function(position, target = c(0, 0, 0), up = c(0, 1, 0), fovy = 70, projection = 0) {
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)

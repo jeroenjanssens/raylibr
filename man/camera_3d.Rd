@@ -27,7 +27,7 @@ camera_3d(
 A camera_3d
 }
 \description{
-Create a new \code{camera_3d} object.
+Create a new camera_3d object.
 }
 \note{
 This class has been auto-generated from the following Raylib struct definition:
@@ -41,3 +41,4 @@ This class has been auto-generated from the following Raylib struct definition:
 \} Camera3D;
 }\if{html}{\out{</div>}}
 }
+\concept{camera_3d functions}

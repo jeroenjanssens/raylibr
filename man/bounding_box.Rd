@@ -15,7 +15,7 @@ bounding_box(min, max)
 A bounding_box
 }
 \description{
-Create a new \code{bounding_box} object.
+Create a new bounding_box object.
 }
 \note{
 This class has been auto-generated from the following Raylib struct definition:
@@ -26,3 +26,4 @@ This class has been auto-generated from the following Raylib struct definition:
 \} BoundingBox;
 }\if{html}{\out{</div>}}
 }
+\concept{bounding_box functions}

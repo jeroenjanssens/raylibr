@@ -24,6 +24,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=shader]{shader()}} for creating shader objects.
+
 Other shader functions: 
 \code{\link{begin_shader_mode}()},
 \code{\link{end_shader_mode}()},
@@ -32,6 +34,7 @@ Other shader functions:
 \code{\link{load_shader}()},
 \code{\link{set_shader_value_matrix}()},
 \code{\link{set_shader_value_texture}()},
+\code{\link{set_shader_value}()},
 \code{\link{unload_shader}()}
 }
 \concept{shader functions}

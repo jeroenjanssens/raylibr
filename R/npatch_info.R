@@ -2,7 +2,7 @@
 
 #' Npatch info
 #'
-#' Create a new `npatch_info` object.
+#' Create a new npatch_info object.
 #'
 #' @param source A rectangle. Texture source rectangle.
 #' @param left An integer. Left border offset.
@@ -27,6 +27,9 @@
 #' ```
 #'
 #' @rdname npatch_info
+#'
+#' @family npatch_info functions
+#'
 #' @export
 npatch_info <- function(source, left, top, right, bottom, layout) {
   if (!is_rectangle(source)) abort(paste0('`source` must be a rectangle, not ', friendly_typeof(source), '.'), call = NULL)

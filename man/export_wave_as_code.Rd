@@ -24,6 +24,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=wave]{wave()}} for creating wave objects.
+
 Other wave functions: 
 \code{\link{export_wave}()},
 \code{\link{load_sound_from_wave}()},

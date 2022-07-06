@@ -15,7 +15,7 @@ ray(position, direction)
 A ray
 }
 \description{
-Create a new \code{ray} object.
+Create a new ray object.
 }
 \note{
 This class has been auto-generated from the following Raylib struct definition:
@@ -26,3 +26,4 @@ This class has been auto-generated from the following Raylib struct definition:
 \} Ray;
 }\if{html}{\out{</div>}}
 }
+\concept{ray functions}

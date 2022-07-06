@@ -21,6 +21,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=texture]{texture()}} for creating texture objects.
+
 Other texture functions: 
 \code{\link{begin_texture_mode}()},
 \code{\link{draw_cube_texture_rec}()},
@@ -43,6 +45,7 @@ Other texture functions:
 \code{\link{set_shader_value_texture}()},
 \code{\link{set_shapes_texture}()},
 \code{\link{set_texture_filter}()},
+\code{\link{texture}()},
 \code{\link{unload_render_texture}()},
 \code{\link{unload_texture}()}
 }

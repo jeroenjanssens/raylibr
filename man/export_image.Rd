@@ -7,7 +7,7 @@
 export_image(image, file_name)
 }
 \arguments{
-\item{image}{an image.}
+\item{image}{An image.}
 
 \item{file_name}{A string.}
 }
@@ -24,6 +24,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=image]{image()}} for creating image objects.
+
 Other image functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{gen_image_cellular}()},

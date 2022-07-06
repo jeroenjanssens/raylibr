@@ -18,7 +18,7 @@ gen_image_gradient_radial(width, height, density, inner, outer)
 \item{outer}{A color.}
 }
 \value{
-an image
+An image
 }
 \description{
 Generate image: radial gradient.
@@ -30,6 +30,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=color]{color()}} for creating color objects.
+
 Other image functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{export_image}()},

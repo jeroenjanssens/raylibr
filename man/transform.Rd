@@ -17,7 +17,7 @@ transform(translation, rotation, scale)
 A transform
 }
 \description{
-Create a new \code{transform} object.
+Create a new transform object.
 }
 \note{
 This class has been auto-generated from the following Raylib struct definition:
@@ -29,3 +29,4 @@ This class has been auto-generated from the following Raylib struct definition:
 \} Transform;
 }\if{html}{\out{</div>}}
 }
+\concept{transform functions}

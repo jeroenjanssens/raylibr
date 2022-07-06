@@ -25,6 +25,10 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=rectangle]{rectangle()}} for creating rectangle objects.
+
+\code{\link[=color]{color()}} for creating color objects.
+
 Other draw functions: 
 \code{\link{draw_billboard}()},
 \code{\link{draw_bounding_box}()},
@@ -127,7 +131,8 @@ Other rectangle functions:
 \code{\link{image_draw_rectangle_lines}()},
 \code{\link{image_draw_rectangle_rec}()},
 \code{\link{image_draw_rectangle_v}()},
-\code{\link{image_draw_rectangle}()}
+\code{\link{image_draw_rectangle}()},
+\code{\link{rectangle}()}
 }
 \concept{draw functions}
 \concept{rectangle functions}

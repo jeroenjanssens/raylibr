@@ -42,6 +42,7 @@ Other texture functions:
 \code{\link{set_shapes_texture}()},
 \code{\link{set_texture_filter}()},
 \code{\link{set_texture_wrap}()},
+\code{\link{texture}()},
 \code{\link{unload_texture}()}
 }
 \concept{texture functions}

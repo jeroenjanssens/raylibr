@@ -24,6 +24,7 @@ Other shader functions:
 \code{\link{load_shader}()},
 \code{\link{set_shader_value_matrix}()},
 \code{\link{set_shader_value_texture}()},
+\code{\link{set_shader_value}()},
 \code{\link{unload_shader}()}
 
 Other mode functions: 

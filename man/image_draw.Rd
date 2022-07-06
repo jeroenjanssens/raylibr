@@ -7,9 +7,9 @@
 image_draw(dst, src, src_rec, dst_rec, tint)
 }
 \arguments{
-\item{dst}{an image.}
+\item{dst}{An image.}
 
-\item{src}{an image.}
+\item{src}{An image.}
 
 \item{src_rec}{A rectangle.}
 
@@ -27,6 +27,12 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=image]{image()}} for creating image objects.
+
+\code{\link[=rectangle]{rectangle()}} for creating rectangle objects.
+
+\code{\link[=color]{color()}} for creating color objects.
+
 Other image functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{export_image}()},

@@ -3,7 +3,7 @@ library(purrr)
 library(glue)
 library(dplyr)
 
-families <- c("window", "screen", "monitor", "fps", "cursor", "mode", "shader", "file", "directory", "key", "gamepad", "mouse", "touch", "camera", "draw", "line", "circle", "rectangle", "collision", "image", "color", "text", "texture", "font", "model", "mesh", "material", "audio", "volume", "init", "sound", "wave", "music", "stream", "world")
+families <- c("window", "screen", "monitor", "fps", "cursor", "mode", "shader", "file", "directory", "key", "gamepad", "mouse", "touch", "camera", "draw", "line", "circle", "rectangle", "collision", "image", "color", "text", "texture", "font", "model", "mesh", "material", "audio", "volume", "init", "sound", "wave", "music", "stream", "world", "camera_2d", "camera_3d", "audio_stream")
 
 alias_type <- function(x) {
   case_when(x == "Camera" ~ "Camera3D",
@@ -134,8 +134,8 @@ make_rd_type <- function(x) {
             x == "bool" ~ "A logical",
             x == "char" ~ "A string",
             x == "const char *" ~ "A string",
-            x == "AudioStream" ~ "an audio_stream",
-            x == "Image" ~ "an image",
+            x == "AudioStream" ~ "An audio_stream",
+            x == "Image" ~ "An image",
             x == "Vector2" ~ "A numeric vector of length 2",
             x == "Vector3" ~ "A numeric vector of length 3",
             x == "Vector4" ~ "A numeric vector of length 4",
@@ -268,6 +268,17 @@ make_rd_families <- function(fams) {
   s <- c("#'")
   for (fam in fams) {
     s <- c(s, glue("#' @family {fam} functions"))
+  }
+  s <- c(s, "#'")
+  str_c(s, collapse = "\n")
+}
+
+make_rd_seealsos <- function(sas) {
+  if (length(sas) < 1) return("#'")
+
+  s <- c("#'")
+  for (sa in sas) {
+    s <- c(s, glue("#' @seealso [{sa}()] for creating {sa} objects."))
   }
   s <- c(s, "#'")
   str_c(s, collapse = "\n")

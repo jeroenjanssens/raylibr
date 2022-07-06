@@ -14,7 +14,7 @@ gen_image_cellular(width, height, tile_size)
 \item{tile_size}{An integer.}
 }
 \value{
-an image
+An image
 }
 \description{
 Generate image: cellular algorithm, bigger tileSize means bigger cells.

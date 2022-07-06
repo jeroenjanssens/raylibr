@@ -7,7 +7,7 @@
 image_draw_text_ex(dst, font, text, position, font_size, spacing, tint)
 }
 \arguments{
-\item{dst}{an image.}
+\item{dst}{An image.}
 
 \item{font}{A font.}
 
@@ -31,6 +31,12 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=image]{image()}} for creating image objects.
+
+\code{\link[=font]{font()}} for creating font objects.
+
+\code{\link[=color]{color()}} for creating color objects.
+
 Other image functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{export_image}()},

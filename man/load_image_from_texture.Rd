@@ -10,7 +10,7 @@ load_image_from_texture(texture)
 \item{texture}{A texture.}
 }
 \value{
-an image
+An image
 }
 \description{
 Load image from GPU texture data.
@@ -22,6 +22,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=texture]{texture()}} for creating texture objects.
+
 Other image functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{export_image}()},
@@ -105,6 +107,7 @@ Other texture functions:
 \code{\link{set_shapes_texture}()},
 \code{\link{set_texture_filter}()},
 \code{\link{set_texture_wrap}()},
+\code{\link{texture}()},
 \code{\link{unload_render_texture}()},
 \code{\link{unload_texture}()}
 }

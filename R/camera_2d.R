@@ -2,7 +2,7 @@
 
 #' Camera 2d
 #'
-#' Create a new `camera_2d` object.
+#' Create a new camera_2d object.
 #'
 #' @param offset A numeric vector of length 2. Camera offset (displacement from target).
 #' @param target A numeric vector of length 2. Camera target (rotation and zoom origin).
@@ -23,6 +23,9 @@
 #' ```
 #'
 #' @rdname camera_2d
+#'
+#' @family camera_2d functions
+#'
 #' @export
 camera_2d <- function(offset, target, rotation, zoom = 1) {
   if (!is_vector_2(offset)) abort(paste0('`offset` must be a numeric vector of length 2, not ', friendly_typeof(offset), '.'), call = NULL)

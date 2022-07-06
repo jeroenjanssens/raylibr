@@ -23,3 +23,6 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{int GetGlyphIndex(Font font, int codepoint);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+\code{\link[=font]{font()}} for creating font objects.
+}

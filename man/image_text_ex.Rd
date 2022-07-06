@@ -18,7 +18,7 @@ image_text_ex(font, text, font_size, spacing, tint)
 \item{tint}{A color.}
 }
 \value{
-an image
+An image
 }
 \description{
 Create an image from text (custom sprite font).
@@ -30,6 +30,10 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=font]{font()}} for creating font objects.
+
+\code{\link[=color]{color()}} for creating color objects.
+
 Other image functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{export_image}()},

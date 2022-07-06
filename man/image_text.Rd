@@ -14,7 +14,7 @@ image_text(text, font_size, color)
 \item{color}{A color.}
 }
 \value{
-an image
+An image
 }
 \description{
 Create an image from text (default font).
@@ -26,6 +26,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=color]{color()}} for creating color objects.
+
 Other image functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{export_image}()},

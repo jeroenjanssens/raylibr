@@ -17,7 +17,7 @@ material_map(texture, color, value)
 A material_map
 }
 \description{
-Create a new \code{material_map} object.
+Create a new material_map object.
 }
 \note{
 This class has been auto-generated from the following Raylib struct definition:
@@ -29,3 +29,4 @@ This class has been auto-generated from the following Raylib struct definition:
 \} MaterialMap;
 }\if{html}{\out{</div>}}
 }
+\concept{material_map functions}

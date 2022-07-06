@@ -166,7 +166,7 @@ for (cls in classes) {
     writeLines(glue("
       #' {make_rd_name(cls$struct_name)}
       #'
-      #' Create a new `{cls$class_name}` object.
+      #' Create a new {cls$class_name} object.
       #'
       {make_rd_params(cls$properties, comment = '#')}
       #'
@@ -180,6 +180,9 @@ for (cls in classes) {
     if (cls$create_constructor) {
       writeLines(glue("
         #' @rdname {cls$class_name}
+        #'
+        #' @family {cls$class_name} functions
+        #'
         #' @export
         {cls$class_name} <- function({make_r_params(cls$properties)}) {{
         {make_checks(cls$properties)}  {cls$class_name}_({paste0(names(cls$properties), collapse = \", \")})

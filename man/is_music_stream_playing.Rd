@@ -22,6 +22,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=music]{music()}} for creating music objects.
+
 Other music functions: 
 \code{\link{get_music_time_length}()},
 \code{\link{get_music_time_played}()},

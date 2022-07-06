@@ -2,7 +2,7 @@
 
 #' Bounding box
 #'
-#' Create a new `bounding_box` object.
+#' Create a new bounding_box object.
 #'
 #' @param min A numeric vector of length 3. Minimum vertex box-corner.
 #' @param max A numeric vector of length 3. Maximum vertex box-corner.
@@ -19,6 +19,9 @@
 #' ```
 #'
 #' @rdname bounding_box
+#'
+#' @family bounding_box functions
+#'
 #' @export
 bounding_box <- function(min, max) {
   if (!is_vector_3(min)) abort(paste0('`min` must be a numeric vector of length 3, not ', friendly_typeof(min), '.'), call = NULL)

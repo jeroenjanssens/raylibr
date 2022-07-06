@@ -7,7 +7,7 @@
 image_resize_nn(image, new_width, new_height)
 }
 \arguments{
-\item{image}{an image.}
+\item{image}{An image.}
 
 \item{new_width}{An integer.}
 
@@ -23,6 +23,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=image]{image()}} for creating image objects.
+
 Other image functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{export_image}()},

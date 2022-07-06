@@ -7,7 +7,7 @@
 image_rotate_ccw(image)
 }
 \arguments{
-\item{image}{an image.}
+\item{image}{An image.}
 }
 \description{
 Rotate image counter-clockwise 90deg.
@@ -19,6 +19,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=image]{image()}} for creating image objects.
+
 Other image functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{export_image}()},

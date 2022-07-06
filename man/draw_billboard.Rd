@@ -27,6 +27,12 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=camera_3d]{camera_3d()}} for creating camera_3d objects.
+
+\code{\link[=texture]{texture()}} for creating texture objects.
+
+\code{\link[=color]{color()}} for creating color objects.
+
 Other draw functions: 
 \code{\link{draw_bounding_box}()},
 \code{\link{draw_circle_3d}()},

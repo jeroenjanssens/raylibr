@@ -19,7 +19,7 @@ camera_2d(offset, target, rotation, zoom = 1)
 A camera_2d
 }
 \description{
-Create a new \code{camera_2d} object.
+Create a new camera_2d object.
 }
 \note{
 This class has been auto-generated from the following Raylib struct definition:
@@ -32,3 +32,4 @@ This class has been auto-generated from the following Raylib struct definition:
 \} Camera2D;
 }\if{html}{\out{</div>}}
 }
+\concept{camera_2d functions}

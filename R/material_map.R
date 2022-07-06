@@ -2,7 +2,7 @@
 
 #' Material map
 #'
-#' Create a new `material_map` object.
+#' Create a new material_map object.
 #'
 #' @param texture A texture. Material map texture.
 #' @param color A color. Material map color.
@@ -21,6 +21,9 @@
 #' ```
 #'
 #' @rdname material_map
+#'
+#' @family material_map functions
+#'
 #' @export
 material_map <- function(texture, color, value) {
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)

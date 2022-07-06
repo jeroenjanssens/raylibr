@@ -32,6 +32,7 @@ Other shader functions:
 \code{\link{load_shader_from_memory}()},
 \code{\link{set_shader_value_matrix}()},
 \code{\link{set_shader_value_texture}()},
+\code{\link{set_shader_value}()},
 \code{\link{unload_shader}()}
 }
 \concept{shader functions}

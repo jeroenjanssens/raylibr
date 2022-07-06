@@ -29,6 +29,10 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=texture]{texture()}} for creating texture objects.
+
+\code{\link[=color]{color()}} for creating color objects.
+
 Other draw functions: 
 \code{\link{draw_billboard}()},
 \code{\link{draw_bounding_box}()},
@@ -139,6 +143,7 @@ Other texture functions:
 \code{\link{set_shapes_texture}()},
 \code{\link{set_texture_filter}()},
 \code{\link{set_texture_wrap}()},
+\code{\link{texture}()},
 \code{\link{unload_render_texture}()},
 \code{\link{unload_texture}()}
 }

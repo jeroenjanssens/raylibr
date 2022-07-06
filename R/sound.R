@@ -2,9 +2,9 @@
 
 #' Sound
 #'
-#' Create a new `sound` object.
+#' Create a new sound object.
 #'
-#' @param stream an audio_stream. Audio stream.
+#' @param stream An audio_stream. Audio stream.
 #' @param frame_count A non-negative integer. Total number of frames (considering channels).
 #'
 #' @return A sound
@@ -19,6 +19,9 @@
 #' ```
 #'
 #' @rdname sound
+#'
+#' @family sound functions
+#'
 #' @export
 sound <- function(stream, frame_count) {
   if (!is_audio_stream(stream)) abort(paste0('`stream` must be an audio_stream, not ', friendly_typeof(stream), '.'), call = NULL)

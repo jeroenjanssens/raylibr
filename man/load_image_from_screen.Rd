@@ -7,7 +7,7 @@
 load_image_from_screen()
 }
 \value{
-an image
+An image
 }
 \description{
 Load image from screen buffer and (screenshot).

@@ -2,13 +2,13 @@
 
 #' Glyph info
 #'
-#' Create a new `glyph_info` object.
+#' Create a new glyph_info object.
 #'
 #' @param value An integer. Character value (Unicode).
 #' @param offset_x An integer. Character offset X when drawing.
 #' @param offset_y An integer. Character offset Y when drawing.
 #' @param advance_x An integer. Character advance position X.
-#' @param image an image. Character image data.
+#' @param image An image. Character image data.
 #'
 #' @return A glyph_info
 #'
@@ -25,6 +25,9 @@
 #' ```
 #'
 #' @rdname glyph_info
+#'
+#' @family glyph_info functions
+#'
 #' @export
 glyph_info <- function(value, offset_x, offset_y, advance_x, image) {
   if (!is_int(value)) abort(paste0('`value` must be an integer, not ', friendly_typeof(value), '.'), call = NULL)

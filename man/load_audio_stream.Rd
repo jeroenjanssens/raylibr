@@ -14,7 +14,7 @@ load_audio_stream(sample_rate, sample_size, channels)
 \item{channels}{A non-negative integer.}
 }
 \value{
-an audio_stream
+An audio_stream
 }
 \description{
 Load audio stream (to stream raw audio pcm data).

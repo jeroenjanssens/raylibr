@@ -142,7 +142,7 @@ color_set_a_ <- function(obj, a) {
 #' @param x Object to be coerced. Can be a valid R color (see `colors()`) or a hexademical.
 #'
 #' @return A color
-#'
+#' @family color functions
 #' @export
 as_color <- function(x) {
     .Call(`_raylibr_as_color`, x)

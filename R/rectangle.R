@@ -2,7 +2,7 @@
 
 #' Rectangle
 #'
-#' Create a new `rectangle` object.
+#' Create a new rectangle object.
 #'
 #' @param x A number. Rectangle top-left corner position x.
 #' @param y A number. Rectangle top-left corner position y.
@@ -23,6 +23,9 @@
 #' ```
 #'
 #' @rdname rectangle
+#'
+#' @family rectangle functions
+#'
 #' @export
 rectangle <- function(x, y, width, height) {
   if (!is_float(x)) abort(paste0('`x` must be a number, not ', friendly_typeof(x), '.'), call = NULL)

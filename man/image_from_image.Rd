@@ -7,12 +7,12 @@
 image_from_image(image, rec)
 }
 \arguments{
-\item{image}{an image.}
+\item{image}{An image.}
 
 \item{rec}{A rectangle.}
 }
 \value{
-an image
+An image
 }
 \description{
 Create an image from another image piece.
@@ -24,6 +24,10 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=image]{image()}} for creating image objects.
+
+\code{\link[=rectangle]{rectangle()}} for creating rectangle objects.
+
 Other image functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{export_image}()},

@@ -28,6 +28,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=camera_3d]{camera_3d()}} for creating camera_3d objects.
+
 Other world functions: 
 \code{\link{get_screen_to_world_2d}()},
 \code{\link{get_world_to_screen_2d}()},

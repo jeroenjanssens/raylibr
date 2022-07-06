@@ -2,7 +2,7 @@
 
 #' Render texture
 #'
-#' Create a new `render_texture` object.
+#' Create a new render_texture object.
 #'
 #' @param id A non-negative integer. OpenGL framebuffer object id.
 #' @param texture A texture. Color buffer attachment texture.
@@ -21,6 +21,9 @@
 #' ```
 #'
 #' @rdname render_texture
+#'
+#' @family render_texture functions
+#'
 #' @export
 render_texture <- function(id, texture, depth) {
   if (!is_unsigned_int(id)) abort(paste0('`id` must be a non-negative integer, not ', friendly_typeof(id), '.'), call = NULL)

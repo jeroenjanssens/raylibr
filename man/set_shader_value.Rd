@@ -16,3 +16,16 @@ set_shader_value(shader, loc_index, value)
 \description{
 Set shader uniform value.
 }
+\seealso{
+Other shader functions: 
+\code{\link{begin_shader_mode}()},
+\code{\link{end_shader_mode}()},
+\code{\link{get_shader_location_attrib}()},
+\code{\link{get_shader_location}()},
+\code{\link{load_shader_from_memory}()},
+\code{\link{load_shader}()},
+\code{\link{set_shader_value_matrix}()},
+\code{\link{set_shader_value_texture}()},
+\code{\link{unload_shader}()}
+}
+\concept{shader functions}

@@ -2,7 +2,7 @@
 
 #' Ray
 #'
-#' Create a new `ray` object.
+#' Create a new ray object.
 #'
 #' @param position A numeric vector of length 3. Ray position (origin).
 #' @param direction A numeric vector of length 3. Ray direction.
@@ -19,6 +19,9 @@
 #' ```
 #'
 #' @rdname ray
+#'
+#' @family ray functions
+#'
 #' @export
 ray <- function(position, direction) {
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)

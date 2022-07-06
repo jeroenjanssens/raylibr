@@ -7,7 +7,7 @@
 image_color_replace(image, color, replace)
 }
 \arguments{
-\item{image}{an image.}
+\item{image}{An image.}
 
 \item{color}{A color.}
 
@@ -23,6 +23,10 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=image]{image()}} for creating image objects.
+
+\code{\link[=color]{color()}} for creating color objects.
+
 Other image functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{export_image}()},
@@ -85,6 +89,7 @@ Other image functions:
 \code{\link{unload_image}()}
 
 Other color functions: 
+\code{\link{as_color}()},
 \code{\link{color_alpha_blend}()},
 \code{\link{color_alpha}()},
 \code{\link{color_from_hsv}()},
@@ -92,6 +97,7 @@ Other color functions:
 \code{\link{color_normalize}()},
 \code{\link{color_to_hsv}()},
 \code{\link{color_to_int}()},
+\code{\link{color}()},
 \code{\link{gen_image_color}()},
 \code{\link{get_color}()},
 \code{\link{get_image_color}()},

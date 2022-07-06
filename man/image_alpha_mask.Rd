@@ -7,9 +7,9 @@
 image_alpha_mask(image, alpha_mask)
 }
 \arguments{
-\item{image}{an image.}
+\item{image}{An image.}
 
-\item{alpha_mask}{an image.}
+\item{alpha_mask}{An image.}
 }
 \description{
 Apply alpha mask to image.
@@ -21,6 +21,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=image]{image()}} for creating image objects.
+
 Other image functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{export_image}()},

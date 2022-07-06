@@ -23,6 +23,7 @@ This function has been auto-generated from the following Raylib function definit
 \seealso{
 Other font functions: 
 \code{\link{get_font_default}()},
+\code{\link{load_font_ex}()},
 \code{\link{load_font_from_image}()},
 \code{\link{load_font}()},
 \code{\link{unload_font}()}

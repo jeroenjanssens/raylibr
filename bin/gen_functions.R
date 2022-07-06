@@ -17,6 +17,16 @@ for (line in lines) {
   parts <- unlist(str_split(make_rcpp_name(fun$name), "_"))
   fun$families <- parts[parts %in% families]
 
+  # See also documentation
+  fun$seealsos <- c()
+  for (p in fun$params) {
+    if (make_rcpp_name(p$type) %in% families) {
+      fun$seealsos <- c(fun$seealsos, make_rcpp_name(p$type))
+    }
+  }
+  fun$seealsos <- unique(fun$seealsos)
+
+
   funs <- append(funs, list(fun))
   names(funs)[length(funs)] <- make_rcpp_name(fun$name)
 }
@@ -62,6 +72,7 @@ for(fun in funs) {
     #' {fun$code}
     #' ```
     {make_rd_families(fun$families)}
+    {make_rd_seealsos(fun$seealsos)}
     #' @export
     {make_rcpp_name(fun$name)} <- function({make_r_params(fun$params)}) {{
     {make_checks(fun$params)}  {make_rcpp_name(fun$name)}_({paste0(names(fun$params), collapse = \", \")})

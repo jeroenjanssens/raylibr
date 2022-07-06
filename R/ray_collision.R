@@ -2,7 +2,7 @@
 
 #' Ray collision
 #'
-#' Create a new `ray_collision` object.
+#' Create a new ray_collision object.
 #'
 #' @param hit A logical. Did the ray hit something?.
 #' @param distance A number. Distance to nearest hit.
@@ -23,6 +23,9 @@
 #' ```
 #'
 #' @rdname ray_collision
+#'
+#' @family ray_collision functions
+#'
 #' @export
 ray_collision <- function(hit, distance, point, normal) {
   if (!is_bool(hit)) abort(paste0('`hit` must be a logical, not ', friendly_typeof(hit), '.'), call = NULL)

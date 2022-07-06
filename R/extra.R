@@ -6,6 +6,8 @@
 #' @param loc_index An integer.
 #' @param value A number or numerical vector of length 2, 3, or 4.
 #'
+#' @family shader functions
+#'
 #' @export
 set_shader_value <- function(shader, loc_index, value) {
   if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
@@ -39,6 +41,8 @@ set_shader_value <- function(shader, loc_index, value) {
 #' ```
 #' Font LoadFontEx(const char *fileName, int fontSize, int *fontChars, int glyphCount);
 #' ```
+#'
+#' @family font functions
 #'
 #' @export
 load_font_ex <- function(file_name, font_size) {

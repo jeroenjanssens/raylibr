@@ -2,7 +2,7 @@
 
 #' Transform
 #'
-#' Create a new `transform` object.
+#' Create a new transform object.
 #'
 #' @param translation A numeric vector of length 3. Translation.
 #' @param rotation A numeric vector of length 4. Rotation.
@@ -21,6 +21,9 @@
 #' ```
 #'
 #' @rdname transform
+#'
+#' @family transform functions
+#'
 #' @export
 transform <- function(translation, rotation, scale) {
   if (!is_vector_3(translation)) abort(paste0('`translation` must be a numeric vector of length 3, not ', friendly_typeof(translation), '.'), call = NULL)

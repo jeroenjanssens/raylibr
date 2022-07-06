@@ -24,6 +24,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+\code{\link[=rectangle]{rectangle()}} for creating rectangle objects.
+
 Other collision functions: 
 \code{\link{check_collision_box_sphere}()},
 \code{\link{check_collision_boxes}()},
