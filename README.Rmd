@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# raylibr
+# raylibr <img src="man/figures/logo.png" align="right" height="139"/>
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -25,7 +25,6 @@ This R package wraps [Raylib](https://www.raylib.com/), a simple and easy-to-use
 
 You can install the development version of raylibr from [GitHub](https://github.com/) with:
 
-``` r
-# install.packages("devtools")
-devtools::install_github("jeroenjanssens/raylibr")
+```{r, eval = FALSE}
+remotes::install_github("jeroenjanssens/raylibr")
 ```

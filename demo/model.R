@@ -29,7 +29,6 @@ set_target_fps(60)
 
 while (!window_should_close()) {
   cam <- update_camera(cam)
-  # cat(cam$fovy, "\n")
 
   if (is_key_pressed(key$right)) current_shader <- current_shader + 1
   if (is_key_pressed(key$left)) current_shader <- current_shader - 1
@@ -37,7 +36,6 @@ while (!window_should_close()) {
 
   begin_texture_mode(target)
   clear_background()
-
   begin_mode_3d(cam)
   draw_model(church_model, church_position, 0.1, "white")
   draw_grid(10, 1)
@@ -52,7 +50,9 @@ while (!window_should_close()) {
                    c(0,0), "white")
   end_shader_mode()
   draw_rectangle(0, 0, screen_width, 50, fade("white", 0.7))
-  draw_text(glue("shader {current_shader}/{length(shader_names)}: {path_ext_remove(path_file(shader_names[current_shader]))}"), 15, 15, 20, "black")
+  draw_text(glue("shader {current_shader}/{length(shader_names)}: ",
+                 "{path_ext_remove(path_file(shader_names[current_shader]))}"),
+            15, 15, 20, "black")
   end_drawing()
 }
 
