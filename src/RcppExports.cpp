@@ -482,6 +482,30 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// update_camera_
+Camera3D update_camera_(Camera3D camera);
+RcppExport SEXP _raylibr_update_camera_(SEXP cameraSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Camera3D >::type camera(cameraSEXP);
+    rcpp_result_gen = Rcpp::wrap(update_camera_(camera));
+    return rcpp_result_gen;
+END_RCPP
+}
+// set_model_texture
+void set_model_texture(Model model, int material_id, int material_map_index, Texture texture);
+RcppExport SEXP _raylibr_set_model_texture(SEXP modelSEXP, SEXP material_idSEXP, SEXP material_map_indexSEXP, SEXP textureSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Model >::type model(modelSEXP);
+    Rcpp::traits::input_parameter< int >::type material_id(material_idSEXP);
+    Rcpp::traits::input_parameter< int >::type material_map_index(material_map_indexSEXP);
+    Rcpp::traits::input_parameter< Texture >::type texture(textureSEXP);
+    set_model_texture(model, material_id, material_map_index, texture);
+    return R_NilValue;
+END_RCPP
+}
 // init_window_
 void init_window_(int width, int height, const char * title);
 RcppExport SEXP _raylibr_init_window_(SEXP widthSEXP, SEXP heightSEXP, SEXP titleSEXP) {
@@ -1935,16 +1959,6 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< Camera3D >::type camera(cameraSEXP);
     Rcpp::traits::input_parameter< int >::type mode(modeSEXP);
     set_camera_mode_(camera, mode);
-    return R_NilValue;
-END_RCPP
-}
-// update_camera_
-void update_camera_(Camera3D& camera);
-RcppExport SEXP _raylibr_update_camera_(SEXP cameraSEXP) {
-BEGIN_RCPP
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Camera3D& >::type camera(cameraSEXP);
-    update_camera_(camera);
     return R_NilValue;
 END_RCPP
 }
@@ -5940,6 +5954,8 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_set_shader_value_vector_3_", (DL_FUNC) &_raylibr_set_shader_value_vector_3_, 3},
     {"_raylibr_set_shader_value_vector_4_", (DL_FUNC) &_raylibr_set_shader_value_vector_4_, 3},
     {"_raylibr_load_font_ex_", (DL_FUNC) &_raylibr_load_font_ex_, 2},
+    {"_raylibr_update_camera_", (DL_FUNC) &_raylibr_update_camera_, 1},
+    {"_raylibr_set_model_texture", (DL_FUNC) &_raylibr_set_model_texture, 4},
     {"_raylibr_init_window_", (DL_FUNC) &_raylibr_init_window_, 3},
     {"_raylibr_window_should_close_", (DL_FUNC) &_raylibr_window_should_close_, 0},
     {"_raylibr_close_window_", (DL_FUNC) &_raylibr_close_window_, 0},
@@ -6079,7 +6095,6 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_get_gesture_pinch_vector_", (DL_FUNC) &_raylibr_get_gesture_pinch_vector_, 0},
     {"_raylibr_get_gesture_pinch_angle_", (DL_FUNC) &_raylibr_get_gesture_pinch_angle_, 0},
     {"_raylibr_set_camera_mode_", (DL_FUNC) &_raylibr_set_camera_mode_, 2},
-    {"_raylibr_update_camera_", (DL_FUNC) &_raylibr_update_camera_, 1},
     {"_raylibr_set_camera_pan_control_", (DL_FUNC) &_raylibr_set_camera_pan_control_, 1},
     {"_raylibr_set_camera_alt_control_", (DL_FUNC) &_raylibr_set_camera_alt_control_, 1},
     {"_raylibr_set_camera_smooth_zoom_control_", (DL_FUNC) &_raylibr_set_camera_smooth_zoom_control_, 1},

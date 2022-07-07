@@ -178,3 +178,29 @@ void set_shader_value_vector_4_(Shader shader, int loc_index, Vector4 &value) {
 Font load_font_ex_(const char * file_name, int font_size) {
   return LoadFontEx(file_name, font_size, 0, 0);
 }
+
+
+
+// //' @export
+// // [[Rcpp::export]]
+// void update_camera_test(Camera3D camera) {
+//   camera.fovy = 42;
+// }
+
+// //' @export
+// // [[Rcpp::export]]
+// void update_camera_test(Camera3D &camera) {
+//   camera.fovy = 42;
+// }
+
+// [[Rcpp::export]]
+Camera3D update_camera_(Camera3D camera) {
+  UpdateCamera(&camera);
+  return camera;
+}
+
+//' @export
+// [[Rcpp::export]]
+void set_model_texture(Model model, int material_id, int material_map_index, Texture texture) {
+  model.materials[material_id].maps[material_map_index].texture = texture;
+}

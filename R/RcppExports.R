@@ -168,6 +168,15 @@ load_font_ex_ <- function(file_name, font_size) {
     .Call(`_raylibr_load_font_ex_`, file_name, font_size)
 }
 
+update_camera_ <- function(camera) {
+    .Call(`_raylibr_update_camera_`, camera)
+}
+
+#' @export
+set_model_texture <- function(model, material_id, material_map_index, texture) {
+    invisible(.Call(`_raylibr_set_model_texture`, model, material_id, material_map_index, texture))
+}
+
 init_window_ <- function(width, height, title) {
     invisible(.Call(`_raylibr_init_window_`, width, height, title))
 }
@@ -722,10 +731,6 @@ get_gesture_pinch_angle_ <- function() {
 
 set_camera_mode_ <- function(camera, mode) {
     invisible(.Call(`_raylibr_set_camera_mode_`, camera, mode))
-}
-
-update_camera_ <- function(camera) {
-    invisible(.Call(`_raylibr_update_camera_`, camera))
 }
 
 set_camera_pan_control_ <- function(key_pan) {

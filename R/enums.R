@@ -196,5 +196,20 @@ shader_uniform <- list(
   sampler2d = 8
 )
 
-
+#' @export
+material_map_index = list(
+  albedo = 0,
+  diffuse = 0,
+  metalness = 1,
+  specular = 1,
+  normal = 2,
+  roughness = 3,
+  occlusion = 4,
+  emission = 5,
+  height = 6,
+  cubemap = 7,
+  irradiance = 8,
+  prefilter = 9,
+  brdf = 10
+)
 

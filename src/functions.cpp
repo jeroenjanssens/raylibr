@@ -698,11 +698,6 @@ void set_camera_mode_(Camera3D camera, int mode) {
 }
 
 // [[Rcpp::export]]
-void update_camera_(Camera3D &camera) {
-  return UpdateCamera(&camera);
-}
-
-// [[Rcpp::export]]
 void set_camera_pan_control_(int key_pan) {
   return SetCameraPanControl(key_pan);
 }
