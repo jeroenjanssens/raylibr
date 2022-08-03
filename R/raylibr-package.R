@@ -2,6 +2,7 @@
 "_PACKAGE"
 
 ## usethis namespace: start
+#' @importFrom dplyr case_when
 #' @importFrom glue glue
 #' @importFrom Rcpp sourceCpp
 #' @importFrom rlang abort
