@@ -6,6 +6,8 @@
 \alias{raylibr-package}
 \title{raylibr: R Wrapper for 'Raylib'}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 This package wraps Raylib, a simple and easy-to-use library to enjoy videogames programming.
 }
 \author{
