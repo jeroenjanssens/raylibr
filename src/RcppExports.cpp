@@ -506,6 +506,16 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// raylib_version_
+const char * raylib_version_();
+RcppExport SEXP _raylibr_raylib_version_() {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    rcpp_result_gen = Rcpp::wrap(raylib_version_());
+    return rcpp_result_gen;
+END_RCPP
+}
 // init_window_
 void init_window_(int width, int height, const char * title);
 RcppExport SEXP _raylibr_init_window_(SEXP widthSEXP, SEXP heightSEXP, SEXP titleSEXP) {
@@ -5956,6 +5966,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_load_font_ex_", (DL_FUNC) &_raylibr_load_font_ex_, 2},
     {"_raylibr_update_camera_", (DL_FUNC) &_raylibr_update_camera_, 1},
     {"_raylibr_set_model_texture", (DL_FUNC) &_raylibr_set_model_texture, 4},
+    {"_raylibr_raylib_version_", (DL_FUNC) &_raylibr_raylib_version_, 0},
     {"_raylibr_init_window_", (DL_FUNC) &_raylibr_init_window_, 3},
     {"_raylibr_window_should_close_", (DL_FUNC) &_raylibr_window_should_close_, 0},
     {"_raylibr_close_window_", (DL_FUNC) &_raylibr_close_window_, 0},

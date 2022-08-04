@@ -50,3 +50,13 @@ load_font_ex <- function(file_name, font_size) {
   if (!is_int(font_size)) abort(paste0('`font_size` must be an integer, not ', friendly_typeof(font_size), '.'), call = NULL)
   load_font_ex_(file_name, font_size)
 }
+
+#' Raylib Version
+#'
+#' Get the version of the Raylib library that is being used.
+#'
+#' @return A string
+#' @export
+raylib_version <- function() {
+  raylib_version_()
+}

@@ -10,6 +10,15 @@
 
 This package wraps Raylib, a simple and easy-to-use library to enjoy videogames programming.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/jeroenjanssens/raylibr}
+  \item \url{https://jeroenjanssens.github.io/raylibr/}
+  \item Report bugs at \url{https://github.com/jeroenjanssens/raylibr/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Jeroen Janssens \email{jeroen@jeroenjanssens.com} (\href{https://orcid.org/0000-0002-5878-8924}{ORCID})
 

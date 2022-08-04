@@ -177,6 +177,10 @@ set_model_texture <- function(model, material_id, material_map_index, texture) {
     invisible(.Call(`_raylibr_set_model_texture`, model, material_id, material_map_index, texture))
 }
 
+raylib_version_ <- function() {
+    .Call(`_raylibr_raylib_version_`)
+}
+
 init_window_ <- function(width, height, title) {
     invisible(.Call(`_raylibr_init_window_`, width, height, title))
 }

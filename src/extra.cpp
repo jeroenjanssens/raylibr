@@ -204,3 +204,8 @@ Camera3D update_camera_(Camera3D camera) {
 void set_model_texture(Model model, int material_id, int material_map_index, Texture texture) {
   model.materials[material_id].maps[material_map_index].texture = texture;
 }
+
+// [[Rcpp::export]]
+const char * raylib_version_() {
+  return RAYLIB_VERSION;
+}
