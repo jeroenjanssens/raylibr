@@ -1,7 +1,7 @@
 library(raylibr)
 
 init_audio_device()
-music <- load_music_stream("demo/mini1111.xm")
+music <- load_music_stream(file.path(system.file(package = "raylibr"), "demo_resources","mini1111.xm"))
 
 init_window(900, 600, "R & Raylib: Waving Cubes and Music")
 

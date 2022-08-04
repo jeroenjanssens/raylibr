@@ -1,5 +1,4 @@
 library(raylibr)
-library(here)
 
 candidates <- c("red", "green", "blue", "orange", "black", "purple", "hotpink")
 word <- ""
@@ -9,7 +8,7 @@ screen_size <- c(900, 600)
 init_window(screen_size[1], screen_size[2], "Stroop Test")
 
 font_size <- 200
-font <- load_font_ex(here("demo", "source-sans-pro-v14-latin-regular.ttf"), font_size)
+font <- load_font_ex(file.path(system.file(package = "raylibr"), "demo_resources", "source-sans-pro-v14-latin-regular.ttf"), font_size)
 
 while (!window_should_close()) {
   screen_size <- c(get_screen_width(), get_screen_height())

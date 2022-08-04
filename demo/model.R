@@ -3,10 +3,9 @@ library(dplyr)
 library(purrr)
 library(stringr)
 library(glue)
-library(here)
 library(fs)
 
-shader_names <- dir_ls(here("demo", "model"), glob = "*.fs")
+shader_names <- dir_ls(file.path(system.file(package = "raylibr"), "demo_resources", "model"), glob = "*.fs")
 shader_names <- c("none", shader_names)
 
 screen_width <- 800
@@ -14,8 +13,8 @@ screen_height <- 450
 
 init_window(screen_width, screen_height, "raylibr demo - postprocessing shader")
 
-church_model <- load_model(here("demo", "model", "church.obj"))
-church_texture <- load_texture(here("demo", "model", "church_diffuse.png"))
+church_model <- load_model(file.path(system.file(package = "raylibr"), "demo_resources", "model", "church.obj"))
+church_texture <- load_texture(file.path(system.file(package = "raylibr"), "demo_resources", "model", "church_diffuse.png"))
 set_model_texture(church_model, 0, material_map_index$diffuse, church_texture)
 church_position <- c(0, 0, 0)
 

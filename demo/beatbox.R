@@ -6,7 +6,7 @@ library(glue)
 library(fs)
 
 files <-
-  dir_info("demo/beatbox-samples/") %>%
+  dir_info(file.path(system.file(package = "raylibr"), "demo_resources", "beatbox-samples")) %>%
   arrange(size) %>%
   pull(path)
 
@@ -23,7 +23,7 @@ s <- 600
 init_window(s, s, "Beatbox like Jeroen")
 set_target_fps(30)
 
-background <- load_texture("demo/beatbox.png")
+background <- load_texture(file.path(system.file(package = "raylibr"), "demo_resources","beatbox.png"))
 
 while (!window_should_close()) {
   k <- get_key_pressed()
