@@ -1,6 +1,6 @@
 Package: raylibr
 Title: R Wrapper for 'Raylib'
-Version: 0.0.0.9000
+Version: 4.0.0.9001
 Authors@R: 
     person("Jeroen", "Janssens", email = "jeroen@jeroenjanssens.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-5878-8924"))
@@ -17,4 +17,5 @@ Imports:
     Rcpp,
     rlang,
     utils
-URL: https://jeroenjanssens.github.io/raylibr/
+URL: https://github.com/jeroenjanssens/raylibr, https://jeroenjanssens.github.io/raylibr/
+BugReports: https://github.com/jeroenjanssens/raylibr/issues
