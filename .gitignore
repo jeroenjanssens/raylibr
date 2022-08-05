@@ -4,3 +4,8 @@
 .httr-oauth
 .DS_Store
 docs
+
+# compilation artifacts
+*.o
+*.so
+*.dll
