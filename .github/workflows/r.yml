@@ -31,6 +31,8 @@ jobs:
         with:
           r-version: ${{ matrix.r-version }}
       - name: Install dependencies
+        run: apt install libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev 
+      - name: Install R-packages
         run: |
           install.packages(c("remotes", "devtools"))
           remotes::install_deps(dependencies = TRUE)
