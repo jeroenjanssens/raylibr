@@ -1,6 +1,6 @@
 #' @export
 is_bool <- function(x) {
-  is.logical() && length == 1
+  is.logical(x) && length(x) == 1
 }
 
 #' @export
