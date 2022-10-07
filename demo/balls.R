@@ -10,7 +10,7 @@ ys <- runif(n, sizes, height-sizes)
 dxs <- rnorm(n)
 dys <- rnorm(n)
 cs <- sample(colors(), n)
-cs <- purrr::map(cs, ~ fade(., 0.7))
+cs <- lapply(cs, function(x) { fade(x, 0.7) })
 
 set_target_fps(100)
 init_window(width, height, "Bouncing Balls")
