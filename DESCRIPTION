@@ -12,9 +12,7 @@ RoxygenNote: 7.2.1
 LinkingTo: 
     Rcpp
 Imports: 
-    dplyr,
     Rcpp,
-    rlang,
     utils
 URL: https://github.com/jeroenjanssens/raylibr, https://jeroenjanssens.github.io/raylibr/
 BugReports: https://github.com/jeroenjanssens/raylibr/issues

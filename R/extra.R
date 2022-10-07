@@ -60,3 +60,11 @@ load_font_ex <- function(file_name, font_size) {
 raylib_version <- function() {
   raylib_version_()
 }
+
+abort <- function(message, call = NULL) {
+  if (requireNamespace("rlang", quietly = TRUE)) {
+    rlang::abort(message, call = call)
+  } else {
+    base::stop(message, call. = !is.null(call))
+  }
+}
