@@ -4,6 +4,7 @@
 .httr-oauth
 .DS_Store
 docs
+.github/pkg.lock
 
 # compilation artifacts
 *.o

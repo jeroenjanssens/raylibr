@@ -70,26 +70,37 @@ is_unsigned_char <- function(x) {
 }
 
 friendly_typeof <- function(x) {
-  len <- length(x)
   cls <- class(x)
   typ <- typeof(x)
-  str_len <- glue("of length {len}")
 
-  if (len == 1) {
-    glue(case_when(
-      (typ == "externalptr" && cls %in% c("audio_stream", "image")) ~ "an {cls}",
-      (typ == "externalptr" && cls != "NULL") ~ "a {cls}",
-      is.logical(x) && is.na(x) ~ "NA",
-      is.numeric(x) ~ "a number",
-      is.character(x) ~ "a string",
-      typ %in% c("environment", "expression", "externalptr") ~ "an {typ}",
-      TRUE ~ "a {typ}"))
+  if (length(x) == 1) {
+    if ((typ == "externalptr") && (cls %in% c("audio_stream", "image"))) {
+      paste0("an ", cls)
+    } else if ((typ == "externalptr") && (cls != "NULL")) {
+      paste0("a ", cls)
+    } else if (is.logical(x) && is.na(x)) {
+      "NA"
+    } else if (is.numeric(x)) {
+      "a number"
+    } else if (is.character(x)) {
+      "a string"
+    } else if (typ %in% c("environment", "expression", "externalptr")) {
+      paste0("an ", typ)
+    } else {
+      paste0("a ", typ)
+    } 
   } else {
-    glue(case_when(
-      is.null(x) ~ "NULL",
-      is.matrix(x) && is.numeric(x) ~ "a numeric matrix of {nrow(x)} by {ncol(x)}",
-      is.numeric(x) ~ "a numeric vector {str_len}",
-      is.list(x) ~ "a list {str_len}",
-      TRUE ~ "a {typ} vector {str_len}"))
+    str_len <- paste0("of length ", length(x))
+    if (is.null(x)) {
+      "NULL"
+    } else if (is.matrix(x) && is.numeric(x)) {
+      paste0("a numeric matrix of ", nrow(x), " by ", ncol(x))
+    } else if (is.numeric(x)) {
+      paste0("a numeric vector ", str_len)
+    } else if (is.list(x)) {
+      paste0("a list ", str_len)
+    } else {
+      paste0("a ", typ, " vector ", str_len)
+    }
   }
 }

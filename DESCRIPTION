@@ -13,7 +13,6 @@ LinkingTo:
     Rcpp
 Imports: 
     dplyr,
-    glue,
     Rcpp,
     rlang,
     utils
