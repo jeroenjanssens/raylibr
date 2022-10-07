@@ -2,7 +2,6 @@
 "_PACKAGE"
 
 ## usethis namespace: start
-#' @importFrom dplyr case_when
 #' @importFrom Rcpp sourceCpp
 #' @importFrom rlang abort
 #' @importFrom utils .DollarNames
