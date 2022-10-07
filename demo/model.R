@@ -1,12 +1,9 @@
 library(raylibr)
-library(dplyr)
-library(purrr)
-library(stringr)
-library(glue)
-library(fs)
 
-shader_names <- dir_ls(file.path(system.file(package = "raylibr"), "demo_resources", "model"), glob = "*.fs")
-shader_names <- c("none", shader_names)
+shader_files <- list.files(file.path(system.file(package = "raylibr"), "demo_resources", "model"),
+                           pattern = "*.fs", full.names = TRUE)
+shader_files <- c("/none.fs", shader_files)
+shader_names <- sub("^.*\\/([a-z0-9_]+)\\.fs$", "\\1", shader_files)
 
 screen_width <- 800
 screen_height <- 450
@@ -18,7 +15,7 @@ church_texture <- load_texture(file.path(system.file(package = "raylibr"), "demo
 set_model_texture(church_model, 0, material_map_index$diffuse, church_texture)
 church_position <- c(0, 0, 0)
 
-shaders <- map(shader_names, ~ load_shader("", .))
+shaders <- lapply(shader_files, function(x) { load_shader("", x) })
 current_shader <- 1
 target <- load_render_texture(screen_width, screen_height)
 
@@ -49,13 +46,13 @@ while (!window_should_close()) {
                    c(0,0), "white")
   end_shader_mode()
   draw_rectangle(0, 0, screen_width, 50, fade("white", 0.7))
-  draw_text(glue("shader {current_shader}/{length(shader_names)}: ",
-                 "{path_ext_remove(path_file(shader_names[current_shader]))}"),
+  draw_text(paste0("shader ", current_shader, "/", length(shader_names), ": ",
+                   shader_names[current_shader]),
             15, 15, 20, "black")
   end_drawing()
 }
 
-map(shaders, unload_shader)
+lapply(shaders, unload_shader)
 unload_texture(church_texture)
 unload_model(church_model)
 unload_render_texture(target)

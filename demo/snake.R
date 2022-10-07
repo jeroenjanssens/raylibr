@@ -1,6 +1,4 @@
 library(raylibr)
-library(purrr)
-library(glue)
 
 width <- 30
 height <- 26
@@ -10,10 +8,10 @@ init_window(width * scale, height * scale, title = "Snake in R and Raylib")
 
 snake <- list(as.integer(c(width, height) / 2))
 
-walls <- c(map(1:width, ~ c(., 1)),
-           map(1:width, ~ c(., height)),
-           map(1:height, ~ c(1, .)),
-           map(1:height, ~ c(width, .)))
+walls <- c(lapply(1:width,  function(x) c(x, 1)),
+           lapply(1:width,  function(x) c(x, height)),
+           lapply(1:height, function(x) c(1, x)),
+           lapply(1:height, function(x) c(width, x)))
 
 `%on%` <- function(needle, haystack) {
   for (candidate in haystack) {
@@ -70,10 +68,10 @@ while(!window_should_close()) {
 
   begin_drawing()
   clear_background("black")
-  walk(walls, ~ draw_rectangle_v((. - 1) * scale + 1, c(scale, scale) - 2, "sienna"))
-  walk(snake, ~ draw_rectangle_v((. - 1) * scale + 1, c(scale, scale) - 2, "olivedrab"))
+  lapply(walls, function(x) { draw_rectangle_v((x - 1) * scale + 1, c(scale, scale) - 2, "sienna") } )
+  lapply(snake, function(x) { draw_rectangle_v((x - 1) * scale + 1, c(scale, scale) - 2, "olivedrab") })
   draw_circle_v(food * scale - scale / 2, scale / 2 - 4, "red")
-  draw_text(glue("SCORE: {length(snake) - 1}"), 4, 2, scale - 2, "white")
+  draw_text(paste0("SCORE: ", length(snake) - 1), 4, 2, scale - 2, "white")
   end_drawing()
 }
 
