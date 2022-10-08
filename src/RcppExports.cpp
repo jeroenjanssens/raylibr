@@ -411,6 +411,994 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// glyph_info_
+GlyphInfo glyph_info_(int value, int offset_x, int offset_y, int advance_x, Image image);
+RcppExport SEXP _raylibr_glyph_info_(SEXP valueSEXP, SEXP offset_xSEXP, SEXP offset_ySEXP, SEXP advance_xSEXP, SEXP imageSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type value(valueSEXP);
+    Rcpp::traits::input_parameter< int >::type offset_x(offset_xSEXP);
+    Rcpp::traits::input_parameter< int >::type offset_y(offset_ySEXP);
+    Rcpp::traits::input_parameter< int >::type advance_x(advance_xSEXP);
+    Rcpp::traits::input_parameter< Image >::type image(imageSEXP);
+    rcpp_result_gen = Rcpp::wrap(glyph_info_(value, offset_x, offset_y, advance_x, image));
+    return rcpp_result_gen;
+END_RCPP
+}
+// glyph_info_get_value_
+int glyph_info_get_value_(GlyphInfo obj);
+RcppExport SEXP _raylibr_glyph_info_get_value_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(glyph_info_get_value_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// glyph_info_set_value_
+GlyphInfo glyph_info_set_value_(GlyphInfo obj, int value);
+RcppExport SEXP _raylibr_glyph_info_set_value_(SEXP objSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< int >::type value(valueSEXP);
+    rcpp_result_gen = Rcpp::wrap(glyph_info_set_value_(obj, value));
+    return rcpp_result_gen;
+END_RCPP
+}
+// glyph_info_get_offset_x_
+int glyph_info_get_offset_x_(GlyphInfo obj);
+RcppExport SEXP _raylibr_glyph_info_get_offset_x_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(glyph_info_get_offset_x_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// glyph_info_set_offset_x_
+GlyphInfo glyph_info_set_offset_x_(GlyphInfo obj, int offset_x);
+RcppExport SEXP _raylibr_glyph_info_set_offset_x_(SEXP objSEXP, SEXP offset_xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< int >::type offset_x(offset_xSEXP);
+    rcpp_result_gen = Rcpp::wrap(glyph_info_set_offset_x_(obj, offset_x));
+    return rcpp_result_gen;
+END_RCPP
+}
+// glyph_info_get_offset_y_
+int glyph_info_get_offset_y_(GlyphInfo obj);
+RcppExport SEXP _raylibr_glyph_info_get_offset_y_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(glyph_info_get_offset_y_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// glyph_info_set_offset_y_
+GlyphInfo glyph_info_set_offset_y_(GlyphInfo obj, int offset_y);
+RcppExport SEXP _raylibr_glyph_info_set_offset_y_(SEXP objSEXP, SEXP offset_ySEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< int >::type offset_y(offset_ySEXP);
+    rcpp_result_gen = Rcpp::wrap(glyph_info_set_offset_y_(obj, offset_y));
+    return rcpp_result_gen;
+END_RCPP
+}
+// glyph_info_get_advance_x_
+int glyph_info_get_advance_x_(GlyphInfo obj);
+RcppExport SEXP _raylibr_glyph_info_get_advance_x_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(glyph_info_get_advance_x_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// glyph_info_set_advance_x_
+GlyphInfo glyph_info_set_advance_x_(GlyphInfo obj, int advance_x);
+RcppExport SEXP _raylibr_glyph_info_set_advance_x_(SEXP objSEXP, SEXP advance_xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< int >::type advance_x(advance_xSEXP);
+    rcpp_result_gen = Rcpp::wrap(glyph_info_set_advance_x_(obj, advance_x));
+    return rcpp_result_gen;
+END_RCPP
+}
+// glyph_info_get_image_
+Image glyph_info_get_image_(GlyphInfo obj);
+RcppExport SEXP _raylibr_glyph_info_get_image_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(glyph_info_get_image_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// glyph_info_set_image_
+GlyphInfo glyph_info_set_image_(GlyphInfo obj, Image image);
+RcppExport SEXP _raylibr_glyph_info_set_image_(SEXP objSEXP, SEXP imageSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Image >::type image(imageSEXP);
+    rcpp_result_gen = Rcpp::wrap(glyph_info_set_image_(obj, image));
+    return rcpp_result_gen;
+END_RCPP
+}
+// material_map_
+MaterialMap material_map_(Texture texture, Color color, float value);
+RcppExport SEXP _raylibr_material_map_(SEXP textureSEXP, SEXP colorSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Texture >::type texture(textureSEXP);
+    Rcpp::traits::input_parameter< Color >::type color(colorSEXP);
+    Rcpp::traits::input_parameter< float >::type value(valueSEXP);
+    rcpp_result_gen = Rcpp::wrap(material_map_(texture, color, value));
+    return rcpp_result_gen;
+END_RCPP
+}
+// material_map_get_texture_
+Texture material_map_get_texture_(MaterialMap obj);
+RcppExport SEXP _raylibr_material_map_get_texture_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< MaterialMap >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(material_map_get_texture_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// material_map_set_texture_
+MaterialMap material_map_set_texture_(MaterialMap obj, Texture texture);
+RcppExport SEXP _raylibr_material_map_set_texture_(SEXP objSEXP, SEXP textureSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< MaterialMap >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Texture >::type texture(textureSEXP);
+    rcpp_result_gen = Rcpp::wrap(material_map_set_texture_(obj, texture));
+    return rcpp_result_gen;
+END_RCPP
+}
+// material_map_get_color_
+Color material_map_get_color_(MaterialMap obj);
+RcppExport SEXP _raylibr_material_map_get_color_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< MaterialMap >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(material_map_get_color_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// material_map_set_color_
+MaterialMap material_map_set_color_(MaterialMap obj, Color color);
+RcppExport SEXP _raylibr_material_map_set_color_(SEXP objSEXP, SEXP colorSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< MaterialMap >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Color >::type color(colorSEXP);
+    rcpp_result_gen = Rcpp::wrap(material_map_set_color_(obj, color));
+    return rcpp_result_gen;
+END_RCPP
+}
+// material_map_get_value_
+float material_map_get_value_(MaterialMap obj);
+RcppExport SEXP _raylibr_material_map_get_value_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< MaterialMap >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(material_map_get_value_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// material_map_set_value_
+MaterialMap material_map_set_value_(MaterialMap obj, float value);
+RcppExport SEXP _raylibr_material_map_set_value_(SEXP objSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< MaterialMap >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< float >::type value(valueSEXP);
+    rcpp_result_gen = Rcpp::wrap(material_map_set_value_(obj, value));
+    return rcpp_result_gen;
+END_RCPP
+}
+// npatch_info_
+NPatchInfo npatch_info_(Rectangle source, int left, int top, int right, int bottom, int layout);
+RcppExport SEXP _raylibr_npatch_info_(SEXP sourceSEXP, SEXP leftSEXP, SEXP topSEXP, SEXP rightSEXP, SEXP bottomSEXP, SEXP layoutSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rectangle >::type source(sourceSEXP);
+    Rcpp::traits::input_parameter< int >::type left(leftSEXP);
+    Rcpp::traits::input_parameter< int >::type top(topSEXP);
+    Rcpp::traits::input_parameter< int >::type right(rightSEXP);
+    Rcpp::traits::input_parameter< int >::type bottom(bottomSEXP);
+    Rcpp::traits::input_parameter< int >::type layout(layoutSEXP);
+    rcpp_result_gen = Rcpp::wrap(npatch_info_(source, left, top, right, bottom, layout));
+    return rcpp_result_gen;
+END_RCPP
+}
+// npatch_info_get_source_
+Rectangle npatch_info_get_source_(NPatchInfo obj);
+RcppExport SEXP _raylibr_npatch_info_get_source_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(npatch_info_get_source_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// npatch_info_set_source_
+NPatchInfo npatch_info_set_source_(NPatchInfo obj, Rectangle source);
+RcppExport SEXP _raylibr_npatch_info_set_source_(SEXP objSEXP, SEXP sourceSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Rectangle >::type source(sourceSEXP);
+    rcpp_result_gen = Rcpp::wrap(npatch_info_set_source_(obj, source));
+    return rcpp_result_gen;
+END_RCPP
+}
+// npatch_info_get_left_
+int npatch_info_get_left_(NPatchInfo obj);
+RcppExport SEXP _raylibr_npatch_info_get_left_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(npatch_info_get_left_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// npatch_info_set_left_
+NPatchInfo npatch_info_set_left_(NPatchInfo obj, int left);
+RcppExport SEXP _raylibr_npatch_info_set_left_(SEXP objSEXP, SEXP leftSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< int >::type left(leftSEXP);
+    rcpp_result_gen = Rcpp::wrap(npatch_info_set_left_(obj, left));
+    return rcpp_result_gen;
+END_RCPP
+}
+// npatch_info_get_top_
+int npatch_info_get_top_(NPatchInfo obj);
+RcppExport SEXP _raylibr_npatch_info_get_top_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(npatch_info_get_top_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// npatch_info_set_top_
+NPatchInfo npatch_info_set_top_(NPatchInfo obj, int top);
+RcppExport SEXP _raylibr_npatch_info_set_top_(SEXP objSEXP, SEXP topSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< int >::type top(topSEXP);
+    rcpp_result_gen = Rcpp::wrap(npatch_info_set_top_(obj, top));
+    return rcpp_result_gen;
+END_RCPP
+}
+// npatch_info_get_right_
+int npatch_info_get_right_(NPatchInfo obj);
+RcppExport SEXP _raylibr_npatch_info_get_right_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(npatch_info_get_right_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// npatch_info_set_right_
+NPatchInfo npatch_info_set_right_(NPatchInfo obj, int right);
+RcppExport SEXP _raylibr_npatch_info_set_right_(SEXP objSEXP, SEXP rightSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< int >::type right(rightSEXP);
+    rcpp_result_gen = Rcpp::wrap(npatch_info_set_right_(obj, right));
+    return rcpp_result_gen;
+END_RCPP
+}
+// npatch_info_get_bottom_
+int npatch_info_get_bottom_(NPatchInfo obj);
+RcppExport SEXP _raylibr_npatch_info_get_bottom_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(npatch_info_get_bottom_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// npatch_info_set_bottom_
+NPatchInfo npatch_info_set_bottom_(NPatchInfo obj, int bottom);
+RcppExport SEXP _raylibr_npatch_info_set_bottom_(SEXP objSEXP, SEXP bottomSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< int >::type bottom(bottomSEXP);
+    rcpp_result_gen = Rcpp::wrap(npatch_info_set_bottom_(obj, bottom));
+    return rcpp_result_gen;
+END_RCPP
+}
+// npatch_info_get_layout_
+int npatch_info_get_layout_(NPatchInfo obj);
+RcppExport SEXP _raylibr_npatch_info_get_layout_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(npatch_info_get_layout_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// npatch_info_set_layout_
+NPatchInfo npatch_info_set_layout_(NPatchInfo obj, int layout);
+RcppExport SEXP _raylibr_npatch_info_set_layout_(SEXP objSEXP, SEXP layoutSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< int >::type layout(layoutSEXP);
+    rcpp_result_gen = Rcpp::wrap(npatch_info_set_layout_(obj, layout));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_
+Ray ray_(Vector3 position, Vector3 direction);
+RcppExport SEXP _raylibr_ray_(SEXP positionSEXP, SEXP directionSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Vector3 >::type position(positionSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type direction(directionSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_(position, direction));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_get_position_
+Vector3 ray_get_position_(Ray obj);
+RcppExport SEXP _raylibr_ray_get_position_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Ray >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_get_position_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_set_position_
+Ray ray_set_position_(Ray obj, Vector3 position);
+RcppExport SEXP _raylibr_ray_set_position_(SEXP objSEXP, SEXP positionSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Ray >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type position(positionSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_set_position_(obj, position));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_get_direction_
+Vector3 ray_get_direction_(Ray obj);
+RcppExport SEXP _raylibr_ray_get_direction_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Ray >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_get_direction_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_set_direction_
+Ray ray_set_direction_(Ray obj, Vector3 direction);
+RcppExport SEXP _raylibr_ray_set_direction_(SEXP objSEXP, SEXP directionSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Ray >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type direction(directionSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_set_direction_(obj, direction));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_collision_
+RayCollision ray_collision_(bool hit, float distance, Vector3 point, Vector3 normal);
+RcppExport SEXP _raylibr_ray_collision_(SEXP hitSEXP, SEXP distanceSEXP, SEXP pointSEXP, SEXP normalSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< bool >::type hit(hitSEXP);
+    Rcpp::traits::input_parameter< float >::type distance(distanceSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type point(pointSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type normal(normalSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_(hit, distance, point, normal));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_collision_get_hit_
+bool ray_collision_get_hit_(RayCollision obj);
+RcppExport SEXP _raylibr_ray_collision_get_hit_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_get_hit_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_collision_set_hit_
+RayCollision ray_collision_set_hit_(RayCollision obj, bool hit);
+RcppExport SEXP _raylibr_ray_collision_set_hit_(SEXP objSEXP, SEXP hitSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< bool >::type hit(hitSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_set_hit_(obj, hit));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_collision_get_distance_
+float ray_collision_get_distance_(RayCollision obj);
+RcppExport SEXP _raylibr_ray_collision_get_distance_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_get_distance_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_collision_set_distance_
+RayCollision ray_collision_set_distance_(RayCollision obj, float distance);
+RcppExport SEXP _raylibr_ray_collision_set_distance_(SEXP objSEXP, SEXP distanceSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< float >::type distance(distanceSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_set_distance_(obj, distance));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_collision_get_point_
+Vector3 ray_collision_get_point_(RayCollision obj);
+RcppExport SEXP _raylibr_ray_collision_get_point_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_get_point_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_collision_set_point_
+RayCollision ray_collision_set_point_(RayCollision obj, Vector3 point);
+RcppExport SEXP _raylibr_ray_collision_set_point_(SEXP objSEXP, SEXP pointSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type point(pointSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_set_point_(obj, point));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_collision_get_normal_
+Vector3 ray_collision_get_normal_(RayCollision obj);
+RcppExport SEXP _raylibr_ray_collision_get_normal_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_get_normal_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ray_collision_set_normal_
+RayCollision ray_collision_set_normal_(RayCollision obj, Vector3 normal);
+RcppExport SEXP _raylibr_ray_collision_set_normal_(SEXP objSEXP, SEXP normalSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type normal(normalSEXP);
+    rcpp_result_gen = Rcpp::wrap(ray_collision_set_normal_(obj, normal));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rectangle_
+Rectangle rectangle_(float x, float y, float width, float height);
+RcppExport SEXP _raylibr_rectangle_(SEXP xSEXP, SEXP ySEXP, SEXP widthSEXP, SEXP heightSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< float >::type x(xSEXP);
+    Rcpp::traits::input_parameter< float >::type y(ySEXP);
+    Rcpp::traits::input_parameter< float >::type width(widthSEXP);
+    Rcpp::traits::input_parameter< float >::type height(heightSEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle_(x, y, width, height));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rectangle_get_x_
+float rectangle_get_x_(Rectangle obj);
+RcppExport SEXP _raylibr_rectangle_get_x_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rectangle >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle_get_x_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rectangle_set_x_
+Rectangle rectangle_set_x_(Rectangle obj, float x);
+RcppExport SEXP _raylibr_rectangle_set_x_(SEXP objSEXP, SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rectangle >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< float >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle_set_x_(obj, x));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rectangle_get_y_
+float rectangle_get_y_(Rectangle obj);
+RcppExport SEXP _raylibr_rectangle_get_y_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rectangle >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle_get_y_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rectangle_set_y_
+Rectangle rectangle_set_y_(Rectangle obj, float y);
+RcppExport SEXP _raylibr_rectangle_set_y_(SEXP objSEXP, SEXP ySEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rectangle >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< float >::type y(ySEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle_set_y_(obj, y));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rectangle_get_width_
+float rectangle_get_width_(Rectangle obj);
+RcppExport SEXP _raylibr_rectangle_get_width_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rectangle >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle_get_width_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rectangle_set_width_
+Rectangle rectangle_set_width_(Rectangle obj, float width);
+RcppExport SEXP _raylibr_rectangle_set_width_(SEXP objSEXP, SEXP widthSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rectangle >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< float >::type width(widthSEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle_set_width_(obj, width));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rectangle_get_height_
+float rectangle_get_height_(Rectangle obj);
+RcppExport SEXP _raylibr_rectangle_get_height_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rectangle >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle_get_height_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rectangle_set_height_
+Rectangle rectangle_set_height_(Rectangle obj, float height);
+RcppExport SEXP _raylibr_rectangle_set_height_(SEXP objSEXP, SEXP heightSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rectangle >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< float >::type height(heightSEXP);
+    rcpp_result_gen = Rcpp::wrap(rectangle_set_height_(obj, height));
+    return rcpp_result_gen;
+END_RCPP
+}
+// render_texture_
+RenderTexture render_texture_(unsigned int id, Texture texture, Texture depth);
+RcppExport SEXP _raylibr_render_texture_(SEXP idSEXP, SEXP textureSEXP, SEXP depthSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< unsigned int >::type id(idSEXP);
+    Rcpp::traits::input_parameter< Texture >::type texture(textureSEXP);
+    Rcpp::traits::input_parameter< Texture >::type depth(depthSEXP);
+    rcpp_result_gen = Rcpp::wrap(render_texture_(id, texture, depth));
+    return rcpp_result_gen;
+END_RCPP
+}
+// render_texture_get_id_
+unsigned int render_texture_get_id_(RenderTexture obj);
+RcppExport SEXP _raylibr_render_texture_get_id_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RenderTexture >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(render_texture_get_id_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// render_texture_set_id_
+RenderTexture render_texture_set_id_(RenderTexture obj, unsigned int id);
+RcppExport SEXP _raylibr_render_texture_set_id_(SEXP objSEXP, SEXP idSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RenderTexture >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< unsigned int >::type id(idSEXP);
+    rcpp_result_gen = Rcpp::wrap(render_texture_set_id_(obj, id));
+    return rcpp_result_gen;
+END_RCPP
+}
+// render_texture_get_texture_
+Texture render_texture_get_texture_(RenderTexture obj);
+RcppExport SEXP _raylibr_render_texture_get_texture_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RenderTexture >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(render_texture_get_texture_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// render_texture_set_texture_
+RenderTexture render_texture_set_texture_(RenderTexture obj, Texture texture);
+RcppExport SEXP _raylibr_render_texture_set_texture_(SEXP objSEXP, SEXP textureSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RenderTexture >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Texture >::type texture(textureSEXP);
+    rcpp_result_gen = Rcpp::wrap(render_texture_set_texture_(obj, texture));
+    return rcpp_result_gen;
+END_RCPP
+}
+// render_texture_get_depth_
+Texture render_texture_get_depth_(RenderTexture obj);
+RcppExport SEXP _raylibr_render_texture_get_depth_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RenderTexture >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(render_texture_get_depth_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// render_texture_set_depth_
+RenderTexture render_texture_set_depth_(RenderTexture obj, Texture depth);
+RcppExport SEXP _raylibr_render_texture_set_depth_(SEXP objSEXP, SEXP depthSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RenderTexture >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Texture >::type depth(depthSEXP);
+    rcpp_result_gen = Rcpp::wrap(render_texture_set_depth_(obj, depth));
+    return rcpp_result_gen;
+END_RCPP
+}
+// sound_
+Sound sound_(AudioStream stream, unsigned int frame_count);
+RcppExport SEXP _raylibr_sound_(SEXP streamSEXP, SEXP frame_countSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< AudioStream >::type stream(streamSEXP);
+    Rcpp::traits::input_parameter< unsigned int >::type frame_count(frame_countSEXP);
+    rcpp_result_gen = Rcpp::wrap(sound_(stream, frame_count));
+    return rcpp_result_gen;
+END_RCPP
+}
+// sound_get_stream_
+AudioStream sound_get_stream_(Sound obj);
+RcppExport SEXP _raylibr_sound_get_stream_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Sound >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(sound_get_stream_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// sound_set_stream_
+Sound sound_set_stream_(Sound obj, AudioStream stream);
+RcppExport SEXP _raylibr_sound_set_stream_(SEXP objSEXP, SEXP streamSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Sound >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< AudioStream >::type stream(streamSEXP);
+    rcpp_result_gen = Rcpp::wrap(sound_set_stream_(obj, stream));
+    return rcpp_result_gen;
+END_RCPP
+}
+// sound_get_frame_count_
+unsigned int sound_get_frame_count_(Sound obj);
+RcppExport SEXP _raylibr_sound_get_frame_count_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Sound >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(sound_get_frame_count_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// sound_set_frame_count_
+Sound sound_set_frame_count_(Sound obj, unsigned int frame_count);
+RcppExport SEXP _raylibr_sound_set_frame_count_(SEXP objSEXP, SEXP frame_countSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Sound >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< unsigned int >::type frame_count(frame_countSEXP);
+    rcpp_result_gen = Rcpp::wrap(sound_set_frame_count_(obj, frame_count));
+    return rcpp_result_gen;
+END_RCPP
+}
+// texture_
+Texture texture_(unsigned int id, int width, int height, int mipmaps, int format);
+RcppExport SEXP _raylibr_texture_(SEXP idSEXP, SEXP widthSEXP, SEXP heightSEXP, SEXP mipmapsSEXP, SEXP formatSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< unsigned int >::type id(idSEXP);
+    Rcpp::traits::input_parameter< int >::type width(widthSEXP);
+    Rcpp::traits::input_parameter< int >::type height(heightSEXP);
+    Rcpp::traits::input_parameter< int >::type mipmaps(mipmapsSEXP);
+    Rcpp::traits::input_parameter< int >::type format(formatSEXP);
+    rcpp_result_gen = Rcpp::wrap(texture_(id, width, height, mipmaps, format));
+    return rcpp_result_gen;
+END_RCPP
+}
+// texture_get_id_
+unsigned int texture_get_id_(Texture obj);
+RcppExport SEXP _raylibr_texture_get_id_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(texture_get_id_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// texture_set_id_
+Texture texture_set_id_(Texture obj, unsigned int id);
+RcppExport SEXP _raylibr_texture_set_id_(SEXP objSEXP, SEXP idSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< unsigned int >::type id(idSEXP);
+    rcpp_result_gen = Rcpp::wrap(texture_set_id_(obj, id));
+    return rcpp_result_gen;
+END_RCPP
+}
+// texture_get_width_
+int texture_get_width_(Texture obj);
+RcppExport SEXP _raylibr_texture_get_width_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(texture_get_width_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// texture_set_width_
+Texture texture_set_width_(Texture obj, int width);
+RcppExport SEXP _raylibr_texture_set_width_(SEXP objSEXP, SEXP widthSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< int >::type width(widthSEXP);
+    rcpp_result_gen = Rcpp::wrap(texture_set_width_(obj, width));
+    return rcpp_result_gen;
+END_RCPP
+}
+// texture_get_height_
+int texture_get_height_(Texture obj);
+RcppExport SEXP _raylibr_texture_get_height_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(texture_get_height_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// texture_set_height_
+Texture texture_set_height_(Texture obj, int height);
+RcppExport SEXP _raylibr_texture_set_height_(SEXP objSEXP, SEXP heightSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< int >::type height(heightSEXP);
+    rcpp_result_gen = Rcpp::wrap(texture_set_height_(obj, height));
+    return rcpp_result_gen;
+END_RCPP
+}
+// texture_get_mipmaps_
+int texture_get_mipmaps_(Texture obj);
+RcppExport SEXP _raylibr_texture_get_mipmaps_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(texture_get_mipmaps_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// texture_set_mipmaps_
+Texture texture_set_mipmaps_(Texture obj, int mipmaps);
+RcppExport SEXP _raylibr_texture_set_mipmaps_(SEXP objSEXP, SEXP mipmapsSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< int >::type mipmaps(mipmapsSEXP);
+    rcpp_result_gen = Rcpp::wrap(texture_set_mipmaps_(obj, mipmaps));
+    return rcpp_result_gen;
+END_RCPP
+}
+// texture_get_format_
+int texture_get_format_(Texture obj);
+RcppExport SEXP _raylibr_texture_get_format_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(texture_get_format_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// texture_set_format_
+Texture texture_set_format_(Texture obj, int format);
+RcppExport SEXP _raylibr_texture_set_format_(SEXP objSEXP, SEXP formatSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< int >::type format(formatSEXP);
+    rcpp_result_gen = Rcpp::wrap(texture_set_format_(obj, format));
+    return rcpp_result_gen;
+END_RCPP
+}
+// transform_
+Transform transform_(Vector3 translation, Vector4 rotation, Vector3 scale);
+RcppExport SEXP _raylibr_transform_(SEXP translationSEXP, SEXP rotationSEXP, SEXP scaleSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Vector3 >::type translation(translationSEXP);
+    Rcpp::traits::input_parameter< Vector4 >::type rotation(rotationSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type scale(scaleSEXP);
+    rcpp_result_gen = Rcpp::wrap(transform_(translation, rotation, scale));
+    return rcpp_result_gen;
+END_RCPP
+}
+// transform_get_translation_
+Vector3 transform_get_translation_(Transform obj);
+RcppExport SEXP _raylibr_transform_get_translation_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(transform_get_translation_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// transform_set_translation_
+Transform transform_set_translation_(Transform obj, Vector3 translation);
+RcppExport SEXP _raylibr_transform_set_translation_(SEXP objSEXP, SEXP translationSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type translation(translationSEXP);
+    rcpp_result_gen = Rcpp::wrap(transform_set_translation_(obj, translation));
+    return rcpp_result_gen;
+END_RCPP
+}
+// transform_get_rotation_
+Vector4 transform_get_rotation_(Transform obj);
+RcppExport SEXP _raylibr_transform_get_rotation_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(transform_get_rotation_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// transform_set_rotation_
+Transform transform_set_rotation_(Transform obj, Vector4 rotation);
+RcppExport SEXP _raylibr_transform_set_rotation_(SEXP objSEXP, SEXP rotationSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Vector4 >::type rotation(rotationSEXP);
+    rcpp_result_gen = Rcpp::wrap(transform_set_rotation_(obj, rotation));
+    return rcpp_result_gen;
+END_RCPP
+}
+// transform_get_scale_
+Vector3 transform_get_scale_(Transform obj);
+RcppExport SEXP _raylibr_transform_get_scale_(SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
+    rcpp_result_gen = Rcpp::wrap(transform_get_scale_(obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// transform_set_scale_
+Transform transform_set_scale_(Transform obj, Vector3 scale);
+RcppExport SEXP _raylibr_transform_set_scale_(SEXP objSEXP, SEXP scaleSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
+    Rcpp::traits::input_parameter< Vector3 >::type scale(scaleSEXP);
+    rcpp_result_gen = Rcpp::wrap(transform_set_scale_(obj, scale));
+    return rcpp_result_gen;
+END_RCPP
+}
 // as_color
 Color as_color(Color x);
 RcppExport SEXP _raylibr_as_color(SEXP xSEXP) {
@@ -4934,994 +5922,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// glyph_info_
-GlyphInfo glyph_info_(int value, int offset_x, int offset_y, int advance_x, Image image);
-RcppExport SEXP _raylibr_glyph_info_(SEXP valueSEXP, SEXP offset_xSEXP, SEXP offset_ySEXP, SEXP advance_xSEXP, SEXP imageSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< int >::type value(valueSEXP);
-    Rcpp::traits::input_parameter< int >::type offset_x(offset_xSEXP);
-    Rcpp::traits::input_parameter< int >::type offset_y(offset_ySEXP);
-    Rcpp::traits::input_parameter< int >::type advance_x(advance_xSEXP);
-    Rcpp::traits::input_parameter< Image >::type image(imageSEXP);
-    rcpp_result_gen = Rcpp::wrap(glyph_info_(value, offset_x, offset_y, advance_x, image));
-    return rcpp_result_gen;
-END_RCPP
-}
-// glyph_info_get_value_
-int glyph_info_get_value_(GlyphInfo obj);
-RcppExport SEXP _raylibr_glyph_info_get_value_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(glyph_info_get_value_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// glyph_info_set_value_
-GlyphInfo glyph_info_set_value_(GlyphInfo obj, int value);
-RcppExport SEXP _raylibr_glyph_info_set_value_(SEXP objSEXP, SEXP valueSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< int >::type value(valueSEXP);
-    rcpp_result_gen = Rcpp::wrap(glyph_info_set_value_(obj, value));
-    return rcpp_result_gen;
-END_RCPP
-}
-// glyph_info_get_offset_x_
-int glyph_info_get_offset_x_(GlyphInfo obj);
-RcppExport SEXP _raylibr_glyph_info_get_offset_x_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(glyph_info_get_offset_x_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// glyph_info_set_offset_x_
-GlyphInfo glyph_info_set_offset_x_(GlyphInfo obj, int offset_x);
-RcppExport SEXP _raylibr_glyph_info_set_offset_x_(SEXP objSEXP, SEXP offset_xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< int >::type offset_x(offset_xSEXP);
-    rcpp_result_gen = Rcpp::wrap(glyph_info_set_offset_x_(obj, offset_x));
-    return rcpp_result_gen;
-END_RCPP
-}
-// glyph_info_get_offset_y_
-int glyph_info_get_offset_y_(GlyphInfo obj);
-RcppExport SEXP _raylibr_glyph_info_get_offset_y_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(glyph_info_get_offset_y_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// glyph_info_set_offset_y_
-GlyphInfo glyph_info_set_offset_y_(GlyphInfo obj, int offset_y);
-RcppExport SEXP _raylibr_glyph_info_set_offset_y_(SEXP objSEXP, SEXP offset_ySEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< int >::type offset_y(offset_ySEXP);
-    rcpp_result_gen = Rcpp::wrap(glyph_info_set_offset_y_(obj, offset_y));
-    return rcpp_result_gen;
-END_RCPP
-}
-// glyph_info_get_advance_x_
-int glyph_info_get_advance_x_(GlyphInfo obj);
-RcppExport SEXP _raylibr_glyph_info_get_advance_x_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(glyph_info_get_advance_x_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// glyph_info_set_advance_x_
-GlyphInfo glyph_info_set_advance_x_(GlyphInfo obj, int advance_x);
-RcppExport SEXP _raylibr_glyph_info_set_advance_x_(SEXP objSEXP, SEXP advance_xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< int >::type advance_x(advance_xSEXP);
-    rcpp_result_gen = Rcpp::wrap(glyph_info_set_advance_x_(obj, advance_x));
-    return rcpp_result_gen;
-END_RCPP
-}
-// glyph_info_get_image_
-Image glyph_info_get_image_(GlyphInfo obj);
-RcppExport SEXP _raylibr_glyph_info_get_image_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(glyph_info_get_image_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// glyph_info_set_image_
-GlyphInfo glyph_info_set_image_(GlyphInfo obj, Image image);
-RcppExport SEXP _raylibr_glyph_info_set_image_(SEXP objSEXP, SEXP imageSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< GlyphInfo >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< Image >::type image(imageSEXP);
-    rcpp_result_gen = Rcpp::wrap(glyph_info_set_image_(obj, image));
-    return rcpp_result_gen;
-END_RCPP
-}
-// material_map_
-MaterialMap material_map_(Texture texture, Color color, float value);
-RcppExport SEXP _raylibr_material_map_(SEXP textureSEXP, SEXP colorSEXP, SEXP valueSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Texture >::type texture(textureSEXP);
-    Rcpp::traits::input_parameter< Color >::type color(colorSEXP);
-    Rcpp::traits::input_parameter< float >::type value(valueSEXP);
-    rcpp_result_gen = Rcpp::wrap(material_map_(texture, color, value));
-    return rcpp_result_gen;
-END_RCPP
-}
-// material_map_get_texture_
-Texture material_map_get_texture_(MaterialMap obj);
-RcppExport SEXP _raylibr_material_map_get_texture_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< MaterialMap >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(material_map_get_texture_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// material_map_set_texture_
-MaterialMap material_map_set_texture_(MaterialMap obj, Texture texture);
-RcppExport SEXP _raylibr_material_map_set_texture_(SEXP objSEXP, SEXP textureSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< MaterialMap >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< Texture >::type texture(textureSEXP);
-    rcpp_result_gen = Rcpp::wrap(material_map_set_texture_(obj, texture));
-    return rcpp_result_gen;
-END_RCPP
-}
-// material_map_get_color_
-Color material_map_get_color_(MaterialMap obj);
-RcppExport SEXP _raylibr_material_map_get_color_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< MaterialMap >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(material_map_get_color_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// material_map_set_color_
-MaterialMap material_map_set_color_(MaterialMap obj, Color color);
-RcppExport SEXP _raylibr_material_map_set_color_(SEXP objSEXP, SEXP colorSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< MaterialMap >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< Color >::type color(colorSEXP);
-    rcpp_result_gen = Rcpp::wrap(material_map_set_color_(obj, color));
-    return rcpp_result_gen;
-END_RCPP
-}
-// material_map_get_value_
-float material_map_get_value_(MaterialMap obj);
-RcppExport SEXP _raylibr_material_map_get_value_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< MaterialMap >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(material_map_get_value_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// material_map_set_value_
-MaterialMap material_map_set_value_(MaterialMap obj, float value);
-RcppExport SEXP _raylibr_material_map_set_value_(SEXP objSEXP, SEXP valueSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< MaterialMap >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< float >::type value(valueSEXP);
-    rcpp_result_gen = Rcpp::wrap(material_map_set_value_(obj, value));
-    return rcpp_result_gen;
-END_RCPP
-}
-// npatch_info_
-NPatchInfo npatch_info_(Rectangle source, int left, int top, int right, int bottom, int layout);
-RcppExport SEXP _raylibr_npatch_info_(SEXP sourceSEXP, SEXP leftSEXP, SEXP topSEXP, SEXP rightSEXP, SEXP bottomSEXP, SEXP layoutSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Rectangle >::type source(sourceSEXP);
-    Rcpp::traits::input_parameter< int >::type left(leftSEXP);
-    Rcpp::traits::input_parameter< int >::type top(topSEXP);
-    Rcpp::traits::input_parameter< int >::type right(rightSEXP);
-    Rcpp::traits::input_parameter< int >::type bottom(bottomSEXP);
-    Rcpp::traits::input_parameter< int >::type layout(layoutSEXP);
-    rcpp_result_gen = Rcpp::wrap(npatch_info_(source, left, top, right, bottom, layout));
-    return rcpp_result_gen;
-END_RCPP
-}
-// npatch_info_get_source_
-Rectangle npatch_info_get_source_(NPatchInfo obj);
-RcppExport SEXP _raylibr_npatch_info_get_source_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(npatch_info_get_source_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// npatch_info_set_source_
-NPatchInfo npatch_info_set_source_(NPatchInfo obj, Rectangle source);
-RcppExport SEXP _raylibr_npatch_info_set_source_(SEXP objSEXP, SEXP sourceSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< Rectangle >::type source(sourceSEXP);
-    rcpp_result_gen = Rcpp::wrap(npatch_info_set_source_(obj, source));
-    return rcpp_result_gen;
-END_RCPP
-}
-// npatch_info_get_left_
-int npatch_info_get_left_(NPatchInfo obj);
-RcppExport SEXP _raylibr_npatch_info_get_left_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(npatch_info_get_left_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// npatch_info_set_left_
-NPatchInfo npatch_info_set_left_(NPatchInfo obj, int left);
-RcppExport SEXP _raylibr_npatch_info_set_left_(SEXP objSEXP, SEXP leftSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< int >::type left(leftSEXP);
-    rcpp_result_gen = Rcpp::wrap(npatch_info_set_left_(obj, left));
-    return rcpp_result_gen;
-END_RCPP
-}
-// npatch_info_get_top_
-int npatch_info_get_top_(NPatchInfo obj);
-RcppExport SEXP _raylibr_npatch_info_get_top_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(npatch_info_get_top_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// npatch_info_set_top_
-NPatchInfo npatch_info_set_top_(NPatchInfo obj, int top);
-RcppExport SEXP _raylibr_npatch_info_set_top_(SEXP objSEXP, SEXP topSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< int >::type top(topSEXP);
-    rcpp_result_gen = Rcpp::wrap(npatch_info_set_top_(obj, top));
-    return rcpp_result_gen;
-END_RCPP
-}
-// npatch_info_get_right_
-int npatch_info_get_right_(NPatchInfo obj);
-RcppExport SEXP _raylibr_npatch_info_get_right_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(npatch_info_get_right_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// npatch_info_set_right_
-NPatchInfo npatch_info_set_right_(NPatchInfo obj, int right);
-RcppExport SEXP _raylibr_npatch_info_set_right_(SEXP objSEXP, SEXP rightSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< int >::type right(rightSEXP);
-    rcpp_result_gen = Rcpp::wrap(npatch_info_set_right_(obj, right));
-    return rcpp_result_gen;
-END_RCPP
-}
-// npatch_info_get_bottom_
-int npatch_info_get_bottom_(NPatchInfo obj);
-RcppExport SEXP _raylibr_npatch_info_get_bottom_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(npatch_info_get_bottom_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// npatch_info_set_bottom_
-NPatchInfo npatch_info_set_bottom_(NPatchInfo obj, int bottom);
-RcppExport SEXP _raylibr_npatch_info_set_bottom_(SEXP objSEXP, SEXP bottomSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< int >::type bottom(bottomSEXP);
-    rcpp_result_gen = Rcpp::wrap(npatch_info_set_bottom_(obj, bottom));
-    return rcpp_result_gen;
-END_RCPP
-}
-// npatch_info_get_layout_
-int npatch_info_get_layout_(NPatchInfo obj);
-RcppExport SEXP _raylibr_npatch_info_get_layout_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(npatch_info_get_layout_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// npatch_info_set_layout_
-NPatchInfo npatch_info_set_layout_(NPatchInfo obj, int layout);
-RcppExport SEXP _raylibr_npatch_info_set_layout_(SEXP objSEXP, SEXP layoutSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NPatchInfo >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< int >::type layout(layoutSEXP);
-    rcpp_result_gen = Rcpp::wrap(npatch_info_set_layout_(obj, layout));
-    return rcpp_result_gen;
-END_RCPP
-}
-// ray_
-Ray ray_(Vector3 position, Vector3 direction);
-RcppExport SEXP _raylibr_ray_(SEXP positionSEXP, SEXP directionSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Vector3 >::type position(positionSEXP);
-    Rcpp::traits::input_parameter< Vector3 >::type direction(directionSEXP);
-    rcpp_result_gen = Rcpp::wrap(ray_(position, direction));
-    return rcpp_result_gen;
-END_RCPP
-}
-// ray_get_position_
-Vector3 ray_get_position_(Ray obj);
-RcppExport SEXP _raylibr_ray_get_position_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Ray >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(ray_get_position_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// ray_set_position_
-Ray ray_set_position_(Ray obj, Vector3 position);
-RcppExport SEXP _raylibr_ray_set_position_(SEXP objSEXP, SEXP positionSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Ray >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< Vector3 >::type position(positionSEXP);
-    rcpp_result_gen = Rcpp::wrap(ray_set_position_(obj, position));
-    return rcpp_result_gen;
-END_RCPP
-}
-// ray_get_direction_
-Vector3 ray_get_direction_(Ray obj);
-RcppExport SEXP _raylibr_ray_get_direction_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Ray >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(ray_get_direction_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// ray_set_direction_
-Ray ray_set_direction_(Ray obj, Vector3 direction);
-RcppExport SEXP _raylibr_ray_set_direction_(SEXP objSEXP, SEXP directionSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Ray >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< Vector3 >::type direction(directionSEXP);
-    rcpp_result_gen = Rcpp::wrap(ray_set_direction_(obj, direction));
-    return rcpp_result_gen;
-END_RCPP
-}
-// ray_collision_
-RayCollision ray_collision_(bool hit, float distance, Vector3 point, Vector3 normal);
-RcppExport SEXP _raylibr_ray_collision_(SEXP hitSEXP, SEXP distanceSEXP, SEXP pointSEXP, SEXP normalSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< bool >::type hit(hitSEXP);
-    Rcpp::traits::input_parameter< float >::type distance(distanceSEXP);
-    Rcpp::traits::input_parameter< Vector3 >::type point(pointSEXP);
-    Rcpp::traits::input_parameter< Vector3 >::type normal(normalSEXP);
-    rcpp_result_gen = Rcpp::wrap(ray_collision_(hit, distance, point, normal));
-    return rcpp_result_gen;
-END_RCPP
-}
-// ray_collision_get_hit_
-bool ray_collision_get_hit_(RayCollision obj);
-RcppExport SEXP _raylibr_ray_collision_get_hit_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(ray_collision_get_hit_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// ray_collision_set_hit_
-RayCollision ray_collision_set_hit_(RayCollision obj, bool hit);
-RcppExport SEXP _raylibr_ray_collision_set_hit_(SEXP objSEXP, SEXP hitSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< bool >::type hit(hitSEXP);
-    rcpp_result_gen = Rcpp::wrap(ray_collision_set_hit_(obj, hit));
-    return rcpp_result_gen;
-END_RCPP
-}
-// ray_collision_get_distance_
-float ray_collision_get_distance_(RayCollision obj);
-RcppExport SEXP _raylibr_ray_collision_get_distance_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(ray_collision_get_distance_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// ray_collision_set_distance_
-RayCollision ray_collision_set_distance_(RayCollision obj, float distance);
-RcppExport SEXP _raylibr_ray_collision_set_distance_(SEXP objSEXP, SEXP distanceSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< float >::type distance(distanceSEXP);
-    rcpp_result_gen = Rcpp::wrap(ray_collision_set_distance_(obj, distance));
-    return rcpp_result_gen;
-END_RCPP
-}
-// ray_collision_get_point_
-Vector3 ray_collision_get_point_(RayCollision obj);
-RcppExport SEXP _raylibr_ray_collision_get_point_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(ray_collision_get_point_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// ray_collision_set_point_
-RayCollision ray_collision_set_point_(RayCollision obj, Vector3 point);
-RcppExport SEXP _raylibr_ray_collision_set_point_(SEXP objSEXP, SEXP pointSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< Vector3 >::type point(pointSEXP);
-    rcpp_result_gen = Rcpp::wrap(ray_collision_set_point_(obj, point));
-    return rcpp_result_gen;
-END_RCPP
-}
-// ray_collision_get_normal_
-Vector3 ray_collision_get_normal_(RayCollision obj);
-RcppExport SEXP _raylibr_ray_collision_get_normal_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(ray_collision_get_normal_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// ray_collision_set_normal_
-RayCollision ray_collision_set_normal_(RayCollision obj, Vector3 normal);
-RcppExport SEXP _raylibr_ray_collision_set_normal_(SEXP objSEXP, SEXP normalSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< RayCollision >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< Vector3 >::type normal(normalSEXP);
-    rcpp_result_gen = Rcpp::wrap(ray_collision_set_normal_(obj, normal));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rectangle_
-Rectangle rectangle_(float x, float y, float width, float height);
-RcppExport SEXP _raylibr_rectangle_(SEXP xSEXP, SEXP ySEXP, SEXP widthSEXP, SEXP heightSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< float >::type x(xSEXP);
-    Rcpp::traits::input_parameter< float >::type y(ySEXP);
-    Rcpp::traits::input_parameter< float >::type width(widthSEXP);
-    Rcpp::traits::input_parameter< float >::type height(heightSEXP);
-    rcpp_result_gen = Rcpp::wrap(rectangle_(x, y, width, height));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rectangle_get_x_
-float rectangle_get_x_(Rectangle obj);
-RcppExport SEXP _raylibr_rectangle_get_x_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Rectangle >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(rectangle_get_x_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rectangle_set_x_
-Rectangle rectangle_set_x_(Rectangle obj, float x);
-RcppExport SEXP _raylibr_rectangle_set_x_(SEXP objSEXP, SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Rectangle >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< float >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rectangle_set_x_(obj, x));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rectangle_get_y_
-float rectangle_get_y_(Rectangle obj);
-RcppExport SEXP _raylibr_rectangle_get_y_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Rectangle >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(rectangle_get_y_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rectangle_set_y_
-Rectangle rectangle_set_y_(Rectangle obj, float y);
-RcppExport SEXP _raylibr_rectangle_set_y_(SEXP objSEXP, SEXP ySEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Rectangle >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< float >::type y(ySEXP);
-    rcpp_result_gen = Rcpp::wrap(rectangle_set_y_(obj, y));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rectangle_get_width_
-float rectangle_get_width_(Rectangle obj);
-RcppExport SEXP _raylibr_rectangle_get_width_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Rectangle >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(rectangle_get_width_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rectangle_set_width_
-Rectangle rectangle_set_width_(Rectangle obj, float width);
-RcppExport SEXP _raylibr_rectangle_set_width_(SEXP objSEXP, SEXP widthSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Rectangle >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< float >::type width(widthSEXP);
-    rcpp_result_gen = Rcpp::wrap(rectangle_set_width_(obj, width));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rectangle_get_height_
-float rectangle_get_height_(Rectangle obj);
-RcppExport SEXP _raylibr_rectangle_get_height_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Rectangle >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(rectangle_get_height_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rectangle_set_height_
-Rectangle rectangle_set_height_(Rectangle obj, float height);
-RcppExport SEXP _raylibr_rectangle_set_height_(SEXP objSEXP, SEXP heightSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Rectangle >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< float >::type height(heightSEXP);
-    rcpp_result_gen = Rcpp::wrap(rectangle_set_height_(obj, height));
-    return rcpp_result_gen;
-END_RCPP
-}
-// render_texture_
-RenderTexture render_texture_(unsigned int id, Texture texture, Texture depth);
-RcppExport SEXP _raylibr_render_texture_(SEXP idSEXP, SEXP textureSEXP, SEXP depthSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< unsigned int >::type id(idSEXP);
-    Rcpp::traits::input_parameter< Texture >::type texture(textureSEXP);
-    Rcpp::traits::input_parameter< Texture >::type depth(depthSEXP);
-    rcpp_result_gen = Rcpp::wrap(render_texture_(id, texture, depth));
-    return rcpp_result_gen;
-END_RCPP
-}
-// render_texture_get_id_
-unsigned int render_texture_get_id_(RenderTexture obj);
-RcppExport SEXP _raylibr_render_texture_get_id_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< RenderTexture >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(render_texture_get_id_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// render_texture_set_id_
-RenderTexture render_texture_set_id_(RenderTexture obj, unsigned int id);
-RcppExport SEXP _raylibr_render_texture_set_id_(SEXP objSEXP, SEXP idSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< RenderTexture >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< unsigned int >::type id(idSEXP);
-    rcpp_result_gen = Rcpp::wrap(render_texture_set_id_(obj, id));
-    return rcpp_result_gen;
-END_RCPP
-}
-// render_texture_get_texture_
-Texture render_texture_get_texture_(RenderTexture obj);
-RcppExport SEXP _raylibr_render_texture_get_texture_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< RenderTexture >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(render_texture_get_texture_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// render_texture_set_texture_
-RenderTexture render_texture_set_texture_(RenderTexture obj, Texture texture);
-RcppExport SEXP _raylibr_render_texture_set_texture_(SEXP objSEXP, SEXP textureSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< RenderTexture >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< Texture >::type texture(textureSEXP);
-    rcpp_result_gen = Rcpp::wrap(render_texture_set_texture_(obj, texture));
-    return rcpp_result_gen;
-END_RCPP
-}
-// render_texture_get_depth_
-Texture render_texture_get_depth_(RenderTexture obj);
-RcppExport SEXP _raylibr_render_texture_get_depth_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< RenderTexture >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(render_texture_get_depth_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// render_texture_set_depth_
-RenderTexture render_texture_set_depth_(RenderTexture obj, Texture depth);
-RcppExport SEXP _raylibr_render_texture_set_depth_(SEXP objSEXP, SEXP depthSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< RenderTexture >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< Texture >::type depth(depthSEXP);
-    rcpp_result_gen = Rcpp::wrap(render_texture_set_depth_(obj, depth));
-    return rcpp_result_gen;
-END_RCPP
-}
-// sound_
-Sound sound_(AudioStream stream, unsigned int frame_count);
-RcppExport SEXP _raylibr_sound_(SEXP streamSEXP, SEXP frame_countSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< AudioStream >::type stream(streamSEXP);
-    Rcpp::traits::input_parameter< unsigned int >::type frame_count(frame_countSEXP);
-    rcpp_result_gen = Rcpp::wrap(sound_(stream, frame_count));
-    return rcpp_result_gen;
-END_RCPP
-}
-// sound_get_stream_
-AudioStream sound_get_stream_(Sound obj);
-RcppExport SEXP _raylibr_sound_get_stream_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Sound >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(sound_get_stream_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// sound_set_stream_
-Sound sound_set_stream_(Sound obj, AudioStream stream);
-RcppExport SEXP _raylibr_sound_set_stream_(SEXP objSEXP, SEXP streamSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Sound >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< AudioStream >::type stream(streamSEXP);
-    rcpp_result_gen = Rcpp::wrap(sound_set_stream_(obj, stream));
-    return rcpp_result_gen;
-END_RCPP
-}
-// sound_get_frame_count_
-unsigned int sound_get_frame_count_(Sound obj);
-RcppExport SEXP _raylibr_sound_get_frame_count_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Sound >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(sound_get_frame_count_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// sound_set_frame_count_
-Sound sound_set_frame_count_(Sound obj, unsigned int frame_count);
-RcppExport SEXP _raylibr_sound_set_frame_count_(SEXP objSEXP, SEXP frame_countSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Sound >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< unsigned int >::type frame_count(frame_countSEXP);
-    rcpp_result_gen = Rcpp::wrap(sound_set_frame_count_(obj, frame_count));
-    return rcpp_result_gen;
-END_RCPP
-}
-// texture_
-Texture texture_(unsigned int id, int width, int height, int mipmaps, int format);
-RcppExport SEXP _raylibr_texture_(SEXP idSEXP, SEXP widthSEXP, SEXP heightSEXP, SEXP mipmapsSEXP, SEXP formatSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< unsigned int >::type id(idSEXP);
-    Rcpp::traits::input_parameter< int >::type width(widthSEXP);
-    Rcpp::traits::input_parameter< int >::type height(heightSEXP);
-    Rcpp::traits::input_parameter< int >::type mipmaps(mipmapsSEXP);
-    Rcpp::traits::input_parameter< int >::type format(formatSEXP);
-    rcpp_result_gen = Rcpp::wrap(texture_(id, width, height, mipmaps, format));
-    return rcpp_result_gen;
-END_RCPP
-}
-// texture_get_id_
-unsigned int texture_get_id_(Texture obj);
-RcppExport SEXP _raylibr_texture_get_id_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(texture_get_id_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// texture_set_id_
-Texture texture_set_id_(Texture obj, unsigned int id);
-RcppExport SEXP _raylibr_texture_set_id_(SEXP objSEXP, SEXP idSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< unsigned int >::type id(idSEXP);
-    rcpp_result_gen = Rcpp::wrap(texture_set_id_(obj, id));
-    return rcpp_result_gen;
-END_RCPP
-}
-// texture_get_width_
-int texture_get_width_(Texture obj);
-RcppExport SEXP _raylibr_texture_get_width_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(texture_get_width_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// texture_set_width_
-Texture texture_set_width_(Texture obj, int width);
-RcppExport SEXP _raylibr_texture_set_width_(SEXP objSEXP, SEXP widthSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< int >::type width(widthSEXP);
-    rcpp_result_gen = Rcpp::wrap(texture_set_width_(obj, width));
-    return rcpp_result_gen;
-END_RCPP
-}
-// texture_get_height_
-int texture_get_height_(Texture obj);
-RcppExport SEXP _raylibr_texture_get_height_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(texture_get_height_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// texture_set_height_
-Texture texture_set_height_(Texture obj, int height);
-RcppExport SEXP _raylibr_texture_set_height_(SEXP objSEXP, SEXP heightSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< int >::type height(heightSEXP);
-    rcpp_result_gen = Rcpp::wrap(texture_set_height_(obj, height));
-    return rcpp_result_gen;
-END_RCPP
-}
-// texture_get_mipmaps_
-int texture_get_mipmaps_(Texture obj);
-RcppExport SEXP _raylibr_texture_get_mipmaps_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(texture_get_mipmaps_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// texture_set_mipmaps_
-Texture texture_set_mipmaps_(Texture obj, int mipmaps);
-RcppExport SEXP _raylibr_texture_set_mipmaps_(SEXP objSEXP, SEXP mipmapsSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< int >::type mipmaps(mipmapsSEXP);
-    rcpp_result_gen = Rcpp::wrap(texture_set_mipmaps_(obj, mipmaps));
-    return rcpp_result_gen;
-END_RCPP
-}
-// texture_get_format_
-int texture_get_format_(Texture obj);
-RcppExport SEXP _raylibr_texture_get_format_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(texture_get_format_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// texture_set_format_
-Texture texture_set_format_(Texture obj, int format);
-RcppExport SEXP _raylibr_texture_set_format_(SEXP objSEXP, SEXP formatSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Texture >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< int >::type format(formatSEXP);
-    rcpp_result_gen = Rcpp::wrap(texture_set_format_(obj, format));
-    return rcpp_result_gen;
-END_RCPP
-}
-// transform_
-Transform transform_(Vector3 translation, Vector4 rotation, Vector3 scale);
-RcppExport SEXP _raylibr_transform_(SEXP translationSEXP, SEXP rotationSEXP, SEXP scaleSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Vector3 >::type translation(translationSEXP);
-    Rcpp::traits::input_parameter< Vector4 >::type rotation(rotationSEXP);
-    Rcpp::traits::input_parameter< Vector3 >::type scale(scaleSEXP);
-    rcpp_result_gen = Rcpp::wrap(transform_(translation, rotation, scale));
-    return rcpp_result_gen;
-END_RCPP
-}
-// transform_get_translation_
-Vector3 transform_get_translation_(Transform obj);
-RcppExport SEXP _raylibr_transform_get_translation_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(transform_get_translation_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// transform_set_translation_
-Transform transform_set_translation_(Transform obj, Vector3 translation);
-RcppExport SEXP _raylibr_transform_set_translation_(SEXP objSEXP, SEXP translationSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< Vector3 >::type translation(translationSEXP);
-    rcpp_result_gen = Rcpp::wrap(transform_set_translation_(obj, translation));
-    return rcpp_result_gen;
-END_RCPP
-}
-// transform_get_rotation_
-Vector4 transform_get_rotation_(Transform obj);
-RcppExport SEXP _raylibr_transform_get_rotation_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(transform_get_rotation_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// transform_set_rotation_
-Transform transform_set_rotation_(Transform obj, Vector4 rotation);
-RcppExport SEXP _raylibr_transform_set_rotation_(SEXP objSEXP, SEXP rotationSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< Vector4 >::type rotation(rotationSEXP);
-    rcpp_result_gen = Rcpp::wrap(transform_set_rotation_(obj, rotation));
-    return rcpp_result_gen;
-END_RCPP
-}
-// transform_get_scale_
-Vector3 transform_get_scale_(Transform obj);
-RcppExport SEXP _raylibr_transform_get_scale_(SEXP objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(transform_get_scale_(obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// transform_set_scale_
-Transform transform_set_scale_(Transform obj, Vector3 scale);
-RcppExport SEXP _raylibr_transform_set_scale_(SEXP objSEXP, SEXP scaleSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
-    Rcpp::traits::input_parameter< Vector3 >::type scale(scaleSEXP);
-    rcpp_result_gen = Rcpp::wrap(transform_set_scale_(obj, scale));
-    return rcpp_result_gen;
-END_RCPP
-}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_bounding_box_", (DL_FUNC) &_raylibr_bounding_box_, 2},
@@ -5958,6 +5958,90 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_color_set_b_", (DL_FUNC) &_raylibr_color_set_b_, 2},
     {"_raylibr_color_get_a_", (DL_FUNC) &_raylibr_color_get_a_, 1},
     {"_raylibr_color_set_a_", (DL_FUNC) &_raylibr_color_set_a_, 2},
+    {"_raylibr_glyph_info_", (DL_FUNC) &_raylibr_glyph_info_, 5},
+    {"_raylibr_glyph_info_get_value_", (DL_FUNC) &_raylibr_glyph_info_get_value_, 1},
+    {"_raylibr_glyph_info_set_value_", (DL_FUNC) &_raylibr_glyph_info_set_value_, 2},
+    {"_raylibr_glyph_info_get_offset_x_", (DL_FUNC) &_raylibr_glyph_info_get_offset_x_, 1},
+    {"_raylibr_glyph_info_set_offset_x_", (DL_FUNC) &_raylibr_glyph_info_set_offset_x_, 2},
+    {"_raylibr_glyph_info_get_offset_y_", (DL_FUNC) &_raylibr_glyph_info_get_offset_y_, 1},
+    {"_raylibr_glyph_info_set_offset_y_", (DL_FUNC) &_raylibr_glyph_info_set_offset_y_, 2},
+    {"_raylibr_glyph_info_get_advance_x_", (DL_FUNC) &_raylibr_glyph_info_get_advance_x_, 1},
+    {"_raylibr_glyph_info_set_advance_x_", (DL_FUNC) &_raylibr_glyph_info_set_advance_x_, 2},
+    {"_raylibr_glyph_info_get_image_", (DL_FUNC) &_raylibr_glyph_info_get_image_, 1},
+    {"_raylibr_glyph_info_set_image_", (DL_FUNC) &_raylibr_glyph_info_set_image_, 2},
+    {"_raylibr_material_map_", (DL_FUNC) &_raylibr_material_map_, 3},
+    {"_raylibr_material_map_get_texture_", (DL_FUNC) &_raylibr_material_map_get_texture_, 1},
+    {"_raylibr_material_map_set_texture_", (DL_FUNC) &_raylibr_material_map_set_texture_, 2},
+    {"_raylibr_material_map_get_color_", (DL_FUNC) &_raylibr_material_map_get_color_, 1},
+    {"_raylibr_material_map_set_color_", (DL_FUNC) &_raylibr_material_map_set_color_, 2},
+    {"_raylibr_material_map_get_value_", (DL_FUNC) &_raylibr_material_map_get_value_, 1},
+    {"_raylibr_material_map_set_value_", (DL_FUNC) &_raylibr_material_map_set_value_, 2},
+    {"_raylibr_npatch_info_", (DL_FUNC) &_raylibr_npatch_info_, 6},
+    {"_raylibr_npatch_info_get_source_", (DL_FUNC) &_raylibr_npatch_info_get_source_, 1},
+    {"_raylibr_npatch_info_set_source_", (DL_FUNC) &_raylibr_npatch_info_set_source_, 2},
+    {"_raylibr_npatch_info_get_left_", (DL_FUNC) &_raylibr_npatch_info_get_left_, 1},
+    {"_raylibr_npatch_info_set_left_", (DL_FUNC) &_raylibr_npatch_info_set_left_, 2},
+    {"_raylibr_npatch_info_get_top_", (DL_FUNC) &_raylibr_npatch_info_get_top_, 1},
+    {"_raylibr_npatch_info_set_top_", (DL_FUNC) &_raylibr_npatch_info_set_top_, 2},
+    {"_raylibr_npatch_info_get_right_", (DL_FUNC) &_raylibr_npatch_info_get_right_, 1},
+    {"_raylibr_npatch_info_set_right_", (DL_FUNC) &_raylibr_npatch_info_set_right_, 2},
+    {"_raylibr_npatch_info_get_bottom_", (DL_FUNC) &_raylibr_npatch_info_get_bottom_, 1},
+    {"_raylibr_npatch_info_set_bottom_", (DL_FUNC) &_raylibr_npatch_info_set_bottom_, 2},
+    {"_raylibr_npatch_info_get_layout_", (DL_FUNC) &_raylibr_npatch_info_get_layout_, 1},
+    {"_raylibr_npatch_info_set_layout_", (DL_FUNC) &_raylibr_npatch_info_set_layout_, 2},
+    {"_raylibr_ray_", (DL_FUNC) &_raylibr_ray_, 2},
+    {"_raylibr_ray_get_position_", (DL_FUNC) &_raylibr_ray_get_position_, 1},
+    {"_raylibr_ray_set_position_", (DL_FUNC) &_raylibr_ray_set_position_, 2},
+    {"_raylibr_ray_get_direction_", (DL_FUNC) &_raylibr_ray_get_direction_, 1},
+    {"_raylibr_ray_set_direction_", (DL_FUNC) &_raylibr_ray_set_direction_, 2},
+    {"_raylibr_ray_collision_", (DL_FUNC) &_raylibr_ray_collision_, 4},
+    {"_raylibr_ray_collision_get_hit_", (DL_FUNC) &_raylibr_ray_collision_get_hit_, 1},
+    {"_raylibr_ray_collision_set_hit_", (DL_FUNC) &_raylibr_ray_collision_set_hit_, 2},
+    {"_raylibr_ray_collision_get_distance_", (DL_FUNC) &_raylibr_ray_collision_get_distance_, 1},
+    {"_raylibr_ray_collision_set_distance_", (DL_FUNC) &_raylibr_ray_collision_set_distance_, 2},
+    {"_raylibr_ray_collision_get_point_", (DL_FUNC) &_raylibr_ray_collision_get_point_, 1},
+    {"_raylibr_ray_collision_set_point_", (DL_FUNC) &_raylibr_ray_collision_set_point_, 2},
+    {"_raylibr_ray_collision_get_normal_", (DL_FUNC) &_raylibr_ray_collision_get_normal_, 1},
+    {"_raylibr_ray_collision_set_normal_", (DL_FUNC) &_raylibr_ray_collision_set_normal_, 2},
+    {"_raylibr_rectangle_", (DL_FUNC) &_raylibr_rectangle_, 4},
+    {"_raylibr_rectangle_get_x_", (DL_FUNC) &_raylibr_rectangle_get_x_, 1},
+    {"_raylibr_rectangle_set_x_", (DL_FUNC) &_raylibr_rectangle_set_x_, 2},
+    {"_raylibr_rectangle_get_y_", (DL_FUNC) &_raylibr_rectangle_get_y_, 1},
+    {"_raylibr_rectangle_set_y_", (DL_FUNC) &_raylibr_rectangle_set_y_, 2},
+    {"_raylibr_rectangle_get_width_", (DL_FUNC) &_raylibr_rectangle_get_width_, 1},
+    {"_raylibr_rectangle_set_width_", (DL_FUNC) &_raylibr_rectangle_set_width_, 2},
+    {"_raylibr_rectangle_get_height_", (DL_FUNC) &_raylibr_rectangle_get_height_, 1},
+    {"_raylibr_rectangle_set_height_", (DL_FUNC) &_raylibr_rectangle_set_height_, 2},
+    {"_raylibr_render_texture_", (DL_FUNC) &_raylibr_render_texture_, 3},
+    {"_raylibr_render_texture_get_id_", (DL_FUNC) &_raylibr_render_texture_get_id_, 1},
+    {"_raylibr_render_texture_set_id_", (DL_FUNC) &_raylibr_render_texture_set_id_, 2},
+    {"_raylibr_render_texture_get_texture_", (DL_FUNC) &_raylibr_render_texture_get_texture_, 1},
+    {"_raylibr_render_texture_set_texture_", (DL_FUNC) &_raylibr_render_texture_set_texture_, 2},
+    {"_raylibr_render_texture_get_depth_", (DL_FUNC) &_raylibr_render_texture_get_depth_, 1},
+    {"_raylibr_render_texture_set_depth_", (DL_FUNC) &_raylibr_render_texture_set_depth_, 2},
+    {"_raylibr_sound_", (DL_FUNC) &_raylibr_sound_, 2},
+    {"_raylibr_sound_get_stream_", (DL_FUNC) &_raylibr_sound_get_stream_, 1},
+    {"_raylibr_sound_set_stream_", (DL_FUNC) &_raylibr_sound_set_stream_, 2},
+    {"_raylibr_sound_get_frame_count_", (DL_FUNC) &_raylibr_sound_get_frame_count_, 1},
+    {"_raylibr_sound_set_frame_count_", (DL_FUNC) &_raylibr_sound_set_frame_count_, 2},
+    {"_raylibr_texture_", (DL_FUNC) &_raylibr_texture_, 5},
+    {"_raylibr_texture_get_id_", (DL_FUNC) &_raylibr_texture_get_id_, 1},
+    {"_raylibr_texture_set_id_", (DL_FUNC) &_raylibr_texture_set_id_, 2},
+    {"_raylibr_texture_get_width_", (DL_FUNC) &_raylibr_texture_get_width_, 1},
+    {"_raylibr_texture_set_width_", (DL_FUNC) &_raylibr_texture_set_width_, 2},
+    {"_raylibr_texture_get_height_", (DL_FUNC) &_raylibr_texture_get_height_, 1},
+    {"_raylibr_texture_set_height_", (DL_FUNC) &_raylibr_texture_set_height_, 2},
+    {"_raylibr_texture_get_mipmaps_", (DL_FUNC) &_raylibr_texture_get_mipmaps_, 1},
+    {"_raylibr_texture_set_mipmaps_", (DL_FUNC) &_raylibr_texture_set_mipmaps_, 2},
+    {"_raylibr_texture_get_format_", (DL_FUNC) &_raylibr_texture_get_format_, 1},
+    {"_raylibr_texture_set_format_", (DL_FUNC) &_raylibr_texture_set_format_, 2},
+    {"_raylibr_transform_", (DL_FUNC) &_raylibr_transform_, 3},
+    {"_raylibr_transform_get_translation_", (DL_FUNC) &_raylibr_transform_get_translation_, 1},
+    {"_raylibr_transform_set_translation_", (DL_FUNC) &_raylibr_transform_set_translation_, 2},
+    {"_raylibr_transform_get_rotation_", (DL_FUNC) &_raylibr_transform_get_rotation_, 1},
+    {"_raylibr_transform_set_rotation_", (DL_FUNC) &_raylibr_transform_set_rotation_, 2},
+    {"_raylibr_transform_get_scale_", (DL_FUNC) &_raylibr_transform_get_scale_, 1},
+    {"_raylibr_transform_set_scale_", (DL_FUNC) &_raylibr_transform_set_scale_, 2},
     {"_raylibr_as_color", (DL_FUNC) &_raylibr_as_color, 1},
     {"_raylibr_set_shader_value_float_", (DL_FUNC) &_raylibr_set_shader_value_float_, 3},
     {"_raylibr_set_shader_value_vector_2_", (DL_FUNC) &_raylibr_set_shader_value_vector_2_, 3},
@@ -6348,90 +6432,6 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_vector_2_move_towards_", (DL_FUNC) &_raylibr_vector_2_move_towards_, 3},
     {"_raylibr_vector_2_distance_", (DL_FUNC) &_raylibr_vector_2_distance_, 2},
     {"_raylibr_vector_2_rotate_", (DL_FUNC) &_raylibr_vector_2_rotate_, 2},
-    {"_raylibr_glyph_info_", (DL_FUNC) &_raylibr_glyph_info_, 5},
-    {"_raylibr_glyph_info_get_value_", (DL_FUNC) &_raylibr_glyph_info_get_value_, 1},
-    {"_raylibr_glyph_info_set_value_", (DL_FUNC) &_raylibr_glyph_info_set_value_, 2},
-    {"_raylibr_glyph_info_get_offset_x_", (DL_FUNC) &_raylibr_glyph_info_get_offset_x_, 1},
-    {"_raylibr_glyph_info_set_offset_x_", (DL_FUNC) &_raylibr_glyph_info_set_offset_x_, 2},
-    {"_raylibr_glyph_info_get_offset_y_", (DL_FUNC) &_raylibr_glyph_info_get_offset_y_, 1},
-    {"_raylibr_glyph_info_set_offset_y_", (DL_FUNC) &_raylibr_glyph_info_set_offset_y_, 2},
-    {"_raylibr_glyph_info_get_advance_x_", (DL_FUNC) &_raylibr_glyph_info_get_advance_x_, 1},
-    {"_raylibr_glyph_info_set_advance_x_", (DL_FUNC) &_raylibr_glyph_info_set_advance_x_, 2},
-    {"_raylibr_glyph_info_get_image_", (DL_FUNC) &_raylibr_glyph_info_get_image_, 1},
-    {"_raylibr_glyph_info_set_image_", (DL_FUNC) &_raylibr_glyph_info_set_image_, 2},
-    {"_raylibr_material_map_", (DL_FUNC) &_raylibr_material_map_, 3},
-    {"_raylibr_material_map_get_texture_", (DL_FUNC) &_raylibr_material_map_get_texture_, 1},
-    {"_raylibr_material_map_set_texture_", (DL_FUNC) &_raylibr_material_map_set_texture_, 2},
-    {"_raylibr_material_map_get_color_", (DL_FUNC) &_raylibr_material_map_get_color_, 1},
-    {"_raylibr_material_map_set_color_", (DL_FUNC) &_raylibr_material_map_set_color_, 2},
-    {"_raylibr_material_map_get_value_", (DL_FUNC) &_raylibr_material_map_get_value_, 1},
-    {"_raylibr_material_map_set_value_", (DL_FUNC) &_raylibr_material_map_set_value_, 2},
-    {"_raylibr_npatch_info_", (DL_FUNC) &_raylibr_npatch_info_, 6},
-    {"_raylibr_npatch_info_get_source_", (DL_FUNC) &_raylibr_npatch_info_get_source_, 1},
-    {"_raylibr_npatch_info_set_source_", (DL_FUNC) &_raylibr_npatch_info_set_source_, 2},
-    {"_raylibr_npatch_info_get_left_", (DL_FUNC) &_raylibr_npatch_info_get_left_, 1},
-    {"_raylibr_npatch_info_set_left_", (DL_FUNC) &_raylibr_npatch_info_set_left_, 2},
-    {"_raylibr_npatch_info_get_top_", (DL_FUNC) &_raylibr_npatch_info_get_top_, 1},
-    {"_raylibr_npatch_info_set_top_", (DL_FUNC) &_raylibr_npatch_info_set_top_, 2},
-    {"_raylibr_npatch_info_get_right_", (DL_FUNC) &_raylibr_npatch_info_get_right_, 1},
-    {"_raylibr_npatch_info_set_right_", (DL_FUNC) &_raylibr_npatch_info_set_right_, 2},
-    {"_raylibr_npatch_info_get_bottom_", (DL_FUNC) &_raylibr_npatch_info_get_bottom_, 1},
-    {"_raylibr_npatch_info_set_bottom_", (DL_FUNC) &_raylibr_npatch_info_set_bottom_, 2},
-    {"_raylibr_npatch_info_get_layout_", (DL_FUNC) &_raylibr_npatch_info_get_layout_, 1},
-    {"_raylibr_npatch_info_set_layout_", (DL_FUNC) &_raylibr_npatch_info_set_layout_, 2},
-    {"_raylibr_ray_", (DL_FUNC) &_raylibr_ray_, 2},
-    {"_raylibr_ray_get_position_", (DL_FUNC) &_raylibr_ray_get_position_, 1},
-    {"_raylibr_ray_set_position_", (DL_FUNC) &_raylibr_ray_set_position_, 2},
-    {"_raylibr_ray_get_direction_", (DL_FUNC) &_raylibr_ray_get_direction_, 1},
-    {"_raylibr_ray_set_direction_", (DL_FUNC) &_raylibr_ray_set_direction_, 2},
-    {"_raylibr_ray_collision_", (DL_FUNC) &_raylibr_ray_collision_, 4},
-    {"_raylibr_ray_collision_get_hit_", (DL_FUNC) &_raylibr_ray_collision_get_hit_, 1},
-    {"_raylibr_ray_collision_set_hit_", (DL_FUNC) &_raylibr_ray_collision_set_hit_, 2},
-    {"_raylibr_ray_collision_get_distance_", (DL_FUNC) &_raylibr_ray_collision_get_distance_, 1},
-    {"_raylibr_ray_collision_set_distance_", (DL_FUNC) &_raylibr_ray_collision_set_distance_, 2},
-    {"_raylibr_ray_collision_get_point_", (DL_FUNC) &_raylibr_ray_collision_get_point_, 1},
-    {"_raylibr_ray_collision_set_point_", (DL_FUNC) &_raylibr_ray_collision_set_point_, 2},
-    {"_raylibr_ray_collision_get_normal_", (DL_FUNC) &_raylibr_ray_collision_get_normal_, 1},
-    {"_raylibr_ray_collision_set_normal_", (DL_FUNC) &_raylibr_ray_collision_set_normal_, 2},
-    {"_raylibr_rectangle_", (DL_FUNC) &_raylibr_rectangle_, 4},
-    {"_raylibr_rectangle_get_x_", (DL_FUNC) &_raylibr_rectangle_get_x_, 1},
-    {"_raylibr_rectangle_set_x_", (DL_FUNC) &_raylibr_rectangle_set_x_, 2},
-    {"_raylibr_rectangle_get_y_", (DL_FUNC) &_raylibr_rectangle_get_y_, 1},
-    {"_raylibr_rectangle_set_y_", (DL_FUNC) &_raylibr_rectangle_set_y_, 2},
-    {"_raylibr_rectangle_get_width_", (DL_FUNC) &_raylibr_rectangle_get_width_, 1},
-    {"_raylibr_rectangle_set_width_", (DL_FUNC) &_raylibr_rectangle_set_width_, 2},
-    {"_raylibr_rectangle_get_height_", (DL_FUNC) &_raylibr_rectangle_get_height_, 1},
-    {"_raylibr_rectangle_set_height_", (DL_FUNC) &_raylibr_rectangle_set_height_, 2},
-    {"_raylibr_render_texture_", (DL_FUNC) &_raylibr_render_texture_, 3},
-    {"_raylibr_render_texture_get_id_", (DL_FUNC) &_raylibr_render_texture_get_id_, 1},
-    {"_raylibr_render_texture_set_id_", (DL_FUNC) &_raylibr_render_texture_set_id_, 2},
-    {"_raylibr_render_texture_get_texture_", (DL_FUNC) &_raylibr_render_texture_get_texture_, 1},
-    {"_raylibr_render_texture_set_texture_", (DL_FUNC) &_raylibr_render_texture_set_texture_, 2},
-    {"_raylibr_render_texture_get_depth_", (DL_FUNC) &_raylibr_render_texture_get_depth_, 1},
-    {"_raylibr_render_texture_set_depth_", (DL_FUNC) &_raylibr_render_texture_set_depth_, 2},
-    {"_raylibr_sound_", (DL_FUNC) &_raylibr_sound_, 2},
-    {"_raylibr_sound_get_stream_", (DL_FUNC) &_raylibr_sound_get_stream_, 1},
-    {"_raylibr_sound_set_stream_", (DL_FUNC) &_raylibr_sound_set_stream_, 2},
-    {"_raylibr_sound_get_frame_count_", (DL_FUNC) &_raylibr_sound_get_frame_count_, 1},
-    {"_raylibr_sound_set_frame_count_", (DL_FUNC) &_raylibr_sound_set_frame_count_, 2},
-    {"_raylibr_texture_", (DL_FUNC) &_raylibr_texture_, 5},
-    {"_raylibr_texture_get_id_", (DL_FUNC) &_raylibr_texture_get_id_, 1},
-    {"_raylibr_texture_set_id_", (DL_FUNC) &_raylibr_texture_set_id_, 2},
-    {"_raylibr_texture_get_width_", (DL_FUNC) &_raylibr_texture_get_width_, 1},
-    {"_raylibr_texture_set_width_", (DL_FUNC) &_raylibr_texture_set_width_, 2},
-    {"_raylibr_texture_get_height_", (DL_FUNC) &_raylibr_texture_get_height_, 1},
-    {"_raylibr_texture_set_height_", (DL_FUNC) &_raylibr_texture_set_height_, 2},
-    {"_raylibr_texture_get_mipmaps_", (DL_FUNC) &_raylibr_texture_get_mipmaps_, 1},
-    {"_raylibr_texture_set_mipmaps_", (DL_FUNC) &_raylibr_texture_set_mipmaps_, 2},
-    {"_raylibr_texture_get_format_", (DL_FUNC) &_raylibr_texture_get_format_, 1},
-    {"_raylibr_texture_set_format_", (DL_FUNC) &_raylibr_texture_set_format_, 2},
-    {"_raylibr_transform_", (DL_FUNC) &_raylibr_transform_, 3},
-    {"_raylibr_transform_get_translation_", (DL_FUNC) &_raylibr_transform_get_translation_, 1},
-    {"_raylibr_transform_set_translation_", (DL_FUNC) &_raylibr_transform_set_translation_, 2},
-    {"_raylibr_transform_get_rotation_", (DL_FUNC) &_raylibr_transform_get_rotation_, 1},
-    {"_raylibr_transform_set_rotation_", (DL_FUNC) &_raylibr_transform_set_rotation_, 2},
-    {"_raylibr_transform_get_scale_", (DL_FUNC) &_raylibr_transform_get_scale_, 1},
-    {"_raylibr_transform_set_scale_", (DL_FUNC) &_raylibr_transform_set_scale_, 2},
     {NULL, NULL, 0}
 };
 

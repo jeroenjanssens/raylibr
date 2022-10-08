@@ -137,6 +137,342 @@ color_set_a_ <- function(obj, a) {
     .Call(`_raylibr_color_set_a_`, obj, a)
 }
 
+glyph_info_ <- function(value, offset_x, offset_y, advance_x, image) {
+    .Call(`_raylibr_glyph_info_`, value, offset_x, offset_y, advance_x, image)
+}
+
+glyph_info_get_value_ <- function(obj) {
+    .Call(`_raylibr_glyph_info_get_value_`, obj)
+}
+
+glyph_info_set_value_ <- function(obj, value) {
+    .Call(`_raylibr_glyph_info_set_value_`, obj, value)
+}
+
+glyph_info_get_offset_x_ <- function(obj) {
+    .Call(`_raylibr_glyph_info_get_offset_x_`, obj)
+}
+
+glyph_info_set_offset_x_ <- function(obj, offset_x) {
+    .Call(`_raylibr_glyph_info_set_offset_x_`, obj, offset_x)
+}
+
+glyph_info_get_offset_y_ <- function(obj) {
+    .Call(`_raylibr_glyph_info_get_offset_y_`, obj)
+}
+
+glyph_info_set_offset_y_ <- function(obj, offset_y) {
+    .Call(`_raylibr_glyph_info_set_offset_y_`, obj, offset_y)
+}
+
+glyph_info_get_advance_x_ <- function(obj) {
+    .Call(`_raylibr_glyph_info_get_advance_x_`, obj)
+}
+
+glyph_info_set_advance_x_ <- function(obj, advance_x) {
+    .Call(`_raylibr_glyph_info_set_advance_x_`, obj, advance_x)
+}
+
+glyph_info_get_image_ <- function(obj) {
+    .Call(`_raylibr_glyph_info_get_image_`, obj)
+}
+
+glyph_info_set_image_ <- function(obj, image) {
+    .Call(`_raylibr_glyph_info_set_image_`, obj, image)
+}
+
+material_map_ <- function(texture, color, value) {
+    .Call(`_raylibr_material_map_`, texture, color, value)
+}
+
+material_map_get_texture_ <- function(obj) {
+    .Call(`_raylibr_material_map_get_texture_`, obj)
+}
+
+material_map_set_texture_ <- function(obj, texture) {
+    .Call(`_raylibr_material_map_set_texture_`, obj, texture)
+}
+
+material_map_get_color_ <- function(obj) {
+    .Call(`_raylibr_material_map_get_color_`, obj)
+}
+
+material_map_set_color_ <- function(obj, color) {
+    .Call(`_raylibr_material_map_set_color_`, obj, color)
+}
+
+material_map_get_value_ <- function(obj) {
+    .Call(`_raylibr_material_map_get_value_`, obj)
+}
+
+material_map_set_value_ <- function(obj, value) {
+    .Call(`_raylibr_material_map_set_value_`, obj, value)
+}
+
+npatch_info_ <- function(source, left, top, right, bottom, layout) {
+    .Call(`_raylibr_npatch_info_`, source, left, top, right, bottom, layout)
+}
+
+npatch_info_get_source_ <- function(obj) {
+    .Call(`_raylibr_npatch_info_get_source_`, obj)
+}
+
+npatch_info_set_source_ <- function(obj, source) {
+    .Call(`_raylibr_npatch_info_set_source_`, obj, source)
+}
+
+npatch_info_get_left_ <- function(obj) {
+    .Call(`_raylibr_npatch_info_get_left_`, obj)
+}
+
+npatch_info_set_left_ <- function(obj, left) {
+    .Call(`_raylibr_npatch_info_set_left_`, obj, left)
+}
+
+npatch_info_get_top_ <- function(obj) {
+    .Call(`_raylibr_npatch_info_get_top_`, obj)
+}
+
+npatch_info_set_top_ <- function(obj, top) {
+    .Call(`_raylibr_npatch_info_set_top_`, obj, top)
+}
+
+npatch_info_get_right_ <- function(obj) {
+    .Call(`_raylibr_npatch_info_get_right_`, obj)
+}
+
+npatch_info_set_right_ <- function(obj, right) {
+    .Call(`_raylibr_npatch_info_set_right_`, obj, right)
+}
+
+npatch_info_get_bottom_ <- function(obj) {
+    .Call(`_raylibr_npatch_info_get_bottom_`, obj)
+}
+
+npatch_info_set_bottom_ <- function(obj, bottom) {
+    .Call(`_raylibr_npatch_info_set_bottom_`, obj, bottom)
+}
+
+npatch_info_get_layout_ <- function(obj) {
+    .Call(`_raylibr_npatch_info_get_layout_`, obj)
+}
+
+npatch_info_set_layout_ <- function(obj, layout) {
+    .Call(`_raylibr_npatch_info_set_layout_`, obj, layout)
+}
+
+ray_ <- function(position, direction) {
+    .Call(`_raylibr_ray_`, position, direction)
+}
+
+ray_get_position_ <- function(obj) {
+    .Call(`_raylibr_ray_get_position_`, obj)
+}
+
+ray_set_position_ <- function(obj, position) {
+    .Call(`_raylibr_ray_set_position_`, obj, position)
+}
+
+ray_get_direction_ <- function(obj) {
+    .Call(`_raylibr_ray_get_direction_`, obj)
+}
+
+ray_set_direction_ <- function(obj, direction) {
+    .Call(`_raylibr_ray_set_direction_`, obj, direction)
+}
+
+ray_collision_ <- function(hit, distance, point, normal) {
+    .Call(`_raylibr_ray_collision_`, hit, distance, point, normal)
+}
+
+ray_collision_get_hit_ <- function(obj) {
+    .Call(`_raylibr_ray_collision_get_hit_`, obj)
+}
+
+ray_collision_set_hit_ <- function(obj, hit) {
+    .Call(`_raylibr_ray_collision_set_hit_`, obj, hit)
+}
+
+ray_collision_get_distance_ <- function(obj) {
+    .Call(`_raylibr_ray_collision_get_distance_`, obj)
+}
+
+ray_collision_set_distance_ <- function(obj, distance) {
+    .Call(`_raylibr_ray_collision_set_distance_`, obj, distance)
+}
+
+ray_collision_get_point_ <- function(obj) {
+    .Call(`_raylibr_ray_collision_get_point_`, obj)
+}
+
+ray_collision_set_point_ <- function(obj, point) {
+    .Call(`_raylibr_ray_collision_set_point_`, obj, point)
+}
+
+ray_collision_get_normal_ <- function(obj) {
+    .Call(`_raylibr_ray_collision_get_normal_`, obj)
+}
+
+ray_collision_set_normal_ <- function(obj, normal) {
+    .Call(`_raylibr_ray_collision_set_normal_`, obj, normal)
+}
+
+rectangle_ <- function(x, y, width, height) {
+    .Call(`_raylibr_rectangle_`, x, y, width, height)
+}
+
+rectangle_get_x_ <- function(obj) {
+    .Call(`_raylibr_rectangle_get_x_`, obj)
+}
+
+rectangle_set_x_ <- function(obj, x) {
+    .Call(`_raylibr_rectangle_set_x_`, obj, x)
+}
+
+rectangle_get_y_ <- function(obj) {
+    .Call(`_raylibr_rectangle_get_y_`, obj)
+}
+
+rectangle_set_y_ <- function(obj, y) {
+    .Call(`_raylibr_rectangle_set_y_`, obj, y)
+}
+
+rectangle_get_width_ <- function(obj) {
+    .Call(`_raylibr_rectangle_get_width_`, obj)
+}
+
+rectangle_set_width_ <- function(obj, width) {
+    .Call(`_raylibr_rectangle_set_width_`, obj, width)
+}
+
+rectangle_get_height_ <- function(obj) {
+    .Call(`_raylibr_rectangle_get_height_`, obj)
+}
+
+rectangle_set_height_ <- function(obj, height) {
+    .Call(`_raylibr_rectangle_set_height_`, obj, height)
+}
+
+render_texture_ <- function(id, texture, depth) {
+    .Call(`_raylibr_render_texture_`, id, texture, depth)
+}
+
+render_texture_get_id_ <- function(obj) {
+    .Call(`_raylibr_render_texture_get_id_`, obj)
+}
+
+render_texture_set_id_ <- function(obj, id) {
+    .Call(`_raylibr_render_texture_set_id_`, obj, id)
+}
+
+render_texture_get_texture_ <- function(obj) {
+    .Call(`_raylibr_render_texture_get_texture_`, obj)
+}
+
+render_texture_set_texture_ <- function(obj, texture) {
+    .Call(`_raylibr_render_texture_set_texture_`, obj, texture)
+}
+
+render_texture_get_depth_ <- function(obj) {
+    .Call(`_raylibr_render_texture_get_depth_`, obj)
+}
+
+render_texture_set_depth_ <- function(obj, depth) {
+    .Call(`_raylibr_render_texture_set_depth_`, obj, depth)
+}
+
+sound_ <- function(stream, frame_count) {
+    .Call(`_raylibr_sound_`, stream, frame_count)
+}
+
+sound_get_stream_ <- function(obj) {
+    .Call(`_raylibr_sound_get_stream_`, obj)
+}
+
+sound_set_stream_ <- function(obj, stream) {
+    .Call(`_raylibr_sound_set_stream_`, obj, stream)
+}
+
+sound_get_frame_count_ <- function(obj) {
+    .Call(`_raylibr_sound_get_frame_count_`, obj)
+}
+
+sound_set_frame_count_ <- function(obj, frame_count) {
+    .Call(`_raylibr_sound_set_frame_count_`, obj, frame_count)
+}
+
+texture_ <- function(id, width, height, mipmaps, format) {
+    .Call(`_raylibr_texture_`, id, width, height, mipmaps, format)
+}
+
+texture_get_id_ <- function(obj) {
+    .Call(`_raylibr_texture_get_id_`, obj)
+}
+
+texture_set_id_ <- function(obj, id) {
+    .Call(`_raylibr_texture_set_id_`, obj, id)
+}
+
+texture_get_width_ <- function(obj) {
+    .Call(`_raylibr_texture_get_width_`, obj)
+}
+
+texture_set_width_ <- function(obj, width) {
+    .Call(`_raylibr_texture_set_width_`, obj, width)
+}
+
+texture_get_height_ <- function(obj) {
+    .Call(`_raylibr_texture_get_height_`, obj)
+}
+
+texture_set_height_ <- function(obj, height) {
+    .Call(`_raylibr_texture_set_height_`, obj, height)
+}
+
+texture_get_mipmaps_ <- function(obj) {
+    .Call(`_raylibr_texture_get_mipmaps_`, obj)
+}
+
+texture_set_mipmaps_ <- function(obj, mipmaps) {
+    .Call(`_raylibr_texture_set_mipmaps_`, obj, mipmaps)
+}
+
+texture_get_format_ <- function(obj) {
+    .Call(`_raylibr_texture_get_format_`, obj)
+}
+
+texture_set_format_ <- function(obj, format) {
+    .Call(`_raylibr_texture_set_format_`, obj, format)
+}
+
+transform_ <- function(translation, rotation, scale) {
+    .Call(`_raylibr_transform_`, translation, rotation, scale)
+}
+
+transform_get_translation_ <- function(obj) {
+    .Call(`_raylibr_transform_get_translation_`, obj)
+}
+
+transform_set_translation_ <- function(obj, translation) {
+    .Call(`_raylibr_transform_set_translation_`, obj, translation)
+}
+
+transform_get_rotation_ <- function(obj) {
+    .Call(`_raylibr_transform_get_rotation_`, obj)
+}
+
+transform_set_rotation_ <- function(obj, rotation) {
+    .Call(`_raylibr_transform_set_rotation_`, obj, rotation)
+}
+
+transform_get_scale_ <- function(obj) {
+    .Call(`_raylibr_transform_get_scale_`, obj)
+}
+
+transform_set_scale_ <- function(obj, scale) {
+    .Call(`_raylibr_transform_set_scale_`, obj, scale)
+}
+
 #' Coerce a string or a number to a color
 #'
 #' @param x Object to be coerced. Can be a valid R color (see `colors()`) or a hexademical.
@@ -1703,341 +2039,5 @@ vector_2_distance_ <- function(v_1, v_2) {
 
 vector_2_rotate_ <- function(v, angle) {
     .Call(`_raylibr_vector_2_rotate_`, v, angle)
-}
-
-glyph_info_ <- function(value, offset_x, offset_y, advance_x, image) {
-    .Call(`_raylibr_glyph_info_`, value, offset_x, offset_y, advance_x, image)
-}
-
-glyph_info_get_value_ <- function(obj) {
-    .Call(`_raylibr_glyph_info_get_value_`, obj)
-}
-
-glyph_info_set_value_ <- function(obj, value) {
-    .Call(`_raylibr_glyph_info_set_value_`, obj, value)
-}
-
-glyph_info_get_offset_x_ <- function(obj) {
-    .Call(`_raylibr_glyph_info_get_offset_x_`, obj)
-}
-
-glyph_info_set_offset_x_ <- function(obj, offset_x) {
-    .Call(`_raylibr_glyph_info_set_offset_x_`, obj, offset_x)
-}
-
-glyph_info_get_offset_y_ <- function(obj) {
-    .Call(`_raylibr_glyph_info_get_offset_y_`, obj)
-}
-
-glyph_info_set_offset_y_ <- function(obj, offset_y) {
-    .Call(`_raylibr_glyph_info_set_offset_y_`, obj, offset_y)
-}
-
-glyph_info_get_advance_x_ <- function(obj) {
-    .Call(`_raylibr_glyph_info_get_advance_x_`, obj)
-}
-
-glyph_info_set_advance_x_ <- function(obj, advance_x) {
-    .Call(`_raylibr_glyph_info_set_advance_x_`, obj, advance_x)
-}
-
-glyph_info_get_image_ <- function(obj) {
-    .Call(`_raylibr_glyph_info_get_image_`, obj)
-}
-
-glyph_info_set_image_ <- function(obj, image) {
-    .Call(`_raylibr_glyph_info_set_image_`, obj, image)
-}
-
-material_map_ <- function(texture, color, value) {
-    .Call(`_raylibr_material_map_`, texture, color, value)
-}
-
-material_map_get_texture_ <- function(obj) {
-    .Call(`_raylibr_material_map_get_texture_`, obj)
-}
-
-material_map_set_texture_ <- function(obj, texture) {
-    .Call(`_raylibr_material_map_set_texture_`, obj, texture)
-}
-
-material_map_get_color_ <- function(obj) {
-    .Call(`_raylibr_material_map_get_color_`, obj)
-}
-
-material_map_set_color_ <- function(obj, color) {
-    .Call(`_raylibr_material_map_set_color_`, obj, color)
-}
-
-material_map_get_value_ <- function(obj) {
-    .Call(`_raylibr_material_map_get_value_`, obj)
-}
-
-material_map_set_value_ <- function(obj, value) {
-    .Call(`_raylibr_material_map_set_value_`, obj, value)
-}
-
-npatch_info_ <- function(source, left, top, right, bottom, layout) {
-    .Call(`_raylibr_npatch_info_`, source, left, top, right, bottom, layout)
-}
-
-npatch_info_get_source_ <- function(obj) {
-    .Call(`_raylibr_npatch_info_get_source_`, obj)
-}
-
-npatch_info_set_source_ <- function(obj, source) {
-    .Call(`_raylibr_npatch_info_set_source_`, obj, source)
-}
-
-npatch_info_get_left_ <- function(obj) {
-    .Call(`_raylibr_npatch_info_get_left_`, obj)
-}
-
-npatch_info_set_left_ <- function(obj, left) {
-    .Call(`_raylibr_npatch_info_set_left_`, obj, left)
-}
-
-npatch_info_get_top_ <- function(obj) {
-    .Call(`_raylibr_npatch_info_get_top_`, obj)
-}
-
-npatch_info_set_top_ <- function(obj, top) {
-    .Call(`_raylibr_npatch_info_set_top_`, obj, top)
-}
-
-npatch_info_get_right_ <- function(obj) {
-    .Call(`_raylibr_npatch_info_get_right_`, obj)
-}
-
-npatch_info_set_right_ <- function(obj, right) {
-    .Call(`_raylibr_npatch_info_set_right_`, obj, right)
-}
-
-npatch_info_get_bottom_ <- function(obj) {
-    .Call(`_raylibr_npatch_info_get_bottom_`, obj)
-}
-
-npatch_info_set_bottom_ <- function(obj, bottom) {
-    .Call(`_raylibr_npatch_info_set_bottom_`, obj, bottom)
-}
-
-npatch_info_get_layout_ <- function(obj) {
-    .Call(`_raylibr_npatch_info_get_layout_`, obj)
-}
-
-npatch_info_set_layout_ <- function(obj, layout) {
-    .Call(`_raylibr_npatch_info_set_layout_`, obj, layout)
-}
-
-ray_ <- function(position, direction) {
-    .Call(`_raylibr_ray_`, position, direction)
-}
-
-ray_get_position_ <- function(obj) {
-    .Call(`_raylibr_ray_get_position_`, obj)
-}
-
-ray_set_position_ <- function(obj, position) {
-    .Call(`_raylibr_ray_set_position_`, obj, position)
-}
-
-ray_get_direction_ <- function(obj) {
-    .Call(`_raylibr_ray_get_direction_`, obj)
-}
-
-ray_set_direction_ <- function(obj, direction) {
-    .Call(`_raylibr_ray_set_direction_`, obj, direction)
-}
-
-ray_collision_ <- function(hit, distance, point, normal) {
-    .Call(`_raylibr_ray_collision_`, hit, distance, point, normal)
-}
-
-ray_collision_get_hit_ <- function(obj) {
-    .Call(`_raylibr_ray_collision_get_hit_`, obj)
-}
-
-ray_collision_set_hit_ <- function(obj, hit) {
-    .Call(`_raylibr_ray_collision_set_hit_`, obj, hit)
-}
-
-ray_collision_get_distance_ <- function(obj) {
-    .Call(`_raylibr_ray_collision_get_distance_`, obj)
-}
-
-ray_collision_set_distance_ <- function(obj, distance) {
-    .Call(`_raylibr_ray_collision_set_distance_`, obj, distance)
-}
-
-ray_collision_get_point_ <- function(obj) {
-    .Call(`_raylibr_ray_collision_get_point_`, obj)
-}
-
-ray_collision_set_point_ <- function(obj, point) {
-    .Call(`_raylibr_ray_collision_set_point_`, obj, point)
-}
-
-ray_collision_get_normal_ <- function(obj) {
-    .Call(`_raylibr_ray_collision_get_normal_`, obj)
-}
-
-ray_collision_set_normal_ <- function(obj, normal) {
-    .Call(`_raylibr_ray_collision_set_normal_`, obj, normal)
-}
-
-rectangle_ <- function(x, y, width, height) {
-    .Call(`_raylibr_rectangle_`, x, y, width, height)
-}
-
-rectangle_get_x_ <- function(obj) {
-    .Call(`_raylibr_rectangle_get_x_`, obj)
-}
-
-rectangle_set_x_ <- function(obj, x) {
-    .Call(`_raylibr_rectangle_set_x_`, obj, x)
-}
-
-rectangle_get_y_ <- function(obj) {
-    .Call(`_raylibr_rectangle_get_y_`, obj)
-}
-
-rectangle_set_y_ <- function(obj, y) {
-    .Call(`_raylibr_rectangle_set_y_`, obj, y)
-}
-
-rectangle_get_width_ <- function(obj) {
-    .Call(`_raylibr_rectangle_get_width_`, obj)
-}
-
-rectangle_set_width_ <- function(obj, width) {
-    .Call(`_raylibr_rectangle_set_width_`, obj, width)
-}
-
-rectangle_get_height_ <- function(obj) {
-    .Call(`_raylibr_rectangle_get_height_`, obj)
-}
-
-rectangle_set_height_ <- function(obj, height) {
-    .Call(`_raylibr_rectangle_set_height_`, obj, height)
-}
-
-render_texture_ <- function(id, texture, depth) {
-    .Call(`_raylibr_render_texture_`, id, texture, depth)
-}
-
-render_texture_get_id_ <- function(obj) {
-    .Call(`_raylibr_render_texture_get_id_`, obj)
-}
-
-render_texture_set_id_ <- function(obj, id) {
-    .Call(`_raylibr_render_texture_set_id_`, obj, id)
-}
-
-render_texture_get_texture_ <- function(obj) {
-    .Call(`_raylibr_render_texture_get_texture_`, obj)
-}
-
-render_texture_set_texture_ <- function(obj, texture) {
-    .Call(`_raylibr_render_texture_set_texture_`, obj, texture)
-}
-
-render_texture_get_depth_ <- function(obj) {
-    .Call(`_raylibr_render_texture_get_depth_`, obj)
-}
-
-render_texture_set_depth_ <- function(obj, depth) {
-    .Call(`_raylibr_render_texture_set_depth_`, obj, depth)
-}
-
-sound_ <- function(stream, frame_count) {
-    .Call(`_raylibr_sound_`, stream, frame_count)
-}
-
-sound_get_stream_ <- function(obj) {
-    .Call(`_raylibr_sound_get_stream_`, obj)
-}
-
-sound_set_stream_ <- function(obj, stream) {
-    .Call(`_raylibr_sound_set_stream_`, obj, stream)
-}
-
-sound_get_frame_count_ <- function(obj) {
-    .Call(`_raylibr_sound_get_frame_count_`, obj)
-}
-
-sound_set_frame_count_ <- function(obj, frame_count) {
-    .Call(`_raylibr_sound_set_frame_count_`, obj, frame_count)
-}
-
-texture_ <- function(id, width, height, mipmaps, format) {
-    .Call(`_raylibr_texture_`, id, width, height, mipmaps, format)
-}
-
-texture_get_id_ <- function(obj) {
-    .Call(`_raylibr_texture_get_id_`, obj)
-}
-
-texture_set_id_ <- function(obj, id) {
-    .Call(`_raylibr_texture_set_id_`, obj, id)
-}
-
-texture_get_width_ <- function(obj) {
-    .Call(`_raylibr_texture_get_width_`, obj)
-}
-
-texture_set_width_ <- function(obj, width) {
-    .Call(`_raylibr_texture_set_width_`, obj, width)
-}
-
-texture_get_height_ <- function(obj) {
-    .Call(`_raylibr_texture_get_height_`, obj)
-}
-
-texture_set_height_ <- function(obj, height) {
-    .Call(`_raylibr_texture_set_height_`, obj, height)
-}
-
-texture_get_mipmaps_ <- function(obj) {
-    .Call(`_raylibr_texture_get_mipmaps_`, obj)
-}
-
-texture_set_mipmaps_ <- function(obj, mipmaps) {
-    .Call(`_raylibr_texture_set_mipmaps_`, obj, mipmaps)
-}
-
-texture_get_format_ <- function(obj) {
-    .Call(`_raylibr_texture_get_format_`, obj)
-}
-
-texture_set_format_ <- function(obj, format) {
-    .Call(`_raylibr_texture_set_format_`, obj, format)
-}
-
-transform_ <- function(translation, rotation, scale) {
-    .Call(`_raylibr_transform_`, translation, rotation, scale)
-}
-
-transform_get_translation_ <- function(obj) {
-    .Call(`_raylibr_transform_get_translation_`, obj)
-}
-
-transform_set_translation_ <- function(obj, translation) {
-    .Call(`_raylibr_transform_set_translation_`, obj, translation)
-}
-
-transform_get_rotation_ <- function(obj) {
-    .Call(`_raylibr_transform_get_rotation_`, obj)
-}
-
-transform_set_rotation_ <- function(obj, rotation) {
-    .Call(`_raylibr_transform_set_rotation_`, obj, rotation)
-}
-
-transform_get_scale_ <- function(obj) {
-    .Call(`_raylibr_transform_get_scale_`, obj)
-}
-
-transform_set_scale_ <- function(obj, scale) {
-    .Call(`_raylibr_transform_set_scale_`, obj, scale)
 }
 

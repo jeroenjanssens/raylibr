@@ -17,44 +17,6 @@ alias_type <- function(x) {
             TRUE ~ x)
 }
 
-# test_fun <- "draw_texture_ex"
-
-
-# structs_generate <-
-#   c("Rectangle",
-#     "Image",
-#     "Texture",
-#     "Font",
-#     "RenderTexture",
-#     "NPatchInfo",
-#     "GlyphInfo",
-#     "Camera2D",
-#     "Camera3D",
-#     "Mesh",
-#     "Shader",
-#     "Ray",
-#     "MaterialMap",
-#     "Material",
-#     "BoneInfo",
-#     "Model",
-#     "ModelAnimation",
-#     "Wave",
-#     "AudioStream",
-#     "Sound",
-#     "Music",
-#     "RayCollision",
-#     "BoundingBox",
-#     "Transform"
-#   )
-#
-# structs_custom <-
-#   c("Color",
-#     "Vector2",
-#     "Vector3",
-#     "Vector4",
-#     "RaylibMatrix"
-#   )
-
 # Get function name from function definition
 extract_fun <- function(x) {
   str_extract(x, regex("( |\\*)[A-Za-z0-9]*\\(", TRUE)) %>%
@@ -86,10 +48,6 @@ extract_param_type_name <- function(p) {
     type <- alias_type(str_replace_all(type, " \\*$", ""))
     pointer <- TRUE
   }
-  # else if (str_starts(name, "\\*")) {
-  #   name <- str_replace_all(name, "^\\*", "")
-  #   pointer <- TRUE
-  # }
 
   list(
     name = name,
@@ -175,10 +133,6 @@ make_rd_params <- function(params, comment = "//") {
   }
 
   paste0(parts, collapse = "\n")
-
-  #map_chr(params, ~ glue("{comment}' @param {make_rcpp_name(.$name)} {make_rd_type(.$type)}.{ifelse(is.null(.$comment), '', paste0(' ', .$comment, '.'))}{ifelse(is.na(.$default), '', paste0(' Default: `', deparse(.$default), '`.'))}")) %>%
-  #str_c(collapse = "\n") %>%
-  #  paste0("\n")
 }
 
 # Generate function documentation for return value
@@ -224,29 +178,6 @@ make_rcpp_params <- function(params, types = TRUE) {
 
   str_c(s, collapse = ", ")
 }
-
-# Construct Rccp code for complete function
-# make_rcpp_fun <- function(d) {
-#   pt <- map_chr(d$params, ~ make_rcpp_name(.$name)) %>%
-#     str_c(collapse = ", ")
-#
-#   if (pt == "void") pt <- ""
-#
-#   glue("//' {make_rd_name(d$name)}
-#        //'
-#        //' {d$comment}
-#        //'
-#        {make_rd_params(d$params)}{make_rd_value(d$ret)}//'
-#        //' @note This function has been auto-generated from the following Raylib function definition:
-#        //'
-#        //' `{d$code}`
-#        //'
-#        //' @export
-#        // [[Rcpp::export]]
-#        {d$ret} {make_rcpp_name(d$name)}({make_rcpp_params(d$params)}) {{
-#          return {d$name}({pt});
-#        }}\n\n")
-# }
 
 # Construct Rccp code for function name (snake case)
 make_rcpp_name <- function(x) {

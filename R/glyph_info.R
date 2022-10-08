@@ -1,4 +1,4 @@
-# Do not edit by hand
+# Do not edit by hand.
 
 #' Glyph info
 #'

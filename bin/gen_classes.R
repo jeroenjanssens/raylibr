@@ -72,7 +72,6 @@ for (line in lines) {
 classes$vector_2$create_class <- FALSE
 classes$vector_3$create_class <- FALSE
 classes$vector_4$create_class <- FALSE
-# classes$color$create_class <- FALSE
 classes$matrix$create_class <- FALSE
 classes$audio_stream$create_class <- FALSE
 classes$bone_info$create_class <- FALSE
@@ -88,15 +87,11 @@ classes$vr_device_info$create_class <- FALSE
 classes$vr_stereo_config$create_class <- FALSE
 classes$wave$create_class <- FALSE
 
-
 classes$vector_2$create_is_function <- FALSE
 classes$vector_3$create_is_function <- FALSE
 classes$vector_4$create_is_function <- FALSE
 classes$matrix$create_is_function <- FALSE
 classes$color$create_is_function <- FALSE
-
-
-
 
 classes$camera_2d$properties$zoom$default <- 1.0
 classes$camera_2d$properties$zoom$comment <- "Camera zoom (scaling)"
@@ -107,13 +102,7 @@ classes$camera_3d$properties$up$default <- c(0, 1, 0)
 classes$camera_3d$properties$projection$default <- 0
 classes$camera_3d$properties$projection$comment <- "Camera projection: either `camera_projection$perspective` (0) or `camera_projection$orthographic` (1)"
 
-#classes$image$create_constructor <- FALSE
-#classes$image$properties$data <- NULL
-
-
-
 # Generate R files --------------------------------------------------------
-
 
 for (cls in classes) {
   # Create R/{class_name}.R
@@ -129,7 +118,7 @@ for (cls in classes) {
   con <- file(filename, open = "wt")
 
   writeLines(glue("
-    # Do not edit by hand
+    # Do not edit by hand.
 
 "), con)
 
@@ -270,36 +259,32 @@ for (cls in classes) {
   # Sys.chmod(filename, "444")
 }
 
-# Generate Cpp files ------------------------------------------------------
+# Generate Cpp file -------------------------------------------------------
 
-for (cls in classes) {
+filename <- here::here("src", "classes.cpp")
+cat(glue("Creating {filename}\n\n"))
+Sys.chmod(filename, "644")
+file.create(filename)
+con <- file(filename, open = "wt")
+  # This code is generated from the following definition in raylib.h:
+writeLines(glue("
+  // Do not edit by hand.
 
-  if (is.null(cls$class_name)) next;
-  # Create src/{class_name}.cpp
+  #include \"raylibr.h\"
 
-  filename <- here::here("src", glue("{cls$class_name}.cpp"))
-  if (!cls$create_class && !cls$create_is_function) {
-    unlink(filename, force = TRUE)
+  // [[Rcpp::plugins(cpp11)]]
+
+"), con)
+
+for (cls in classes[order(names(classes))]) {
+
+  if (is.null(cls$class_name) || (!cls$create_class && !cls$create_is_function)) {
     next;
   }
-  cat(glue("Creating {filename}\n\n"))
-  Sys.chmod(filename, "644")
-  file.create(filename)
-  con <- file(filename, open = "wt")
 
-  writeLines(glue("
-    // Do not edit by hand. This code is generated from the following definition in raylib.h:
-
-"), con)
-
-  writeLines(c(str_c('// ', cls$struct_lines), ""), con)
-
-  writeLines(glue("
-    #include \"raylibr.h\"
-
-    // [[Rcpp::plugins(cpp11)]]
-
-"), con)
+  writeLines(strrep("/", 80), con)
+  writeLines(str_c('// ', cls$struct_lines), con)
+  writeLines(c(strrep("/", 80), ""), con)
 
   if (cls$create_is_function) {
     writeLines(c("namespace Rcpp {", ""), con)
@@ -346,9 +331,9 @@ for (cls in classes) {
     }
   }
 
-  close(con)
 }
 
+close(con)
 
 
 # Generate inst/include/raylibr_types.h -----------------------------------
@@ -360,7 +345,7 @@ file.create(filename)
 con <- file(filename, open = "wt")
 
 writeLines(c(
-  "// Do not edit by hand",
+  "// Do not edit by hand.",
   "",
   "#include <raylib.h>",
   "",

@@ -44,6 +44,7 @@ funs$text_replace$params$text$const_cast <- "char *"
 
 funs$get_char_pressed$families <- "key"
 
+
 # Generate R functions ----------------------------------------------------
 
 filename <- here::here("R", glue("functions.R"))
@@ -52,7 +53,7 @@ file.create(filename)
 con <- file(filename, open = "wt")
 
 writeLines(glue("
-  # Do not edit by hand
+  # Do not edit by hand.
 
 "), con)
 
@@ -84,11 +85,11 @@ for(fun in funs) {
 close(con)
 # Sys.chmod(filename, "444")
 
+# Customizations before genering Cpp functions ----------------------------
 
-
+funs$update_camera <- NULL
 
 # Generate Cpp functions --------------------------------------------------
-
 
 filename <- here::here("src", glue("functions.cpp"))
 Sys.chmod(filename, "644")
@@ -103,9 +104,6 @@ writeLines(glue("
 "), con)
 
 for(fun in funs) {
-  # pt <- map_chr(fun$params, ~ make_rcpp_name(.$name)) %>%
-  #   str_c(collapse = ", ")
-  # if (pt == "void") pt <- ""
 
   writeLines(glue("
        // [[Rcpp::export]]
