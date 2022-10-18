@@ -7,19 +7,19 @@
 draw_line_ex(start_pos, end_pos, thick, color)
 }
 \arguments{
-\item{start_pos}{A numeric vector of length 2.}
+\item{start_pos}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{end_pos}{A numeric vector of length 2.}
+\item{end_pos}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{thick}{A number.}
+\item{thick}{A number or a vector of numbers.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw a line defining thickness.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawLineEx(Vector2 startPos, Vector2 endPos, float thick, Color color);
 }\if{html}{\out{</div>}}

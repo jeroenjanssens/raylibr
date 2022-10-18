@@ -9,17 +9,17 @@ image_draw_rectangle_lines(dst, rec, thick, color)
 \arguments{
 \item{dst}{An image.}
 
-\item{rec}{A rectangle.}
+\item{rec}{A rectangle or a list of rectangles.}
 
-\item{thick}{An integer.}
+\item{thick}{An integer or a vector of integers.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw rectangle lines within an image.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void ImageDrawRectangleLines(Image *dst, Rectangle rec, int thick, Color color);
 }\if{html}{\out{</div>}}

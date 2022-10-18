@@ -7,15 +7,15 @@
 draw_text_codepoint(font, codepoint, position, font_size, tint)
 }
 \arguments{
-\item{font}{A font.}
+\item{font}{A font or a list of fonts.}
 
-\item{codepoint}{An integer.}
+\item{codepoint}{An integer or a vector of integers.}
 
-\item{position}{A numeric vector of length 2.}
+\item{position}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{font_size}{A number.}
+\item{font_size}{A number or a vector of numbers.}
 
-\item{tint}{A color.}
+\item{tint}{A color or a list of colors.}
 }
 \description{
 Draw one character (codepoint).

@@ -7,21 +7,21 @@
 draw_line(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color)
 }
 \arguments{
-\item{start_pos_x}{An integer.}
+\item{start_pos_x}{An integer or a vector of integers.}
 
-\item{start_pos_y}{An integer.}
+\item{start_pos_y}{An integer or a vector of integers.}
 
-\item{end_pos_x}{An integer.}
+\item{end_pos_x}{An integer or a vector of integers.}
 
-\item{end_pos_y}{An integer.}
+\item{end_pos_y}{An integer or a vector of integers.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw a line.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawLine(int startPosX, int startPosY, int endPosX, int endPosY, Color color);
 }\if{html}{\out{</div>}}

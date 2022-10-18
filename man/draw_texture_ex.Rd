@@ -7,21 +7,21 @@
 draw_texture_ex(texture, position, rotation, scale, tint)
 }
 \arguments{
-\item{texture}{A texture.}
+\item{texture}{A texture or a list of textures.}
 
-\item{position}{A numeric vector of length 2.}
+\item{position}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{rotation}{A number.}
+\item{rotation}{A number or a vector of numbers.}
 
-\item{scale}{A number.}
+\item{scale}{A number or a vector of numbers.}
 
-\item{tint}{A color.}
+\item{tint}{A color or a list of colors.}
 }
 \description{
 Draw a Texture2D with extended parameters.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawTextureEx(Texture2D texture, Vector2 position, float rotation, float scale, Color tint);
 }\if{html}{\out{</div>}}

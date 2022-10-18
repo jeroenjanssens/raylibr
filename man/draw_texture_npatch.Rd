@@ -7,23 +7,23 @@
 draw_texture_npatch(texture, n_patch_info, dest, origin, rotation, tint)
 }
 \arguments{
-\item{texture}{A texture.}
+\item{texture}{A texture or a list of textures.}
 
-\item{n_patch_info}{A npatch_info.}
+\item{n_patch_info}{A npatch_info or a list of npatch_infos.}
 
-\item{dest}{A rectangle.}
+\item{dest}{A rectangle or a list of rectangles.}
 
-\item{origin}{A numeric vector of length 2.}
+\item{origin}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{rotation}{A number.}
+\item{rotation}{A number or a vector of numbers.}
 
-\item{tint}{A color.}
+\item{tint}{A color or a list of colors.}
 }
 \description{
 Draws a texture (or part of it) that stretches or shrinks nicely.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawTextureNPatch(Texture2D texture, NPatchInfo nPatchInfo, Rectangle dest, Vector2 origin, float rotation, Color tint);
 }\if{html}{\out{</div>}}

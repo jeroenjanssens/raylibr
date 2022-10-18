@@ -7,15 +7,15 @@
 draw_rectangle_rec(rec, color)
 }
 \arguments{
-\item{rec}{A rectangle.}
+\item{rec}{A rectangle or a list of rectangles.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw a color-filled rectangle.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawRectangleRec(Rectangle rec, Color color);
 }\if{html}{\out{</div>}}

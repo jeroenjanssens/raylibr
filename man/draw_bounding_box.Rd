@@ -7,9 +7,9 @@
 draw_bounding_box(box, color)
 }
 \arguments{
-\item{box}{A bounding_box.}
+\item{box}{A bounding_box or a list of bounding_boxs.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw bounding box (wires).

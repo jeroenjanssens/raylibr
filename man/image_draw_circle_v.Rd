@@ -9,17 +9,17 @@ image_draw_circle_v(dst, center, radius, color)
 \arguments{
 \item{dst}{An image.}
 
-\item{center}{A numeric vector of length 2.}
+\item{center}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{radius}{An integer.}
+\item{radius}{An integer or a vector of integers.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw circle within an image (Vector version).
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void ImageDrawCircleV(Image *dst, Vector2 center, int radius, Color color);
 }\if{html}{\out{</div>}}

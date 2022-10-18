@@ -7,23 +7,23 @@
 draw_circle_sector(center, radius, start_angle, end_angle, segments, color)
 }
 \arguments{
-\item{center}{A numeric vector of length 2.}
+\item{center}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{radius}{A number.}
+\item{radius}{A number or a vector of numbers.}
 
-\item{start_angle}{A number.}
+\item{start_angle}{A number or a vector of numbers.}
 
-\item{end_angle}{A number.}
+\item{end_angle}{A number or a vector of numbers.}
 
-\item{segments}{An integer.}
+\item{segments}{An integer or a vector of integers.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw a piece of a circle.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawCircleSector(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color);
 }\if{html}{\out{</div>}}

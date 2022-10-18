@@ -7,13 +7,13 @@
 draw_model_wires(model, position, scale, tint)
 }
 \arguments{
-\item{model}{A model.}
+\item{model}{A model or a list of models.}
 
-\item{position}{A numeric vector of length 3.}
+\item{position}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{scale}{A number.}
+\item{scale}{A number or a vector of numbers.}
 
-\item{tint}{A color.}
+\item{tint}{A color or a list of colors.}
 }
 \description{
 Draw a model wires (with texture if set).

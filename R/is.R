@@ -1,20 +1,15 @@
-#' @export
 is_bool <- function(x) {
   is.logical(x) && length(x) == 1
 }
 
-#' @export
 is_number <- function(x) {
   is.numeric(x) && length(x) == 1
 }
 
-#' @export
 is_float <- is_number
 
-#' @export
 is_int <- is_number
 
-#' @export
 is_unsigned_int <- function(x) {
   is_int(x) && x >= 0
 }
@@ -61,12 +56,21 @@ is_const_void <- function(x) {
   TRUE
 }
 
+#' @export
 is_music <- function(x) {
   class(x) == "music"
 }
 
 is_unsigned_char <- function(x) {
   is_number(x) && x >= 0 && x <= 255
+}
+
+is_vec <- function(x, is_first_fun) {
+  is.vector(x) && is_first_fun(x[[1]])
+}
+
+is_mat <- function(x, is_first_fun) {
+  is.matrix(x) && is_first_fun(x[1,])
 }
 
 friendly_typeof <- function(x) {
@@ -88,7 +92,7 @@ friendly_typeof <- function(x) {
       paste0("an ", typ)
     } else {
       paste0("a ", typ)
-    } 
+    }
   } else {
     str_len <- paste0("of length ", length(x))
     if (is.null(x)) {
@@ -98,7 +102,7 @@ friendly_typeof <- function(x) {
     } else if (is.numeric(x)) {
       paste0("a numeric vector ", str_len)
     } else if (is.list(x)) {
-      paste0("a list ", str_len)
+      paste0("a list of ", length(x), " ", class(x[[1]]), "s")
     } else {
       paste0("a ", typ, " vector ", str_len)
     }

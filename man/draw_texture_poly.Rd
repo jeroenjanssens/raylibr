@@ -7,17 +7,17 @@
 draw_texture_poly(texture, center, points, texcoords, point_count, tint)
 }
 \arguments{
-\item{texture}{A texture.}
+\item{texture}{A texture or a list of textures.}
 
-\item{center}{A numeric vector of length 2.}
+\item{center}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{points}{A numeric vector of length 2.}
+\item{points}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{texcoords}{A numeric vector of length 2.}
+\item{texcoords}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{point_count}{An integer.}
+\item{point_count}{An integer or a vector of integers.}
 
-\item{tint}{A color.}
+\item{tint}{A color or a list of colors.}
 }
 \description{
 Draw a textured polygon.

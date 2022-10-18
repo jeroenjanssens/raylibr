@@ -7,17 +7,17 @@
 draw_line_3d(start_pos, end_pos, color)
 }
 \arguments{
-\item{start_pos}{A numeric vector of length 3.}
+\item{start_pos}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{end_pos}{A numeric vector of length 3.}
+\item{end_pos}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw a line in 3D world space.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawLine3D(Vector3 startPos, Vector3 endPos, Color color);
 }\if{html}{\out{</div>}}

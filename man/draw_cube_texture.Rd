@@ -7,23 +7,23 @@
 draw_cube_texture(texture, position, width, height, length, color)
 }
 \arguments{
-\item{texture}{A texture.}
+\item{texture}{A texture or a list of textures.}
 
-\item{position}{A numeric vector of length 3.}
+\item{position}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{width}{A number.}
+\item{width}{A number or a vector of numbers.}
 
-\item{height}{A number.}
+\item{height}{A number or a vector of numbers.}
 
-\item{length}{A number.}
+\item{length}{A number or a vector of numbers.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw cube textured.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawCubeTexture(Texture2D texture, Vector3 position, float width, float height, float length, Color color);
 }\if{html}{\out{</div>}}

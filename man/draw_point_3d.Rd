@@ -7,15 +7,15 @@
 draw_point_3d(position, color)
 }
 \arguments{
-\item{position}{A numeric vector of length 3.}
+\item{position}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw a point in 3D space, actually a small line.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawPoint3D(Vector3 position, Color color);
 }\if{html}{\out{</div>}}

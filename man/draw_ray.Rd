@@ -7,9 +7,9 @@
 draw_ray(ray, color)
 }
 \arguments{
-\item{ray}{A ray.}
+\item{ray}{A ray or a list of rays.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw a ray line.

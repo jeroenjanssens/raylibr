@@ -9,21 +9,21 @@ image_draw_rectangle(dst, pos_x, pos_y, width, height, color)
 \arguments{
 \item{dst}{An image.}
 
-\item{pos_x}{An integer.}
+\item{pos_x}{An integer or a vector of integers.}
 
-\item{pos_y}{An integer.}
+\item{pos_y}{An integer or a vector of integers.}
 
-\item{width}{An integer.}
+\item{width}{An integer or a vector of integers.}
 
-\item{height}{An integer.}
+\item{height}{An integer or a vector of integers.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw rectangle within an image.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void ImageDrawRectangle(Image *dst, int posX, int posY, int width, int height, Color color);
 }\if{html}{\out{</div>}}

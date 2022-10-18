@@ -7,17 +7,17 @@
 draw_model_ex(model, position, rotation_axis, rotation_angle, scale, tint)
 }
 \arguments{
-\item{model}{A model.}
+\item{model}{A model or a list of models.}
 
-\item{position}{A numeric vector of length 3.}
+\item{position}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{rotation_axis}{A numeric vector of length 3.}
+\item{rotation_axis}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{rotation_angle}{A number.}
+\item{rotation_angle}{A number or a vector of numbers.}
 
-\item{scale}{A numeric vector of length 3.}
+\item{scale}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{tint}{A color.}
+\item{tint}{A color or a list of colors.}
 }
 \description{
 Draw a model with extended parameters.

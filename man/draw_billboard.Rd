@@ -7,15 +7,15 @@
 draw_billboard(camera, texture, position, size, tint)
 }
 \arguments{
-\item{camera}{A camera_3d.}
+\item{camera}{A camera_3d or a list of camera_3ds.}
 
-\item{texture}{A texture.}
+\item{texture}{A texture or a list of textures.}
 
-\item{position}{A numeric vector of length 3.}
+\item{position}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{size}{A number.}
+\item{size}{A number or a vector of numbers.}
 
-\item{tint}{A color.}
+\item{tint}{A color or a list of colors.}
 }
 \description{
 Draw a billboard texture.

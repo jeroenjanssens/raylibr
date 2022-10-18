@@ -7,23 +7,23 @@
 draw_texture_pro(texture, source, dest, origin, rotation, tint)
 }
 \arguments{
-\item{texture}{A texture.}
+\item{texture}{A texture or a list of textures.}
 
-\item{source}{A rectangle.}
+\item{source}{A rectangle or a list of rectangles.}
 
-\item{dest}{A rectangle.}
+\item{dest}{A rectangle or a list of rectangles.}
 
-\item{origin}{A numeric vector of length 2.}
+\item{origin}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{rotation}{A number.}
+\item{rotation}{A number or a vector of numbers.}
 
-\item{tint}{A color.}
+\item{tint}{A color or a list of colors.}
 }
 \description{
 Draw a part of a texture defined by a rectangle with 'pro' parameters.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawTexturePro(Texture2D texture, Rectangle source, Rectangle dest, Vector2 origin, float rotation, Color tint);
 }\if{html}{\out{</div>}}

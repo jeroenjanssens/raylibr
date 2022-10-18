@@ -14,23 +14,23 @@ draw_line_bezier_cubic(
 )
 }
 \arguments{
-\item{start_pos}{A numeric vector of length 2.}
+\item{start_pos}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{end_pos}{A numeric vector of length 2.}
+\item{end_pos}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{start_control_pos}{A numeric vector of length 2.}
+\item{start_control_pos}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{end_control_pos}{A numeric vector of length 2.}
+\item{end_control_pos}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{thick}{A number.}
+\item{thick}{A number or a vector of numbers.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw line using cubic bezier curves with 2 control points.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawLineBezierCubic(Vector2 startPos, Vector2 endPos, Vector2 startControlPos, Vector2 endControlPos, float thick, Color color);
 }\if{html}{\out{</div>}}

@@ -7,17 +7,17 @@
 draw_rectangle_lines_ex(rec, line_thick, color)
 }
 \arguments{
-\item{rec}{A rectangle.}
+\item{rec}{A rectangle or a list of rectangles.}
 
-\item{line_thick}{A number.}
+\item{line_thick}{A number or a vector of numbers.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw rectangle outline with extended parameters.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawRectangleLinesEx(Rectangle rec, float lineThick, Color color);
 }\if{html}{\out{</div>}}

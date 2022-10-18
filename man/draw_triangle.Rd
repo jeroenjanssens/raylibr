@@ -7,19 +7,19 @@
 draw_triangle(v_1, v_2, v_3, color)
 }
 \arguments{
-\item{v_1}{A numeric vector of length 2.}
+\item{v_1}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{v_2}{A numeric vector of length 2.}
+\item{v_2}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{v_3}{A numeric vector of length 2.}
+\item{v_3}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw a color-filled triangle (vertex in counter-clockwise order!).
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawTriangle(Vector2 v1, Vector2 v2, Vector2 v3, Color color);
 }\if{html}{\out{</div>}}

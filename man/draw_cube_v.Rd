@@ -7,17 +7,17 @@
 draw_cube_v(position, size, color)
 }
 \arguments{
-\item{position}{A numeric vector of length 3.}
+\item{position}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{size}{A numeric vector of length 3.}
+\item{size}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw cube (Vector version).
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawCubeV(Vector3 position, Vector3 size, Color color);
 }\if{html}{\out{</div>}}

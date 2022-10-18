@@ -7,11 +7,11 @@
 draw_triangle_strip_3d(points, point_count, color)
 }
 \arguments{
-\item{points}{A numeric vector of length 3.}
+\item{points}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{point_count}{An integer.}
+\item{point_count}{An integer or a vector of integers.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw a triangle strip defined by points.

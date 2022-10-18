@@ -7,21 +7,21 @@
 draw_poly(center, sides, radius, rotation, color)
 }
 \arguments{
-\item{center}{A numeric vector of length 2.}
+\item{center}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{sides}{An integer.}
+\item{sides}{An integer or a vector of integers.}
 
-\item{radius}{A number.}
+\item{radius}{A number or a vector of numbers.}
 
-\item{rotation}{A number.}
+\item{rotation}{A number or a vector of numbers.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw a regular polygon (Vector version).
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawPoly(Vector2 center, int sides, float radius, float rotation, Color color);
 }\if{html}{\out{</div>}}

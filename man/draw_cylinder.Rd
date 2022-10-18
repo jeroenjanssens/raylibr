@@ -7,23 +7,23 @@
 draw_cylinder(position, radius_top, radius_bottom, height, slices, color)
 }
 \arguments{
-\item{position}{A numeric vector of length 3.}
+\item{position}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{radius_top}{A number.}
+\item{radius_top}{A number or a vector of numbers.}
 
-\item{radius_bottom}{A number.}
+\item{radius_bottom}{A number or a vector of numbers.}
 
-\item{height}{A number.}
+\item{height}{A number or a vector of numbers.}
 
-\item{slices}{An integer.}
+\item{slices}{An integer or a vector of integers.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw a cylinder/cone.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawCylinder(Vector3 position, float radiusTop, float radiusBottom, float height, int slices, Color color);
 }\if{html}{\out{</div>}}

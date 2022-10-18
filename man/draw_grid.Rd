@@ -7,15 +7,15 @@
 draw_grid(slices, spacing)
 }
 \arguments{
-\item{slices}{An integer.}
+\item{slices}{An integer or a vector of integers.}
 
-\item{spacing}{A number.}
+\item{spacing}{A number or a vector of numbers.}
 }
 \description{
 Draw a grid (centered at (0, 0, 0)).
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawGrid(int slices, float spacing);
 }\if{html}{\out{</div>}}

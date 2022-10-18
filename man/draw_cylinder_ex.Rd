@@ -7,23 +7,23 @@
 draw_cylinder_ex(start_pos, end_pos, start_radius, end_radius, sides, color)
 }
 \arguments{
-\item{start_pos}{A numeric vector of length 3.}
+\item{start_pos}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{end_pos}{A numeric vector of length 3.}
+\item{end_pos}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{start_radius}{A number.}
+\item{start_radius}{A number or a vector of numbers.}
 
-\item{end_radius}{A number.}
+\item{end_radius}{A number or a vector of numbers.}
 
-\item{sides}{An integer.}
+\item{sides}{An integer or a vector of integers.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw a cylinder with base at startPos and top at endPos.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawCylinderEx(Vector3 startPos, Vector3 endPos, float startRadius, float endRadius, int sides, Color color);
 }\if{html}{\out{</div>}}

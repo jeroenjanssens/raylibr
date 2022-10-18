@@ -5,16 +5,34 @@ library(dplyr)
 
 families <- c("window", "screen", "monitor", "fps", "cursor", "mode", "shader", "file", "directory", "key", "gamepad", "mouse", "touch", "camera", "draw", "line", "circle", "rectangle", "collision", "image", "color", "text", "texture", "font", "model", "mesh", "material", "audio", "volume", "init", "sound", "wave", "music", "stream", "world", "camera_2d", "camera_3d", "audio_stream")
 
-alias_type <- function(x) {
-  case_when(x == "Camera" ~ "Camera3D",
-            x == "Quaternion" ~ "Vector4",
-            x == "Matrix" ~ "RaylibMatrix",
-            x == "RenderTexture2D" ~ "RenderTexture",
-            x == "Texture2D" ~ "Texture",
-            x == "TextureCubemap" ~ "Texture",
-            x == "unsigned char" ~ "unsigned int",
-            x == "char *" ~ "const char *",
-            TRUE ~ x)
+# need nrow (instead of length)
+vec_classes_matrix <- c("Vector2", "Vector3", "Vector4")
+
+# become a vector (and not a list) when vectorized
+vec_classes_vector <- c("bool", "unsigned int", "int", "float")
+
+alias_type <- function(x, vectorized = FALSE) {
+  if (vectorized) {
+    case_when(x %in% vec_classes_matrix ~ "NumericMatrix",
+              x == "bool" ~ "BooleanVector",
+              x == "int" ~ "NumericVector",
+              x == "float" ~ "NumericVector",
+              x == "unsigned char" ~ "NumericVector",
+              x == "unsigned int" ~ "NumericVector",
+              x == "char *" ~ "CharacterVector",
+              x == "const char *" ~ "CharacterVector",
+              TRUE ~ "List")
+  } else {
+    case_when(x == "Camera" ~ "Camera3D",
+              x == "Quaternion" ~ "Vector4",
+              x == "Matrix" ~ "RaylibMatrix",
+              x == "RenderTexture2D" ~ "RenderTexture",
+              x == "Texture2D" ~ "Texture",
+              x == "TextureCubemap" ~ "Texture",
+              x == "unsigned char" ~ "unsigned int",
+              x == "char *" ~ "const char *",
+              TRUE ~ x)
+  }
 }
 
 # Get function name from function definition
@@ -84,21 +102,43 @@ parse_fun <- function(x) {
 }
 
 # Generate function documentation for types
-make_rd_type <- function(x) {
-  case_when(x == "int" ~ "An integer",
-            x == "unsigned int" ~ "A non-negative integer",
-            x == "unsigned char" ~ "An integer between 0 and 255",
-            x == "float" ~ "A number",
-            x == "bool" ~ "A logical",
-            x == "char" ~ "A string",
-            x == "const char *" ~ "A string",
-            x == "AudioStream" ~ "An audio_stream",
-            x == "Image" ~ "An image",
-            x == "Vector2" ~ "A numeric vector of length 2",
-            x == "Vector3" ~ "A numeric vector of length 3",
-            x == "Vector4" ~ "A numeric vector of length 4",
-            x == "RaylibMatrix" ~ "A numeric matrix of 4 by 4",
-            TRUE ~ paste0("A ", make_rcpp_name(x)))
+make_rd_type <- function(x, is_vectorized = FALSE) {
+
+  first <- case_when(x == "int" ~ "An integer",
+                     x == "unsigned int" ~ "A non-negative integer",
+                     x == "unsigned char" ~ "An integer between 0 and 255",
+                     x == "float" ~ "A number",
+                     x == "bool" ~ "A logical",
+                     x == "char" ~ "A string",
+                     x == "const char *" ~ "A string",
+                     x == "AudioStream" ~ "An audio_stream",
+                     x == "Image" ~ "An image",
+                     x == "Vector2" ~ "A numeric vector of length 2",
+                     x == "Vector3" ~ "A numeric vector of length 3",
+                     x == "Vector4" ~ "A numeric vector of length 4",
+                     x == "RaylibMatrix" ~ "A numeric matrix of 4 by 4",
+                     TRUE ~ paste0("A ", make_rcpp_name(x)))
+
+  if (is.null(is_vectorized) || !is_vectorized) {
+    return(first)
+  }
+
+  second <- case_when(x == "int" ~ "a vector of integers",
+                     x == "unsigned int" ~ "a vector of non-negative integers",
+                     x == "unsigned char" ~ "a vector of integers between 0 and 255",
+                     x == "float" ~ "a vector of numbers",
+                     x == "bool" ~ "a vector of logicals",
+                     x == "char" ~ "a vector of strings",
+                     x == "const char *" ~ "a vector of strings",
+                     x == "AudioStream" ~ "a list of audio_streams",
+                     x == "Image" ~ "a list of images",
+                     x == "Vector2" ~ "a numeric matrix of width 2",
+                     x == "Vector3" ~ "a numeric matrix of width 3",
+                     x == "Vector4" ~ "a numeric matrix of width 4",
+                     x == "RaylibMatrix" ~ "a list of numeric matrices of 4 by 4",
+                     TRUE ~ paste0("a list of ", make_rcpp_name(x), "s"))
+
+  return(paste0(first, " or ", second))
 }
 
 
@@ -111,11 +151,24 @@ make_check <- function(field, type, argname = field) {
   glue("if (!{get_is_function(type)}({argname})) abort(paste0('`{field}` must be {stringr::str_to_lower(make_rd_type(type))}, not ', friendly_typeof({argname}), '.'), call = NULL)")
 }
 
+make_check_vectorized <- function(field, type, argname = field) {
+  if (type %in% c("Vector2", "Vector3", "Vector4")) {
+    vec_function <- "is_mat"
+  } else {
+    vec_function <- "is_vec"
+  }
+  glue("if (!{get_is_function(type)}({argname}) && !{vec_function}({argname}, {get_is_function(type)})) abort(paste0('`{field}` must be {stringr::str_to_lower(make_rd_type(type, TRUE))}, not ', friendly_typeof({argname}), '.'), call = NULL)")
+}
+
 make_checks <- function(params) {
   if(params[[1]]$type == "void") return("")
   s <- c()
   for (p in params) {
-    s <- c(s, indent(make_check(make_rcpp_name(p$name), p$type)))
+    if (is.null(p$is_vectorized) || !p$is_vectorized) {
+      s <- c(s, indent(make_check(make_rcpp_name(p$name), p$type)))
+    } else {
+      s <- c(s, indent(make_check_vectorized(make_rcpp_name(p$name), p$type)))
+    }
   }
   s <- c(s, "")
   paste0(s, collapse = "\n")
@@ -129,7 +182,7 @@ make_rd_params <- function(params, comment = "//") {
   parts <- c()
   for (p in params) {
     default <- deparse(p$default)
-    parts <- c(parts, glue("{comment}' @param {make_rcpp_name(p$name)} {make_rd_type(alias_type(p$type))}.{ifelse(is.null(p$comment), '', paste0(' ', p$comment, '.'))}{ifelse(default == 'NA', '', paste0(' Default: `', default, '`.'))}"))
+    parts <- c(parts, glue("{comment}' @param {make_rcpp_name(p$name)} {make_rd_type(alias_type(p$type), p$is_vectorized)}.{ifelse(is.null(p$comment), '', paste0(' ', p$comment, '.'))}{ifelse(default == 'NA', '', paste0(' Default: `', default, '`.'))}"))
   }
 
   paste0(parts, collapse = "\n")
@@ -160,20 +213,34 @@ make_r_params <- function(params) {
 }
 
 # Construct Rcpp code for function parameters
-make_rcpp_params <- function(params, types = TRUE) {
+make_rcpp_params <- function(params, types = TRUE, vectorized = FALSE) {
   if (params[[1]]$type == "void") return("")
 
   s <- c()
   for (p in params) {
     name <- make_rcpp_name(p$name)
-    if (p$pointer) {
-      name <- glue("&{name}")
-    }
-    if (!types && !is.null(p$const_cast)) {
-      name <- glue("const_cast<{p$const_cast}>({name})")
+    if (vectorized && !is.null(p$is_vectorized) && p$is_vectorized && !types) {
+
+      if (p$type == "Vector2") {
+        name <- glue("Vector2{{ as<float>(wrap({name}(i, 0))), as<float>(wrap({name}(i, 1))) }}")
+      } else if (p$type == "Vector3") {
+        name <- glue("Vector3{{ as<float>(wrap({name}(i, 0))), as<float>(wrap({name}(i, 1))), as<float>(wrap({name}(i, 2))) }}")
+      } else if (p$type == "Vector4") {
+        name <- glue("Vector4{{ as<float>(wrap({name}(i, 0))), as<float>(wrap({name}(i, 1))), as<float>(wrap({name}(i, 2))), as<float>(wrap({name}(i, 3))) }}")
+      } else {
+        name <- glue("{name}[i]")
+      }
+
+    } else {
+      if (p$pointer) {
+        name <- glue("&{name}")
+      }
+      if (!types && !is.null(p$const_cast)) {
+        name <- glue("const_cast<{p$const_cast}>({name})")
+      }
     }
 
-    s <- c(s, glue("{ifelse(types, paste0(alias_type(p$type), ' '), '')}{name}"))
+    s <- c(s, glue("{ifelse(types, paste0(alias_type(p$type, vectorized && !is.null(p$is_vectorized) && p$is_vectorized), ' '), '')}{name}"))
   }
 
   str_c(s, collapse = ", ")
@@ -240,3 +307,5 @@ indent <- function(lines) {
   lines <- unlist(str_split(lines, "\n"))
   str_c("  ", lines)
 }
+
+

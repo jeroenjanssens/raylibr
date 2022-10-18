@@ -9,17 +9,17 @@ image_draw_rectangle_v(dst, position, size, color)
 \arguments{
 \item{dst}{An image.}
 
-\item{position}{A numeric vector of length 2.}
+\item{position}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{size}{A numeric vector of length 2.}
+\item{size}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw rectangle within an image (Vector version).
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void ImageDrawRectangleV(Image *dst, Vector2 position, Vector2 size, Color color);
 }\if{html}{\out{</div>}}

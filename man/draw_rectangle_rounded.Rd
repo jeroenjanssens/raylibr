@@ -7,19 +7,19 @@
 draw_rectangle_rounded(rec, roundness, segments, color)
 }
 \arguments{
-\item{rec}{A rectangle.}
+\item{rec}{A rectangle or a list of rectangles.}
 
-\item{roundness}{A number.}
+\item{roundness}{A number or a vector of numbers.}
 
-\item{segments}{An integer.}
+\item{segments}{An integer or a vector of integers.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw rectangle with rounded edges.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawRectangleRounded(Rectangle rec, float roundness, int segments, Color color);
 }\if{html}{\out{</div>}}

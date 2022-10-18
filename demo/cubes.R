@@ -11,7 +11,11 @@ num_blocks <- 15
 blocks <- seq(num_blocks) - 1
 
 play_music_stream(music)
-set_target_fps(100)
+set_target_fps(300)
+
+xyz <- as.matrix(expand.grid(blocks, blocks, blocks))
+block_scale <- rowSums(xyz) / 30
+cube_color = lapply((rowSums(xyz) * 18) %% 360, color_from_hsv, 0.75, 0.9)
 
 while(!window_should_close()) {
   update_music_stream(music)
@@ -20,25 +24,17 @@ while(!window_should_close()) {
   camera_time <- time * 0.3
   cam$position[c("x", "z")] <- c(cos(camera_time), sin(camera_time)) * 40
 
+  scatter <- sin(block_scale * 20 + time * 4)
+  cube_pos <- (xyz - num_blocks / 2) * scale * c(3, 2, 3) + scatter
+  cube_size <- (2.4 - scale) * block_scale
+
   begin_drawing()
   clear_background("white")
   begin_mode_3d(cam)
   draw_grid(10, 5)
-
-  for (x in blocks) {
-    for (y in blocks) {
-      for (z in blocks) {
-        block_scale = (x + y + z) / 30
-        scatter = sin(block_scale * 20 + time * 4)
-        cube_pos = (c(x, y, z) - num_blocks / 2) * scale * c(3, 2, 3) + scatter
-        cube_size = (2.4 - scale) * block_scale
-        cube_color = color_from_hsv(((x + y + z) * 18) %% 360, 0.75, 0.9)
-        draw_cube(cube_pos, cube_size, cube_size, cube_size, cube_color)
-      }
-    }
-  }
-
+  draw_cube(cube_pos, cube_size, cube_size, cube_size, cube_color)
   end_mode_3d()
+  draw_fps(10, 10)
   end_drawing()
 }
 

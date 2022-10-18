@@ -7,21 +7,21 @@
 draw_sphere_ex(center_pos, radius, rings, slices, color)
 }
 \arguments{
-\item{center_pos}{A numeric vector of length 3.}
+\item{center_pos}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{radius}{A number.}
+\item{radius}{A number or a vector of numbers.}
 
-\item{rings}{An integer.}
+\item{rings}{An integer or a vector of integers.}
 
-\item{slices}{An integer.}
+\item{slices}{An integer or a vector of integers.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw sphere with extended parameters.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawSphereEx(Vector3 centerPos, float radius, int rings, int slices, Color color);
 }\if{html}{\out{</div>}}

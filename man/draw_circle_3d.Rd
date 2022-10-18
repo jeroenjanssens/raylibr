@@ -7,21 +7,21 @@
 draw_circle_3d(center, radius, rotation_axis, rotation_angle, color)
 }
 \arguments{
-\item{center}{A numeric vector of length 3.}
+\item{center}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{radius}{A number.}
+\item{radius}{A number or a vector of numbers.}
 
-\item{rotation_axis}{A numeric vector of length 3.}
+\item{rotation_axis}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{rotation_angle}{A number.}
+\item{rotation_angle}{A number or a vector of numbers.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw a circle in 3D world space.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawCircle3D(Vector3 center, float radius, Vector3 rotationAxis, float rotationAngle, Color color);
 }\if{html}{\out{</div>}}

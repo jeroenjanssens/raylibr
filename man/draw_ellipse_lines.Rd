@@ -7,21 +7,21 @@
 draw_ellipse_lines(center_x, center_y, radius_h, radius_v, color)
 }
 \arguments{
-\item{center_x}{An integer.}
+\item{center_x}{An integer or a vector of integers.}
 
-\item{center_y}{An integer.}
+\item{center_y}{An integer or a vector of integers.}
 
-\item{radius_h}{A number.}
+\item{radius_h}{A number or a vector of numbers.}
 
-\item{radius_v}{A number.}
+\item{radius_v}{A number or a vector of numbers.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw ellipse outline.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawEllipseLines(int centerX, int centerY, float radiusH, float radiusV, Color color);
 }\if{html}{\out{</div>}}

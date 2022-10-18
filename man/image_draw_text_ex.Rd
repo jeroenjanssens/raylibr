@@ -9,23 +9,23 @@ image_draw_text_ex(dst, font, text, position, font_size, spacing, tint)
 \arguments{
 \item{dst}{An image.}
 
-\item{font}{A font.}
+\item{font}{A font or a list of fonts.}
 
-\item{text}{A string.}
+\item{text}{A string or a vector of strings.}
 
-\item{position}{A numeric vector of length 2.}
+\item{position}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{font_size}{A number.}
+\item{font_size}{A number or a vector of numbers.}
 
-\item{spacing}{A number.}
+\item{spacing}{A number or a vector of numbers.}
 
-\item{tint}{A color.}
+\item{tint}{A color or a list of colors.}
 }
 \description{
 Draw text (custom sprite font) within an image (destination).
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void ImageDrawTextEx(Image *dst, Font font, const char *text, Vector2 position, float fontSize, float spacing, Color tint);
 }\if{html}{\out{</div>}}

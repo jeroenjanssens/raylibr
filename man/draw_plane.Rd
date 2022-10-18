@@ -7,17 +7,17 @@
 draw_plane(center_pos, size, color)
 }
 \arguments{
-\item{center_pos}{A numeric vector of length 3.}
+\item{center_pos}{A numeric vector of length 3 or a numeric matrix of width 3.}
 
-\item{size}{A numeric vector of length 2.}
+\item{size}{A numeric vector of length 2 or a numeric matrix of width 2.}
 
-\item{color}{A color.}
+\item{color}{A color or a list of colors.}
 }
 \description{
 Draw a plane XZ.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawPlane(Vector3 centerPos, Vector2 size, Color color);
 }\if{html}{\out{</div>}}
