@@ -5361,6 +5361,20 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// draw_text_vectorized_
+void draw_text_vectorized_(CharacterVector text, NumericVector pos_x, NumericVector pos_y, NumericVector font_size, List color);
+RcppExport SEXP _raylibr_draw_text_vectorized_(SEXP textSEXP, SEXP pos_xSEXP, SEXP pos_ySEXP, SEXP font_sizeSEXP, SEXP colorSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< CharacterVector >::type text(textSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type pos_x(pos_xSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type pos_y(pos_ySEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type font_size(font_sizeSEXP);
+    Rcpp::traits::input_parameter< List >::type color(colorSEXP);
+    draw_text_vectorized_(text, pos_x, pos_y, font_size, color);
+    return R_NilValue;
+END_RCPP
+}
 // draw_text_ex_
 void draw_text_ex_(Font font, const char * text, Vector2 position, float font_size, float spacing, Color tint);
 RcppExport SEXP _raylibr_draw_text_ex_(SEXP fontSEXP, SEXP textSEXP, SEXP positionSEXP, SEXP font_sizeSEXP, SEXP spacingSEXP, SEXP tintSEXP) {
@@ -5373,6 +5387,21 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< float >::type spacing(spacingSEXP);
     Rcpp::traits::input_parameter< Color >::type tint(tintSEXP);
     draw_text_ex_(font, text, position, font_size, spacing, tint);
+    return R_NilValue;
+END_RCPP
+}
+// draw_text_ex_vectorized_
+void draw_text_ex_vectorized_(List font, CharacterVector text, NumericMatrix position, NumericVector font_size, NumericVector spacing, List tint);
+RcppExport SEXP _raylibr_draw_text_ex_vectorized_(SEXP fontSEXP, SEXP textSEXP, SEXP positionSEXP, SEXP font_sizeSEXP, SEXP spacingSEXP, SEXP tintSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< List >::type font(fontSEXP);
+    Rcpp::traits::input_parameter< CharacterVector >::type text(textSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type position(positionSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type font_size(font_sizeSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type spacing(spacingSEXP);
+    Rcpp::traits::input_parameter< List >::type tint(tintSEXP);
+    draw_text_ex_vectorized_(font, text, position, font_size, spacing, tint);
     return R_NilValue;
 END_RCPP
 }
@@ -5393,6 +5422,23 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// draw_text_pro_vectorized_
+void draw_text_pro_vectorized_(List font, CharacterVector text, NumericMatrix position, NumericMatrix origin, NumericVector rotation, NumericVector font_size, NumericVector spacing, List tint);
+RcppExport SEXP _raylibr_draw_text_pro_vectorized_(SEXP fontSEXP, SEXP textSEXP, SEXP positionSEXP, SEXP originSEXP, SEXP rotationSEXP, SEXP font_sizeSEXP, SEXP spacingSEXP, SEXP tintSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< List >::type font(fontSEXP);
+    Rcpp::traits::input_parameter< CharacterVector >::type text(textSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type position(positionSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type origin(originSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type rotation(rotationSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type font_size(font_sizeSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type spacing(spacingSEXP);
+    Rcpp::traits::input_parameter< List >::type tint(tintSEXP);
+    draw_text_pro_vectorized_(font, text, position, origin, rotation, font_size, spacing, tint);
+    return R_NilValue;
+END_RCPP
+}
 // draw_text_codepoint_
 void draw_text_codepoint_(Font font, int codepoint, Vector2 position, float font_size, Color tint);
 RcppExport SEXP _raylibr_draw_text_codepoint_(SEXP fontSEXP, SEXP codepointSEXP, SEXP positionSEXP, SEXP font_sizeSEXP, SEXP tintSEXP) {
@@ -5404,6 +5450,20 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< float >::type font_size(font_sizeSEXP);
     Rcpp::traits::input_parameter< Color >::type tint(tintSEXP);
     draw_text_codepoint_(font, codepoint, position, font_size, tint);
+    return R_NilValue;
+END_RCPP
+}
+// draw_text_codepoint_vectorized_
+void draw_text_codepoint_vectorized_(List font, NumericVector codepoint, NumericMatrix position, NumericVector font_size, List tint);
+RcppExport SEXP _raylibr_draw_text_codepoint_vectorized_(SEXP fontSEXP, SEXP codepointSEXP, SEXP positionSEXP, SEXP font_sizeSEXP, SEXP tintSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< List >::type font(fontSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type codepoint(codepointSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type position(positionSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type font_size(font_sizeSEXP);
+    Rcpp::traits::input_parameter< List >::type tint(tintSEXP);
+    draw_text_codepoint_vectorized_(font, codepoint, position, font_size, tint);
     return R_NilValue;
 END_RCPP
 }
@@ -6064,6 +6124,17 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// draw_ray_vectorized_
+void draw_ray_vectorized_(List ray, List color);
+RcppExport SEXP _raylibr_draw_ray_vectorized_(SEXP raySEXP, SEXP colorSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< List >::type ray(raySEXP);
+    Rcpp::traits::input_parameter< List >::type color(colorSEXP);
+    draw_ray_vectorized_(ray, color);
+    return R_NilValue;
+END_RCPP
+}
 // draw_grid_
 void draw_grid_(int slices, float spacing);
 RcppExport SEXP _raylibr_draw_grid_(SEXP slicesSEXP, SEXP spacingSEXP) {
@@ -6131,6 +6202,19 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// draw_model_vectorized_
+void draw_model_vectorized_(List model, NumericMatrix position, NumericVector scale, List tint);
+RcppExport SEXP _raylibr_draw_model_vectorized_(SEXP modelSEXP, SEXP positionSEXP, SEXP scaleSEXP, SEXP tintSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< List >::type model(modelSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type position(positionSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type scale(scaleSEXP);
+    Rcpp::traits::input_parameter< List >::type tint(tintSEXP);
+    draw_model_vectorized_(model, position, scale, tint);
+    return R_NilValue;
+END_RCPP
+}
 // draw_model_ex_
 void draw_model_ex_(Model model, Vector3 position, Vector3 rotation_axis, float rotation_angle, Vector3 scale, Color tint);
 RcppExport SEXP _raylibr_draw_model_ex_(SEXP modelSEXP, SEXP positionSEXP, SEXP rotation_axisSEXP, SEXP rotation_angleSEXP, SEXP scaleSEXP, SEXP tintSEXP) {
@@ -6143,6 +6227,21 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< Vector3 >::type scale(scaleSEXP);
     Rcpp::traits::input_parameter< Color >::type tint(tintSEXP);
     draw_model_ex_(model, position, rotation_axis, rotation_angle, scale, tint);
+    return R_NilValue;
+END_RCPP
+}
+// draw_model_ex_vectorized_
+void draw_model_ex_vectorized_(List model, NumericMatrix position, NumericMatrix rotation_axis, NumericVector rotation_angle, NumericMatrix scale, List tint);
+RcppExport SEXP _raylibr_draw_model_ex_vectorized_(SEXP modelSEXP, SEXP positionSEXP, SEXP rotation_axisSEXP, SEXP rotation_angleSEXP, SEXP scaleSEXP, SEXP tintSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< List >::type model(modelSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type position(positionSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type rotation_axis(rotation_axisSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type rotation_angle(rotation_angleSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type scale(scaleSEXP);
+    Rcpp::traits::input_parameter< List >::type tint(tintSEXP);
+    draw_model_ex_vectorized_(model, position, rotation_axis, rotation_angle, scale, tint);
     return R_NilValue;
 END_RCPP
 }
@@ -6159,6 +6258,19 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// draw_model_wires_vectorized_
+void draw_model_wires_vectorized_(List model, NumericMatrix position, NumericVector scale, List tint);
+RcppExport SEXP _raylibr_draw_model_wires_vectorized_(SEXP modelSEXP, SEXP positionSEXP, SEXP scaleSEXP, SEXP tintSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< List >::type model(modelSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type position(positionSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type scale(scaleSEXP);
+    Rcpp::traits::input_parameter< List >::type tint(tintSEXP);
+    draw_model_wires_vectorized_(model, position, scale, tint);
+    return R_NilValue;
+END_RCPP
+}
 // draw_bounding_box_
 void draw_bounding_box_(BoundingBox box, Color color);
 RcppExport SEXP _raylibr_draw_bounding_box_(SEXP boxSEXP, SEXP colorSEXP) {
@@ -6167,6 +6279,17 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< BoundingBox >::type box(boxSEXP);
     Rcpp::traits::input_parameter< Color >::type color(colorSEXP);
     draw_bounding_box_(box, color);
+    return R_NilValue;
+END_RCPP
+}
+// draw_bounding_box_vectorized_
+void draw_bounding_box_vectorized_(List box, List color);
+RcppExport SEXP _raylibr_draw_bounding_box_vectorized_(SEXP boxSEXP, SEXP colorSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< List >::type box(boxSEXP);
+    Rcpp::traits::input_parameter< List >::type color(colorSEXP);
+    draw_bounding_box_vectorized_(box, color);
     return R_NilValue;
 END_RCPP
 }
@@ -6181,6 +6304,20 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< float >::type size(sizeSEXP);
     Rcpp::traits::input_parameter< Color >::type tint(tintSEXP);
     draw_billboard_(camera, texture, position, size, tint);
+    return R_NilValue;
+END_RCPP
+}
+// draw_billboard_vectorized_
+void draw_billboard_vectorized_(List camera, List texture, NumericMatrix position, NumericVector size, List tint);
+RcppExport SEXP _raylibr_draw_billboard_vectorized_(SEXP cameraSEXP, SEXP textureSEXP, SEXP positionSEXP, SEXP sizeSEXP, SEXP tintSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< List >::type camera(cameraSEXP);
+    Rcpp::traits::input_parameter< List >::type texture(textureSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type position(positionSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type size(sizeSEXP);
+    Rcpp::traits::input_parameter< List >::type tint(tintSEXP);
+    draw_billboard_vectorized_(camera, texture, position, size, tint);
     return R_NilValue;
 END_RCPP
 }
@@ -7381,9 +7518,13 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_draw_fps_", (DL_FUNC) &_raylibr_draw_fps_, 2},
     {"_raylibr_draw_fps_vectorized_", (DL_FUNC) &_raylibr_draw_fps_vectorized_, 2},
     {"_raylibr_draw_text_", (DL_FUNC) &_raylibr_draw_text_, 5},
+    {"_raylibr_draw_text_vectorized_", (DL_FUNC) &_raylibr_draw_text_vectorized_, 5},
     {"_raylibr_draw_text_ex_", (DL_FUNC) &_raylibr_draw_text_ex_, 6},
+    {"_raylibr_draw_text_ex_vectorized_", (DL_FUNC) &_raylibr_draw_text_ex_vectorized_, 6},
     {"_raylibr_draw_text_pro_", (DL_FUNC) &_raylibr_draw_text_pro_, 8},
+    {"_raylibr_draw_text_pro_vectorized_", (DL_FUNC) &_raylibr_draw_text_pro_vectorized_, 8},
     {"_raylibr_draw_text_codepoint_", (DL_FUNC) &_raylibr_draw_text_codepoint_, 5},
+    {"_raylibr_draw_text_codepoint_vectorized_", (DL_FUNC) &_raylibr_draw_text_codepoint_vectorized_, 5},
     {"_raylibr_measure_text_", (DL_FUNC) &_raylibr_measure_text_, 2},
     {"_raylibr_measure_text_ex_", (DL_FUNC) &_raylibr_measure_text_ex_, 4},
     {"_raylibr_get_glyph_index_", (DL_FUNC) &_raylibr_get_glyph_index_, 2},
@@ -7434,16 +7575,22 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_draw_plane_", (DL_FUNC) &_raylibr_draw_plane_, 3},
     {"_raylibr_draw_plane_vectorized_", (DL_FUNC) &_raylibr_draw_plane_vectorized_, 3},
     {"_raylibr_draw_ray_", (DL_FUNC) &_raylibr_draw_ray_, 2},
+    {"_raylibr_draw_ray_vectorized_", (DL_FUNC) &_raylibr_draw_ray_vectorized_, 2},
     {"_raylibr_draw_grid_", (DL_FUNC) &_raylibr_draw_grid_, 2},
     {"_raylibr_draw_grid_vectorized_", (DL_FUNC) &_raylibr_draw_grid_vectorized_, 2},
     {"_raylibr_load_model_", (DL_FUNC) &_raylibr_load_model_, 1},
     {"_raylibr_unload_model_", (DL_FUNC) &_raylibr_unload_model_, 1},
     {"_raylibr_get_model_bounding_box_", (DL_FUNC) &_raylibr_get_model_bounding_box_, 1},
     {"_raylibr_draw_model_", (DL_FUNC) &_raylibr_draw_model_, 4},
+    {"_raylibr_draw_model_vectorized_", (DL_FUNC) &_raylibr_draw_model_vectorized_, 4},
     {"_raylibr_draw_model_ex_", (DL_FUNC) &_raylibr_draw_model_ex_, 6},
+    {"_raylibr_draw_model_ex_vectorized_", (DL_FUNC) &_raylibr_draw_model_ex_vectorized_, 6},
     {"_raylibr_draw_model_wires_", (DL_FUNC) &_raylibr_draw_model_wires_, 4},
+    {"_raylibr_draw_model_wires_vectorized_", (DL_FUNC) &_raylibr_draw_model_wires_vectorized_, 4},
     {"_raylibr_draw_bounding_box_", (DL_FUNC) &_raylibr_draw_bounding_box_, 2},
+    {"_raylibr_draw_bounding_box_vectorized_", (DL_FUNC) &_raylibr_draw_bounding_box_vectorized_, 2},
     {"_raylibr_draw_billboard_", (DL_FUNC) &_raylibr_draw_billboard_, 5},
+    {"_raylibr_draw_billboard_vectorized_", (DL_FUNC) &_raylibr_draw_billboard_vectorized_, 5},
     {"_raylibr_check_collision_spheres_", (DL_FUNC) &_raylibr_check_collision_spheres_, 4},
     {"_raylibr_check_collision_boxes_", (DL_FUNC) &_raylibr_check_collision_boxes_, 2},
     {"_raylibr_check_collision_box_sphere_", (DL_FUNC) &_raylibr_check_collision_box_sphere_, 3},

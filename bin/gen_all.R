@@ -163,29 +163,8 @@ funs$text_replace$params$text$const_cast <- "char *"
 
 funs$get_char_pressed$families <- "key"
 
-funs$draw_texture_poly$is_vectorized <- FALSE
-funs$draw_billboard$is_vectorized <- FALSE
-funs$draw_bounding_box$is_vectorized <- FALSE
-funs$draw_model$is_vectorized <- FALSE
-funs$draw_model_ex$is_vectorized <- FALSE
-funs$draw_model_wires$is_vectorized <- FALSE
-funs$draw_ray$is_vectorized <- FALSE
-funs$draw_text_ex$is_vectorized <- FALSE
-funs$draw_text_pro$is_vectorized <- FALSE
-funs$draw_text$is_vectorized <- FALSE
-funs$draw_text_codepoint$is_vectorized <- FALSE
-
-#funs$draw_circle$is_vectorized <- TRUE
-# funs$draw_circle$params$color$is_vectorized <- FALSE
-#funs$draw_cube$is_vectorized <- TRUE
-
 funs$draw_triangle_strip_3d$is_vectorized <- FALSE
 funs$draw_texture_poly$is_vectorized <- FALSE
-
-
-
-
-
 
 
 # Generate R class files -------------------------------------------------------

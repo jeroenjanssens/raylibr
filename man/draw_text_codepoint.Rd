@@ -21,7 +21,7 @@ draw_text_codepoint(font, codepoint, position, font_size, tint)
 Draw one character (codepoint).
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawTextCodepoint(Font font, int codepoint, Vector2 position, float fontSize, Color tint);
 }\if{html}{\out{</div>}}

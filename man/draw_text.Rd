@@ -21,7 +21,7 @@ draw_text(text, pos_x, pos_y, font_size, color)
 Draw text (using default font).
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawText(const char *text, int posX, int posY, int fontSize, Color color);
 }\if{html}{\out{</div>}}

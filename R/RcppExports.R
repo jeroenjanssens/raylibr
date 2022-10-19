@@ -1809,16 +1809,32 @@ draw_text_ <- function(text, pos_x, pos_y, font_size, color) {
     invisible(.Call(`_raylibr_draw_text_`, text, pos_x, pos_y, font_size, color))
 }
 
+draw_text_vectorized_ <- function(text, pos_x, pos_y, font_size, color) {
+    invisible(.Call(`_raylibr_draw_text_vectorized_`, text, pos_x, pos_y, font_size, color))
+}
+
 draw_text_ex_ <- function(font, text, position, font_size, spacing, tint) {
     invisible(.Call(`_raylibr_draw_text_ex_`, font, text, position, font_size, spacing, tint))
+}
+
+draw_text_ex_vectorized_ <- function(font, text, position, font_size, spacing, tint) {
+    invisible(.Call(`_raylibr_draw_text_ex_vectorized_`, font, text, position, font_size, spacing, tint))
 }
 
 draw_text_pro_ <- function(font, text, position, origin, rotation, font_size, spacing, tint) {
     invisible(.Call(`_raylibr_draw_text_pro_`, font, text, position, origin, rotation, font_size, spacing, tint))
 }
 
+draw_text_pro_vectorized_ <- function(font, text, position, origin, rotation, font_size, spacing, tint) {
+    invisible(.Call(`_raylibr_draw_text_pro_vectorized_`, font, text, position, origin, rotation, font_size, spacing, tint))
+}
+
 draw_text_codepoint_ <- function(font, codepoint, position, font_size, tint) {
     invisible(.Call(`_raylibr_draw_text_codepoint_`, font, codepoint, position, font_size, tint))
+}
+
+draw_text_codepoint_vectorized_ <- function(font, codepoint, position, font_size, tint) {
+    invisible(.Call(`_raylibr_draw_text_codepoint_vectorized_`, font, codepoint, position, font_size, tint))
 }
 
 measure_text_ <- function(text, font_size) {
@@ -2021,6 +2037,10 @@ draw_ray_ <- function(ray, color) {
     invisible(.Call(`_raylibr_draw_ray_`, ray, color))
 }
 
+draw_ray_vectorized_ <- function(ray, color) {
+    invisible(.Call(`_raylibr_draw_ray_vectorized_`, ray, color))
+}
+
 draw_grid_ <- function(slices, spacing) {
     invisible(.Call(`_raylibr_draw_grid_`, slices, spacing))
 }
@@ -2045,20 +2065,40 @@ draw_model_ <- function(model, position, scale, tint) {
     invisible(.Call(`_raylibr_draw_model_`, model, position, scale, tint))
 }
 
+draw_model_vectorized_ <- function(model, position, scale, tint) {
+    invisible(.Call(`_raylibr_draw_model_vectorized_`, model, position, scale, tint))
+}
+
 draw_model_ex_ <- function(model, position, rotation_axis, rotation_angle, scale, tint) {
     invisible(.Call(`_raylibr_draw_model_ex_`, model, position, rotation_axis, rotation_angle, scale, tint))
+}
+
+draw_model_ex_vectorized_ <- function(model, position, rotation_axis, rotation_angle, scale, tint) {
+    invisible(.Call(`_raylibr_draw_model_ex_vectorized_`, model, position, rotation_axis, rotation_angle, scale, tint))
 }
 
 draw_model_wires_ <- function(model, position, scale, tint) {
     invisible(.Call(`_raylibr_draw_model_wires_`, model, position, scale, tint))
 }
 
+draw_model_wires_vectorized_ <- function(model, position, scale, tint) {
+    invisible(.Call(`_raylibr_draw_model_wires_vectorized_`, model, position, scale, tint))
+}
+
 draw_bounding_box_ <- function(box, color) {
     invisible(.Call(`_raylibr_draw_bounding_box_`, box, color))
 }
 
+draw_bounding_box_vectorized_ <- function(box, color) {
+    invisible(.Call(`_raylibr_draw_bounding_box_vectorized_`, box, color))
+}
+
 draw_billboard_ <- function(camera, texture, position, size, tint) {
     invisible(.Call(`_raylibr_draw_billboard_`, camera, texture, position, size, tint))
+}
+
+draw_billboard_vectorized_ <- function(camera, texture, position, size, tint) {
+    invisible(.Call(`_raylibr_draw_billboard_vectorized_`, camera, texture, position, size, tint))
 }
 
 check_collision_spheres_ <- function(center_1, radius_1, center_2, radius_2) {

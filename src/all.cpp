@@ -3325,8 +3325,22 @@ void draw_text_(const char * text, int pos_x, int pos_y, int font_size, Color co
 }
 
 // [[Rcpp::export]]
+void draw_text_vectorized_(CharacterVector text, NumericVector pos_x, NumericVector pos_y, NumericVector font_size, List color) {
+  for (int i = 0; i < text.length(); i++) {
+    DrawText(text[i], pos_x[i], pos_y[i], font_size[i], color[i]);
+  }
+}
+
+// [[Rcpp::export]]
 void draw_text_ex_(Font font, const char * text, Vector2 position, float font_size, float spacing, Color tint) {
   return DrawTextEx(font, text, position, font_size, spacing, tint);
+}
+
+// [[Rcpp::export]]
+void draw_text_ex_vectorized_(List font, CharacterVector text, NumericMatrix position, NumericVector font_size, NumericVector spacing, List tint) {
+  for (int i = 0; i < font.length(); i++) {
+    DrawTextEx(font[i], text[i], Vector2{ as<float>(wrap(position(i, 0))), as<float>(wrap(position(i, 1))) }, font_size[i], spacing[i], tint[i]);
+  }
 }
 
 // [[Rcpp::export]]
@@ -3335,8 +3349,22 @@ void draw_text_pro_(Font font, const char * text, Vector2 position, Vector2 orig
 }
 
 // [[Rcpp::export]]
+void draw_text_pro_vectorized_(List font, CharacterVector text, NumericMatrix position, NumericMatrix origin, NumericVector rotation, NumericVector font_size, NumericVector spacing, List tint) {
+  for (int i = 0; i < font.length(); i++) {
+    DrawTextPro(font[i], text[i], Vector2{ as<float>(wrap(position(i, 0))), as<float>(wrap(position(i, 1))) }, Vector2{ as<float>(wrap(origin(i, 0))), as<float>(wrap(origin(i, 1))) }, rotation[i], font_size[i], spacing[i], tint[i]);
+  }
+}
+
+// [[Rcpp::export]]
 void draw_text_codepoint_(Font font, int codepoint, Vector2 position, float font_size, Color tint) {
   return DrawTextCodepoint(font, codepoint, position, font_size, tint);
+}
+
+// [[Rcpp::export]]
+void draw_text_codepoint_vectorized_(List font, NumericVector codepoint, NumericMatrix position, NumericVector font_size, List tint) {
+  for (int i = 0; i < font.length(); i++) {
+    DrawTextCodepoint(font[i], codepoint[i], Vector2{ as<float>(wrap(position(i, 0))), as<float>(wrap(position(i, 1))) }, font_size[i], tint[i]);
+  }
 }
 
 // [[Rcpp::export]]
@@ -3626,6 +3654,13 @@ void draw_ray_(Ray ray, Color color) {
 }
 
 // [[Rcpp::export]]
+void draw_ray_vectorized_(List ray, List color) {
+  for (int i = 0; i < ray.length(); i++) {
+    DrawRay(ray[i], color[i]);
+  }
+}
+
+// [[Rcpp::export]]
 void draw_grid_(int slices, float spacing) {
   return DrawGrid(slices, spacing);
 }
@@ -3658,8 +3693,22 @@ void draw_model_(Model model, Vector3 position, float scale, Color tint) {
 }
 
 // [[Rcpp::export]]
+void draw_model_vectorized_(List model, NumericMatrix position, NumericVector scale, List tint) {
+  for (int i = 0; i < model.length(); i++) {
+    DrawModel(model[i], Vector3{ as<float>(wrap(position(i, 0))), as<float>(wrap(position(i, 1))), as<float>(wrap(position(i, 2))) }, scale[i], tint[i]);
+  }
+}
+
+// [[Rcpp::export]]
 void draw_model_ex_(Model model, Vector3 position, Vector3 rotation_axis, float rotation_angle, Vector3 scale, Color tint) {
   return DrawModelEx(model, position, rotation_axis, rotation_angle, scale, tint);
+}
+
+// [[Rcpp::export]]
+void draw_model_ex_vectorized_(List model, NumericMatrix position, NumericMatrix rotation_axis, NumericVector rotation_angle, NumericMatrix scale, List tint) {
+  for (int i = 0; i < model.length(); i++) {
+    DrawModelEx(model[i], Vector3{ as<float>(wrap(position(i, 0))), as<float>(wrap(position(i, 1))), as<float>(wrap(position(i, 2))) }, Vector3{ as<float>(wrap(rotation_axis(i, 0))), as<float>(wrap(rotation_axis(i, 1))), as<float>(wrap(rotation_axis(i, 2))) }, rotation_angle[i], Vector3{ as<float>(wrap(scale(i, 0))), as<float>(wrap(scale(i, 1))), as<float>(wrap(scale(i, 2))) }, tint[i]);
+  }
 }
 
 // [[Rcpp::export]]
@@ -3668,13 +3717,34 @@ void draw_model_wires_(Model model, Vector3 position, float scale, Color tint) {
 }
 
 // [[Rcpp::export]]
+void draw_model_wires_vectorized_(List model, NumericMatrix position, NumericVector scale, List tint) {
+  for (int i = 0; i < model.length(); i++) {
+    DrawModelWires(model[i], Vector3{ as<float>(wrap(position(i, 0))), as<float>(wrap(position(i, 1))), as<float>(wrap(position(i, 2))) }, scale[i], tint[i]);
+  }
+}
+
+// [[Rcpp::export]]
 void draw_bounding_box_(BoundingBox box, Color color) {
   return DrawBoundingBox(box, color);
 }
 
 // [[Rcpp::export]]
+void draw_bounding_box_vectorized_(List box, List color) {
+  for (int i = 0; i < box.length(); i++) {
+    DrawBoundingBox(box[i], color[i]);
+  }
+}
+
+// [[Rcpp::export]]
 void draw_billboard_(Camera3D camera, Texture texture, Vector3 position, float size, Color tint) {
   return DrawBillboard(camera, texture, position, size, tint);
+}
+
+// [[Rcpp::export]]
+void draw_billboard_vectorized_(List camera, List texture, NumericMatrix position, NumericVector size, List tint) {
+  for (int i = 0; i < camera.length(); i++) {
+    DrawBillboard(camera[i], texture[i], Vector3{ as<float>(wrap(position(i, 0))), as<float>(wrap(position(i, 1))), as<float>(wrap(position(i, 2))) }, size[i], tint[i]);
+  }
 }
 
 // [[Rcpp::export]]

@@ -23,7 +23,7 @@ draw_text_ex(font, text, position, font_size, spacing, tint)
 Draw text using font and additional parameters.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawTextEx(Font font, const char *text, Vector2 position, float fontSize, float spacing, Color tint);
 }\if{html}{\out{</div>}}

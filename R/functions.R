@@ -7898,7 +7898,7 @@ draw_fps <- function(pos_x, pos_y) {
 #' @param color A color or a list of colors.
 #'
 #'
-#' @note This function has been auto-generated from the following Raylib function definition:
+#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawText(const char *text, int posX, int posY, int fontSize, Color color);
@@ -7917,7 +7917,19 @@ draw_text <- function(text, pos_x, pos_y, font_size, color) {
   if (!is_int(pos_y) && !is_vec(pos_y, is_int)) abort(paste0('`pos_y` must be an integer or a vector of integers, not ', friendly_typeof(pos_y), '.'), call = NULL)
   if (!is_int(font_size) && !is_vec(font_size, is_int)) abort(paste0('`font_size` must be an integer or a vector of integers, not ', friendly_typeof(font_size), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-  draw_text_(text, pos_x, pos_y, font_size, color)
+
+  lens <- c(length(text), length(pos_x), length(pos_y), length(font_size), length(color))
+  if (any(lens > 1)) {
+    max_len <- max(lens)
+    if (lens[1] < max_len) text <- rep(unlist(list(text)), length.out = max_len)
+    if (lens[2] < max_len) pos_x <- rep(pos_x, length.out = max_len)
+    if (lens[3] < max_len) pos_y <- rep(pos_y, length.out = max_len)
+    if (lens[4] < max_len) font_size <- rep(font_size, length.out = max_len)
+    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
+    draw_text_vectorized_(text, pos_x, pos_y, font_size, color)
+  } else {
+    draw_text_(text, pos_x, pos_y, font_size, color)
+  }
 }
 
 #' Draw text ex
@@ -7932,7 +7944,7 @@ draw_text <- function(text, pos_x, pos_y, font_size, color) {
 #' @param tint A color or a list of colors.
 #'
 #'
-#' @note This function has been auto-generated from the following Raylib function definition:
+#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawTextEx(Font font, const char *text, Vector2 position, float fontSize, float spacing, Color tint);
@@ -7953,7 +7965,20 @@ draw_text_ex <- function(font, text, position, font_size, spacing, tint) {
   if (!is_float(font_size) && !is_vec(font_size, is_float)) abort(paste0('`font_size` must be a number or a vector of numbers, not ', friendly_typeof(font_size), '.'), call = NULL)
   if (!is_float(spacing) && !is_vec(spacing, is_float)) abort(paste0('`spacing` must be a number or a vector of numbers, not ', friendly_typeof(spacing), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-  draw_text_ex_(font, text, position, font_size, spacing, tint)
+
+  lens <- c(length(font), length(text), nrow(position), length(font_size), length(spacing), length(tint))
+  if (any(lens > 1)) {
+    max_len <- max(lens)
+    if (lens[1] < max_len) font <- rep(unlist(list(font)), length.out = max_len)
+    if (lens[2] < max_len) text <- rep(unlist(list(text)), length.out = max_len)
+    if (lens[3] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[4] < max_len) font_size <- rep(font_size, length.out = max_len)
+    if (lens[5] < max_len) spacing <- rep(spacing, length.out = max_len)
+    if (lens[6] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
+    draw_text_ex_vectorized_(font, text, position, font_size, spacing, tint)
+  } else {
+    draw_text_ex_(font, text, position, font_size, spacing, tint)
+  }
 }
 
 #' Draw text pro
@@ -7970,7 +7995,7 @@ draw_text_ex <- function(font, text, position, font_size, spacing, tint) {
 #' @param tint A color or a list of colors.
 #'
 #'
-#' @note This function has been auto-generated from the following Raylib function definition:
+#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawTextPro(Font font, const char *text, Vector2 position, Vector2 origin, float rotation, float fontSize, float spacing, Color tint);
@@ -7993,7 +8018,22 @@ draw_text_pro <- function(font, text, position, origin, rotation, font_size, spa
   if (!is_float(font_size) && !is_vec(font_size, is_float)) abort(paste0('`font_size` must be a number or a vector of numbers, not ', friendly_typeof(font_size), '.'), call = NULL)
   if (!is_float(spacing) && !is_vec(spacing, is_float)) abort(paste0('`spacing` must be a number or a vector of numbers, not ', friendly_typeof(spacing), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-  draw_text_pro_(font, text, position, origin, rotation, font_size, spacing, tint)
+
+  lens <- c(length(font), length(text), nrow(position), nrow(origin), length(rotation), length(font_size), length(spacing), length(tint))
+  if (any(lens > 1)) {
+    max_len <- max(lens)
+    if (lens[1] < max_len) font <- rep(unlist(list(font)), length.out = max_len)
+    if (lens[2] < max_len) text <- rep(unlist(list(text)), length.out = max_len)
+    if (lens[3] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[4] < max_len) origin <- rep(origin, length.out = max_len)
+    if (lens[5] < max_len) rotation <- rep(rotation, length.out = max_len)
+    if (lens[6] < max_len) font_size <- rep(font_size, length.out = max_len)
+    if (lens[7] < max_len) spacing <- rep(spacing, length.out = max_len)
+    if (lens[8] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
+    draw_text_pro_vectorized_(font, text, position, origin, rotation, font_size, spacing, tint)
+  } else {
+    draw_text_pro_(font, text, position, origin, rotation, font_size, spacing, tint)
+  }
 }
 
 #' Draw text codepoint
@@ -8007,7 +8047,7 @@ draw_text_pro <- function(font, text, position, origin, rotation, font_size, spa
 #' @param tint A color or a list of colors.
 #'
 #'
-#' @note This function has been auto-generated from the following Raylib function definition:
+#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawTextCodepoint(Font font, int codepoint, Vector2 position, float fontSize, Color tint);
@@ -8027,7 +8067,19 @@ draw_text_codepoint <- function(font, codepoint, position, font_size, tint) {
   if (!is_vector_2(position) && !is_mat(position, is_vector_2)) abort(paste0('`position` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_float(font_size) && !is_vec(font_size, is_float)) abort(paste0('`font_size` must be a number or a vector of numbers, not ', friendly_typeof(font_size), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-  draw_text_codepoint_(font, codepoint, position, font_size, tint)
+
+  lens <- c(length(font), length(codepoint), nrow(position), length(font_size), length(tint))
+  if (any(lens > 1)) {
+    max_len <- max(lens)
+    if (lens[1] < max_len) font <- rep(unlist(list(font)), length.out = max_len)
+    if (lens[2] < max_len) codepoint <- rep(codepoint, length.out = max_len)
+    if (lens[3] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[4] < max_len) font_size <- rep(font_size, length.out = max_len)
+    if (lens[5] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
+    draw_text_codepoint_vectorized_(font, codepoint, position, font_size, tint)
+  } else {
+    draw_text_codepoint_(font, codepoint, position, font_size, tint)
+  }
 }
 
 #' Measure text
@@ -9146,7 +9198,7 @@ draw_plane <- function(center_pos, size, color) {
 #' @param color A color or a list of colors.
 #'
 #'
-#' @note This function has been auto-generated from the following Raylib function definition:
+#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawRay(Ray ray, Color color);
@@ -9161,7 +9213,16 @@ draw_plane <- function(center_pos, size, color) {
 draw_ray <- function(ray, color) {
   if (!is_ray(ray) && !is_vec(ray, is_ray)) abort(paste0('`ray` must be a ray or a list of rays, not ', friendly_typeof(ray), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-  draw_ray_(ray, color)
+
+  lens <- c(length(ray), length(color))
+  if (any(lens > 1)) {
+    max_len <- max(lens)
+    if (lens[1] < max_len) ray <- rep(unlist(list(ray)), length.out = max_len)
+    if (lens[2] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
+    draw_ray_vectorized_(ray, color)
+  } else {
+    draw_ray_(ray, color)
+  }
 }
 
 #' Draw grid
@@ -9279,7 +9340,7 @@ get_model_bounding_box <- function(model) {
 #' @param tint A color or a list of colors.
 #'
 #'
-#' @note This function has been auto-generated from the following Raylib function definition:
+#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawModel(Model model, Vector3 position, float scale, Color tint);
@@ -9298,7 +9359,18 @@ draw_model <- function(model, position, scale, tint) {
   if (!is_vector_3(position) && !is_mat(position, is_vector_3)) abort(paste0('`position` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_float(scale) && !is_vec(scale, is_float)) abort(paste0('`scale` must be a number or a vector of numbers, not ', friendly_typeof(scale), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-  draw_model_(model, position, scale, tint)
+
+  lens <- c(length(model), nrow(position), length(scale), length(tint))
+  if (any(lens > 1)) {
+    max_len <- max(lens)
+    if (lens[1] < max_len) model <- rep(unlist(list(model)), length.out = max_len)
+    if (lens[2] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[3] < max_len) scale <- rep(scale, length.out = max_len)
+    if (lens[4] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
+    draw_model_vectorized_(model, position, scale, tint)
+  } else {
+    draw_model_(model, position, scale, tint)
+  }
 }
 
 #' Draw model ex
@@ -9313,7 +9385,7 @@ draw_model <- function(model, position, scale, tint) {
 #' @param tint A color or a list of colors.
 #'
 #'
-#' @note This function has been auto-generated from the following Raylib function definition:
+#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawModelEx(Model model, Vector3 position, Vector3 rotationAxis, float rotationAngle, Vector3 scale, Color tint);
@@ -9334,7 +9406,20 @@ draw_model_ex <- function(model, position, rotation_axis, rotation_angle, scale,
   if (!is_float(rotation_angle) && !is_vec(rotation_angle, is_float)) abort(paste0('`rotation_angle` must be a number or a vector of numbers, not ', friendly_typeof(rotation_angle), '.'), call = NULL)
   if (!is_vector_3(scale) && !is_mat(scale, is_vector_3)) abort(paste0('`scale` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(scale), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-  draw_model_ex_(model, position, rotation_axis, rotation_angle, scale, tint)
+
+  lens <- c(length(model), nrow(position), nrow(rotation_axis), length(rotation_angle), nrow(scale), length(tint))
+  if (any(lens > 1)) {
+    max_len <- max(lens)
+    if (lens[1] < max_len) model <- rep(unlist(list(model)), length.out = max_len)
+    if (lens[2] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[3] < max_len) rotation_axis <- rep(rotation_axis, length.out = max_len)
+    if (lens[4] < max_len) rotation_angle <- rep(rotation_angle, length.out = max_len)
+    if (lens[5] < max_len) scale <- rep(scale, length.out = max_len)
+    if (lens[6] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
+    draw_model_ex_vectorized_(model, position, rotation_axis, rotation_angle, scale, tint)
+  } else {
+    draw_model_ex_(model, position, rotation_axis, rotation_angle, scale, tint)
+  }
 }
 
 #' Draw model wires
@@ -9347,7 +9432,7 @@ draw_model_ex <- function(model, position, rotation_axis, rotation_angle, scale,
 #' @param tint A color or a list of colors.
 #'
 #'
-#' @note This function has been auto-generated from the following Raylib function definition:
+#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawModelWires(Model model, Vector3 position, float scale, Color tint);
@@ -9366,7 +9451,18 @@ draw_model_wires <- function(model, position, scale, tint) {
   if (!is_vector_3(position) && !is_mat(position, is_vector_3)) abort(paste0('`position` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_float(scale) && !is_vec(scale, is_float)) abort(paste0('`scale` must be a number or a vector of numbers, not ', friendly_typeof(scale), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-  draw_model_wires_(model, position, scale, tint)
+
+  lens <- c(length(model), nrow(position), length(scale), length(tint))
+  if (any(lens > 1)) {
+    max_len <- max(lens)
+    if (lens[1] < max_len) model <- rep(unlist(list(model)), length.out = max_len)
+    if (lens[2] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[3] < max_len) scale <- rep(scale, length.out = max_len)
+    if (lens[4] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
+    draw_model_wires_vectorized_(model, position, scale, tint)
+  } else {
+    draw_model_wires_(model, position, scale, tint)
+  }
 }
 
 #' Draw bounding box
@@ -9377,7 +9473,7 @@ draw_model_wires <- function(model, position, scale, tint) {
 #' @param color A color or a list of colors.
 #'
 #'
-#' @note This function has been auto-generated from the following Raylib function definition:
+#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawBoundingBox(BoundingBox box, Color color);
@@ -9392,7 +9488,16 @@ draw_model_wires <- function(model, position, scale, tint) {
 draw_bounding_box <- function(box, color) {
   if (!is_bounding_box(box) && !is_vec(box, is_bounding_box)) abort(paste0('`box` must be a bounding_box or a list of bounding_boxs, not ', friendly_typeof(box), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-  draw_bounding_box_(box, color)
+
+  lens <- c(length(box), length(color))
+  if (any(lens > 1)) {
+    max_len <- max(lens)
+    if (lens[1] < max_len) box <- rep(unlist(list(box)), length.out = max_len)
+    if (lens[2] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
+    draw_bounding_box_vectorized_(box, color)
+  } else {
+    draw_bounding_box_(box, color)
+  }
 }
 
 #' Draw billboard
@@ -9406,7 +9511,7 @@ draw_bounding_box <- function(box, color) {
 #' @param tint A color or a list of colors.
 #'
 #'
-#' @note This function has been auto-generated from the following Raylib function definition:
+#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawBillboard(Camera camera, Texture2D texture, Vector3 position, float size, Color tint);
@@ -9426,7 +9531,19 @@ draw_billboard <- function(camera, texture, position, size, tint) {
   if (!is_vector_3(position) && !is_mat(position, is_vector_3)) abort(paste0('`position` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_float(size) && !is_vec(size, is_float)) abort(paste0('`size` must be a number or a vector of numbers, not ', friendly_typeof(size), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-  draw_billboard_(camera, texture, position, size, tint)
+
+  lens <- c(length(camera), length(texture), nrow(position), length(size), length(tint))
+  if (any(lens > 1)) {
+    max_len <- max(lens)
+    if (lens[1] < max_len) camera <- rep(unlist(list(camera)), length.out = max_len)
+    if (lens[2] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
+    if (lens[3] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[4] < max_len) size <- rep(size, length.out = max_len)
+    if (lens[5] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
+    draw_billboard_vectorized_(camera, texture, position, size, tint)
+  } else {
+    draw_billboard_(camera, texture, position, size, tint)
+  }
 }
 
 #' Check collision spheres

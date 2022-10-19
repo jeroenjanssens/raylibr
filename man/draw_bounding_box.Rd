@@ -15,7 +15,7 @@ draw_bounding_box(box, color)
 Draw bounding box (wires).
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawBoundingBox(BoundingBox box, Color color);
 }\if{html}{\out{</div>}}

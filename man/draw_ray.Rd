@@ -15,7 +15,7 @@ draw_ray(ray, color)
 Draw a ray line.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawRay(Ray ray, Color color);
 }\if{html}{\out{</div>}}

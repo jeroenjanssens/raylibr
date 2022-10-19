@@ -21,7 +21,7 @@ draw_billboard(camera, texture, position, size, tint)
 Draw a billboard texture.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawBillboard(Camera camera, Texture2D texture, Vector3 position, float size, Color tint);
 }\if{html}{\out{</div>}}

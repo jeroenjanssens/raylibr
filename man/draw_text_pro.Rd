@@ -27,7 +27,7 @@ draw_text_pro(font, text, position, origin, rotation, font_size, spacing, tint)
 Draw text using Font and pro parameters (rotation).
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawTextPro(Font font, const char *text, Vector2 position, Vector2 origin, float rotation, float fontSize, float spacing, Color tint);
 }\if{html}{\out{</div>}}

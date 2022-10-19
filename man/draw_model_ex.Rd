@@ -23,7 +23,7 @@ draw_model_ex(model, position, rotation_axis, rotation_angle, scale, tint)
 Draw a model with extended parameters.
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawModelEx(Model model, Vector3 position, Vector3 rotationAxis, float rotationAngle, Vector3 scale, Color tint);
 }\if{html}{\out{</div>}}

@@ -19,7 +19,7 @@ draw_model_wires(model, position, scale, tint)
 Draw a model wires (with texture if set).
 }
 \note{
-This function has been auto-generated from the following Raylib function definition:
+This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawModelWires(Model model, Vector3 position, float scale, Color tint);
 }\if{html}{\out{</div>}}
