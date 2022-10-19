@@ -28,3 +28,40 @@ You can install the development version of raylibr from [GitHub](https://github.
 ```{r, eval = FALSE}
 remotes::install_github("jeroenjanssens/raylibr")
 ```
+
+## Demos
+
+```{r, eval = FALSE}
+demo("snake", package = "raylibr")
+```
+
+<img src="man/figures/raylibr-demo-snake.gif" width="666" />
+
+```{r, eval = FALSE}
+demo("model", package = "raylibr")
+```
+
+<img src="man/figures/raylibr-demo-model.gif" width="666" />
+
+```{r, eval = FALSE}
+demo("balls", package = "raylibr")
+```
+
+<img src="man/figures/raylibr-demo-balls.gif" width="666" />
+
+```{r, eval = FALSE}
+demo("cubes", package = "raylibr")
+```
+
+<img src="man/figures/raylibr-demo-cubes.gif" width="666" />
+
+See all available `raylibr` demos with:
+
+```{r, eval = FALSE}
+demo(package = "raylibr")
+```
+
+
+## License
+
+The `raylibr` package is licensed under the MIT License.

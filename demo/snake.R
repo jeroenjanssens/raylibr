@@ -1,10 +1,10 @@
 library(raylibr)
 
-width <- 30
-height <- 26
+width <- 20
+height <- 16 
 scale <- 30
 
-init_window(width * scale, height * scale, title = "Snake in R and Raylib")
+init_window(width * scale, height * scale, title = "R & Raylib: Snake")
 
 snake <- list(as.integer(c(width, height) / 2))
 

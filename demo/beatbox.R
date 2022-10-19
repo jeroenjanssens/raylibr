@@ -11,7 +11,7 @@ init_audio_device()
 sounds <- lapply(files, load_sound)
 
 s <- 600
-init_window(s, s, "Beatbox like Jeroen")
+init_window(s, s, "R & Raylib: Beatbox like Jeroen")
 set_target_fps(30)
 
 background <- load_texture(file.path(system.file(package = "raylibr"), "demo_resources","beatbox.png"))

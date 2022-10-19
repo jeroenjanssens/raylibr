@@ -9,7 +9,7 @@ points_of_interest <- list(
   c(-0.70176, -0.3842)
 )
 
-init_window(960, 540, "raylibr demo - julia sets")
+init_window(600, 400, "R & Raylib: Julia Sets")
 
 s <- load_shader("", file.path(system.file(package = "raylibr"), "demo_resources", "julia_set.fs"))
 

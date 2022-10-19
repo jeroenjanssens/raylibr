@@ -5,10 +5,10 @@ shader_files <- list.files(file.path(system.file(package = "raylibr"), "demo_res
 shader_files <- c("/none.fs", shader_files)
 shader_names <- sub("^.*\\/([a-z0-9_]+)\\.fs$", "\\1", shader_files)
 
-screen_width <- 800
+screen_width <- 600
 screen_height <- 450
 
-init_window(screen_width, screen_height, "raylibr demo - postprocessing shader")
+init_window(screen_width, screen_height, "R & Raylib: 3D Model and Post-Processing Shaders")
 
 church_model <- load_model(file.path(system.file(package = "raylibr"), "demo_resources", "model", "church.obj"))
 church_texture <- load_texture(file.path(system.file(package = "raylibr"), "demo_resources", "model", "church_diffuse.png"))

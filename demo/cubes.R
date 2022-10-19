@@ -3,7 +3,7 @@ library(raylibr)
 init_audio_device()
 music <- load_music_stream(file.path(system.file(package = "raylibr"), "demo_resources","mini1111.xm"))
 
-init_window(900, 600, "R & Raylib: Waving Cubes and Music")
+init_window(600, 400, "R & Raylib: Waving Cubes and Music")
 
 cam <- camera_3d(position = c(30, 20, 30))
 
@@ -15,9 +15,9 @@ set_target_fps(300)
 
 xyz <- as.matrix(expand.grid(blocks, blocks, blocks))
 block_scale <- rowSums(xyz) / 30
-cube_color = lapply((rowSums(xyz) * 18) %% 360, color_from_hsv, 0.75, 0.9)
+cube_color <- lapply((rowSums(xyz) * 18) %% 360, color_from_hsv, 0.75, 0.9)
 
-while(!window_should_close()) {
+while (!window_should_close()) {
   update_music_stream(music)
   time <- get_time()
   scale <- (2 + sin(time)) * 0.7

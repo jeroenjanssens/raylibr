@@ -1,29 +1,29 @@
 library(raylibr)
 
-width <- 800
-height <- 600
-n <- 10000
+width <- 600
+height <- 400
+n <- 1000
 
 sizes <- runif(n, 2, 20)
-xs <- runif(n, sizes, width-sizes)
-ys <- runif(n, sizes, height-sizes)
+xs <- runif(n, sizes, width - sizes)
+ys <- runif(n, sizes, height - sizes)
 dxs <- rnorm(n)
 dys <- rnorm(n)
 cs <- sample(colors(), n, replace = TRUE)
 cs <- lapply(cs, fade, 0.7)
 
 set_target_fps(100)
-init_window(width, height, "Bouncing Balls")
+init_window(width, height, "R & Raylib: Bouncing Balls")
 
 while (!window_should_close()) {
-  xs <- xs + (dxs/2)
-  ys <- ys + (dys/2)
+  xs <- xs + (dxs / 2)
+  ys <- ys + (dys / 2)
   oobx <- (xs >= (width - sizes)) | (xs <= sizes)
   ooby <- (ys >= (height - sizes)) | (ys <= sizes)
   dxs[oobx] <- dxs[oobx] * -1
   dys[ooby] <- dys[ooby] * -1
-  xs <- xs + (dxs/2)
-  ys <- ys + (dys/2)
+  xs <- xs + (dxs / 2)
+  ys <- ys + (dys / 2)
 
   begin_drawing()
   clear_background("white")

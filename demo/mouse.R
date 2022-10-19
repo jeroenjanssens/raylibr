@@ -3,7 +3,7 @@ library(raylibr)
 width <- 600
 height <- 600
 
-init_window(width, height, "Mouse test")
+init_window(width, height, "R & Raylib: Mouse Test")
 
 n <- 31
 xs <- tail(head(seq(0, width, length.out = n), - 4), - 4)

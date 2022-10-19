@@ -1,6 +1,6 @@
 library(raylibr)
 
-init_window(800, 450, "Shader")
+init_window(800, 450, "R & Raylib: Stars")
 
 t <- load_texture(file.path(system.file(package = "raylibr"), "demo_resources", "space.png"))
 s <- load_shader("", file.path(system.file(package = "raylibr"), "demo_resources", "wave.fs"))

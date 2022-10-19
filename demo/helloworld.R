@@ -1,6 +1,6 @@
 library(raylibr)
 
-init_window(600, 400, "Hello, World!")
+init_window(600, 400, "R & Raylib: Hello, World!")
 
 while (!window_should_close()) {
   alpha <- abs(sin(get_time()))

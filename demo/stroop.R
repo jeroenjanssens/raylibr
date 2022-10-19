@@ -4,8 +4,8 @@ candidates <- c("red", "green", "blue", "orange", "black", "purple", "hotpink")
 word <- ""
 color <- ""
 
-screen_size <- c(900, 600)
-init_window(screen_size[1], screen_size[2], "Stroop Test")
+screen_size <- c(600, 400)
+init_window(screen_size[1], screen_size[2], "R & Raylib: Stroop Test")
 
 font_size <- 200
 font <- load_font_ex(file.path(system.file(package = "raylibr"), "demo_resources", "source-sans-pro-v14-latin-regular.ttf"), font_size)
