@@ -32,8 +32,8 @@ work with:
 -   Animated models and shaders
 -   Multitouch, gesture recognition, and even VR headsets
 
-The `raylibr` package allows you to do all of this from R, and offers
-the following usability improvements:
+The `raylibr` package allows you to do all of this from R, and adds the
+following usability improvements for R users:
 
 -   Function and class names are in snake_case (instead of PascalCase
     used by Raylib)
@@ -42,7 +42,7 @@ the following usability improvements:
 -   Vectorized drawing functions (enjoy buttery-smooth animations by
     letting C++ do the looping)
 -   Use R color names (e.g., use `"hotpink"` instead of `0xff69b4ff` or
-    `list(r = 255, g = 105, b = 180, a = 255)`)
+    `list(r = 255, g = 105, b = 180)`)
 -   Use only 8 keys to get started (because `raylibr` is an anagram of
     `library`)
 
