@@ -3379,10 +3379,10 @@ draw_pixel_v <- function(position, color) {
   if (!is_vector_2(position) && !is_mat(position, is_vector_2)) abort(paste0('`position` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(position), length(color))
+  lens <- c(ifelse(is.matrix(position), nrow(position), 1), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[2] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_pixel_v_vectorized_(position, color)
   } else {
@@ -3462,11 +3462,11 @@ draw_line_v <- function(start_pos, end_pos, color) {
   if (!is_vector_2(end_pos) && !is_mat(end_pos, is_vector_2)) abort(paste0('`end_pos` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(end_pos), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(start_pos), nrow(end_pos), length(color))
+  lens <- c(ifelse(is.matrix(start_pos), nrow(start_pos), 1), ifelse(is.matrix(end_pos), nrow(end_pos), 1), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) start_pos <- rep(start_pos, length.out = max_len)
-    if (lens[2] < max_len) end_pos <- rep(end_pos, length.out = max_len)
+    if (lens[1] < max_len) start_pos <- matrix(rep(t(start_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
+    if (lens[2] < max_len) end_pos <- matrix(rep(t(end_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_line_v_vectorized_(start_pos, end_pos, color)
   } else {
@@ -3503,11 +3503,11 @@ draw_line_ex <- function(start_pos, end_pos, thick, color) {
   if (!is_float(thick) && !is_vec(thick, is_float)) abort(paste0('`thick` must be a number or a vector of numbers, not ', friendly_typeof(thick), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(start_pos), nrow(end_pos), length(thick), length(color))
+  lens <- c(ifelse(is.matrix(start_pos), nrow(start_pos), 1), ifelse(is.matrix(end_pos), nrow(end_pos), 1), length(thick), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) start_pos <- rep(start_pos, length.out = max_len)
-    if (lens[2] < max_len) end_pos <- rep(end_pos, length.out = max_len)
+    if (lens[1] < max_len) start_pos <- matrix(rep(t(start_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
+    if (lens[2] < max_len) end_pos <- matrix(rep(t(end_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[3] < max_len) thick <- rep(thick, length.out = max_len)
     if (lens[4] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_line_ex_vectorized_(start_pos, end_pos, thick, color)
@@ -3545,11 +3545,11 @@ draw_line_bezier <- function(start_pos, end_pos, thick, color) {
   if (!is_float(thick) && !is_vec(thick, is_float)) abort(paste0('`thick` must be a number or a vector of numbers, not ', friendly_typeof(thick), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(start_pos), nrow(end_pos), length(thick), length(color))
+  lens <- c(ifelse(is.matrix(start_pos), nrow(start_pos), 1), ifelse(is.matrix(end_pos), nrow(end_pos), 1), length(thick), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) start_pos <- rep(start_pos, length.out = max_len)
-    if (lens[2] < max_len) end_pos <- rep(end_pos, length.out = max_len)
+    if (lens[1] < max_len) start_pos <- matrix(rep(t(start_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
+    if (lens[2] < max_len) end_pos <- matrix(rep(t(end_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[3] < max_len) thick <- rep(thick, length.out = max_len)
     if (lens[4] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_line_bezier_vectorized_(start_pos, end_pos, thick, color)
@@ -3589,12 +3589,12 @@ draw_line_bezier_quad <- function(start_pos, end_pos, control_pos, thick, color)
   if (!is_float(thick) && !is_vec(thick, is_float)) abort(paste0('`thick` must be a number or a vector of numbers, not ', friendly_typeof(thick), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(start_pos), nrow(end_pos), nrow(control_pos), length(thick), length(color))
+  lens <- c(ifelse(is.matrix(start_pos), nrow(start_pos), 1), ifelse(is.matrix(end_pos), nrow(end_pos), 1), ifelse(is.matrix(control_pos), nrow(control_pos), 1), length(thick), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) start_pos <- rep(start_pos, length.out = max_len)
-    if (lens[2] < max_len) end_pos <- rep(end_pos, length.out = max_len)
-    if (lens[3] < max_len) control_pos <- rep(control_pos, length.out = max_len)
+    if (lens[1] < max_len) start_pos <- matrix(rep(t(start_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
+    if (lens[2] < max_len) end_pos <- matrix(rep(t(end_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
+    if (lens[3] < max_len) control_pos <- matrix(rep(t(control_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[4] < max_len) thick <- rep(thick, length.out = max_len)
     if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_line_bezier_quad_vectorized_(start_pos, end_pos, control_pos, thick, color)
@@ -3636,13 +3636,13 @@ draw_line_bezier_cubic <- function(start_pos, end_pos, start_control_pos, end_co
   if (!is_float(thick) && !is_vec(thick, is_float)) abort(paste0('`thick` must be a number or a vector of numbers, not ', friendly_typeof(thick), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(start_pos), nrow(end_pos), nrow(start_control_pos), nrow(end_control_pos), length(thick), length(color))
+  lens <- c(ifelse(is.matrix(start_pos), nrow(start_pos), 1), ifelse(is.matrix(end_pos), nrow(end_pos), 1), ifelse(is.matrix(start_control_pos), nrow(start_control_pos), 1), ifelse(is.matrix(end_control_pos), nrow(end_control_pos), 1), length(thick), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) start_pos <- rep(start_pos, length.out = max_len)
-    if (lens[2] < max_len) end_pos <- rep(end_pos, length.out = max_len)
-    if (lens[3] < max_len) start_control_pos <- rep(start_control_pos, length.out = max_len)
-    if (lens[4] < max_len) end_control_pos <- rep(end_control_pos, length.out = max_len)
+    if (lens[1] < max_len) start_pos <- matrix(rep(t(start_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
+    if (lens[2] < max_len) end_pos <- matrix(rep(t(end_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
+    if (lens[3] < max_len) start_control_pos <- matrix(rep(t(start_control_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
+    if (lens[4] < max_len) end_control_pos <- matrix(rep(t(end_control_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[5] < max_len) thick <- rep(thick, length.out = max_len)
     if (lens[6] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_line_bezier_cubic_vectorized_(start_pos, end_pos, start_control_pos, end_control_pos, thick, color)
@@ -3726,10 +3726,10 @@ draw_circle_sector <- function(center, radius, start_angle, end_angle, segments,
   if (!is_int(segments) && !is_vec(segments, is_int)) abort(paste0('`segments` must be an integer or a vector of integers, not ', friendly_typeof(segments), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(center), length(radius), length(start_angle), length(end_angle), length(segments), length(color))
+  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(radius), length(start_angle), length(end_angle), length(segments), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) center <- rep(center, length.out = max_len)
+    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[2] < max_len) radius <- rep(radius, length.out = max_len)
     if (lens[3] < max_len) start_angle <- rep(start_angle, length.out = max_len)
     if (lens[4] < max_len) end_angle <- rep(end_angle, length.out = max_len)
@@ -3774,10 +3774,10 @@ draw_circle_sector_lines <- function(center, radius, start_angle, end_angle, seg
   if (!is_int(segments) && !is_vec(segments, is_int)) abort(paste0('`segments` must be an integer or a vector of integers, not ', friendly_typeof(segments), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(center), length(radius), length(start_angle), length(end_angle), length(segments), length(color))
+  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(radius), length(start_angle), length(end_angle), length(segments), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) center <- rep(center, length.out = max_len)
+    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[2] < max_len) radius <- rep(radius, length.out = max_len)
     if (lens[3] < max_len) start_angle <- rep(start_angle, length.out = max_len)
     if (lens[4] < max_len) end_angle <- rep(end_angle, length.out = max_len)
@@ -3861,10 +3861,10 @@ draw_circle_v <- function(center, radius, color) {
   if (!is_float(radius) && !is_vec(radius, is_float)) abort(paste0('`radius` must be a number or a vector of numbers, not ', friendly_typeof(radius), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(center), length(radius), length(color))
+  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(radius), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) center <- rep(center, length.out = max_len)
+    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[2] < max_len) radius <- rep(radius, length.out = max_len)
     if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_circle_v_vectorized_(center, radius, color)
@@ -4037,10 +4037,10 @@ draw_ring <- function(center, inner_radius, outer_radius, start_angle, end_angle
   if (!is_int(segments) && !is_vec(segments, is_int)) abort(paste0('`segments` must be an integer or a vector of integers, not ', friendly_typeof(segments), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(center), length(inner_radius), length(outer_radius), length(start_angle), length(end_angle), length(segments), length(color))
+  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(inner_radius), length(outer_radius), length(start_angle), length(end_angle), length(segments), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) center <- rep(center, length.out = max_len)
+    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[2] < max_len) inner_radius <- rep(inner_radius, length.out = max_len)
     if (lens[3] < max_len) outer_radius <- rep(outer_radius, length.out = max_len)
     if (lens[4] < max_len) start_angle <- rep(start_angle, length.out = max_len)
@@ -4087,10 +4087,10 @@ draw_ring_lines <- function(center, inner_radius, outer_radius, start_angle, end
   if (!is_int(segments) && !is_vec(segments, is_int)) abort(paste0('`segments` must be an integer or a vector of integers, not ', friendly_typeof(segments), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(center), length(inner_radius), length(outer_radius), length(start_angle), length(end_angle), length(segments), length(color))
+  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(inner_radius), length(outer_radius), length(start_angle), length(end_angle), length(segments), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) center <- rep(center, length.out = max_len)
+    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[2] < max_len) inner_radius <- rep(inner_radius, length.out = max_len)
     if (lens[3] < max_len) outer_radius <- rep(outer_radius, length.out = max_len)
     if (lens[4] < max_len) start_angle <- rep(start_angle, length.out = max_len)
@@ -4175,11 +4175,11 @@ draw_rectangle_v <- function(position, size, color) {
   if (!is_vector_2(size) && !is_mat(size, is_vector_2)) abort(paste0('`size` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(size), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(position), nrow(size), length(color))
+  lens <- c(ifelse(is.matrix(position), nrow(position), 1), ifelse(is.matrix(size), nrow(size), 1), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) position <- rep(position, length.out = max_len)
-    if (lens[2] < max_len) size <- rep(size, length.out = max_len)
+    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
+    if (lens[2] < max_len) size <- matrix(rep(t(size), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_rectangle_v_vectorized_(position, size, color)
   } else {
@@ -4254,11 +4254,11 @@ draw_rectangle_pro <- function(rec, origin, rotation, color) {
   if (!is_float(rotation) && !is_vec(rotation, is_float)) abort(paste0('`rotation` must be a number or a vector of numbers, not ', friendly_typeof(rotation), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(length(rec), nrow(origin), length(rotation), length(color))
+  lens <- c(length(rec), ifelse(is.matrix(origin), nrow(origin), 1), length(rotation), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) rec <- rep(unlist(list(rec)), length.out = max_len)
-    if (lens[2] < max_len) origin <- rep(origin, length.out = max_len)
+    if (lens[2] < max_len) origin <- matrix(rep(t(origin), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[3] < max_len) rotation <- rep(rotation, length.out = max_len)
     if (lens[4] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_rectangle_pro_vectorized_(rec, origin, rotation, color)
@@ -4611,12 +4611,12 @@ draw_triangle <- function(v_1, v_2, v_3, color) {
   if (!is_vector_2(v_3) && !is_mat(v_3, is_vector_2)) abort(paste0('`v_3` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(v_3), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(v_1), nrow(v_2), nrow(v_3), length(color))
+  lens <- c(ifelse(is.matrix(v_1), nrow(v_1), 1), ifelse(is.matrix(v_2), nrow(v_2), 1), ifelse(is.matrix(v_3), nrow(v_3), 1), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) v_1 <- rep(v_1, length.out = max_len)
-    if (lens[2] < max_len) v_2 <- rep(v_2, length.out = max_len)
-    if (lens[3] < max_len) v_3 <- rep(v_3, length.out = max_len)
+    if (lens[1] < max_len) v_1 <- matrix(rep(t(v_1), length.out = max_len * 2), ncol = 2, byrow = TRUE)
+    if (lens[2] < max_len) v_2 <- matrix(rep(t(v_2), length.out = max_len * 2), ncol = 2, byrow = TRUE)
+    if (lens[3] < max_len) v_3 <- matrix(rep(t(v_3), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[4] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_triangle_vectorized_(v_1, v_2, v_3, color)
   } else {
@@ -4652,12 +4652,12 @@ draw_triangle_lines <- function(v_1, v_2, v_3, color) {
   if (!is_vector_2(v_3) && !is_mat(v_3, is_vector_2)) abort(paste0('`v_3` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(v_3), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(v_1), nrow(v_2), nrow(v_3), length(color))
+  lens <- c(ifelse(is.matrix(v_1), nrow(v_1), 1), ifelse(is.matrix(v_2), nrow(v_2), 1), ifelse(is.matrix(v_3), nrow(v_3), 1), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) v_1 <- rep(v_1, length.out = max_len)
-    if (lens[2] < max_len) v_2 <- rep(v_2, length.out = max_len)
-    if (lens[3] < max_len) v_3 <- rep(v_3, length.out = max_len)
+    if (lens[1] < max_len) v_1 <- matrix(rep(t(v_1), length.out = max_len * 2), ncol = 2, byrow = TRUE)
+    if (lens[2] < max_len) v_2 <- matrix(rep(t(v_2), length.out = max_len * 2), ncol = 2, byrow = TRUE)
+    if (lens[3] < max_len) v_3 <- matrix(rep(t(v_3), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[4] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_triangle_lines_vectorized_(v_1, v_2, v_3, color)
   } else {
@@ -4695,10 +4695,10 @@ draw_poly <- function(center, sides, radius, rotation, color) {
   if (!is_float(rotation) && !is_vec(rotation, is_float)) abort(paste0('`rotation` must be a number or a vector of numbers, not ', friendly_typeof(rotation), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(center), length(sides), length(radius), length(rotation), length(color))
+  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(sides), length(radius), length(rotation), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) center <- rep(center, length.out = max_len)
+    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[2] < max_len) sides <- rep(sides, length.out = max_len)
     if (lens[3] < max_len) radius <- rep(radius, length.out = max_len)
     if (lens[4] < max_len) rotation <- rep(rotation, length.out = max_len)
@@ -4739,10 +4739,10 @@ draw_poly_lines <- function(center, sides, radius, rotation, color) {
   if (!is_float(rotation) && !is_vec(rotation, is_float)) abort(paste0('`rotation` must be a number or a vector of numbers, not ', friendly_typeof(rotation), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(center), length(sides), length(radius), length(rotation), length(color))
+  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(sides), length(radius), length(rotation), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) center <- rep(center, length.out = max_len)
+    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[2] < max_len) sides <- rep(sides, length.out = max_len)
     if (lens[3] < max_len) radius <- rep(radius, length.out = max_len)
     if (lens[4] < max_len) rotation <- rep(rotation, length.out = max_len)
@@ -4785,10 +4785,10 @@ draw_poly_lines_ex <- function(center, sides, radius, rotation, line_thick, colo
   if (!is_float(line_thick) && !is_vec(line_thick, is_float)) abort(paste0('`line_thick` must be a number or a vector of numbers, not ', friendly_typeof(line_thick), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(center), length(sides), length(radius), length(rotation), length(line_thick), length(color))
+  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(sides), length(radius), length(rotation), length(line_thick), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) center <- rep(center, length.out = max_len)
+    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[2] < max_len) sides <- rep(sides, length.out = max_len)
     if (lens[3] < max_len) radius <- rep(radius, length.out = max_len)
     if (lens[4] < max_len) rotation <- rep(rotation, length.out = max_len)
@@ -6364,10 +6364,10 @@ image_draw_pixel_v <- function(dst, position, color) {
   if (!is_vector_2(position) && !is_mat(position, is_vector_2)) abort(paste0('`position` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(position), length(color))
+  lens <- c(ifelse(is.matrix(position), nrow(position), 1), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[2] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     image_draw_pixel_v_vectorized_(dst, position, color)
   } else {
@@ -6455,11 +6455,11 @@ image_draw_line_v <- function(dst, start, end, color) {
   if (!is_vector_2(end) && !is_mat(end, is_vector_2)) abort(paste0('`end` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(end), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(start), nrow(end), length(color))
+  lens <- c(ifelse(is.matrix(start), nrow(start), 1), ifelse(is.matrix(end), nrow(end), 1), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) start <- rep(start, length.out = max_len)
-    if (lens[2] < max_len) end <- rep(end, length.out = max_len)
+    if (lens[1] < max_len) start <- matrix(rep(t(start), length.out = max_len * 2), ncol = 2, byrow = TRUE)
+    if (lens[2] < max_len) end <- matrix(rep(t(end), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     image_draw_line_v_vectorized_(dst, start, end, color)
   } else {
@@ -6544,10 +6544,10 @@ image_draw_circle_v <- function(dst, center, radius, color) {
   if (!is_int(radius) && !is_vec(radius, is_int)) abort(paste0('`radius` must be an integer or a vector of integers, not ', friendly_typeof(radius), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(center), length(radius), length(color))
+  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(radius), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) center <- rep(center, length.out = max_len)
+    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[2] < max_len) radius <- rep(radius, length.out = max_len)
     if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     image_draw_circle_v_vectorized_(dst, center, radius, color)
@@ -6636,11 +6636,11 @@ image_draw_rectangle_v <- function(dst, position, size, color) {
   if (!is_vector_2(size) && !is_mat(size, is_vector_2)) abort(paste0('`size` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(size), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(position), nrow(size), length(color))
+  lens <- c(ifelse(is.matrix(position), nrow(position), 1), ifelse(is.matrix(size), nrow(size), 1), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) position <- rep(position, length.out = max_len)
-    if (lens[2] < max_len) size <- rep(size, length.out = max_len)
+    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
+    if (lens[2] < max_len) size <- matrix(rep(t(size), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     image_draw_rectangle_v_vectorized_(dst, position, size, color)
   } else {
@@ -6855,12 +6855,12 @@ image_draw_text_ex <- function(dst, font, text, position, font_size, spacing, ti
   if (!is_float(spacing) && !is_vec(spacing, is_float)) abort(paste0('`spacing` must be a number or a vector of numbers, not ', friendly_typeof(spacing), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
 
-  lens <- c(length(font), length(text), nrow(position), length(font_size), length(spacing), length(tint))
+  lens <- c(length(font), length(text), ifelse(is.matrix(position), nrow(position), 1), length(font_size), length(spacing), length(tint))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) font <- rep(unlist(list(font)), length.out = max_len)
     if (lens[2] < max_len) text <- rep(unlist(list(text)), length.out = max_len)
-    if (lens[3] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[3] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[4] < max_len) font_size <- rep(font_size, length.out = max_len)
     if (lens[5] < max_len) spacing <- rep(spacing, length.out = max_len)
     if (lens[6] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
@@ -7137,11 +7137,11 @@ draw_texture_v <- function(texture, position, tint) {
   if (!is_vector_2(position) && !is_mat(position, is_vector_2)) abort(paste0('`position` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
 
-  lens <- c(length(texture), nrow(position), length(tint))
+  lens <- c(length(texture), ifelse(is.matrix(position), nrow(position), 1), length(tint))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
-    if (lens[2] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[2] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[3] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
     draw_texture_v_vectorized_(texture, position, tint)
   } else {
@@ -7181,11 +7181,11 @@ draw_texture_ex <- function(texture, position, rotation, scale, tint) {
   if (!is_float(scale) && !is_vec(scale, is_float)) abort(paste0('`scale` must be a number or a vector of numbers, not ', friendly_typeof(scale), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
 
-  lens <- c(length(texture), nrow(position), length(rotation), length(scale), length(tint))
+  lens <- c(length(texture), ifelse(is.matrix(position), nrow(position), 1), length(rotation), length(scale), length(tint))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
-    if (lens[2] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[2] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[3] < max_len) rotation <- rep(rotation, length.out = max_len)
     if (lens[4] < max_len) scale <- rep(scale, length.out = max_len)
     if (lens[5] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
@@ -7226,12 +7226,12 @@ draw_texture_rec <- function(texture, source, position, tint) {
   if (!is_vector_2(position) && !is_mat(position, is_vector_2)) abort(paste0('`position` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
 
-  lens <- c(length(texture), length(source), nrow(position), length(tint))
+  lens <- c(length(texture), length(source), ifelse(is.matrix(position), nrow(position), 1), length(tint))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
     if (lens[2] < max_len) source <- rep(unlist(list(source)), length.out = max_len)
-    if (lens[3] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[3] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[4] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
     draw_texture_rec_vectorized_(texture, source, position, tint)
   } else {
@@ -7272,12 +7272,12 @@ draw_texture_quad <- function(texture, tiling, offset, quad, tint) {
   if (!is_rectangle(quad) && !is_vec(quad, is_rectangle)) abort(paste0('`quad` must be a rectangle or a list of rectangles, not ', friendly_typeof(quad), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
 
-  lens <- c(length(texture), nrow(tiling), nrow(offset), length(quad), length(tint))
+  lens <- c(length(texture), ifelse(is.matrix(tiling), nrow(tiling), 1), ifelse(is.matrix(offset), nrow(offset), 1), length(quad), length(tint))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
-    if (lens[2] < max_len) tiling <- rep(tiling, length.out = max_len)
-    if (lens[3] < max_len) offset <- rep(offset, length.out = max_len)
+    if (lens[2] < max_len) tiling <- matrix(rep(t(tiling), length.out = max_len * 2), ncol = 2, byrow = TRUE)
+    if (lens[3] < max_len) offset <- matrix(rep(t(offset), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[4] < max_len) quad <- rep(unlist(list(quad)), length.out = max_len)
     if (lens[5] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
     draw_texture_quad_vectorized_(texture, tiling, offset, quad, tint)
@@ -7323,13 +7323,13 @@ draw_texture_tiled <- function(texture, source, dest, origin, rotation, scale, t
   if (!is_float(scale) && !is_vec(scale, is_float)) abort(paste0('`scale` must be a number or a vector of numbers, not ', friendly_typeof(scale), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
 
-  lens <- c(length(texture), length(source), length(dest), nrow(origin), length(rotation), length(scale), length(tint))
+  lens <- c(length(texture), length(source), length(dest), ifelse(is.matrix(origin), nrow(origin), 1), length(rotation), length(scale), length(tint))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
     if (lens[2] < max_len) source <- rep(unlist(list(source)), length.out = max_len)
     if (lens[3] < max_len) dest <- rep(unlist(list(dest)), length.out = max_len)
-    if (lens[4] < max_len) origin <- rep(origin, length.out = max_len)
+    if (lens[4] < max_len) origin <- matrix(rep(t(origin), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[5] < max_len) rotation <- rep(rotation, length.out = max_len)
     if (lens[6] < max_len) scale <- rep(scale, length.out = max_len)
     if (lens[7] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
@@ -7374,13 +7374,13 @@ draw_texture_pro <- function(texture, source, dest, origin, rotation, tint) {
   if (!is_float(rotation) && !is_vec(rotation, is_float)) abort(paste0('`rotation` must be a number or a vector of numbers, not ', friendly_typeof(rotation), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
 
-  lens <- c(length(texture), length(source), length(dest), nrow(origin), length(rotation), length(tint))
+  lens <- c(length(texture), length(source), length(dest), ifelse(is.matrix(origin), nrow(origin), 1), length(rotation), length(tint))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
     if (lens[2] < max_len) source <- rep(unlist(list(source)), length.out = max_len)
     if (lens[3] < max_len) dest <- rep(unlist(list(dest)), length.out = max_len)
-    if (lens[4] < max_len) origin <- rep(origin, length.out = max_len)
+    if (lens[4] < max_len) origin <- matrix(rep(t(origin), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[5] < max_len) rotation <- rep(rotation, length.out = max_len)
     if (lens[6] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
     draw_texture_pro_vectorized_(texture, source, dest, origin, rotation, tint)
@@ -7424,13 +7424,13 @@ draw_texture_npatch <- function(texture, n_patch_info, dest, origin, rotation, t
   if (!is_float(rotation) && !is_vec(rotation, is_float)) abort(paste0('`rotation` must be a number or a vector of numbers, not ', friendly_typeof(rotation), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
 
-  lens <- c(length(texture), length(n_patch_info), length(dest), nrow(origin), length(rotation), length(tint))
+  lens <- c(length(texture), length(n_patch_info), length(dest), ifelse(is.matrix(origin), nrow(origin), 1), length(rotation), length(tint))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
     if (lens[2] < max_len) n_patch_info <- rep(unlist(list(n_patch_info)), length.out = max_len)
     if (lens[3] < max_len) dest <- rep(unlist(list(dest)), length.out = max_len)
-    if (lens[4] < max_len) origin <- rep(origin, length.out = max_len)
+    if (lens[4] < max_len) origin <- matrix(rep(t(origin), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[5] < max_len) rotation <- rep(rotation, length.out = max_len)
     if (lens[6] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
     draw_texture_npatch_vectorized_(texture, n_patch_info, dest, origin, rotation, tint)
@@ -7966,12 +7966,12 @@ draw_text_ex <- function(font, text, position, font_size, spacing, tint) {
   if (!is_float(spacing) && !is_vec(spacing, is_float)) abort(paste0('`spacing` must be a number or a vector of numbers, not ', friendly_typeof(spacing), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
 
-  lens <- c(length(font), length(text), nrow(position), length(font_size), length(spacing), length(tint))
+  lens <- c(length(font), length(text), ifelse(is.matrix(position), nrow(position), 1), length(font_size), length(spacing), length(tint))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) font <- rep(unlist(list(font)), length.out = max_len)
     if (lens[2] < max_len) text <- rep(unlist(list(text)), length.out = max_len)
-    if (lens[3] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[3] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[4] < max_len) font_size <- rep(font_size, length.out = max_len)
     if (lens[5] < max_len) spacing <- rep(spacing, length.out = max_len)
     if (lens[6] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
@@ -8019,13 +8019,13 @@ draw_text_pro <- function(font, text, position, origin, rotation, font_size, spa
   if (!is_float(spacing) && !is_vec(spacing, is_float)) abort(paste0('`spacing` must be a number or a vector of numbers, not ', friendly_typeof(spacing), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
 
-  lens <- c(length(font), length(text), nrow(position), nrow(origin), length(rotation), length(font_size), length(spacing), length(tint))
+  lens <- c(length(font), length(text), ifelse(is.matrix(position), nrow(position), 1), ifelse(is.matrix(origin), nrow(origin), 1), length(rotation), length(font_size), length(spacing), length(tint))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) font <- rep(unlist(list(font)), length.out = max_len)
     if (lens[2] < max_len) text <- rep(unlist(list(text)), length.out = max_len)
-    if (lens[3] < max_len) position <- rep(position, length.out = max_len)
-    if (lens[4] < max_len) origin <- rep(origin, length.out = max_len)
+    if (lens[3] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
+    if (lens[4] < max_len) origin <- matrix(rep(t(origin), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[5] < max_len) rotation <- rep(rotation, length.out = max_len)
     if (lens[6] < max_len) font_size <- rep(font_size, length.out = max_len)
     if (lens[7] < max_len) spacing <- rep(spacing, length.out = max_len)
@@ -8068,12 +8068,12 @@ draw_text_codepoint <- function(font, codepoint, position, font_size, tint) {
   if (!is_float(font_size) && !is_vec(font_size, is_float)) abort(paste0('`font_size` must be a number or a vector of numbers, not ', friendly_typeof(font_size), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
 
-  lens <- c(length(font), length(codepoint), nrow(position), length(font_size), length(tint))
+  lens <- c(length(font), length(codepoint), ifelse(is.matrix(position), nrow(position), 1), length(font_size), length(tint))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) font <- rep(unlist(list(font)), length.out = max_len)
     if (lens[2] < max_len) codepoint <- rep(codepoint, length.out = max_len)
-    if (lens[3] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[3] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[4] < max_len) font_size <- rep(font_size, length.out = max_len)
     if (lens[5] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
     draw_text_codepoint_vectorized_(font, codepoint, position, font_size, tint)
@@ -8411,11 +8411,11 @@ draw_line_3d <- function(start_pos, end_pos, color) {
   if (!is_vector_3(end_pos) && !is_mat(end_pos, is_vector_3)) abort(paste0('`end_pos` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(end_pos), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(start_pos), nrow(end_pos), length(color))
+  lens <- c(ifelse(is.matrix(start_pos), nrow(start_pos), 1), ifelse(is.matrix(end_pos), nrow(end_pos), 1), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) start_pos <- rep(start_pos, length.out = max_len)
-    if (lens[2] < max_len) end_pos <- rep(end_pos, length.out = max_len)
+    if (lens[1] < max_len) start_pos <- matrix(rep(t(start_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
+    if (lens[2] < max_len) end_pos <- matrix(rep(t(end_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_line_3d_vectorized_(start_pos, end_pos, color)
   } else {
@@ -8447,10 +8447,10 @@ draw_point_3d <- function(position, color) {
   if (!is_vector_3(position) && !is_mat(position, is_vector_3)) abort(paste0('`position` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(position), length(color))
+  lens <- c(ifelse(is.matrix(position), nrow(position), 1), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[2] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_point_3d_vectorized_(position, color)
   } else {
@@ -8489,12 +8489,12 @@ draw_circle_3d <- function(center, radius, rotation_axis, rotation_angle, color)
   if (!is_float(rotation_angle) && !is_vec(rotation_angle, is_float)) abort(paste0('`rotation_angle` must be a number or a vector of numbers, not ', friendly_typeof(rotation_angle), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(center), length(radius), nrow(rotation_axis), length(rotation_angle), length(color))
+  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(radius), ifelse(is.matrix(rotation_axis), nrow(rotation_axis), 1), length(rotation_angle), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) center <- rep(center, length.out = max_len)
+    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[2] < max_len) radius <- rep(radius, length.out = max_len)
-    if (lens[3] < max_len) rotation_axis <- rep(rotation_axis, length.out = max_len)
+    if (lens[3] < max_len) rotation_axis <- matrix(rep(t(rotation_axis), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[4] < max_len) rotation_angle <- rep(rotation_angle, length.out = max_len)
     if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_circle_3d_vectorized_(center, radius, rotation_axis, rotation_angle, color)
@@ -8531,12 +8531,12 @@ draw_triangle_3d <- function(v_1, v_2, v_3, color) {
   if (!is_vector_3(v_3) && !is_mat(v_3, is_vector_3)) abort(paste0('`v_3` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(v_3), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(v_1), nrow(v_2), nrow(v_3), length(color))
+  lens <- c(ifelse(is.matrix(v_1), nrow(v_1), 1), ifelse(is.matrix(v_2), nrow(v_2), 1), ifelse(is.matrix(v_3), nrow(v_3), 1), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) v_1 <- rep(v_1, length.out = max_len)
-    if (lens[2] < max_len) v_2 <- rep(v_2, length.out = max_len)
-    if (lens[3] < max_len) v_3 <- rep(v_3, length.out = max_len)
+    if (lens[1] < max_len) v_1 <- matrix(rep(t(v_1), length.out = max_len * 3), ncol = 3, byrow = TRUE)
+    if (lens[2] < max_len) v_2 <- matrix(rep(t(v_2), length.out = max_len * 3), ncol = 3, byrow = TRUE)
+    if (lens[3] < max_len) v_3 <- matrix(rep(t(v_3), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[4] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_triangle_3d_vectorized_(v_1, v_2, v_3, color)
   } else {
@@ -8602,10 +8602,10 @@ draw_cube <- function(position, width, height, length, color) {
   if (!is_float(length) && !is_vec(length, is_float)) abort(paste0('`length` must be a number or a vector of numbers, not ', friendly_typeof(length), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(position), length(width), length(height), length(length), length(color))
+  lens <- c(ifelse(is.matrix(position), nrow(position), 1), length(width), length(height), length(length), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[2] < max_len) width <- rep(width, length.out = max_len)
     if (lens[3] < max_len) height <- rep(height, length.out = max_len)
     if (lens[4] < max_len) length <- rep(length, length.out = max_len)
@@ -8642,11 +8642,11 @@ draw_cube_v <- function(position, size, color) {
   if (!is_vector_3(size) && !is_mat(size, is_vector_3)) abort(paste0('`size` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(size), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(position), nrow(size), length(color))
+  lens <- c(ifelse(is.matrix(position), nrow(position), 1), ifelse(is.matrix(size), nrow(size), 1), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) position <- rep(position, length.out = max_len)
-    if (lens[2] < max_len) size <- rep(size, length.out = max_len)
+    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
+    if (lens[2] < max_len) size <- matrix(rep(t(size), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_cube_v_vectorized_(position, size, color)
   } else {
@@ -8684,10 +8684,10 @@ draw_cube_wires <- function(position, width, height, length, color) {
   if (!is_float(length) && !is_vec(length, is_float)) abort(paste0('`length` must be a number or a vector of numbers, not ', friendly_typeof(length), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(position), length(width), length(height), length(length), length(color))
+  lens <- c(ifelse(is.matrix(position), nrow(position), 1), length(width), length(height), length(length), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[2] < max_len) width <- rep(width, length.out = max_len)
     if (lens[3] < max_len) height <- rep(height, length.out = max_len)
     if (lens[4] < max_len) length <- rep(length, length.out = max_len)
@@ -8724,11 +8724,11 @@ draw_cube_wires_v <- function(position, size, color) {
   if (!is_vector_3(size) && !is_mat(size, is_vector_3)) abort(paste0('`size` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(size), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(position), nrow(size), length(color))
+  lens <- c(ifelse(is.matrix(position), nrow(position), 1), ifelse(is.matrix(size), nrow(size), 1), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) position <- rep(position, length.out = max_len)
-    if (lens[2] < max_len) size <- rep(size, length.out = max_len)
+    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
+    if (lens[2] < max_len) size <- matrix(rep(t(size), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_cube_wires_v_vectorized_(position, size, color)
   } else {
@@ -8770,11 +8770,11 @@ draw_cube_texture <- function(texture, position, width, height, length, color) {
   if (!is_float(length) && !is_vec(length, is_float)) abort(paste0('`length` must be a number or a vector of numbers, not ', friendly_typeof(length), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(length(texture), nrow(position), length(width), length(height), length(length), length(color))
+  lens <- c(length(texture), ifelse(is.matrix(position), nrow(position), 1), length(width), length(height), length(length), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
-    if (lens[2] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[2] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[3] < max_len) width <- rep(width, length.out = max_len)
     if (lens[4] < max_len) height <- rep(height, length.out = max_len)
     if (lens[5] < max_len) length <- rep(length, length.out = max_len)
@@ -8822,12 +8822,12 @@ draw_cube_texture_rec <- function(texture, source, position, width, height, leng
   if (!is_float(length) && !is_vec(length, is_float)) abort(paste0('`length` must be a number or a vector of numbers, not ', friendly_typeof(length), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(length(texture), length(source), nrow(position), length(width), length(height), length(length), length(color))
+  lens <- c(length(texture), length(source), ifelse(is.matrix(position), nrow(position), 1), length(width), length(height), length(length), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
     if (lens[2] < max_len) source <- rep(unlist(list(source)), length.out = max_len)
-    if (lens[3] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[3] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[4] < max_len) width <- rep(width, length.out = max_len)
     if (lens[5] < max_len) height <- rep(height, length.out = max_len)
     if (lens[6] < max_len) length <- rep(length, length.out = max_len)
@@ -8864,10 +8864,10 @@ draw_sphere <- function(center_pos, radius, color) {
   if (!is_float(radius) && !is_vec(radius, is_float)) abort(paste0('`radius` must be a number or a vector of numbers, not ', friendly_typeof(radius), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(center_pos), length(radius), length(color))
+  lens <- c(ifelse(is.matrix(center_pos), nrow(center_pos), 1), length(radius), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) center_pos <- rep(center_pos, length.out = max_len)
+    if (lens[1] < max_len) center_pos <- matrix(rep(t(center_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[2] < max_len) radius <- rep(radius, length.out = max_len)
     if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_sphere_vectorized_(center_pos, radius, color)
@@ -8906,10 +8906,10 @@ draw_sphere_ex <- function(center_pos, radius, rings, slices, color) {
   if (!is_int(slices) && !is_vec(slices, is_int)) abort(paste0('`slices` must be an integer or a vector of integers, not ', friendly_typeof(slices), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(center_pos), length(radius), length(rings), length(slices), length(color))
+  lens <- c(ifelse(is.matrix(center_pos), nrow(center_pos), 1), length(radius), length(rings), length(slices), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) center_pos <- rep(center_pos, length.out = max_len)
+    if (lens[1] < max_len) center_pos <- matrix(rep(t(center_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[2] < max_len) radius <- rep(radius, length.out = max_len)
     if (lens[3] < max_len) rings <- rep(rings, length.out = max_len)
     if (lens[4] < max_len) slices <- rep(slices, length.out = max_len)
@@ -8950,10 +8950,10 @@ draw_sphere_wires <- function(center_pos, radius, rings, slices, color) {
   if (!is_int(slices) && !is_vec(slices, is_int)) abort(paste0('`slices` must be an integer or a vector of integers, not ', friendly_typeof(slices), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(center_pos), length(radius), length(rings), length(slices), length(color))
+  lens <- c(ifelse(is.matrix(center_pos), nrow(center_pos), 1), length(radius), length(rings), length(slices), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) center_pos <- rep(center_pos, length.out = max_len)
+    if (lens[1] < max_len) center_pos <- matrix(rep(t(center_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[2] < max_len) radius <- rep(radius, length.out = max_len)
     if (lens[3] < max_len) rings <- rep(rings, length.out = max_len)
     if (lens[4] < max_len) slices <- rep(slices, length.out = max_len)
@@ -8996,10 +8996,10 @@ draw_cylinder <- function(position, radius_top, radius_bottom, height, slices, c
   if (!is_int(slices) && !is_vec(slices, is_int)) abort(paste0('`slices` must be an integer or a vector of integers, not ', friendly_typeof(slices), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(position), length(radius_top), length(radius_bottom), length(height), length(slices), length(color))
+  lens <- c(ifelse(is.matrix(position), nrow(position), 1), length(radius_top), length(radius_bottom), length(height), length(slices), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[2] < max_len) radius_top <- rep(radius_top, length.out = max_len)
     if (lens[3] < max_len) radius_bottom <- rep(radius_bottom, length.out = max_len)
     if (lens[4] < max_len) height <- rep(height, length.out = max_len)
@@ -9043,11 +9043,11 @@ draw_cylinder_ex <- function(start_pos, end_pos, start_radius, end_radius, sides
   if (!is_int(sides) && !is_vec(sides, is_int)) abort(paste0('`sides` must be an integer or a vector of integers, not ', friendly_typeof(sides), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(start_pos), nrow(end_pos), length(start_radius), length(end_radius), length(sides), length(color))
+  lens <- c(ifelse(is.matrix(start_pos), nrow(start_pos), 1), ifelse(is.matrix(end_pos), nrow(end_pos), 1), length(start_radius), length(end_radius), length(sides), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) start_pos <- rep(start_pos, length.out = max_len)
-    if (lens[2] < max_len) end_pos <- rep(end_pos, length.out = max_len)
+    if (lens[1] < max_len) start_pos <- matrix(rep(t(start_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
+    if (lens[2] < max_len) end_pos <- matrix(rep(t(end_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[3] < max_len) start_radius <- rep(start_radius, length.out = max_len)
     if (lens[4] < max_len) end_radius <- rep(end_radius, length.out = max_len)
     if (lens[5] < max_len) sides <- rep(sides, length.out = max_len)
@@ -9090,10 +9090,10 @@ draw_cylinder_wires <- function(position, radius_top, radius_bottom, height, sli
   if (!is_int(slices) && !is_vec(slices, is_int)) abort(paste0('`slices` must be an integer or a vector of integers, not ', friendly_typeof(slices), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(position), length(radius_top), length(radius_bottom), length(height), length(slices), length(color))
+  lens <- c(ifelse(is.matrix(position), nrow(position), 1), length(radius_top), length(radius_bottom), length(height), length(slices), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[2] < max_len) radius_top <- rep(radius_top, length.out = max_len)
     if (lens[3] < max_len) radius_bottom <- rep(radius_bottom, length.out = max_len)
     if (lens[4] < max_len) height <- rep(height, length.out = max_len)
@@ -9137,11 +9137,11 @@ draw_cylinder_wires_ex <- function(start_pos, end_pos, start_radius, end_radius,
   if (!is_int(sides) && !is_vec(sides, is_int)) abort(paste0('`sides` must be an integer or a vector of integers, not ', friendly_typeof(sides), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(start_pos), nrow(end_pos), length(start_radius), length(end_radius), length(sides), length(color))
+  lens <- c(ifelse(is.matrix(start_pos), nrow(start_pos), 1), ifelse(is.matrix(end_pos), nrow(end_pos), 1), length(start_radius), length(end_radius), length(sides), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) start_pos <- rep(start_pos, length.out = max_len)
-    if (lens[2] < max_len) end_pos <- rep(end_pos, length.out = max_len)
+    if (lens[1] < max_len) start_pos <- matrix(rep(t(start_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
+    if (lens[2] < max_len) end_pos <- matrix(rep(t(end_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[3] < max_len) start_radius <- rep(start_radius, length.out = max_len)
     if (lens[4] < max_len) end_radius <- rep(end_radius, length.out = max_len)
     if (lens[5] < max_len) sides <- rep(sides, length.out = max_len)
@@ -9178,11 +9178,11 @@ draw_plane <- function(center_pos, size, color) {
   if (!is_vector_2(size) && !is_mat(size, is_vector_2)) abort(paste0('`size` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(size), '.'), call = NULL)
   if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
 
-  lens <- c(nrow(center_pos), nrow(size), length(color))
+  lens <- c(ifelse(is.matrix(center_pos), nrow(center_pos), 1), ifelse(is.matrix(size), nrow(size), 1), length(color))
   if (any(lens > 1)) {
     max_len <- max(lens)
-    if (lens[1] < max_len) center_pos <- rep(center_pos, length.out = max_len)
-    if (lens[2] < max_len) size <- rep(size, length.out = max_len)
+    if (lens[1] < max_len) center_pos <- matrix(rep(t(center_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
+    if (lens[2] < max_len) size <- matrix(rep(t(size), length.out = max_len * 2), ncol = 2, byrow = TRUE)
     if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
     draw_plane_vectorized_(center_pos, size, color)
   } else {
@@ -9360,11 +9360,11 @@ draw_model <- function(model, position, scale, tint) {
   if (!is_float(scale) && !is_vec(scale, is_float)) abort(paste0('`scale` must be a number or a vector of numbers, not ', friendly_typeof(scale), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
 
-  lens <- c(length(model), nrow(position), length(scale), length(tint))
+  lens <- c(length(model), ifelse(is.matrix(position), nrow(position), 1), length(scale), length(tint))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) model <- rep(unlist(list(model)), length.out = max_len)
-    if (lens[2] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[2] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[3] < max_len) scale <- rep(scale, length.out = max_len)
     if (lens[4] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
     draw_model_vectorized_(model, position, scale, tint)
@@ -9407,14 +9407,14 @@ draw_model_ex <- function(model, position, rotation_axis, rotation_angle, scale,
   if (!is_vector_3(scale) && !is_mat(scale, is_vector_3)) abort(paste0('`scale` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(scale), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
 
-  lens <- c(length(model), nrow(position), nrow(rotation_axis), length(rotation_angle), nrow(scale), length(tint))
+  lens <- c(length(model), ifelse(is.matrix(position), nrow(position), 1), ifelse(is.matrix(rotation_axis), nrow(rotation_axis), 1), length(rotation_angle), ifelse(is.matrix(scale), nrow(scale), 1), length(tint))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) model <- rep(unlist(list(model)), length.out = max_len)
-    if (lens[2] < max_len) position <- rep(position, length.out = max_len)
-    if (lens[3] < max_len) rotation_axis <- rep(rotation_axis, length.out = max_len)
+    if (lens[2] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
+    if (lens[3] < max_len) rotation_axis <- matrix(rep(t(rotation_axis), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[4] < max_len) rotation_angle <- rep(rotation_angle, length.out = max_len)
-    if (lens[5] < max_len) scale <- rep(scale, length.out = max_len)
+    if (lens[5] < max_len) scale <- matrix(rep(t(scale), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[6] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
     draw_model_ex_vectorized_(model, position, rotation_axis, rotation_angle, scale, tint)
   } else {
@@ -9452,11 +9452,11 @@ draw_model_wires <- function(model, position, scale, tint) {
   if (!is_float(scale) && !is_vec(scale, is_float)) abort(paste0('`scale` must be a number or a vector of numbers, not ', friendly_typeof(scale), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
 
-  lens <- c(length(model), nrow(position), length(scale), length(tint))
+  lens <- c(length(model), ifelse(is.matrix(position), nrow(position), 1), length(scale), length(tint))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) model <- rep(unlist(list(model)), length.out = max_len)
-    if (lens[2] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[2] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[3] < max_len) scale <- rep(scale, length.out = max_len)
     if (lens[4] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
     draw_model_wires_vectorized_(model, position, scale, tint)
@@ -9532,12 +9532,12 @@ draw_billboard <- function(camera, texture, position, size, tint) {
   if (!is_float(size) && !is_vec(size, is_float)) abort(paste0('`size` must be a number or a vector of numbers, not ', friendly_typeof(size), '.'), call = NULL)
   if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
 
-  lens <- c(length(camera), length(texture), nrow(position), length(size), length(tint))
+  lens <- c(length(camera), length(texture), ifelse(is.matrix(position), nrow(position), 1), length(size), length(tint))
   if (any(lens > 1)) {
     max_len <- max(lens)
     if (lens[1] < max_len) camera <- rep(unlist(list(camera)), length.out = max_len)
     if (lens[2] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
-    if (lens[3] < max_len) position <- rep(position, length.out = max_len)
+    if (lens[3] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
     if (lens[4] < max_len) size <- rep(size, length.out = max_len)
     if (lens[5] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
     draw_billboard_vectorized_(camera, texture, position, size, tint)

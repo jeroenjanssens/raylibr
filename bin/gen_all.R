@@ -379,12 +379,16 @@ for(fun in funs) {
 
   "), con)
   } else {
+    # generate vectorized version
 
     lens_parts <- c()
     for (p in fun$params) {
       if (!is.null(p$is_vectorized) && p$is_vectorized) {
-        len_str <- ifelse(p$type %in% vec_classes_matrix, "nrow", "length")
-        lens_parts <- c(lens_parts, glue("{len_str}({make_rcpp_name(p$name)})"))
+        if (p$type %in% vec_classes_matrix) {
+          lens_parts <- c(lens_parts, glue("ifelse(is.matrix({make_rcpp_name(p$name)}), nrow({make_rcpp_name(p$name)}), 1)"))
+        } else {
+          lens_parts <- c(lens_parts, glue("length({make_rcpp_name(p$name)})"))
+        }
       }
     }
     lens_str <- paste0("lens <- c(", str_c(lens_parts, collapse = ", "), ")")
@@ -393,8 +397,11 @@ for(fun in funs) {
     param_i = 1
     for (p in fun$params) {
       if (!is.null(p$is_vectorized) && p$is_vectorized) {
-        if (p$type %in% c(vec_classes_vector, vec_classes_matrix)) {
+        if (p$type %in% vec_classes_vector) {
           rep_str <- c(rep_str, glue("if (lens[{param_i}] < max_len) {make_rcpp_name(p$name)} <- rep({make_rcpp_name(p$name)}, length.out = max_len)"))
+        } else if (p$type %in% vec_classes_matrix) {
+          matrix_width <- substr(p$type, nchar(p$type), nchar(p$type))
+          rep_str <- c(rep_str, glue("if (lens[{param_i}] < max_len) {make_rcpp_name(p$name)} <- matrix(rep(t({make_rcpp_name(p$name)}), length.out = max_len * {matrix_width}), ncol = {matrix_width}, byrow = TRUE)"))
         } else {
           rep_str <- c(rep_str, glue("if (lens[{param_i}] < max_len) {make_rcpp_name(p$name)} <- rep(unlist(list({make_rcpp_name(p$name)})), length.out = max_len)"))
         }
