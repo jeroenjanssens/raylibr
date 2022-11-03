@@ -36,9 +36,9 @@ viewport_position <- c(512, 64)
 viewport_resolution <- 128
 viewport_fov <- 70
 viewport_dof <- 8
-viewport_fog <- 0.1
+viewport_fog <- 0.15
 
-player_position <- c(442, 72)
+player_position <- c(320, 256)
 player_angle <- 2.3
 player_offset <- 8
 
@@ -165,6 +165,7 @@ while (!window_should_close()) {
   if (bc[1] && bc[3]) { player_position[1] <- player_position[1] - player_diff[1] + player_offset } # left
   if (bc[2] && bc[4]) { player_position[1] <- player_position[1] + player_diff[1] - player_offset } # right
 
+  player_bb <- rep(player_position, each = 4) + player_offsets
 
   ## keys for changing settings ------------------------------------------------
 
@@ -332,6 +333,11 @@ while (!window_should_close()) {
                 player_position - c(cos(player_angle), sin(player_angle)) * 7 +
                   c(cos(player_angle_s), sin(player_angle_s)) * 4,
                 "white")
+
+  if (bc[1] && bc[2]) { draw_line_ex(player_bb[1,], player_bb[2,], 2, "red") }
+  if (bc[3] && bc[4]) { draw_line_ex(player_bb[3,], player_bb[4,], 2, "red") }
+  if (bc[1] && bc[3]) { draw_line_ex(player_bb[1,], player_bb[3,], 2, "red") }
+  if (bc[2] && bc[4]) { draw_line_ex(player_bb[2,], player_bb[4,], 2, "red") }
 
   ### draw floor and ceiling ---------------------------------------------------
   color_floor_far <- blend_colors(color_fog, color_floor, viewport_fog * 5)

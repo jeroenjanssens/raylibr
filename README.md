@@ -35,7 +35,7 @@ work with:
 The `raylibr` package allows you to do all of this from R, and adds the
 following usability improvements for R users:
 
--   Function and class names are in snake_case (instead of PascalCase
+-   Function and class names are in snake\_case (instead of PascalCase
     used by Raylib)
 -   Use R vectors and matrices (they’re automatically converted to
     Raylib’s `Vector2`, `Vector3`, etc.)
@@ -83,6 +83,14 @@ Below are a few more examples to whet your appetite. Run
 `demo(package = "raylibr")` to see all available demos in R or visit
 [Raylib’s examples page](https://www.raylib.com/examples.html) to see
 even more examples in C.
+
+### Build your own raycaster
+
+Run `demo("raycaster", package = "raylibr")` to reminisce the 90s and
+learn how raycasters work. Source:
+[`demo/raycaster.R`](https://github.com/jeroenjanssens/raylibr/blob/HEAD/demo/raycaster.R)
+
+<img src="man/figures/raylibr-demo-raycaster.gif" width="550" />
 
 ### Play a game of snake
 

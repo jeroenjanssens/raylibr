@@ -86,6 +86,13 @@ Below are a few more examples to whet your appetite.
 Run `demo(package = "raylibr")` to see all available demos in R or visit [Raylib's examples page](https://www.raylib.com/examples.html) to see even more examples in C.
 
 
+### Build your own raycaster
+
+Run `demo("raycaster", package = "raylibr")` to reminisce the 90s and learn how raycasters work. Source: [`demo/raycaster.R`](https://github.com/jeroenjanssens/raylibr/blob/HEAD/demo/raycaster.R)
+
+<img src="man/figures/raylibr-demo-raycaster.gif" width="550" />
+
+
 ### Play a game of snake 
 
 Run `demo("snake", package = "raylibr")` to play this game. Use the arrow keys to control the snake. Source: [`demo/snake.R`](https://github.com/jeroenjanssens/raylibr/blob/HEAD/demo/snake.R)
