@@ -80,8 +80,7 @@ tile_colors <- ifelse(tile_grid, "white", "black")
 tile_colors <- lapply(color_wall[tile_grid+1], blend_colors, "black", 0.8)
 tile_sizes <- matrix(rep(tile_size, tile_dims[1] * tile_dims[2] * 2), ncol = 2)
 
-angles <- seq(-viewport_fov / 2, viewport_fov / 2,
-              length.out = viewport_resolution) * (pi / 180)
+angles <- atan(seq(-viewport_fov / 2, viewport_fov / 2, length.out = (viewport_resolution + 2))[2:(viewport_resolution + 1)] * pi / 180)
 
 bars_width <- viewport_size[1] / viewport_resolution
 bars_x <- viewport_position[1] + head(seq(from = 0, to = viewport_size[1],
@@ -212,9 +211,7 @@ while (!window_should_close()) {
     viewport_fov <- max(30, min(viewport_fov, 170))
     viewport_fog <- max(0, min(viewport_fog, 1))
 
-    angles <- seq(-viewport_fov / 2, viewport_fov / 2,
-                  length.out = viewport_resolution) * (pi / 180)
-
+    angles <- atan(seq(-viewport_fov / 2, viewport_fov / 2, length.out = (viewport_resolution + 2))[2:(viewport_resolution + 1)] * pi / 180)
     bars_width <- viewport_size[1] / viewport_resolution
     bars_x <- viewport_position[1] + head(seq(from = 0, to = viewport_size[1],
                                               length.out = viewport_resolution + 1),
