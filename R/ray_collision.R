@@ -68,39 +68,39 @@ ray_collision_get <- function(o, field) {
 }
 
 #' @export
-"$.ray_collision" <- function(o, field) {
+"$.raylibr_ray_collision" <- function(o, field) {
   ray_collision_get(o, field)
 }
 
 #' @export
-"$<-.ray_collision" <- function(o, field, value) {
+"$<-.raylibr_ray_collision" <- function(o, field, value) {
   ray_collision_set(o, field, value)
 }
 
 #' @export
-.DollarNames.ray_collision <- function(x, pattern) {
+.DollarNames.raylibr_ray_collision <- function(x, pattern) {
   c("hit", "distance", "point", "normal")
 }
 
 #' @export
-"[.ray_collision" <- `$.ray_collision`
+"[.raylibr_ray_collision" <- `$.raylibr_ray_collision`
 
 #' @export
-"[[.ray_collision" <- `$.ray_collision`
+"[[.raylibr_ray_collision" <- `$.raylibr_ray_collision`
 
 #' @export
-"[<-.ray_collision" <- `$<-.ray_collision`
+"[<-.raylibr_ray_collision" <- `$<-.raylibr_ray_collision`
 
 #' @export
-"[[<-.ray_collision" <- `$<-.ray_collision`
+"[[<-.raylibr_ray_collision" <- `$<-.raylibr_ray_collision`
 
 #' @export
-print.ray_collision <- function(x, ...) {
+print.raylibr_ray_collision <- function(x, ...) {
   cat(as.character(x), "\n")
 }
 
 #' @export
-as.character.ray_collision <- function(x, ...) {
+as.character.raylibr_ray_collision <- function(x, ...) {
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]
@@ -112,5 +112,5 @@ as.character.ray_collision <- function(x, ...) {
 
 #' @export
 is_ray_collision <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "ray_collision"
+  typeof(x) == "externalptr" && class(x) == "raylibr_ray_collision"
 }

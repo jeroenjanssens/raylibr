@@ -84,39 +84,39 @@ npatch_info_get <- function(o, field) {
 }
 
 #' @export
-"$.npatch_info" <- function(o, field) {
+"$.raylibr_npatch_info" <- function(o, field) {
   npatch_info_get(o, field)
 }
 
 #' @export
-"$<-.npatch_info" <- function(o, field, value) {
+"$<-.raylibr_npatch_info" <- function(o, field, value) {
   npatch_info_set(o, field, value)
 }
 
 #' @export
-.DollarNames.npatch_info <- function(x, pattern) {
+.DollarNames.raylibr_npatch_info <- function(x, pattern) {
   c("source", "left", "top", "right", "bottom", "layout")
 }
 
 #' @export
-"[.npatch_info" <- `$.npatch_info`
+"[.raylibr_npatch_info" <- `$.raylibr_npatch_info`
 
 #' @export
-"[[.npatch_info" <- `$.npatch_info`
+"[[.raylibr_npatch_info" <- `$.raylibr_npatch_info`
 
 #' @export
-"[<-.npatch_info" <- `$<-.npatch_info`
+"[<-.raylibr_npatch_info" <- `$<-.raylibr_npatch_info`
 
 #' @export
-"[[<-.npatch_info" <- `$<-.npatch_info`
+"[[<-.raylibr_npatch_info" <- `$<-.raylibr_npatch_info`
 
 #' @export
-print.npatch_info <- function(x, ...) {
+print.raylibr_npatch_info <- function(x, ...) {
   cat(as.character(x), "\n")
 }
 
 #' @export
-as.character.npatch_info <- function(x, ...) {
+as.character.raylibr_npatch_info <- function(x, ...) {
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]
@@ -128,5 +128,5 @@ as.character.npatch_info <- function(x, ...) {
 
 #' @export
 is_npatch_info <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "npatch_info"
+  typeof(x) == "externalptr" && class(x) == "raylibr_npatch_info"
 }

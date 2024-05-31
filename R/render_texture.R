@@ -60,39 +60,39 @@ render_texture_get <- function(o, field) {
 }
 
 #' @export
-"$.render_texture" <- function(o, field) {
+"$.raylibr_render_texture" <- function(o, field) {
   render_texture_get(o, field)
 }
 
 #' @export
-"$<-.render_texture" <- function(o, field, value) {
+"$<-.raylibr_render_texture" <- function(o, field, value) {
   render_texture_set(o, field, value)
 }
 
 #' @export
-.DollarNames.render_texture <- function(x, pattern) {
+.DollarNames.raylibr_render_texture <- function(x, pattern) {
   c("id", "texture", "depth")
 }
 
 #' @export
-"[.render_texture" <- `$.render_texture`
+"[.raylibr_render_texture" <- `$.raylibr_render_texture`
 
 #' @export
-"[[.render_texture" <- `$.render_texture`
+"[[.raylibr_render_texture" <- `$.raylibr_render_texture`
 
 #' @export
-"[<-.render_texture" <- `$<-.render_texture`
+"[<-.raylibr_render_texture" <- `$<-.raylibr_render_texture`
 
 #' @export
-"[[<-.render_texture" <- `$<-.render_texture`
+"[[<-.raylibr_render_texture" <- `$<-.raylibr_render_texture`
 
 #' @export
-print.render_texture <- function(x, ...) {
+print.raylibr_render_texture <- function(x, ...) {
   cat(as.character(x), "\n")
 }
 
 #' @export
-as.character.render_texture <- function(x, ...) {
+as.character.raylibr_render_texture <- function(x, ...) {
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]
@@ -104,5 +104,5 @@ as.character.render_texture <- function(x, ...) {
 
 #' @export
 is_render_texture <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "render_texture"
+  typeof(x) == "externalptr" && class(x) == "raylibr_render_texture"
 }

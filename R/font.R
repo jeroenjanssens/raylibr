@@ -3,5 +3,5 @@
 
 #' @export
 is_font <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "font"
+  typeof(x) == "externalptr" && class(x) == "raylibr_font"
 }

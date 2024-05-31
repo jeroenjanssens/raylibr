@@ -68,39 +68,39 @@ rectangle_get <- function(o, field) {
 }
 
 #' @export
-"$.rectangle" <- function(o, field) {
+"$.raylibr_rectangle" <- function(o, field) {
   rectangle_get(o, field)
 }
 
 #' @export
-"$<-.rectangle" <- function(o, field, value) {
+"$<-.raylibr_rectangle" <- function(o, field, value) {
   rectangle_set(o, field, value)
 }
 
 #' @export
-.DollarNames.rectangle <- function(x, pattern) {
+.DollarNames.raylibr_rectangle <- function(x, pattern) {
   c("x", "y", "width", "height")
 }
 
 #' @export
-"[.rectangle" <- `$.rectangle`
+"[.raylibr_rectangle" <- `$.raylibr_rectangle`
 
 #' @export
-"[[.rectangle" <- `$.rectangle`
+"[[.raylibr_rectangle" <- `$.raylibr_rectangle`
 
 #' @export
-"[<-.rectangle" <- `$<-.rectangle`
+"[<-.raylibr_rectangle" <- `$<-.raylibr_rectangle`
 
 #' @export
-"[[<-.rectangle" <- `$<-.rectangle`
+"[[<-.raylibr_rectangle" <- `$<-.raylibr_rectangle`
 
 #' @export
-print.rectangle <- function(x, ...) {
+print.raylibr_rectangle <- function(x, ...) {
   cat(as.character(x), "\n")
 }
 
 #' @export
-as.character.rectangle <- function(x, ...) {
+as.character.raylibr_rectangle <- function(x, ...) {
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]
@@ -112,5 +112,5 @@ as.character.rectangle <- function(x, ...) {
 
 #' @export
 is_rectangle <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "rectangle"
+  typeof(x) == "externalptr" && class(x) == "raylibr_rectangle"
 }

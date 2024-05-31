@@ -52,39 +52,39 @@ sound_get <- function(o, field) {
 }
 
 #' @export
-"$.sound" <- function(o, field) {
+"$.raylibr_sound" <- function(o, field) {
   sound_get(o, field)
 }
 
 #' @export
-"$<-.sound" <- function(o, field, value) {
+"$<-.raylibr_sound" <- function(o, field, value) {
   sound_set(o, field, value)
 }
 
 #' @export
-.DollarNames.sound <- function(x, pattern) {
+.DollarNames.raylibr_sound <- function(x, pattern) {
   c("stream", "frame_count")
 }
 
 #' @export
-"[.sound" <- `$.sound`
+"[.raylibr_sound" <- `$.raylibr_sound`
 
 #' @export
-"[[.sound" <- `$.sound`
+"[[.raylibr_sound" <- `$.raylibr_sound`
 
 #' @export
-"[<-.sound" <- `$<-.sound`
+"[<-.raylibr_sound" <- `$<-.raylibr_sound`
 
 #' @export
-"[[<-.sound" <- `$<-.sound`
+"[[<-.raylibr_sound" <- `$<-.raylibr_sound`
 
 #' @export
-print.sound <- function(x, ...) {
+print.raylibr_sound <- function(x, ...) {
   cat(as.character(x), "\n")
 }
 
 #' @export
-as.character.sound <- function(x, ...) {
+as.character.raylibr_sound <- function(x, ...) {
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]
@@ -96,5 +96,5 @@ as.character.sound <- function(x, ...) {
 
 #' @export
 is_sound <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "sound"
+  typeof(x) == "externalptr" && class(x) == "raylibr_sound"
 }

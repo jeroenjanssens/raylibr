@@ -3,5 +3,5 @@
 
 #' @export
 is_wave <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "wave"
+  typeof(x) == "externalptr" && class(x) == "raylibr_wave"
 }

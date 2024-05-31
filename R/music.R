@@ -3,5 +3,5 @@
 
 #' @export
 is_music <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "music"
+  typeof(x) == "externalptr" && class(x) == "raylibr_music"
 }

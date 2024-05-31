@@ -52,39 +52,39 @@ bounding_box_get <- function(o, field) {
 }
 
 #' @export
-"$.bounding_box" <- function(o, field) {
+"$.raylibr_bounding_box" <- function(o, field) {
   bounding_box_get(o, field)
 }
 
 #' @export
-"$<-.bounding_box" <- function(o, field, value) {
+"$<-.raylibr_bounding_box" <- function(o, field, value) {
   bounding_box_set(o, field, value)
 }
 
 #' @export
-.DollarNames.bounding_box <- function(x, pattern) {
+.DollarNames.raylibr_bounding_box <- function(x, pattern) {
   c("min", "max")
 }
 
 #' @export
-"[.bounding_box" <- `$.bounding_box`
+"[.raylibr_bounding_box" <- `$.raylibr_bounding_box`
 
 #' @export
-"[[.bounding_box" <- `$.bounding_box`
+"[[.raylibr_bounding_box" <- `$.raylibr_bounding_box`
 
 #' @export
-"[<-.bounding_box" <- `$<-.bounding_box`
+"[<-.raylibr_bounding_box" <- `$<-.raylibr_bounding_box`
 
 #' @export
-"[[<-.bounding_box" <- `$<-.bounding_box`
+"[[<-.raylibr_bounding_box" <- `$<-.raylibr_bounding_box`
 
 #' @export
-print.bounding_box <- function(x, ...) {
+print.raylibr_bounding_box <- function(x, ...) {
   cat(as.character(x), "\n")
 }
 
 #' @export
-as.character.bounding_box <- function(x, ...) {
+as.character.raylibr_bounding_box <- function(x, ...) {
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]
@@ -96,5 +96,5 @@ as.character.bounding_box <- function(x, ...) {
 
 #' @export
 is_bounding_box <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "bounding_box"
+  typeof(x) == "externalptr" && class(x) == "raylibr_bounding_box"
 }

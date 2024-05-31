@@ -3,5 +3,5 @@
 
 #' @export
 is_material <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "material"
+  typeof(x) == "externalptr" && class(x) == "raylibr_material"
 }

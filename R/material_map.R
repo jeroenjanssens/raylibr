@@ -60,39 +60,39 @@ material_map_get <- function(o, field) {
 }
 
 #' @export
-"$.material_map" <- function(o, field) {
+"$.raylibr_material_map" <- function(o, field) {
   material_map_get(o, field)
 }
 
 #' @export
-"$<-.material_map" <- function(o, field, value) {
+"$<-.raylibr_material_map" <- function(o, field, value) {
   material_map_set(o, field, value)
 }
 
 #' @export
-.DollarNames.material_map <- function(x, pattern) {
+.DollarNames.raylibr_material_map <- function(x, pattern) {
   c("texture", "color", "value")
 }
 
 #' @export
-"[.material_map" <- `$.material_map`
+"[.raylibr_material_map" <- `$.raylibr_material_map`
 
 #' @export
-"[[.material_map" <- `$.material_map`
+"[[.raylibr_material_map" <- `$.raylibr_material_map`
 
 #' @export
-"[<-.material_map" <- `$<-.material_map`
+"[<-.raylibr_material_map" <- `$<-.raylibr_material_map`
 
 #' @export
-"[[<-.material_map" <- `$<-.material_map`
+"[[<-.raylibr_material_map" <- `$<-.raylibr_material_map`
 
 #' @export
-print.material_map <- function(x, ...) {
+print.raylibr_material_map <- function(x, ...) {
   cat(as.character(x), "\n")
 }
 
 #' @export
-as.character.material_map <- function(x, ...) {
+as.character.raylibr_material_map <- function(x, ...) {
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]
@@ -104,5 +104,5 @@ as.character.material_map <- function(x, ...) {
 
 #' @export
 is_material_map <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "material_map"
+  typeof(x) == "externalptr" && class(x) == "raylibr_material_map"
 }

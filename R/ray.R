@@ -52,39 +52,39 @@ ray_get <- function(o, field) {
 }
 
 #' @export
-"$.ray" <- function(o, field) {
+"$.raylibr_ray" <- function(o, field) {
   ray_get(o, field)
 }
 
 #' @export
-"$<-.ray" <- function(o, field, value) {
+"$<-.raylibr_ray" <- function(o, field, value) {
   ray_set(o, field, value)
 }
 
 #' @export
-.DollarNames.ray <- function(x, pattern) {
+.DollarNames.raylibr_ray <- function(x, pattern) {
   c("position", "direction")
 }
 
 #' @export
-"[.ray" <- `$.ray`
+"[.raylibr_ray" <- `$.raylibr_ray`
 
 #' @export
-"[[.ray" <- `$.ray`
+"[[.raylibr_ray" <- `$.raylibr_ray`
 
 #' @export
-"[<-.ray" <- `$<-.ray`
+"[<-.raylibr_ray" <- `$<-.raylibr_ray`
 
 #' @export
-"[[<-.ray" <- `$<-.ray`
+"[[<-.raylibr_ray" <- `$<-.raylibr_ray`
 
 #' @export
-print.ray <- function(x, ...) {
+print.raylibr_ray <- function(x, ...) {
   cat(as.character(x), "\n")
 }
 
 #' @export
-as.character.ray <- function(x, ...) {
+as.character.raylibr_ray <- function(x, ...) {
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]
@@ -96,5 +96,5 @@ as.character.ray <- function(x, ...) {
 
 #' @export
 is_ray <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "ray"
+  typeof(x) == "externalptr" && class(x) == "raylibr_ray"
 }

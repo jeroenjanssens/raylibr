@@ -3,5 +3,5 @@
 
 #' @export
 is_mesh <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "mesh"
+  typeof(x) == "externalptr" && class(x) == "raylibr_mesh"
 }

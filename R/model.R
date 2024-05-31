@@ -3,5 +3,5 @@
 
 #' @export
 is_model <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "model"
+  typeof(x) == "externalptr" && class(x) == "raylibr_model"
 }

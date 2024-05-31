@@ -76,39 +76,39 @@ glyph_info_get <- function(o, field) {
 }
 
 #' @export
-"$.glyph_info" <- function(o, field) {
+"$.raylibr_glyph_info" <- function(o, field) {
   glyph_info_get(o, field)
 }
 
 #' @export
-"$<-.glyph_info" <- function(o, field, value) {
+"$<-.raylibr_glyph_info" <- function(o, field, value) {
   glyph_info_set(o, field, value)
 }
 
 #' @export
-.DollarNames.glyph_info <- function(x, pattern) {
+.DollarNames.raylibr_glyph_info <- function(x, pattern) {
   c("value", "offset_x", "offset_y", "advance_x", "image")
 }
 
 #' @export
-"[.glyph_info" <- `$.glyph_info`
+"[.raylibr_glyph_info" <- `$.raylibr_glyph_info`
 
 #' @export
-"[[.glyph_info" <- `$.glyph_info`
+"[[.raylibr_glyph_info" <- `$.raylibr_glyph_info`
 
 #' @export
-"[<-.glyph_info" <- `$<-.glyph_info`
+"[<-.raylibr_glyph_info" <- `$<-.raylibr_glyph_info`
 
 #' @export
-"[[<-.glyph_info" <- `$<-.glyph_info`
+"[[<-.raylibr_glyph_info" <- `$<-.raylibr_glyph_info`
 
 #' @export
-print.glyph_info <- function(x, ...) {
+print.raylibr_glyph_info <- function(x, ...) {
   cat(as.character(x), "\n")
 }
 
 #' @export
-as.character.glyph_info <- function(x, ...) {
+as.character.raylibr_glyph_info <- function(x, ...) {
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]
@@ -120,5 +120,5 @@ as.character.glyph_info <- function(x, ...) {
 
 #' @export
 is_glyph_info <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "glyph_info"
+  typeof(x) == "externalptr" && class(x) == "raylibr_glyph_info"
 }

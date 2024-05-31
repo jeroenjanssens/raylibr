@@ -24,7 +24,7 @@ namespace Rcpp {
     AudioStream *ptr = new AudioStream;
     (*ptr) = x;
     XPtr<AudioStream>xptr = XPtr<AudioStream>(ptr, true);
-    xptr.attr("class") = "audio_stream";
+    xptr.attr("class") = "raylibr_audio_stream";
     return xptr;
   };
   
@@ -47,7 +47,7 @@ namespace Rcpp {
     BoneInfo *ptr = new BoneInfo;
     (*ptr) = x;
     XPtr<BoneInfo>xptr = XPtr<BoneInfo>(ptr, true);
-    xptr.attr("class") = "bone_info";
+    xptr.attr("class") = "raylibr_bone_info";
     return xptr;
   };
   
@@ -70,7 +70,7 @@ namespace Rcpp {
     BoundingBox *ptr = new BoundingBox;
     (*ptr) = x;
     XPtr<BoundingBox>xptr = XPtr<BoundingBox>(ptr, true);
-    xptr.attr("class") = "bounding_box";
+    xptr.attr("class") = "raylibr_bounding_box";
     return xptr;
   };
   
@@ -125,7 +125,7 @@ namespace Rcpp {
     Camera2D *ptr = new Camera2D;
     (*ptr) = x;
     XPtr<Camera2D>xptr = XPtr<Camera2D>(ptr, true);
-    xptr.attr("class") = "camera_2d";
+    xptr.attr("class") = "raylibr_camera_2d";
     return xptr;
   };
   
@@ -205,7 +205,7 @@ namespace Rcpp {
     Camera3D *ptr = new Camera3D;
     (*ptr) = x;
     XPtr<Camera3D>xptr = XPtr<Camera3D>(ptr, true);
-    xptr.attr("class") = "camera_3d";
+    xptr.attr("class") = "raylibr_camera_3d";
     return xptr;
   };
   
@@ -361,7 +361,7 @@ namespace Rcpp {
     Font *ptr = new Font;
     (*ptr) = x;
     XPtr<Font>xptr = XPtr<Font>(ptr, true);
-    xptr.attr("class") = "font";
+    xptr.attr("class") = "raylibr_font";
     return xptr;
   };
   
@@ -387,7 +387,7 @@ namespace Rcpp {
     GlyphInfo *ptr = new GlyphInfo;
     (*ptr) = x;
     XPtr<GlyphInfo>xptr = XPtr<GlyphInfo>(ptr, true);
-    xptr.attr("class") = "glyph_info";
+    xptr.attr("class") = "raylibr_glyph_info";
     return xptr;
   };
   
@@ -479,7 +479,7 @@ namespace Rcpp {
     Image *ptr = new Image;
     (*ptr) = x;
     XPtr<Image>xptr = XPtr<Image>(ptr, true);
-    xptr.attr("class") = "image";
+    xptr.attr("class") = "raylibr_image";
     return xptr;
   };
   
@@ -503,7 +503,7 @@ namespace Rcpp {
     Material *ptr = new Material;
     (*ptr) = x;
     XPtr<Material>xptr = XPtr<Material>(ptr, true);
-    xptr.attr("class") = "material";
+    xptr.attr("class") = "raylibr_material";
     return xptr;
   };
   
@@ -527,7 +527,7 @@ namespace Rcpp {
     MaterialMap *ptr = new MaterialMap;
     (*ptr) = x;
     XPtr<MaterialMap>xptr = XPtr<MaterialMap>(ptr, true);
-    xptr.attr("class") = "material_map";
+    xptr.attr("class") = "raylibr_material_map";
     return xptr;
   };
   
@@ -611,7 +611,7 @@ namespace Rcpp {
     Mesh *ptr = new Mesh;
     (*ptr) = x;
     XPtr<Mesh>xptr = XPtr<Mesh>(ptr, true);
-    xptr.attr("class") = "mesh";
+    xptr.attr("class") = "raylibr_mesh";
     return xptr;
   };
   
@@ -644,7 +644,7 @@ namespace Rcpp {
     Model *ptr = new Model;
     (*ptr) = x;
     XPtr<Model>xptr = XPtr<Model>(ptr, true);
-    xptr.attr("class") = "model";
+    xptr.attr("class") = "raylibr_model";
     return xptr;
   };
   
@@ -669,7 +669,7 @@ namespace Rcpp {
     ModelAnimation *ptr = new ModelAnimation;
     (*ptr) = x;
     XPtr<ModelAnimation>xptr = XPtr<ModelAnimation>(ptr, true);
-    xptr.attr("class") = "model_animation";
+    xptr.attr("class") = "raylibr_model_animation";
     return xptr;
   };
   
@@ -696,7 +696,7 @@ namespace Rcpp {
     Music *ptr = new Music;
     (*ptr) = x;
     XPtr<Music>xptr = XPtr<Music>(ptr, true);
-    xptr.attr("class") = "music";
+    xptr.attr("class") = "raylibr_music";
     return xptr;
   };
   
@@ -723,7 +723,7 @@ namespace Rcpp {
     NPatchInfo *ptr = new NPatchInfo;
     (*ptr) = x;
     XPtr<NPatchInfo>xptr = XPtr<NPatchInfo>(ptr, true);
-    xptr.attr("class") = "npatch_info";
+    xptr.attr("class") = "raylibr_npatch_info";
     return xptr;
   };
   
@@ -824,7 +824,7 @@ namespace Rcpp {
     Ray *ptr = new Ray;
     (*ptr) = x;
     XPtr<Ray>xptr = XPtr<Ray>(ptr, true);
-    xptr.attr("class") = "ray";
+    xptr.attr("class") = "raylibr_ray";
     return xptr;
   };
   
@@ -879,7 +879,7 @@ namespace Rcpp {
     RayCollision *ptr = new RayCollision;
     (*ptr) = x;
     XPtr<RayCollision>xptr = XPtr<RayCollision>(ptr, true);
-    xptr.attr("class") = "ray_collision";
+    xptr.attr("class") = "raylibr_ray_collision";
     return xptr;
   };
   
@@ -958,7 +958,7 @@ namespace Rcpp {
     Rectangle *ptr = new Rectangle;
     (*ptr) = x;
     XPtr<Rectangle>xptr = XPtr<Rectangle>(ptr, true);
-    xptr.attr("class") = "rectangle";
+    xptr.attr("class") = "raylibr_rectangle";
     return xptr;
   };
   
@@ -1036,7 +1036,7 @@ namespace Rcpp {
     RenderTexture *ptr = new RenderTexture;
     (*ptr) = x;
     XPtr<RenderTexture>xptr = XPtr<RenderTexture>(ptr, true);
-    xptr.attr("class") = "render_texture";
+    xptr.attr("class") = "raylibr_render_texture";
     return xptr;
   };
   
@@ -1101,7 +1101,7 @@ namespace Rcpp {
     Shader *ptr = new Shader;
     (*ptr) = x;
     XPtr<Shader>xptr = XPtr<Shader>(ptr, true);
-    xptr.attr("class") = "shader";
+    xptr.attr("class") = "raylibr_shader";
     return xptr;
   };
   
@@ -1124,7 +1124,7 @@ namespace Rcpp {
     Sound *ptr = new Sound;
     (*ptr) = x;
     XPtr<Sound>xptr = XPtr<Sound>(ptr, true);
-    xptr.attr("class") = "sound";
+    xptr.attr("class") = "raylibr_sound";
     return xptr;
   };
   
@@ -1180,7 +1180,7 @@ namespace Rcpp {
     Texture *ptr = new Texture;
     (*ptr) = x;
     XPtr<Texture>xptr = XPtr<Texture>(ptr, true);
-    xptr.attr("class") = "texture";
+    xptr.attr("class") = "raylibr_texture";
     return xptr;
   };
   
@@ -1270,7 +1270,7 @@ namespace Rcpp {
     Transform *ptr = new Transform;
     (*ptr) = x;
     XPtr<Transform>xptr = XPtr<Transform>(ptr, true);
-    xptr.attr("class") = "transform";
+    xptr.attr("class") = "raylibr_transform";
     return xptr;
   };
   
@@ -1343,7 +1343,7 @@ namespace Rcpp {
     VrDeviceInfo *ptr = new VrDeviceInfo;
     (*ptr) = x;
     XPtr<VrDeviceInfo>xptr = XPtr<VrDeviceInfo>(ptr, true);
-    xptr.attr("class") = "vr_device_info";
+    xptr.attr("class") = "raylibr_vr_device_info";
     return xptr;
   };
   
@@ -1372,7 +1372,7 @@ namespace Rcpp {
     VrStereoConfig *ptr = new VrStereoConfig;
     (*ptr) = x;
     XPtr<VrStereoConfig>xptr = XPtr<VrStereoConfig>(ptr, true);
-    xptr.attr("class") = "vr_stereo_config";
+    xptr.attr("class") = "raylibr_vr_stereo_config";
     return xptr;
   };
   
@@ -1398,7 +1398,7 @@ namespace Rcpp {
     Wave *ptr = new Wave;
     (*ptr) = x;
     XPtr<Wave>xptr = XPtr<Wave>(ptr, true);
-    xptr.attr("class") = "wave";
+    xptr.attr("class") = "raylibr_wave";
     return xptr;
   };
   

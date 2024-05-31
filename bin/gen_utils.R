@@ -293,7 +293,7 @@ make_wrap <- function(name) {
     {name} *ptr = new {name};
     (*ptr) = x;
     XPtr<{name}>xptr = XPtr<{name}>(ptr, true);
-    xptr.attr(\"class\") = \"{make_rcpp_name(name)}\";
+    xptr.attr(\"class\") = \"raylibr_{make_rcpp_name(name)}\";
     return xptr;
   }};\n\n")
 }

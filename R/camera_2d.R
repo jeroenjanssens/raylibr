@@ -68,39 +68,39 @@ camera_2d_get <- function(o, field) {
 }
 
 #' @export
-"$.camera_2d" <- function(o, field) {
+"$.raylibr_camera_2d" <- function(o, field) {
   camera_2d_get(o, field)
 }
 
 #' @export
-"$<-.camera_2d" <- function(o, field, value) {
+"$<-.raylibr_camera_2d" <- function(o, field, value) {
   camera_2d_set(o, field, value)
 }
 
 #' @export
-.DollarNames.camera_2d <- function(x, pattern) {
+.DollarNames.raylibr_camera_2d <- function(x, pattern) {
   c("offset", "target", "rotation", "zoom")
 }
 
 #' @export
-"[.camera_2d" <- `$.camera_2d`
+"[.raylibr_camera_2d" <- `$.raylibr_camera_2d`
 
 #' @export
-"[[.camera_2d" <- `$.camera_2d`
+"[[.raylibr_camera_2d" <- `$.raylibr_camera_2d`
 
 #' @export
-"[<-.camera_2d" <- `$<-.camera_2d`
+"[<-.raylibr_camera_2d" <- `$<-.raylibr_camera_2d`
 
 #' @export
-"[[<-.camera_2d" <- `$<-.camera_2d`
+"[[<-.raylibr_camera_2d" <- `$<-.raylibr_camera_2d`
 
 #' @export
-print.camera_2d <- function(x, ...) {
+print.raylibr_camera_2d <- function(x, ...) {
   cat(as.character(x), "\n")
 }
 
 #' @export
-as.character.camera_2d <- function(x, ...) {
+as.character.raylibr_camera_2d <- function(x, ...) {
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]
@@ -112,5 +112,5 @@ as.character.camera_2d <- function(x, ...) {
 
 #' @export
 is_camera_2d <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "camera_2d"
+  typeof(x) == "externalptr" && class(x) == "raylibr_camera_2d"
 }

@@ -268,39 +268,39 @@ for (cls in classes) {
       }}
 
       #' @export
-      \"$.{cls$class_name}\" <- function(o, field) {{
+      \"$.raylibr_{cls$class_name}\" <- function(o, field) {{
         {cls$class_name}_get(o, field)
       }}
 
       #' @export
-      \"$<-.{cls$class_name}\" <- function(o, field, value) {{
+      \"$<-.raylibr_{cls$class_name}\" <- function(o, field, value) {{
         {cls$class_name}_set(o, field, value)
       }}
 
       #' @export
-      .DollarNames.{cls$class_name} <- function(x, pattern) {{
+      .DollarNames.raylibr_{cls$class_name} <- function(x, pattern) {{
         {deparse(names(cls$properties))}
       }}
 
       #' @export
-      \"[.{cls$class_name}\" <- `$.{cls$class_name}`
+      \"[.raylibr_{cls$class_name}\" <- `$.raylibr_{cls$class_name}`
 
       #' @export
-      \"[[.{cls$class_name}\" <- `$.{cls$class_name}`
+      \"[[.raylibr_{cls$class_name}\" <- `$.raylibr_{cls$class_name}`
 
       #' @export
-      \"[<-.{cls$class_name}\" <- `$<-.{cls$class_name}`
+      \"[<-.raylibr_{cls$class_name}\" <- `$<-.raylibr_{cls$class_name}`
 
       #' @export
-      \"[[<-.{cls$class_name}\" <- `$<-.{cls$class_name}`
+      \"[[<-.raylibr_{cls$class_name}\" <- `$<-.raylibr_{cls$class_name}`
 
       #' @export
-      print.{cls$class_name} <- function(x, ...) {{
+      print.raylibr_{cls$class_name} <- function(x, ...) {{
         cat(as.character(x), \"\\n\")
       }}
 
       #' @export
-      as.character.{cls$class_name} <- function(x, ...) {{
+      as.character.raylibr_{cls$class_name} <- function(x, ...) {{
         fields <- .DollarNames(x)
         values <- vapply(fields, function(field) {{
           val <- x[[field]]
@@ -317,7 +317,7 @@ for (cls in classes) {
 
       #' @export
       is_{cls$class_name} <- function(x) {{
-        typeof(x) == \"externalptr\" && class(x) == \"{cls$class_name}\"
+        typeof(x) == \"externalptr\" && class(x) == \"raylibr_{cls$class_name}\"
       }}
 "), con)
   }

@@ -68,39 +68,39 @@ color_get <- function(o, field) {
 }
 
 #' @export
-"$.color" <- function(o, field) {
+"$.raylibr_color" <- function(o, field) {
   color_get(o, field)
 }
 
 #' @export
-"$<-.color" <- function(o, field, value) {
+"$<-.raylibr_color" <- function(o, field, value) {
   color_set(o, field, value)
 }
 
 #' @export
-.DollarNames.color <- function(x, pattern) {
+.DollarNames.raylibr_color <- function(x, pattern) {
   c("r", "g", "b", "a")
 }
 
 #' @export
-"[.color" <- `$.color`
+"[.raylibr_color" <- `$.raylibr_color`
 
 #' @export
-"[[.color" <- `$.color`
+"[[.raylibr_color" <- `$.raylibr_color`
 
 #' @export
-"[<-.color" <- `$<-.color`
+"[<-.raylibr_color" <- `$<-.raylibr_color`
 
 #' @export
-"[[<-.color" <- `$<-.color`
+"[[<-.raylibr_color" <- `$<-.raylibr_color`
 
 #' @export
-print.color <- function(x, ...) {
+print.raylibr_color <- function(x, ...) {
   cat(as.character(x), "\n")
 }
 
 #' @export
-as.character.color <- function(x, ...) {
+as.character.raylibr_color <- function(x, ...) {
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]

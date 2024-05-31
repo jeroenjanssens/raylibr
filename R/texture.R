@@ -76,39 +76,39 @@ texture_get <- function(o, field) {
 }
 
 #' @export
-"$.texture" <- function(o, field) {
+"$.raylibr_texture" <- function(o, field) {
   texture_get(o, field)
 }
 
 #' @export
-"$<-.texture" <- function(o, field, value) {
+"$<-.raylibr_texture" <- function(o, field, value) {
   texture_set(o, field, value)
 }
 
 #' @export
-.DollarNames.texture <- function(x, pattern) {
+.DollarNames.raylibr_texture <- function(x, pattern) {
   c("id", "width", "height", "mipmaps", "format")
 }
 
 #' @export
-"[.texture" <- `$.texture`
+"[.raylibr_texture" <- `$.raylibr_texture`
 
 #' @export
-"[[.texture" <- `$.texture`
+"[[.raylibr_texture" <- `$.raylibr_texture`
 
 #' @export
-"[<-.texture" <- `$<-.texture`
+"[<-.raylibr_texture" <- `$<-.raylibr_texture`
 
 #' @export
-"[[<-.texture" <- `$<-.texture`
+"[[<-.raylibr_texture" <- `$<-.raylibr_texture`
 
 #' @export
-print.texture <- function(x, ...) {
+print.raylibr_texture <- function(x, ...) {
   cat(as.character(x), "\n")
 }
 
 #' @export
-as.character.texture <- function(x, ...) {
+as.character.raylibr_texture <- function(x, ...) {
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]
@@ -120,5 +120,5 @@ as.character.texture <- function(x, ...) {
 
 #' @export
 is_texture <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "texture"
+  typeof(x) == "externalptr" && class(x) == "raylibr_texture"
 }

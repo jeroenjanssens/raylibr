@@ -3,5 +3,5 @@
 
 #' @export
 is_image <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "image"
+  typeof(x) == "externalptr" && class(x) == "raylibr_image"
 }

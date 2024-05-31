@@ -60,39 +60,39 @@ transform_get <- function(o, field) {
 }
 
 #' @export
-"$.transform" <- function(o, field) {
+"$.raylibr_transform" <- function(o, field) {
   transform_get(o, field)
 }
 
 #' @export
-"$<-.transform" <- function(o, field, value) {
+"$<-.raylibr_transform" <- function(o, field, value) {
   transform_set(o, field, value)
 }
 
 #' @export
-.DollarNames.transform <- function(x, pattern) {
+.DollarNames.raylibr_transform <- function(x, pattern) {
   c("translation", "rotation", "scale")
 }
 
 #' @export
-"[.transform" <- `$.transform`
+"[.raylibr_transform" <- `$.raylibr_transform`
 
 #' @export
-"[[.transform" <- `$.transform`
+"[[.raylibr_transform" <- `$.raylibr_transform`
 
 #' @export
-"[<-.transform" <- `$<-.transform`
+"[<-.raylibr_transform" <- `$<-.raylibr_transform`
 
 #' @export
-"[[<-.transform" <- `$<-.transform`
+"[[<-.raylibr_transform" <- `$<-.raylibr_transform`
 
 #' @export
-print.transform <- function(x, ...) {
+print.raylibr_transform <- function(x, ...) {
   cat(as.character(x), "\n")
 }
 
 #' @export
-as.character.transform <- function(x, ...) {
+as.character.raylibr_transform <- function(x, ...) {
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]
@@ -104,5 +104,5 @@ as.character.transform <- function(x, ...) {
 
 #' @export
 is_transform <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "transform"
+  typeof(x) == "externalptr" && class(x) == "raylibr_transform"
 }
