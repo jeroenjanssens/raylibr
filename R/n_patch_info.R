@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' @export
+is_n_patch_info <- function(x) {
+  inherits(x, "n_patch_info")
+}
+
+
 #' n Patch Info
 #'
 #' Create a new n_patch_info object.

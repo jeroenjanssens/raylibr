@@ -21,7 +21,9 @@ This function has been auto-generated from the following Raylib function definit
 \seealso{
 Other model functions: 
 \code{\link{draw_model}()},
-\code{\link{load_model}()}
+\code{\link{load_model}()},
+\code{\link{set_model_mesh_material}()},
+\code{\link{set_model_texture}()}
 
 Other unload functions: 
 \code{\link{unload_audio_stream}()},

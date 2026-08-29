@@ -26,11 +26,14 @@ This function has been auto-generated from the following Raylib function definit
 \seealso{
 Other code functions: 
 \code{\link{export_image_as_code}()},
+\code{\link{export_mesh_as_code}()},
 \code{\link{export_wave_as_code}()}
 
 Other export functions: 
 \code{\link{export_image}()},
 \code{\link{export_image_as_code}()},
+\code{\link{export_mesh}()},
+\code{\link{export_mesh_as_code}()},
 \code{\link{export_wave}()},
 \code{\link{export_wave_as_code}()}
 }

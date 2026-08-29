@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' @export
+is_bounding_box <- function(x) {
+  inherits(x, "bounding_box")
+}
+
+
 #' Bounding Box
 #'
 #' Create a new bounding_box object.

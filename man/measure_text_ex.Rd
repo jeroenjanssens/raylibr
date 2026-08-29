@@ -42,6 +42,7 @@ Other ex functions:
 \code{\link{draw_text_ex}()},
 \code{\link{draw_texture_ex}()},
 \code{\link{get_directory_file_count_ex}()},
+\code{\link{get_screen_to_world_ray_ex}()},
 \code{\link{get_world_to_screen_ex}()},
 \code{\link{image_text_ex}()},
 \code{\link{update_model_animation_ex}()}

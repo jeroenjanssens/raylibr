@@ -22,7 +22,9 @@ This function has been auto-generated from the following Raylib function definit
 Other wave functions: 
 \code{\link{export_wave}()},
 \code{\link{load_sound_from_wave}()},
-\code{\link{load_wave}()}
+\code{\link{load_wave}()},
+\code{\link{wave_crop}()},
+\code{\link{wave_format}()}
 
 Other unload functions: 
 \code{\link{unload_audio_stream}()},

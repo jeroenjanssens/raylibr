@@ -25,7 +25,9 @@ This function has been auto-generated from the following Raylib function definit
 Other wave functions: 
 \code{\link{export_wave}()},
 \code{\link{load_sound_from_wave}()},
-\code{\link{unload_wave}()}
+\code{\link{unload_wave}()},
+\code{\link{wave_crop}()},
+\code{\link{wave_format}()}
 
 Other load functions: 
 \code{\link{load_audio_stream}()},
@@ -35,6 +37,7 @@ Other load functions:
 \code{\link{load_image}()},
 \code{\link{load_image_from_screen}()},
 \code{\link{load_image_from_texture}()},
+\code{\link{load_image_raw}()},
 \code{\link{load_material_default}()},
 \code{\link{load_model}()},
 \code{\link{load_model_from_mesh}()},
@@ -46,7 +49,8 @@ Other load functions:
 \code{\link{load_sound_alias}()},
 \code{\link{load_sound_from_wave}()},
 \code{\link{load_texture}()},
-\code{\link{load_texture_from_image}()}
+\code{\link{load_texture_from_image}()},
+\code{\link{load_vr_stereo_config}()}
 }
 \concept{load functions}
 \concept{wave functions}

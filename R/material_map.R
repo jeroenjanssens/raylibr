@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' @export
+is_material_map <- function(x) {
+  inherits(x, "material_map")
+}
+
+
 #' Material Map
 #'
 #' Create a new material_map object.

@@ -28,12 +28,14 @@ Other stream functions:
 \code{\link{play_music_stream}()},
 \code{\link{resume_audio_stream}()},
 \code{\link{resume_music_stream}()},
+\code{\link{seek_music_stream}()},
 \code{\link{stop_music_stream}()},
 \code{\link{unload_audio_stream}()},
 \code{\link{unload_music_stream}()},
 \code{\link{update_music_stream}()}
 
 Other stop functions: 
+\code{\link{stop_automation_event_recording}()},
 \code{\link{stop_music_stream}()},
 \code{\link{stop_sound}()}
 }

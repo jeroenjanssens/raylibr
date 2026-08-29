@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' @export
+is_camera_2d <- function(x) {
+  inherits(x, "camera_2d")
+}
+
+
 #' Camera 2d
 #'
 #' Create a new camera_2d object.

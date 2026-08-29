@@ -23,6 +23,7 @@ Other ready functions:
 \code{\link{is_window_ready}()}
 
 Other is functions: 
+\code{\link{is_audio_stream_playing}()},
 \code{\link{is_audio_stream_processed}()},
 \code{\link{is_audio_stream_valid}()},
 \code{\link{is_cursor_hidden}()},

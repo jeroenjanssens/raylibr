@@ -29,12 +29,18 @@ reference:
     contents:
     - starts_with("draw_pixel")
     - starts_with("draw_line")
+    - -draw_line_strip
     - starts_with("draw_circle")
     - starts_with("draw_ellipse")
     - starts_with("draw_ring")
     - starts_with("draw_rectangle")
     - starts_with("draw_triangle")
+    - -draw_triangle_strip_3d
     - starts_with("draw_poly")
+    - starts_with("draw_spline")
+    - starts_with("get_spline")
+    - draw_line_strip
+    - draw_triangle_fan
 
   - title: Textures
     contents:
@@ -53,6 +59,9 @@ reference:
     - starts_with("measure_text")
     - starts_with("load_font")
     - starts_with("unload_font")
+    - starts_with("get_glyph")
+    - starts_with("get_codepoint")
+    - starts_with("text_")
 
   - title: Models (3D)
     contents:
@@ -66,6 +75,7 @@ reference:
     - starts_with("draw_line_3d")
     - starts_with("draw_circle_3d")
     - starts_with("draw_triangle_3d")
+    - draw_triangle_strip_3d
     - starts_with("draw_billboard")
     - starts_with("draw_bounding_box")
     - starts_with("draw_model")
@@ -75,6 +85,12 @@ reference:
     - starts_with("unload_model")
     - starts_with("unload_mesh")
     - starts_with("unload_material")
+    - starts_with("gen_mesh")
+    - starts_with("export_mesh")
+    - get_mesh_bounding_box
+    - upload_mesh
+    - set_material_texture
+    - set_model_mesh_material
 
   - title: Audio
     contents:
@@ -99,6 +115,11 @@ reference:
     - starts_with("set_music")
     - starts_with("set_audio")
     - starts_with("update_music")
+    - set_master_volume
+    - get_master_volume
+    - seek_music_stream
+    - wave_crop
+    - wave_format
 
   - title: Input
     contents:
@@ -126,6 +147,17 @@ reference:
     - starts_with("color_")
     - fade
     - get_color
+    - color_is_equal
+    - color_normalize
+    - color_from_normalized
+    - color_to_hsv
+    - color_from_hsv
+    - color_brightness
+    - color_contrast
+    - color_lerp
+    - color_alpha
+    - color_alpha_blend
+    - color_tint
 
   - title: Structs
     contents:
@@ -154,18 +186,6 @@ reference:
     - -starts_with("is_music")
     - -starts_with("is_window")
 
-  - title: Enums
-    contents:
-    - flag
-    - log
-    - key
-    - mouse_button
-    - mouse_cursor
-    - camera_mode
-    - camera_projection
-    - shader_uniform
-    - material_map_index
-
   - title: Shaders
     contents:
     - starts_with("load_shader")
@@ -173,6 +193,10 @@ reference:
     - starts_with("begin_shader")
     - starts_with("end_shader")
     - set_shader_value
+    - set_shader_value_matrix
+    - set_shader_value_texture
+    - get_shader_location
+    - get_shader_location_attrib
     - starts_with("is_shader")
 
   - title: Collision detection
@@ -189,6 +213,13 @@ reference:
     - starts_with("end_mode_3d")
     - starts_with("get_screen_to_world")
     - starts_with("get_world_to_screen")
+    - update_camera
+    - update_camera_pro
+    - starts_with("get_camera")
+    - starts_with("camera_move")
+    - camera_yaw
+    - camera_pitch
+    - camera_roll
 
   - title: Utility
     contents:
@@ -201,6 +232,21 @@ reference:
     - starts_with("open_url")
     - starts_with("set_random")
     - starts_with("get_random")
+    - wait_time
+    - get_char_pressed
+    - get_clipboard_text
+    - set_clipboard_text
+    - get_clipboard_image
+    - get_gamepad_name
+    - get_key_name
+
+  - title: Automation events
+    contents:
+    - starts_with("set_automation")
+    - starts_with("start_automation")
+    - starts_with("stop_automation")
+    - starts_with("load_automation")
+    - starts_with("unload_automation")
 
   - title: File system
     contents:
@@ -217,3 +263,87 @@ reference:
     - starts_with("load_file")
     - starts_with("save_file")
     - starts_with("make_directory")
+
+  - title: "raymath — Float utilities"
+    contents:
+    - starts_with("float_")
+
+  - title: "raymath — Vector2"
+    contents:
+    - starts_with("vector2_")
+
+  - title: "raymath — Vector3"
+    contents:
+    - starts_with("vector3_")
+
+  - title: "raymath — Vector4"
+    contents:
+    - starts_with("vector4_")
+
+  - title: "raymath — Matrix math"
+    contents:
+    - starts_with("matrix_")
+
+  - title: "raymath — Quaternion"
+    contents:
+    - starts_with("quaternion_")
+
+  - title: "raygui — State and style"
+    contents:
+    - gui_enable
+    - gui_disable
+    - gui_lock
+    - gui_unlock
+    - gui_is_locked
+    - gui_set_alpha
+    - gui_set_state
+    - gui_get_state
+    - gui_set_font
+    - gui_get_font
+    - gui_set_style
+    - gui_get_style
+    - gui_load_style
+    - gui_load_style_default
+    - gui_enable_tooltip
+    - gui_disable_tooltip
+    - gui_set_tooltip
+    - gui_set_icon_scale
+    - gui_draw_icon
+    - gui_get_text_width
+
+  - title: "raygui — Controls"
+    contents:
+    - starts_with("gui_window")
+    - starts_with("gui_group")
+    - gui_line
+    - gui_panel
+    - gui_label
+    - gui_button
+    - gui_label_button
+    - starts_with("gui_toggle")
+    - gui_check_box
+    - gui_combo_box
+    - gui_dropdown_box
+    - gui_spinner
+    - gui_value_box
+    - gui_value_box_float
+    - gui_text_box
+    - gui_text_input_box
+    - starts_with("gui_slider")
+    - gui_progress_bar
+    - gui_status_bar
+    - gui_dummy_rec
+    - gui_grid
+    - starts_with("gui_list")
+    - starts_with("gui_tab")
+    - gui_message_box
+    - gui_scroll_panel
+    - starts_with("gui_color")
+
+  - title: rlgl (low-level OpenGL)
+    contents:
+    - starts_with("rl_")
+
+  - title: Other
+    contents:
+    - matches(".")

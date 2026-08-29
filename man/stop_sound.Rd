@@ -28,6 +28,7 @@ Other sound functions:
 
 Other stop functions: 
 \code{\link{stop_audio_stream}()},
+\code{\link{stop_automation_event_recording}()},
 \code{\link{stop_music_stream}()}
 }
 \concept{sound functions}

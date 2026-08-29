@@ -24,6 +24,7 @@ This function has been auto-generated from the following Raylib function definit
 \seealso{
 Other is functions: 
 \code{\link{is_audio_device_ready}()},
+\code{\link{is_audio_stream_playing}()},
 \code{\link{is_audio_stream_valid}()},
 \code{\link{is_cursor_hidden}()},
 \code{\link{is_cursor_on_screen}()},

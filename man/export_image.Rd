@@ -26,6 +26,8 @@ This function has been auto-generated from the following Raylib function definit
 \seealso{
 Other image functions: 
 \code{\link{get_clipboard_image}()},
+\code{\link{image_draw_line_ex}()},
+\code{\link{image_draw_triangle}()},
 \code{\link{image_from_image}()},
 \code{\link{load_font_from_image}()},
 \code{\link{load_image}()},
@@ -35,6 +37,8 @@ Other image functions:
 Other export functions: 
 \code{\link{export_font_as_code}()},
 \code{\link{export_image_as_code}()},
+\code{\link{export_mesh}()},
+\code{\link{export_mesh_as_code}()},
 \code{\link{export_wave}()},
 \code{\link{export_wave_as_code}()}
 }

@@ -21,6 +21,7 @@ This function has been auto-generated from the following Raylib function definit
 \seealso{
 Other 2d functions: 
 \code{\link{end_mode_2d}()},
+\code{\link{get_camera_matrix_2d}()},
 \code{\link{get_screen_to_world_2d}()},
 \code{\link{get_world_to_screen_2d}()}
 

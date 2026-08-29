@@ -28,9 +28,11 @@ This function has been auto-generated from the following Raylib function definit
 \seealso{
 Other text functions: 
 \code{\link{draw_text}()},
+\code{\link{get_clipboard_text}()},
 \code{\link{image_text}()},
 \code{\link{load_file_text}()},
 \code{\link{measure_text}()},
-\code{\link{save_file_text}()}
+\code{\link{save_file_text}()},
+\code{\link{set_clipboard_text}()}
 }
 \concept{text functions}

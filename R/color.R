@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' @export
+is_color <- function(x) {
+  inherits(x, "color")
+}
+
+
 #' Color
 #'
 #' Create a new color object.

@@ -23,4 +23,9 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{int FileTextFindIndex(const char * fileName, const char * search);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other index functions: 
+\code{\link{get_glyph_index}()},
+\code{\link{text_find_index}()}
+}
 \concept{index functions}

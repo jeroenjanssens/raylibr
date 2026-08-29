@@ -21,8 +21,11 @@ This function has been auto-generated from the following Raylib function definit
 \seealso{
 Other mesh functions: 
 \code{\link{draw_mesh}()},
+\code{\link{export_mesh}()},
+\code{\link{gen_mesh_tangents}()},
 \code{\link{get_ray_collision_mesh}()},
-\code{\link{load_model_from_mesh}()}
+\code{\link{load_model_from_mesh}()},
+\code{\link{upload_mesh}()}
 
 Other unload functions: 
 \code{\link{unload_audio_stream}()},

@@ -29,11 +29,13 @@ Other rec functions:
 \code{\link{draw_billboard_rec}()},
 \code{\link{draw_rectangle_rec}()},
 \code{\link{draw_texture_rec}()},
-\code{\link{get_collision_rec}()}
+\code{\link{get_collision_rec}()},
+\code{\link{get_glyph_atlas_rec}()}
 
 Other check functions: 
 \code{\link{check_collision_box_sphere}()},
 \code{\link{check_collision_boxes}()},
+\code{\link{check_collision_circle_line}()},
 \code{\link{check_collision_circle_rec}()},
 \code{\link{check_collision_circles}()},
 \code{\link{check_collision_point_circle}()},

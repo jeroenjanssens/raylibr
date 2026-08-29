@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' @export
+is_rectangle <- function(x) {
+  inherits(x, "rectangle")
+}
+
+
 #' Rectangle
 #'
 #' Create a new rectangle object.

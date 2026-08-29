@@ -23,6 +23,7 @@ This function has been auto-generated from the following Raylib function definit
 }
 \seealso{
 Other copy functions: 
+\code{\link{file_copy}()},
 \code{\link{image_copy}()}
 }
 \concept{copy functions}

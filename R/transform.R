@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' @export
+is_transform <- function(x) {
+  inherits(x, "transform")
+}
+
+
 #' Transform
 #'
 #' Create a new transform object.

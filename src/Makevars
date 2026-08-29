@@ -5,7 +5,7 @@ RAYLIB_SRC = raylib-6.0-minimal
 PKG_LIBS = -L../inst/$(RAYLIB_SRC)/src -lraylib
 PKG_CPPFLAGS = -I../inst/include
 
-OBJECTS = audio.o core.o models.o rcolors.o RcppExports.o shapes.o structs.o text.o textures.o types.o web.o
+OBJECTS = audio.o core.o manual_wrappers.o models.o raygui_impl.o raygui_funcs.o raymath_funcs.o rcolors.o RcppExports.o rlgl.o shapes.o structs.o text.o textures.o types.o web.o
 
 all: cleanray
 
@@ -20,4 +20,7 @@ raylib_built:
 	mkdir -p ../inst/include
 	cp ../inst/$(RAYLIB_SRC)/src/raylib.h ../inst/include
 	cp ../inst/$(RAYLIB_SRC)/src/raymath.h ../inst/include
+	cp ../inst/$(RAYLIB_SRC)/src/rlgl.h ../inst/include
+	cp ../inst/$(RAYLIB_SRC)/src/rcamera.h ../inst/include
+	cp ../inst/raygui.h ../inst/include
 	touch $@

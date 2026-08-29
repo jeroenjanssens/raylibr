@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' @export
+is_ray <- function(x) {
+  inherits(x, "ray")
+}
+
+
 #' Ray
 #'
 #' Create a new ray object.

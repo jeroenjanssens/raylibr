@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' @export
+is_ray_collision <- function(x) {
+  inherits(x, "ray_collision")
+}
+
+
 #' Ray Collision
 #'
 #' Create a new ray_collision object.

@@ -28,6 +28,7 @@ This class has been auto-generated from the following Raylib struct definition:
 }
 \seealso{
 Other ray functions: 
-\code{\link{draw_ray}()}
+\code{\link{draw_ray}()},
+\code{\link{get_screen_to_world_ray}()}
 }
 \concept{ray functions}

@@ -35,6 +35,7 @@ Other triangle functions:
 Other check functions: 
 \code{\link{check_collision_box_sphere}()},
 \code{\link{check_collision_boxes}()},
+\code{\link{check_collision_circle_line}()},
 \code{\link{check_collision_circle_rec}()},
 \code{\link{check_collision_circles}()},
 \code{\link{check_collision_point_circle}()},

@@ -24,8 +24,11 @@ This function has been auto-generated from the following Raylib function definit
 \seealso{
 Other mesh functions: 
 \code{\link{draw_mesh}()},
+\code{\link{export_mesh}()},
+\code{\link{gen_mesh_tangents}()},
 \code{\link{get_ray_collision_mesh}()},
-\code{\link{unload_mesh}()}
+\code{\link{unload_mesh}()},
+\code{\link{upload_mesh}()}
 
 Other load functions: 
 \code{\link{load_audio_stream}()},
@@ -35,6 +38,7 @@ Other load functions:
 \code{\link{load_image}()},
 \code{\link{load_image_from_screen}()},
 \code{\link{load_image_from_texture}()},
+\code{\link{load_image_raw}()},
 \code{\link{load_material_default}()},
 \code{\link{load_model}()},
 \code{\link{load_music_stream}()},
@@ -46,6 +50,7 @@ Other load functions:
 \code{\link{load_sound_from_wave}()},
 \code{\link{load_texture}()},
 \code{\link{load_texture_from_image}()},
+\code{\link{load_vr_stereo_config}()},
 \code{\link{load_wave}()}
 }
 \concept{load functions}

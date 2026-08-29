@@ -29,4 +29,9 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Image GenImageGradientLinear(int width, int height, int direction, Color start, Color end);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other linear functions: 
+\code{\link{draw_spline_segment_linear}()},
+\code{\link{get_spline_point_linear}()}
+}
 \concept{linear functions}

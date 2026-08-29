@@ -25,6 +25,7 @@ This function has been auto-generated from the following Raylib function definit
 }
 \seealso{
 Other pressed functions: 
+\code{\link{get_char_pressed}()},
 \code{\link{get_gamepad_button_pressed}()},
 \code{\link{get_key_pressed}()},
 \code{\link{is_key_pressed}()},
@@ -32,6 +33,7 @@ Other pressed functions:
 
 Other is functions: 
 \code{\link{is_audio_device_ready}()},
+\code{\link{is_audio_stream_playing}()},
 \code{\link{is_audio_stream_processed}()},
 \code{\link{is_audio_stream_valid}()},
 \code{\link{is_cursor_hidden}()},

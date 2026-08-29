@@ -27,6 +27,8 @@ This function has been auto-generated from the following Raylib function definit
 Other image functions: 
 \code{\link{export_image}()},
 \code{\link{get_clipboard_image}()},
+\code{\link{image_draw_line_ex}()},
+\code{\link{image_draw_triangle}()},
 \code{\link{load_font_from_image}()},
 \code{\link{load_image}()},
 \code{\link{load_texture_from_image}()},

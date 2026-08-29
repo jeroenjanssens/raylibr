@@ -19,6 +19,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
+Other config functions: 
+\code{\link{load_vr_stereo_config}()}
+
 Other unload functions: 
 \code{\link{unload_audio_stream}()},
 \code{\link{unload_font}()},

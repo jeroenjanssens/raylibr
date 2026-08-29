@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' @export
+is_glyph_info <- function(x) {
+  inherits(x, "glyph_info")
+}
+
+
 #' Glyph Info
 #'
 #' Create a new glyph_info object.

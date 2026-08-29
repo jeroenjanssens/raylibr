@@ -30,6 +30,7 @@ Other down functions:
 
 Other is functions: 
 \code{\link{is_audio_device_ready}()},
+\code{\link{is_audio_stream_playing}()},
 \code{\link{is_audio_stream_processed}()},
 \code{\link{is_audio_stream_valid}()},
 \code{\link{is_cursor_hidden}()},
