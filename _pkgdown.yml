@@ -2,6 +2,23 @@ url: https://jeroenjanssens.github.io/raylibr/
 template:
   bootstrap: 5
 
+articles:
+  - title: Demos
+    navbar: Demos
+    contents:
+    - demo-helloworld
+    - demo-mouse
+    - demo-balls
+    - demo-snake
+    - demo-stroop
+    - demo-cubes
+    - demo-beatbox
+    - demo-shader
+    - demo-julia
+    - demo-gui
+    - demo-model
+    - demo-raycaster
+
 reference:
   - title: Window and core
     contents:

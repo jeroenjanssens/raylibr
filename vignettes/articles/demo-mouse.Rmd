@@ -1,0 +1,62 @@
+---
+title: "Mouse Test"
+---
+
+A grid of dots that react to the mouse cursor: each dot moves away from the pointer proportional to proximity, and its color shifts with `color_from_hsv()` based on how far it was pushed. This demo exercises mouse input (`get_mouse_position()`, `is_cursor_on_screen()`, `set_mouse_cursor()`), raymath functions (`vector2_distance()`, `vector2_move_towards()`), and `draw_circle_v()` / `draw_line_v()` for rendering.
+
+## Run
+
+```r
+demo("mouse", package = "raylibr")
+```
+
+## Source code
+
+```r
+library(raylibr)
+
+width <- 600
+height <- 600
+
+init_window(width, height, "R & Raylib: Mouse Test")
+
+n <- 31
+xs <- tail(head(seq(0, width, length.out = n), - 4), - 4)
+ys <- tail(head(seq(0, height, length.out = n), - 4), - 4)
+
+l <- 100
+
+while(!window_should_close()) {
+
+  mp <- get_mouse_position()
+
+  begin_drawing()
+  clear_background("black")
+
+  if (is_cursor_on_screen()) {
+    set_mouse_cursor(mouse_cursor$crosshair)
+  } else {
+    set_mouse_cursor(mouse_cursor$default)
+  }
+
+  for (x in xs) {
+    for (y in ys) {
+      from <- c(x, y)
+      d <- vector2_distance(mp, from)
+      m <- max(l - d, 0)
+      to <- vector2_move_towards(from, mp, -m/4)
+      dd <- vector2_distance(mp, to)
+      if (dd < l/2) {
+        draw_line_v(to, mp, "white")
+      }
+      draw_circle_v(to, 3, color_from_hsv(l - m, 0.9, 0.9))
+    }
+  }
+
+  draw_fps(10, 10)
+  end_drawing()
+}
+
+set_mouse_cursor(mouse_cursor$default)
+close_window()
+```
