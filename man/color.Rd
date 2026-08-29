@@ -4,7 +4,7 @@
 \alias{color}
 \title{Color}
 \usage{
-color(r, g, b, a)
+color(r, g, b, a = 255)
 }
 \arguments{
 \item{r}{A non-negative integer (0-255). Color red value.}

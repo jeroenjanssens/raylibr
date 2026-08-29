@@ -34,7 +34,7 @@ is_color <- function(x) {
 #'
 #'
 #' @export
-color <- function(r, g, b, a) {
+color <- function(r, g, b, a = 255) {
   if (!is_unsigned_char(r)) abort(paste0('`r` must be a non-negative integer (0-255), not ', friendly_typeof(r), '.'), call = NULL)
   if (!is_unsigned_char(g)) abort(paste0('`g` must be a non-negative integer (0-255), not ', friendly_typeof(g), '.'), call = NULL)
   if (!is_unsigned_char(b)) abort(paste0('`b` must be a non-negative integer (0-255), not ', friendly_typeof(b), '.'), call = NULL)

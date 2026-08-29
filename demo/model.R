@@ -30,7 +30,7 @@ while (!window_should_close()) {
   current_shader <- ((current_shader - 1) %% length(shaders)) + 1
 
   begin_texture_mode(target)
-  clear_background(color(245, 245, 245, 255))
+  clear_background(color(245, 245, 245))
   begin_mode_3d(cam)
   draw_model(church_model, church_position, 0.1, "white")
   draw_grid(10, 1)
@@ -38,7 +38,7 @@ while (!window_should_close()) {
   end_texture_mode()
 
   begin_drawing()
-  clear_background(color(245, 245, 245, 255))
+  clear_background(color(245, 245, 245))
   begin_shader_mode(shaders[[current_shader]])
   draw_texture_rec(target$texture,
                    rectangle(0, 0, target$texture$width, -target$texture$height),

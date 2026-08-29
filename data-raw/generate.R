@@ -735,8 +735,18 @@ generate_struct_r <- function(struct_row) {
   lines <- c(lines, "#'")
   lines <- c(lines, "#' @export")
 
+  # Per-field defaults for specific structs
+  field_defaults <- list(
+    Color = list(a = "255"),
+    Camera3D = list(target = "c(0, 0, 0)", up = "c(0, 1, 0)", fovy = "45", projection = "0L")
+  )
+  defaults <- field_defaults[[name]]
+
   # Constructor function
-  lines <- c(lines, paste0(snake, " <- function(", paste(field_snakes, collapse = ", "), ") {"))
+  ctor_args <- sapply(field_snakes, function(f) {
+    if (!is.null(defaults[[f]])) paste0(f, " = ", defaults[[f]]) else f
+  })
+  lines <- c(lines, paste0(snake, " <- function(", paste(ctor_args, collapse = ", "), ") {"))
   for (i in seq_len(nrow(wrappable_fields))) {
     ftype <- wrappable_fields$type[i]
     fname <- field_snakes[i]
