@@ -15,16 +15,17 @@
 #'
 #' ```
 #' typedef struct Rectangle {
-#'     float x;                // Rectangle top-left corner position x
-#'     float y;                // Rectangle top-left corner position y
-#'     float width;            // Rectangle width
-#'     float height;           // Rectangle height
+#'     float x;        // Rectangle top-left corner position x
+#'     float y;        // Rectangle top-left corner position y
+#'     float width;        // Rectangle width
+#'     float height;        // Rectangle height
 #' } Rectangle;
 #' ```
 #'
 #' @rdname rectangle
 #'
 #' @family rectangle functions
+#'
 #'
 #' @export
 rectangle <- function(x, y, width, height) {
@@ -108,9 +109,4 @@ as.character.rectangle <- function(x, ...) {
   }, character(1))
   res <- paste(fields, values, sep = " = ", collapse = ", ")
   paste0("rectangle(", res, ")")
-}
-
-#' @export
-is_rectangle <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "rectangle"
 }

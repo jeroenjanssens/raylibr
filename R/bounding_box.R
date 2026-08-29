@@ -1,6 +1,6 @@
 # Do not edit by hand.
 
-#' Bounding box
+#' Bounding Box
 #'
 #' Create a new bounding_box object.
 #'
@@ -13,14 +13,15 @@
 #'
 #' ```
 #' typedef struct BoundingBox {
-#'     Vector3 min;            // Minimum vertex box-corner
-#'     Vector3 max;            // Maximum vertex box-corner
+#'     Vector3 min;        // Minimum vertex box-corner
+#'     Vector3 max;        // Maximum vertex box-corner
 #' } BoundingBox;
 #' ```
 #'
 #' @rdname bounding_box
 #'
 #' @family bounding_box functions
+#'
 #'
 #' @export
 bounding_box <- function(min, max) {
@@ -92,9 +93,4 @@ as.character.bounding_box <- function(x, ...) {
   }, character(1))
   res <- paste(fields, values, sep = " = ", collapse = ", ")
   paste0("bounding_box(", res, ")")
-}
-
-#' @export
-is_bounding_box <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "bounding_box"
 }

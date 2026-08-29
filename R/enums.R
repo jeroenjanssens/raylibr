@@ -1,19 +1,21 @@
 #' @export
 flag <- list(
-  vsync_hint = 0x00000040,
-  fullscreen_mode = 0x00000002,
-  window_resizable = 0x00000004,
-  window_undecorated = 0x00000008,
-  window_hidden = 0x00000080,
-  window_minimized = 0x00000200,
-  window_maximized = 0x00000400,
-  window_unfocused = 0x00000800,
-  window_topmost = 0x00001000,
-  window_always_run = 0x00000100,
-  window_transparent = 0x00000010,
-  window_highdpi = 0x00002000,
-  msaa_4x_hint = 0x00000020,
-  interlaced_hint = 0x00010000
+  vsync_hint = 64,
+  fullscreen_mode = 2,
+  window_resizable = 4,
+  window_undecorated = 8,
+  window_hidden = 128,
+  window_minimized = 512,
+  window_maximized = 1024,
+  window_unfocused = 2048,
+  window_topmost = 4096,
+  window_always_run = 256,
+  window_transparent = 16,
+  window_highdpi = 8192,
+  window_mouse_passthrough = 16384,
+  borderless_windowed_mode = 32768,
+  msaa_4x_hint = 32,
+  interlaced_hint = 65536
 )
 
 #' @export
@@ -30,7 +32,6 @@ log <- list(
 
 #' @export
 key <- list(
-  # null = 0,
   apostrophe = 39,
   comma = 44,
   minus = 45,
@@ -135,11 +136,11 @@ key <- list(
   kp_subtract = 333,
   kp_add = 334,
   kp_enter = 335,
-  kp_equal = 336
-  # back = 4,
-  # menu = 82,
-  # volume_up = 24,
-  # volume_down = 25
+  kp_equal = 336,
+  back = 4,
+  menu = 5,
+  volume_up = 24,
+  volume_down = 25
 )
 
 #' @export
@@ -169,18 +170,18 @@ mouse_cursor <- list(
 )
 
 #' @export
-camera_mode <- list(
-  custom = 0,
-  free = 1,
-  orbital = 2,
-  first_person = 3,
-  third_person = 4
-)
-
-#' @export
-camera_projection <- list(
-  perspective = 0,
-  orthographic = 1
+material_map_index <- list(
+  albedo = 0,
+  metalness = 1,
+  normal = 2,
+  roughness = 3,
+  occlusion = 4,
+  emission = 5,
+  height = 6,
+  cubemap = 7,
+  irradiance = 8,
+  prefilter = 9,
+  brdf = 10
 )
 
 #' @export
@@ -193,23 +194,25 @@ shader_uniform <- list(
   ivec2 = 5,
   ivec3 = 6,
   ivec4 = 7,
-  sampler2d = 8
+  uint = 8,
+  uivec2 = 9,
+  uivec3 = 10,
+  uivec4 = 11,
+  sampler2d = 12
 )
 
 #' @export
-material_map_index = list(
-  albedo = 0,
-  diffuse = 0,
-  metalness = 1,
-  specular = 1,
-  normal = 2,
-  roughness = 3,
-  occlusion = 4,
-  emission = 5,
-  height = 6,
-  cubemap = 7,
-  irradiance = 8,
-  prefilter = 9,
-  brdf = 10
+camera_mode <- list(
+  custom = 0,
+  free = 1,
+  orbital = 2,
+  first_person = 3,
+  third_person = 4
+)
+
+#' @export
+camera_projection <- list(
+  perspective = 0,
+  orthographic = 1
 )
 

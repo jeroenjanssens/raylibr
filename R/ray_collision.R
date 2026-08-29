@@ -1,12 +1,12 @@
 # Do not edit by hand.
 
-#' Ray collision
+#' Ray Collision
 #'
 #' Create a new ray_collision object.
 #'
 #' @param hit A logical. Did the ray hit something?.
-#' @param distance A number. Distance to nearest hit.
-#' @param point A numeric vector of length 3. Point of nearest hit.
+#' @param distance A number. Distance to the nearest hit.
+#' @param point A numeric vector of length 3. Point of the nearest hit.
 #' @param normal A numeric vector of length 3. Surface normal of hit.
 #'
 #' @return A ray_collision
@@ -15,16 +15,17 @@
 #'
 #' ```
 #' typedef struct RayCollision {
-#'     bool hit;               // Did the ray hit something?
-#'     float distance;         // Distance to nearest hit
-#'     Vector3 point;          // Point of nearest hit
-#'     Vector3 normal;         // Surface normal of hit
+#'     bool hit;        // Did the ray hit something?
+#'     float distance;        // Distance to the nearest hit
+#'     Vector3 point;        // Point of the nearest hit
+#'     Vector3 normal;        // Surface normal of hit
 #' } RayCollision;
 #' ```
 #'
 #' @rdname ray_collision
 #'
 #' @family ray_collision functions
+#'
 #'
 #' @export
 ray_collision <- function(hit, distance, point, normal) {
@@ -108,9 +109,4 @@ as.character.ray_collision <- function(x, ...) {
   }, character(1))
   res <- paste(fields, values, sep = " = ", collapse = ", ")
   paste0("ray_collision(", res, ")")
-}
-
-#' @export
-is_ray_collision <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "ray_collision"
 }

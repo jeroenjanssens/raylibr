@@ -4,10 +4,10 @@
 #'
 #' Create a new color object.
 #'
-#' @param r A non-negative integer. Color red value.
-#' @param g A non-negative integer. Color green value.
-#' @param b A non-negative integer. Color blue value.
-#' @param a A non-negative integer. Color alpha value.
+#' @param r A non-negative integer (0-255). Color red value.
+#' @param g A non-negative integer (0-255). Color green value.
+#' @param b A non-negative integer (0-255). Color blue value.
+#' @param a A non-negative integer (0-255). Color alpha value.
 #'
 #' @return A color
 #'
@@ -26,27 +26,28 @@
 #'
 #' @family color functions
 #'
+#'
 #' @export
 color <- function(r, g, b, a) {
-  if (!is_unsigned_int(r)) abort(paste0('`r` must be a non-negative integer, not ', friendly_typeof(r), '.'), call = NULL)
-  if (!is_unsigned_int(g)) abort(paste0('`g` must be a non-negative integer, not ', friendly_typeof(g), '.'), call = NULL)
-  if (!is_unsigned_int(b)) abort(paste0('`b` must be a non-negative integer, not ', friendly_typeof(b), '.'), call = NULL)
-  if (!is_unsigned_int(a)) abort(paste0('`a` must be a non-negative integer, not ', friendly_typeof(a), '.'), call = NULL)
+  if (!is_unsigned_char(r)) abort(paste0('`r` must be a non-negative integer (0-255), not ', friendly_typeof(r), '.'), call = NULL)
+  if (!is_unsigned_char(g)) abort(paste0('`g` must be a non-negative integer (0-255), not ', friendly_typeof(g), '.'), call = NULL)
+  if (!is_unsigned_char(b)) abort(paste0('`b` must be a non-negative integer (0-255), not ', friendly_typeof(b), '.'), call = NULL)
+  if (!is_unsigned_char(a)) abort(paste0('`a` must be a non-negative integer (0-255), not ', friendly_typeof(a), '.'), call = NULL)
   color_(r, g, b, a)
 }
 
 color_set <- function(o, field, value) {
   if (field == "r") {
-    if (!is_unsigned_int(value)) abort(paste0('`r` must be a non-negative integer, not ', friendly_typeof(value), '.'), call = NULL)
+    if (!is_unsigned_char(value)) abort(paste0('`r` must be a non-negative integer (0-255), not ', friendly_typeof(value), '.'), call = NULL)
     color_set_r_(o, value)
   } else if (field == "g") {
-    if (!is_unsigned_int(value)) abort(paste0('`g` must be a non-negative integer, not ', friendly_typeof(value), '.'), call = NULL)
+    if (!is_unsigned_char(value)) abort(paste0('`g` must be a non-negative integer (0-255), not ', friendly_typeof(value), '.'), call = NULL)
     color_set_g_(o, value)
   } else if (field == "b") {
-    if (!is_unsigned_int(value)) abort(paste0('`b` must be a non-negative integer, not ', friendly_typeof(value), '.'), call = NULL)
+    if (!is_unsigned_char(value)) abort(paste0('`b` must be a non-negative integer (0-255), not ', friendly_typeof(value), '.'), call = NULL)
     color_set_b_(o, value)
   } else if (field == "a") {
-    if (!is_unsigned_int(value)) abort(paste0('`a` must be a non-negative integer, not ', friendly_typeof(value), '.'), call = NULL)
+    if (!is_unsigned_char(value)) abort(paste0('`a` must be a non-negative integer (0-255), not ', friendly_typeof(value), '.'), call = NULL)
     color_set_a_(o, value)
   } else {
     abort(paste0("`color` has no property ", field , "."), call = NULL)

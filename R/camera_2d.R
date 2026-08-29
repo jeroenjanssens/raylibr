@@ -4,10 +4,10 @@
 #'
 #' Create a new camera_2d object.
 #'
-#' @param offset A numeric vector of length 2. Camera offset (displacement from target).
-#' @param target A numeric vector of length 2. Camera target (rotation and zoom origin).
-#' @param rotation A number. Camera rotation in degrees.
-#' @param zoom A number. Camera zoom (scaling). Default: `1`.
+#' @param offset A numeric vector of length 2. Camera offset (screen space offset from window origin).
+#' @param target A numeric vector of length 2. Camera target (world space target point that is mapped to screen space offset).
+#' @param rotation A number. Camera rotation in degrees (pivots around target).
+#' @param zoom A number. Camera zoom (scaling around target), must not be set to 0, set to 1.0f for no scale.
 #'
 #' @return A camera_2d
 #'
@@ -15,10 +15,10 @@
 #'
 #' ```
 #' typedef struct Camera2D {
-#'     Vector2 offset;         // Camera offset (displacement from target)
-#'     Vector2 target;         // Camera target (rotation and zoom origin)
-#'     float rotation;         // Camera rotation in degrees
-#'     float zoom;             // Camera zoom (scaling), should be 1.0f by default
+#'     Vector2 offset;        // Camera offset (screen space offset from window origin)
+#'     Vector2 target;        // Camera target (world space target point that is mapped to screen space offset)
+#'     float rotation;        // Camera rotation in degrees (pivots around target)
+#'     float zoom;        // Camera zoom (scaling around target), must not be set to 0, set to 1.0f for no scale
 #' } Camera2D;
 #' ```
 #'
@@ -26,8 +26,9 @@
 #'
 #' @family camera_2d functions
 #'
+#'
 #' @export
-camera_2d <- function(offset, target, rotation, zoom = 1) {
+camera_2d <- function(offset, target, rotation, zoom) {
   if (!is_vector_2(offset)) abort(paste0('`offset` must be a numeric vector of length 2, not ', friendly_typeof(offset), '.'), call = NULL)
   if (!is_vector_2(target)) abort(paste0('`target` must be a numeric vector of length 2, not ', friendly_typeof(target), '.'), call = NULL)
   if (!is_float(rotation)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(rotation), '.'), call = NULL)
@@ -108,9 +109,4 @@ as.character.camera_2d <- function(x, ...) {
   }, character(1))
   res <- paste(fields, values, sep = " = ", collapse = ", ")
   paste0("camera_2d(", res, ")")
-}
-
-#' @export
-is_camera_2d <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "camera_2d"
 }

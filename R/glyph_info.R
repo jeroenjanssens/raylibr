@@ -1,6 +1,6 @@
 # Do not edit by hand.
 
-#' Glyph info
+#' Glyph Info
 #'
 #' Create a new glyph_info object.
 #'
@@ -16,17 +16,18 @@
 #'
 #' ```
 #' typedef struct GlyphInfo {
-#'     int value;              // Character value (Unicode)
-#'     int offsetX;            // Character offset X when drawing
-#'     int offsetY;            // Character offset Y when drawing
-#'     int advanceX;           // Character advance position X
-#'     Image image;            // Character image data
+#'     int value;        // Character value (Unicode)
+#'     int offsetX;        // Character offset X when drawing
+#'     int offsetY;        // Character offset Y when drawing
+#'     int advanceX;        // Character advance position X
+#'     Image image;        // Character image data
 #' } GlyphInfo;
 #' ```
 #'
 #' @rdname glyph_info
 #'
 #' @family glyph_info functions
+#'
 #'
 #' @export
 glyph_info <- function(value, offset_x, offset_y, advance_x, image) {
@@ -116,9 +117,4 @@ as.character.glyph_info <- function(x, ...) {
   }, character(1))
   res <- paste(fields, values, sep = " = ", collapse = ", ")
   paste0("glyph_info(", res, ")")
-}
-
-#' @export
-is_glyph_info <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "glyph_info"
 }

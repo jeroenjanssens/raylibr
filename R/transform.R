@@ -14,15 +14,16 @@
 #'
 #' ```
 #' typedef struct Transform {
-#'     Vector3 translation;    // Translation
-#'     Quaternion rotation;    // Rotation
-#'     Vector3 scale;          // Scale
+#'     Vector3 translation;        // Translation
+#'     Quaternion rotation;        // Rotation
+#'     Vector3 scale;        // Scale
 #' } Transform;
 #' ```
 #'
 #' @rdname transform
 #'
 #' @family transform functions
+#'
 #'
 #' @export
 transform <- function(translation, rotation, scale) {
@@ -100,9 +101,4 @@ as.character.transform <- function(x, ...) {
   }, character(1))
   res <- paste(fields, values, sep = " = ", collapse = ", ")
   paste0("transform(", res, ")")
-}
-
-#' @export
-is_transform <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "transform"
 }

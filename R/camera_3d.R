@@ -5,10 +5,10 @@
 #' Create a new camera_3d object.
 #'
 #' @param position A numeric vector of length 3. Camera position.
-#' @param target A numeric vector of length 3. Camera target it looks-at. Default: `c(0, 0, 0)`.
-#' @param up A numeric vector of length 3. Camera up vector (rotation over its axis). Default: `c(0, 1, 0)`.
-#' @param fovy A number. Camera field-of-view apperture in Y (degrees) in perspective, used as near plane width in orthographic. Default: `70`.
-#' @param projection An integer. Camera projection: either `camera_projection$perspective` (0) or `camera_projection$orthographic` (1). Default: `0`.
+#' @param target A numeric vector of length 3. Camera target it looks-at.
+#' @param up A numeric vector of length 3. Camera up vector (rotation over its axis).
+#' @param fovy A number. Camera field-of-view aperture in Y (degrees) in perspective, used as near plane height in world units in orthographic.
+#' @param projection An integer. Camera projection: CAMERA_PERSPECTIVE or CAMERA_ORTHOGRAPHIC.
 #'
 #' @return A camera_3d
 #'
@@ -16,11 +16,11 @@
 #'
 #' ```
 #' typedef struct Camera3D {
-#'     Vector3 position;       // Camera position
-#'     Vector3 target;         // Camera target it looks-at
-#'     Vector3 up;             // Camera up vector (rotation over its axis)
-#'     float fovy;             // Camera field-of-view apperture in Y (degrees) in perspective, used as near plane width in orthographic
-#'     int projection;         // Camera projection: CAMERA_PERSPECTIVE or CAMERA_ORTHOGRAPHIC
+#'     Vector3 position;        // Camera position
+#'     Vector3 target;        // Camera target it looks-at
+#'     Vector3 up;        // Camera up vector (rotation over its axis)
+#'     float fovy;        // Camera field-of-view aperture in Y (degrees) in perspective, used as near plane height in world units in orthographic
+#'     int projection;        // Camera projection: CAMERA_PERSPECTIVE or CAMERA_ORTHOGRAPHIC
 #' } Camera3D;
 #' ```
 #'
@@ -28,8 +28,9 @@
 #'
 #' @family camera_3d functions
 #'
+#'
 #' @export
-camera_3d <- function(position, target = c(0, 0, 0), up = c(0, 1, 0), fovy = 70, projection = 0) {
+camera_3d <- function(position, target, up, fovy, projection) {
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_vector_3(target)) abort(paste0('`target` must be a numeric vector of length 3, not ', friendly_typeof(target), '.'), call = NULL)
   if (!is_vector_3(up)) abort(paste0('`up` must be a numeric vector of length 3, not ', friendly_typeof(up), '.'), call = NULL)
@@ -116,9 +117,4 @@ as.character.camera_3d <- function(x, ...) {
   }, character(1))
   res <- paste(fields, values, sep = " = ", collapse = ", ")
   paste0("camera_3d(", res, ")")
-}
-
-#' @export
-is_camera_3d <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "camera_3d"
 }

@@ -1,7 +1,4 @@
-# Do not edit by hand.
-
-
 #' @export
 is_shader <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "shader"
+  inherits(x, "shader")
 }

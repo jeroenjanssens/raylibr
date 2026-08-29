@@ -1,59 +1,34 @@
 # Do not edit by hand.
 
-#' Init window
+#' Init Window
 #'
 #' Initialize window and OpenGL context.
 #'
-#' @param width An integer. Default: `640`.
-#' @param height An integer. Default: `480`.
-#' @param title A string. Default: `"Raylibr"`.
-#'
+#' @param width An integer.
+#' @param height An integer.
+#' @param title A string.
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' void InitWindow(int width, int height, const char *title);
+#' void InitWindow(int width, int height, const char * title);
 #' ```
 #'
-#' @family init functions
 #' @family window functions
+#' @family init functions
 #'
 #'
 #' @export
-init_window <- function(width = 640, height = 480, title = "Raylibr") {
+init_window <- function(width, height, title) {
   if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
   if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
   if (!is_const_char_pointer(title)) abort(paste0('`title` must be a string, not ', friendly_typeof(title), '.'), call = NULL)
   init_window_(width, height, title)
 }
 
-#' Window should close
-#'
-#' Check if KEY_ESCAPE pressed or Close icon pressed.
-#'
-
-#'
-#' @return A logical
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' bool WindowShouldClose(void);
-#' ```
-#'
-#' @family window functions
-#'
-#'
-#' @export
-window_should_close <- function() {
-  window_should_close_()
-}
-
-#' Close window
+#' Close Window
 #'
 #' Close window and unload OpenGL context.
-#'
-
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -63,6 +38,7 @@ window_should_close <- function() {
 #' ```
 #'
 #' @family window functions
+#' @family close functions
 #'
 #'
 #' @export
@@ -70,11 +46,31 @@ close_window <- function() {
   close_window_()
 }
 
-#' Is window ready
+#' Window Should Close
+#'
+#' Check if application should close (KEY_ESCAPE pressed or windows close icon clicked).
+#'
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool WindowShouldClose(void);
+#' ```
+#'
+#' @family close functions
+#'
+#'
+#' @export
+window_should_close <- function() {
+  window_should_close_()
+}
+
+#' Is Window Ready
 #'
 #' Check if window has been initialized successfully.
 #'
-
 #'
 #' @return A logical
 #'
@@ -84,7 +80,8 @@ close_window <- function() {
 #' bool IsWindowReady(void);
 #' ```
 #'
-#' @family window functions
+#' @family ready functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -92,11 +89,10 @@ is_window_ready <- function() {
   is_window_ready_()
 }
 
-#' Is window fullscreen
+#' Is Window Fullscreen
 #'
 #' Check if window is currently fullscreen.
 #'
-
 #'
 #' @return A logical
 #'
@@ -106,7 +102,8 @@ is_window_ready <- function() {
 #' bool IsWindowFullscreen(void);
 #' ```
 #'
-#' @family window functions
+#' @family fullscreen functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -114,11 +111,10 @@ is_window_fullscreen <- function() {
   is_window_fullscreen_()
 }
 
-#' Is window hidden
+#' Is Window Hidden
 #'
-#' Check if window is currently hidden (only PLATFORM_DESKTOP).
+#' Check if window is currently hidden.
 #'
-
 #'
 #' @return A logical
 #'
@@ -128,7 +124,8 @@ is_window_fullscreen <- function() {
 #' bool IsWindowHidden(void);
 #' ```
 #'
-#' @family window functions
+#' @family hidden functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -136,11 +133,10 @@ is_window_hidden <- function() {
   is_window_hidden_()
 }
 
-#' Is window minimized
+#' Is Window Minimized
 #'
-#' Check if window is currently minimized (only PLATFORM_DESKTOP).
+#' Check if window is currently minimized.
 #'
-
 #'
 #' @return A logical
 #'
@@ -150,7 +146,8 @@ is_window_hidden <- function() {
 #' bool IsWindowMinimized(void);
 #' ```
 #'
-#' @family window functions
+#' @family minimized functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -158,11 +155,10 @@ is_window_minimized <- function() {
   is_window_minimized_()
 }
 
-#' Is window maximized
+#' Is Window Maximized
 #'
-#' Check if window is currently maximized (only PLATFORM_DESKTOP).
+#' Check if window is currently maximized.
 #'
-
 #'
 #' @return A logical
 #'
@@ -172,7 +168,8 @@ is_window_minimized <- function() {
 #' bool IsWindowMaximized(void);
 #' ```
 #'
-#' @family window functions
+#' @family maximized functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -180,11 +177,10 @@ is_window_maximized <- function() {
   is_window_maximized_()
 }
 
-#' Is window focused
+#' Is Window Focused
 #'
-#' Check if window is currently focused (only PLATFORM_DESKTOP).
+#' Check if window is currently focused.
 #'
-
 #'
 #' @return A logical
 #'
@@ -194,7 +190,8 @@ is_window_maximized <- function() {
 #' bool IsWindowFocused(void);
 #' ```
 #'
-#' @family window functions
+#' @family focused functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -202,11 +199,10 @@ is_window_focused <- function() {
   is_window_focused_()
 }
 
-#' Is window resized
+#' Is Window Resized
 #'
 #' Check if window has been resized last frame.
 #'
-
 #'
 #' @return A logical
 #'
@@ -216,7 +212,8 @@ is_window_focused <- function() {
 #' bool IsWindowResized(void);
 #' ```
 #'
-#' @family window functions
+#' @family resized functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -224,7 +221,7 @@ is_window_resized <- function() {
   is_window_resized_()
 }
 
-#' Is window state
+#' Is Window State
 #'
 #' Check if one specific window flag is enabled.
 #'
@@ -238,7 +235,8 @@ is_window_resized <- function() {
 #' bool IsWindowState(unsigned int flag);
 #' ```
 #'
-#' @family window functions
+#' @family state functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -247,12 +245,11 @@ is_window_state <- function(flag) {
   is_window_state_(flag)
 }
 
-#' Set window state
+#' Set Window State
 #'
 #' Set window configuration state using flags.
 #'
 #' @param flags A non-negative integer.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -260,7 +257,8 @@ is_window_state <- function(flag) {
 #' void SetWindowState(unsigned int flags);
 #' ```
 #'
-#' @family window functions
+#' @family state functions
+#' @family set functions
 #'
 #'
 #' @export
@@ -269,12 +267,11 @@ set_window_state <- function(flags) {
   set_window_state_(flags)
 }
 
-#' Clear window state
+#' Clear Window State
 #'
 #' Clear window configuration state flags.
 #'
 #' @param flags A non-negative integer.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -282,7 +279,7 @@ set_window_state <- function(flags) {
 #' void ClearWindowState(unsigned int flags);
 #' ```
 #'
-#' @family window functions
+#' @family state functions
 #'
 #'
 #' @export
@@ -291,11 +288,9 @@ clear_window_state <- function(flags) {
   clear_window_state_(flags)
 }
 
-#' Toggle fullscreen
+#' Toggle Fullscreen
 #'
-#' Toggle window state: fullscreen/windowed (only PLATFORM_DESKTOP).
-#'
-
+#' Toggle window state: fullscreen/windowed, resizes monitor to match window resolution.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -304,17 +299,36 @@ clear_window_state <- function(flags) {
 #' void ToggleFullscreen(void);
 #' ```
 #'
+#' @family fullscreen functions
+#'
 #'
 #' @export
 toggle_fullscreen <- function() {
   toggle_fullscreen_()
 }
 
-#' Maximize window
+#' Toggle Borderless Windowed
 #'
-#' Set window state: maximized, if resizable (only PLATFORM_DESKTOP).
+#' Toggle window state: borderless windowed, resizes window to match monitor resolution.
 #'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void ToggleBorderlessWindowed(void);
+#' ```
+#'
+#' @family windowed functions
+#'
+#'
+#' @export
+toggle_borderless_windowed <- function() {
+  toggle_borderless_windowed_()
+}
 
+#' Maximize Window
+#'
+#' Set window state: maximized, if resizable.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -331,11 +345,9 @@ maximize_window <- function() {
   maximize_window_()
 }
 
-#' Minimize window
+#' Minimize Window
 #'
-#' Set window state: minimized, if resizable (only PLATFORM_DESKTOP).
-#'
-
+#' Set window state: minimized, if resizable.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -352,11 +364,9 @@ minimize_window <- function() {
   minimize_window_()
 }
 
-#' Restore window
+#' Restore Window
 #'
-#' Set window state: not minimized/maximized (only PLATFORM_DESKTOP).
-#'
-
+#' Restore window from being minimized/maximized.
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -373,12 +383,11 @@ restore_window <- function() {
   restore_window_()
 }
 
-#' Set window icon
+#' Set Window Icon
 #'
-#' Set icon for window (only PLATFORM_DESKTOP).
+#' Set icon for window (single image, RGBA 32bit).
 #'
 #' @param image An image.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -386,10 +395,9 @@ restore_window <- function() {
 #' void SetWindowIcon(Image image);
 #' ```
 #'
-#' @family window functions
+#' @family icon functions
+#' @family set functions
 #'
-#'
-#' @seealso [image()] for creating image objects.
 #'
 #' @export
 set_window_icon <- function(image) {
@@ -397,20 +405,20 @@ set_window_icon <- function(image) {
   set_window_icon_(image)
 }
 
-#' Set window title
+#' Set Window Title
 #'
-#' Set title for window (only PLATFORM_DESKTOP).
+#' Set title for window.
 #'
 #' @param title A string.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' void SetWindowTitle(const char *title);
+#' void SetWindowTitle(const char * title);
 #' ```
 #'
-#' @family window functions
+#' @family title functions
+#' @family set functions
 #'
 #'
 #' @export
@@ -419,13 +427,12 @@ set_window_title <- function(title) {
   set_window_title_(title)
 }
 
-#' Set window position
+#' Set Window Position
 #'
-#' Set window position on screen (only PLATFORM_DESKTOP).
+#' Set window position on screen.
 #'
 #' @param x An integer.
 #' @param y An integer.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -433,7 +440,8 @@ set_window_title <- function(title) {
 #' void SetWindowPosition(int x, int y);
 #' ```
 #'
-#' @family window functions
+#' @family position functions
+#' @family set functions
 #'
 #'
 #' @export
@@ -443,12 +451,11 @@ set_window_position <- function(x, y) {
   set_window_position_(x, y)
 }
 
-#' Set window monitor
+#' Set Window Monitor
 #'
-#' Set monitor for the current window (fullscreen mode).
+#' Set monitor for the current window.
 #'
 #' @param monitor An integer.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -456,8 +463,8 @@ set_window_position <- function(x, y) {
 #' void SetWindowMonitor(int monitor);
 #' ```
 #'
-#' @family window functions
 #' @family monitor functions
+#' @family set functions
 #'
 #'
 #' @export
@@ -466,37 +473,12 @@ set_window_monitor <- function(monitor) {
   set_window_monitor_(monitor)
 }
 
-#' Set window min size
-#'
-#' Set window minimum dimensions (for FLAG_WINDOW_RESIZABLE).
-#'
-#' @param width An integer.
-#' @param height An integer.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void SetWindowMinSize(int width, int height);
-#' ```
-#'
-#' @family window functions
-#'
-#'
-#' @export
-set_window_min_size <- function(width, height) {
-  if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
-  if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
-  set_window_min_size_(width, height)
-}
-
-#' Set window size
+#' Set Window Size
 #'
 #' Set window dimensions.
 #'
 #' @param width An integer.
 #' @param height An integer.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -504,7 +486,8 @@ set_window_min_size <- function(width, height) {
 #' void SetWindowSize(int width, int height);
 #' ```
 #'
-#' @family window functions
+#' @family size functions
+#' @family set functions
 #'
 #'
 #' @export
@@ -514,11 +497,52 @@ set_window_size <- function(width, height) {
   set_window_size_(width, height)
 }
 
-#' Get screen width
+#' Set Window Opacity
+#'
+#' Set window opacity [0.0f..1.0f].
+#'
+#' @param opacity A number.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetWindowOpacity(float opacity);
+#' ```
+#'
+#' @family opacity functions
+#' @family set functions
+#'
+#'
+#' @export
+set_window_opacity <- function(opacity) {
+  if (!is_float(opacity)) abort(paste0('`opacity` must be a number, not ', friendly_typeof(opacity), '.'), call = NULL)
+  set_window_opacity_(opacity)
+}
+
+#' Set Window Focused
+#'
+#' Set window focused.
+#'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetWindowFocused(void);
+#' ```
+#'
+#' @family focused functions
+#' @family set functions
+#'
+#'
+#' @export
+set_window_focused <- function() {
+  set_window_focused_()
+}
+
+#' Get Screen Width
 #'
 #' Get current screen width.
 #'
-
 #'
 #' @return An integer
 #'
@@ -528,7 +552,8 @@ set_window_size <- function(width, height) {
 #' int GetScreenWidth(void);
 #' ```
 #'
-#' @family screen functions
+#' @family width functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -536,11 +561,10 @@ get_screen_width <- function() {
   get_screen_width_()
 }
 
-#' Get screen height
+#' Get Screen Height
 #'
 #' Get current screen height.
 #'
-
 #'
 #' @return An integer
 #'
@@ -550,7 +574,8 @@ get_screen_width <- function() {
 #' int GetScreenHeight(void);
 #' ```
 #'
-#' @family screen functions
+#' @family height functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -558,11 +583,54 @@ get_screen_height <- function() {
   get_screen_height_()
 }
 
-#' Get monitor count
+#' Get Render Width
+#'
+#' Get current render width (it considers HiDPI).
+#'
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int GetRenderWidth(void);
+#' ```
+#'
+#' @family width functions
+#' @family get functions
+#'
+#'
+#' @export
+get_render_width <- function() {
+  get_render_width_()
+}
+
+#' Get Render Height
+#'
+#' Get current render height (it considers HiDPI).
+#'
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int GetRenderHeight(void);
+#' ```
+#'
+#' @family height functions
+#' @family get functions
+#'
+#'
+#' @export
+get_render_height <- function() {
+  get_render_height_()
+}
+
+#' Get Monitor Count
 #'
 #' Get number of connected monitors.
 #'
-
 #'
 #' @return An integer
 #'
@@ -572,7 +640,8 @@ get_screen_height <- function() {
 #' int GetMonitorCount(void);
 #' ```
 #'
-#' @family monitor functions
+#' @family count functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -580,11 +649,10 @@ get_monitor_count <- function() {
   get_monitor_count_()
 }
 
-#' Get current monitor
+#' Get Current Monitor
 #'
-#' Get current connected monitor.
+#' Get current monitor where window is placed.
 #'
-
 #'
 #' @return An integer
 #'
@@ -595,6 +663,7 @@ get_monitor_count <- function() {
 #' ```
 #'
 #' @family monitor functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -602,7 +671,7 @@ get_current_monitor <- function() {
   get_current_monitor_()
 }
 
-#' Get monitor position
+#' Get Monitor Position
 #'
 #' Get specified monitor position.
 #'
@@ -616,7 +685,8 @@ get_current_monitor <- function() {
 #' Vector2 GetMonitorPosition(int monitor);
 #' ```
 #'
-#' @family monitor functions
+#' @family position functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -625,9 +695,9 @@ get_monitor_position <- function(monitor) {
   get_monitor_position_(monitor)
 }
 
-#' Get monitor width
+#' Get Monitor Width
 #'
-#' Get specified monitor width (max available by monitor).
+#' Get specified monitor width (current video mode used by monitor).
 #'
 #' @param monitor An integer.
 #'
@@ -639,7 +709,8 @@ get_monitor_position <- function(monitor) {
 #' int GetMonitorWidth(int monitor);
 #' ```
 #'
-#' @family monitor functions
+#' @family width functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -648,9 +719,9 @@ get_monitor_width <- function(monitor) {
   get_monitor_width_(monitor)
 }
 
-#' Get monitor height
+#' Get Monitor Height
 #'
-#' Get specified monitor height (max available by monitor).
+#' Get specified monitor height (current video mode used by monitor).
 #'
 #' @param monitor An integer.
 #'
@@ -662,7 +733,8 @@ get_monitor_width <- function(monitor) {
 #' int GetMonitorHeight(int monitor);
 #' ```
 #'
-#' @family monitor functions
+#' @family height functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -671,7 +743,7 @@ get_monitor_height <- function(monitor) {
   get_monitor_height_(monitor)
 }
 
-#' Get monitor physical width
+#' Get Monitor Physical Width
 #'
 #' Get specified monitor physical width in millimetres.
 #'
@@ -685,7 +757,8 @@ get_monitor_height <- function(monitor) {
 #' int GetMonitorPhysicalWidth(int monitor);
 #' ```
 #'
-#' @family monitor functions
+#' @family width functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -694,7 +767,7 @@ get_monitor_physical_width <- function(monitor) {
   get_monitor_physical_width_(monitor)
 }
 
-#' Get monitor physical height
+#' Get Monitor Physical Height
 #'
 #' Get specified monitor physical height in millimetres.
 #'
@@ -708,7 +781,8 @@ get_monitor_physical_width <- function(monitor) {
 #' int GetMonitorPhysicalHeight(int monitor);
 #' ```
 #'
-#' @family monitor functions
+#' @family height functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -717,7 +791,7 @@ get_monitor_physical_height <- function(monitor) {
   get_monitor_physical_height_(monitor)
 }
 
-#' Get monitor refresh rate
+#' Get Monitor Refresh Rate
 #'
 #' Get specified monitor refresh rate.
 #'
@@ -731,7 +805,8 @@ get_monitor_physical_height <- function(monitor) {
 #' int GetMonitorRefreshRate(int monitor);
 #' ```
 #'
-#' @family monitor functions
+#' @family rate functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -740,11 +815,10 @@ get_monitor_refresh_rate <- function(monitor) {
   get_monitor_refresh_rate_(monitor)
 }
 
-#' Get window position
+#' Get Window Position
 #'
 #' Get window position XY on monitor.
 #'
-
 #'
 #' @return A numeric vector of length 2
 #'
@@ -754,7 +828,8 @@ get_monitor_refresh_rate <- function(monitor) {
 #' Vector2 GetWindowPosition(void);
 #' ```
 #'
-#' @family window functions
+#' @family position functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -762,11 +837,10 @@ get_window_position <- function() {
   get_window_position_()
 }
 
-#' Get window scale dpi
+#' Get Window Scale Dpi
 #'
 #' Get window scale DPI factor.
 #'
-
 #'
 #' @return A numeric vector of length 2
 #'
@@ -776,7 +850,8 @@ get_window_position <- function() {
 #' Vector2 GetWindowScaleDPI(void);
 #' ```
 #'
-#' @family window functions
+#' @family dpi functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -784,34 +859,69 @@ get_window_scale_dpi <- function() {
   get_window_scale_dpi_()
 }
 
-#' Get monitor name
+#' Get Clipboard Image
 #'
-#' Get the human-readable, UTF-8 encoded name of the primary monitor.
+#' Get clipboard image content.
 #'
-#' @param monitor An integer.
 #'
-#' @return A string
+#' @return An image
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' const char *GetMonitorName(int monitor);
+#' Image GetClipboardImage(void);
 #' ```
 #'
-#' @family monitor functions
+#' @family image functions
+#' @family get functions
 #'
 #'
 #' @export
-get_monitor_name <- function(monitor) {
-  if (!is_int(monitor)) abort(paste0('`monitor` must be an integer, not ', friendly_typeof(monitor), '.'), call = NULL)
-  get_monitor_name_(monitor)
+get_clipboard_image <- function() {
+  get_clipboard_image_()
 }
 
-#' Show cursor
+#' Enable Event Waiting
+#'
+#' Enable waiting for events on EndDrawing(), no automatic event polling.
+#'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void EnableEventWaiting(void);
+#' ```
+#'
+#' @family waiting functions
+#'
+#'
+#' @export
+enable_event_waiting <- function() {
+  enable_event_waiting_()
+}
+
+#' Disable Event Waiting
+#'
+#' Disable waiting for events on EndDrawing(), automatic events polling.
+#'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DisableEventWaiting(void);
+#' ```
+#'
+#' @family waiting functions
+#'
+#'
+#' @export
+disable_event_waiting <- function() {
+  disable_event_waiting_()
+}
+
+#' Show Cursor
 #'
 #' Shows cursor.
-#'
-
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -828,11 +938,9 @@ show_cursor <- function() {
   show_cursor_()
 }
 
-#' Hide cursor
+#' Hide Cursor
 #'
 #' Hides cursor.
-#'
-
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -849,11 +957,10 @@ hide_cursor <- function() {
   hide_cursor_()
 }
 
-#' Is cursor hidden
+#' Is Cursor Hidden
 #'
 #' Check if cursor is not visible.
 #'
-
 #'
 #' @return A logical
 #'
@@ -863,7 +970,8 @@ hide_cursor <- function() {
 #' bool IsCursorHidden(void);
 #' ```
 #'
-#' @family cursor functions
+#' @family hidden functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -871,11 +979,9 @@ is_cursor_hidden <- function() {
   is_cursor_hidden_()
 }
 
-#' Enable cursor
+#' Enable Cursor
 #'
 #' Enables cursor (unlock cursor).
-#'
-
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -892,11 +998,9 @@ enable_cursor <- function() {
   enable_cursor_()
 }
 
-#' Disable cursor
+#' Disable Cursor
 #'
 #' Disables cursor (lock cursor).
-#'
-
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -913,11 +1017,10 @@ disable_cursor <- function() {
   disable_cursor_()
 }
 
-#' Is cursor on screen
+#' Is Cursor On Screen
 #'
 #' Check if cursor is on the screen.
 #'
-
 #'
 #' @return A logical
 #'
@@ -927,8 +1030,8 @@ disable_cursor <- function() {
 #' bool IsCursorOnScreen(void);
 #' ```
 #'
-#' @family cursor functions
 #' @family screen functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -936,12 +1039,11 @@ is_cursor_on_screen <- function() {
   is_cursor_on_screen_()
 }
 
-#' Clear background
+#' Clear Background
 #'
 #' Set background color (framebuffer clear color).
 #'
-#' @param color A color. Default: `"white"`.
-#'
+#' @param color A color.
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -949,20 +1051,18 @@ is_cursor_on_screen <- function() {
 #' void ClearBackground(Color color);
 #' ```
 #'
+#' @family background functions
 #'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
-clear_background <- function(color = "white") {
+clear_background <- function(color) {
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
   clear_background_(color)
 }
 
-#' Begin drawing
+#' Begin Drawing
 #'
 #' Setup canvas (framebuffer) to start drawing.
-#'
-
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -971,17 +1071,18 @@ clear_background <- function(color = "white") {
 #' void BeginDrawing(void);
 #' ```
 #'
+#' @family drawing functions
+#' @family begin functions
+#'
 #'
 #' @export
 begin_drawing <- function() {
   begin_drawing_()
 }
 
-#' End drawing
+#' End Drawing
 #'
 #' End canvas drawing and swap buffers (double buffering).
-#'
-
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -990,18 +1091,20 @@ begin_drawing <- function() {
 #' void EndDrawing(void);
 #' ```
 #'
+#' @family drawing functions
+#' @family end functions
+#'
 #'
 #' @export
 end_drawing <- function() {
   end_drawing_()
 }
 
-#' Begin mode 2d
+#' Begin Mode 2d
 #'
 #' Begin 2D mode with custom camera (2D).
 #'
 #' @param camera A camera_2d.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -1009,10 +1112,9 @@ end_drawing <- function() {
 #' void BeginMode2D(Camera2D camera);
 #' ```
 #'
-#' @family mode functions
+#' @family 2d functions
+#' @family begin functions
 #'
-#'
-#' @seealso [camera_2d()] for creating camera_2d objects.
 #'
 #' @export
 begin_mode_2d <- function(camera) {
@@ -1020,11 +1122,9 @@ begin_mode_2d <- function(camera) {
   begin_mode_2d_(camera)
 }
 
-#' End mode 2d
+#' End Mode 2d
 #'
 #' Ends 2D mode with custom camera.
-#'
-
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -1033,7 +1133,8 @@ begin_mode_2d <- function(camera) {
 #' void EndMode2D(void);
 #' ```
 #'
-#' @family mode functions
+#' @family 2d functions
+#' @family end functions
 #'
 #'
 #' @export
@@ -1041,12 +1142,11 @@ end_mode_2d <- function() {
   end_mode_2d_()
 }
 
-#' Begin mode 3d
+#' Begin Mode 3d
 #'
 #' Begin 3D mode with custom camera (3D).
 #'
 #' @param camera A camera_3d.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -1054,10 +1154,9 @@ end_mode_2d <- function() {
 #' void BeginMode3D(Camera3D camera);
 #' ```
 #'
-#' @family mode functions
+#' @family 3d functions
+#' @family begin functions
 #'
-#'
-#' @seealso [camera_3d()] for creating camera_3d objects.
 #'
 #' @export
 begin_mode_3d <- function(camera) {
@@ -1065,11 +1164,9 @@ begin_mode_3d <- function(camera) {
   begin_mode_3d_(camera)
 }
 
-#' End mode 3d
+#' End Mode 3d
 #'
 #' Ends 3D mode and returns to default 2D orthographic mode.
-#'
-
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -1078,7 +1175,8 @@ begin_mode_3d <- function(camera) {
 #' void EndMode3D(void);
 #' ```
 #'
-#' @family mode functions
+#' @family 3d functions
+#' @family end functions
 #'
 #'
 #' @export
@@ -1086,12 +1184,11 @@ end_mode_3d <- function() {
   end_mode_3d_()
 }
 
-#' Begin texture mode
+#' Begin Texture Mode
 #'
 #' Begin drawing to render texture.
 #'
-#' @param target A render_texture.
-#'
+#' @param target A render texture.
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -1099,21 +1196,19 @@ end_mode_3d <- function() {
 #' void BeginTextureMode(RenderTexture2D target);
 #' ```
 #'
-#' @family texture functions
 #' @family mode functions
+#' @family begin functions
 #'
 #'
 #' @export
 begin_texture_mode <- function(target) {
-  if (!is_render_texture(target)) abort(paste0('`target` must be a render_texture, not ', friendly_typeof(target), '.'), call = NULL)
+  if (!is_render_texture(target)) abort(paste0('`target` must be a render texture, not ', friendly_typeof(target), '.'), call = NULL)
   begin_texture_mode_(target)
 }
 
-#' End texture mode
+#' End Texture Mode
 #'
 #' Ends drawing to render texture.
-#'
-
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -1122,8 +1217,8 @@ begin_texture_mode <- function(target) {
 #' void EndTextureMode(void);
 #' ```
 #'
-#' @family texture functions
 #' @family mode functions
+#' @family end functions
 #'
 #'
 #' @export
@@ -1131,12 +1226,11 @@ end_texture_mode <- function() {
   end_texture_mode_()
 }
 
-#' Begin shader mode
+#' Begin Shader Mode
 #'
 #' Begin custom shader drawing.
 #'
 #' @param shader A shader.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -1144,11 +1238,9 @@ end_texture_mode <- function() {
 #' void BeginShaderMode(Shader shader);
 #' ```
 #'
-#' @family shader functions
 #' @family mode functions
+#' @family begin functions
 #'
-#'
-#' @seealso [shader()] for creating shader objects.
 #'
 #' @export
 begin_shader_mode <- function(shader) {
@@ -1156,11 +1248,9 @@ begin_shader_mode <- function(shader) {
   begin_shader_mode_(shader)
 }
 
-#' End shader mode
+#' End Shader Mode
 #'
 #' End custom shader drawing (use default shader).
-#'
-
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -1169,8 +1259,8 @@ begin_shader_mode <- function(shader) {
 #' void EndShaderMode(void);
 #' ```
 #'
-#' @family shader functions
 #' @family mode functions
+#' @family end functions
 #'
 #'
 #' @export
@@ -1178,12 +1268,11 @@ end_shader_mode <- function() {
   end_shader_mode_()
 }
 
-#' Begin blend mode
+#' Begin Blend Mode
 #'
 #' Begin blending mode (alpha, additive, multiplied, subtract, custom).
 #'
 #' @param mode An integer.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -1192,6 +1281,7 @@ end_shader_mode <- function() {
 #' ```
 #'
 #' @family mode functions
+#' @family begin functions
 #'
 #'
 #' @export
@@ -1200,11 +1290,9 @@ begin_blend_mode <- function(mode) {
   begin_blend_mode_(mode)
 }
 
-#' End blend mode
+#' End Blend Mode
 #'
 #' End blending mode (reset to default: alpha blending).
-#'
-
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -1214,6 +1302,7 @@ begin_blend_mode <- function(mode) {
 #' ```
 #'
 #' @family mode functions
+#' @family end functions
 #'
 #'
 #' @export
@@ -1221,7 +1310,7 @@ end_blend_mode <- function() {
   end_blend_mode_()
 }
 
-#' Begin scissor mode
+#' Begin Scissor Mode
 #'
 #' Begin scissor mode (define screen area for following drawing).
 #'
@@ -1230,7 +1319,6 @@ end_blend_mode <- function() {
 #' @param width An integer.
 #' @param height An integer.
 #'
-#'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
@@ -1238,6 +1326,7 @@ end_blend_mode <- function() {
 #' ```
 #'
 #' @family mode functions
+#' @family begin functions
 #'
 #'
 #' @export
@@ -1249,11 +1338,9 @@ begin_scissor_mode <- function(x, y, width, height) {
   begin_scissor_mode_(x, y, width, height)
 }
 
-#' End scissor mode
+#' End Scissor Mode
 #'
 #' End scissor mode.
-#'
-
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -1263,6 +1350,7 @@ begin_scissor_mode <- function(x, y, width, height) {
 #' ```
 #'
 #' @family mode functions
+#' @family end functions
 #'
 #'
 #' @export
@@ -1270,11 +1358,31 @@ end_scissor_mode <- function() {
   end_scissor_mode_()
 }
 
-#' End vr stereo mode
+#' Begin Vr Stereo Mode
+#'
+#' Begin stereo rendering (requires VR simulator).
+#'
+#' @param config A vr_stereo_config.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void BeginVrStereoMode(VrStereoConfig config);
+#' ```
+#'
+#' @family mode functions
+#' @family begin functions
+#'
+#'
+#' @export
+begin_vr_stereo_mode <- function(config) {
+  if (!is_vr_stereo_config(config)) abort(paste0('`config` must be a vr_stereo_config, not ', friendly_typeof(config), '.'), call = NULL)
+  begin_vr_stereo_mode_(config)
+}
+
+#' End Vr Stereo Mode
 #'
 #' End stereo rendering (requires VR simulator).
-#'
-
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -1284,6 +1392,7 @@ end_scissor_mode <- function() {
 #' ```
 #'
 #' @family mode functions
+#' @family end functions
 #'
 #'
 #' @export
@@ -1291,7 +1400,29 @@ end_vr_stereo_mode <- function() {
   end_vr_stereo_mode_()
 }
 
-#' Load shader
+#' Unload Vr Stereo Config
+#'
+#' Unload VR stereo config.
+#'
+#' @param config A vr_stereo_config.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void UnloadVrStereoConfig(VrStereoConfig config);
+#' ```
+#'
+#' @family config functions
+#' @family unload functions
+#'
+#'
+#' @export
+unload_vr_stereo_config <- function(config) {
+  if (!is_vr_stereo_config(config)) abort(paste0('`config` must be a vr_stereo_config, not ', friendly_typeof(config), '.'), call = NULL)
+  unload_vr_stereo_config_(config)
+}
+
+#' Load Shader
 #'
 #' Load shader from files and bind default locations.
 #'
@@ -1303,10 +1434,11 @@ end_vr_stereo_mode <- function() {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' Shader LoadShader(const char *vsFileName, const char *fsFileName);
+#' Shader LoadShader(const char * vsFileName, const char * fsFileName);
 #' ```
 #'
 #' @family shader functions
+#' @family load functions
 #'
 #'
 #' @export
@@ -1316,7 +1448,7 @@ load_shader <- function(vs_file_name, fs_file_name) {
   load_shader_(vs_file_name, fs_file_name)
 }
 
-#' Load shader from memory
+#' Load Shader From Memory
 #'
 #' Load shader from code strings and bind default locations.
 #'
@@ -1328,10 +1460,11 @@ load_shader <- function(vs_file_name, fs_file_name) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' Shader LoadShaderFromMemory(const char *vsCode, const char *fsCode);
+#' Shader LoadShaderFromMemory(const char * vsCode, const char * fsCode);
 #' ```
 #'
-#' @family shader functions
+#' @family memory functions
+#' @family load functions
 #'
 #'
 #' @export
@@ -1341,124 +1474,35 @@ load_shader_from_memory <- function(vs_code, fs_code) {
   load_shader_from_memory_(vs_code, fs_code)
 }
 
-#' Get shader location
+#' Is Shader Valid
 #'
-#' Get shader uniform location.
+#' Check if a shader is valid (loaded on GPU).
 #'
 #' @param shader A shader.
-#' @param uniform_name A string.
 #'
-#' @return An integer
+#' @return A logical
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' int GetShaderLocation(Shader shader, const char *uniformName);
+#' bool IsShaderValid(Shader shader);
 #' ```
 #'
-#' @family shader functions
+#' @family valid functions
+#' @family is functions
 #'
-#'
-#' @seealso [shader()] for creating shader objects.
 #'
 #' @export
-get_shader_location <- function(shader, uniform_name) {
+is_shader_valid <- function(shader) {
   if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
-  if (!is_const_char_pointer(uniform_name)) abort(paste0('`uniform_name` must be a string, not ', friendly_typeof(uniform_name), '.'), call = NULL)
-  get_shader_location_(shader, uniform_name)
+  is_shader_valid_(shader)
 }
 
-#' Get shader location attrib
-#'
-#' Get shader attribute location.
-#'
-#' @param shader A shader.
-#' @param attrib_name A string.
-#'
-#' @return An integer
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' int GetShaderLocationAttrib(Shader shader, const char *attribName);
-#' ```
-#'
-#' @family shader functions
-#'
-#'
-#' @seealso [shader()] for creating shader objects.
-#'
-#' @export
-get_shader_location_attrib <- function(shader, attrib_name) {
-  if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
-  if (!is_const_char_pointer(attrib_name)) abort(paste0('`attrib_name` must be a string, not ', friendly_typeof(attrib_name), '.'), call = NULL)
-  get_shader_location_attrib_(shader, attrib_name)
-}
-
-#' Set shader value matrix
-#'
-#' Set shader uniform value (matrix 4x4).
-#'
-#' @param shader A shader.
-#' @param loc_index An integer.
-#' @param mat A numeric matrix of 4 by 4.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void SetShaderValueMatrix(Shader shader, int locIndex, Matrix mat);
-#' ```
-#'
-#' @family shader functions
-#'
-#'
-#' @seealso [shader()] for creating shader objects.
-#'
-#' @export
-set_shader_value_matrix <- function(shader, loc_index, mat) {
-  if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
-  if (!is_int(loc_index)) abort(paste0('`loc_index` must be an integer, not ', friendly_typeof(loc_index), '.'), call = NULL)
-  if (!is_raylib_matrix(mat)) abort(paste0('`mat` must be a numeric matrix of 4 by 4, not ', friendly_typeof(mat), '.'), call = NULL)
-  set_shader_value_matrix_(shader, loc_index, mat)
-}
-
-#' Set shader value texture
-#'
-#' Set shader uniform value for texture (sampler2d).
-#'
-#' @param shader A shader.
-#' @param loc_index An integer.
-#' @param texture A texture.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void SetShaderValueTexture(Shader shader, int locIndex, Texture2D texture);
-#' ```
-#'
-#' @family shader functions
-#' @family texture functions
-#'
-#'
-#' @seealso [shader()] for creating shader objects.
-#' @seealso [texture()] for creating texture objects.
-#'
-#' @export
-set_shader_value_texture <- function(shader, loc_index, texture) {
-  if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
-  if (!is_int(loc_index)) abort(paste0('`loc_index` must be an integer, not ', friendly_typeof(loc_index), '.'), call = NULL)
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
-  set_shader_value_texture_(shader, loc_index, texture)
-}
-
-#' Unload shader
+#' Unload Shader
 #'
 #' Unload shader from GPU memory (VRAM).
 #'
 #' @param shader A shader.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -1467,9 +1511,8 @@ set_shader_value_texture <- function(shader, loc_index, texture) {
 #' ```
 #'
 #' @family shader functions
+#' @family unload functions
 #'
-#'
-#' @seealso [shader()] for creating shader objects.
 #'
 #' @export
 unload_shader <- function(shader) {
@@ -1477,57 +1520,7 @@ unload_shader <- function(shader) {
   unload_shader_(shader)
 }
 
-#' Get camera matrix
-#'
-#' Get camera transform matrix (view matrix).
-#'
-#' @param camera A camera_3d.
-#'
-#' @return A numeric matrix of 4 by 4
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' Matrix GetCameraMatrix(Camera camera);
-#' ```
-#'
-#' @family camera functions
-#'
-#'
-#' @seealso [camera_3d()] for creating camera_3d objects.
-#'
-#' @export
-get_camera_matrix <- function(camera) {
-  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
-  get_camera_matrix_(camera)
-}
-
-#' Get camera matrix 2d
-#'
-#' Get camera 2d transform matrix.
-#'
-#' @param camera A camera_2d.
-#'
-#' @return A numeric matrix of 4 by 4
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' Matrix GetCameraMatrix2D(Camera2D camera);
-#' ```
-#'
-#' @family camera functions
-#'
-#'
-#' @seealso [camera_2d()] for creating camera_2d objects.
-#'
-#' @export
-get_camera_matrix_2d <- function(camera) {
-  if (!is_camera_2d(camera)) abort(paste0('`camera` must be a camera_2d, not ', friendly_typeof(camera), '.'), call = NULL)
-  get_camera_matrix_2d_(camera)
-}
-
-#' Get world to screen
+#' Get World To Screen
 #'
 #' Get the screen space position for a 3d world space position.
 #'
@@ -1542,11 +1535,9 @@ get_camera_matrix_2d <- function(camera) {
 #' Vector2 GetWorldToScreen(Vector3 position, Camera camera);
 #' ```
 #'
-#' @family world functions
 #' @family screen functions
+#' @family get functions
 #'
-#'
-#' @seealso [camera_3d()] for creating camera_3d objects.
 #'
 #' @export
 get_world_to_screen <- function(position, camera) {
@@ -1555,7 +1546,7 @@ get_world_to_screen <- function(position, camera) {
   get_world_to_screen_(position, camera)
 }
 
-#' Get world to screen ex
+#' Get World To Screen Ex
 #'
 #' Get size position for a 3d world space position.
 #'
@@ -1572,11 +1563,9 @@ get_world_to_screen <- function(position, camera) {
 #' Vector2 GetWorldToScreenEx(Vector3 position, Camera camera, int width, int height);
 #' ```
 #'
-#' @family world functions
-#' @family screen functions
+#' @family ex functions
+#' @family get functions
 #'
-#'
-#' @seealso [camera_3d()] for creating camera_3d objects.
 #'
 #' @export
 get_world_to_screen_ex <- function(position, camera, width, height) {
@@ -1587,7 +1576,7 @@ get_world_to_screen_ex <- function(position, camera, width, height) {
   get_world_to_screen_ex_(position, camera, width, height)
 }
 
-#' Get world to screen 2d
+#' Get World To Screen 2d
 #'
 #' Get the screen space position for a 2d camera world space position.
 #'
@@ -1602,11 +1591,9 @@ get_world_to_screen_ex <- function(position, camera, width, height) {
 #' Vector2 GetWorldToScreen2D(Vector2 position, Camera2D camera);
 #' ```
 #'
-#' @family world functions
-#' @family screen functions
+#' @family 2d functions
+#' @family get functions
 #'
-#'
-#' @seealso [camera_2d()] for creating camera_2d objects.
 #'
 #' @export
 get_world_to_screen_2d <- function(position, camera) {
@@ -1615,7 +1602,7 @@ get_world_to_screen_2d <- function(position, camera) {
   get_world_to_screen_2d_(position, camera)
 }
 
-#' Get screen to world 2d
+#' Get Screen To World 2d
 #'
 #' Get the world space position for a 2d camera screen space position.
 #'
@@ -1630,11 +1617,9 @@ get_world_to_screen_2d <- function(position, camera) {
 #' Vector2 GetScreenToWorld2D(Vector2 position, Camera2D camera);
 #' ```
 #'
-#' @family screen functions
-#' @family world functions
+#' @family 2d functions
+#' @family get functions
 #'
-#'
-#' @seealso [camera_2d()] for creating camera_2d objects.
 #'
 #' @export
 get_screen_to_world_2d <- function(position, camera) {
@@ -1643,12 +1628,11 @@ get_screen_to_world_2d <- function(position, camera) {
   get_screen_to_world_2d_(position, camera)
 }
 
-#' Set target fps
+#' Set Target Fps
 #'
 #' Set target FPS (maximum).
 #'
 #' @param fps An integer.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -1657,6 +1641,7 @@ get_screen_to_world_2d <- function(position, camera) {
 #' ```
 #'
 #' @family fps functions
+#' @family set functions
 #'
 #'
 #' @export
@@ -1665,11 +1650,54 @@ set_target_fps <- function(fps) {
   set_target_fps_(fps)
 }
 
-#' Get fps
+#' Get Frame Time
+#'
+#' Get time in seconds for last frame drawn (delta time).
+#'
+#'
+#' @return A number
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' float GetFrameTime(void);
+#' ```
+#'
+#' @family time functions
+#' @family get functions
+#'
+#'
+#' @export
+get_frame_time <- function() {
+  get_frame_time_()
+}
+
+#' Get Time
+#'
+#' Get elapsed time in seconds since InitWindow().
+#'
+#'
+#' @return A number
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' double GetTime(void);
+#' ```
+#'
+#' @family time functions
+#' @family get functions
+#'
+#'
+#' @export
+get_time <- function() {
+  get_time_()
+}
+
+#' Get Fps
 #'
 #' Get current FPS.
 #'
-
 #'
 #' @return An integer
 #'
@@ -1680,6 +1708,7 @@ set_target_fps <- function(fps) {
 #' ```
 #'
 #' @family fps functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -1687,47 +1716,67 @@ get_fps <- function() {
   get_fps_()
 }
 
-#' Get frame time
+#' Swap Screen Buffer
 #'
-#' Get time in seconds for last frame drawn (delta time).
+#' Swap back buffer with front buffer (screen drawing).
 #'
-
-#'
-#' @return A number
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' float GetFrameTime(void);
+#' void SwapScreenBuffer(void);
 #' ```
+#'
+#' @family buffer functions
 #'
 #'
 #' @export
-get_frame_time <- function() {
-  get_frame_time_()
+swap_screen_buffer <- function() {
+  swap_screen_buffer_()
 }
 
-#' Get time
+#' Poll Input Events
 #'
-#' Get elapsed time in seconds since InitWindow().
+#' Register all input events.
 #'
-
-#'
-#' @return A double
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' double GetTime(void);
+#' void PollInputEvents(void);
 #' ```
+#'
+#' @family events functions
 #'
 #'
 #' @export
-get_time <- function() {
-  get_time_()
+poll_input_events <- function() {
+  poll_input_events_()
 }
 
-#' Get random value
+#' Set Random Seed
+#'
+#' Set the seed for the random number generator.
+#'
+#' @param seed A non-negative integer.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetRandomSeed(unsigned int seed);
+#' ```
+#'
+#' @family seed functions
+#' @family set functions
+#'
+#'
+#' @export
+set_random_seed <- function(seed) {
+  if (!is_unsigned_int(seed)) abort(paste0('`seed` must be a non-negative integer, not ', friendly_typeof(seed), '.'), call = NULL)
+  set_random_seed_(seed)
+}
+
+#' Get Random Value
 #'
 #' Get a random value between min and max (both included).
 #'
@@ -1742,6 +1791,9 @@ get_time <- function() {
 #' int GetRandomValue(int min, int max);
 #' ```
 #'
+#' @family value functions
+#' @family get functions
+#'
 #'
 #' @export
 get_random_value <- function(min, max) {
@@ -1750,18 +1802,19 @@ get_random_value <- function(min, max) {
   get_random_value_(min, max)
 }
 
-#' Take screenshot
+#' Take Screenshot
 #'
 #' Takes a screenshot of current screen (filename extension defines format).
 #'
 #' @param file_name A string.
 #'
-#'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' void TakeScreenshot(const char *fileName);
+#' void TakeScreenshot(const char * fileName);
 #' ```
+#'
+#' @family screenshot functions
 #'
 #'
 #' @export
@@ -1770,18 +1823,63 @@ take_screenshot <- function(file_name) {
   take_screenshot_(file_name)
 }
 
-#' Set trace log level
+#' Set Config Flags
+#'
+#' Setup init configuration flags (view FLAGS).
+#'
+#' @param flags A non-negative integer.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetConfigFlags(unsigned int flags);
+#' ```
+#'
+#' @family flags functions
+#' @family set functions
+#'
+#'
+#' @export
+set_config_flags <- function(flags) {
+  if (!is_unsigned_int(flags)) abort(paste0('`flags` must be a non-negative integer, not ', friendly_typeof(flags), '.'), call = NULL)
+  set_config_flags_(flags)
+}
+
+#' Open Url
+#'
+#' Open URL with default system browser (if available).
+#'
+#' @param url A string.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void OpenURL(const char * url);
+#' ```
+#'
+#' @family url functions
+#'
+#'
+#' @export
+open_url <- function(url) {
+  if (!is_const_char_pointer(url)) abort(paste0('`url` must be a string, not ', friendly_typeof(url), '.'), call = NULL)
+  open_url_(url)
+}
+
+#' Set Trace Log Level
 #'
 #' Set the current threshold (minimum) log level.
 #'
 #' @param log_level An integer.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void SetTraceLogLevel(int logLevel);
 #' ```
+#'
+#' @family level functions
+#' @family set functions
 #'
 #'
 #' @export
@@ -1790,7 +1888,7 @@ set_trace_log_level <- function(log_level) {
   set_trace_log_level_(log_level)
 }
 
-#' Load file text
+#' Load File Text
 #'
 #' Load text data from file (read), returns a '\0' terminated string.
 #'
@@ -1801,11 +1899,11 @@ set_trace_log_level <- function(log_level) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' char *LoadFileText(const char *fileName);
+#' char * LoadFileText(const char * fileName);
 #' ```
 #'
-#' @family file functions
 #' @family text functions
+#' @family load functions
 #'
 #'
 #' @export
@@ -1814,7 +1912,57 @@ load_file_text <- function(file_name) {
   load_file_text_(file_name)
 }
 
-#' File exists
+#' Save File Text
+#'
+#' Save text data to file (write), string must be '\0' terminated, returns true on success.
+#'
+#' @param file_name A string.
+#' @param text A string.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool SaveFileText(const char * fileName, const char * text);
+#' ```
+#'
+#' @family text functions
+#'
+#'
+#' @export
+save_file_text <- function(file_name, text) {
+  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  save_file_text_(file_name, text)
+}
+
+#' File Text Find Index
+#'
+#' Find text in existing file.
+#'
+#' @param file_name A string.
+#' @param search A string.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int FileTextFindIndex(const char * fileName, const char * search);
+#' ```
+#'
+#' @family index functions
+#'
+#'
+#' @export
+file_text_find_index <- function(file_name, search) {
+  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
+  if (!is_const_char_pointer(search)) abort(paste0('`search` must be a string, not ', friendly_typeof(search), '.'), call = NULL)
+  file_text_find_index_(file_name, search)
+}
+
+#' File Exists
 #'
 #' Check if file exists.
 #'
@@ -1825,10 +1973,10 @@ load_file_text <- function(file_name) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' bool FileExists(const char *fileName);
+#' bool FileExists(const char * fileName);
 #' ```
 #'
-#' @family file functions
+#' @family exists functions
 #'
 #'
 #' @export
@@ -1837,7 +1985,7 @@ file_exists <- function(file_name) {
   file_exists_(file_name)
 }
 
-#' Directory exists
+#' Directory Exists
 #'
 #' Check if a directory path exists.
 #'
@@ -1848,10 +1996,10 @@ file_exists <- function(file_name) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' bool DirectoryExists(const char *dirPath);
+#' bool DirectoryExists(const char * dirPath);
 #' ```
 #'
-#' @family directory functions
+#' @family exists functions
 #'
 #'
 #' @export
@@ -1860,9 +2008,9 @@ directory_exists <- function(dir_path) {
   directory_exists_(dir_path)
 }
 
-#' Is file extension
+#' Is File Extension
 #'
-#' Check file extension (including point: .png, .wav).
+#' Check file extension (recommended include point: .png, .wav).
 #'
 #' @param file_name A string.
 #' @param ext A string.
@@ -1872,10 +2020,11 @@ directory_exists <- function(dir_path) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' bool IsFileExtension(const char *fileName, const char *ext);
+#' bool IsFileExtension(const char * fileName, const char * ext);
 #' ```
 #'
-#' @family file functions
+#' @family extension functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -1885,7 +2034,55 @@ is_file_extension <- function(file_name, ext) {
   is_file_extension_(file_name, ext)
 }
 
-#' Get file extension
+#' Get File Length
+#'
+#' Get file length in bytes (NOTE: GetFileSize() conflicts with windows.h).
+#'
+#' @param file_name A string.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int GetFileLength(const char * fileName);
+#' ```
+#'
+#' @family length functions
+#' @family get functions
+#'
+#'
+#' @export
+get_file_length <- function(file_name) {
+  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
+  get_file_length_(file_name)
+}
+
+#' Get File Mod Time
+#'
+#' Get file modification time (last write time).
+#'
+#' @param file_name A string.
+#'
+#' @return A number
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' long GetFileModTime(const char * fileName);
+#' ```
+#'
+#' @family time functions
+#' @family get functions
+#'
+#'
+#' @export
+get_file_mod_time <- function(file_name) {
+  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
+  get_file_mod_time_(file_name)
+}
+
+#' Get File Extension
 #'
 #' Get pointer to extension for a filename string (includes dot: '.png').
 #'
@@ -1896,10 +2093,11 @@ is_file_extension <- function(file_name, ext) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' const char *GetFileExtension(const char *fileName);
+#' const char * GetFileExtension(const char * fileName);
 #' ```
 #'
-#' @family file functions
+#' @family extension functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -1908,7 +2106,7 @@ get_file_extension <- function(file_name) {
   get_file_extension_(file_name)
 }
 
-#' Get file name
+#' Get File Name
 #'
 #' Get pointer to filename for a path string.
 #'
@@ -1919,10 +2117,11 @@ get_file_extension <- function(file_name) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' const char *GetFileName(const char *filePath);
+#' const char * GetFileName(const char * filePath);
 #' ```
 #'
-#' @family file functions
+#' @family name functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -1931,7 +2130,7 @@ get_file_name <- function(file_path) {
   get_file_name_(file_path)
 }
 
-#' Get file name without ext
+#' Get File Name Without Ext
 #'
 #' Get filename string without extension (uses static string).
 #'
@@ -1942,10 +2141,11 @@ get_file_name <- function(file_path) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' const char *GetFileNameWithoutExt(const char *filePath);
+#' const char * GetFileNameWithoutExt(const char * filePath);
 #' ```
 #'
-#' @family file functions
+#' @family ext functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -1954,7 +2154,7 @@ get_file_name_without_ext <- function(file_path) {
   get_file_name_without_ext_(file_path)
 }
 
-#' Get directory path
+#' Get Directory Path
 #'
 #' Get full path for a given fileName with path (uses static string).
 #'
@@ -1965,10 +2165,11 @@ get_file_name_without_ext <- function(file_path) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' const char *GetDirectoryPath(const char *filePath);
+#' const char * GetDirectoryPath(const char * filePath);
 #' ```
 #'
-#' @family directory functions
+#' @family path functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -1977,7 +2178,7 @@ get_directory_path <- function(file_path) {
   get_directory_path_(file_path)
 }
 
-#' Get prev directory path
+#' Get Prev Directory Path
 #'
 #' Get previous directory path for a given path (uses static string).
 #'
@@ -1988,10 +2189,11 @@ get_directory_path <- function(file_path) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' const char *GetPrevDirectoryPath(const char *dirPath);
+#' const char * GetPrevDirectoryPath(const char * dirPath);
 #' ```
 #'
-#' @family directory functions
+#' @family path functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -2000,21 +2202,21 @@ get_prev_directory_path <- function(dir_path) {
   get_prev_directory_path_(dir_path)
 }
 
-#' Get working directory
+#' Get Working Directory
 #'
 #' Get current working directory (uses static string).
 #'
-
 #'
 #' @return A string
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' const char *GetWorkingDirectory(void);
+#' const char * GetWorkingDirectory(void);
 #' ```
 #'
 #' @family directory functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -2022,55 +2224,126 @@ get_working_directory <- function() {
   get_working_directory_()
 }
 
-#' Clear directory files
+#' Get Application Directory
 #'
-#' Clear directory files paths buffers (free memory).
+#' Get the directory of the running application (uses static string).
 #'
-
 #'
+#' @return A string
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' void ClearDirectoryFiles(void);
+#' const char * GetApplicationDirectory(void);
+#' ```
+#'
+#' @family directory functions
+#' @family get functions
+#'
+#'
+#' @export
+get_application_directory <- function() {
+  get_application_directory_()
+}
+
+#' Make Directory
+#'
+#' Create directories (including full path requested), returns 0 on success.
+#'
+#' @param dir_path A string.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int MakeDirectory(const char * dirPath);
 #' ```
 #'
 #' @family directory functions
 #'
 #'
 #' @export
-clear_directory_files <- function() {
-  clear_directory_files_()
+make_directory <- function(dir_path) {
+  if (!is_const_char_pointer(dir_path)) abort(paste0('`dir_path` must be a string, not ', friendly_typeof(dir_path), '.'), call = NULL)
+  make_directory_(dir_path)
 }
 
-#' Change directory
+#' Change Directory
 #'
 #' Change working directory, return true on success.
 #'
-#' @param dir A string.
+#' @param dir_path A string.
 #'
 #' @return A logical
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' bool ChangeDirectory(const char *dir);
+#' bool ChangeDirectory(const char * dirPath);
 #' ```
 #'
 #' @family directory functions
 #'
 #'
 #' @export
-change_directory <- function(dir) {
-  if (!is_const_char_pointer(dir)) abort(paste0('`dir` must be a string, not ', friendly_typeof(dir), '.'), call = NULL)
-  change_directory_(dir)
+change_directory <- function(dir_path) {
+  if (!is_const_char_pointer(dir_path)) abort(paste0('`dir_path` must be a string, not ', friendly_typeof(dir_path), '.'), call = NULL)
+  change_directory_(dir_path)
 }
 
-#' Is file dropped
+#' Is Path File
+#'
+#' Check if a given path is a file or a directory.
+#'
+#' @param path A string.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool IsPathFile(const char * path);
+#' ```
+#'
+#' @family file functions
+#' @family is functions
+#'
+#'
+#' @export
+is_path_file <- function(path) {
+  if (!is_const_char_pointer(path)) abort(paste0('`path` must be a string, not ', friendly_typeof(path), '.'), call = NULL)
+  is_path_file_(path)
+}
+
+#' Is File Name Valid
+#'
+#' Check if fileName is valid for the platform/OS.
+#'
+#' @param file_name A string.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool IsFileNameValid(const char * fileName);
+#' ```
+#'
+#' @family valid functions
+#' @family is functions
+#'
+#'
+#' @export
+is_file_name_valid <- function(file_name) {
+  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
+  is_file_name_valid_(file_name)
+}
+
+#' Is File Dropped
 #'
 #' Check if a file has been dropped into window.
 #'
-
 #'
 #' @return A logical
 #'
@@ -2080,7 +2353,8 @@ change_directory <- function(dir) {
 #' bool IsFileDropped(void);
 #' ```
 #'
-#' @family file functions
+#' @family dropped functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -2088,93 +2362,59 @@ is_file_dropped <- function() {
   is_file_dropped_()
 }
 
-#' Clear dropped files
+#' Get Directory File Count
 #'
-#' Clear dropped files paths buffer (free memory).
+#' Get the file count in a directory.
 #'
-
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ClearDroppedFiles(void);
-#' ```
-#'
-#'
-#' @export
-clear_dropped_files <- function() {
-  clear_dropped_files_()
-}
-
-#' Get file mod time
-#'
-#' Get file modification time (last write time).
-#'
-#' @param file_name A string.
-#'
-#' @return A long
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' long GetFileModTime(const char *fileName);
-#' ```
-#'
-#' @family file functions
-#'
-#'
-#' @export
-get_file_mod_time <- function(file_name) {
-  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
-  get_file_mod_time_(file_name)
-}
-
-#' Save storage value
-#'
-#' Save integer value to storage file (to defined position), returns true on success.
-#'
-#' @param position A non-negative integer.
-#' @param value An integer.
-#'
-#' @return A logical
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' bool SaveStorageValue(unsigned int position, int value);
-#' ```
-#'
-#'
-#' @export
-save_storage_value <- function(position, value) {
-  if (!is_unsigned_int(position)) abort(paste0('`position` must be a non-negative integer, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_int(value)) abort(paste0('`value` must be an integer, not ', friendly_typeof(value), '.'), call = NULL)
-  save_storage_value_(position, value)
-}
-
-#' Load storage value
-#'
-#' Load integer value from storage file (from defined position).
-#'
-#' @param position A non-negative integer.
+#' @param dir_path A string.
 #'
 #' @return An integer
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' int LoadStorageValue(unsigned int position);
+#' unsigned int GetDirectoryFileCount(const char * dirPath);
 #' ```
+#'
+#' @family count functions
+#' @family get functions
 #'
 #'
 #' @export
-load_storage_value <- function(position) {
-  if (!is_unsigned_int(position)) abort(paste0('`position` must be a non-negative integer, not ', friendly_typeof(position), '.'), call = NULL)
-  load_storage_value_(position)
+get_directory_file_count <- function(dir_path) {
+  if (!is_const_char_pointer(dir_path)) abort(paste0('`dir_path` must be a string, not ', friendly_typeof(dir_path), '.'), call = NULL)
+  get_directory_file_count_(dir_path)
 }
 
-#' Is key pressed
+#' Get Directory File Count Ex
+#'
+#' Get the file count in a directory with extension filtering and recursive directory scan. Use 'DIR' in the filter string to include directories in the result.
+#'
+#' @param base_path A string.
+#' @param filter A string.
+#' @param scan_subdirs A logical.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' unsigned int GetDirectoryFileCountEx(const char * basePath, const char * filter, bool scanSubdirs);
+#' ```
+#'
+#' @family ex functions
+#' @family get functions
+#'
+#'
+#' @export
+get_directory_file_count_ex <- function(base_path, filter, scan_subdirs) {
+  if (!is_const_char_pointer(base_path)) abort(paste0('`base_path` must be a string, not ', friendly_typeof(base_path), '.'), call = NULL)
+  if (!is_const_char_pointer(filter)) abort(paste0('`filter` must be a string, not ', friendly_typeof(filter), '.'), call = NULL)
+  if (!is_bool(scan_subdirs)) abort(paste0('`scan_subdirs` must be a logical, not ', friendly_typeof(scan_subdirs), '.'), call = NULL)
+  get_directory_file_count_ex_(base_path, filter, scan_subdirs)
+}
+
+#' Is Key Pressed
 #'
 #' Check if a key has been pressed once.
 #'
@@ -2188,7 +2428,8 @@ load_storage_value <- function(position) {
 #' bool IsKeyPressed(int key);
 #' ```
 #'
-#' @family key functions
+#' @family pressed functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -2197,7 +2438,31 @@ is_key_pressed <- function(key) {
   is_key_pressed_(key)
 }
 
-#' Is key down
+#' Is Key Pressed Repeat
+#'
+#' Check if a key has been pressed again.
+#'
+#' @param key An integer.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool IsKeyPressedRepeat(int key);
+#' ```
+#'
+#' @family repeat functions
+#' @family is functions
+#'
+#'
+#' @export
+is_key_pressed_repeat <- function(key) {
+  if (!is_int(key)) abort(paste0('`key` must be an integer, not ', friendly_typeof(key), '.'), call = NULL)
+  is_key_pressed_repeat_(key)
+}
+
+#' Is Key Down
 #'
 #' Check if a key is being pressed.
 #'
@@ -2211,7 +2476,8 @@ is_key_pressed <- function(key) {
 #' bool IsKeyDown(int key);
 #' ```
 #'
-#' @family key functions
+#' @family down functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -2220,7 +2486,7 @@ is_key_down <- function(key) {
   is_key_down_(key)
 }
 
-#' Is key released
+#' Is Key Released
 #'
 #' Check if a key has been released once.
 #'
@@ -2234,7 +2500,8 @@ is_key_down <- function(key) {
 #' bool IsKeyReleased(int key);
 #' ```
 #'
-#' @family key functions
+#' @family released functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -2243,7 +2510,7 @@ is_key_released <- function(key) {
   is_key_released_(key)
 }
 
-#' Is key up
+#' Is Key Up
 #'
 #' Check if a key is NOT being pressed.
 #'
@@ -2257,7 +2524,8 @@ is_key_released <- function(key) {
 #' bool IsKeyUp(int key);
 #' ```
 #'
-#' @family key functions
+#' @family up functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -2266,33 +2534,10 @@ is_key_up <- function(key) {
   is_key_up_(key)
 }
 
-#' Set exit key
-#'
-#' Set a custom key to exit program (default is ESC).
-#'
-#' @param key An integer.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void SetExitKey(int key);
-#' ```
-#'
-#' @family key functions
-#'
-#'
-#' @export
-set_exit_key <- function(key) {
-  if (!is_int(key)) abort(paste0('`key` must be an integer, not ', friendly_typeof(key), '.'), call = NULL)
-  set_exit_key_(key)
-}
-
-#' Get key pressed
+#' Get Key Pressed
 #'
 #' Get key pressed (keycode), call it multiple times for keys queued, returns 0 when the queue is empty.
 #'
-
 #'
 #' @return An integer
 #'
@@ -2302,7 +2547,8 @@ set_exit_key <- function(key) {
 #' int GetKeyPressed(void);
 #' ```
 #'
-#' @family key functions
+#' @family pressed functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -2310,29 +2556,29 @@ get_key_pressed <- function() {
   get_key_pressed_()
 }
 
-#' Get char pressed
+#' Set Exit Key
 #'
-#' Get char pressed (unicode), call it multiple times for chars queued, returns 0 when the queue is empty.
+#' Set a custom key to exit program (default is ESC).
 #'
-
-#'
-#' @return An integer
+#' @param key An integer.
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' int GetCharPressed(void);
+#' void SetExitKey(int key);
 #' ```
 #'
 #' @family key functions
+#' @family set functions
 #'
 #'
 #' @export
-get_char_pressed <- function() {
-  get_char_pressed_()
+set_exit_key <- function(key) {
+  if (!is_int(key)) abort(paste0('`key` must be an integer, not ', friendly_typeof(key), '.'), call = NULL)
+  set_exit_key_(key)
 }
 
-#' Is gamepad available
+#' Is Gamepad Available
 #'
 #' Check if a gamepad is available.
 #'
@@ -2346,7 +2592,8 @@ get_char_pressed <- function() {
 #' bool IsGamepadAvailable(int gamepad);
 #' ```
 #'
-#' @family gamepad functions
+#' @family available functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -2355,30 +2602,7 @@ is_gamepad_available <- function(gamepad) {
   is_gamepad_available_(gamepad)
 }
 
-#' Get gamepad name
-#'
-#' Get gamepad internal name id.
-#'
-#' @param gamepad An integer.
-#'
-#' @return A string
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' const char *GetGamepadName(int gamepad);
-#' ```
-#'
-#' @family gamepad functions
-#'
-#'
-#' @export
-get_gamepad_name <- function(gamepad) {
-  if (!is_int(gamepad)) abort(paste0('`gamepad` must be an integer, not ', friendly_typeof(gamepad), '.'), call = NULL)
-  get_gamepad_name_(gamepad)
-}
-
-#' Is gamepad button pressed
+#' Is Gamepad Button Pressed
 #'
 #' Check if a gamepad button has been pressed once.
 #'
@@ -2393,7 +2617,8 @@ get_gamepad_name <- function(gamepad) {
 #' bool IsGamepadButtonPressed(int gamepad, int button);
 #' ```
 #'
-#' @family gamepad functions
+#' @family pressed functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -2403,7 +2628,7 @@ is_gamepad_button_pressed <- function(gamepad, button) {
   is_gamepad_button_pressed_(gamepad, button)
 }
 
-#' Is gamepad button down
+#' Is Gamepad Button Down
 #'
 #' Check if a gamepad button is being pressed.
 #'
@@ -2418,7 +2643,8 @@ is_gamepad_button_pressed <- function(gamepad, button) {
 #' bool IsGamepadButtonDown(int gamepad, int button);
 #' ```
 #'
-#' @family gamepad functions
+#' @family down functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -2428,7 +2654,7 @@ is_gamepad_button_down <- function(gamepad, button) {
   is_gamepad_button_down_(gamepad, button)
 }
 
-#' Is gamepad button released
+#' Is Gamepad Button Released
 #'
 #' Check if a gamepad button has been released once.
 #'
@@ -2443,7 +2669,8 @@ is_gamepad_button_down <- function(gamepad, button) {
 #' bool IsGamepadButtonReleased(int gamepad, int button);
 #' ```
 #'
-#' @family gamepad functions
+#' @family released functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -2453,7 +2680,7 @@ is_gamepad_button_released <- function(gamepad, button) {
   is_gamepad_button_released_(gamepad, button)
 }
 
-#' Is gamepad button up
+#' Is Gamepad Button Up
 #'
 #' Check if a gamepad button is NOT being pressed.
 #'
@@ -2468,7 +2695,8 @@ is_gamepad_button_released <- function(gamepad, button) {
 #' bool IsGamepadButtonUp(int gamepad, int button);
 #' ```
 #'
-#' @family gamepad functions
+#' @family up functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -2478,11 +2706,10 @@ is_gamepad_button_up <- function(gamepad, button) {
   is_gamepad_button_up_(gamepad, button)
 }
 
-#' Get gamepad button pressed
+#' Get Gamepad Button Pressed
 #'
 #' Get the last gamepad button pressed.
 #'
-
 #'
 #' @return An integer
 #'
@@ -2492,7 +2719,8 @@ is_gamepad_button_up <- function(gamepad, button) {
 #' int GetGamepadButtonPressed(void);
 #' ```
 #'
-#' @family gamepad functions
+#' @family pressed functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -2500,9 +2728,9 @@ get_gamepad_button_pressed <- function() {
   get_gamepad_button_pressed_()
 }
 
-#' Get gamepad axis count
+#' Get Gamepad Axis Count
 #'
-#' Get gamepad axis count for a gamepad.
+#' Get axis count for a gamepad.
 #'
 #' @param gamepad An integer.
 #'
@@ -2514,7 +2742,8 @@ get_gamepad_button_pressed <- function() {
 #' int GetGamepadAxisCount(int gamepad);
 #' ```
 #'
-#' @family gamepad functions
+#' @family count functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -2523,9 +2752,9 @@ get_gamepad_axis_count <- function(gamepad) {
   get_gamepad_axis_count_(gamepad)
 }
 
-#' Get gamepad axis movement
+#' Get Gamepad Axis Movement
 #'
-#' Get axis movement value for a gamepad axis.
+#' Get movement value for a gamepad axis.
 #'
 #' @param gamepad An integer.
 #' @param axis An integer.
@@ -2538,7 +2767,8 @@ get_gamepad_axis_count <- function(gamepad) {
 #' float GetGamepadAxisMovement(int gamepad, int axis);
 #' ```
 #'
-#' @family gamepad functions
+#' @family movement functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -2548,7 +2778,7 @@ get_gamepad_axis_movement <- function(gamepad, axis) {
   get_gamepad_axis_movement_(gamepad, axis)
 }
 
-#' Set gamepad mappings
+#' Set Gamepad Mappings
 #'
 #' Set internal gamepad mappings (SDL_GameControllerDB).
 #'
@@ -2559,10 +2789,11 @@ get_gamepad_axis_movement <- function(gamepad, axis) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' int SetGamepadMappings(const char *mappings);
+#' int SetGamepadMappings(const char * mappings);
 #' ```
 #'
-#' @family gamepad functions
+#' @family mappings functions
+#' @family set functions
 #'
 #'
 #' @export
@@ -2571,7 +2802,35 @@ set_gamepad_mappings <- function(mappings) {
   set_gamepad_mappings_(mappings)
 }
 
-#' Is mouse button pressed
+#' Set Gamepad Vibration
+#'
+#' Set gamepad vibration for both motors (duration in seconds).
+#'
+#' @param gamepad An integer.
+#' @param left_motor A number.
+#' @param right_motor A number.
+#' @param duration A number.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetGamepadVibration(int gamepad, float leftMotor, float rightMotor, float duration);
+#' ```
+#'
+#' @family vibration functions
+#' @family set functions
+#'
+#'
+#' @export
+set_gamepad_vibration <- function(gamepad, left_motor, right_motor, duration) {
+  if (!is_int(gamepad)) abort(paste0('`gamepad` must be an integer, not ', friendly_typeof(gamepad), '.'), call = NULL)
+  if (!is_float(left_motor)) abort(paste0('`left_motor` must be a number, not ', friendly_typeof(left_motor), '.'), call = NULL)
+  if (!is_float(right_motor)) abort(paste0('`right_motor` must be a number, not ', friendly_typeof(right_motor), '.'), call = NULL)
+  if (!is_float(duration)) abort(paste0('`duration` must be a number, not ', friendly_typeof(duration), '.'), call = NULL)
+  set_gamepad_vibration_(gamepad, left_motor, right_motor, duration)
+}
+
+#' Is Mouse Button Pressed
 #'
 #' Check if a mouse button has been pressed once.
 #'
@@ -2585,7 +2844,8 @@ set_gamepad_mappings <- function(mappings) {
 #' bool IsMouseButtonPressed(int button);
 #' ```
 #'
-#' @family mouse functions
+#' @family pressed functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -2594,7 +2854,7 @@ is_mouse_button_pressed <- function(button) {
   is_mouse_button_pressed_(button)
 }
 
-#' Is mouse button down
+#' Is Mouse Button Down
 #'
 #' Check if a mouse button is being pressed.
 #'
@@ -2608,7 +2868,8 @@ is_mouse_button_pressed <- function(button) {
 #' bool IsMouseButtonDown(int button);
 #' ```
 #'
-#' @family mouse functions
+#' @family down functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -2617,7 +2878,7 @@ is_mouse_button_down <- function(button) {
   is_mouse_button_down_(button)
 }
 
-#' Is mouse button released
+#' Is Mouse Button Released
 #'
 #' Check if a mouse button has been released once.
 #'
@@ -2631,7 +2892,8 @@ is_mouse_button_down <- function(button) {
 #' bool IsMouseButtonReleased(int button);
 #' ```
 #'
-#' @family mouse functions
+#' @family released functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -2640,7 +2902,7 @@ is_mouse_button_released <- function(button) {
   is_mouse_button_released_(button)
 }
 
-#' Is mouse button up
+#' Is Mouse Button Up
 #'
 #' Check if a mouse button is NOT being pressed.
 #'
@@ -2654,7 +2916,8 @@ is_mouse_button_released <- function(button) {
 #' bool IsMouseButtonUp(int button);
 #' ```
 #'
-#' @family mouse functions
+#' @family up functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -2663,11 +2926,10 @@ is_mouse_button_up <- function(button) {
   is_mouse_button_up_(button)
 }
 
-#' Get mouse x
+#' Get Mouse X
 #'
 #' Get mouse position X.
 #'
-
 #'
 #' @return An integer
 #'
@@ -2677,7 +2939,8 @@ is_mouse_button_up <- function(button) {
 #' int GetMouseX(void);
 #' ```
 #'
-#' @family mouse functions
+#' @family x functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -2685,11 +2948,10 @@ get_mouse_x <- function() {
   get_mouse_x_()
 }
 
-#' Get mouse y
+#' Get Mouse Y
 #'
 #' Get mouse position Y.
 #'
-
 #'
 #' @return An integer
 #'
@@ -2699,7 +2961,8 @@ get_mouse_x <- function() {
 #' int GetMouseY(void);
 #' ```
 #'
-#' @family mouse functions
+#' @family y functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -2707,11 +2970,10 @@ get_mouse_y <- function() {
   get_mouse_y_()
 }
 
-#' Get mouse position
+#' Get Mouse Position
 #'
 #' Get mouse position XY.
 #'
-
 #'
 #' @return A numeric vector of length 2
 #'
@@ -2721,7 +2983,8 @@ get_mouse_y <- function() {
 #' Vector2 GetMousePosition(void);
 #' ```
 #'
-#' @family mouse functions
+#' @family position functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -2729,11 +2992,10 @@ get_mouse_position <- function() {
   get_mouse_position_()
 }
 
-#' Get mouse delta
+#' Get Mouse Delta
 #'
 #' Get mouse delta between frames.
 #'
-
 #'
 #' @return A numeric vector of length 2
 #'
@@ -2743,7 +3005,8 @@ get_mouse_position <- function() {
 #' Vector2 GetMouseDelta(void);
 #' ```
 #'
-#' @family mouse functions
+#' @family delta functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -2751,13 +3014,12 @@ get_mouse_delta <- function() {
   get_mouse_delta_()
 }
 
-#' Set mouse position
+#' Set Mouse Position
 #'
 #' Set mouse position XY.
 #'
 #' @param x An integer.
 #' @param y An integer.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -2765,7 +3027,8 @@ get_mouse_delta <- function() {
 #' void SetMousePosition(int x, int y);
 #' ```
 #'
-#' @family mouse functions
+#' @family position functions
+#' @family set functions
 #'
 #'
 #' @export
@@ -2775,13 +3038,12 @@ set_mouse_position <- function(x, y) {
   set_mouse_position_(x, y)
 }
 
-#' Set mouse offset
+#' Set Mouse Offset
 #'
 #' Set mouse offset.
 #'
 #' @param offset_x An integer.
 #' @param offset_y An integer.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -2789,7 +3051,8 @@ set_mouse_position <- function(x, y) {
 #' void SetMouseOffset(int offsetX, int offsetY);
 #' ```
 #'
-#' @family mouse functions
+#' @family offset functions
+#' @family set functions
 #'
 #'
 #' @export
@@ -2799,13 +3062,12 @@ set_mouse_offset <- function(offset_x, offset_y) {
   set_mouse_offset_(offset_x, offset_y)
 }
 
-#' Set mouse scale
+#' Set Mouse Scale
 #'
 #' Set mouse scaling.
 #'
 #' @param scale_x A number.
 #' @param scale_y A number.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -2813,7 +3075,8 @@ set_mouse_offset <- function(offset_x, offset_y) {
 #' void SetMouseScale(float scaleX, float scaleY);
 #' ```
 #'
-#' @family mouse functions
+#' @family scale functions
+#' @family set functions
 #'
 #'
 #' @export
@@ -2823,11 +3086,10 @@ set_mouse_scale <- function(scale_x, scale_y) {
   set_mouse_scale_(scale_x, scale_y)
 }
 
-#' Get mouse wheel move
+#' Get Mouse Wheel Move
 #'
-#' Get mouse wheel movement Y.
+#' Get mouse wheel movement for X or Y, whichever is larger.
 #'
-
 #'
 #' @return A number
 #'
@@ -2837,7 +3099,8 @@ set_mouse_scale <- function(scale_x, scale_y) {
 #' float GetMouseWheelMove(void);
 #' ```
 #'
-#' @family mouse functions
+#' @family move functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -2845,12 +3108,33 @@ get_mouse_wheel_move <- function() {
   get_mouse_wheel_move_()
 }
 
-#' Set mouse cursor
+#' Get Mouse Wheel Move V
+#'
+#' Get mouse wheel movement for both X and Y.
+#'
+#'
+#' @return A numeric vector of length 2
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Vector2 GetMouseWheelMoveV(void);
+#' ```
+#'
+#' @family v functions
+#' @family get functions
+#'
+#'
+#' @export
+get_mouse_wheel_move_v <- function() {
+  get_mouse_wheel_move_v_()
+}
+
+#' Set Mouse Cursor
 #'
 #' Set mouse cursor.
 #'
 #' @param cursor An integer.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -2858,8 +3142,8 @@ get_mouse_wheel_move <- function() {
 #' void SetMouseCursor(int cursor);
 #' ```
 #'
-#' @family mouse functions
 #' @family cursor functions
+#' @family set functions
 #'
 #'
 #' @export
@@ -2868,11 +3152,10 @@ set_mouse_cursor <- function(cursor) {
   set_mouse_cursor_(cursor)
 }
 
-#' Get touch x
+#' Get Touch X
 #'
 #' Get touch position X for touch point 0 (relative to screen size).
 #'
-
 #'
 #' @return An integer
 #'
@@ -2882,7 +3165,8 @@ set_mouse_cursor <- function(cursor) {
 #' int GetTouchX(void);
 #' ```
 #'
-#' @family touch functions
+#' @family x functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -2890,11 +3174,10 @@ get_touch_x <- function() {
   get_touch_x_()
 }
 
-#' Get touch y
+#' Get Touch Y
 #'
 #' Get touch position Y for touch point 0 (relative to screen size).
 #'
-
 #'
 #' @return An integer
 #'
@@ -2904,7 +3187,8 @@ get_touch_x <- function() {
 #' int GetTouchY(void);
 #' ```
 #'
-#' @family touch functions
+#' @family y functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -2912,7 +3196,7 @@ get_touch_y <- function() {
   get_touch_y_()
 }
 
-#' Get touch position
+#' Get Touch Position
 #'
 #' Get touch position XY for a touch point index (relative to screen size).
 #'
@@ -2926,7 +3210,8 @@ get_touch_y <- function() {
 #' Vector2 GetTouchPosition(int index);
 #' ```
 #'
-#' @family touch functions
+#' @family position functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -2935,7 +3220,7 @@ get_touch_position <- function(index) {
   get_touch_position_(index)
 }
 
-#' Get touch point id
+#' Get Touch Point Id
 #'
 #' Get touch point identifier for given index.
 #'
@@ -2949,7 +3234,8 @@ get_touch_position <- function(index) {
 #' int GetTouchPointId(int index);
 #' ```
 #'
-#' @family touch functions
+#' @family id functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -2958,11 +3244,10 @@ get_touch_point_id <- function(index) {
   get_touch_point_id_(index)
 }
 
-#' Get touch point count
+#' Get Touch Point Count
 #'
 #' Get number of touch points.
 #'
-
 #'
 #' @return An integer
 #'
@@ -2972,7 +3257,8 @@ get_touch_point_id <- function(index) {
 #' int GetTouchPointCount(void);
 #' ```
 #'
-#' @family touch functions
+#' @family count functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -2980,18 +3266,20 @@ get_touch_point_count <- function() {
   get_touch_point_count_()
 }
 
-#' Set gestures enabled
+#' Set Gestures Enabled
 #'
 #' Enable a set of gestures using flags.
 #'
 #' @param flags A non-negative integer.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void SetGesturesEnabled(unsigned int flags);
 #' ```
+#'
+#' @family enabled functions
+#' @family set functions
 #'
 #'
 #' @export
@@ -3000,32 +3288,34 @@ set_gestures_enabled <- function(flags) {
   set_gestures_enabled_(flags)
 }
 
-#' Is gesture detected
+#' Is Gesture Detected
 #'
 #' Check if a gesture have been detected.
 #'
-#' @param gesture An integer.
+#' @param gesture A non-negative integer.
 #'
 #' @return A logical
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' bool IsGestureDetected(int gesture);
+#' bool IsGestureDetected(unsigned int gesture);
 #' ```
+#'
+#' @family detected functions
+#' @family is functions
 #'
 #'
 #' @export
 is_gesture_detected <- function(gesture) {
-  if (!is_int(gesture)) abort(paste0('`gesture` must be an integer, not ', friendly_typeof(gesture), '.'), call = NULL)
+  if (!is_unsigned_int(gesture)) abort(paste0('`gesture` must be a non-negative integer, not ', friendly_typeof(gesture), '.'), call = NULL)
   is_gesture_detected_(gesture)
 }
 
-#' Get gesture detected
+#' Get Gesture Detected
 #'
 #' Get latest detected gesture.
 #'
-
 #'
 #' @return An integer
 #'
@@ -3035,17 +3325,19 @@ is_gesture_detected <- function(gesture) {
 #' int GetGestureDetected(void);
 #' ```
 #'
+#' @family detected functions
+#' @family get functions
+#'
 #'
 #' @export
 get_gesture_detected <- function() {
   get_gesture_detected_()
 }
 
-#' Get gesture hold duration
+#' Get Gesture Hold Duration
 #'
-#' Get gesture hold time in milliseconds.
+#' Get gesture hold time in seconds.
 #'
-
 #'
 #' @return A number
 #'
@@ -3055,17 +3347,19 @@ get_gesture_detected <- function() {
 #' float GetGestureHoldDuration(void);
 #' ```
 #'
+#' @family duration functions
+#' @family get functions
+#'
 #'
 #' @export
 get_gesture_hold_duration <- function() {
   get_gesture_hold_duration_()
 }
 
-#' Get gesture drag vector
+#' Get Gesture Drag Vector
 #'
 #' Get gesture drag vector.
 #'
-
 #'
 #' @return A numeric vector of length 2
 #'
@@ -3075,17 +3369,19 @@ get_gesture_hold_duration <- function() {
 #' Vector2 GetGestureDragVector(void);
 #' ```
 #'
+#' @family vector functions
+#' @family get functions
+#'
 #'
 #' @export
 get_gesture_drag_vector <- function() {
   get_gesture_drag_vector_()
 }
 
-#' Get gesture drag angle
+#' Get Gesture Drag Angle
 #'
 #' Get gesture drag angle.
 #'
-
 #'
 #' @return A number
 #'
@@ -3095,17 +3391,19 @@ get_gesture_drag_vector <- function() {
 #' float GetGestureDragAngle(void);
 #' ```
 #'
+#' @family angle functions
+#' @family get functions
+#'
 #'
 #' @export
 get_gesture_drag_angle <- function() {
   get_gesture_drag_angle_()
 }
 
-#' Get gesture pinch vector
+#' Get Gesture Pinch Vector
 #'
 #' Get gesture pinch delta.
 #'
-
 #'
 #' @return A numeric vector of length 2
 #'
@@ -3115,17 +3413,19 @@ get_gesture_drag_angle <- function() {
 #' Vector2 GetGesturePinchVector(void);
 #' ```
 #'
+#' @family vector functions
+#' @family get functions
+#'
 #'
 #' @export
 get_gesture_pinch_vector <- function() {
   get_gesture_pinch_vector_()
 }
 
-#' Get gesture pinch angle
+#' Get Gesture Pinch Angle
 #'
 #' Get gesture pinch angle.
 #'
-
 #'
 #' @return A number
 #'
@@ -3135,168 +3435,21 @@ get_gesture_pinch_vector <- function() {
 #' float GetGesturePinchAngle(void);
 #' ```
 #'
+#' @family angle functions
+#' @family get functions
+#'
 #'
 #' @export
 get_gesture_pinch_angle <- function() {
   get_gesture_pinch_angle_()
 }
 
-#' Set camera mode
-#'
-#' Set camera mode (multiple camera modes available).
-#'
-#' @param camera A camera_3d.
-#' @param mode An integer.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void SetCameraMode(Camera camera, int mode);
-#' ```
-#'
-#' @family camera functions
-#' @family mode functions
-#'
-#'
-#' @seealso [camera_3d()] for creating camera_3d objects.
-#'
-#' @export
-set_camera_mode <- function(camera, mode) {
-  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
-  if (!is_int(mode)) abort(paste0('`mode` must be an integer, not ', friendly_typeof(mode), '.'), call = NULL)
-  set_camera_mode_(camera, mode)
-}
-
-#' Update camera
-#'
-#' Update camera position for selected mode.
-#'
-#' @param camera A camera_3d.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void UpdateCamera(Camera *camera);
-#' ```
-#'
-#' @family camera functions
-#'
-#'
-#' @seealso [camera_3d()] for creating camera_3d objects.
-#'
-#' @export
-update_camera <- function(camera) {
-  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
-  update_camera_(camera)
-}
-
-#' Set camera pan control
-#'
-#' Set camera pan key to combine with mouse movement (free camera).
-#'
-#' @param key_pan An integer.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void SetCameraPanControl(int keyPan);
-#' ```
-#'
-#' @family camera functions
-#'
-#'
-#' @export
-set_camera_pan_control <- function(key_pan) {
-  if (!is_int(key_pan)) abort(paste0('`key_pan` must be an integer, not ', friendly_typeof(key_pan), '.'), call = NULL)
-  set_camera_pan_control_(key_pan)
-}
-
-#' Set camera alt control
-#'
-#' Set camera alt key to combine with mouse movement (free camera).
-#'
-#' @param key_alt An integer.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void SetCameraAltControl(int keyAlt);
-#' ```
-#'
-#' @family camera functions
-#'
-#'
-#' @export
-set_camera_alt_control <- function(key_alt) {
-  if (!is_int(key_alt)) abort(paste0('`key_alt` must be an integer, not ', friendly_typeof(key_alt), '.'), call = NULL)
-  set_camera_alt_control_(key_alt)
-}
-
-#' Set camera smooth zoom control
-#'
-#' Set camera smooth zoom key to combine with mouse (free camera).
-#'
-#' @param key_smooth_zoom An integer.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void SetCameraSmoothZoomControl(int keySmoothZoom);
-#' ```
-#'
-#' @family camera functions
-#'
-#'
-#' @export
-set_camera_smooth_zoom_control <- function(key_smooth_zoom) {
-  if (!is_int(key_smooth_zoom)) abort(paste0('`key_smooth_zoom` must be an integer, not ', friendly_typeof(key_smooth_zoom), '.'), call = NULL)
-  set_camera_smooth_zoom_control_(key_smooth_zoom)
-}
-
-#' Set camera move controls
-#'
-#' Set camera move controls (1st person and 3rd person cameras).
-#'
-#' @param key_front An integer.
-#' @param key_back An integer.
-#' @param key_right An integer.
-#' @param key_left An integer.
-#' @param key_up An integer.
-#' @param key_down An integer.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void SetCameraMoveControls(int keyFront, int keyBack, int keyRight, int keyLeft, int keyUp, int keyDown);
-#' ```
-#'
-#' @family camera functions
-#'
-#'
-#' @export
-set_camera_move_controls <- function(key_front, key_back, key_right, key_left, key_up, key_down) {
-  if (!is_int(key_front)) abort(paste0('`key_front` must be an integer, not ', friendly_typeof(key_front), '.'), call = NULL)
-  if (!is_int(key_back)) abort(paste0('`key_back` must be an integer, not ', friendly_typeof(key_back), '.'), call = NULL)
-  if (!is_int(key_right)) abort(paste0('`key_right` must be an integer, not ', friendly_typeof(key_right), '.'), call = NULL)
-  if (!is_int(key_left)) abort(paste0('`key_left` must be an integer, not ', friendly_typeof(key_left), '.'), call = NULL)
-  if (!is_int(key_up)) abort(paste0('`key_up` must be an integer, not ', friendly_typeof(key_up), '.'), call = NULL)
-  if (!is_int(key_down)) abort(paste0('`key_down` must be an integer, not ', friendly_typeof(key_down), '.'), call = NULL)
-  set_camera_move_controls_(key_front, key_back, key_right, key_left, key_up, key_down)
-}
-
-#' Set shapes texture
+#' Set Shapes Texture
 #'
 #' Set texture and rectangle to be used on shapes drawing.
 #'
 #' @param texture A texture.
 #' @param source A rectangle.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -3305,10 +3458,8 @@ set_camera_move_controls <- function(key_front, key_back, key_right, key_left, k
 #' ```
 #'
 #' @family texture functions
+#' @family set functions
 #'
-#'
-#' @seealso [texture()] for creating texture objects.
-#' @seealso [rectangle()] for creating rectangle objects.
 #'
 #' @export
 set_shapes_texture <- function(texture, source) {
@@ -3317,1495 +3468,1124 @@ set_shapes_texture <- function(texture, source) {
   set_shapes_texture_(texture, source)
 }
 
-#' Draw pixel
+#' Get Shapes Texture
 #'
-#' Draw a pixel.
-#'
-#' @param pos_x An integer or a vector of integers.
-#' @param pos_y An integer or a vector of integers.
-#' @param color A color or a list of colors.
+#' Get texture that is used for shapes drawing.
 #'
 #'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @return A texture
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Texture2D GetShapesTexture(void);
+#' ```
+#'
+#' @family texture functions
+#' @family get functions
+#'
+#'
+#' @export
+get_shapes_texture <- function() {
+  get_shapes_texture_()
+}
+
+#' Get Shapes Texture Rectangle
+#'
+#' Get texture source rectangle that is used for shapes drawing.
+#'
+#'
+#' @return A rectangle
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Rectangle GetShapesTextureRectangle(void);
+#' ```
+#'
+#' @family rectangle functions
+#' @family get functions
+#'
+#'
+#' @export
+get_shapes_texture_rectangle <- function() {
+  get_shapes_texture_rectangle_()
+}
+
+#' Draw Pixel
+#'
+#' Draw a pixel using geometry [Can be slow, use with care].
+#'
+#' @param pos_x An integer.
+#' @param pos_y An integer.
+#' @param color A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawPixel(int posX, int posY, Color color);
 #' ```
 #'
+#' @family pixel functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_pixel <- function(pos_x, pos_y, color) {
-  if (!is_int(pos_x) && !is_vec(pos_x, is_int)) abort(paste0('`pos_x` must be an integer or a vector of integers, not ', friendly_typeof(pos_x), '.'), call = NULL)
-  if (!is_int(pos_y) && !is_vec(pos_y, is_int)) abort(paste0('`pos_y` must be an integer or a vector of integers, not ', friendly_typeof(pos_y), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(pos_x), length(pos_y), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) pos_x <- rep(pos_x, length.out = max_len)
-    if (lens[2] < max_len) pos_y <- rep(pos_y, length.out = max_len)
-    if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_pixel_vectorized_(pos_x, pos_y, color)
-  } else {
-    draw_pixel_(pos_x, pos_y, color)
-  }
+  if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
+  if (!is_int(pos_y)) abort(paste0('`pos_y` must be an integer, not ', friendly_typeof(pos_y), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_pixel_(pos_x, pos_y, color)
 }
 
-#' Draw pixel v
+#' Draw Pixel V
 #'
-#' Draw a pixel (Vector version).
+#' Draw a pixel using geometry (Vector version) [Can be slow, use with care].
 #'
-#' @param position A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param color A color or a list of colors.
+#' @param position A numeric vector of length 2.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawPixelV(Vector2 position, Color color);
 #' ```
 #'
+#' @family v functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_pixel_v <- function(position, color) {
-  if (!is_vector_2(position) && !is_mat(position, is_vector_2)) abort(paste0('`position` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(position), nrow(position), 1), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_pixel_v_vectorized_(position, color)
-  } else {
-    draw_pixel_v_(position, color)
-  }
+  if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_pixel_v_(position, color)
 }
 
-#' Draw line
+#' Draw Line
 #'
 #' Draw a line.
 #'
-#' @param start_pos_x An integer or a vector of integers.
-#' @param start_pos_y An integer or a vector of integers.
-#' @param end_pos_x An integer or a vector of integers.
-#' @param end_pos_y An integer or a vector of integers.
-#' @param color A color or a list of colors.
+#' @param start_pos_x An integer.
+#' @param start_pos_y An integer.
+#' @param end_pos_x An integer.
+#' @param end_pos_y An integer.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawLine(int startPosX, int startPosY, int endPosX, int endPosY, Color color);
 #' ```
 #'
-#' @family draw functions
 #' @family line functions
+#' @family draw functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_line <- function(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color) {
-  if (!is_int(start_pos_x) && !is_vec(start_pos_x, is_int)) abort(paste0('`start_pos_x` must be an integer or a vector of integers, not ', friendly_typeof(start_pos_x), '.'), call = NULL)
-  if (!is_int(start_pos_y) && !is_vec(start_pos_y, is_int)) abort(paste0('`start_pos_y` must be an integer or a vector of integers, not ', friendly_typeof(start_pos_y), '.'), call = NULL)
-  if (!is_int(end_pos_x) && !is_vec(end_pos_x, is_int)) abort(paste0('`end_pos_x` must be an integer or a vector of integers, not ', friendly_typeof(end_pos_x), '.'), call = NULL)
-  if (!is_int(end_pos_y) && !is_vec(end_pos_y, is_int)) abort(paste0('`end_pos_y` must be an integer or a vector of integers, not ', friendly_typeof(end_pos_y), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(start_pos_x), length(start_pos_y), length(end_pos_x), length(end_pos_y), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) start_pos_x <- rep(start_pos_x, length.out = max_len)
-    if (lens[2] < max_len) start_pos_y <- rep(start_pos_y, length.out = max_len)
-    if (lens[3] < max_len) end_pos_x <- rep(end_pos_x, length.out = max_len)
-    if (lens[4] < max_len) end_pos_y <- rep(end_pos_y, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_line_vectorized_(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color)
-  } else {
-    draw_line_(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color)
-  }
+  if (!is_int(start_pos_x)) abort(paste0('`start_pos_x` must be an integer, not ', friendly_typeof(start_pos_x), '.'), call = NULL)
+  if (!is_int(start_pos_y)) abort(paste0('`start_pos_y` must be an integer, not ', friendly_typeof(start_pos_y), '.'), call = NULL)
+  if (!is_int(end_pos_x)) abort(paste0('`end_pos_x` must be an integer, not ', friendly_typeof(end_pos_x), '.'), call = NULL)
+  if (!is_int(end_pos_y)) abort(paste0('`end_pos_y` must be an integer, not ', friendly_typeof(end_pos_y), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_line_(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color)
 }
 
-#' Draw line v
+#' Draw Line V
 #'
-#' Draw a line (Vector version).
+#' Draw a line (using gl lines).
 #'
-#' @param start_pos A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param end_pos A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param color A color or a list of colors.
+#' @param start_pos A numeric vector of length 2.
+#' @param end_pos A numeric vector of length 2.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawLineV(Vector2 startPos, Vector2 endPos, Color color);
 #' ```
 #'
+#' @family v functions
 #' @family draw functions
-#' @family line functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_line_v <- function(start_pos, end_pos, color) {
-  if (!is_vector_2(start_pos) && !is_mat(start_pos, is_vector_2)) abort(paste0('`start_pos` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(start_pos), '.'), call = NULL)
-  if (!is_vector_2(end_pos) && !is_mat(end_pos, is_vector_2)) abort(paste0('`end_pos` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(end_pos), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(start_pos), nrow(start_pos), 1), ifelse(is.matrix(end_pos), nrow(end_pos), 1), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) start_pos <- matrix(rep(t(start_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) end_pos <- matrix(rep(t(end_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_line_v_vectorized_(start_pos, end_pos, color)
-  } else {
-    draw_line_v_(start_pos, end_pos, color)
-  }
+  if (!is_vector_2(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 2, not ', friendly_typeof(start_pos), '.'), call = NULL)
+  if (!is_vector_2(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 2, not ', friendly_typeof(end_pos), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_line_v_(start_pos, end_pos, color)
 }
 
-#' Draw line ex
+#' Draw Line Ex
 #'
-#' Draw a line defining thickness.
+#' Draw a line (using triangles/quads).
 #'
-#' @param start_pos A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param end_pos A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param thick A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param start_pos A numeric vector of length 2.
+#' @param end_pos A numeric vector of length 2.
+#' @param thick A number.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawLineEx(Vector2 startPos, Vector2 endPos, float thick, Color color);
 #' ```
 #'
+#' @family ex functions
 #' @family draw functions
-#' @family line functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_line_ex <- function(start_pos, end_pos, thick, color) {
-  if (!is_vector_2(start_pos) && !is_mat(start_pos, is_vector_2)) abort(paste0('`start_pos` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(start_pos), '.'), call = NULL)
-  if (!is_vector_2(end_pos) && !is_mat(end_pos, is_vector_2)) abort(paste0('`end_pos` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(end_pos), '.'), call = NULL)
-  if (!is_float(thick) && !is_vec(thick, is_float)) abort(paste0('`thick` must be a number or a vector of numbers, not ', friendly_typeof(thick), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(start_pos), nrow(start_pos), 1), ifelse(is.matrix(end_pos), nrow(end_pos), 1), length(thick), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) start_pos <- matrix(rep(t(start_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) end_pos <- matrix(rep(t(end_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[3] < max_len) thick <- rep(thick, length.out = max_len)
-    if (lens[4] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_line_ex_vectorized_(start_pos, end_pos, thick, color)
-  } else {
-    draw_line_ex_(start_pos, end_pos, thick, color)
-  }
+  if (!is_vector_2(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 2, not ', friendly_typeof(start_pos), '.'), call = NULL)
+  if (!is_vector_2(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 2, not ', friendly_typeof(end_pos), '.'), call = NULL)
+  if (!is_float(thick)) abort(paste0('`thick` must be a number, not ', friendly_typeof(thick), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_line_ex_(start_pos, end_pos, thick, color)
 }
 
-#' Draw line bezier
+#' Draw Line Bezier
 #'
-#' Draw a line using cubic-bezier curves in-out.
+#' Draw line segment cubic-bezier in-out interpolation.
 #'
-#' @param start_pos A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param end_pos A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param thick A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param start_pos A numeric vector of length 2.
+#' @param end_pos A numeric vector of length 2.
+#' @param thick A number.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawLineBezier(Vector2 startPos, Vector2 endPos, float thick, Color color);
 #' ```
 #'
+#' @family bezier functions
 #' @family draw functions
-#' @family line functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_line_bezier <- function(start_pos, end_pos, thick, color) {
-  if (!is_vector_2(start_pos) && !is_mat(start_pos, is_vector_2)) abort(paste0('`start_pos` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(start_pos), '.'), call = NULL)
-  if (!is_vector_2(end_pos) && !is_mat(end_pos, is_vector_2)) abort(paste0('`end_pos` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(end_pos), '.'), call = NULL)
-  if (!is_float(thick) && !is_vec(thick, is_float)) abort(paste0('`thick` must be a number or a vector of numbers, not ', friendly_typeof(thick), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(start_pos), nrow(start_pos), 1), ifelse(is.matrix(end_pos), nrow(end_pos), 1), length(thick), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) start_pos <- matrix(rep(t(start_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) end_pos <- matrix(rep(t(end_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[3] < max_len) thick <- rep(thick, length.out = max_len)
-    if (lens[4] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_line_bezier_vectorized_(start_pos, end_pos, thick, color)
-  } else {
-    draw_line_bezier_(start_pos, end_pos, thick, color)
-  }
+  if (!is_vector_2(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 2, not ', friendly_typeof(start_pos), '.'), call = NULL)
+  if (!is_vector_2(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 2, not ', friendly_typeof(end_pos), '.'), call = NULL)
+  if (!is_float(thick)) abort(paste0('`thick` must be a number, not ', friendly_typeof(thick), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_line_bezier_(start_pos, end_pos, thick, color)
 }
 
-#' Draw line bezier quad
+#' Draw Line Dashed
 #'
-#' Draw line using quadratic bezier curves with a control point.
+#' Draw a dashed line.
 #'
-#' @param start_pos A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param end_pos A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param control_pos A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param thick A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param start_pos A numeric vector of length 2.
+#' @param end_pos A numeric vector of length 2.
+#' @param dash_size An integer.
+#' @param space_size An integer.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' void DrawLineBezierQuad(Vector2 startPos, Vector2 endPos, Vector2 controlPos, float thick, Color color);
+#' void DrawLineDashed(Vector2 startPos, Vector2 endPos, int dashSize, int spaceSize, Color color);
 #' ```
 #'
+#' @family dashed functions
 #' @family draw functions
-#' @family line functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
-draw_line_bezier_quad <- function(start_pos, end_pos, control_pos, thick, color) {
-  if (!is_vector_2(start_pos) && !is_mat(start_pos, is_vector_2)) abort(paste0('`start_pos` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(start_pos), '.'), call = NULL)
-  if (!is_vector_2(end_pos) && !is_mat(end_pos, is_vector_2)) abort(paste0('`end_pos` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(end_pos), '.'), call = NULL)
-  if (!is_vector_2(control_pos) && !is_mat(control_pos, is_vector_2)) abort(paste0('`control_pos` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(control_pos), '.'), call = NULL)
-  if (!is_float(thick) && !is_vec(thick, is_float)) abort(paste0('`thick` must be a number or a vector of numbers, not ', friendly_typeof(thick), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(start_pos), nrow(start_pos), 1), ifelse(is.matrix(end_pos), nrow(end_pos), 1), ifelse(is.matrix(control_pos), nrow(control_pos), 1), length(thick), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) start_pos <- matrix(rep(t(start_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) end_pos <- matrix(rep(t(end_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[3] < max_len) control_pos <- matrix(rep(t(control_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[4] < max_len) thick <- rep(thick, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_line_bezier_quad_vectorized_(start_pos, end_pos, control_pos, thick, color)
-  } else {
-    draw_line_bezier_quad_(start_pos, end_pos, control_pos, thick, color)
-  }
+draw_line_dashed <- function(start_pos, end_pos, dash_size, space_size, color) {
+  if (!is_vector_2(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 2, not ', friendly_typeof(start_pos), '.'), call = NULL)
+  if (!is_vector_2(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 2, not ', friendly_typeof(end_pos), '.'), call = NULL)
+  if (!is_int(dash_size)) abort(paste0('`dash_size` must be an integer, not ', friendly_typeof(dash_size), '.'), call = NULL)
+  if (!is_int(space_size)) abort(paste0('`space_size` must be an integer, not ', friendly_typeof(space_size), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_line_dashed_(start_pos, end_pos, dash_size, space_size, color)
 }
 
-#' Draw line bezier cubic
-#'
-#' Draw line using cubic bezier curves with 2 control points.
-#'
-#' @param start_pos A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param end_pos A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param start_control_pos A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param end_control_pos A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param thick A number or a vector of numbers.
-#' @param color A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void DrawLineBezierCubic(Vector2 startPos, Vector2 endPos, Vector2 startControlPos, Vector2 endControlPos, float thick, Color color);
-#' ```
-#'
-#' @family draw functions
-#' @family line functions
-#'
-#'
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-draw_line_bezier_cubic <- function(start_pos, end_pos, start_control_pos, end_control_pos, thick, color) {
-  if (!is_vector_2(start_pos) && !is_mat(start_pos, is_vector_2)) abort(paste0('`start_pos` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(start_pos), '.'), call = NULL)
-  if (!is_vector_2(end_pos) && !is_mat(end_pos, is_vector_2)) abort(paste0('`end_pos` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(end_pos), '.'), call = NULL)
-  if (!is_vector_2(start_control_pos) && !is_mat(start_control_pos, is_vector_2)) abort(paste0('`start_control_pos` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(start_control_pos), '.'), call = NULL)
-  if (!is_vector_2(end_control_pos) && !is_mat(end_control_pos, is_vector_2)) abort(paste0('`end_control_pos` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(end_control_pos), '.'), call = NULL)
-  if (!is_float(thick) && !is_vec(thick, is_float)) abort(paste0('`thick` must be a number or a vector of numbers, not ', friendly_typeof(thick), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(start_pos), nrow(start_pos), 1), ifelse(is.matrix(end_pos), nrow(end_pos), 1), ifelse(is.matrix(start_control_pos), nrow(start_control_pos), 1), ifelse(is.matrix(end_control_pos), nrow(end_control_pos), 1), length(thick), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) start_pos <- matrix(rep(t(start_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) end_pos <- matrix(rep(t(end_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[3] < max_len) start_control_pos <- matrix(rep(t(start_control_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[4] < max_len) end_control_pos <- matrix(rep(t(end_control_pos), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[5] < max_len) thick <- rep(thick, length.out = max_len)
-    if (lens[6] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_line_bezier_cubic_vectorized_(start_pos, end_pos, start_control_pos, end_control_pos, thick, color)
-  } else {
-    draw_line_bezier_cubic_(start_pos, end_pos, start_control_pos, end_control_pos, thick, color)
-  }
-}
-
-#' Draw circle
+#' Draw Circle
 #'
 #' Draw a color-filled circle.
 #'
-#' @param center_x An integer or a vector of integers.
-#' @param center_y An integer or a vector of integers.
-#' @param radius A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param center_x An integer.
+#' @param center_y An integer.
+#' @param radius A number.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawCircle(int centerX, int centerY, float radius, Color color);
 #' ```
 #'
-#' @family draw functions
 #' @family circle functions
+#' @family draw functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_circle <- function(center_x, center_y, radius, color) {
-  if (!is_int(center_x) && !is_vec(center_x, is_int)) abort(paste0('`center_x` must be an integer or a vector of integers, not ', friendly_typeof(center_x), '.'), call = NULL)
-  if (!is_int(center_y) && !is_vec(center_y, is_int)) abort(paste0('`center_y` must be an integer or a vector of integers, not ', friendly_typeof(center_y), '.'), call = NULL)
-  if (!is_float(radius) && !is_vec(radius, is_float)) abort(paste0('`radius` must be a number or a vector of numbers, not ', friendly_typeof(radius), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(center_x), length(center_y), length(radius), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center_x <- rep(center_x, length.out = max_len)
-    if (lens[2] < max_len) center_y <- rep(center_y, length.out = max_len)
-    if (lens[3] < max_len) radius <- rep(radius, length.out = max_len)
-    if (lens[4] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_circle_vectorized_(center_x, center_y, radius, color)
-  } else {
-    draw_circle_(center_x, center_y, radius, color)
-  }
+  if (!is_int(center_x)) abort(paste0('`center_x` must be an integer, not ', friendly_typeof(center_x), '.'), call = NULL)
+  if (!is_int(center_y)) abort(paste0('`center_y` must be an integer, not ', friendly_typeof(center_y), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_circle_(center_x, center_y, radius, color)
 }
 
-#' Draw circle sector
-#'
-#' Draw a piece of a circle.
-#'
-#' @param center A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param radius A number or a vector of numbers.
-#' @param start_angle A number or a vector of numbers.
-#' @param end_angle A number or a vector of numbers.
-#' @param segments An integer or a vector of integers.
-#' @param color A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void DrawCircleSector(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color);
-#' ```
-#'
-#' @family draw functions
-#' @family circle functions
-#'
-#'
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-draw_circle_sector <- function(center, radius, start_angle, end_angle, segments, color) {
-  if (!is_vector_2(center) && !is_mat(center, is_vector_2)) abort(paste0('`center` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(center), '.'), call = NULL)
-  if (!is_float(radius) && !is_vec(radius, is_float)) abort(paste0('`radius` must be a number or a vector of numbers, not ', friendly_typeof(radius), '.'), call = NULL)
-  if (!is_float(start_angle) && !is_vec(start_angle, is_float)) abort(paste0('`start_angle` must be a number or a vector of numbers, not ', friendly_typeof(start_angle), '.'), call = NULL)
-  if (!is_float(end_angle) && !is_vec(end_angle, is_float)) abort(paste0('`end_angle` must be a number or a vector of numbers, not ', friendly_typeof(end_angle), '.'), call = NULL)
-  if (!is_int(segments) && !is_vec(segments, is_int)) abort(paste0('`segments` must be an integer or a vector of integers, not ', friendly_typeof(segments), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(radius), length(start_angle), length(end_angle), length(segments), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) radius <- rep(radius, length.out = max_len)
-    if (lens[3] < max_len) start_angle <- rep(start_angle, length.out = max_len)
-    if (lens[4] < max_len) end_angle <- rep(end_angle, length.out = max_len)
-    if (lens[5] < max_len) segments <- rep(segments, length.out = max_len)
-    if (lens[6] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_circle_sector_vectorized_(center, radius, start_angle, end_angle, segments, color)
-  } else {
-    draw_circle_sector_(center, radius, start_angle, end_angle, segments, color)
-  }
-}
-
-#' Draw circle sector lines
-#'
-#' Draw circle sector outline.
-#'
-#' @param center A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param radius A number or a vector of numbers.
-#' @param start_angle A number or a vector of numbers.
-#' @param end_angle A number or a vector of numbers.
-#' @param segments An integer or a vector of integers.
-#' @param color A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void DrawCircleSectorLines(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color);
-#' ```
-#'
-#' @family draw functions
-#' @family circle functions
-#'
-#'
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-draw_circle_sector_lines <- function(center, radius, start_angle, end_angle, segments, color) {
-  if (!is_vector_2(center) && !is_mat(center, is_vector_2)) abort(paste0('`center` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(center), '.'), call = NULL)
-  if (!is_float(radius) && !is_vec(radius, is_float)) abort(paste0('`radius` must be a number or a vector of numbers, not ', friendly_typeof(radius), '.'), call = NULL)
-  if (!is_float(start_angle) && !is_vec(start_angle, is_float)) abort(paste0('`start_angle` must be a number or a vector of numbers, not ', friendly_typeof(start_angle), '.'), call = NULL)
-  if (!is_float(end_angle) && !is_vec(end_angle, is_float)) abort(paste0('`end_angle` must be a number or a vector of numbers, not ', friendly_typeof(end_angle), '.'), call = NULL)
-  if (!is_int(segments) && !is_vec(segments, is_int)) abort(paste0('`segments` must be an integer or a vector of integers, not ', friendly_typeof(segments), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(radius), length(start_angle), length(end_angle), length(segments), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) radius <- rep(radius, length.out = max_len)
-    if (lens[3] < max_len) start_angle <- rep(start_angle, length.out = max_len)
-    if (lens[4] < max_len) end_angle <- rep(end_angle, length.out = max_len)
-    if (lens[5] < max_len) segments <- rep(segments, length.out = max_len)
-    if (lens[6] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_circle_sector_lines_vectorized_(center, radius, start_angle, end_angle, segments, color)
-  } else {
-    draw_circle_sector_lines_(center, radius, start_angle, end_angle, segments, color)
-  }
-}
-
-#' Draw circle gradient
-#'
-#' Draw a gradient-filled circle.
-#'
-#' @param center_x An integer or a vector of integers.
-#' @param center_y An integer or a vector of integers.
-#' @param radius A number or a vector of numbers.
-#' @param color_1 A color or a list of colors.
-#' @param color_2 A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void DrawCircleGradient(int centerX, int centerY, float radius, Color color1, Color color2);
-#' ```
-#'
-#' @family draw functions
-#' @family circle functions
-#'
-#'
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-draw_circle_gradient <- function(center_x, center_y, radius, color_1, color_2) {
-  if (!is_int(center_x) && !is_vec(center_x, is_int)) abort(paste0('`center_x` must be an integer or a vector of integers, not ', friendly_typeof(center_x), '.'), call = NULL)
-  if (!is_int(center_y) && !is_vec(center_y, is_int)) abort(paste0('`center_y` must be an integer or a vector of integers, not ', friendly_typeof(center_y), '.'), call = NULL)
-  if (!is_float(radius) && !is_vec(radius, is_float)) abort(paste0('`radius` must be a number or a vector of numbers, not ', friendly_typeof(radius), '.'), call = NULL)
-  if (!is_color(color_1) && !is_vec(color_1, is_color)) abort(paste0('`color_1` must be a color or a list of colors, not ', friendly_typeof(color_1), '.'), call = NULL)
-  if (!is_color(color_2) && !is_vec(color_2, is_color)) abort(paste0('`color_2` must be a color or a list of colors, not ', friendly_typeof(color_2), '.'), call = NULL)
-
-  lens <- c(length(center_x), length(center_y), length(radius), length(color_1), length(color_2))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center_x <- rep(center_x, length.out = max_len)
-    if (lens[2] < max_len) center_y <- rep(center_y, length.out = max_len)
-    if (lens[3] < max_len) radius <- rep(radius, length.out = max_len)
-    if (lens[4] < max_len) color_1 <- rep(unlist(list(color_1)), length.out = max_len)
-    if (lens[5] < max_len) color_2 <- rep(unlist(list(color_2)), length.out = max_len)
-    draw_circle_gradient_vectorized_(center_x, center_y, radius, color_1, color_2)
-  } else {
-    draw_circle_gradient_(center_x, center_y, radius, color_1, color_2)
-  }
-}
-
-#' Draw circle v
+#' Draw Circle V
 #'
 #' Draw a color-filled circle (Vector version).
 #'
-#' @param center A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param radius A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param center A numeric vector of length 2.
+#' @param radius A number.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawCircleV(Vector2 center, float radius, Color color);
 #' ```
 #'
+#' @family v functions
 #' @family draw functions
-#' @family circle functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_circle_v <- function(center, radius, color) {
-  if (!is_vector_2(center) && !is_mat(center, is_vector_2)) abort(paste0('`center` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(center), '.'), call = NULL)
-  if (!is_float(radius) && !is_vec(radius, is_float)) abort(paste0('`radius` must be a number or a vector of numbers, not ', friendly_typeof(radius), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(radius), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) radius <- rep(radius, length.out = max_len)
-    if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_circle_v_vectorized_(center, radius, color)
-  } else {
-    draw_circle_v_(center, radius, color)
-  }
+  if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_circle_v_(center, radius, color)
 }
 
-#' Draw circle lines
+#' Draw Circle Gradient
+#'
+#' Draw a gradient-filled circle.
+#'
+#' @param center A numeric vector of length 2.
+#' @param radius A number.
+#' @param inner A color.
+#' @param outer A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawCircleGradient(Vector2 center, float radius, Color inner, Color outer);
+#' ```
+#'
+#' @family gradient functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_circle_gradient <- function(center, radius, inner, outer) {
+  if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_color(inner)) abort(paste0('`inner` must be a color, not ', friendly_typeof(inner), '.'), call = NULL)
+  if (!is_color(outer)) abort(paste0('`outer` must be a color, not ', friendly_typeof(outer), '.'), call = NULL)
+  draw_circle_gradient_(center, radius, inner, outer)
+}
+
+#' Draw Circle Sector
+#'
+#' Draw a piece of a circle.
+#'
+#' @param center A numeric vector of length 2.
+#' @param radius A number.
+#' @param start_angle A number.
+#' @param end_angle A number.
+#' @param segments An integer.
+#' @param color A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawCircleSector(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color);
+#' ```
+#'
+#' @family sector functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_circle_sector <- function(center, radius, start_angle, end_angle, segments, color) {
+  if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_float(start_angle)) abort(paste0('`start_angle` must be a number, not ', friendly_typeof(start_angle), '.'), call = NULL)
+  if (!is_float(end_angle)) abort(paste0('`end_angle` must be a number, not ', friendly_typeof(end_angle), '.'), call = NULL)
+  if (!is_int(segments)) abort(paste0('`segments` must be an integer, not ', friendly_typeof(segments), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_circle_sector_(center, radius, start_angle, end_angle, segments, color)
+}
+
+#' Draw Circle Sector Lines
+#'
+#' Draw circle sector outline.
+#'
+#' @param center A numeric vector of length 2.
+#' @param radius A number.
+#' @param start_angle A number.
+#' @param end_angle A number.
+#' @param segments An integer.
+#' @param color A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawCircleSectorLines(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color);
+#' ```
+#'
+#' @family lines functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_circle_sector_lines <- function(center, radius, start_angle, end_angle, segments, color) {
+  if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_float(start_angle)) abort(paste0('`start_angle` must be a number, not ', friendly_typeof(start_angle), '.'), call = NULL)
+  if (!is_float(end_angle)) abort(paste0('`end_angle` must be a number, not ', friendly_typeof(end_angle), '.'), call = NULL)
+  if (!is_int(segments)) abort(paste0('`segments` must be an integer, not ', friendly_typeof(segments), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_circle_sector_lines_(center, radius, start_angle, end_angle, segments, color)
+}
+
+#' Draw Circle Lines
 #'
 #' Draw circle outline.
 #'
-#' @param center_x An integer or a vector of integers.
-#' @param center_y An integer or a vector of integers.
-#' @param radius A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param center_x An integer.
+#' @param center_y An integer.
+#' @param radius A number.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawCircleLines(int centerX, int centerY, float radius, Color color);
 #' ```
 #'
+#' @family lines functions
 #' @family draw functions
-#' @family circle functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_circle_lines <- function(center_x, center_y, radius, color) {
-  if (!is_int(center_x) && !is_vec(center_x, is_int)) abort(paste0('`center_x` must be an integer or a vector of integers, not ', friendly_typeof(center_x), '.'), call = NULL)
-  if (!is_int(center_y) && !is_vec(center_y, is_int)) abort(paste0('`center_y` must be an integer or a vector of integers, not ', friendly_typeof(center_y), '.'), call = NULL)
-  if (!is_float(radius) && !is_vec(radius, is_float)) abort(paste0('`radius` must be a number or a vector of numbers, not ', friendly_typeof(radius), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(center_x), length(center_y), length(radius), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center_x <- rep(center_x, length.out = max_len)
-    if (lens[2] < max_len) center_y <- rep(center_y, length.out = max_len)
-    if (lens[3] < max_len) radius <- rep(radius, length.out = max_len)
-    if (lens[4] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_circle_lines_vectorized_(center_x, center_y, radius, color)
-  } else {
-    draw_circle_lines_(center_x, center_y, radius, color)
-  }
+  if (!is_int(center_x)) abort(paste0('`center_x` must be an integer, not ', friendly_typeof(center_x), '.'), call = NULL)
+  if (!is_int(center_y)) abort(paste0('`center_y` must be an integer, not ', friendly_typeof(center_y), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_circle_lines_(center_x, center_y, radius, color)
 }
 
-#' Draw ellipse
+#' Draw Circle Lines V
+#'
+#' Draw circle outline (Vector version).
+#'
+#' @param center A numeric vector of length 2.
+#' @param radius A number.
+#' @param color A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawCircleLinesV(Vector2 center, float radius, Color color);
+#' ```
+#'
+#' @family v functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_circle_lines_v <- function(center, radius, color) {
+  if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_circle_lines_v_(center, radius, color)
+}
+
+#' Draw Ellipse
 #'
 #' Draw ellipse.
 #'
-#' @param center_x An integer or a vector of integers.
-#' @param center_y An integer or a vector of integers.
-#' @param radius_h A number or a vector of numbers.
-#' @param radius_v A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param center_x An integer.
+#' @param center_y An integer.
+#' @param radius_h A number.
+#' @param radius_v A number.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawEllipse(int centerX, int centerY, float radiusH, float radiusV, Color color);
 #' ```
 #'
+#' @family ellipse functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_ellipse <- function(center_x, center_y, radius_h, radius_v, color) {
-  if (!is_int(center_x) && !is_vec(center_x, is_int)) abort(paste0('`center_x` must be an integer or a vector of integers, not ', friendly_typeof(center_x), '.'), call = NULL)
-  if (!is_int(center_y) && !is_vec(center_y, is_int)) abort(paste0('`center_y` must be an integer or a vector of integers, not ', friendly_typeof(center_y), '.'), call = NULL)
-  if (!is_float(radius_h) && !is_vec(radius_h, is_float)) abort(paste0('`radius_h` must be a number or a vector of numbers, not ', friendly_typeof(radius_h), '.'), call = NULL)
-  if (!is_float(radius_v) && !is_vec(radius_v, is_float)) abort(paste0('`radius_v` must be a number or a vector of numbers, not ', friendly_typeof(radius_v), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(center_x), length(center_y), length(radius_h), length(radius_v), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center_x <- rep(center_x, length.out = max_len)
-    if (lens[2] < max_len) center_y <- rep(center_y, length.out = max_len)
-    if (lens[3] < max_len) radius_h <- rep(radius_h, length.out = max_len)
-    if (lens[4] < max_len) radius_v <- rep(radius_v, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_ellipse_vectorized_(center_x, center_y, radius_h, radius_v, color)
-  } else {
-    draw_ellipse_(center_x, center_y, radius_h, radius_v, color)
-  }
+  if (!is_int(center_x)) abort(paste0('`center_x` must be an integer, not ', friendly_typeof(center_x), '.'), call = NULL)
+  if (!is_int(center_y)) abort(paste0('`center_y` must be an integer, not ', friendly_typeof(center_y), '.'), call = NULL)
+  if (!is_float(radius_h)) abort(paste0('`radius_h` must be a number, not ', friendly_typeof(radius_h), '.'), call = NULL)
+  if (!is_float(radius_v)) abort(paste0('`radius_v` must be a number, not ', friendly_typeof(radius_v), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_ellipse_(center_x, center_y, radius_h, radius_v, color)
 }
 
-#' Draw ellipse lines
+#' Draw Ellipse V
+#'
+#' Draw ellipse (Vector version).
+#'
+#' @param center A numeric vector of length 2.
+#' @param radius_h A number.
+#' @param radius_v A number.
+#' @param color A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawEllipseV(Vector2 center, float radiusH, float radiusV, Color color);
+#' ```
+#'
+#' @family v functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_ellipse_v <- function(center, radius_h, radius_v, color) {
+  if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
+  if (!is_float(radius_h)) abort(paste0('`radius_h` must be a number, not ', friendly_typeof(radius_h), '.'), call = NULL)
+  if (!is_float(radius_v)) abort(paste0('`radius_v` must be a number, not ', friendly_typeof(radius_v), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_ellipse_v_(center, radius_h, radius_v, color)
+}
+
+#' Draw Ellipse Lines
 #'
 #' Draw ellipse outline.
 #'
-#' @param center_x An integer or a vector of integers.
-#' @param center_y An integer or a vector of integers.
-#' @param radius_h A number or a vector of numbers.
-#' @param radius_v A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param center_x An integer.
+#' @param center_y An integer.
+#' @param radius_h A number.
+#' @param radius_v A number.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawEllipseLines(int centerX, int centerY, float radiusH, float radiusV, Color color);
 #' ```
 #'
+#' @family lines functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_ellipse_lines <- function(center_x, center_y, radius_h, radius_v, color) {
-  if (!is_int(center_x) && !is_vec(center_x, is_int)) abort(paste0('`center_x` must be an integer or a vector of integers, not ', friendly_typeof(center_x), '.'), call = NULL)
-  if (!is_int(center_y) && !is_vec(center_y, is_int)) abort(paste0('`center_y` must be an integer or a vector of integers, not ', friendly_typeof(center_y), '.'), call = NULL)
-  if (!is_float(radius_h) && !is_vec(radius_h, is_float)) abort(paste0('`radius_h` must be a number or a vector of numbers, not ', friendly_typeof(radius_h), '.'), call = NULL)
-  if (!is_float(radius_v) && !is_vec(radius_v, is_float)) abort(paste0('`radius_v` must be a number or a vector of numbers, not ', friendly_typeof(radius_v), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(center_x), length(center_y), length(radius_h), length(radius_v), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center_x <- rep(center_x, length.out = max_len)
-    if (lens[2] < max_len) center_y <- rep(center_y, length.out = max_len)
-    if (lens[3] < max_len) radius_h <- rep(radius_h, length.out = max_len)
-    if (lens[4] < max_len) radius_v <- rep(radius_v, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_ellipse_lines_vectorized_(center_x, center_y, radius_h, radius_v, color)
-  } else {
-    draw_ellipse_lines_(center_x, center_y, radius_h, radius_v, color)
-  }
+  if (!is_int(center_x)) abort(paste0('`center_x` must be an integer, not ', friendly_typeof(center_x), '.'), call = NULL)
+  if (!is_int(center_y)) abort(paste0('`center_y` must be an integer, not ', friendly_typeof(center_y), '.'), call = NULL)
+  if (!is_float(radius_h)) abort(paste0('`radius_h` must be a number, not ', friendly_typeof(radius_h), '.'), call = NULL)
+  if (!is_float(radius_v)) abort(paste0('`radius_v` must be a number, not ', friendly_typeof(radius_v), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_ellipse_lines_(center_x, center_y, radius_h, radius_v, color)
 }
 
-#' Draw ring
+#' Draw Ellipse Lines V
+#'
+#' Draw ellipse outline (Vector version).
+#'
+#' @param center A numeric vector of length 2.
+#' @param radius_h A number.
+#' @param radius_v A number.
+#' @param color A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawEllipseLinesV(Vector2 center, float radiusH, float radiusV, Color color);
+#' ```
+#'
+#' @family v functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_ellipse_lines_v <- function(center, radius_h, radius_v, color) {
+  if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
+  if (!is_float(radius_h)) abort(paste0('`radius_h` must be a number, not ', friendly_typeof(radius_h), '.'), call = NULL)
+  if (!is_float(radius_v)) abort(paste0('`radius_v` must be a number, not ', friendly_typeof(radius_v), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_ellipse_lines_v_(center, radius_h, radius_v, color)
+}
+
+#' Draw Ring
 #'
 #' Draw ring.
 #'
-#' @param center A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param inner_radius A number or a vector of numbers.
-#' @param outer_radius A number or a vector of numbers.
-#' @param start_angle A number or a vector of numbers.
-#' @param end_angle A number or a vector of numbers.
-#' @param segments An integer or a vector of integers.
-#' @param color A color or a list of colors.
+#' @param center A numeric vector of length 2.
+#' @param inner_radius A number.
+#' @param outer_radius A number.
+#' @param start_angle A number.
+#' @param end_angle A number.
+#' @param segments An integer.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawRing(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color);
 #' ```
 #'
+#' @family ring functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_ring <- function(center, inner_radius, outer_radius, start_angle, end_angle, segments, color) {
-  if (!is_vector_2(center) && !is_mat(center, is_vector_2)) abort(paste0('`center` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(center), '.'), call = NULL)
-  if (!is_float(inner_radius) && !is_vec(inner_radius, is_float)) abort(paste0('`inner_radius` must be a number or a vector of numbers, not ', friendly_typeof(inner_radius), '.'), call = NULL)
-  if (!is_float(outer_radius) && !is_vec(outer_radius, is_float)) abort(paste0('`outer_radius` must be a number or a vector of numbers, not ', friendly_typeof(outer_radius), '.'), call = NULL)
-  if (!is_float(start_angle) && !is_vec(start_angle, is_float)) abort(paste0('`start_angle` must be a number or a vector of numbers, not ', friendly_typeof(start_angle), '.'), call = NULL)
-  if (!is_float(end_angle) && !is_vec(end_angle, is_float)) abort(paste0('`end_angle` must be a number or a vector of numbers, not ', friendly_typeof(end_angle), '.'), call = NULL)
-  if (!is_int(segments) && !is_vec(segments, is_int)) abort(paste0('`segments` must be an integer or a vector of integers, not ', friendly_typeof(segments), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(inner_radius), length(outer_radius), length(start_angle), length(end_angle), length(segments), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) inner_radius <- rep(inner_radius, length.out = max_len)
-    if (lens[3] < max_len) outer_radius <- rep(outer_radius, length.out = max_len)
-    if (lens[4] < max_len) start_angle <- rep(start_angle, length.out = max_len)
-    if (lens[5] < max_len) end_angle <- rep(end_angle, length.out = max_len)
-    if (lens[6] < max_len) segments <- rep(segments, length.out = max_len)
-    if (lens[7] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_ring_vectorized_(center, inner_radius, outer_radius, start_angle, end_angle, segments, color)
-  } else {
-    draw_ring_(center, inner_radius, outer_radius, start_angle, end_angle, segments, color)
-  }
+  if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
+  if (!is_float(inner_radius)) abort(paste0('`inner_radius` must be a number, not ', friendly_typeof(inner_radius), '.'), call = NULL)
+  if (!is_float(outer_radius)) abort(paste0('`outer_radius` must be a number, not ', friendly_typeof(outer_radius), '.'), call = NULL)
+  if (!is_float(start_angle)) abort(paste0('`start_angle` must be a number, not ', friendly_typeof(start_angle), '.'), call = NULL)
+  if (!is_float(end_angle)) abort(paste0('`end_angle` must be a number, not ', friendly_typeof(end_angle), '.'), call = NULL)
+  if (!is_int(segments)) abort(paste0('`segments` must be an integer, not ', friendly_typeof(segments), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_ring_(center, inner_radius, outer_radius, start_angle, end_angle, segments, color)
 }
 
-#' Draw ring lines
+#' Draw Ring Lines
 #'
 #' Draw ring outline.
 #'
-#' @param center A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param inner_radius A number or a vector of numbers.
-#' @param outer_radius A number or a vector of numbers.
-#' @param start_angle A number or a vector of numbers.
-#' @param end_angle A number or a vector of numbers.
-#' @param segments An integer or a vector of integers.
-#' @param color A color or a list of colors.
+#' @param center A numeric vector of length 2.
+#' @param inner_radius A number.
+#' @param outer_radius A number.
+#' @param start_angle A number.
+#' @param end_angle A number.
+#' @param segments An integer.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawRingLines(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color);
 #' ```
 #'
+#' @family lines functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_ring_lines <- function(center, inner_radius, outer_radius, start_angle, end_angle, segments, color) {
-  if (!is_vector_2(center) && !is_mat(center, is_vector_2)) abort(paste0('`center` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(center), '.'), call = NULL)
-  if (!is_float(inner_radius) && !is_vec(inner_radius, is_float)) abort(paste0('`inner_radius` must be a number or a vector of numbers, not ', friendly_typeof(inner_radius), '.'), call = NULL)
-  if (!is_float(outer_radius) && !is_vec(outer_radius, is_float)) abort(paste0('`outer_radius` must be a number or a vector of numbers, not ', friendly_typeof(outer_radius), '.'), call = NULL)
-  if (!is_float(start_angle) && !is_vec(start_angle, is_float)) abort(paste0('`start_angle` must be a number or a vector of numbers, not ', friendly_typeof(start_angle), '.'), call = NULL)
-  if (!is_float(end_angle) && !is_vec(end_angle, is_float)) abort(paste0('`end_angle` must be a number or a vector of numbers, not ', friendly_typeof(end_angle), '.'), call = NULL)
-  if (!is_int(segments) && !is_vec(segments, is_int)) abort(paste0('`segments` must be an integer or a vector of integers, not ', friendly_typeof(segments), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(inner_radius), length(outer_radius), length(start_angle), length(end_angle), length(segments), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) inner_radius <- rep(inner_radius, length.out = max_len)
-    if (lens[3] < max_len) outer_radius <- rep(outer_radius, length.out = max_len)
-    if (lens[4] < max_len) start_angle <- rep(start_angle, length.out = max_len)
-    if (lens[5] < max_len) end_angle <- rep(end_angle, length.out = max_len)
-    if (lens[6] < max_len) segments <- rep(segments, length.out = max_len)
-    if (lens[7] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_ring_lines_vectorized_(center, inner_radius, outer_radius, start_angle, end_angle, segments, color)
-  } else {
-    draw_ring_lines_(center, inner_radius, outer_radius, start_angle, end_angle, segments, color)
-  }
+  if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
+  if (!is_float(inner_radius)) abort(paste0('`inner_radius` must be a number, not ', friendly_typeof(inner_radius), '.'), call = NULL)
+  if (!is_float(outer_radius)) abort(paste0('`outer_radius` must be a number, not ', friendly_typeof(outer_radius), '.'), call = NULL)
+  if (!is_float(start_angle)) abort(paste0('`start_angle` must be a number, not ', friendly_typeof(start_angle), '.'), call = NULL)
+  if (!is_float(end_angle)) abort(paste0('`end_angle` must be a number, not ', friendly_typeof(end_angle), '.'), call = NULL)
+  if (!is_int(segments)) abort(paste0('`segments` must be an integer, not ', friendly_typeof(segments), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_ring_lines_(center, inner_radius, outer_radius, start_angle, end_angle, segments, color)
 }
 
-#' Draw rectangle
+#' Draw Rectangle
 #'
 #' Draw a color-filled rectangle.
 #'
-#' @param pos_x An integer or a vector of integers.
-#' @param pos_y An integer or a vector of integers.
-#' @param width An integer or a vector of integers.
-#' @param height An integer or a vector of integers.
-#' @param color A color or a list of colors.
+#' @param pos_x An integer.
+#' @param pos_y An integer.
+#' @param width An integer.
+#' @param height An integer.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawRectangle(int posX, int posY, int width, int height, Color color);
 #' ```
 #'
-#' @family draw functions
 #' @family rectangle functions
+#' @family draw functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_rectangle <- function(pos_x, pos_y, width, height, color) {
-  if (!is_int(pos_x) && !is_vec(pos_x, is_int)) abort(paste0('`pos_x` must be an integer or a vector of integers, not ', friendly_typeof(pos_x), '.'), call = NULL)
-  if (!is_int(pos_y) && !is_vec(pos_y, is_int)) abort(paste0('`pos_y` must be an integer or a vector of integers, not ', friendly_typeof(pos_y), '.'), call = NULL)
-  if (!is_int(width) && !is_vec(width, is_int)) abort(paste0('`width` must be an integer or a vector of integers, not ', friendly_typeof(width), '.'), call = NULL)
-  if (!is_int(height) && !is_vec(height, is_int)) abort(paste0('`height` must be an integer or a vector of integers, not ', friendly_typeof(height), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(pos_x), length(pos_y), length(width), length(height), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) pos_x <- rep(pos_x, length.out = max_len)
-    if (lens[2] < max_len) pos_y <- rep(pos_y, length.out = max_len)
-    if (lens[3] < max_len) width <- rep(width, length.out = max_len)
-    if (lens[4] < max_len) height <- rep(height, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_rectangle_vectorized_(pos_x, pos_y, width, height, color)
-  } else {
-    draw_rectangle_(pos_x, pos_y, width, height, color)
-  }
+  if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
+  if (!is_int(pos_y)) abort(paste0('`pos_y` must be an integer, not ', friendly_typeof(pos_y), '.'), call = NULL)
+  if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
+  if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_rectangle_(pos_x, pos_y, width, height, color)
 }
 
-#' Draw rectangle v
+#' Draw Rectangle V
 #'
 #' Draw a color-filled rectangle (Vector version).
 #'
-#' @param position A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param size A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param color A color or a list of colors.
+#' @param position A numeric vector of length 2.
+#' @param size A numeric vector of length 2.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawRectangleV(Vector2 position, Vector2 size, Color color);
 #' ```
 #'
+#' @family v functions
 #' @family draw functions
-#' @family rectangle functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_rectangle_v <- function(position, size, color) {
-  if (!is_vector_2(position) && !is_mat(position, is_vector_2)) abort(paste0('`position` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_vector_2(size) && !is_mat(size, is_vector_2)) abort(paste0('`size` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(size), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(position), nrow(position), 1), ifelse(is.matrix(size), nrow(size), 1), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) size <- matrix(rep(t(size), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_rectangle_v_vectorized_(position, size, color)
-  } else {
-    draw_rectangle_v_(position, size, color)
-  }
+  if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_vector_2(size)) abort(paste0('`size` must be a numeric vector of length 2, not ', friendly_typeof(size), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_rectangle_v_(position, size, color)
 }
 
-#' Draw rectangle rec
+#' Draw Rectangle Rec
 #'
 #' Draw a color-filled rectangle.
 #'
-#' @param rec A rectangle or a list of rectangles.
-#' @param color A color or a list of colors.
+#' @param rec A rectangle.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawRectangleRec(Rectangle rec, Color color);
 #' ```
 #'
+#' @family rec functions
 #' @family draw functions
-#' @family rectangle functions
 #'
-#'
-#' @seealso [rectangle()] for creating rectangle objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_rectangle_rec <- function(rec, color) {
-  if (!is_rectangle(rec) && !is_vec(rec, is_rectangle)) abort(paste0('`rec` must be a rectangle or a list of rectangles, not ', friendly_typeof(rec), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(rec), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) rec <- rep(unlist(list(rec)), length.out = max_len)
-    if (lens[2] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_rectangle_rec_vectorized_(rec, color)
-  } else {
-    draw_rectangle_rec_(rec, color)
-  }
+  if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_rectangle_rec_(rec, color)
 }
 
-#' Draw rectangle pro
+#' Draw Rectangle Pro
 #'
 #' Draw a color-filled rectangle with pro parameters.
 #'
-#' @param rec A rectangle or a list of rectangles.
-#' @param origin A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param rotation A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param rec A rectangle.
+#' @param origin A numeric vector of length 2.
+#' @param rotation A number.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawRectanglePro(Rectangle rec, Vector2 origin, float rotation, Color color);
 #' ```
 #'
+#' @family pro functions
 #' @family draw functions
-#' @family rectangle functions
 #'
-#'
-#' @seealso [rectangle()] for creating rectangle objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_rectangle_pro <- function(rec, origin, rotation, color) {
-  if (!is_rectangle(rec) && !is_vec(rec, is_rectangle)) abort(paste0('`rec` must be a rectangle or a list of rectangles, not ', friendly_typeof(rec), '.'), call = NULL)
-  if (!is_vector_2(origin) && !is_mat(origin, is_vector_2)) abort(paste0('`origin` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(origin), '.'), call = NULL)
-  if (!is_float(rotation) && !is_vec(rotation, is_float)) abort(paste0('`rotation` must be a number or a vector of numbers, not ', friendly_typeof(rotation), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(rec), ifelse(is.matrix(origin), nrow(origin), 1), length(rotation), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) rec <- rep(unlist(list(rec)), length.out = max_len)
-    if (lens[2] < max_len) origin <- matrix(rep(t(origin), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[3] < max_len) rotation <- rep(rotation, length.out = max_len)
-    if (lens[4] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_rectangle_pro_vectorized_(rec, origin, rotation, color)
-  } else {
-    draw_rectangle_pro_(rec, origin, rotation, color)
-  }
+  if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
+  if (!is_vector_2(origin)) abort(paste0('`origin` must be a numeric vector of length 2, not ', friendly_typeof(origin), '.'), call = NULL)
+  if (!is_float(rotation)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(rotation), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_rectangle_pro_(rec, origin, rotation, color)
 }
 
-#' Draw rectangle gradient v
+#' Draw Rectangle Gradient V
 #'
 #' Draw a vertical-gradient-filled rectangle.
 #'
-#' @param pos_x An integer or a vector of integers.
-#' @param pos_y An integer or a vector of integers.
-#' @param width An integer or a vector of integers.
-#' @param height An integer or a vector of integers.
-#' @param color_1 A color or a list of colors.
-#' @param color_2 A color or a list of colors.
+#' @param pos_x An integer.
+#' @param pos_y An integer.
+#' @param width An integer.
+#' @param height An integer.
+#' @param top A color.
+#' @param bottom A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' void DrawRectangleGradientV(int posX, int posY, int width, int height, Color color1, Color color2);
+#' void DrawRectangleGradientV(int posX, int posY, int width, int height, Color top, Color bottom);
 #' ```
 #'
+#' @family v functions
 #' @family draw functions
-#' @family rectangle functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
-draw_rectangle_gradient_v <- function(pos_x, pos_y, width, height, color_1, color_2) {
-  if (!is_int(pos_x) && !is_vec(pos_x, is_int)) abort(paste0('`pos_x` must be an integer or a vector of integers, not ', friendly_typeof(pos_x), '.'), call = NULL)
-  if (!is_int(pos_y) && !is_vec(pos_y, is_int)) abort(paste0('`pos_y` must be an integer or a vector of integers, not ', friendly_typeof(pos_y), '.'), call = NULL)
-  if (!is_int(width) && !is_vec(width, is_int)) abort(paste0('`width` must be an integer or a vector of integers, not ', friendly_typeof(width), '.'), call = NULL)
-  if (!is_int(height) && !is_vec(height, is_int)) abort(paste0('`height` must be an integer or a vector of integers, not ', friendly_typeof(height), '.'), call = NULL)
-  if (!is_color(color_1) && !is_vec(color_1, is_color)) abort(paste0('`color_1` must be a color or a list of colors, not ', friendly_typeof(color_1), '.'), call = NULL)
-  if (!is_color(color_2) && !is_vec(color_2, is_color)) abort(paste0('`color_2` must be a color or a list of colors, not ', friendly_typeof(color_2), '.'), call = NULL)
-
-  lens <- c(length(pos_x), length(pos_y), length(width), length(height), length(color_1), length(color_2))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) pos_x <- rep(pos_x, length.out = max_len)
-    if (lens[2] < max_len) pos_y <- rep(pos_y, length.out = max_len)
-    if (lens[3] < max_len) width <- rep(width, length.out = max_len)
-    if (lens[4] < max_len) height <- rep(height, length.out = max_len)
-    if (lens[5] < max_len) color_1 <- rep(unlist(list(color_1)), length.out = max_len)
-    if (lens[6] < max_len) color_2 <- rep(unlist(list(color_2)), length.out = max_len)
-    draw_rectangle_gradient_v_vectorized_(pos_x, pos_y, width, height, color_1, color_2)
-  } else {
-    draw_rectangle_gradient_v_(pos_x, pos_y, width, height, color_1, color_2)
-  }
+draw_rectangle_gradient_v <- function(pos_x, pos_y, width, height, top, bottom) {
+  if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
+  if (!is_int(pos_y)) abort(paste0('`pos_y` must be an integer, not ', friendly_typeof(pos_y), '.'), call = NULL)
+  if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
+  if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
+  if (!is_color(top)) abort(paste0('`top` must be a color, not ', friendly_typeof(top), '.'), call = NULL)
+  if (!is_color(bottom)) abort(paste0('`bottom` must be a color, not ', friendly_typeof(bottom), '.'), call = NULL)
+  draw_rectangle_gradient_v_(pos_x, pos_y, width, height, top, bottom)
 }
 
-#' Draw rectangle gradient h
+#' Draw Rectangle Gradient H
 #'
 #' Draw a horizontal-gradient-filled rectangle.
 #'
-#' @param pos_x An integer or a vector of integers.
-#' @param pos_y An integer or a vector of integers.
-#' @param width An integer or a vector of integers.
-#' @param height An integer or a vector of integers.
-#' @param color_1 A color or a list of colors.
-#' @param color_2 A color or a list of colors.
+#' @param pos_x An integer.
+#' @param pos_y An integer.
+#' @param width An integer.
+#' @param height An integer.
+#' @param left A color.
+#' @param right A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' void DrawRectangleGradientH(int posX, int posY, int width, int height, Color color1, Color color2);
+#' void DrawRectangleGradientH(int posX, int posY, int width, int height, Color left, Color right);
 #' ```
 #'
+#' @family h functions
 #' @family draw functions
-#' @family rectangle functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
-draw_rectangle_gradient_h <- function(pos_x, pos_y, width, height, color_1, color_2) {
-  if (!is_int(pos_x) && !is_vec(pos_x, is_int)) abort(paste0('`pos_x` must be an integer or a vector of integers, not ', friendly_typeof(pos_x), '.'), call = NULL)
-  if (!is_int(pos_y) && !is_vec(pos_y, is_int)) abort(paste0('`pos_y` must be an integer or a vector of integers, not ', friendly_typeof(pos_y), '.'), call = NULL)
-  if (!is_int(width) && !is_vec(width, is_int)) abort(paste0('`width` must be an integer or a vector of integers, not ', friendly_typeof(width), '.'), call = NULL)
-  if (!is_int(height) && !is_vec(height, is_int)) abort(paste0('`height` must be an integer or a vector of integers, not ', friendly_typeof(height), '.'), call = NULL)
-  if (!is_color(color_1) && !is_vec(color_1, is_color)) abort(paste0('`color_1` must be a color or a list of colors, not ', friendly_typeof(color_1), '.'), call = NULL)
-  if (!is_color(color_2) && !is_vec(color_2, is_color)) abort(paste0('`color_2` must be a color or a list of colors, not ', friendly_typeof(color_2), '.'), call = NULL)
-
-  lens <- c(length(pos_x), length(pos_y), length(width), length(height), length(color_1), length(color_2))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) pos_x <- rep(pos_x, length.out = max_len)
-    if (lens[2] < max_len) pos_y <- rep(pos_y, length.out = max_len)
-    if (lens[3] < max_len) width <- rep(width, length.out = max_len)
-    if (lens[4] < max_len) height <- rep(height, length.out = max_len)
-    if (lens[5] < max_len) color_1 <- rep(unlist(list(color_1)), length.out = max_len)
-    if (lens[6] < max_len) color_2 <- rep(unlist(list(color_2)), length.out = max_len)
-    draw_rectangle_gradient_h_vectorized_(pos_x, pos_y, width, height, color_1, color_2)
-  } else {
-    draw_rectangle_gradient_h_(pos_x, pos_y, width, height, color_1, color_2)
-  }
+draw_rectangle_gradient_h <- function(pos_x, pos_y, width, height, left, right) {
+  if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
+  if (!is_int(pos_y)) abort(paste0('`pos_y` must be an integer, not ', friendly_typeof(pos_y), '.'), call = NULL)
+  if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
+  if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
+  if (!is_color(left)) abort(paste0('`left` must be a color, not ', friendly_typeof(left), '.'), call = NULL)
+  if (!is_color(right)) abort(paste0('`right` must be a color, not ', friendly_typeof(right), '.'), call = NULL)
+  draw_rectangle_gradient_h_(pos_x, pos_y, width, height, left, right)
 }
 
-#' Draw rectangle gradient ex
+#' Draw Rectangle Gradient Ex
 #'
 #' Draw a gradient-filled rectangle with custom vertex colors.
 #'
-#' @param rec A rectangle or a list of rectangles.
-#' @param col_1 A color or a list of colors.
-#' @param col_2 A color or a list of colors.
-#' @param col_3 A color or a list of colors.
-#' @param col_4 A color or a list of colors.
+#' @param rec A rectangle.
+#' @param top_left A color.
+#' @param bottom_left A color.
+#' @param bottom_right A color.
+#' @param top_right A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' void DrawRectangleGradientEx(Rectangle rec, Color col1, Color col2, Color col3, Color col4);
+#' void DrawRectangleGradientEx(Rectangle rec, Color topLeft, Color bottomLeft, Color bottomRight, Color topRight);
 #' ```
 #'
+#' @family ex functions
 #' @family draw functions
-#' @family rectangle functions
 #'
-#'
-#' @seealso [rectangle()] for creating rectangle objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
-draw_rectangle_gradient_ex <- function(rec, col_1, col_2, col_3, col_4) {
-  if (!is_rectangle(rec) && !is_vec(rec, is_rectangle)) abort(paste0('`rec` must be a rectangle or a list of rectangles, not ', friendly_typeof(rec), '.'), call = NULL)
-  if (!is_color(col_1) && !is_vec(col_1, is_color)) abort(paste0('`col_1` must be a color or a list of colors, not ', friendly_typeof(col_1), '.'), call = NULL)
-  if (!is_color(col_2) && !is_vec(col_2, is_color)) abort(paste0('`col_2` must be a color or a list of colors, not ', friendly_typeof(col_2), '.'), call = NULL)
-  if (!is_color(col_3) && !is_vec(col_3, is_color)) abort(paste0('`col_3` must be a color or a list of colors, not ', friendly_typeof(col_3), '.'), call = NULL)
-  if (!is_color(col_4) && !is_vec(col_4, is_color)) abort(paste0('`col_4` must be a color or a list of colors, not ', friendly_typeof(col_4), '.'), call = NULL)
-
-  lens <- c(length(rec), length(col_1), length(col_2), length(col_3), length(col_4))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) rec <- rep(unlist(list(rec)), length.out = max_len)
-    if (lens[2] < max_len) col_1 <- rep(unlist(list(col_1)), length.out = max_len)
-    if (lens[3] < max_len) col_2 <- rep(unlist(list(col_2)), length.out = max_len)
-    if (lens[4] < max_len) col_3 <- rep(unlist(list(col_3)), length.out = max_len)
-    if (lens[5] < max_len) col_4 <- rep(unlist(list(col_4)), length.out = max_len)
-    draw_rectangle_gradient_ex_vectorized_(rec, col_1, col_2, col_3, col_4)
-  } else {
-    draw_rectangle_gradient_ex_(rec, col_1, col_2, col_3, col_4)
-  }
+draw_rectangle_gradient_ex <- function(rec, top_left, bottom_left, bottom_right, top_right) {
+  if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
+  if (!is_color(top_left)) abort(paste0('`top_left` must be a color, not ', friendly_typeof(top_left), '.'), call = NULL)
+  if (!is_color(bottom_left)) abort(paste0('`bottom_left` must be a color, not ', friendly_typeof(bottom_left), '.'), call = NULL)
+  if (!is_color(bottom_right)) abort(paste0('`bottom_right` must be a color, not ', friendly_typeof(bottom_right), '.'), call = NULL)
+  if (!is_color(top_right)) abort(paste0('`top_right` must be a color, not ', friendly_typeof(top_right), '.'), call = NULL)
+  draw_rectangle_gradient_ex_(rec, top_left, bottom_left, bottom_right, top_right)
 }
 
-#' Draw rectangle lines
+#' Draw Rectangle Lines
 #'
 #' Draw rectangle outline.
 #'
-#' @param pos_x An integer or a vector of integers.
-#' @param pos_y An integer or a vector of integers.
-#' @param width An integer or a vector of integers.
-#' @param height An integer or a vector of integers.
-#' @param color A color or a list of colors.
+#' @param pos_x An integer.
+#' @param pos_y An integer.
+#' @param width An integer.
+#' @param height An integer.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawRectangleLines(int posX, int posY, int width, int height, Color color);
 #' ```
 #'
+#' @family lines functions
 #' @family draw functions
-#' @family rectangle functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_rectangle_lines <- function(pos_x, pos_y, width, height, color) {
-  if (!is_int(pos_x) && !is_vec(pos_x, is_int)) abort(paste0('`pos_x` must be an integer or a vector of integers, not ', friendly_typeof(pos_x), '.'), call = NULL)
-  if (!is_int(pos_y) && !is_vec(pos_y, is_int)) abort(paste0('`pos_y` must be an integer or a vector of integers, not ', friendly_typeof(pos_y), '.'), call = NULL)
-  if (!is_int(width) && !is_vec(width, is_int)) abort(paste0('`width` must be an integer or a vector of integers, not ', friendly_typeof(width), '.'), call = NULL)
-  if (!is_int(height) && !is_vec(height, is_int)) abort(paste0('`height` must be an integer or a vector of integers, not ', friendly_typeof(height), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(pos_x), length(pos_y), length(width), length(height), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) pos_x <- rep(pos_x, length.out = max_len)
-    if (lens[2] < max_len) pos_y <- rep(pos_y, length.out = max_len)
-    if (lens[3] < max_len) width <- rep(width, length.out = max_len)
-    if (lens[4] < max_len) height <- rep(height, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_rectangle_lines_vectorized_(pos_x, pos_y, width, height, color)
-  } else {
-    draw_rectangle_lines_(pos_x, pos_y, width, height, color)
-  }
+  if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
+  if (!is_int(pos_y)) abort(paste0('`pos_y` must be an integer, not ', friendly_typeof(pos_y), '.'), call = NULL)
+  if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
+  if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_rectangle_lines_(pos_x, pos_y, width, height, color)
 }
 
-#' Draw rectangle lines ex
+#' Draw Rectangle Lines Ex
 #'
 #' Draw rectangle outline with extended parameters.
 #'
-#' @param rec A rectangle or a list of rectangles.
-#' @param line_thick A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param rec A rectangle.
+#' @param line_thick A number.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawRectangleLinesEx(Rectangle rec, float lineThick, Color color);
 #' ```
 #'
+#' @family ex functions
 #' @family draw functions
-#' @family rectangle functions
 #'
-#'
-#' @seealso [rectangle()] for creating rectangle objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_rectangle_lines_ex <- function(rec, line_thick, color) {
-  if (!is_rectangle(rec) && !is_vec(rec, is_rectangle)) abort(paste0('`rec` must be a rectangle or a list of rectangles, not ', friendly_typeof(rec), '.'), call = NULL)
-  if (!is_float(line_thick) && !is_vec(line_thick, is_float)) abort(paste0('`line_thick` must be a number or a vector of numbers, not ', friendly_typeof(line_thick), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(rec), length(line_thick), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) rec <- rep(unlist(list(rec)), length.out = max_len)
-    if (lens[2] < max_len) line_thick <- rep(line_thick, length.out = max_len)
-    if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_rectangle_lines_ex_vectorized_(rec, line_thick, color)
-  } else {
-    draw_rectangle_lines_ex_(rec, line_thick, color)
-  }
+  if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
+  if (!is_float(line_thick)) abort(paste0('`line_thick` must be a number, not ', friendly_typeof(line_thick), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_rectangle_lines_ex_(rec, line_thick, color)
 }
 
-#' Draw rectangle rounded
+#' Draw Rectangle Rounded
 #'
 #' Draw rectangle with rounded edges.
 #'
-#' @param rec A rectangle or a list of rectangles.
-#' @param roundness A number or a vector of numbers.
-#' @param segments An integer or a vector of integers.
-#' @param color A color or a list of colors.
+#' @param rec A rectangle.
+#' @param roundness A number.
+#' @param segments An integer.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawRectangleRounded(Rectangle rec, float roundness, int segments, Color color);
 #' ```
 #'
+#' @family rounded functions
 #' @family draw functions
-#' @family rectangle functions
 #'
-#'
-#' @seealso [rectangle()] for creating rectangle objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_rectangle_rounded <- function(rec, roundness, segments, color) {
-  if (!is_rectangle(rec) && !is_vec(rec, is_rectangle)) abort(paste0('`rec` must be a rectangle or a list of rectangles, not ', friendly_typeof(rec), '.'), call = NULL)
-  if (!is_float(roundness) && !is_vec(roundness, is_float)) abort(paste0('`roundness` must be a number or a vector of numbers, not ', friendly_typeof(roundness), '.'), call = NULL)
-  if (!is_int(segments) && !is_vec(segments, is_int)) abort(paste0('`segments` must be an integer or a vector of integers, not ', friendly_typeof(segments), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(rec), length(roundness), length(segments), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) rec <- rep(unlist(list(rec)), length.out = max_len)
-    if (lens[2] < max_len) roundness <- rep(roundness, length.out = max_len)
-    if (lens[3] < max_len) segments <- rep(segments, length.out = max_len)
-    if (lens[4] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_rectangle_rounded_vectorized_(rec, roundness, segments, color)
-  } else {
-    draw_rectangle_rounded_(rec, roundness, segments, color)
-  }
+  if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
+  if (!is_float(roundness)) abort(paste0('`roundness` must be a number, not ', friendly_typeof(roundness), '.'), call = NULL)
+  if (!is_int(segments)) abort(paste0('`segments` must be an integer, not ', friendly_typeof(segments), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_rectangle_rounded_(rec, roundness, segments, color)
 }
 
-#' Draw rectangle rounded lines
+#' Draw Rectangle Rounded Lines
+#'
+#' Draw rectangle lines with rounded edges.
+#'
+#' @param rec A rectangle.
+#' @param roundness A number.
+#' @param segments An integer.
+#' @param color A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawRectangleRoundedLines(Rectangle rec, float roundness, int segments, Color color);
+#' ```
+#'
+#' @family lines functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_rectangle_rounded_lines <- function(rec, roundness, segments, color) {
+  if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
+  if (!is_float(roundness)) abort(paste0('`roundness` must be a number, not ', friendly_typeof(roundness), '.'), call = NULL)
+  if (!is_int(segments)) abort(paste0('`segments` must be an integer, not ', friendly_typeof(segments), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_rectangle_rounded_lines_(rec, roundness, segments, color)
+}
+
+#' Draw Rectangle Rounded Lines Ex
 #'
 #' Draw rectangle with rounded edges outline.
 #'
-#' @param rec A rectangle or a list of rectangles.
-#' @param roundness A number or a vector of numbers.
-#' @param segments An integer or a vector of integers.
-#' @param line_thick A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param rec A rectangle.
+#' @param roundness A number.
+#' @param segments An integer.
+#' @param line_thick A number.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' void DrawRectangleRoundedLines(Rectangle rec, float roundness, int segments, float lineThick, Color color);
+#' void DrawRectangleRoundedLinesEx(Rectangle rec, float roundness, int segments, float lineThick, Color color);
 #' ```
 #'
+#' @family ex functions
 #' @family draw functions
-#' @family rectangle functions
 #'
-#'
-#' @seealso [rectangle()] for creating rectangle objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
-draw_rectangle_rounded_lines <- function(rec, roundness, segments, line_thick, color) {
-  if (!is_rectangle(rec) && !is_vec(rec, is_rectangle)) abort(paste0('`rec` must be a rectangle or a list of rectangles, not ', friendly_typeof(rec), '.'), call = NULL)
-  if (!is_float(roundness) && !is_vec(roundness, is_float)) abort(paste0('`roundness` must be a number or a vector of numbers, not ', friendly_typeof(roundness), '.'), call = NULL)
-  if (!is_int(segments) && !is_vec(segments, is_int)) abort(paste0('`segments` must be an integer or a vector of integers, not ', friendly_typeof(segments), '.'), call = NULL)
-  if (!is_float(line_thick) && !is_vec(line_thick, is_float)) abort(paste0('`line_thick` must be a number or a vector of numbers, not ', friendly_typeof(line_thick), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(rec), length(roundness), length(segments), length(line_thick), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) rec <- rep(unlist(list(rec)), length.out = max_len)
-    if (lens[2] < max_len) roundness <- rep(roundness, length.out = max_len)
-    if (lens[3] < max_len) segments <- rep(segments, length.out = max_len)
-    if (lens[4] < max_len) line_thick <- rep(line_thick, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_rectangle_rounded_lines_vectorized_(rec, roundness, segments, line_thick, color)
-  } else {
-    draw_rectangle_rounded_lines_(rec, roundness, segments, line_thick, color)
-  }
+draw_rectangle_rounded_lines_ex <- function(rec, roundness, segments, line_thick, color) {
+  if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
+  if (!is_float(roundness)) abort(paste0('`roundness` must be a number, not ', friendly_typeof(roundness), '.'), call = NULL)
+  if (!is_int(segments)) abort(paste0('`segments` must be an integer, not ', friendly_typeof(segments), '.'), call = NULL)
+  if (!is_float(line_thick)) abort(paste0('`line_thick` must be a number, not ', friendly_typeof(line_thick), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_rectangle_rounded_lines_ex_(rec, roundness, segments, line_thick, color)
 }
 
-#' Draw triangle
+#' Draw Triangle
 #'
 #' Draw a color-filled triangle (vertex in counter-clockwise order!).
 #'
-#' @param v_1 A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param v_2 A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param v_3 A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param color A color or a list of colors.
+#' @param v1 A numeric vector of length 2.
+#' @param v2 A numeric vector of length 2.
+#' @param v3 A numeric vector of length 2.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawTriangle(Vector2 v1, Vector2 v2, Vector2 v3, Color color);
 #' ```
 #'
+#' @family triangle functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
-draw_triangle <- function(v_1, v_2, v_3, color) {
-  if (!is_vector_2(v_1) && !is_mat(v_1, is_vector_2)) abort(paste0('`v_1` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(v_1), '.'), call = NULL)
-  if (!is_vector_2(v_2) && !is_mat(v_2, is_vector_2)) abort(paste0('`v_2` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(v_2), '.'), call = NULL)
-  if (!is_vector_2(v_3) && !is_mat(v_3, is_vector_2)) abort(paste0('`v_3` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(v_3), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(v_1), nrow(v_1), 1), ifelse(is.matrix(v_2), nrow(v_2), 1), ifelse(is.matrix(v_3), nrow(v_3), 1), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) v_1 <- matrix(rep(t(v_1), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) v_2 <- matrix(rep(t(v_2), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[3] < max_len) v_3 <- matrix(rep(t(v_3), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[4] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_triangle_vectorized_(v_1, v_2, v_3, color)
-  } else {
-    draw_triangle_(v_1, v_2, v_3, color)
-  }
+draw_triangle <- function(v1, v2, v3, color) {
+  if (!is_vector_2(v1)) abort(paste0('`v1` must be a numeric vector of length 2, not ', friendly_typeof(v1), '.'), call = NULL)
+  if (!is_vector_2(v2)) abort(paste0('`v2` must be a numeric vector of length 2, not ', friendly_typeof(v2), '.'), call = NULL)
+  if (!is_vector_2(v3)) abort(paste0('`v3` must be a numeric vector of length 2, not ', friendly_typeof(v3), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_triangle_(v1, v2, v3, color)
 }
 
-#' Draw triangle lines
+#' Draw Triangle Lines
 #'
 #' Draw triangle outline (vertex in counter-clockwise order!).
 #'
-#' @param v_1 A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param v_2 A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param v_3 A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param color A color or a list of colors.
+#' @param v1 A numeric vector of length 2.
+#' @param v2 A numeric vector of length 2.
+#' @param v3 A numeric vector of length 2.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawTriangleLines(Vector2 v1, Vector2 v2, Vector2 v3, Color color);
 #' ```
 #'
+#' @family lines functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
-draw_triangle_lines <- function(v_1, v_2, v_3, color) {
-  if (!is_vector_2(v_1) && !is_mat(v_1, is_vector_2)) abort(paste0('`v_1` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(v_1), '.'), call = NULL)
-  if (!is_vector_2(v_2) && !is_mat(v_2, is_vector_2)) abort(paste0('`v_2` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(v_2), '.'), call = NULL)
-  if (!is_vector_2(v_3) && !is_mat(v_3, is_vector_2)) abort(paste0('`v_3` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(v_3), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(v_1), nrow(v_1), 1), ifelse(is.matrix(v_2), nrow(v_2), 1), ifelse(is.matrix(v_3), nrow(v_3), 1), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) v_1 <- matrix(rep(t(v_1), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) v_2 <- matrix(rep(t(v_2), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[3] < max_len) v_3 <- matrix(rep(t(v_3), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[4] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_triangle_lines_vectorized_(v_1, v_2, v_3, color)
-  } else {
-    draw_triangle_lines_(v_1, v_2, v_3, color)
-  }
+draw_triangle_lines <- function(v1, v2, v3, color) {
+  if (!is_vector_2(v1)) abort(paste0('`v1` must be a numeric vector of length 2, not ', friendly_typeof(v1), '.'), call = NULL)
+  if (!is_vector_2(v2)) abort(paste0('`v2` must be a numeric vector of length 2, not ', friendly_typeof(v2), '.'), call = NULL)
+  if (!is_vector_2(v3)) abort(paste0('`v3` must be a numeric vector of length 2, not ', friendly_typeof(v3), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_triangle_lines_(v1, v2, v3, color)
 }
 
-#' Draw poly
+#' Draw Poly
 #'
 #' Draw a regular polygon (Vector version).
 #'
-#' @param center A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param sides An integer or a vector of integers.
-#' @param radius A number or a vector of numbers.
-#' @param rotation A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param center A numeric vector of length 2.
+#' @param sides An integer.
+#' @param radius A number.
+#' @param rotation A number.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawPoly(Vector2 center, int sides, float radius, float rotation, Color color);
 #' ```
 #'
+#' @family poly functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_poly <- function(center, sides, radius, rotation, color) {
-  if (!is_vector_2(center) && !is_mat(center, is_vector_2)) abort(paste0('`center` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(center), '.'), call = NULL)
-  if (!is_int(sides) && !is_vec(sides, is_int)) abort(paste0('`sides` must be an integer or a vector of integers, not ', friendly_typeof(sides), '.'), call = NULL)
-  if (!is_float(radius) && !is_vec(radius, is_float)) abort(paste0('`radius` must be a number or a vector of numbers, not ', friendly_typeof(radius), '.'), call = NULL)
-  if (!is_float(rotation) && !is_vec(rotation, is_float)) abort(paste0('`rotation` must be a number or a vector of numbers, not ', friendly_typeof(rotation), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(sides), length(radius), length(rotation), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) sides <- rep(sides, length.out = max_len)
-    if (lens[3] < max_len) radius <- rep(radius, length.out = max_len)
-    if (lens[4] < max_len) rotation <- rep(rotation, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_poly_vectorized_(center, sides, radius, rotation, color)
-  } else {
-    draw_poly_(center, sides, radius, rotation, color)
-  }
+  if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
+  if (!is_int(sides)) abort(paste0('`sides` must be an integer, not ', friendly_typeof(sides), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_float(rotation)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(rotation), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_poly_(center, sides, radius, rotation, color)
 }
 
-#' Draw poly lines
+#' Draw Poly Lines
 #'
 #' Draw a polygon outline of n sides.
 #'
-#' @param center A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param sides An integer or a vector of integers.
-#' @param radius A number or a vector of numbers.
-#' @param rotation A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param center A numeric vector of length 2.
+#' @param sides An integer.
+#' @param radius A number.
+#' @param rotation A number.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawPolyLines(Vector2 center, int sides, float radius, float rotation, Color color);
 #' ```
 #'
+#' @family lines functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_poly_lines <- function(center, sides, radius, rotation, color) {
-  if (!is_vector_2(center) && !is_mat(center, is_vector_2)) abort(paste0('`center` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(center), '.'), call = NULL)
-  if (!is_int(sides) && !is_vec(sides, is_int)) abort(paste0('`sides` must be an integer or a vector of integers, not ', friendly_typeof(sides), '.'), call = NULL)
-  if (!is_float(radius) && !is_vec(radius, is_float)) abort(paste0('`radius` must be a number or a vector of numbers, not ', friendly_typeof(radius), '.'), call = NULL)
-  if (!is_float(rotation) && !is_vec(rotation, is_float)) abort(paste0('`rotation` must be a number or a vector of numbers, not ', friendly_typeof(rotation), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(sides), length(radius), length(rotation), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) sides <- rep(sides, length.out = max_len)
-    if (lens[3] < max_len) radius <- rep(radius, length.out = max_len)
-    if (lens[4] < max_len) rotation <- rep(rotation, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_poly_lines_vectorized_(center, sides, radius, rotation, color)
-  } else {
-    draw_poly_lines_(center, sides, radius, rotation, color)
-  }
+  if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
+  if (!is_int(sides)) abort(paste0('`sides` must be an integer, not ', friendly_typeof(sides), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_float(rotation)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(rotation), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_poly_lines_(center, sides, radius, rotation, color)
 }
 
-#' Draw poly lines ex
+#' Draw Poly Lines Ex
 #'
 #' Draw a polygon outline of n sides with extended parameters.
 #'
-#' @param center A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param sides An integer or a vector of integers.
-#' @param radius A number or a vector of numbers.
-#' @param rotation A number or a vector of numbers.
-#' @param line_thick A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param center A numeric vector of length 2.
+#' @param sides An integer.
+#' @param radius A number.
+#' @param rotation A number.
+#' @param line_thick A number.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawPolyLinesEx(Vector2 center, int sides, float radius, float rotation, float lineThick, Color color);
 #' ```
 #'
+#' @family ex functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_poly_lines_ex <- function(center, sides, radius, rotation, line_thick, color) {
-  if (!is_vector_2(center) && !is_mat(center, is_vector_2)) abort(paste0('`center` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(center), '.'), call = NULL)
-  if (!is_int(sides) && !is_vec(sides, is_int)) abort(paste0('`sides` must be an integer or a vector of integers, not ', friendly_typeof(sides), '.'), call = NULL)
-  if (!is_float(radius) && !is_vec(radius, is_float)) abort(paste0('`radius` must be a number or a vector of numbers, not ', friendly_typeof(radius), '.'), call = NULL)
-  if (!is_float(rotation) && !is_vec(rotation, is_float)) abort(paste0('`rotation` must be a number or a vector of numbers, not ', friendly_typeof(rotation), '.'), call = NULL)
-  if (!is_float(line_thick) && !is_vec(line_thick, is_float)) abort(paste0('`line_thick` must be a number or a vector of numbers, not ', friendly_typeof(line_thick), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(sides), length(radius), length(rotation), length(line_thick), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) sides <- rep(sides, length.out = max_len)
-    if (lens[3] < max_len) radius <- rep(radius, length.out = max_len)
-    if (lens[4] < max_len) rotation <- rep(rotation, length.out = max_len)
-    if (lens[5] < max_len) line_thick <- rep(line_thick, length.out = max_len)
-    if (lens[6] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_poly_lines_ex_vectorized_(center, sides, radius, rotation, line_thick, color)
-  } else {
-    draw_poly_lines_ex_(center, sides, radius, rotation, line_thick, color)
-  }
+  if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
+  if (!is_int(sides)) abort(paste0('`sides` must be an integer, not ', friendly_typeof(sides), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_float(rotation)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(rotation), '.'), call = NULL)
+  if (!is_float(line_thick)) abort(paste0('`line_thick` must be a number, not ', friendly_typeof(line_thick), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_poly_lines_ex_(center, sides, radius, rotation, line_thick, color)
 }
 
-#' Check collision recs
+#' Check Collision Recs
 #'
 #' Check collision between two rectangles.
 #'
-#' @param rec_1 A rectangle.
-#' @param rec_2 A rectangle.
+#' @param rec1 A rectangle.
+#' @param rec2 A rectangle.
 #'
 #' @return A logical
 #'
@@ -4815,26 +4595,25 @@ draw_poly_lines_ex <- function(center, sides, radius, rotation, line_thick, colo
 #' bool CheckCollisionRecs(Rectangle rec1, Rectangle rec2);
 #' ```
 #'
-#' @family collision functions
+#' @family recs functions
+#' @family check functions
 #'
-#'
-#' @seealso [rectangle()] for creating rectangle objects.
 #'
 #' @export
-check_collision_recs <- function(rec_1, rec_2) {
-  if (!is_rectangle(rec_1)) abort(paste0('`rec_1` must be a rectangle, not ', friendly_typeof(rec_1), '.'), call = NULL)
-  if (!is_rectangle(rec_2)) abort(paste0('`rec_2` must be a rectangle, not ', friendly_typeof(rec_2), '.'), call = NULL)
-  check_collision_recs_(rec_1, rec_2)
+check_collision_recs <- function(rec1, rec2) {
+  if (!is_rectangle(rec1)) abort(paste0('`rec1` must be a rectangle, not ', friendly_typeof(rec1), '.'), call = NULL)
+  if (!is_rectangle(rec2)) abort(paste0('`rec2` must be a rectangle, not ', friendly_typeof(rec2), '.'), call = NULL)
+  check_collision_recs_(rec1, rec2)
 }
 
-#' Check collision circles
+#' Check Collision Circles
 #'
 #' Check collision between two circles.
 #'
-#' @param center_1 A numeric vector of length 2.
-#' @param radius_1 A number.
-#' @param center_2 A numeric vector of length 2.
-#' @param radius_2 A number.
+#' @param center1 A numeric vector of length 2.
+#' @param radius1 A number.
+#' @param center2 A numeric vector of length 2.
+#' @param radius2 A number.
 #'
 #' @return A logical
 #'
@@ -4844,19 +4623,20 @@ check_collision_recs <- function(rec_1, rec_2) {
 #' bool CheckCollisionCircles(Vector2 center1, float radius1, Vector2 center2, float radius2);
 #' ```
 #'
-#' @family collision functions
+#' @family circles functions
+#' @family check functions
 #'
 #'
 #' @export
-check_collision_circles <- function(center_1, radius_1, center_2, radius_2) {
-  if (!is_vector_2(center_1)) abort(paste0('`center_1` must be a numeric vector of length 2, not ', friendly_typeof(center_1), '.'), call = NULL)
-  if (!is_float(radius_1)) abort(paste0('`radius_1` must be a number, not ', friendly_typeof(radius_1), '.'), call = NULL)
-  if (!is_vector_2(center_2)) abort(paste0('`center_2` must be a numeric vector of length 2, not ', friendly_typeof(center_2), '.'), call = NULL)
-  if (!is_float(radius_2)) abort(paste0('`radius_2` must be a number, not ', friendly_typeof(radius_2), '.'), call = NULL)
-  check_collision_circles_(center_1, radius_1, center_2, radius_2)
+check_collision_circles <- function(center1, radius1, center2, radius2) {
+  if (!is_vector_2(center1)) abort(paste0('`center1` must be a numeric vector of length 2, not ', friendly_typeof(center1), '.'), call = NULL)
+  if (!is_float(radius1)) abort(paste0('`radius1` must be a number, not ', friendly_typeof(radius1), '.'), call = NULL)
+  if (!is_vector_2(center2)) abort(paste0('`center2` must be a numeric vector of length 2, not ', friendly_typeof(center2), '.'), call = NULL)
+  if (!is_float(radius2)) abort(paste0('`radius2` must be a number, not ', friendly_typeof(radius2), '.'), call = NULL)
+  check_collision_circles_(center1, radius1, center2, radius2)
 }
 
-#' Check collision circle rec
+#' Check Collision Circle Rec
 #'
 #' Check collision between circle and rectangle.
 #'
@@ -4872,11 +4652,9 @@ check_collision_circles <- function(center_1, radius_1, center_2, radius_2) {
 #' bool CheckCollisionCircleRec(Vector2 center, float radius, Rectangle rec);
 #' ```
 #'
-#' @family collision functions
-#' @family circle functions
+#' @family rec functions
+#' @family check functions
 #'
-#'
-#' @seealso [rectangle()] for creating rectangle objects.
 #'
 #' @export
 check_collision_circle_rec <- function(center, radius, rec) {
@@ -4886,7 +4664,7 @@ check_collision_circle_rec <- function(center, radius, rec) {
   check_collision_circle_rec_(center, radius, rec)
 }
 
-#' Check collision point rec
+#' Check Collision Point Rec
 #'
 #' Check if point is inside rectangle.
 #'
@@ -4901,10 +4679,9 @@ check_collision_circle_rec <- function(center, radius, rec) {
 #' bool CheckCollisionPointRec(Vector2 point, Rectangle rec);
 #' ```
 #'
-#' @family collision functions
+#' @family rec functions
+#' @family check functions
 #'
-#'
-#' @seealso [rectangle()] for creating rectangle objects.
 #'
 #' @export
 check_collision_point_rec <- function(point, rec) {
@@ -4913,7 +4690,7 @@ check_collision_point_rec <- function(point, rec) {
   check_collision_point_rec_(point, rec)
 }
 
-#' Check collision point circle
+#' Check Collision Point Circle
 #'
 #' Check if point is inside circle.
 #'
@@ -4929,8 +4706,8 @@ check_collision_point_rec <- function(point, rec) {
 #' bool CheckCollisionPointCircle(Vector2 point, Vector2 center, float radius);
 #' ```
 #'
-#' @family collision functions
 #' @family circle functions
+#' @family check functions
 #'
 #'
 #' @export
@@ -4941,14 +4718,14 @@ check_collision_point_circle <- function(point, center, radius) {
   check_collision_point_circle_(point, center, radius)
 }
 
-#' Check collision point triangle
+#' Check Collision Point Triangle
 #'
 #' Check if point is inside a triangle.
 #'
 #' @param point A numeric vector of length 2.
-#' @param p_1 A numeric vector of length 2.
-#' @param p_2 A numeric vector of length 2.
-#' @param p_3 A numeric vector of length 2.
+#' @param p1 A numeric vector of length 2.
+#' @param p2 A numeric vector of length 2.
+#' @param p3 A numeric vector of length 2.
 #'
 #' @return A logical
 #'
@@ -4958,56 +4735,26 @@ check_collision_point_circle <- function(point, center, radius) {
 #' bool CheckCollisionPointTriangle(Vector2 point, Vector2 p1, Vector2 p2, Vector2 p3);
 #' ```
 #'
-#' @family collision functions
+#' @family triangle functions
+#' @family check functions
 #'
 #'
 #' @export
-check_collision_point_triangle <- function(point, p_1, p_2, p_3) {
+check_collision_point_triangle <- function(point, p1, p2, p3) {
   if (!is_vector_2(point)) abort(paste0('`point` must be a numeric vector of length 2, not ', friendly_typeof(point), '.'), call = NULL)
-  if (!is_vector_2(p_1)) abort(paste0('`p_1` must be a numeric vector of length 2, not ', friendly_typeof(p_1), '.'), call = NULL)
-  if (!is_vector_2(p_2)) abort(paste0('`p_2` must be a numeric vector of length 2, not ', friendly_typeof(p_2), '.'), call = NULL)
-  if (!is_vector_2(p_3)) abort(paste0('`p_3` must be a numeric vector of length 2, not ', friendly_typeof(p_3), '.'), call = NULL)
-  check_collision_point_triangle_(point, p_1, p_2, p_3)
+  if (!is_vector_2(p1)) abort(paste0('`p1` must be a numeric vector of length 2, not ', friendly_typeof(p1), '.'), call = NULL)
+  if (!is_vector_2(p2)) abort(paste0('`p2` must be a numeric vector of length 2, not ', friendly_typeof(p2), '.'), call = NULL)
+  if (!is_vector_2(p3)) abort(paste0('`p3` must be a numeric vector of length 2, not ', friendly_typeof(p3), '.'), call = NULL)
+  check_collision_point_triangle_(point, p1, p2, p3)
 }
 
-#' Check collision lines
-#'
-#' Check the collision between two lines defined by two points each, returns collision point by reference.
-#'
-#' @param start_pos_1 A numeric vector of length 2.
-#' @param end_pos_1 A numeric vector of length 2.
-#' @param start_pos_2 A numeric vector of length 2.
-#' @param end_pos_2 A numeric vector of length 2.
-#' @param collision_point A numeric vector of length 2.
-#'
-#' @return A logical
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' bool CheckCollisionLines(Vector2 startPos1, Vector2 endPos1, Vector2 startPos2, Vector2 endPos2, Vector2 *collisionPoint);
-#' ```
-#'
-#' @family collision functions
-#'
-#'
-#' @export
-check_collision_lines <- function(start_pos_1, end_pos_1, start_pos_2, end_pos_2, collision_point) {
-  if (!is_vector_2(start_pos_1)) abort(paste0('`start_pos_1` must be a numeric vector of length 2, not ', friendly_typeof(start_pos_1), '.'), call = NULL)
-  if (!is_vector_2(end_pos_1)) abort(paste0('`end_pos_1` must be a numeric vector of length 2, not ', friendly_typeof(end_pos_1), '.'), call = NULL)
-  if (!is_vector_2(start_pos_2)) abort(paste0('`start_pos_2` must be a numeric vector of length 2, not ', friendly_typeof(start_pos_2), '.'), call = NULL)
-  if (!is_vector_2(end_pos_2)) abort(paste0('`end_pos_2` must be a numeric vector of length 2, not ', friendly_typeof(end_pos_2), '.'), call = NULL)
-  if (!is_vector_2(collision_point)) abort(paste0('`collision_point` must be a numeric vector of length 2, not ', friendly_typeof(collision_point), '.'), call = NULL)
-  check_collision_lines_(start_pos_1, end_pos_1, start_pos_2, end_pos_2, collision_point)
-}
-
-#' Check collision point line
+#' Check Collision Point Line
 #'
 #' Check if point belongs to line created between two points [p1] and [p2] with defined margin in pixels [threshold].
 #'
 #' @param point A numeric vector of length 2.
-#' @param p_1 A numeric vector of length 2.
-#' @param p_2 A numeric vector of length 2.
+#' @param p1 A numeric vector of length 2.
+#' @param p2 A numeric vector of length 2.
 #' @param threshold An integer.
 #'
 #' @return A logical
@@ -5018,25 +4765,25 @@ check_collision_lines <- function(start_pos_1, end_pos_1, start_pos_2, end_pos_2
 #' bool CheckCollisionPointLine(Vector2 point, Vector2 p1, Vector2 p2, int threshold);
 #' ```
 #'
-#' @family collision functions
 #' @family line functions
+#' @family check functions
 #'
 #'
 #' @export
-check_collision_point_line <- function(point, p_1, p_2, threshold) {
+check_collision_point_line <- function(point, p1, p2, threshold) {
   if (!is_vector_2(point)) abort(paste0('`point` must be a numeric vector of length 2, not ', friendly_typeof(point), '.'), call = NULL)
-  if (!is_vector_2(p_1)) abort(paste0('`p_1` must be a numeric vector of length 2, not ', friendly_typeof(p_1), '.'), call = NULL)
-  if (!is_vector_2(p_2)) abort(paste0('`p_2` must be a numeric vector of length 2, not ', friendly_typeof(p_2), '.'), call = NULL)
+  if (!is_vector_2(p1)) abort(paste0('`p1` must be a numeric vector of length 2, not ', friendly_typeof(p1), '.'), call = NULL)
+  if (!is_vector_2(p2)) abort(paste0('`p2` must be a numeric vector of length 2, not ', friendly_typeof(p2), '.'), call = NULL)
   if (!is_int(threshold)) abort(paste0('`threshold` must be an integer, not ', friendly_typeof(threshold), '.'), call = NULL)
-  check_collision_point_line_(point, p_1, p_2, threshold)
+  check_collision_point_line_(point, p1, p2, threshold)
 }
 
-#' Get collision rec
+#' Get Collision Rec
 #'
 #' Get collision rectangle for two rectangles collision.
 #'
-#' @param rec_1 A rectangle.
-#' @param rec_2 A rectangle.
+#' @param rec1 A rectangle.
+#' @param rec2 A rectangle.
 #'
 #' @return A rectangle
 #'
@@ -5046,19 +4793,18 @@ check_collision_point_line <- function(point, p_1, p_2, threshold) {
 #' Rectangle GetCollisionRec(Rectangle rec1, Rectangle rec2);
 #' ```
 #'
-#' @family collision functions
+#' @family rec functions
+#' @family get functions
 #'
-#'
-#' @seealso [rectangle()] for creating rectangle objects.
 #'
 #' @export
-get_collision_rec <- function(rec_1, rec_2) {
-  if (!is_rectangle(rec_1)) abort(paste0('`rec_1` must be a rectangle, not ', friendly_typeof(rec_1), '.'), call = NULL)
-  if (!is_rectangle(rec_2)) abort(paste0('`rec_2` must be a rectangle, not ', friendly_typeof(rec_2), '.'), call = NULL)
-  get_collision_rec_(rec_1, rec_2)
+get_collision_rec <- function(rec1, rec2) {
+  if (!is_rectangle(rec1)) abort(paste0('`rec1` must be a rectangle, not ', friendly_typeof(rec1), '.'), call = NULL)
+  if (!is_rectangle(rec2)) abort(paste0('`rec2` must be a rectangle, not ', friendly_typeof(rec2), '.'), call = NULL)
+  get_collision_rec_(rec1, rec2)
 }
 
-#' Load image
+#' Load Image
 #'
 #' Load image from file into CPU memory (RAM).
 #'
@@ -5069,10 +4815,11 @@ get_collision_rec <- function(rec_1, rec_2) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' Image LoadImage(const char *fileName);
+#' Image LoadImage(const char * fileName);
 #' ```
 #'
 #' @family image functions
+#' @family load functions
 #'
 #'
 #' @export
@@ -5081,38 +4828,7 @@ load_image <- function(file_name) {
   load_image_(file_name)
 }
 
-#' Load image raw
-#'
-#' Load image from RAW file data.
-#'
-#' @param file_name A string.
-#' @param width An integer.
-#' @param height An integer.
-#' @param format An integer.
-#' @param header_size An integer.
-#'
-#' @return An image
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' Image LoadImageRaw(const char *fileName, int width, int height, int format, int headerSize);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @export
-load_image_raw <- function(file_name, width, height, format, header_size) {
-  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
-  if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
-  if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
-  if (!is_int(format)) abort(paste0('`format` must be an integer, not ', friendly_typeof(format), '.'), call = NULL)
-  if (!is_int(header_size)) abort(paste0('`header_size` must be an integer, not ', friendly_typeof(header_size), '.'), call = NULL)
-  load_image_raw_(file_name, width, height, format, header_size)
-}
-
-#' Load image from texture
+#' Load Image From Texture
 #'
 #' Load image from GPU texture data.
 #'
@@ -5126,11 +4842,9 @@ load_image_raw <- function(file_name, width, height, format, header_size) {
 #' Image LoadImageFromTexture(Texture2D texture);
 #' ```
 #'
-#' @family image functions
 #' @family texture functions
+#' @family load functions
 #'
-#'
-#' @seealso [texture()] for creating texture objects.
 #'
 #' @export
 load_image_from_texture <- function(texture) {
@@ -5138,11 +4852,10 @@ load_image_from_texture <- function(texture) {
   load_image_from_texture_(texture)
 }
 
-#' Load image from screen
+#' Load Image From Screen
 #'
 #' Load image from screen buffer and (screenshot).
 #'
-
 #'
 #' @return An image
 #'
@@ -5152,8 +4865,8 @@ load_image_from_texture <- function(texture) {
 #' Image LoadImageFromScreen(void);
 #' ```
 #'
-#' @family image functions
 #' @family screen functions
+#' @family load functions
 #'
 #'
 #' @export
@@ -5161,12 +4874,35 @@ load_image_from_screen <- function() {
   load_image_from_screen_()
 }
 
-#' Unload image
+#' Is Image Valid
+#'
+#' Check if an image is valid (data and parameters).
+#'
+#' @param image An image.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool IsImageValid(Image image);
+#' ```
+#'
+#' @family valid functions
+#' @family is functions
+#'
+#'
+#' @export
+is_image_valid <- function(image) {
+  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
+  is_image_valid_(image)
+}
+
+#' Unload Image
 #'
 #' Unload image from CPU memory (RAM).
 #'
 #' @param image An image.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -5175,9 +4911,8 @@ load_image_from_screen <- function() {
 #' ```
 #'
 #' @family image functions
+#' @family unload functions
 #'
-#'
-#' @seealso [image()] for creating image objects.
 #'
 #' @export
 unload_image <- function(image) {
@@ -5185,7 +4920,7 @@ unload_image <- function(image) {
   unload_image_(image)
 }
 
-#' Export image
+#' Export Image
 #'
 #' Export image data to file, returns true on success.
 #'
@@ -5197,13 +4932,12 @@ unload_image <- function(image) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' bool ExportImage(Image image, const char *fileName);
+#' bool ExportImage(Image image, const char * fileName);
 #' ```
 #'
 #' @family image functions
+#' @family export functions
 #'
-#'
-#' @seealso [image()] for creating image objects.
 #'
 #' @export
 export_image <- function(image, file_name) {
@@ -5212,7 +4946,7 @@ export_image <- function(image, file_name) {
   export_image_(image, file_name)
 }
 
-#' Export image as code
+#' Export Image As Code
 #'
 #' Export image as code file defining an array of bytes, returns true on success.
 #'
@@ -5224,13 +4958,12 @@ export_image <- function(image, file_name) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' bool ExportImageAsCode(Image image, const char *fileName);
+#' bool ExportImageAsCode(Image image, const char * fileName);
 #' ```
 #'
-#' @family image functions
+#' @family code functions
+#' @family export functions
 #'
-#'
-#' @seealso [image()] for creating image objects.
 #'
 #' @export
 export_image_as_code <- function(image, file_name) {
@@ -5239,7 +4972,7 @@ export_image_as_code <- function(image, file_name) {
   export_image_as_code_(image, file_name)
 }
 
-#' Gen image color
+#' Gen Image Color
 #'
 #' Generate image: plain color.
 #'
@@ -5255,11 +4988,8 @@ export_image_as_code <- function(image, file_name) {
 #' Image GenImageColor(int width, int height, Color color);
 #' ```
 #'
-#' @family image functions
 #' @family color functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 gen_image_color <- function(width, height, color) {
@@ -5269,69 +4999,38 @@ gen_image_color <- function(width, height, color) {
   gen_image_color_(width, height, color)
 }
 
-#' Gen image gradient v
+#' Gen Image Gradient Linear
 #'
-#' Generate image: vertical gradient.
+#' Generate image: linear gradient, direction in degrees [0..360], 0=Vertical gradient.
 #'
 #' @param width An integer.
 #' @param height An integer.
-#' @param top A color.
-#' @param bottom A color.
+#' @param direction An integer.
+#' @param start A color.
+#' @param end A color.
 #'
 #' @return An image
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' Image GenImageGradientV(int width, int height, Color top, Color bottom);
+#' Image GenImageGradientLinear(int width, int height, int direction, Color start, Color end);
 #' ```
 #'
-#' @family image functions
+#' @family linear functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
-gen_image_gradient_v <- function(width, height, top, bottom) {
+gen_image_gradient_linear <- function(width, height, direction, start, end) {
   if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
   if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
-  if (!is_color(top)) abort(paste0('`top` must be a color, not ', friendly_typeof(top), '.'), call = NULL)
-  if (!is_color(bottom)) abort(paste0('`bottom` must be a color, not ', friendly_typeof(bottom), '.'), call = NULL)
-  gen_image_gradient_v_(width, height, top, bottom)
+  if (!is_int(direction)) abort(paste0('`direction` must be an integer, not ', friendly_typeof(direction), '.'), call = NULL)
+  if (!is_color(start)) abort(paste0('`start` must be a color, not ', friendly_typeof(start), '.'), call = NULL)
+  if (!is_color(end)) abort(paste0('`end` must be a color, not ', friendly_typeof(end), '.'), call = NULL)
+  gen_image_gradient_linear_(width, height, direction, start, end)
 }
 
-#' Gen image gradient h
-#'
-#' Generate image: horizontal gradient.
-#'
-#' @param width An integer.
-#' @param height An integer.
-#' @param left A color.
-#' @param right A color.
-#'
-#' @return An image
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' Image GenImageGradientH(int width, int height, Color left, Color right);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-gen_image_gradient_h <- function(width, height, left, right) {
-  if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
-  if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
-  if (!is_color(left)) abort(paste0('`left` must be a color, not ', friendly_typeof(left), '.'), call = NULL)
-  if (!is_color(right)) abort(paste0('`right` must be a color, not ', friendly_typeof(right), '.'), call = NULL)
-  gen_image_gradient_h_(width, height, left, right)
-}
-
-#' Gen image gradient radial
+#' Gen Image Gradient Radial
 #'
 #' Generate image: radial gradient.
 #'
@@ -5349,10 +5048,8 @@ gen_image_gradient_h <- function(width, height, left, right) {
 #' Image GenImageGradientRadial(int width, int height, float density, Color inner, Color outer);
 #' ```
 #'
-#' @family image functions
+#' @family radial functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 gen_image_gradient_radial <- function(width, height, density, inner, outer) {
@@ -5364,7 +5061,38 @@ gen_image_gradient_radial <- function(width, height, density, inner, outer) {
   gen_image_gradient_radial_(width, height, density, inner, outer)
 }
 
-#' Gen image checked
+#' Gen Image Gradient Square
+#'
+#' Generate image: square gradient.
+#'
+#' @param width An integer.
+#' @param height An integer.
+#' @param density A number.
+#' @param inner A color.
+#' @param outer A color.
+#'
+#' @return An image
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Image GenImageGradientSquare(int width, int height, float density, Color inner, Color outer);
+#' ```
+#'
+#' @family square functions
+#'
+#'
+#' @export
+gen_image_gradient_square <- function(width, height, density, inner, outer) {
+  if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
+  if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
+  if (!is_float(density)) abort(paste0('`density` must be a number, not ', friendly_typeof(density), '.'), call = NULL)
+  if (!is_color(inner)) abort(paste0('`inner` must be a color, not ', friendly_typeof(inner), '.'), call = NULL)
+  if (!is_color(outer)) abort(paste0('`outer` must be a color, not ', friendly_typeof(outer), '.'), call = NULL)
+  gen_image_gradient_square_(width, height, density, inner, outer)
+}
+
+#' Gen Image Checked
 #'
 #' Generate image: checked.
 #'
@@ -5372,8 +5100,8 @@ gen_image_gradient_radial <- function(width, height, density, inner, outer) {
 #' @param height An integer.
 #' @param checks_x An integer.
 #' @param checks_y An integer.
-#' @param col_1 A color.
-#' @param col_2 A color.
+#' @param col1 A color.
+#' @param col2 A color.
 #'
 #' @return An image
 #'
@@ -5383,23 +5111,21 @@ gen_image_gradient_radial <- function(width, height, density, inner, outer) {
 #' Image GenImageChecked(int width, int height, int checksX, int checksY, Color col1, Color col2);
 #' ```
 #'
-#' @family image functions
+#' @family checked functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
-gen_image_checked <- function(width, height, checks_x, checks_y, col_1, col_2) {
+gen_image_checked <- function(width, height, checks_x, checks_y, col1, col2) {
   if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
   if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
   if (!is_int(checks_x)) abort(paste0('`checks_x` must be an integer, not ', friendly_typeof(checks_x), '.'), call = NULL)
   if (!is_int(checks_y)) abort(paste0('`checks_y` must be an integer, not ', friendly_typeof(checks_y), '.'), call = NULL)
-  if (!is_color(col_1)) abort(paste0('`col_1` must be a color, not ', friendly_typeof(col_1), '.'), call = NULL)
-  if (!is_color(col_2)) abort(paste0('`col_2` must be a color, not ', friendly_typeof(col_2), '.'), call = NULL)
-  gen_image_checked_(width, height, checks_x, checks_y, col_1, col_2)
+  if (!is_color(col1)) abort(paste0('`col1` must be a color, not ', friendly_typeof(col1), '.'), call = NULL)
+  if (!is_color(col2)) abort(paste0('`col2` must be a color, not ', friendly_typeof(col2), '.'), call = NULL)
+  gen_image_checked_(width, height, checks_x, checks_y, col1, col2)
 }
 
-#' Gen image white noise
+#' Gen Image White Noise
 #'
 #' Generate image: white noise.
 #'
@@ -5415,7 +5141,7 @@ gen_image_checked <- function(width, height, checks_x, checks_y, col_1, col_2) {
 #' Image GenImageWhiteNoise(int width, int height, float factor);
 #' ```
 #'
-#' @family image functions
+#' @family noise functions
 #'
 #'
 #' @export
@@ -5426,7 +5152,7 @@ gen_image_white_noise <- function(width, height, factor) {
   gen_image_white_noise_(width, height, factor)
 }
 
-#' Gen image cellular
+#' Gen Image Cellular
 #'
 #' Generate image: cellular algorithm, bigger tileSize means bigger cells.
 #'
@@ -5442,7 +5168,7 @@ gen_image_white_noise <- function(width, height, factor) {
 #' Image GenImageCellular(int width, int height, int tileSize);
 #' ```
 #'
-#' @family image functions
+#' @family cellular functions
 #'
 #'
 #' @export
@@ -5453,7 +5179,34 @@ gen_image_cellular <- function(width, height, tile_size) {
   gen_image_cellular_(width, height, tile_size)
 }
 
-#' Image copy
+#' Gen Image Text
+#'
+#' Generate image: grayscale image from text data.
+#'
+#' @param width An integer.
+#' @param height An integer.
+#' @param text A string.
+#'
+#' @return An image
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Image GenImageText(int width, int height, const char * text);
+#' ```
+#'
+#' @family text functions
+#'
+#'
+#' @export
+gen_image_text <- function(width, height, text) {
+  if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
+  if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  gen_image_text_(width, height, text)
+}
+
+#' Image Copy
 #'
 #' Create an image duplicate (useful for transformations).
 #'
@@ -5467,10 +5220,8 @@ gen_image_cellular <- function(width, height, tile_size) {
 #' Image ImageCopy(Image image);
 #' ```
 #'
-#' @family image functions
+#' @family copy functions
 #'
-#'
-#' @seealso [image()] for creating image objects.
 #'
 #' @export
 image_copy <- function(image) {
@@ -5478,7 +5229,7 @@ image_copy <- function(image) {
   image_copy_(image)
 }
 
-#' Image from image
+#' Image From Image
 #'
 #' Create an image from another image piece.
 #'
@@ -5494,11 +5245,7 @@ image_copy <- function(image) {
 #' ```
 #'
 #' @family image functions
-#' @family image functions
 #'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [rectangle()] for creating rectangle objects.
 #'
 #' @export
 image_from_image <- function(image, rec) {
@@ -5507,7 +5254,7 @@ image_from_image <- function(image, rec) {
   image_from_image_(image, rec)
 }
 
-#' Image text
+#' Image Text
 #'
 #' Create an image from text (default font).
 #'
@@ -5520,14 +5267,11 @@ image_from_image <- function(image, rec) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' Image ImageText(const char *text, int fontSize, Color color);
+#' Image ImageText(const char * text, int fontSize, Color color);
 #' ```
 #'
-#' @family image functions
 #' @family text functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 image_text <- function(text, font_size, color) {
@@ -5537,7 +5281,7 @@ image_text <- function(text, font_size, color) {
   image_text_(text, font_size, color)
 }
 
-#' Image text ex
+#' Image Text Ex
 #'
 #' Create an image from text (custom sprite font).
 #'
@@ -5552,15 +5296,11 @@ image_text <- function(text, font_size, color) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' Image ImageTextEx(Font font, const char *text, float fontSize, float spacing, Color tint);
+#' Image ImageTextEx(Font font, const char * text, float fontSize, float spacing, Color tint);
 #' ```
 #'
-#' @family image functions
-#' @family text functions
+#' @family ex functions
 #'
-#'
-#' @seealso [font()] for creating font objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 image_text_ex <- function(font, text, font_size, spacing, tint) {
@@ -5572,672 +5312,7 @@ image_text_ex <- function(font, text, font_size, spacing, tint) {
   image_text_ex_(font, text, font_size, spacing, tint)
 }
 
-#' Image format
-#'
-#' Convert image data to desired format.
-#'
-#' @param image An image.
-#' @param new_format An integer.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageFormat(Image *image, int newFormat);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#'
-#' @export
-image_format <- function(image, new_format) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  if (!is_int(new_format)) abort(paste0('`new_format` must be an integer, not ', friendly_typeof(new_format), '.'), call = NULL)
-  image_format_(image, new_format)
-}
-
-#' Image to pot
-#'
-#' Convert image to POT (power-of-two).
-#'
-#' @param image An image.
-#' @param fill A color.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageToPOT(Image *image, Color fill);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_to_pot <- function(image, fill) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  if (!is_color(fill)) abort(paste0('`fill` must be a color, not ', friendly_typeof(fill), '.'), call = NULL)
-  image_to_pot_(image, fill)
-}
-
-#' Image crop
-#'
-#' Crop an image to a defined rectangle.
-#'
-#' @param image An image.
-#' @param crop A rectangle.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageCrop(Image *image, Rectangle crop);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [rectangle()] for creating rectangle objects.
-#'
-#' @export
-image_crop <- function(image, crop) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  if (!is_rectangle(crop)) abort(paste0('`crop` must be a rectangle, not ', friendly_typeof(crop), '.'), call = NULL)
-  image_crop_(image, crop)
-}
-
-#' Image alpha crop
-#'
-#' Crop image depending on alpha value.
-#'
-#' @param image An image.
-#' @param threshold A number.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageAlphaCrop(Image *image, float threshold);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#'
-#' @export
-image_alpha_crop <- function(image, threshold) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  if (!is_float(threshold)) abort(paste0('`threshold` must be a number, not ', friendly_typeof(threshold), '.'), call = NULL)
-  image_alpha_crop_(image, threshold)
-}
-
-#' Image alpha clear
-#'
-#' Clear alpha channel to desired color.
-#'
-#' @param image An image.
-#' @param color A color.
-#' @param threshold A number.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageAlphaClear(Image *image, Color color, float threshold);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_alpha_clear <- function(image, color, threshold) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
-  if (!is_float(threshold)) abort(paste0('`threshold` must be a number, not ', friendly_typeof(threshold), '.'), call = NULL)
-  image_alpha_clear_(image, color, threshold)
-}
-
-#' Image alpha mask
-#'
-#' Apply alpha mask to image.
-#'
-#' @param image An image.
-#' @param alpha_mask An image.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageAlphaMask(Image *image, Image alphaMask);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#'
-#' @export
-image_alpha_mask <- function(image, alpha_mask) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  if (!is_image(alpha_mask)) abort(paste0('`alpha_mask` must be an image, not ', friendly_typeof(alpha_mask), '.'), call = NULL)
-  image_alpha_mask_(image, alpha_mask)
-}
-
-#' Image alpha premultiply
-#'
-#' Premultiply alpha channel.
-#'
-#' @param image An image.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageAlphaPremultiply(Image *image);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#'
-#' @export
-image_alpha_premultiply <- function(image) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  image_alpha_premultiply_(image)
-}
-
-#' Image resize
-#'
-#' Resize image (Bicubic scaling algorithm).
-#'
-#' @param image An image.
-#' @param new_width An integer.
-#' @param new_height An integer.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageResize(Image *image, int newWidth, int newHeight);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#'
-#' @export
-image_resize <- function(image, new_width, new_height) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  if (!is_int(new_width)) abort(paste0('`new_width` must be an integer, not ', friendly_typeof(new_width), '.'), call = NULL)
-  if (!is_int(new_height)) abort(paste0('`new_height` must be an integer, not ', friendly_typeof(new_height), '.'), call = NULL)
-  image_resize_(image, new_width, new_height)
-}
-
-#' Image resize nn
-#'
-#' Resize image (Nearest-Neighbor scaling algorithm).
-#'
-#' @param image An image.
-#' @param new_width An integer.
-#' @param new_height An integer.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageResizeNN(Image *image, int newWidth,int newHeight);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#'
-#' @export
-image_resize_nn <- function(image, new_width, new_height) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  if (!is_int(new_width)) abort(paste0('`new_width` must be an integer, not ', friendly_typeof(new_width), '.'), call = NULL)
-  if (!is_int(new_height)) abort(paste0('`new_height` must be an integer, not ', friendly_typeof(new_height), '.'), call = NULL)
-  image_resize_nn_(image, new_width, new_height)
-}
-
-#' Image resize canvas
-#'
-#' Resize canvas and fill with color.
-#'
-#' @param image An image.
-#' @param new_width An integer.
-#' @param new_height An integer.
-#' @param offset_x An integer.
-#' @param offset_y An integer.
-#' @param fill A color.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageResizeCanvas(Image *image, int newWidth, int newHeight, int offsetX, int offsetY, Color fill);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_resize_canvas <- function(image, new_width, new_height, offset_x, offset_y, fill) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  if (!is_int(new_width)) abort(paste0('`new_width` must be an integer, not ', friendly_typeof(new_width), '.'), call = NULL)
-  if (!is_int(new_height)) abort(paste0('`new_height` must be an integer, not ', friendly_typeof(new_height), '.'), call = NULL)
-  if (!is_int(offset_x)) abort(paste0('`offset_x` must be an integer, not ', friendly_typeof(offset_x), '.'), call = NULL)
-  if (!is_int(offset_y)) abort(paste0('`offset_y` must be an integer, not ', friendly_typeof(offset_y), '.'), call = NULL)
-  if (!is_color(fill)) abort(paste0('`fill` must be a color, not ', friendly_typeof(fill), '.'), call = NULL)
-  image_resize_canvas_(image, new_width, new_height, offset_x, offset_y, fill)
-}
-
-#' Image mipmaps
-#'
-#' Compute all mipmap levels for a provided image.
-#'
-#' @param image An image.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageMipmaps(Image *image);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#'
-#' @export
-image_mipmaps <- function(image) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  image_mipmaps_(image)
-}
-
-#' Image dither
-#'
-#' Dither image data to 16bpp or lower (Floyd-Steinberg dithering).
-#'
-#' @param image An image.
-#' @param r_bpp An integer.
-#' @param g_bpp An integer.
-#' @param b_bpp An integer.
-#' @param a_bpp An integer.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageDither(Image *image, int rBpp, int gBpp, int bBpp, int aBpp);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#'
-#' @export
-image_dither <- function(image, r_bpp, g_bpp, b_bpp, a_bpp) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  if (!is_int(r_bpp)) abort(paste0('`r_bpp` must be an integer, not ', friendly_typeof(r_bpp), '.'), call = NULL)
-  if (!is_int(g_bpp)) abort(paste0('`g_bpp` must be an integer, not ', friendly_typeof(g_bpp), '.'), call = NULL)
-  if (!is_int(b_bpp)) abort(paste0('`b_bpp` must be an integer, not ', friendly_typeof(b_bpp), '.'), call = NULL)
-  if (!is_int(a_bpp)) abort(paste0('`a_bpp` must be an integer, not ', friendly_typeof(a_bpp), '.'), call = NULL)
-  image_dither_(image, r_bpp, g_bpp, b_bpp, a_bpp)
-}
-
-#' Image flip vertical
-#'
-#' Flip image vertically.
-#'
-#' @param image An image.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageFlipVertical(Image *image);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#'
-#' @export
-image_flip_vertical <- function(image) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  image_flip_vertical_(image)
-}
-
-#' Image flip horizontal
-#'
-#' Flip image horizontally.
-#'
-#' @param image An image.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageFlipHorizontal(Image *image);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#'
-#' @export
-image_flip_horizontal <- function(image) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  image_flip_horizontal_(image)
-}
-
-#' Image rotate cw
-#'
-#' Rotate image clockwise 90deg.
-#'
-#' @param image An image.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageRotateCW(Image *image);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#'
-#' @export
-image_rotate_cw <- function(image) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  image_rotate_cw_(image)
-}
-
-#' Image rotate ccw
-#'
-#' Rotate image counter-clockwise 90deg.
-#'
-#' @param image An image.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageRotateCCW(Image *image);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#'
-#' @export
-image_rotate_ccw <- function(image) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  image_rotate_ccw_(image)
-}
-
-#' Image color tint
-#'
-#' Modify image color: tint.
-#'
-#' @param image An image.
-#' @param color A color.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageColorTint(Image *image, Color color);
-#' ```
-#'
-#' @family image functions
-#' @family color functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_color_tint <- function(image, color) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
-  image_color_tint_(image, color)
-}
-
-#' Image color invert
-#'
-#' Modify image color: invert.
-#'
-#' @param image An image.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageColorInvert(Image *image);
-#' ```
-#'
-#' @family image functions
-#' @family color functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#'
-#' @export
-image_color_invert <- function(image) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  image_color_invert_(image)
-}
-
-#' Image color grayscale
-#'
-#' Modify image color: grayscale.
-#'
-#' @param image An image.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageColorGrayscale(Image *image);
-#' ```
-#'
-#' @family image functions
-#' @family color functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#'
-#' @export
-image_color_grayscale <- function(image) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  image_color_grayscale_(image)
-}
-
-#' Image color contrast
-#'
-#' Modify image color: contrast (-100 to 100).
-#'
-#' @param image An image.
-#' @param contrast A number.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageColorContrast(Image *image, float contrast);
-#' ```
-#'
-#' @family image functions
-#' @family color functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#'
-#' @export
-image_color_contrast <- function(image, contrast) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  if (!is_float(contrast)) abort(paste0('`contrast` must be a number, not ', friendly_typeof(contrast), '.'), call = NULL)
-  image_color_contrast_(image, contrast)
-}
-
-#' Image color brightness
-#'
-#' Modify image color: brightness (-255 to 255).
-#'
-#' @param image An image.
-#' @param brightness An integer.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageColorBrightness(Image *image, int brightness);
-#' ```
-#'
-#' @family image functions
-#' @family color functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#'
-#' @export
-image_color_brightness <- function(image, brightness) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  if (!is_int(brightness)) abort(paste0('`brightness` must be an integer, not ', friendly_typeof(brightness), '.'), call = NULL)
-  image_color_brightness_(image, brightness)
-}
-
-#' Image color replace
-#'
-#' Modify image color: replace color.
-#'
-#' @param image An image.
-#' @param color A color.
-#' @param replace A color.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageColorReplace(Image *image, Color color, Color replace);
-#' ```
-#'
-#' @family image functions
-#' @family color functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_color_replace <- function(image, color, replace) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
-  if (!is_color(replace)) abort(paste0('`replace` must be a color, not ', friendly_typeof(replace), '.'), call = NULL)
-  image_color_replace_(image, color, replace)
-}
-
-#' Unload image colors
-#'
-#' Unload color data loaded with LoadImageColors().
-#'
-#' @param colors A color.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void UnloadImageColors(Color *colors);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-unload_image_colors <- function(colors) {
-  if (!is_color(colors)) abort(paste0('`colors` must be a color, not ', friendly_typeof(colors), '.'), call = NULL)
-  unload_image_colors_(colors)
-}
-
-#' Unload image palette
-#'
-#' Unload colors palette loaded with LoadImagePalette().
-#'
-#' @param colors A color.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void UnloadImagePalette(Color *colors);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-unload_image_palette <- function(colors) {
-  if (!is_color(colors)) abort(paste0('`colors` must be a color, not ', friendly_typeof(colors), '.'), call = NULL)
-  unload_image_palette_(colors)
-}
-
-#' Get image alpha border
-#'
-#' Get image alpha border rectangle.
-#'
-#' @param image An image.
-#' @param threshold A number.
-#'
-#' @return A rectangle
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' Rectangle GetImageAlphaBorder(Image image, float threshold);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#'
-#' @export
-get_image_alpha_border <- function(image, threshold) {
-  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
-  if (!is_float(threshold)) abort(paste0('`threshold` must be a number, not ', friendly_typeof(threshold), '.'), call = NULL)
-  get_image_alpha_border_(image, threshold)
-}
-
-#' Get image color
+#' Get Image Color
 #'
 #' Get image pixel color at (x, y) position.
 #'
@@ -6253,11 +5328,9 @@ get_image_alpha_border <- function(image, threshold) {
 #' Color GetImageColor(Image image, int x, int y);
 #' ```
 #'
-#' @family image functions
 #' @family color functions
+#' @family get functions
 #'
-#'
-#' @seealso [image()] for creating image objects.
 #'
 #' @export
 get_image_color <- function(image, x, y) {
@@ -6267,610 +5340,7 @@ get_image_color <- function(image, x, y) {
   get_image_color_(image, x, y)
 }
 
-#' Image clear background
-#'
-#' Clear image background with given color.
-#'
-#' @param dst An image.
-#' @param color A color.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageClearBackground(Image *dst, Color color);
-#' ```
-#'
-#' @family image functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_clear_background <- function(dst, color) {
-  if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
-  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
-  image_clear_background_(dst, color)
-}
-
-#' Image draw pixel
-#'
-#' Draw pixel within an image.
-#'
-#' @param dst An image.
-#' @param pos_x An integer or a vector of integers.
-#' @param pos_y An integer or a vector of integers.
-#' @param color A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageDrawPixel(Image *dst, int posX, int posY, Color color);
-#' ```
-#'
-#' @family image functions
-#' @family draw functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_draw_pixel <- function(dst, pos_x, pos_y, color) {
-  if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
-  if (!is_int(pos_x) && !is_vec(pos_x, is_int)) abort(paste0('`pos_x` must be an integer or a vector of integers, not ', friendly_typeof(pos_x), '.'), call = NULL)
-  if (!is_int(pos_y) && !is_vec(pos_y, is_int)) abort(paste0('`pos_y` must be an integer or a vector of integers, not ', friendly_typeof(pos_y), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(pos_x), length(pos_y), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) pos_x <- rep(pos_x, length.out = max_len)
-    if (lens[2] < max_len) pos_y <- rep(pos_y, length.out = max_len)
-    if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    image_draw_pixel_vectorized_(dst, pos_x, pos_y, color)
-  } else {
-    image_draw_pixel_(dst, pos_x, pos_y, color)
-  }
-}
-
-#' Image draw pixel v
-#'
-#' Draw pixel within an image (Vector version).
-#'
-#' @param dst An image.
-#' @param position A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param color A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageDrawPixelV(Image *dst, Vector2 position, Color color);
-#' ```
-#'
-#' @family image functions
-#' @family draw functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_draw_pixel_v <- function(dst, position, color) {
-  if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
-  if (!is_vector_2(position) && !is_mat(position, is_vector_2)) abort(paste0('`position` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(position), nrow(position), 1), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    image_draw_pixel_v_vectorized_(dst, position, color)
-  } else {
-    image_draw_pixel_v_(dst, position, color)
-  }
-}
-
-#' Image draw line
-#'
-#' Draw line within an image.
-#'
-#' @param dst An image.
-#' @param start_pos_x An integer or a vector of integers.
-#' @param start_pos_y An integer or a vector of integers.
-#' @param end_pos_x An integer or a vector of integers.
-#' @param end_pos_y An integer or a vector of integers.
-#' @param color A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageDrawLine(Image *dst, int startPosX, int startPosY, int endPosX, int endPosY, Color color);
-#' ```
-#'
-#' @family image functions
-#' @family draw functions
-#' @family line functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_draw_line <- function(dst, start_pos_x, start_pos_y, end_pos_x, end_pos_y, color) {
-  if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
-  if (!is_int(start_pos_x) && !is_vec(start_pos_x, is_int)) abort(paste0('`start_pos_x` must be an integer or a vector of integers, not ', friendly_typeof(start_pos_x), '.'), call = NULL)
-  if (!is_int(start_pos_y) && !is_vec(start_pos_y, is_int)) abort(paste0('`start_pos_y` must be an integer or a vector of integers, not ', friendly_typeof(start_pos_y), '.'), call = NULL)
-  if (!is_int(end_pos_x) && !is_vec(end_pos_x, is_int)) abort(paste0('`end_pos_x` must be an integer or a vector of integers, not ', friendly_typeof(end_pos_x), '.'), call = NULL)
-  if (!is_int(end_pos_y) && !is_vec(end_pos_y, is_int)) abort(paste0('`end_pos_y` must be an integer or a vector of integers, not ', friendly_typeof(end_pos_y), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(start_pos_x), length(start_pos_y), length(end_pos_x), length(end_pos_y), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) start_pos_x <- rep(start_pos_x, length.out = max_len)
-    if (lens[2] < max_len) start_pos_y <- rep(start_pos_y, length.out = max_len)
-    if (lens[3] < max_len) end_pos_x <- rep(end_pos_x, length.out = max_len)
-    if (lens[4] < max_len) end_pos_y <- rep(end_pos_y, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    image_draw_line_vectorized_(dst, start_pos_x, start_pos_y, end_pos_x, end_pos_y, color)
-  } else {
-    image_draw_line_(dst, start_pos_x, start_pos_y, end_pos_x, end_pos_y, color)
-  }
-}
-
-#' Image draw line v
-#'
-#' Draw line within an image (Vector version).
-#'
-#' @param dst An image.
-#' @param start A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param end A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param color A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageDrawLineV(Image *dst, Vector2 start, Vector2 end, Color color);
-#' ```
-#'
-#' @family image functions
-#' @family draw functions
-#' @family line functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_draw_line_v <- function(dst, start, end, color) {
-  if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
-  if (!is_vector_2(start) && !is_mat(start, is_vector_2)) abort(paste0('`start` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(start), '.'), call = NULL)
-  if (!is_vector_2(end) && !is_mat(end, is_vector_2)) abort(paste0('`end` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(end), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(start), nrow(start), 1), ifelse(is.matrix(end), nrow(end), 1), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) start <- matrix(rep(t(start), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) end <- matrix(rep(t(end), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    image_draw_line_v_vectorized_(dst, start, end, color)
-  } else {
-    image_draw_line_v_(dst, start, end, color)
-  }
-}
-
-#' Image draw circle
-#'
-#' Draw circle within an image.
-#'
-#' @param dst An image.
-#' @param center_x An integer or a vector of integers.
-#' @param center_y An integer or a vector of integers.
-#' @param radius An integer or a vector of integers.
-#' @param color A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageDrawCircle(Image *dst, int centerX, int centerY, int radius, Color color);
-#' ```
-#'
-#' @family image functions
-#' @family draw functions
-#' @family circle functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_draw_circle <- function(dst, center_x, center_y, radius, color) {
-  if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
-  if (!is_int(center_x) && !is_vec(center_x, is_int)) abort(paste0('`center_x` must be an integer or a vector of integers, not ', friendly_typeof(center_x), '.'), call = NULL)
-  if (!is_int(center_y) && !is_vec(center_y, is_int)) abort(paste0('`center_y` must be an integer or a vector of integers, not ', friendly_typeof(center_y), '.'), call = NULL)
-  if (!is_int(radius) && !is_vec(radius, is_int)) abort(paste0('`radius` must be an integer or a vector of integers, not ', friendly_typeof(radius), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(center_x), length(center_y), length(radius), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center_x <- rep(center_x, length.out = max_len)
-    if (lens[2] < max_len) center_y <- rep(center_y, length.out = max_len)
-    if (lens[3] < max_len) radius <- rep(radius, length.out = max_len)
-    if (lens[4] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    image_draw_circle_vectorized_(dst, center_x, center_y, radius, color)
-  } else {
-    image_draw_circle_(dst, center_x, center_y, radius, color)
-  }
-}
-
-#' Image draw circle v
-#'
-#' Draw circle within an image (Vector version).
-#'
-#' @param dst An image.
-#' @param center A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param radius An integer or a vector of integers.
-#' @param color A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageDrawCircleV(Image *dst, Vector2 center, int radius, Color color);
-#' ```
-#'
-#' @family image functions
-#' @family draw functions
-#' @family circle functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_draw_circle_v <- function(dst, center, radius, color) {
-  if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
-  if (!is_vector_2(center) && !is_mat(center, is_vector_2)) abort(paste0('`center` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(center), '.'), call = NULL)
-  if (!is_int(radius) && !is_vec(radius, is_int)) abort(paste0('`radius` must be an integer or a vector of integers, not ', friendly_typeof(radius), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(radius), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) radius <- rep(radius, length.out = max_len)
-    if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    image_draw_circle_v_vectorized_(dst, center, radius, color)
-  } else {
-    image_draw_circle_v_(dst, center, radius, color)
-  }
-}
-
-#' Image draw rectangle
-#'
-#' Draw rectangle within an image.
-#'
-#' @param dst An image.
-#' @param pos_x An integer or a vector of integers.
-#' @param pos_y An integer or a vector of integers.
-#' @param width An integer or a vector of integers.
-#' @param height An integer or a vector of integers.
-#' @param color A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageDrawRectangle(Image *dst, int posX, int posY, int width, int height, Color color);
-#' ```
-#'
-#' @family image functions
-#' @family draw functions
-#' @family rectangle functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_draw_rectangle <- function(dst, pos_x, pos_y, width, height, color) {
-  if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
-  if (!is_int(pos_x) && !is_vec(pos_x, is_int)) abort(paste0('`pos_x` must be an integer or a vector of integers, not ', friendly_typeof(pos_x), '.'), call = NULL)
-  if (!is_int(pos_y) && !is_vec(pos_y, is_int)) abort(paste0('`pos_y` must be an integer or a vector of integers, not ', friendly_typeof(pos_y), '.'), call = NULL)
-  if (!is_int(width) && !is_vec(width, is_int)) abort(paste0('`width` must be an integer or a vector of integers, not ', friendly_typeof(width), '.'), call = NULL)
-  if (!is_int(height) && !is_vec(height, is_int)) abort(paste0('`height` must be an integer or a vector of integers, not ', friendly_typeof(height), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(pos_x), length(pos_y), length(width), length(height), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) pos_x <- rep(pos_x, length.out = max_len)
-    if (lens[2] < max_len) pos_y <- rep(pos_y, length.out = max_len)
-    if (lens[3] < max_len) width <- rep(width, length.out = max_len)
-    if (lens[4] < max_len) height <- rep(height, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    image_draw_rectangle_vectorized_(dst, pos_x, pos_y, width, height, color)
-  } else {
-    image_draw_rectangle_(dst, pos_x, pos_y, width, height, color)
-  }
-}
-
-#' Image draw rectangle v
-#'
-#' Draw rectangle within an image (Vector version).
-#'
-#' @param dst An image.
-#' @param position A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param size A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param color A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageDrawRectangleV(Image *dst, Vector2 position, Vector2 size, Color color);
-#' ```
-#'
-#' @family image functions
-#' @family draw functions
-#' @family rectangle functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_draw_rectangle_v <- function(dst, position, size, color) {
-  if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
-  if (!is_vector_2(position) && !is_mat(position, is_vector_2)) abort(paste0('`position` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_vector_2(size) && !is_mat(size, is_vector_2)) abort(paste0('`size` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(size), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(position), nrow(position), 1), ifelse(is.matrix(size), nrow(size), 1), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[2] < max_len) size <- matrix(rep(t(size), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    image_draw_rectangle_v_vectorized_(dst, position, size, color)
-  } else {
-    image_draw_rectangle_v_(dst, position, size, color)
-  }
-}
-
-#' Image draw rectangle rec
-#'
-#' Draw rectangle within an image.
-#'
-#' @param dst An image.
-#' @param rec A rectangle or a list of rectangles.
-#' @param color A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageDrawRectangleRec(Image *dst, Rectangle rec, Color color);
-#' ```
-#'
-#' @family image functions
-#' @family draw functions
-#' @family rectangle functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [rectangle()] for creating rectangle objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_draw_rectangle_rec <- function(dst, rec, color) {
-  if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
-  if (!is_rectangle(rec) && !is_vec(rec, is_rectangle)) abort(paste0('`rec` must be a rectangle or a list of rectangles, not ', friendly_typeof(rec), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(rec), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) rec <- rep(unlist(list(rec)), length.out = max_len)
-    if (lens[2] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    image_draw_rectangle_rec_vectorized_(dst, rec, color)
-  } else {
-    image_draw_rectangle_rec_(dst, rec, color)
-  }
-}
-
-#' Image draw rectangle lines
-#'
-#' Draw rectangle lines within an image.
-#'
-#' @param dst An image.
-#' @param rec A rectangle or a list of rectangles.
-#' @param thick An integer or a vector of integers.
-#' @param color A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageDrawRectangleLines(Image *dst, Rectangle rec, int thick, Color color);
-#' ```
-#'
-#' @family image functions
-#' @family draw functions
-#' @family rectangle functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [rectangle()] for creating rectangle objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_draw_rectangle_lines <- function(dst, rec, thick, color) {
-  if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
-  if (!is_rectangle(rec) && !is_vec(rec, is_rectangle)) abort(paste0('`rec` must be a rectangle or a list of rectangles, not ', friendly_typeof(rec), '.'), call = NULL)
-  if (!is_int(thick) && !is_vec(thick, is_int)) abort(paste0('`thick` must be an integer or a vector of integers, not ', friendly_typeof(thick), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(rec), length(thick), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) rec <- rep(unlist(list(rec)), length.out = max_len)
-    if (lens[2] < max_len) thick <- rep(thick, length.out = max_len)
-    if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    image_draw_rectangle_lines_vectorized_(dst, rec, thick, color)
-  } else {
-    image_draw_rectangle_lines_(dst, rec, thick, color)
-  }
-}
-
-#' Image draw
-#'
-#' Draw a source image within a destination image (tint applied to source).
-#'
-#' @param dst An image.
-#' @param src An image.
-#' @param src_rec A rectangle.
-#' @param dst_rec A rectangle.
-#' @param tint A color.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageDraw(Image *dst, Image src, Rectangle srcRec, Rectangle dstRec, Color tint);
-#' ```
-#'
-#' @family image functions
-#' @family draw functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [rectangle()] for creating rectangle objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_draw <- function(dst, src, src_rec, dst_rec, tint) {
-  if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
-  if (!is_image(src)) abort(paste0('`src` must be an image, not ', friendly_typeof(src), '.'), call = NULL)
-  if (!is_rectangle(src_rec)) abort(paste0('`src_rec` must be a rectangle, not ', friendly_typeof(src_rec), '.'), call = NULL)
-  if (!is_rectangle(dst_rec)) abort(paste0('`dst_rec` must be a rectangle, not ', friendly_typeof(dst_rec), '.'), call = NULL)
-  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
-  image_draw_(dst, src, src_rec, dst_rec, tint)
-}
-
-#' Image draw text
-#'
-#' Draw text (using default font) within an image (destination).
-#'
-#' @param dst An image.
-#' @param text A string or a vector of strings.
-#' @param pos_x An integer or a vector of integers.
-#' @param pos_y An integer or a vector of integers.
-#' @param font_size An integer or a vector of integers.
-#' @param color A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageDrawText(Image *dst, const char *text, int posX, int posY, int fontSize, Color color);
-#' ```
-#'
-#' @family image functions
-#' @family draw functions
-#' @family text functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_draw_text <- function(dst, text, pos_x, pos_y, font_size, color) {
-  if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
-  if (!is_const_char_pointer(text) && !is_vec(text, is_const_char_pointer)) abort(paste0('`text` must be a string or a vector of strings, not ', friendly_typeof(text), '.'), call = NULL)
-  if (!is_int(pos_x) && !is_vec(pos_x, is_int)) abort(paste0('`pos_x` must be an integer or a vector of integers, not ', friendly_typeof(pos_x), '.'), call = NULL)
-  if (!is_int(pos_y) && !is_vec(pos_y, is_int)) abort(paste0('`pos_y` must be an integer or a vector of integers, not ', friendly_typeof(pos_y), '.'), call = NULL)
-  if (!is_int(font_size) && !is_vec(font_size, is_int)) abort(paste0('`font_size` must be an integer or a vector of integers, not ', friendly_typeof(font_size), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(text), length(pos_x), length(pos_y), length(font_size), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) text <- rep(unlist(list(text)), length.out = max_len)
-    if (lens[2] < max_len) pos_x <- rep(pos_x, length.out = max_len)
-    if (lens[3] < max_len) pos_y <- rep(pos_y, length.out = max_len)
-    if (lens[4] < max_len) font_size <- rep(font_size, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    image_draw_text_vectorized_(dst, text, pos_x, pos_y, font_size, color)
-  } else {
-    image_draw_text_(dst, text, pos_x, pos_y, font_size, color)
-  }
-}
-
-#' Image draw text ex
-#'
-#' Draw text (custom sprite font) within an image (destination).
-#'
-#' @param dst An image.
-#' @param font A font or a list of fonts.
-#' @param text A string or a vector of strings.
-#' @param position A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param font_size A number or a vector of numbers.
-#' @param spacing A number or a vector of numbers.
-#' @param tint A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void ImageDrawTextEx(Image *dst, Font font, const char *text, Vector2 position, float fontSize, float spacing, Color tint);
-#' ```
-#'
-#' @family image functions
-#' @family draw functions
-#' @family text functions
-#'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [font()] for creating font objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-image_draw_text_ex <- function(dst, font, text, position, font_size, spacing, tint) {
-  if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
-  if (!is_font(font) && !is_vec(font, is_font)) abort(paste0('`font` must be a font or a list of fonts, not ', friendly_typeof(font), '.'), call = NULL)
-  if (!is_const_char_pointer(text) && !is_vec(text, is_const_char_pointer)) abort(paste0('`text` must be a string or a vector of strings, not ', friendly_typeof(text), '.'), call = NULL)
-  if (!is_vector_2(position) && !is_mat(position, is_vector_2)) abort(paste0('`position` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_float(font_size) && !is_vec(font_size, is_float)) abort(paste0('`font_size` must be a number or a vector of numbers, not ', friendly_typeof(font_size), '.'), call = NULL)
-  if (!is_float(spacing) && !is_vec(spacing, is_float)) abort(paste0('`spacing` must be a number or a vector of numbers, not ', friendly_typeof(spacing), '.'), call = NULL)
-  if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-
-  lens <- c(length(font), length(text), ifelse(is.matrix(position), nrow(position), 1), length(font_size), length(spacing), length(tint))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) font <- rep(unlist(list(font)), length.out = max_len)
-    if (lens[2] < max_len) text <- rep(unlist(list(text)), length.out = max_len)
-    if (lens[3] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[4] < max_len) font_size <- rep(font_size, length.out = max_len)
-    if (lens[5] < max_len) spacing <- rep(spacing, length.out = max_len)
-    if (lens[6] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
-    image_draw_text_ex_vectorized_(dst, font, text, position, font_size, spacing, tint)
-  } else {
-    image_draw_text_ex_(dst, font, text, position, font_size, spacing, tint)
-  }
-}
-
-#' Load texture
+#' Load Texture
 #'
 #' Load texture from file into GPU memory (VRAM).
 #'
@@ -6881,10 +5351,11 @@ image_draw_text_ex <- function(dst, font, text, position, font_size, spacing, ti
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' Texture2D LoadTexture(const char *fileName);
+#' Texture2D LoadTexture(const char * fileName);
 #' ```
 #'
 #' @family texture functions
+#' @family load functions
 #'
 #'
 #' @export
@@ -6893,7 +5364,7 @@ load_texture <- function(file_name) {
   load_texture_(file_name)
 }
 
-#' Load texture from image
+#' Load Texture From Image
 #'
 #' Load texture from image data.
 #'
@@ -6907,11 +5378,9 @@ load_texture <- function(file_name) {
 #' Texture2D LoadTextureFromImage(Image image);
 #' ```
 #'
-#' @family texture functions
 #' @family image functions
+#' @family load functions
 #'
-#'
-#' @seealso [image()] for creating image objects.
 #'
 #' @export
 load_texture_from_image <- function(image) {
@@ -6919,14 +5388,14 @@ load_texture_from_image <- function(image) {
   load_texture_from_image_(image)
 }
 
-#' Load render texture
+#' Load Render Texture
 #'
 #' Load texture for rendering (framebuffer).
 #'
 #' @param width An integer.
 #' @param height An integer.
 #'
-#' @return A render_texture
+#' @return A render texture
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -6935,6 +5404,7 @@ load_texture_from_image <- function(image) {
 #' ```
 #'
 #' @family texture functions
+#' @family load functions
 #'
 #'
 #' @export
@@ -6944,12 +5414,35 @@ load_render_texture <- function(width, height) {
   load_render_texture_(width, height)
 }
 
-#' Unload texture
+#' Is Texture Valid
+#'
+#' Check if a texture is valid (loaded in GPU).
+#'
+#' @param texture A texture.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool IsTextureValid(Texture2D texture);
+#' ```
+#'
+#' @family valid functions
+#' @family is functions
+#'
+#'
+#' @export
+is_texture_valid <- function(texture) {
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
+  is_texture_valid_(texture)
+}
+
+#' Unload Texture
 #'
 #' Unload texture from GPU memory (VRAM).
 #'
 #' @param texture A texture.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -6958,9 +5451,8 @@ load_render_texture <- function(width, height) {
 #' ```
 #'
 #' @family texture functions
+#' @family unload functions
 #'
-#'
-#' @seealso [texture()] for creating texture objects.
 #'
 #' @export
 unload_texture <- function(texture) {
@@ -6968,12 +5460,35 @@ unload_texture <- function(texture) {
   unload_texture_(texture)
 }
 
-#' Unload render texture
+#' Is Render Texture Valid
+#'
+#' Check if a render texture is valid (loaded in GPU).
+#'
+#' @param target A render texture.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool IsRenderTextureValid(RenderTexture2D target);
+#' ```
+#'
+#' @family valid functions
+#' @family is functions
+#'
+#'
+#' @export
+is_render_texture_valid <- function(target) {
+  if (!is_render_texture(target)) abort(paste0('`target` must be a render texture, not ', friendly_typeof(target), '.'), call = NULL)
+  is_render_texture_valid_(target)
+}
+
+#' Unload Render Texture
 #'
 #' Unload render texture from GPU memory (VRAM).
 #'
-#' @param target A render_texture.
-#'
+#' @param target A render texture.
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -6982,45 +5497,21 @@ unload_texture <- function(texture) {
 #' ```
 #'
 #' @family texture functions
+#' @family unload functions
 #'
 #'
 #' @export
 unload_render_texture <- function(target) {
-  if (!is_render_texture(target)) abort(paste0('`target` must be a render_texture, not ', friendly_typeof(target), '.'), call = NULL)
+  if (!is_render_texture(target)) abort(paste0('`target` must be a render texture, not ', friendly_typeof(target), '.'), call = NULL)
   unload_render_texture_(target)
 }
 
-#' Gen texture mipmaps
-#'
-#' Generate GPU mipmaps for a texture.
-#'
-#' @param texture A texture.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void GenTextureMipmaps(Texture2D *texture);
-#' ```
-#'
-#' @family texture functions
-#'
-#'
-#' @seealso [texture()] for creating texture objects.
-#'
-#' @export
-gen_texture_mipmaps <- function(texture) {
-  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
-  gen_texture_mipmaps_(texture)
-}
-
-#' Set texture filter
+#' Set Texture Filter
 #'
 #' Set texture scaling filter mode.
 #'
 #' @param texture A texture.
 #' @param filter An integer.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -7028,10 +5519,9 @@ gen_texture_mipmaps <- function(texture) {
 #' void SetTextureFilter(Texture2D texture, int filter);
 #' ```
 #'
-#' @family texture functions
+#' @family filter functions
+#' @family set functions
 #'
-#'
-#' @seealso [texture()] for creating texture objects.
 #'
 #' @export
 set_texture_filter <- function(texture, filter) {
@@ -7040,13 +5530,12 @@ set_texture_filter <- function(texture, filter) {
   set_texture_filter_(texture, filter)
 }
 
-#' Set texture wrap
+#' Set Texture Wrap
 #'
 #' Set texture wrapping mode.
 #'
 #' @param texture A texture.
 #' @param wrap An integer.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -7054,10 +5543,9 @@ set_texture_filter <- function(texture, filter) {
 #' void SetTextureWrap(Texture2D texture, int wrap);
 #' ```
 #'
-#' @family texture functions
+#' @family wrap functions
+#' @family set functions
 #'
-#'
-#' @seealso [texture()] for creating texture objects.
 #'
 #' @export
 set_texture_wrap <- function(texture, wrap) {
@@ -7066,413 +5554,180 @@ set_texture_wrap <- function(texture, wrap) {
   set_texture_wrap_(texture, wrap)
 }
 
-#' Draw texture
+#' Draw Texture
 #'
 #' Draw a Texture2D.
 #'
-#' @param texture A texture or a list of textures.
-#' @param pos_x An integer or a vector of integers.
-#' @param pos_y An integer or a vector of integers.
-#' @param tint A color or a list of colors.
+#' @param texture A texture.
+#' @param pos_x An integer.
+#' @param pos_y An integer.
+#' @param tint A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawTexture(Texture2D texture, int posX, int posY, Color tint);
 #' ```
 #'
-#' @family draw functions
 #' @family texture functions
+#' @family draw functions
 #'
-#'
-#' @seealso [texture()] for creating texture objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_texture <- function(texture, pos_x, pos_y, tint) {
-  if (!is_texture(texture) && !is_vec(texture, is_texture)) abort(paste0('`texture` must be a texture or a list of textures, not ', friendly_typeof(texture), '.'), call = NULL)
-  if (!is_int(pos_x) && !is_vec(pos_x, is_int)) abort(paste0('`pos_x` must be an integer or a vector of integers, not ', friendly_typeof(pos_x), '.'), call = NULL)
-  if (!is_int(pos_y) && !is_vec(pos_y, is_int)) abort(paste0('`pos_y` must be an integer or a vector of integers, not ', friendly_typeof(pos_y), '.'), call = NULL)
-  if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-
-  lens <- c(length(texture), length(pos_x), length(pos_y), length(tint))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
-    if (lens[2] < max_len) pos_x <- rep(pos_x, length.out = max_len)
-    if (lens[3] < max_len) pos_y <- rep(pos_y, length.out = max_len)
-    if (lens[4] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
-    draw_texture_vectorized_(texture, pos_x, pos_y, tint)
-  } else {
-    draw_texture_(texture, pos_x, pos_y, tint)
-  }
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
+  if (!is_int(pos_y)) abort(paste0('`pos_y` must be an integer, not ', friendly_typeof(pos_y), '.'), call = NULL)
+  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
+  draw_texture_(texture, pos_x, pos_y, tint)
 }
 
-#' Draw texture v
+#' Draw Texture V
 #'
 #' Draw a Texture2D with position defined as Vector2.
 #'
-#' @param texture A texture or a list of textures.
-#' @param position A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param tint A color or a list of colors.
+#' @param texture A texture.
+#' @param position A numeric vector of length 2.
+#' @param tint A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawTextureV(Texture2D texture, Vector2 position, Color tint);
 #' ```
 #'
+#' @family v functions
 #' @family draw functions
-#' @family texture functions
 #'
-#'
-#' @seealso [texture()] for creating texture objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_texture_v <- function(texture, position, tint) {
-  if (!is_texture(texture) && !is_vec(texture, is_texture)) abort(paste0('`texture` must be a texture or a list of textures, not ', friendly_typeof(texture), '.'), call = NULL)
-  if (!is_vector_2(position) && !is_mat(position, is_vector_2)) abort(paste0('`position` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-
-  lens <- c(length(texture), ifelse(is.matrix(position), nrow(position), 1), length(tint))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
-    if (lens[2] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[3] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
-    draw_texture_v_vectorized_(texture, position, tint)
-  } else {
-    draw_texture_v_(texture, position, tint)
-  }
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
+  draw_texture_v_(texture, position, tint)
 }
 
-#' Draw texture ex
+#' Draw Texture Ex
 #'
 #' Draw a Texture2D with extended parameters.
 #'
-#' @param texture A texture or a list of textures.
-#' @param position A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param rotation A number or a vector of numbers.
-#' @param scale A number or a vector of numbers.
-#' @param tint A color or a list of colors.
+#' @param texture A texture.
+#' @param position A numeric vector of length 2.
+#' @param rotation A number.
+#' @param scale A number.
+#' @param tint A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawTextureEx(Texture2D texture, Vector2 position, float rotation, float scale, Color tint);
 #' ```
 #'
+#' @family ex functions
 #' @family draw functions
-#' @family texture functions
 #'
-#'
-#' @seealso [texture()] for creating texture objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_texture_ex <- function(texture, position, rotation, scale, tint) {
-  if (!is_texture(texture) && !is_vec(texture, is_texture)) abort(paste0('`texture` must be a texture or a list of textures, not ', friendly_typeof(texture), '.'), call = NULL)
-  if (!is_vector_2(position) && !is_mat(position, is_vector_2)) abort(paste0('`position` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_float(rotation) && !is_vec(rotation, is_float)) abort(paste0('`rotation` must be a number or a vector of numbers, not ', friendly_typeof(rotation), '.'), call = NULL)
-  if (!is_float(scale) && !is_vec(scale, is_float)) abort(paste0('`scale` must be a number or a vector of numbers, not ', friendly_typeof(scale), '.'), call = NULL)
-  if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-
-  lens <- c(length(texture), ifelse(is.matrix(position), nrow(position), 1), length(rotation), length(scale), length(tint))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
-    if (lens[2] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[3] < max_len) rotation <- rep(rotation, length.out = max_len)
-    if (lens[4] < max_len) scale <- rep(scale, length.out = max_len)
-    if (lens[5] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
-    draw_texture_ex_vectorized_(texture, position, rotation, scale, tint)
-  } else {
-    draw_texture_ex_(texture, position, rotation, scale, tint)
-  }
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_float(rotation)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(rotation), '.'), call = NULL)
+  if (!is_float(scale)) abort(paste0('`scale` must be a number, not ', friendly_typeof(scale), '.'), call = NULL)
+  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
+  draw_texture_ex_(texture, position, rotation, scale, tint)
 }
 
-#' Draw texture rec
+#' Draw Texture Rec
 #'
 #' Draw a part of a texture defined by a rectangle.
 #'
-#' @param texture A texture or a list of textures.
-#' @param source A rectangle or a list of rectangles.
-#' @param position A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param tint A color or a list of colors.
+#' @param texture A texture.
+#' @param source A rectangle.
+#' @param position A numeric vector of length 2.
+#' @param tint A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawTextureRec(Texture2D texture, Rectangle source, Vector2 position, Color tint);
 #' ```
 #'
+#' @family rec functions
 #' @family draw functions
-#' @family texture functions
 #'
-#'
-#' @seealso [texture()] for creating texture objects.
-#' @seealso [rectangle()] for creating rectangle objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_texture_rec <- function(texture, source, position, tint) {
-  if (!is_texture(texture) && !is_vec(texture, is_texture)) abort(paste0('`texture` must be a texture or a list of textures, not ', friendly_typeof(texture), '.'), call = NULL)
-  if (!is_rectangle(source) && !is_vec(source, is_rectangle)) abort(paste0('`source` must be a rectangle or a list of rectangles, not ', friendly_typeof(source), '.'), call = NULL)
-  if (!is_vector_2(position) && !is_mat(position, is_vector_2)) abort(paste0('`position` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-
-  lens <- c(length(texture), length(source), ifelse(is.matrix(position), nrow(position), 1), length(tint))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
-    if (lens[2] < max_len) source <- rep(unlist(list(source)), length.out = max_len)
-    if (lens[3] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[4] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
-    draw_texture_rec_vectorized_(texture, source, position, tint)
-  } else {
-    draw_texture_rec_(texture, source, position, tint)
-  }
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_rectangle(source)) abort(paste0('`source` must be a rectangle, not ', friendly_typeof(source), '.'), call = NULL)
+  if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
+  draw_texture_rec_(texture, source, position, tint)
 }
 
-#' Draw texture quad
-#'
-#' Draw texture quad with tiling and offset parameters.
-#'
-#' @param texture A texture or a list of textures.
-#' @param tiling A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param offset A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param quad A rectangle or a list of rectangles.
-#' @param tint A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void DrawTextureQuad(Texture2D texture, Vector2 tiling, Vector2 offset, Rectangle quad, Color tint);
-#' ```
-#'
-#' @family draw functions
-#' @family texture functions
-#'
-#'
-#' @seealso [texture()] for creating texture objects.
-#' @seealso [rectangle()] for creating rectangle objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-draw_texture_quad <- function(texture, tiling, offset, quad, tint) {
-  if (!is_texture(texture) && !is_vec(texture, is_texture)) abort(paste0('`texture` must be a texture or a list of textures, not ', friendly_typeof(texture), '.'), call = NULL)
-  if (!is_vector_2(tiling) && !is_mat(tiling, is_vector_2)) abort(paste0('`tiling` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(tiling), '.'), call = NULL)
-  if (!is_vector_2(offset) && !is_mat(offset, is_vector_2)) abort(paste0('`offset` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(offset), '.'), call = NULL)
-  if (!is_rectangle(quad) && !is_vec(quad, is_rectangle)) abort(paste0('`quad` must be a rectangle or a list of rectangles, not ', friendly_typeof(quad), '.'), call = NULL)
-  if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-
-  lens <- c(length(texture), ifelse(is.matrix(tiling), nrow(tiling), 1), ifelse(is.matrix(offset), nrow(offset), 1), length(quad), length(tint))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
-    if (lens[2] < max_len) tiling <- matrix(rep(t(tiling), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[3] < max_len) offset <- matrix(rep(t(offset), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[4] < max_len) quad <- rep(unlist(list(quad)), length.out = max_len)
-    if (lens[5] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
-    draw_texture_quad_vectorized_(texture, tiling, offset, quad, tint)
-  } else {
-    draw_texture_quad_(texture, tiling, offset, quad, tint)
-  }
-}
-
-#' Draw texture tiled
-#'
-#' Draw part of a texture (defined by a rectangle) with rotation and scale tiled into dest..
-#'
-#' @param texture A texture or a list of textures.
-#' @param source A rectangle or a list of rectangles.
-#' @param dest A rectangle or a list of rectangles.
-#' @param origin A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param rotation A number or a vector of numbers.
-#' @param scale A number or a vector of numbers.
-#' @param tint A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void DrawTextureTiled(Texture2D texture, Rectangle source, Rectangle dest, Vector2 origin, float rotation, float scale, Color tint);
-#' ```
-#'
-#' @family draw functions
-#' @family texture functions
-#'
-#'
-#' @seealso [texture()] for creating texture objects.
-#' @seealso [rectangle()] for creating rectangle objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-draw_texture_tiled <- function(texture, source, dest, origin, rotation, scale, tint) {
-  if (!is_texture(texture) && !is_vec(texture, is_texture)) abort(paste0('`texture` must be a texture or a list of textures, not ', friendly_typeof(texture), '.'), call = NULL)
-  if (!is_rectangle(source) && !is_vec(source, is_rectangle)) abort(paste0('`source` must be a rectangle or a list of rectangles, not ', friendly_typeof(source), '.'), call = NULL)
-  if (!is_rectangle(dest) && !is_vec(dest, is_rectangle)) abort(paste0('`dest` must be a rectangle or a list of rectangles, not ', friendly_typeof(dest), '.'), call = NULL)
-  if (!is_vector_2(origin) && !is_mat(origin, is_vector_2)) abort(paste0('`origin` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(origin), '.'), call = NULL)
-  if (!is_float(rotation) && !is_vec(rotation, is_float)) abort(paste0('`rotation` must be a number or a vector of numbers, not ', friendly_typeof(rotation), '.'), call = NULL)
-  if (!is_float(scale) && !is_vec(scale, is_float)) abort(paste0('`scale` must be a number or a vector of numbers, not ', friendly_typeof(scale), '.'), call = NULL)
-  if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-
-  lens <- c(length(texture), length(source), length(dest), ifelse(is.matrix(origin), nrow(origin), 1), length(rotation), length(scale), length(tint))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
-    if (lens[2] < max_len) source <- rep(unlist(list(source)), length.out = max_len)
-    if (lens[3] < max_len) dest <- rep(unlist(list(dest)), length.out = max_len)
-    if (lens[4] < max_len) origin <- matrix(rep(t(origin), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[5] < max_len) rotation <- rep(rotation, length.out = max_len)
-    if (lens[6] < max_len) scale <- rep(scale, length.out = max_len)
-    if (lens[7] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
-    draw_texture_tiled_vectorized_(texture, source, dest, origin, rotation, scale, tint)
-  } else {
-    draw_texture_tiled_(texture, source, dest, origin, rotation, scale, tint)
-  }
-}
-
-#' Draw texture pro
+#' Draw Texture Pro
 #'
 #' Draw a part of a texture defined by a rectangle with 'pro' parameters.
 #'
-#' @param texture A texture or a list of textures.
-#' @param source A rectangle or a list of rectangles.
-#' @param dest A rectangle or a list of rectangles.
-#' @param origin A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param rotation A number or a vector of numbers.
-#' @param tint A color or a list of colors.
+#' @param texture A texture.
+#' @param source A rectangle.
+#' @param dest A rectangle.
+#' @param origin A numeric vector of length 2.
+#' @param rotation A number.
+#' @param tint A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawTexturePro(Texture2D texture, Rectangle source, Rectangle dest, Vector2 origin, float rotation, Color tint);
 #' ```
 #'
+#' @family pro functions
 #' @family draw functions
-#' @family texture functions
 #'
-#'
-#' @seealso [texture()] for creating texture objects.
-#' @seealso [rectangle()] for creating rectangle objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_texture_pro <- function(texture, source, dest, origin, rotation, tint) {
-  if (!is_texture(texture) && !is_vec(texture, is_texture)) abort(paste0('`texture` must be a texture or a list of textures, not ', friendly_typeof(texture), '.'), call = NULL)
-  if (!is_rectangle(source) && !is_vec(source, is_rectangle)) abort(paste0('`source` must be a rectangle or a list of rectangles, not ', friendly_typeof(source), '.'), call = NULL)
-  if (!is_rectangle(dest) && !is_vec(dest, is_rectangle)) abort(paste0('`dest` must be a rectangle or a list of rectangles, not ', friendly_typeof(dest), '.'), call = NULL)
-  if (!is_vector_2(origin) && !is_mat(origin, is_vector_2)) abort(paste0('`origin` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(origin), '.'), call = NULL)
-  if (!is_float(rotation) && !is_vec(rotation, is_float)) abort(paste0('`rotation` must be a number or a vector of numbers, not ', friendly_typeof(rotation), '.'), call = NULL)
-  if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-
-  lens <- c(length(texture), length(source), length(dest), ifelse(is.matrix(origin), nrow(origin), 1), length(rotation), length(tint))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
-    if (lens[2] < max_len) source <- rep(unlist(list(source)), length.out = max_len)
-    if (lens[3] < max_len) dest <- rep(unlist(list(dest)), length.out = max_len)
-    if (lens[4] < max_len) origin <- matrix(rep(t(origin), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[5] < max_len) rotation <- rep(rotation, length.out = max_len)
-    if (lens[6] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
-    draw_texture_pro_vectorized_(texture, source, dest, origin, rotation, tint)
-  } else {
-    draw_texture_pro_(texture, source, dest, origin, rotation, tint)
-  }
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_rectangle(source)) abort(paste0('`source` must be a rectangle, not ', friendly_typeof(source), '.'), call = NULL)
+  if (!is_rectangle(dest)) abort(paste0('`dest` must be a rectangle, not ', friendly_typeof(dest), '.'), call = NULL)
+  if (!is_vector_2(origin)) abort(paste0('`origin` must be a numeric vector of length 2, not ', friendly_typeof(origin), '.'), call = NULL)
+  if (!is_float(rotation)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(rotation), '.'), call = NULL)
+  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
+  draw_texture_pro_(texture, source, dest, origin, rotation, tint)
 }
 
-#' Draw texture npatch
+#' Draw Texture N Patch
 #'
 #' Draws a texture (or part of it) that stretches or shrinks nicely.
 #'
-#' @param texture A texture or a list of textures.
-#' @param n_patch_info A npatch_info or a list of npatch_infos.
-#' @param dest A rectangle or a list of rectangles.
-#' @param origin A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param rotation A number or a vector of numbers.
-#' @param tint A color or a list of colors.
+#' @param texture A texture.
+#' @param n_patch_info An npatch_info.
+#' @param dest A rectangle.
+#' @param origin A numeric vector of length 2.
+#' @param rotation A number.
+#' @param tint A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawTextureNPatch(Texture2D texture, NPatchInfo nPatchInfo, Rectangle dest, Vector2 origin, float rotation, Color tint);
 #' ```
 #'
+#' @family patch functions
 #' @family draw functions
-#' @family texture functions
 #'
-#'
-#' @seealso [texture()] for creating texture objects.
-#' @seealso [rectangle()] for creating rectangle objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
-draw_texture_npatch <- function(texture, n_patch_info, dest, origin, rotation, tint) {
-  if (!is_texture(texture) && !is_vec(texture, is_texture)) abort(paste0('`texture` must be a texture or a list of textures, not ', friendly_typeof(texture), '.'), call = NULL)
-  if (!is_npatch_info(n_patch_info) && !is_vec(n_patch_info, is_npatch_info)) abort(paste0('`n_patch_info` must be a npatch_info or a list of npatch_infos, not ', friendly_typeof(n_patch_info), '.'), call = NULL)
-  if (!is_rectangle(dest) && !is_vec(dest, is_rectangle)) abort(paste0('`dest` must be a rectangle or a list of rectangles, not ', friendly_typeof(dest), '.'), call = NULL)
-  if (!is_vector_2(origin) && !is_mat(origin, is_vector_2)) abort(paste0('`origin` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(origin), '.'), call = NULL)
-  if (!is_float(rotation) && !is_vec(rotation, is_float)) abort(paste0('`rotation` must be a number or a vector of numbers, not ', friendly_typeof(rotation), '.'), call = NULL)
-  if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-
-  lens <- c(length(texture), length(n_patch_info), length(dest), ifelse(is.matrix(origin), nrow(origin), 1), length(rotation), length(tint))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
-    if (lens[2] < max_len) n_patch_info <- rep(unlist(list(n_patch_info)), length.out = max_len)
-    if (lens[3] < max_len) dest <- rep(unlist(list(dest)), length.out = max_len)
-    if (lens[4] < max_len) origin <- matrix(rep(t(origin), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[5] < max_len) rotation <- rep(rotation, length.out = max_len)
-    if (lens[6] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
-    draw_texture_npatch_vectorized_(texture, n_patch_info, dest, origin, rotation, tint)
-  } else {
-    draw_texture_npatch_(texture, n_patch_info, dest, origin, rotation, tint)
-  }
-}
-
-#' Draw texture poly
-#'
-#' Draw a textured polygon.
-#'
-#' @param texture A texture or a list of textures.
-#' @param center A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param points A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param texcoords A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param point_count An integer or a vector of integers.
-#' @param tint A color or a list of colors.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void DrawTexturePoly(Texture2D texture, Vector2 center, Vector2 *points, Vector2 *texcoords, int pointCount, Color tint);
-#' ```
-#'
-#' @family draw functions
-#' @family texture functions
-#'
-#'
-#' @seealso [texture()] for creating texture objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-draw_texture_poly <- function(texture, center, points, texcoords, point_count, tint) {
-  if (!is_texture(texture) && !is_vec(texture, is_texture)) abort(paste0('`texture` must be a texture or a list of textures, not ', friendly_typeof(texture), '.'), call = NULL)
-  if (!is_vector_2(center) && !is_mat(center, is_vector_2)) abort(paste0('`center` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(center), '.'), call = NULL)
-  if (!is_vector_2(points) && !is_mat(points, is_vector_2)) abort(paste0('`points` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(points), '.'), call = NULL)
-  if (!is_vector_2(texcoords) && !is_mat(texcoords, is_vector_2)) abort(paste0('`texcoords` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(texcoords), '.'), call = NULL)
-  if (!is_int(point_count) && !is_vec(point_count, is_int)) abort(paste0('`point_count` must be an integer or a vector of integers, not ', friendly_typeof(point_count), '.'), call = NULL)
-  if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-  draw_texture_poly_(texture, center, points, texcoords, point_count, tint)
+draw_texture_n_patch <- function(texture, n_patch_info, dest, origin, rotation, tint) {
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_npatch_info(n_patch_info)) abort(paste0('`n_patch_info` must be an npatch_info, not ', friendly_typeof(n_patch_info), '.'), call = NULL)
+  if (!is_rectangle(dest)) abort(paste0('`dest` must be a rectangle, not ', friendly_typeof(dest), '.'), call = NULL)
+  if (!is_vector_2(origin)) abort(paste0('`origin` must be a numeric vector of length 2, not ', friendly_typeof(origin), '.'), call = NULL)
+  if (!is_float(rotation)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(rotation), '.'), call = NULL)
+  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
+  draw_texture_n_patch_(texture, n_patch_info, dest, origin, rotation, tint)
 }
 
 #' Fade
@@ -7491,7 +5746,6 @@ draw_texture_poly <- function(texture, center, points, texcoords, point_count, t
 #' ```
 #'
 #'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 fade <- function(color, alpha) {
@@ -7500,9 +5754,9 @@ fade <- function(color, alpha) {
   fade_(color, alpha)
 }
 
-#' Color to int
+#' Color To Int
 #'
-#' Get hexadecimal value for a Color.
+#' Get hexadecimal value for a Color (0xRRGGBBAA).
 #'
 #' @param color A color.
 #'
@@ -7514,10 +5768,8 @@ fade <- function(color, alpha) {
 #' int ColorToInt(Color color);
 #' ```
 #'
-#' @family color functions
+#' @family int functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 color_to_int <- function(color) {
@@ -7525,7 +5777,7 @@ color_to_int <- function(color) {
   color_to_int_(color)
 }
 
-#' Color normalize
+#' Color Normalize
 #'
 #' Get Color normalized as float [0..1].
 #'
@@ -7539,10 +5791,8 @@ color_to_int <- function(color) {
 #' Vector4 ColorNormalize(Color color);
 #' ```
 #'
-#' @family color functions
+#' @family normalize functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 color_normalize <- function(color) {
@@ -7550,82 +5800,32 @@ color_normalize <- function(color) {
   color_normalize_(color)
 }
 
-#' Color from normalized
+#' Color Tint
 #'
-#' Get Color from normalized values [0..1].
-#'
-#' @param normalized A numeric vector of length 4.
-#'
-#' @return A color
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' Color ColorFromNormalized(Vector4 normalized);
-#' ```
-#'
-#' @family color functions
-#'
-#'
-#' @export
-color_from_normalized <- function(normalized) {
-  if (!is_vector_4(normalized)) abort(paste0('`normalized` must be a numeric vector of length 4, not ', friendly_typeof(normalized), '.'), call = NULL)
-  color_from_normalized_(normalized)
-}
-
-#' Color to hsv
-#'
-#' Get HSV values for a Color, hue [0..360], saturation/value [0..1].
+#' Get color multiplied with another color.
 #'
 #' @param color A color.
-#'
-#' @return A numeric vector of length 3
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' Vector3 ColorToHSV(Color color);
-#' ```
-#'
-#' @family color functions
-#'
-#'
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-color_to_hsv <- function(color) {
-  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
-  color_to_hsv_(color)
-}
-
-#' Color from hsv
-#'
-#' Get a Color from HSV values, hue [0..360], saturation/value [0..1].
-#'
-#' @param hue A number.
-#' @param saturation A number.
-#' @param value A number.
+#' @param tint A color.
 #'
 #' @return A color
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' Color ColorFromHSV(float hue, float saturation, float value);
+#' Color ColorTint(Color color, Color tint);
 #' ```
 #'
-#' @family color functions
+#' @family tint functions
 #'
 #'
 #' @export
-color_from_hsv <- function(hue, saturation, value) {
-  if (!is_float(hue)) abort(paste0('`hue` must be a number, not ', friendly_typeof(hue), '.'), call = NULL)
-  if (!is_float(saturation)) abort(paste0('`saturation` must be a number, not ', friendly_typeof(saturation), '.'), call = NULL)
-  if (!is_float(value)) abort(paste0('`value` must be a number, not ', friendly_typeof(value), '.'), call = NULL)
-  color_from_hsv_(hue, saturation, value)
+color_tint <- function(color, tint) {
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
+  color_tint_(color, tint)
 }
 
-#' Color alpha
+#' Color Alpha
 #'
 #' Get color with alpha applied, alpha goes from 0.0f to 1.0f.
 #'
@@ -7640,10 +5840,8 @@ color_from_hsv <- function(hue, saturation, value) {
 #' Color ColorAlpha(Color color, float alpha);
 #' ```
 #'
-#' @family color functions
+#' @family alpha functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 color_alpha <- function(color, alpha) {
@@ -7652,7 +5850,7 @@ color_alpha <- function(color, alpha) {
   color_alpha_(color, alpha)
 }
 
-#' Color alpha blend
+#' Color Alpha Blend
 #'
 #' Get src alpha-blended into dst color with tint.
 #'
@@ -7668,10 +5866,8 @@ color_alpha <- function(color, alpha) {
 #' Color ColorAlphaBlend(Color dst, Color src, Color tint);
 #' ```
 #'
-#' @family color functions
+#' @family blend functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 color_alpha_blend <- function(dst, src, tint) {
@@ -7681,7 +5877,7 @@ color_alpha_blend <- function(dst, src, tint) {
   color_alpha_blend_(dst, src, tint)
 }
 
-#' Get color
+#' Get Color
 #'
 #' Get Color structure from hexadecimal value.
 #'
@@ -7696,6 +5892,7 @@ color_alpha_blend <- function(dst, src, tint) {
 #' ```
 #'
 #' @family color functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -7704,7 +5901,7 @@ get_color <- function(hex_value) {
   get_color_(hex_value)
 }
 
-#' Get pixel data size
+#' Get Pixel Data Size
 #'
 #' Get pixel data size in bytes for certain format.
 #'
@@ -7720,6 +5917,9 @@ get_color <- function(hex_value) {
 #' int GetPixelDataSize(int width, int height, int format);
 #' ```
 #'
+#' @family size functions
+#' @family get functions
+#'
 #'
 #' @export
 get_pixel_data_size <- function(width, height, format) {
@@ -7729,11 +5929,10 @@ get_pixel_data_size <- function(width, height, format) {
   get_pixel_data_size_(width, height, format)
 }
 
-#' Get font default
+#' Get Font Default
 #'
 #' Get the default Font.
 #'
-
 #'
 #' @return A font
 #'
@@ -7743,7 +5942,8 @@ get_pixel_data_size <- function(width, height, format) {
 #' Font GetFontDefault(void);
 #' ```
 #'
-#' @family font functions
+#' @family default functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -7751,7 +5951,7 @@ get_font_default <- function() {
   get_font_default_()
 }
 
-#' Load font
+#' Load Font
 #'
 #' Load font from file into GPU memory (VRAM).
 #'
@@ -7762,10 +5962,11 @@ get_font_default <- function() {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' Font LoadFont(const char *fileName);
+#' Font LoadFont(const char * fileName);
 #' ```
 #'
 #' @family font functions
+#' @family load functions
 #'
 #'
 #' @export
@@ -7774,7 +5975,7 @@ load_font <- function(file_name) {
   load_font_(file_name)
 }
 
-#' Load font from image
+#' Load Font From Image
 #'
 #' Load font from Image (XNA style).
 #'
@@ -7790,12 +5991,9 @@ load_font <- function(file_name) {
 #' Font LoadFontFromImage(Image image, Color key, int firstChar);
 #' ```
 #'
-#' @family font functions
 #' @family image functions
+#' @family load functions
 #'
-#'
-#' @seealso [image()] for creating image objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 load_font_from_image <- function(image, key, first_char) {
@@ -7805,36 +6003,35 @@ load_font_from_image <- function(image, key, first_char) {
   load_font_from_image_(image, key, first_char)
 }
 
-#' Unload font data
+#' Is Font Valid
 #'
-#' Unload font chars info data (RAM).
+#' Check if a font is valid (font data loaded, WARNING: GPU texture not checked).
 #'
-#' @param chars A glyph_info.
-#' @param glyph_count An integer.
+#' @param font A font.
 #'
+#' @return A logical
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' void UnloadFontData(GlyphInfo *chars, int glyphCount);
+#' bool IsFontValid(Font font);
 #' ```
 #'
-#' @family font functions
+#' @family valid functions
+#' @family is functions
 #'
 #'
 #' @export
-unload_font_data <- function(chars, glyph_count) {
-  if (!is_glyph_info(chars)) abort(paste0('`chars` must be a glyph_info, not ', friendly_typeof(chars), '.'), call = NULL)
-  if (!is_int(glyph_count)) abort(paste0('`glyph_count` must be an integer, not ', friendly_typeof(glyph_count), '.'), call = NULL)
-  unload_font_data_(chars, glyph_count)
+is_font_valid <- function(font) {
+  if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
+  is_font_valid_(font)
 }
 
-#' Unload font
+#' Unload Font
 #'
-#' Unload Font from GPU memory (VRAM).
+#' Unload font from GPU memory (VRAM).
 #'
 #' @param font A font.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -7843,9 +6040,8 @@ unload_font_data <- function(chars, glyph_count) {
 #' ```
 #'
 #' @family font functions
+#' @family unload functions
 #'
-#'
-#' @seealso [font()] for creating font objects.
 #'
 #' @export
 unload_font <- function(font) {
@@ -7853,236 +6049,207 @@ unload_font <- function(font) {
   unload_font_(font)
 }
 
-#' Draw fps
+#' Export Font As Code
+#'
+#' Export font as code file, returns true on success.
+#'
+#' @param font A font.
+#' @param file_name A string.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool ExportFontAsCode(Font font, const char * fileName);
+#' ```
+#'
+#' @family code functions
+#' @family export functions
+#'
+#'
+#' @export
+export_font_as_code <- function(font, file_name) {
+  if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
+  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
+  export_font_as_code_(font, file_name)
+}
+
+#' Draw Fps
 #'
 #' Draw current FPS.
 #'
-#' @param pos_x An integer or a vector of integers.
-#' @param pos_y An integer or a vector of integers.
+#' @param pos_x An integer.
+#' @param pos_y An integer.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawFPS(int posX, int posY);
 #' ```
 #'
-#' @family draw functions
 #' @family fps functions
+#' @family draw functions
 #'
 #'
 #' @export
 draw_fps <- function(pos_x, pos_y) {
-  if (!is_int(pos_x) && !is_vec(pos_x, is_int)) abort(paste0('`pos_x` must be an integer or a vector of integers, not ', friendly_typeof(pos_x), '.'), call = NULL)
-  if (!is_int(pos_y) && !is_vec(pos_y, is_int)) abort(paste0('`pos_y` must be an integer or a vector of integers, not ', friendly_typeof(pos_y), '.'), call = NULL)
-
-  lens <- c(length(pos_x), length(pos_y))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) pos_x <- rep(pos_x, length.out = max_len)
-    if (lens[2] < max_len) pos_y <- rep(pos_y, length.out = max_len)
-    draw_fps_vectorized_(pos_x, pos_y)
-  } else {
-    draw_fps_(pos_x, pos_y)
-  }
+  if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
+  if (!is_int(pos_y)) abort(paste0('`pos_y` must be an integer, not ', friendly_typeof(pos_y), '.'), call = NULL)
+  draw_fps_(pos_x, pos_y)
 }
 
-#' Draw text
+#' Draw Text
 #'
 #' Draw text (using default font).
 #'
-#' @param text A string or a vector of strings.
-#' @param pos_x An integer or a vector of integers.
-#' @param pos_y An integer or a vector of integers.
-#' @param font_size An integer or a vector of integers.
-#' @param color A color or a list of colors.
+#' @param text A string.
+#' @param pos_x An integer.
+#' @param pos_y An integer.
+#' @param font_size An integer.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' void DrawText(const char *text, int posX, int posY, int fontSize, Color color);
+#' void DrawText(const char * text, int posX, int posY, int fontSize, Color color);
 #' ```
 #'
-#' @family draw functions
 #' @family text functions
+#' @family draw functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_text <- function(text, pos_x, pos_y, font_size, color) {
-  if (!is_const_char_pointer(text) && !is_vec(text, is_const_char_pointer)) abort(paste0('`text` must be a string or a vector of strings, not ', friendly_typeof(text), '.'), call = NULL)
-  if (!is_int(pos_x) && !is_vec(pos_x, is_int)) abort(paste0('`pos_x` must be an integer or a vector of integers, not ', friendly_typeof(pos_x), '.'), call = NULL)
-  if (!is_int(pos_y) && !is_vec(pos_y, is_int)) abort(paste0('`pos_y` must be an integer or a vector of integers, not ', friendly_typeof(pos_y), '.'), call = NULL)
-  if (!is_int(font_size) && !is_vec(font_size, is_int)) abort(paste0('`font_size` must be an integer or a vector of integers, not ', friendly_typeof(font_size), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(text), length(pos_x), length(pos_y), length(font_size), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) text <- rep(unlist(list(text)), length.out = max_len)
-    if (lens[2] < max_len) pos_x <- rep(pos_x, length.out = max_len)
-    if (lens[3] < max_len) pos_y <- rep(pos_y, length.out = max_len)
-    if (lens[4] < max_len) font_size <- rep(font_size, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_text_vectorized_(text, pos_x, pos_y, font_size, color)
-  } else {
-    draw_text_(text, pos_x, pos_y, font_size, color)
-  }
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
+  if (!is_int(pos_y)) abort(paste0('`pos_y` must be an integer, not ', friendly_typeof(pos_y), '.'), call = NULL)
+  if (!is_int(font_size)) abort(paste0('`font_size` must be an integer, not ', friendly_typeof(font_size), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_text_(text, pos_x, pos_y, font_size, color)
 }
 
-#' Draw text ex
+#' Draw Text Ex
 #'
 #' Draw text using font and additional parameters.
 #'
-#' @param font A font or a list of fonts.
-#' @param text A string or a vector of strings.
-#' @param position A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param font_size A number or a vector of numbers.
-#' @param spacing A number or a vector of numbers.
-#' @param tint A color or a list of colors.
+#' @param font A font.
+#' @param text A string.
+#' @param position A numeric vector of length 2.
+#' @param font_size A number.
+#' @param spacing A number.
+#' @param tint A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' void DrawTextEx(Font font, const char *text, Vector2 position, float fontSize, float spacing, Color tint);
+#' void DrawTextEx(Font font, const char * text, Vector2 position, float fontSize, float spacing, Color tint);
 #' ```
 #'
+#' @family ex functions
 #' @family draw functions
-#' @family text functions
 #'
-#'
-#' @seealso [font()] for creating font objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_text_ex <- function(font, text, position, font_size, spacing, tint) {
-  if (!is_font(font) && !is_vec(font, is_font)) abort(paste0('`font` must be a font or a list of fonts, not ', friendly_typeof(font), '.'), call = NULL)
-  if (!is_const_char_pointer(text) && !is_vec(text, is_const_char_pointer)) abort(paste0('`text` must be a string or a vector of strings, not ', friendly_typeof(text), '.'), call = NULL)
-  if (!is_vector_2(position) && !is_mat(position, is_vector_2)) abort(paste0('`position` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_float(font_size) && !is_vec(font_size, is_float)) abort(paste0('`font_size` must be a number or a vector of numbers, not ', friendly_typeof(font_size), '.'), call = NULL)
-  if (!is_float(spacing) && !is_vec(spacing, is_float)) abort(paste0('`spacing` must be a number or a vector of numbers, not ', friendly_typeof(spacing), '.'), call = NULL)
-  if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-
-  lens <- c(length(font), length(text), ifelse(is.matrix(position), nrow(position), 1), length(font_size), length(spacing), length(tint))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) font <- rep(unlist(list(font)), length.out = max_len)
-    if (lens[2] < max_len) text <- rep(unlist(list(text)), length.out = max_len)
-    if (lens[3] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[4] < max_len) font_size <- rep(font_size, length.out = max_len)
-    if (lens[5] < max_len) spacing <- rep(spacing, length.out = max_len)
-    if (lens[6] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
-    draw_text_ex_vectorized_(font, text, position, font_size, spacing, tint)
-  } else {
-    draw_text_ex_(font, text, position, font_size, spacing, tint)
-  }
+  if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_float(font_size)) abort(paste0('`font_size` must be a number, not ', friendly_typeof(font_size), '.'), call = NULL)
+  if (!is_float(spacing)) abort(paste0('`spacing` must be a number, not ', friendly_typeof(spacing), '.'), call = NULL)
+  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
+  draw_text_ex_(font, text, position, font_size, spacing, tint)
 }
 
-#' Draw text pro
+#' Draw Text Pro
 #'
 #' Draw text using Font and pro parameters (rotation).
 #'
-#' @param font A font or a list of fonts.
-#' @param text A string or a vector of strings.
-#' @param position A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param origin A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param rotation A number or a vector of numbers.
-#' @param font_size A number or a vector of numbers.
-#' @param spacing A number or a vector of numbers.
-#' @param tint A color or a list of colors.
+#' @param font A font.
+#' @param text A string.
+#' @param position A numeric vector of length 2.
+#' @param origin A numeric vector of length 2.
+#' @param rotation A number.
+#' @param font_size A number.
+#' @param spacing A number.
+#' @param tint A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' void DrawTextPro(Font font, const char *text, Vector2 position, Vector2 origin, float rotation, float fontSize, float spacing, Color tint);
+#' void DrawTextPro(Font font, const char * text, Vector2 position, Vector2 origin, float rotation, float fontSize, float spacing, Color tint);
 #' ```
 #'
+#' @family pro functions
 #' @family draw functions
-#' @family text functions
 #'
-#'
-#' @seealso [font()] for creating font objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_text_pro <- function(font, text, position, origin, rotation, font_size, spacing, tint) {
-  if (!is_font(font) && !is_vec(font, is_font)) abort(paste0('`font` must be a font or a list of fonts, not ', friendly_typeof(font), '.'), call = NULL)
-  if (!is_const_char_pointer(text) && !is_vec(text, is_const_char_pointer)) abort(paste0('`text` must be a string or a vector of strings, not ', friendly_typeof(text), '.'), call = NULL)
-  if (!is_vector_2(position) && !is_mat(position, is_vector_2)) abort(paste0('`position` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_vector_2(origin) && !is_mat(origin, is_vector_2)) abort(paste0('`origin` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(origin), '.'), call = NULL)
-  if (!is_float(rotation) && !is_vec(rotation, is_float)) abort(paste0('`rotation` must be a number or a vector of numbers, not ', friendly_typeof(rotation), '.'), call = NULL)
-  if (!is_float(font_size) && !is_vec(font_size, is_float)) abort(paste0('`font_size` must be a number or a vector of numbers, not ', friendly_typeof(font_size), '.'), call = NULL)
-  if (!is_float(spacing) && !is_vec(spacing, is_float)) abort(paste0('`spacing` must be a number or a vector of numbers, not ', friendly_typeof(spacing), '.'), call = NULL)
-  if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-
-  lens <- c(length(font), length(text), ifelse(is.matrix(position), nrow(position), 1), ifelse(is.matrix(origin), nrow(origin), 1), length(rotation), length(font_size), length(spacing), length(tint))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) font <- rep(unlist(list(font)), length.out = max_len)
-    if (lens[2] < max_len) text <- rep(unlist(list(text)), length.out = max_len)
-    if (lens[3] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[4] < max_len) origin <- matrix(rep(t(origin), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[5] < max_len) rotation <- rep(rotation, length.out = max_len)
-    if (lens[6] < max_len) font_size <- rep(font_size, length.out = max_len)
-    if (lens[7] < max_len) spacing <- rep(spacing, length.out = max_len)
-    if (lens[8] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
-    draw_text_pro_vectorized_(font, text, position, origin, rotation, font_size, spacing, tint)
-  } else {
-    draw_text_pro_(font, text, position, origin, rotation, font_size, spacing, tint)
-  }
+  if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_vector_2(origin)) abort(paste0('`origin` must be a numeric vector of length 2, not ', friendly_typeof(origin), '.'), call = NULL)
+  if (!is_float(rotation)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(rotation), '.'), call = NULL)
+  if (!is_float(font_size)) abort(paste0('`font_size` must be a number, not ', friendly_typeof(font_size), '.'), call = NULL)
+  if (!is_float(spacing)) abort(paste0('`spacing` must be a number, not ', friendly_typeof(spacing), '.'), call = NULL)
+  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
+  draw_text_pro_(font, text, position, origin, rotation, font_size, spacing, tint)
 }
 
-#' Draw text codepoint
+#' Draw Text Codepoint
 #'
 #' Draw one character (codepoint).
 #'
-#' @param font A font or a list of fonts.
-#' @param codepoint An integer or a vector of integers.
-#' @param position A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param font_size A number or a vector of numbers.
-#' @param tint A color or a list of colors.
+#' @param font A font.
+#' @param codepoint An integer.
+#' @param position A numeric vector of length 2.
+#' @param font_size A number.
+#' @param tint A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawTextCodepoint(Font font, int codepoint, Vector2 position, float fontSize, Color tint);
 #' ```
 #'
+#' @family codepoint functions
 #' @family draw functions
-#' @family text functions
 #'
-#'
-#' @seealso [font()] for creating font objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_text_codepoint <- function(font, codepoint, position, font_size, tint) {
-  if (!is_font(font) && !is_vec(font, is_font)) abort(paste0('`font` must be a font or a list of fonts, not ', friendly_typeof(font), '.'), call = NULL)
-  if (!is_int(codepoint) && !is_vec(codepoint, is_int)) abort(paste0('`codepoint` must be an integer or a vector of integers, not ', friendly_typeof(codepoint), '.'), call = NULL)
-  if (!is_vector_2(position) && !is_mat(position, is_vector_2)) abort(paste0('`position` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_float(font_size) && !is_vec(font_size, is_float)) abort(paste0('`font_size` must be a number or a vector of numbers, not ', friendly_typeof(font_size), '.'), call = NULL)
-  if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-
-  lens <- c(length(font), length(codepoint), ifelse(is.matrix(position), nrow(position), 1), length(font_size), length(tint))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) font <- rep(unlist(list(font)), length.out = max_len)
-    if (lens[2] < max_len) codepoint <- rep(codepoint, length.out = max_len)
-    if (lens[3] < max_len) position <- matrix(rep(t(position), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[4] < max_len) font_size <- rep(font_size, length.out = max_len)
-    if (lens[5] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
-    draw_text_codepoint_vectorized_(font, codepoint, position, font_size, tint)
-  } else {
-    draw_text_codepoint_(font, codepoint, position, font_size, tint)
-  }
+  if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
+  if (!is_int(codepoint)) abort(paste0('`codepoint` must be an integer, not ', friendly_typeof(codepoint), '.'), call = NULL)
+  if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_float(font_size)) abort(paste0('`font_size` must be a number, not ', friendly_typeof(font_size), '.'), call = NULL)
+  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
+  draw_text_codepoint_(font, codepoint, position, font_size, tint)
 }
 
-#' Measure text
+#' Set Text Line Spacing
+#'
+#' Set vertical line spacing when drawing with line-breaks.
+#'
+#' @param spacing An integer.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetTextLineSpacing(int spacing);
+#' ```
+#'
+#' @family spacing functions
+#' @family set functions
+#'
+#'
+#' @export
+set_text_line_spacing <- function(spacing) {
+  if (!is_int(spacing)) abort(paste0('`spacing` must be an integer, not ', friendly_typeof(spacing), '.'), call = NULL)
+  set_text_line_spacing_(spacing)
+}
+
+#' Measure Text
 #'
 #' Measure string width for default font.
 #'
@@ -8094,7 +6261,7 @@ draw_text_codepoint <- function(font, codepoint, position, font_size, tint) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' int MeasureText(const char *text, int fontSize);
+#' int MeasureText(const char * text, int fontSize);
 #' ```
 #'
 #' @family text functions
@@ -8107,7 +6274,7 @@ measure_text <- function(text, font_size) {
   measure_text_(text, font_size)
 }
 
-#' Measure text ex
+#' Measure Text Ex
 #'
 #' Measure string size for Font.
 #'
@@ -8121,13 +6288,11 @@ measure_text <- function(text, font_size) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' Vector2 MeasureTextEx(Font font, const char *text, float fontSize, float spacing);
+#' Vector2 MeasureTextEx(Font font, const char * text, float fontSize, float spacing);
 #' ```
 #'
-#' @family text functions
+#' @family ex functions
 #'
-#'
-#' @seealso [font()] for creating font objects.
 #'
 #' @export
 measure_text_ex <- function(font, text, font_size, spacing) {
@@ -8138,111 +6303,170 @@ measure_text_ex <- function(font, text, font_size, spacing) {
   measure_text_ex_(font, text, font_size, spacing)
 }
 
-#' Get glyph index
+#' Text Is Equal
 #'
-#' Get glyph index position in font for a codepoint (unicode character), fallback to '?' if not found.
+#' Check if two text string are equal.
 #'
-#' @param font A font.
-#' @param codepoint An integer.
+#' @param text1 A string.
+#' @param text2 A string.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool TextIsEqual(const char * text1, const char * text2);
+#' ```
+#'
+#' @family equal functions
+#'
+#'
+#' @export
+text_is_equal <- function(text1, text2) {
+  if (!is_const_char_pointer(text1)) abort(paste0('`text1` must be a string, not ', friendly_typeof(text1), '.'), call = NULL)
+  if (!is_const_char_pointer(text2)) abort(paste0('`text2` must be a string, not ', friendly_typeof(text2), '.'), call = NULL)
+  text_is_equal_(text1, text2)
+}
+
+#' Text Length
+#'
+#' Get text length, checks for '\0' ending.
+#'
+#' @param text A string.
 #'
 #' @return An integer
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' int GetGlyphIndex(Font font, int codepoint);
+#' unsigned int TextLength(const char * text);
 #' ```
 #'
+#' @family length functions
 #'
-#' @seealso [font()] for creating font objects.
 #'
 #' @export
-get_glyph_index <- function(font, codepoint) {
-  if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
-  if (!is_int(codepoint)) abort(paste0('`codepoint` must be an integer, not ', friendly_typeof(codepoint), '.'), call = NULL)
-  get_glyph_index_(font, codepoint)
+text_length <- function(text) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  text_length_(text)
 }
 
-#' Get glyph info
+#' Get Text Between
 #'
-#' Get glyph font info data for a codepoint (unicode character), fallback to '?' if not found.
-#'
-#' @param font A font.
-#' @param codepoint An integer.
-#'
-#' @return A glyph_info
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' GlyphInfo GetGlyphInfo(Font font, int codepoint);
-#' ```
-#'
-#'
-#' @seealso [font()] for creating font objects.
-#'
-#' @export
-get_glyph_info <- function(font, codepoint) {
-  if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
-  if (!is_int(codepoint)) abort(paste0('`codepoint` must be an integer, not ', friendly_typeof(codepoint), '.'), call = NULL)
-  get_glyph_info_(font, codepoint)
-}
-
-#' Get glyph atlas rec
-#'
-#' Get glyph rectangle in font atlas for a codepoint (unicode character), fallback to '?' if not found.
-#'
-#' @param font A font.
-#' @param codepoint An integer.
-#'
-#' @return A rectangle
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' Rectangle GetGlyphAtlasRec(Font font, int codepoint);
-#' ```
-#'
-#'
-#' @seealso [font()] for creating font objects.
-#'
-#' @export
-get_glyph_atlas_rec <- function(font, codepoint) {
-  if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
-  if (!is_int(codepoint)) abort(paste0('`codepoint` must be an integer, not ', friendly_typeof(codepoint), '.'), call = NULL)
-  get_glyph_atlas_rec_(font, codepoint)
-}
-
-#' Text replace
-#'
-#' Replace text string (WARNING: memory must be freed!).
+#' Get text between two strings.
 #'
 #' @param text A string.
-#' @param replace A string.
-#' @param by A string.
+#' @param begin A string.
+#' @param end A string.
 #'
 #' @return A string
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' char *TextReplace(char *text, const char *replace, const char *by);
+#' char * GetTextBetween(const char * text, const char * begin, const char * end);
 #' ```
 #'
-#' @family text functions
+#' @family between functions
+#' @family get functions
 #'
 #'
 #' @export
-text_replace <- function(text, replace, by) {
+get_text_between <- function(text, begin, end) {
   if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
-  if (!is_const_char_pointer(replace)) abort(paste0('`replace` must be a string, not ', friendly_typeof(replace), '.'), call = NULL)
-  if (!is_const_char_pointer(by)) abort(paste0('`by` must be a string, not ', friendly_typeof(by), '.'), call = NULL)
-  text_replace_(text, replace, by)
+  if (!is_const_char_pointer(begin)) abort(paste0('`begin` must be a string, not ', friendly_typeof(begin), '.'), call = NULL)
+  if (!is_const_char_pointer(end)) abort(paste0('`end` must be a string, not ', friendly_typeof(end), '.'), call = NULL)
+  get_text_between_(text, begin, end)
 }
 
-#' Text insert
+#' Text Replace Alloc
 #'
-#' Insert text in a position (WARNING: memory must be freed!).
+#' Replace text string with new string, memory must be MemFree().
+#'
+#' @param text A string.
+#' @param search A string.
+#' @param replacement A string.
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' char * TextReplaceAlloc(const char * text, const char * search, const char * replacement);
+#' ```
+#'
+#' @family alloc functions
+#'
+#'
+#' @export
+text_replace_alloc <- function(text, search, replacement) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  if (!is_const_char_pointer(search)) abort(paste0('`search` must be a string, not ', friendly_typeof(search), '.'), call = NULL)
+  if (!is_const_char_pointer(replacement)) abort(paste0('`replacement` must be a string, not ', friendly_typeof(replacement), '.'), call = NULL)
+  text_replace_alloc_(text, search, replacement)
+}
+
+#' Text Replace Between
+#'
+#' Replace text between two specific strings.
+#'
+#' @param text A string.
+#' @param begin A string.
+#' @param end A string.
+#' @param replacement A string.
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' char * TextReplaceBetween(const char * text, const char * begin, const char * end, const char * replacement);
+#' ```
+#'
+#' @family between functions
+#'
+#'
+#' @export
+text_replace_between <- function(text, begin, end, replacement) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  if (!is_const_char_pointer(begin)) abort(paste0('`begin` must be a string, not ', friendly_typeof(begin), '.'), call = NULL)
+  if (!is_const_char_pointer(end)) abort(paste0('`end` must be a string, not ', friendly_typeof(end), '.'), call = NULL)
+  if (!is_const_char_pointer(replacement)) abort(paste0('`replacement` must be a string, not ', friendly_typeof(replacement), '.'), call = NULL)
+  text_replace_between_(text, begin, end, replacement)
+}
+
+#' Text Replace Between Alloc
+#'
+#' Replace text between two specific strings, memory must be MemFree().
+#'
+#' @param text A string.
+#' @param begin A string.
+#' @param end A string.
+#' @param replacement A string.
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' char * TextReplaceBetweenAlloc(const char * text, const char * begin, const char * end, const char * replacement);
+#' ```
+#'
+#' @family alloc functions
+#'
+#'
+#' @export
+text_replace_between_alloc <- function(text, begin, end, replacement) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  if (!is_const_char_pointer(begin)) abort(paste0('`begin` must be a string, not ', friendly_typeof(begin), '.'), call = NULL)
+  if (!is_const_char_pointer(end)) abort(paste0('`end` must be a string, not ', friendly_typeof(end), '.'), call = NULL)
+  if (!is_const_char_pointer(replacement)) abort(paste0('`replacement` must be a string, not ', friendly_typeof(replacement), '.'), call = NULL)
+  text_replace_between_alloc_(text, begin, end, replacement)
+}
+
+#' Text Insert Alloc
+#'
+#' Insert text in a defined byte position, memory must be MemFree().
 #'
 #' @param text A string.
 #' @param insert A string.
@@ -8253,1012 +6477,593 @@ text_replace <- function(text, replace, by) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' char *TextInsert(const char *text, const char *insert, int position);
+#' char * TextInsertAlloc(const char * text, const char * insert, int position);
 #' ```
 #'
-#' @family text functions
+#' @family alloc functions
 #'
 #'
 #' @export
-text_insert <- function(text, insert, position) {
+text_insert_alloc <- function(text, insert, position) {
   if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
   if (!is_const_char_pointer(insert)) abort(paste0('`insert` must be a string, not ', friendly_typeof(insert), '.'), call = NULL)
   if (!is_int(position)) abort(paste0('`position` must be an integer, not ', friendly_typeof(position), '.'), call = NULL)
-  text_insert_(text, insert, position)
+  text_insert_alloc_(text, insert, position)
 }
 
-#' Text find index
-#'
-#' Find first text occurrence within a string.
-#'
-#' @param text A string.
-#' @param find A string.
-#'
-#' @return An integer
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' int TextFindIndex(const char *text, const char *find);
-#' ```
-#'
-#' @family text functions
-#'
-#'
-#' @export
-text_find_index <- function(text, find) {
-  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
-  if (!is_const_char_pointer(find)) abort(paste0('`find` must be a string, not ', friendly_typeof(find), '.'), call = NULL)
-  text_find_index_(text, find)
-}
-
-#' Text to upper
-#'
-#' Get upper case version of provided string.
-#'
-#' @param text A string.
-#'
-#' @return A string
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' const char *TextToUpper(const char *text);
-#' ```
-#'
-#' @family text functions
-#'
-#'
-#' @export
-text_to_upper <- function(text) {
-  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
-  text_to_upper_(text)
-}
-
-#' Text to lower
-#'
-#' Get lower case version of provided string.
-#'
-#' @param text A string.
-#'
-#' @return A string
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' const char *TextToLower(const char *text);
-#' ```
-#'
-#' @family text functions
-#'
-#'
-#' @export
-text_to_lower <- function(text) {
-  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
-  text_to_lower_(text)
-}
-
-#' Text to pascal
-#'
-#' Get Pascal case notation version of provided string.
-#'
-#' @param text A string.
-#'
-#' @return A string
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' const char *TextToPascal(const char *text);
-#' ```
-#'
-#' @family text functions
-#'
-#'
-#' @export
-text_to_pascal <- function(text) {
-  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
-  text_to_pascal_(text)
-}
-
-#' Text to integer
-#'
-#' Get integer value from text (negative values not supported).
-#'
-#' @param text A string.
-#'
-#' @return An integer
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' int TextToInteger(const char *text);
-#' ```
-#'
-#' @family text functions
-#'
-#'
-#' @export
-text_to_integer <- function(text) {
-  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
-  text_to_integer_(text)
-}
-
-#' Draw line 3d
+#' Draw Line 3d
 #'
 #' Draw a line in 3D world space.
 #'
-#' @param start_pos A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param end_pos A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param color A color or a list of colors.
+#' @param start_pos A numeric vector of length 3.
+#' @param end_pos A numeric vector of length 3.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawLine3D(Vector3 startPos, Vector3 endPos, Color color);
 #' ```
 #'
+#' @family 3d functions
 #' @family draw functions
-#' @family line functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_line_3d <- function(start_pos, end_pos, color) {
-  if (!is_vector_3(start_pos) && !is_mat(start_pos, is_vector_3)) abort(paste0('`start_pos` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(start_pos), '.'), call = NULL)
-  if (!is_vector_3(end_pos) && !is_mat(end_pos, is_vector_3)) abort(paste0('`end_pos` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(end_pos), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(start_pos), nrow(start_pos), 1), ifelse(is.matrix(end_pos), nrow(end_pos), 1), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) start_pos <- matrix(rep(t(start_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[2] < max_len) end_pos <- matrix(rep(t(end_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_line_3d_vectorized_(start_pos, end_pos, color)
-  } else {
-    draw_line_3d_(start_pos, end_pos, color)
-  }
+  if (!is_vector_3(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 3, not ', friendly_typeof(start_pos), '.'), call = NULL)
+  if (!is_vector_3(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 3, not ', friendly_typeof(end_pos), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_line_3d_(start_pos, end_pos, color)
 }
 
-#' Draw point 3d
+#' Draw Point 3d
 #'
 #' Draw a point in 3D space, actually a small line.
 #'
-#' @param position A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param color A color or a list of colors.
+#' @param position A numeric vector of length 3.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawPoint3D(Vector3 position, Color color);
 #' ```
 #'
+#' @family 3d functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_point_3d <- function(position, color) {
-  if (!is_vector_3(position) && !is_mat(position, is_vector_3)) abort(paste0('`position` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(position), nrow(position), 1), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[2] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_point_3d_vectorized_(position, color)
-  } else {
-    draw_point_3d_(position, color)
-  }
+  if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_point_3d_(position, color)
 }
 
-#' Draw circle 3d
+#' Draw Circle 3d
 #'
 #' Draw a circle in 3D world space.
 #'
-#' @param center A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param radius A number or a vector of numbers.
-#' @param rotation_axis A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param rotation_angle A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param center A numeric vector of length 3.
+#' @param radius A number.
+#' @param rotation_axis A numeric vector of length 3.
+#' @param rotation_angle A number.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawCircle3D(Vector3 center, float radius, Vector3 rotationAxis, float rotationAngle, Color color);
 #' ```
 #'
+#' @family 3d functions
 #' @family draw functions
-#' @family circle functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_circle_3d <- function(center, radius, rotation_axis, rotation_angle, color) {
-  if (!is_vector_3(center) && !is_mat(center, is_vector_3)) abort(paste0('`center` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(center), '.'), call = NULL)
-  if (!is_float(radius) && !is_vec(radius, is_float)) abort(paste0('`radius` must be a number or a vector of numbers, not ', friendly_typeof(radius), '.'), call = NULL)
-  if (!is_vector_3(rotation_axis) && !is_mat(rotation_axis, is_vector_3)) abort(paste0('`rotation_axis` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(rotation_axis), '.'), call = NULL)
-  if (!is_float(rotation_angle) && !is_vec(rotation_angle, is_float)) abort(paste0('`rotation_angle` must be a number or a vector of numbers, not ', friendly_typeof(rotation_angle), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(center), nrow(center), 1), length(radius), ifelse(is.matrix(rotation_axis), nrow(rotation_axis), 1), length(rotation_angle), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center <- matrix(rep(t(center), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[2] < max_len) radius <- rep(radius, length.out = max_len)
-    if (lens[3] < max_len) rotation_axis <- matrix(rep(t(rotation_axis), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[4] < max_len) rotation_angle <- rep(rotation_angle, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_circle_3d_vectorized_(center, radius, rotation_axis, rotation_angle, color)
-  } else {
-    draw_circle_3d_(center, radius, rotation_axis, rotation_angle, color)
-  }
+  if (!is_vector_3(center)) abort(paste0('`center` must be a numeric vector of length 3, not ', friendly_typeof(center), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_vector_3(rotation_axis)) abort(paste0('`rotation_axis` must be a numeric vector of length 3, not ', friendly_typeof(rotation_axis), '.'), call = NULL)
+  if (!is_float(rotation_angle)) abort(paste0('`rotation_angle` must be a number, not ', friendly_typeof(rotation_angle), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_circle_3d_(center, radius, rotation_axis, rotation_angle, color)
 }
 
-#' Draw triangle 3d
+#' Draw Triangle 3d
 #'
 #' Draw a color-filled triangle (vertex in counter-clockwise order!).
 #'
-#' @param v_1 A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param v_2 A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param v_3 A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param color A color or a list of colors.
+#' @param v1 A numeric vector of length 3.
+#' @param v2 A numeric vector of length 3.
+#' @param v3 A numeric vector of length 3.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawTriangle3D(Vector3 v1, Vector3 v2, Vector3 v3, Color color);
 #' ```
 #'
+#' @family 3d functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
-draw_triangle_3d <- function(v_1, v_2, v_3, color) {
-  if (!is_vector_3(v_1) && !is_mat(v_1, is_vector_3)) abort(paste0('`v_1` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(v_1), '.'), call = NULL)
-  if (!is_vector_3(v_2) && !is_mat(v_2, is_vector_3)) abort(paste0('`v_2` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(v_2), '.'), call = NULL)
-  if (!is_vector_3(v_3) && !is_mat(v_3, is_vector_3)) abort(paste0('`v_3` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(v_3), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(v_1), nrow(v_1), 1), ifelse(is.matrix(v_2), nrow(v_2), 1), ifelse(is.matrix(v_3), nrow(v_3), 1), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) v_1 <- matrix(rep(t(v_1), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[2] < max_len) v_2 <- matrix(rep(t(v_2), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[3] < max_len) v_3 <- matrix(rep(t(v_3), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[4] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_triangle_3d_vectorized_(v_1, v_2, v_3, color)
-  } else {
-    draw_triangle_3d_(v_1, v_2, v_3, color)
-  }
+draw_triangle_3d <- function(v1, v2, v3, color) {
+  if (!is_vector_3(v1)) abort(paste0('`v1` must be a numeric vector of length 3, not ', friendly_typeof(v1), '.'), call = NULL)
+  if (!is_vector_3(v2)) abort(paste0('`v2` must be a numeric vector of length 3, not ', friendly_typeof(v2), '.'), call = NULL)
+  if (!is_vector_3(v3)) abort(paste0('`v3` must be a numeric vector of length 3, not ', friendly_typeof(v3), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_triangle_3d_(v1, v2, v3, color)
 }
 
-#' Draw triangle strip 3d
-#'
-#' Draw a triangle strip defined by points.
-#'
-#' @param points A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param point_count An integer or a vector of integers.
-#' @param color A color or a list of colors.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void DrawTriangleStrip3D(Vector3 *points, int pointCount, Color color);
-#' ```
-#'
-#' @family draw functions
-#'
-#'
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-draw_triangle_strip_3d <- function(points, point_count, color) {
-  if (!is_vector_3(points) && !is_mat(points, is_vector_3)) abort(paste0('`points` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(points), '.'), call = NULL)
-  if (!is_int(point_count) && !is_vec(point_count, is_int)) abort(paste0('`point_count` must be an integer or a vector of integers, not ', friendly_typeof(point_count), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-  draw_triangle_strip_3d_(points, point_count, color)
-}
-
-#' Draw cube
+#' Draw Cube
 #'
 #' Draw cube.
 #'
-#' @param position A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param width A number or a vector of numbers.
-#' @param height A number or a vector of numbers.
-#' @param length A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param position A numeric vector of length 3.
+#' @param width A number.
+#' @param height A number.
+#' @param length A number.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawCube(Vector3 position, float width, float height, float length, Color color);
 #' ```
 #'
+#' @family cube functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_cube <- function(position, width, height, length, color) {
-  if (!is_vector_3(position) && !is_mat(position, is_vector_3)) abort(paste0('`position` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_float(width) && !is_vec(width, is_float)) abort(paste0('`width` must be a number or a vector of numbers, not ', friendly_typeof(width), '.'), call = NULL)
-  if (!is_float(height) && !is_vec(height, is_float)) abort(paste0('`height` must be a number or a vector of numbers, not ', friendly_typeof(height), '.'), call = NULL)
-  if (!is_float(length) && !is_vec(length, is_float)) abort(paste0('`length` must be a number or a vector of numbers, not ', friendly_typeof(length), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(position), nrow(position), 1), length(width), length(height), length(length), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[2] < max_len) width <- rep(width, length.out = max_len)
-    if (lens[3] < max_len) height <- rep(height, length.out = max_len)
-    if (lens[4] < max_len) length <- rep(length, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_cube_vectorized_(position, width, height, length, color)
-  } else {
-    draw_cube_(position, width, height, length, color)
-  }
+  if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_float(width)) abort(paste0('`width` must be a number, not ', friendly_typeof(width), '.'), call = NULL)
+  if (!is_float(height)) abort(paste0('`height` must be a number, not ', friendly_typeof(height), '.'), call = NULL)
+  if (!is_float(length)) abort(paste0('`length` must be a number, not ', friendly_typeof(length), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_cube_(position, width, height, length, color)
 }
 
-#' Draw cube v
+#' Draw Cube V
 #'
 #' Draw cube (Vector version).
 #'
-#' @param position A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param size A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param color A color or a list of colors.
+#' @param position A numeric vector of length 3.
+#' @param size A numeric vector of length 3.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawCubeV(Vector3 position, Vector3 size, Color color);
 #' ```
 #'
+#' @family v functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_cube_v <- function(position, size, color) {
-  if (!is_vector_3(position) && !is_mat(position, is_vector_3)) abort(paste0('`position` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_vector_3(size) && !is_mat(size, is_vector_3)) abort(paste0('`size` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(size), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(position), nrow(position), 1), ifelse(is.matrix(size), nrow(size), 1), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[2] < max_len) size <- matrix(rep(t(size), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_cube_v_vectorized_(position, size, color)
-  } else {
-    draw_cube_v_(position, size, color)
-  }
+  if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_vector_3(size)) abort(paste0('`size` must be a numeric vector of length 3, not ', friendly_typeof(size), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_cube_v_(position, size, color)
 }
 
-#' Draw cube wires
+#' Draw Cube Wires
 #'
 #' Draw cube wires.
 #'
-#' @param position A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param width A number or a vector of numbers.
-#' @param height A number or a vector of numbers.
-#' @param length A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param position A numeric vector of length 3.
+#' @param width A number.
+#' @param height A number.
+#' @param length A number.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawCubeWires(Vector3 position, float width, float height, float length, Color color);
 #' ```
 #'
+#' @family wires functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_cube_wires <- function(position, width, height, length, color) {
-  if (!is_vector_3(position) && !is_mat(position, is_vector_3)) abort(paste0('`position` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_float(width) && !is_vec(width, is_float)) abort(paste0('`width` must be a number or a vector of numbers, not ', friendly_typeof(width), '.'), call = NULL)
-  if (!is_float(height) && !is_vec(height, is_float)) abort(paste0('`height` must be a number or a vector of numbers, not ', friendly_typeof(height), '.'), call = NULL)
-  if (!is_float(length) && !is_vec(length, is_float)) abort(paste0('`length` must be a number or a vector of numbers, not ', friendly_typeof(length), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(position), nrow(position), 1), length(width), length(height), length(length), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[2] < max_len) width <- rep(width, length.out = max_len)
-    if (lens[3] < max_len) height <- rep(height, length.out = max_len)
-    if (lens[4] < max_len) length <- rep(length, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_cube_wires_vectorized_(position, width, height, length, color)
-  } else {
-    draw_cube_wires_(position, width, height, length, color)
-  }
+  if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_float(width)) abort(paste0('`width` must be a number, not ', friendly_typeof(width), '.'), call = NULL)
+  if (!is_float(height)) abort(paste0('`height` must be a number, not ', friendly_typeof(height), '.'), call = NULL)
+  if (!is_float(length)) abort(paste0('`length` must be a number, not ', friendly_typeof(length), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_cube_wires_(position, width, height, length, color)
 }
 
-#' Draw cube wires v
+#' Draw Cube Wires V
 #'
 #' Draw cube wires (Vector version).
 #'
-#' @param position A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param size A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param color A color or a list of colors.
+#' @param position A numeric vector of length 3.
+#' @param size A numeric vector of length 3.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawCubeWiresV(Vector3 position, Vector3 size, Color color);
 #' ```
 #'
+#' @family v functions
 #' @family draw functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_cube_wires_v <- function(position, size, color) {
-  if (!is_vector_3(position) && !is_mat(position, is_vector_3)) abort(paste0('`position` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_vector_3(size) && !is_mat(size, is_vector_3)) abort(paste0('`size` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(size), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(position), nrow(position), 1), ifelse(is.matrix(size), nrow(size), 1), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[2] < max_len) size <- matrix(rep(t(size), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_cube_wires_v_vectorized_(position, size, color)
-  } else {
-    draw_cube_wires_v_(position, size, color)
-  }
+  if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_vector_3(size)) abort(paste0('`size` must be a numeric vector of length 3, not ', friendly_typeof(size), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_cube_wires_v_(position, size, color)
 }
 
-#' Draw cube texture
-#'
-#' Draw cube textured.
-#'
-#' @param texture A texture or a list of textures.
-#' @param position A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param width A number or a vector of numbers.
-#' @param height A number or a vector of numbers.
-#' @param length A number or a vector of numbers.
-#' @param color A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void DrawCubeTexture(Texture2D texture, Vector3 position, float width, float height, float length, Color color);
-#' ```
-#'
-#' @family draw functions
-#' @family texture functions
-#'
-#'
-#' @seealso [texture()] for creating texture objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-draw_cube_texture <- function(texture, position, width, height, length, color) {
-  if (!is_texture(texture) && !is_vec(texture, is_texture)) abort(paste0('`texture` must be a texture or a list of textures, not ', friendly_typeof(texture), '.'), call = NULL)
-  if (!is_vector_3(position) && !is_mat(position, is_vector_3)) abort(paste0('`position` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_float(width) && !is_vec(width, is_float)) abort(paste0('`width` must be a number or a vector of numbers, not ', friendly_typeof(width), '.'), call = NULL)
-  if (!is_float(height) && !is_vec(height, is_float)) abort(paste0('`height` must be a number or a vector of numbers, not ', friendly_typeof(height), '.'), call = NULL)
-  if (!is_float(length) && !is_vec(length, is_float)) abort(paste0('`length` must be a number or a vector of numbers, not ', friendly_typeof(length), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(texture), ifelse(is.matrix(position), nrow(position), 1), length(width), length(height), length(length), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
-    if (lens[2] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[3] < max_len) width <- rep(width, length.out = max_len)
-    if (lens[4] < max_len) height <- rep(height, length.out = max_len)
-    if (lens[5] < max_len) length <- rep(length, length.out = max_len)
-    if (lens[6] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_cube_texture_vectorized_(texture, position, width, height, length, color)
-  } else {
-    draw_cube_texture_(texture, position, width, height, length, color)
-  }
-}
-
-#' Draw cube texture rec
-#'
-#' Draw cube with a region of a texture.
-#'
-#' @param texture A texture or a list of textures.
-#' @param source A rectangle or a list of rectangles.
-#' @param position A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param width A number or a vector of numbers.
-#' @param height A number or a vector of numbers.
-#' @param length A number or a vector of numbers.
-#' @param color A color or a list of colors.
-#'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void DrawCubeTextureRec(Texture2D texture, Rectangle source, Vector3 position, float width, float height, float length, Color color);
-#' ```
-#'
-#' @family draw functions
-#' @family texture functions
-#'
-#'
-#' @seealso [texture()] for creating texture objects.
-#' @seealso [rectangle()] for creating rectangle objects.
-#' @seealso [color()] for creating color objects.
-#'
-#' @export
-draw_cube_texture_rec <- function(texture, source, position, width, height, length, color) {
-  if (!is_texture(texture) && !is_vec(texture, is_texture)) abort(paste0('`texture` must be a texture or a list of textures, not ', friendly_typeof(texture), '.'), call = NULL)
-  if (!is_rectangle(source) && !is_vec(source, is_rectangle)) abort(paste0('`source` must be a rectangle or a list of rectangles, not ', friendly_typeof(source), '.'), call = NULL)
-  if (!is_vector_3(position) && !is_mat(position, is_vector_3)) abort(paste0('`position` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_float(width) && !is_vec(width, is_float)) abort(paste0('`width` must be a number or a vector of numbers, not ', friendly_typeof(width), '.'), call = NULL)
-  if (!is_float(height) && !is_vec(height, is_float)) abort(paste0('`height` must be a number or a vector of numbers, not ', friendly_typeof(height), '.'), call = NULL)
-  if (!is_float(length) && !is_vec(length, is_float)) abort(paste0('`length` must be a number or a vector of numbers, not ', friendly_typeof(length), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(texture), length(source), ifelse(is.matrix(position), nrow(position), 1), length(width), length(height), length(length), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
-    if (lens[2] < max_len) source <- rep(unlist(list(source)), length.out = max_len)
-    if (lens[3] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[4] < max_len) width <- rep(width, length.out = max_len)
-    if (lens[5] < max_len) height <- rep(height, length.out = max_len)
-    if (lens[6] < max_len) length <- rep(length, length.out = max_len)
-    if (lens[7] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_cube_texture_rec_vectorized_(texture, source, position, width, height, length, color)
-  } else {
-    draw_cube_texture_rec_(texture, source, position, width, height, length, color)
-  }
-}
-
-#' Draw sphere
+#' Draw Sphere
 #'
 #' Draw sphere.
 #'
-#' @param center_pos A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param radius A number or a vector of numbers.
-#' @param color A color or a list of colors.
+#' @param center_pos A numeric vector of length 3.
+#' @param radius A number.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawSphere(Vector3 centerPos, float radius, Color color);
 #' ```
 #'
+#' @family sphere functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_sphere <- function(center_pos, radius, color) {
-  if (!is_vector_3(center_pos) && !is_mat(center_pos, is_vector_3)) abort(paste0('`center_pos` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(center_pos), '.'), call = NULL)
-  if (!is_float(radius) && !is_vec(radius, is_float)) abort(paste0('`radius` must be a number or a vector of numbers, not ', friendly_typeof(radius), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(center_pos), nrow(center_pos), 1), length(radius), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center_pos <- matrix(rep(t(center_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[2] < max_len) radius <- rep(radius, length.out = max_len)
-    if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_sphere_vectorized_(center_pos, radius, color)
-  } else {
-    draw_sphere_(center_pos, radius, color)
-  }
+  if (!is_vector_3(center_pos)) abort(paste0('`center_pos` must be a numeric vector of length 3, not ', friendly_typeof(center_pos), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_sphere_(center_pos, radius, color)
 }
 
-#' Draw sphere ex
+#' Draw Sphere Ex
 #'
 #' Draw sphere with extended parameters.
 #'
-#' @param center_pos A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param radius A number or a vector of numbers.
-#' @param rings An integer or a vector of integers.
-#' @param slices An integer or a vector of integers.
-#' @param color A color or a list of colors.
+#' @param center_pos A numeric vector of length 3.
+#' @param radius A number.
+#' @param rings An integer.
+#' @param slices An integer.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawSphereEx(Vector3 centerPos, float radius, int rings, int slices, Color color);
 #' ```
 #'
+#' @family ex functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_sphere_ex <- function(center_pos, radius, rings, slices, color) {
-  if (!is_vector_3(center_pos) && !is_mat(center_pos, is_vector_3)) abort(paste0('`center_pos` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(center_pos), '.'), call = NULL)
-  if (!is_float(radius) && !is_vec(radius, is_float)) abort(paste0('`radius` must be a number or a vector of numbers, not ', friendly_typeof(radius), '.'), call = NULL)
-  if (!is_int(rings) && !is_vec(rings, is_int)) abort(paste0('`rings` must be an integer or a vector of integers, not ', friendly_typeof(rings), '.'), call = NULL)
-  if (!is_int(slices) && !is_vec(slices, is_int)) abort(paste0('`slices` must be an integer or a vector of integers, not ', friendly_typeof(slices), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(center_pos), nrow(center_pos), 1), length(radius), length(rings), length(slices), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center_pos <- matrix(rep(t(center_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[2] < max_len) radius <- rep(radius, length.out = max_len)
-    if (lens[3] < max_len) rings <- rep(rings, length.out = max_len)
-    if (lens[4] < max_len) slices <- rep(slices, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_sphere_ex_vectorized_(center_pos, radius, rings, slices, color)
-  } else {
-    draw_sphere_ex_(center_pos, radius, rings, slices, color)
-  }
+  if (!is_vector_3(center_pos)) abort(paste0('`center_pos` must be a numeric vector of length 3, not ', friendly_typeof(center_pos), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_int(rings)) abort(paste0('`rings` must be an integer, not ', friendly_typeof(rings), '.'), call = NULL)
+  if (!is_int(slices)) abort(paste0('`slices` must be an integer, not ', friendly_typeof(slices), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_sphere_ex_(center_pos, radius, rings, slices, color)
 }
 
-#' Draw sphere wires
+#' Draw Sphere Wires
 #'
 #' Draw sphere wires.
 #'
-#' @param center_pos A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param radius A number or a vector of numbers.
-#' @param rings An integer or a vector of integers.
-#' @param slices An integer or a vector of integers.
-#' @param color A color or a list of colors.
+#' @param center_pos A numeric vector of length 3.
+#' @param radius A number.
+#' @param rings An integer.
+#' @param slices An integer.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawSphereWires(Vector3 centerPos, float radius, int rings, int slices, Color color);
 #' ```
 #'
+#' @family wires functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_sphere_wires <- function(center_pos, radius, rings, slices, color) {
-  if (!is_vector_3(center_pos) && !is_mat(center_pos, is_vector_3)) abort(paste0('`center_pos` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(center_pos), '.'), call = NULL)
-  if (!is_float(radius) && !is_vec(radius, is_float)) abort(paste0('`radius` must be a number or a vector of numbers, not ', friendly_typeof(radius), '.'), call = NULL)
-  if (!is_int(rings) && !is_vec(rings, is_int)) abort(paste0('`rings` must be an integer or a vector of integers, not ', friendly_typeof(rings), '.'), call = NULL)
-  if (!is_int(slices) && !is_vec(slices, is_int)) abort(paste0('`slices` must be an integer or a vector of integers, not ', friendly_typeof(slices), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(center_pos), nrow(center_pos), 1), length(radius), length(rings), length(slices), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center_pos <- matrix(rep(t(center_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[2] < max_len) radius <- rep(radius, length.out = max_len)
-    if (lens[3] < max_len) rings <- rep(rings, length.out = max_len)
-    if (lens[4] < max_len) slices <- rep(slices, length.out = max_len)
-    if (lens[5] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_sphere_wires_vectorized_(center_pos, radius, rings, slices, color)
-  } else {
-    draw_sphere_wires_(center_pos, radius, rings, slices, color)
-  }
+  if (!is_vector_3(center_pos)) abort(paste0('`center_pos` must be a numeric vector of length 3, not ', friendly_typeof(center_pos), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_int(rings)) abort(paste0('`rings` must be an integer, not ', friendly_typeof(rings), '.'), call = NULL)
+  if (!is_int(slices)) abort(paste0('`slices` must be an integer, not ', friendly_typeof(slices), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_sphere_wires_(center_pos, radius, rings, slices, color)
 }
 
-#' Draw cylinder
+#' Draw Cylinder
 #'
 #' Draw a cylinder/cone.
 #'
-#' @param position A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param radius_top A number or a vector of numbers.
-#' @param radius_bottom A number or a vector of numbers.
-#' @param height A number or a vector of numbers.
-#' @param slices An integer or a vector of integers.
-#' @param color A color or a list of colors.
+#' @param position A numeric vector of length 3.
+#' @param radius_top A number.
+#' @param radius_bottom A number.
+#' @param height A number.
+#' @param slices An integer.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawCylinder(Vector3 position, float radiusTop, float radiusBottom, float height, int slices, Color color);
 #' ```
 #'
+#' @family cylinder functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_cylinder <- function(position, radius_top, radius_bottom, height, slices, color) {
-  if (!is_vector_3(position) && !is_mat(position, is_vector_3)) abort(paste0('`position` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_float(radius_top) && !is_vec(radius_top, is_float)) abort(paste0('`radius_top` must be a number or a vector of numbers, not ', friendly_typeof(radius_top), '.'), call = NULL)
-  if (!is_float(radius_bottom) && !is_vec(radius_bottom, is_float)) abort(paste0('`radius_bottom` must be a number or a vector of numbers, not ', friendly_typeof(radius_bottom), '.'), call = NULL)
-  if (!is_float(height) && !is_vec(height, is_float)) abort(paste0('`height` must be a number or a vector of numbers, not ', friendly_typeof(height), '.'), call = NULL)
-  if (!is_int(slices) && !is_vec(slices, is_int)) abort(paste0('`slices` must be an integer or a vector of integers, not ', friendly_typeof(slices), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(position), nrow(position), 1), length(radius_top), length(radius_bottom), length(height), length(slices), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[2] < max_len) radius_top <- rep(radius_top, length.out = max_len)
-    if (lens[3] < max_len) radius_bottom <- rep(radius_bottom, length.out = max_len)
-    if (lens[4] < max_len) height <- rep(height, length.out = max_len)
-    if (lens[5] < max_len) slices <- rep(slices, length.out = max_len)
-    if (lens[6] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_cylinder_vectorized_(position, radius_top, radius_bottom, height, slices, color)
-  } else {
-    draw_cylinder_(position, radius_top, radius_bottom, height, slices, color)
-  }
+  if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_float(radius_top)) abort(paste0('`radius_top` must be a number, not ', friendly_typeof(radius_top), '.'), call = NULL)
+  if (!is_float(radius_bottom)) abort(paste0('`radius_bottom` must be a number, not ', friendly_typeof(radius_bottom), '.'), call = NULL)
+  if (!is_float(height)) abort(paste0('`height` must be a number, not ', friendly_typeof(height), '.'), call = NULL)
+  if (!is_int(slices)) abort(paste0('`slices` must be an integer, not ', friendly_typeof(slices), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_cylinder_(position, radius_top, radius_bottom, height, slices, color)
 }
 
-#' Draw cylinder ex
+#' Draw Cylinder Ex
 #'
 #' Draw a cylinder with base at startPos and top at endPos.
 #'
-#' @param start_pos A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param end_pos A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param start_radius A number or a vector of numbers.
-#' @param end_radius A number or a vector of numbers.
-#' @param sides An integer or a vector of integers.
-#' @param color A color or a list of colors.
+#' @param start_pos A numeric vector of length 3.
+#' @param end_pos A numeric vector of length 3.
+#' @param start_radius A number.
+#' @param end_radius A number.
+#' @param sides An integer.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawCylinderEx(Vector3 startPos, Vector3 endPos, float startRadius, float endRadius, int sides, Color color);
 #' ```
 #'
+#' @family ex functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_cylinder_ex <- function(start_pos, end_pos, start_radius, end_radius, sides, color) {
-  if (!is_vector_3(start_pos) && !is_mat(start_pos, is_vector_3)) abort(paste0('`start_pos` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(start_pos), '.'), call = NULL)
-  if (!is_vector_3(end_pos) && !is_mat(end_pos, is_vector_3)) abort(paste0('`end_pos` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(end_pos), '.'), call = NULL)
-  if (!is_float(start_radius) && !is_vec(start_radius, is_float)) abort(paste0('`start_radius` must be a number or a vector of numbers, not ', friendly_typeof(start_radius), '.'), call = NULL)
-  if (!is_float(end_radius) && !is_vec(end_radius, is_float)) abort(paste0('`end_radius` must be a number or a vector of numbers, not ', friendly_typeof(end_radius), '.'), call = NULL)
-  if (!is_int(sides) && !is_vec(sides, is_int)) abort(paste0('`sides` must be an integer or a vector of integers, not ', friendly_typeof(sides), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(start_pos), nrow(start_pos), 1), ifelse(is.matrix(end_pos), nrow(end_pos), 1), length(start_radius), length(end_radius), length(sides), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) start_pos <- matrix(rep(t(start_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[2] < max_len) end_pos <- matrix(rep(t(end_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[3] < max_len) start_radius <- rep(start_radius, length.out = max_len)
-    if (lens[4] < max_len) end_radius <- rep(end_radius, length.out = max_len)
-    if (lens[5] < max_len) sides <- rep(sides, length.out = max_len)
-    if (lens[6] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_cylinder_ex_vectorized_(start_pos, end_pos, start_radius, end_radius, sides, color)
-  } else {
-    draw_cylinder_ex_(start_pos, end_pos, start_radius, end_radius, sides, color)
-  }
+  if (!is_vector_3(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 3, not ', friendly_typeof(start_pos), '.'), call = NULL)
+  if (!is_vector_3(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 3, not ', friendly_typeof(end_pos), '.'), call = NULL)
+  if (!is_float(start_radius)) abort(paste0('`start_radius` must be a number, not ', friendly_typeof(start_radius), '.'), call = NULL)
+  if (!is_float(end_radius)) abort(paste0('`end_radius` must be a number, not ', friendly_typeof(end_radius), '.'), call = NULL)
+  if (!is_int(sides)) abort(paste0('`sides` must be an integer, not ', friendly_typeof(sides), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_cylinder_ex_(start_pos, end_pos, start_radius, end_radius, sides, color)
 }
 
-#' Draw cylinder wires
+#' Draw Cylinder Wires
 #'
 #' Draw a cylinder/cone wires.
 #'
-#' @param position A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param radius_top A number or a vector of numbers.
-#' @param radius_bottom A number or a vector of numbers.
-#' @param height A number or a vector of numbers.
-#' @param slices An integer or a vector of integers.
-#' @param color A color or a list of colors.
+#' @param position A numeric vector of length 3.
+#' @param radius_top A number.
+#' @param radius_bottom A number.
+#' @param height A number.
+#' @param slices An integer.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawCylinderWires(Vector3 position, float radiusTop, float radiusBottom, float height, int slices, Color color);
 #' ```
 #'
+#' @family wires functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_cylinder_wires <- function(position, radius_top, radius_bottom, height, slices, color) {
-  if (!is_vector_3(position) && !is_mat(position, is_vector_3)) abort(paste0('`position` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_float(radius_top) && !is_vec(radius_top, is_float)) abort(paste0('`radius_top` must be a number or a vector of numbers, not ', friendly_typeof(radius_top), '.'), call = NULL)
-  if (!is_float(radius_bottom) && !is_vec(radius_bottom, is_float)) abort(paste0('`radius_bottom` must be a number or a vector of numbers, not ', friendly_typeof(radius_bottom), '.'), call = NULL)
-  if (!is_float(height) && !is_vec(height, is_float)) abort(paste0('`height` must be a number or a vector of numbers, not ', friendly_typeof(height), '.'), call = NULL)
-  if (!is_int(slices) && !is_vec(slices, is_int)) abort(paste0('`slices` must be an integer or a vector of integers, not ', friendly_typeof(slices), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(position), nrow(position), 1), length(radius_top), length(radius_bottom), length(height), length(slices), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[2] < max_len) radius_top <- rep(radius_top, length.out = max_len)
-    if (lens[3] < max_len) radius_bottom <- rep(radius_bottom, length.out = max_len)
-    if (lens[4] < max_len) height <- rep(height, length.out = max_len)
-    if (lens[5] < max_len) slices <- rep(slices, length.out = max_len)
-    if (lens[6] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_cylinder_wires_vectorized_(position, radius_top, radius_bottom, height, slices, color)
-  } else {
-    draw_cylinder_wires_(position, radius_top, radius_bottom, height, slices, color)
-  }
+  if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_float(radius_top)) abort(paste0('`radius_top` must be a number, not ', friendly_typeof(radius_top), '.'), call = NULL)
+  if (!is_float(radius_bottom)) abort(paste0('`radius_bottom` must be a number, not ', friendly_typeof(radius_bottom), '.'), call = NULL)
+  if (!is_float(height)) abort(paste0('`height` must be a number, not ', friendly_typeof(height), '.'), call = NULL)
+  if (!is_int(slices)) abort(paste0('`slices` must be an integer, not ', friendly_typeof(slices), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_cylinder_wires_(position, radius_top, radius_bottom, height, slices, color)
 }
 
-#' Draw cylinder wires ex
+#' Draw Cylinder Wires Ex
 #'
 #' Draw a cylinder wires with base at startPos and top at endPos.
 #'
-#' @param start_pos A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param end_pos A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param start_radius A number or a vector of numbers.
-#' @param end_radius A number or a vector of numbers.
-#' @param sides An integer or a vector of integers.
-#' @param color A color or a list of colors.
+#' @param start_pos A numeric vector of length 3.
+#' @param end_pos A numeric vector of length 3.
+#' @param start_radius A number.
+#' @param end_radius A number.
+#' @param sides An integer.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawCylinderWiresEx(Vector3 startPos, Vector3 endPos, float startRadius, float endRadius, int sides, Color color);
 #' ```
 #'
+#' @family ex functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_cylinder_wires_ex <- function(start_pos, end_pos, start_radius, end_radius, sides, color) {
-  if (!is_vector_3(start_pos) && !is_mat(start_pos, is_vector_3)) abort(paste0('`start_pos` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(start_pos), '.'), call = NULL)
-  if (!is_vector_3(end_pos) && !is_mat(end_pos, is_vector_3)) abort(paste0('`end_pos` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(end_pos), '.'), call = NULL)
-  if (!is_float(start_radius) && !is_vec(start_radius, is_float)) abort(paste0('`start_radius` must be a number or a vector of numbers, not ', friendly_typeof(start_radius), '.'), call = NULL)
-  if (!is_float(end_radius) && !is_vec(end_radius, is_float)) abort(paste0('`end_radius` must be a number or a vector of numbers, not ', friendly_typeof(end_radius), '.'), call = NULL)
-  if (!is_int(sides) && !is_vec(sides, is_int)) abort(paste0('`sides` must be an integer or a vector of integers, not ', friendly_typeof(sides), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(start_pos), nrow(start_pos), 1), ifelse(is.matrix(end_pos), nrow(end_pos), 1), length(start_radius), length(end_radius), length(sides), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) start_pos <- matrix(rep(t(start_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[2] < max_len) end_pos <- matrix(rep(t(end_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[3] < max_len) start_radius <- rep(start_radius, length.out = max_len)
-    if (lens[4] < max_len) end_radius <- rep(end_radius, length.out = max_len)
-    if (lens[5] < max_len) sides <- rep(sides, length.out = max_len)
-    if (lens[6] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_cylinder_wires_ex_vectorized_(start_pos, end_pos, start_radius, end_radius, sides, color)
-  } else {
-    draw_cylinder_wires_ex_(start_pos, end_pos, start_radius, end_radius, sides, color)
-  }
+  if (!is_vector_3(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 3, not ', friendly_typeof(start_pos), '.'), call = NULL)
+  if (!is_vector_3(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 3, not ', friendly_typeof(end_pos), '.'), call = NULL)
+  if (!is_float(start_radius)) abort(paste0('`start_radius` must be a number, not ', friendly_typeof(start_radius), '.'), call = NULL)
+  if (!is_float(end_radius)) abort(paste0('`end_radius` must be a number, not ', friendly_typeof(end_radius), '.'), call = NULL)
+  if (!is_int(sides)) abort(paste0('`sides` must be an integer, not ', friendly_typeof(sides), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_cylinder_wires_ex_(start_pos, end_pos, start_radius, end_radius, sides, color)
 }
 
-#' Draw plane
+#' Draw Capsule
+#'
+#' Draw a capsule with the center of its sphere caps at startPos and endPos.
+#'
+#' @param start_pos A numeric vector of length 3.
+#' @param end_pos A numeric vector of length 3.
+#' @param radius A number.
+#' @param slices An integer.
+#' @param rings An integer.
+#' @param color A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawCapsule(Vector3 startPos, Vector3 endPos, float radius, int slices, int rings, Color color);
+#' ```
+#'
+#' @family capsule functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_capsule <- function(start_pos, end_pos, radius, slices, rings, color) {
+  if (!is_vector_3(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 3, not ', friendly_typeof(start_pos), '.'), call = NULL)
+  if (!is_vector_3(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 3, not ', friendly_typeof(end_pos), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_int(slices)) abort(paste0('`slices` must be an integer, not ', friendly_typeof(slices), '.'), call = NULL)
+  if (!is_int(rings)) abort(paste0('`rings` must be an integer, not ', friendly_typeof(rings), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_capsule_(start_pos, end_pos, radius, slices, rings, color)
+}
+
+#' Draw Capsule Wires
+#'
+#' Draw capsule wireframe with the center of its sphere caps at startPos and endPos.
+#'
+#' @param start_pos A numeric vector of length 3.
+#' @param end_pos A numeric vector of length 3.
+#' @param radius A number.
+#' @param slices An integer.
+#' @param rings An integer.
+#' @param color A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawCapsuleWires(Vector3 startPos, Vector3 endPos, float radius, int slices, int rings, Color color);
+#' ```
+#'
+#' @family wires functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_capsule_wires <- function(start_pos, end_pos, radius, slices, rings, color) {
+  if (!is_vector_3(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 3, not ', friendly_typeof(start_pos), '.'), call = NULL)
+  if (!is_vector_3(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 3, not ', friendly_typeof(end_pos), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_int(slices)) abort(paste0('`slices` must be an integer, not ', friendly_typeof(slices), '.'), call = NULL)
+  if (!is_int(rings)) abort(paste0('`rings` must be an integer, not ', friendly_typeof(rings), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_capsule_wires_(start_pos, end_pos, radius, slices, rings, color)
+}
+
+#' Draw Plane
 #'
 #' Draw a plane XZ.
 #'
-#' @param center_pos A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param size A numeric vector of length 2 or a numeric matrix of width 2.
-#' @param color A color or a list of colors.
+#' @param center_pos A numeric vector of length 3.
+#' @param size A numeric vector of length 2.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawPlane(Vector3 centerPos, Vector2 size, Color color);
 #' ```
 #'
+#' @family plane functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_plane <- function(center_pos, size, color) {
-  if (!is_vector_3(center_pos) && !is_mat(center_pos, is_vector_3)) abort(paste0('`center_pos` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(center_pos), '.'), call = NULL)
-  if (!is_vector_2(size) && !is_mat(size, is_vector_2)) abort(paste0('`size` must be a numeric vector of length 2 or a numeric matrix of width 2, not ', friendly_typeof(size), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(ifelse(is.matrix(center_pos), nrow(center_pos), 1), ifelse(is.matrix(size), nrow(size), 1), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) center_pos <- matrix(rep(t(center_pos), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[2] < max_len) size <- matrix(rep(t(size), length.out = max_len * 2), ncol = 2, byrow = TRUE)
-    if (lens[3] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_plane_vectorized_(center_pos, size, color)
-  } else {
-    draw_plane_(center_pos, size, color)
-  }
+  if (!is_vector_3(center_pos)) abort(paste0('`center_pos` must be a numeric vector of length 3, not ', friendly_typeof(center_pos), '.'), call = NULL)
+  if (!is_vector_2(size)) abort(paste0('`size` must be a numeric vector of length 2, not ', friendly_typeof(size), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_plane_(center_pos, size, color)
 }
 
-#' Draw ray
+#' Draw Ray
 #'
 #' Draw a ray line.
 #'
-#' @param ray A ray or a list of rays.
-#' @param color A color or a list of colors.
+#' @param ray A ray.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawRay(Ray ray, Color color);
 #' ```
 #'
+#' @family ray functions
 #' @family draw functions
 #'
 #'
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
 draw_ray <- function(ray, color) {
-  if (!is_ray(ray) && !is_vec(ray, is_ray)) abort(paste0('`ray` must be a ray or a list of rays, not ', friendly_typeof(ray), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(ray), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) ray <- rep(unlist(list(ray)), length.out = max_len)
-    if (lens[2] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_ray_vectorized_(ray, color)
-  } else {
-    draw_ray_(ray, color)
-  }
+  if (!is_ray(ray)) abort(paste0('`ray` must be a ray, not ', friendly_typeof(ray), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_ray_(ray, color)
 }
 
-#' Draw grid
+#' Draw Grid
 #'
 #' Draw a grid (centered at (0, 0, 0)).
 #'
-#' @param slices An integer or a vector of integers.
-#' @param spacing A number or a vector of numbers.
+#' @param slices An integer.
+#' @param spacing A number.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawGrid(int slices, float spacing);
 #' ```
 #'
+#' @family grid functions
 #' @family draw functions
 #'
 #'
 #' @export
 draw_grid <- function(slices, spacing) {
-  if (!is_int(slices) && !is_vec(slices, is_int)) abort(paste0('`slices` must be an integer or a vector of integers, not ', friendly_typeof(slices), '.'), call = NULL)
-  if (!is_float(spacing) && !is_vec(spacing, is_float)) abort(paste0('`spacing` must be a number or a vector of numbers, not ', friendly_typeof(spacing), '.'), call = NULL)
-
-  lens <- c(length(slices), length(spacing))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) slices <- rep(slices, length.out = max_len)
-    if (lens[2] < max_len) spacing <- rep(spacing, length.out = max_len)
-    draw_grid_vectorized_(slices, spacing)
-  } else {
-    draw_grid_(slices, spacing)
-  }
+  if (!is_int(slices)) abort(paste0('`slices` must be an integer, not ', friendly_typeof(slices), '.'), call = NULL)
+  if (!is_float(spacing)) abort(paste0('`spacing` must be a number, not ', friendly_typeof(spacing), '.'), call = NULL)
+  draw_grid_(slices, spacing)
 }
 
-#' Load model
+#' Load Model
 #'
 #' Load model from files (meshes and materials).
 #'
@@ -9269,10 +7074,11 @@ draw_grid <- function(slices, spacing) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' Model LoadModel(const char *fileName);
+#' Model LoadModel(const char * fileName);
 #' ```
 #'
 #' @family model functions
+#' @family load functions
 #'
 #'
 #' @export
@@ -9281,12 +7087,59 @@ load_model <- function(file_name) {
   load_model_(file_name)
 }
 
-#' Unload model
+#' Load Model From Mesh
+#'
+#' Load model from generated mesh (default material).
+#'
+#' @param mesh A mesh.
+#'
+#' @return A model
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Model LoadModelFromMesh(Mesh mesh);
+#' ```
+#'
+#' @family mesh functions
+#' @family load functions
+#'
+#'
+#' @export
+load_model_from_mesh <- function(mesh) {
+  if (!is_mesh(mesh)) abort(paste0('`mesh` must be a mesh, not ', friendly_typeof(mesh), '.'), call = NULL)
+  load_model_from_mesh_(mesh)
+}
+
+#' Is Model Valid
+#'
+#' Check if a model is valid (loaded in GPU, VAO/VBOs).
+#'
+#' @param model A model.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool IsModelValid(Model model);
+#' ```
+#'
+#' @family valid functions
+#' @family is functions
+#'
+#'
+#' @export
+is_model_valid <- function(model) {
+  if (!is_model(model)) abort(paste0('`model` must be a model, not ', friendly_typeof(model), '.'), call = NULL)
+  is_model_valid_(model)
+}
+
+#' Unload Model
 #'
 #' Unload model (including meshes) from memory (RAM and/or VRAM).
 #'
 #' @param model A model.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -9295,9 +7148,8 @@ load_model <- function(file_name) {
 #' ```
 #'
 #' @family model functions
+#' @family unload functions
 #'
-#'
-#' @seealso [model()] for creating model objects.
 #'
 #' @export
 unload_model <- function(model) {
@@ -9305,7 +7157,7 @@ unload_model <- function(model) {
   unload_model_(model)
 }
 
-#' Get model bounding box
+#' Get Model Bounding Box
 #'
 #' Compute model bounding box limits (considers all meshes).
 #'
@@ -9319,10 +7171,9 @@ unload_model <- function(model) {
 #' BoundingBox GetModelBoundingBox(Model model);
 #' ```
 #'
-#' @family model functions
+#' @family box functions
+#' @family get functions
 #'
-#'
-#' @seealso [model()] for creating model objects.
 #'
 #' @export
 get_model_bounding_box <- function(model) {
@@ -9330,230 +7181,458 @@ get_model_bounding_box <- function(model) {
   get_model_bounding_box_(model)
 }
 
-#' Draw model
+#' Draw Model
 #'
 #' Draw a model (with texture if set).
 #'
-#' @param model A model or a list of models.
-#' @param position A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param scale A number or a vector of numbers.
-#' @param tint A color or a list of colors.
+#' @param model A model.
+#' @param position A numeric vector of length 3.
+#' @param scale A number.
+#' @param tint A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawModel(Model model, Vector3 position, float scale, Color tint);
 #' ```
 #'
-#' @family draw functions
 #' @family model functions
+#' @family draw functions
 #'
-#'
-#' @seealso [model()] for creating model objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_model <- function(model, position, scale, tint) {
-  if (!is_model(model) && !is_vec(model, is_model)) abort(paste0('`model` must be a model or a list of models, not ', friendly_typeof(model), '.'), call = NULL)
-  if (!is_vector_3(position) && !is_mat(position, is_vector_3)) abort(paste0('`position` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_float(scale) && !is_vec(scale, is_float)) abort(paste0('`scale` must be a number or a vector of numbers, not ', friendly_typeof(scale), '.'), call = NULL)
-  if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-
-  lens <- c(length(model), ifelse(is.matrix(position), nrow(position), 1), length(scale), length(tint))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) model <- rep(unlist(list(model)), length.out = max_len)
-    if (lens[2] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[3] < max_len) scale <- rep(scale, length.out = max_len)
-    if (lens[4] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
-    draw_model_vectorized_(model, position, scale, tint)
-  } else {
-    draw_model_(model, position, scale, tint)
-  }
+  if (!is_model(model)) abort(paste0('`model` must be a model, not ', friendly_typeof(model), '.'), call = NULL)
+  if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_float(scale)) abort(paste0('`scale` must be a number, not ', friendly_typeof(scale), '.'), call = NULL)
+  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
+  draw_model_(model, position, scale, tint)
 }
 
-#' Draw model ex
+#' Draw Model Ex
 #'
 #' Draw a model with extended parameters.
 #'
-#' @param model A model or a list of models.
-#' @param position A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param rotation_axis A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param rotation_angle A number or a vector of numbers.
-#' @param scale A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param tint A color or a list of colors.
+#' @param model A model.
+#' @param position A numeric vector of length 3.
+#' @param rotation_axis A numeric vector of length 3.
+#' @param rotation_angle A number.
+#' @param scale A numeric vector of length 3.
+#' @param tint A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawModelEx(Model model, Vector3 position, Vector3 rotationAxis, float rotationAngle, Vector3 scale, Color tint);
 #' ```
 #'
+#' @family ex functions
 #' @family draw functions
-#' @family model functions
 #'
-#'
-#' @seealso [model()] for creating model objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_model_ex <- function(model, position, rotation_axis, rotation_angle, scale, tint) {
-  if (!is_model(model) && !is_vec(model, is_model)) abort(paste0('`model` must be a model or a list of models, not ', friendly_typeof(model), '.'), call = NULL)
-  if (!is_vector_3(position) && !is_mat(position, is_vector_3)) abort(paste0('`position` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_vector_3(rotation_axis) && !is_mat(rotation_axis, is_vector_3)) abort(paste0('`rotation_axis` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(rotation_axis), '.'), call = NULL)
-  if (!is_float(rotation_angle) && !is_vec(rotation_angle, is_float)) abort(paste0('`rotation_angle` must be a number or a vector of numbers, not ', friendly_typeof(rotation_angle), '.'), call = NULL)
-  if (!is_vector_3(scale) && !is_mat(scale, is_vector_3)) abort(paste0('`scale` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(scale), '.'), call = NULL)
-  if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-
-  lens <- c(length(model), ifelse(is.matrix(position), nrow(position), 1), ifelse(is.matrix(rotation_axis), nrow(rotation_axis), 1), length(rotation_angle), ifelse(is.matrix(scale), nrow(scale), 1), length(tint))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) model <- rep(unlist(list(model)), length.out = max_len)
-    if (lens[2] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[3] < max_len) rotation_axis <- matrix(rep(t(rotation_axis), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[4] < max_len) rotation_angle <- rep(rotation_angle, length.out = max_len)
-    if (lens[5] < max_len) scale <- matrix(rep(t(scale), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[6] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
-    draw_model_ex_vectorized_(model, position, rotation_axis, rotation_angle, scale, tint)
-  } else {
-    draw_model_ex_(model, position, rotation_axis, rotation_angle, scale, tint)
-  }
+  if (!is_model(model)) abort(paste0('`model` must be a model, not ', friendly_typeof(model), '.'), call = NULL)
+  if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_vector_3(rotation_axis)) abort(paste0('`rotation_axis` must be a numeric vector of length 3, not ', friendly_typeof(rotation_axis), '.'), call = NULL)
+  if (!is_float(rotation_angle)) abort(paste0('`rotation_angle` must be a number, not ', friendly_typeof(rotation_angle), '.'), call = NULL)
+  if (!is_vector_3(scale)) abort(paste0('`scale` must be a numeric vector of length 3, not ', friendly_typeof(scale), '.'), call = NULL)
+  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
+  draw_model_ex_(model, position, rotation_axis, rotation_angle, scale, tint)
 }
 
-#' Draw model wires
+#' Draw Model Wires
 #'
 #' Draw a model wires (with texture if set).
 #'
-#' @param model A model or a list of models.
-#' @param position A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param scale A number or a vector of numbers.
-#' @param tint A color or a list of colors.
+#' @param model A model.
+#' @param position A numeric vector of length 3.
+#' @param scale A number.
+#' @param tint A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawModelWires(Model model, Vector3 position, float scale, Color tint);
 #' ```
 #'
+#' @family wires functions
 #' @family draw functions
-#' @family model functions
 #'
-#'
-#' @seealso [model()] for creating model objects.
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_model_wires <- function(model, position, scale, tint) {
-  if (!is_model(model) && !is_vec(model, is_model)) abort(paste0('`model` must be a model or a list of models, not ', friendly_typeof(model), '.'), call = NULL)
-  if (!is_vector_3(position) && !is_mat(position, is_vector_3)) abort(paste0('`position` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_float(scale) && !is_vec(scale, is_float)) abort(paste0('`scale` must be a number or a vector of numbers, not ', friendly_typeof(scale), '.'), call = NULL)
-  if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-
-  lens <- c(length(model), ifelse(is.matrix(position), nrow(position), 1), length(scale), length(tint))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) model <- rep(unlist(list(model)), length.out = max_len)
-    if (lens[2] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[3] < max_len) scale <- rep(scale, length.out = max_len)
-    if (lens[4] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
-    draw_model_wires_vectorized_(model, position, scale, tint)
-  } else {
-    draw_model_wires_(model, position, scale, tint)
-  }
+  if (!is_model(model)) abort(paste0('`model` must be a model, not ', friendly_typeof(model), '.'), call = NULL)
+  if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_float(scale)) abort(paste0('`scale` must be a number, not ', friendly_typeof(scale), '.'), call = NULL)
+  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
+  draw_model_wires_(model, position, scale, tint)
 }
 
-#' Draw bounding box
+#' Draw Model Wires Ex
+#'
+#' Draw a model wires (with texture if set) with extended parameters.
+#'
+#' @param model A model.
+#' @param position A numeric vector of length 3.
+#' @param rotation_axis A numeric vector of length 3.
+#' @param rotation_angle A number.
+#' @param scale A numeric vector of length 3.
+#' @param tint A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawModelWiresEx(Model model, Vector3 position, Vector3 rotationAxis, float rotationAngle, Vector3 scale, Color tint);
+#' ```
+#'
+#' @family ex functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_model_wires_ex <- function(model, position, rotation_axis, rotation_angle, scale, tint) {
+  if (!is_model(model)) abort(paste0('`model` must be a model, not ', friendly_typeof(model), '.'), call = NULL)
+  if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_vector_3(rotation_axis)) abort(paste0('`rotation_axis` must be a numeric vector of length 3, not ', friendly_typeof(rotation_axis), '.'), call = NULL)
+  if (!is_float(rotation_angle)) abort(paste0('`rotation_angle` must be a number, not ', friendly_typeof(rotation_angle), '.'), call = NULL)
+  if (!is_vector_3(scale)) abort(paste0('`scale` must be a numeric vector of length 3, not ', friendly_typeof(scale), '.'), call = NULL)
+  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
+  draw_model_wires_ex_(model, position, rotation_axis, rotation_angle, scale, tint)
+}
+
+#' Draw Bounding Box
 #'
 #' Draw bounding box (wires).
 #'
-#' @param box A bounding_box or a list of bounding_boxs.
-#' @param color A color or a list of colors.
+#' @param box A bounding_box.
+#' @param color A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
 #' void DrawBoundingBox(BoundingBox box, Color color);
 #' ```
 #'
+#' @family box functions
 #' @family draw functions
 #'
-#'
-#' @seealso [color()] for creating color objects.
 #'
 #' @export
 draw_bounding_box <- function(box, color) {
-  if (!is_bounding_box(box) && !is_vec(box, is_bounding_box)) abort(paste0('`box` must be a bounding_box or a list of bounding_boxs, not ', friendly_typeof(box), '.'), call = NULL)
-  if (!is_color(color) && !is_vec(color, is_color)) abort(paste0('`color` must be a color or a list of colors, not ', friendly_typeof(color), '.'), call = NULL)
-
-  lens <- c(length(box), length(color))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) box <- rep(unlist(list(box)), length.out = max_len)
-    if (lens[2] < max_len) color <- rep(unlist(list(color)), length.out = max_len)
-    draw_bounding_box_vectorized_(box, color)
-  } else {
-    draw_bounding_box_(box, color)
-  }
+  if (!is_bounding_box(box)) abort(paste0('`box` must be a bounding_box, not ', friendly_typeof(box), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_bounding_box_(box, color)
 }
 
-#' Draw billboard
+#' Draw Billboard
 #'
 #' Draw a billboard texture.
 #'
-#' @param camera A camera_3d or a list of camera_3ds.
-#' @param texture A texture or a list of textures.
-#' @param position A numeric vector of length 3 or a numeric matrix of width 3.
-#' @param size A number or a vector of numbers.
-#' @param tint A color or a list of colors.
+#' @param camera A camera_3d.
+#' @param texture A texture.
+#' @param position A numeric vector of length 3.
+#' @param scale A number.
+#' @param tint A color.
 #'
-#'
-#' @note This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+#' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' void DrawBillboard(Camera camera, Texture2D texture, Vector3 position, float size, Color tint);
+#' void DrawBillboard(Camera camera, Texture2D texture, Vector3 position, float scale, Color tint);
 #' ```
 #'
+#' @family billboard functions
 #' @family draw functions
 #'
 #'
-#' @seealso [camera_3d()] for creating camera_3d objects.
-#' @seealso [texture()] for creating texture objects.
-#' @seealso [color()] for creating color objects.
-#'
 #' @export
-draw_billboard <- function(camera, texture, position, size, tint) {
-  if (!is_camera_3d(camera) && !is_vec(camera, is_camera_3d)) abort(paste0('`camera` must be a camera_3d or a list of camera_3ds, not ', friendly_typeof(camera), '.'), call = NULL)
-  if (!is_texture(texture) && !is_vec(texture, is_texture)) abort(paste0('`texture` must be a texture or a list of textures, not ', friendly_typeof(texture), '.'), call = NULL)
-  if (!is_vector_3(position) && !is_mat(position, is_vector_3)) abort(paste0('`position` must be a numeric vector of length 3 or a numeric matrix of width 3, not ', friendly_typeof(position), '.'), call = NULL)
-  if (!is_float(size) && !is_vec(size, is_float)) abort(paste0('`size` must be a number or a vector of numbers, not ', friendly_typeof(size), '.'), call = NULL)
-  if (!is_color(tint) && !is_vec(tint, is_color)) abort(paste0('`tint` must be a color or a list of colors, not ', friendly_typeof(tint), '.'), call = NULL)
-
-  lens <- c(length(camera), length(texture), ifelse(is.matrix(position), nrow(position), 1), length(size), length(tint))
-  if (any(lens > 1)) {
-    max_len <- max(lens)
-    if (lens[1] < max_len) camera <- rep(unlist(list(camera)), length.out = max_len)
-    if (lens[2] < max_len) texture <- rep(unlist(list(texture)), length.out = max_len)
-    if (lens[3] < max_len) position <- matrix(rep(t(position), length.out = max_len * 3), ncol = 3, byrow = TRUE)
-    if (lens[4] < max_len) size <- rep(size, length.out = max_len)
-    if (lens[5] < max_len) tint <- rep(unlist(list(tint)), length.out = max_len)
-    draw_billboard_vectorized_(camera, texture, position, size, tint)
-  } else {
-    draw_billboard_(camera, texture, position, size, tint)
-  }
+draw_billboard <- function(camera, texture, position, scale, tint) {
+  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_float(scale)) abort(paste0('`scale` must be a number, not ', friendly_typeof(scale), '.'), call = NULL)
+  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
+  draw_billboard_(camera, texture, position, scale, tint)
 }
 
-#' Check collision spheres
+#' Draw Billboard Rec
+#'
+#' Draw a billboard texture defined by source.
+#'
+#' @param camera A camera_3d.
+#' @param texture A texture.
+#' @param source A rectangle.
+#' @param position A numeric vector of length 3.
+#' @param size A numeric vector of length 2.
+#' @param tint A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawBillboardRec(Camera camera, Texture2D texture, Rectangle source, Vector3 position, Vector2 size, Color tint);
+#' ```
+#'
+#' @family rec functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_billboard_rec <- function(camera, texture, source, position, size, tint) {
+  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_rectangle(source)) abort(paste0('`source` must be a rectangle, not ', friendly_typeof(source), '.'), call = NULL)
+  if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_vector_2(size)) abort(paste0('`size` must be a numeric vector of length 2, not ', friendly_typeof(size), '.'), call = NULL)
+  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
+  draw_billboard_rec_(camera, texture, source, position, size, tint)
+}
+
+#' Draw Billboard Pro
+#'
+#' Draw a billboard texture defined by source and rotation.
+#'
+#' @param camera A camera_3d.
+#' @param texture A texture.
+#' @param source A rectangle.
+#' @param position A numeric vector of length 3.
+#' @param up A numeric vector of length 3.
+#' @param size A numeric vector of length 2.
+#' @param origin A numeric vector of length 2.
+#' @param rotation A number.
+#' @param tint A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawBillboardPro(Camera camera, Texture2D texture, Rectangle source, Vector3 position, Vector3 up, Vector2 size, Vector2 origin, float rotation, Color tint);
+#' ```
+#'
+#' @family pro functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_billboard_pro <- function(camera, texture, source, position, up, size, origin, rotation, tint) {
+  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
+  if (!is_rectangle(source)) abort(paste0('`source` must be a rectangle, not ', friendly_typeof(source), '.'), call = NULL)
+  if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_vector_3(up)) abort(paste0('`up` must be a numeric vector of length 3, not ', friendly_typeof(up), '.'), call = NULL)
+  if (!is_vector_2(size)) abort(paste0('`size` must be a numeric vector of length 2, not ', friendly_typeof(size), '.'), call = NULL)
+  if (!is_vector_2(origin)) abort(paste0('`origin` must be a numeric vector of length 2, not ', friendly_typeof(origin), '.'), call = NULL)
+  if (!is_float(rotation)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(rotation), '.'), call = NULL)
+  if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
+  draw_billboard_pro_(camera, texture, source, position, up, size, origin, rotation, tint)
+}
+
+#' Unload Mesh
+#'
+#' Unload mesh data from CPU and GPU.
+#'
+#' @param mesh A mesh.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void UnloadMesh(Mesh mesh);
+#' ```
+#'
+#' @family mesh functions
+#' @family unload functions
+#'
+#'
+#' @export
+unload_mesh <- function(mesh) {
+  if (!is_mesh(mesh)) abort(paste0('`mesh` must be a mesh, not ', friendly_typeof(mesh), '.'), call = NULL)
+  unload_mesh_(mesh)
+}
+
+#' Draw Mesh
+#'
+#' Draw a 3d mesh with material and transform.
+#'
+#' @param mesh A mesh.
+#' @param material A material.
+#' @param transform A 4x4 numeric matrix.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawMesh(Mesh mesh, Material material, Matrix transform);
+#' ```
+#'
+#' @family mesh functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_mesh <- function(mesh, material, transform) {
+  if (!is_mesh(mesh)) abort(paste0('`mesh` must be a mesh, not ', friendly_typeof(mesh), '.'), call = NULL)
+  if (!is_material(material)) abort(paste0('`material` must be a material, not ', friendly_typeof(material), '.'), call = NULL)
+  if (!is_raylib_matrix(transform)) abort(paste0('`transform` must be a 4x4 numeric matrix, not ', friendly_typeof(transform), '.'), call = NULL)
+  draw_mesh_(mesh, material, transform)
+}
+
+#' Load Material Default
+#'
+#' Load default material (Supports: DIFFUSE, SPECULAR, NORMAL maps).
+#'
+#'
+#' @return A material
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Material LoadMaterialDefault(void);
+#' ```
+#'
+#' @family default functions
+#' @family load functions
+#'
+#'
+#' @export
+load_material_default <- function() {
+  load_material_default_()
+}
+
+#' Is Material Valid
+#'
+#' Check if a material is valid (shader assigned, map textures loaded in GPU).
+#'
+#' @param material A material.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool IsMaterialValid(Material material);
+#' ```
+#'
+#' @family valid functions
+#' @family is functions
+#'
+#'
+#' @export
+is_material_valid <- function(material) {
+  if (!is_material(material)) abort(paste0('`material` must be a material, not ', friendly_typeof(material), '.'), call = NULL)
+  is_material_valid_(material)
+}
+
+#' Unload Material
+#'
+#' Unload material from GPU memory (VRAM).
+#'
+#' @param material A material.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void UnloadMaterial(Material material);
+#' ```
+#'
+#' @family material functions
+#' @family unload functions
+#'
+#'
+#' @export
+unload_material <- function(material) {
+  if (!is_material(material)) abort(paste0('`material` must be a material, not ', friendly_typeof(material), '.'), call = NULL)
+  unload_material_(material)
+}
+
+#' Update Model Animation
+#'
+#' Update model animation pose (vertex buffers and bone matrices).
+#'
+#' @param model A model.
+#' @param anim A model_animation.
+#' @param frame A number.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void UpdateModelAnimation(Model model, ModelAnimation anim, float frame);
+#' ```
+#'
+#' @family animation functions
+#' @family update functions
+#'
+#'
+#' @export
+update_model_animation <- function(model, anim, frame) {
+  if (!is_model(model)) abort(paste0('`model` must be a model, not ', friendly_typeof(model), '.'), call = NULL)
+  if (!is_model_animation(anim)) abort(paste0('`anim` must be a model_animation, not ', friendly_typeof(anim), '.'), call = NULL)
+  if (!is_float(frame)) abort(paste0('`frame` must be a number, not ', friendly_typeof(frame), '.'), call = NULL)
+  update_model_animation_(model, anim, frame)
+}
+
+#' Update Model Animation Ex
+#'
+#' Update model animation pose, blending two animations.
+#'
+#' @param model A model.
+#' @param anim_a A model_animation.
+#' @param frame_a A number.
+#' @param anim_b A model_animation.
+#' @param frame_b A number.
+#' @param blend A number.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void UpdateModelAnimationEx(Model model, ModelAnimation animA, float frameA, ModelAnimation animB, float frameB, float blend);
+#' ```
+#'
+#' @family ex functions
+#' @family update functions
+#'
+#'
+#' @export
+update_model_animation_ex <- function(model, anim_a, frame_a, anim_b, frame_b, blend) {
+  if (!is_model(model)) abort(paste0('`model` must be a model, not ', friendly_typeof(model), '.'), call = NULL)
+  if (!is_model_animation(anim_a)) abort(paste0('`anim_a` must be a model_animation, not ', friendly_typeof(anim_a), '.'), call = NULL)
+  if (!is_float(frame_a)) abort(paste0('`frame_a` must be a number, not ', friendly_typeof(frame_a), '.'), call = NULL)
+  if (!is_model_animation(anim_b)) abort(paste0('`anim_b` must be a model_animation, not ', friendly_typeof(anim_b), '.'), call = NULL)
+  if (!is_float(frame_b)) abort(paste0('`frame_b` must be a number, not ', friendly_typeof(frame_b), '.'), call = NULL)
+  if (!is_float(blend)) abort(paste0('`blend` must be a number, not ', friendly_typeof(blend), '.'), call = NULL)
+  update_model_animation_ex_(model, anim_a, frame_a, anim_b, frame_b, blend)
+}
+
+#' Is Model Animation Valid
+#'
+#' Check model animation skeleton match.
+#'
+#' @param model A model.
+#' @param anim A model_animation.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool IsModelAnimationValid(Model model, ModelAnimation anim);
+#' ```
+#'
+#' @family valid functions
+#' @family is functions
+#'
+#'
+#' @export
+is_model_animation_valid <- function(model, anim) {
+  if (!is_model(model)) abort(paste0('`model` must be a model, not ', friendly_typeof(model), '.'), call = NULL)
+  if (!is_model_animation(anim)) abort(paste0('`anim` must be a model_animation, not ', friendly_typeof(anim), '.'), call = NULL)
+  is_model_animation_valid_(model, anim)
+}
+
+#' Check Collision Spheres
 #'
 #' Check collision between two spheres.
 #'
-#' @param center_1 A numeric vector of length 3.
-#' @param radius_1 A number.
-#' @param center_2 A numeric vector of length 3.
-#' @param radius_2 A number.
+#' @param center1 A numeric vector of length 3.
+#' @param radius1 A number.
+#' @param center2 A numeric vector of length 3.
+#' @param radius2 A number.
 #'
 #' @return A logical
 #'
@@ -9563,24 +7642,25 @@ draw_billboard <- function(camera, texture, position, size, tint) {
 #' bool CheckCollisionSpheres(Vector3 center1, float radius1, Vector3 center2, float radius2);
 #' ```
 #'
-#' @family collision functions
+#' @family spheres functions
+#' @family check functions
 #'
 #'
 #' @export
-check_collision_spheres <- function(center_1, radius_1, center_2, radius_2) {
-  if (!is_vector_3(center_1)) abort(paste0('`center_1` must be a numeric vector of length 3, not ', friendly_typeof(center_1), '.'), call = NULL)
-  if (!is_float(radius_1)) abort(paste0('`radius_1` must be a number, not ', friendly_typeof(radius_1), '.'), call = NULL)
-  if (!is_vector_3(center_2)) abort(paste0('`center_2` must be a numeric vector of length 3, not ', friendly_typeof(center_2), '.'), call = NULL)
-  if (!is_float(radius_2)) abort(paste0('`radius_2` must be a number, not ', friendly_typeof(radius_2), '.'), call = NULL)
-  check_collision_spheres_(center_1, radius_1, center_2, radius_2)
+check_collision_spheres <- function(center1, radius1, center2, radius2) {
+  if (!is_vector_3(center1)) abort(paste0('`center1` must be a numeric vector of length 3, not ', friendly_typeof(center1), '.'), call = NULL)
+  if (!is_float(radius1)) abort(paste0('`radius1` must be a number, not ', friendly_typeof(radius1), '.'), call = NULL)
+  if (!is_vector_3(center2)) abort(paste0('`center2` must be a numeric vector of length 3, not ', friendly_typeof(center2), '.'), call = NULL)
+  if (!is_float(radius2)) abort(paste0('`radius2` must be a number, not ', friendly_typeof(radius2), '.'), call = NULL)
+  check_collision_spheres_(center1, radius1, center2, radius2)
 }
 
-#' Check collision boxes
+#' Check Collision Boxes
 #'
 #' Check collision between two bounding boxes.
 #'
-#' @param box_1 A bounding_box.
-#' @param box_2 A bounding_box.
+#' @param box1 A bounding_box.
+#' @param box2 A bounding_box.
 #'
 #' @return A logical
 #'
@@ -9590,17 +7670,18 @@ check_collision_spheres <- function(center_1, radius_1, center_2, radius_2) {
 #' bool CheckCollisionBoxes(BoundingBox box1, BoundingBox box2);
 #' ```
 #'
-#' @family collision functions
+#' @family boxes functions
+#' @family check functions
 #'
 #'
 #' @export
-check_collision_boxes <- function(box_1, box_2) {
-  if (!is_bounding_box(box_1)) abort(paste0('`box_1` must be a bounding_box, not ', friendly_typeof(box_1), '.'), call = NULL)
-  if (!is_bounding_box(box_2)) abort(paste0('`box_2` must be a bounding_box, not ', friendly_typeof(box_2), '.'), call = NULL)
-  check_collision_boxes_(box_1, box_2)
+check_collision_boxes <- function(box1, box2) {
+  if (!is_bounding_box(box1)) abort(paste0('`box1` must be a bounding_box, not ', friendly_typeof(box1), '.'), call = NULL)
+  if (!is_bounding_box(box2)) abort(paste0('`box2` must be a bounding_box, not ', friendly_typeof(box2), '.'), call = NULL)
+  check_collision_boxes_(box1, box2)
 }
 
-#' Check collision box sphere
+#' Check Collision Box Sphere
 #'
 #' Check collision between box and sphere.
 #'
@@ -9616,7 +7697,8 @@ check_collision_boxes <- function(box_1, box_2) {
 #' bool CheckCollisionBoxSphere(BoundingBox box, Vector3 center, float radius);
 #' ```
 #'
-#' @family collision functions
+#' @family sphere functions
+#' @family check functions
 #'
 #'
 #' @export
@@ -9627,7 +7709,7 @@ check_collision_box_sphere <- function(box, center, radius) {
   check_collision_box_sphere_(box, center, radius)
 }
 
-#' Get ray collision sphere
+#' Get Ray Collision Sphere
 #'
 #' Get collision info between ray and sphere.
 #'
@@ -9643,7 +7725,8 @@ check_collision_box_sphere <- function(box, center, radius) {
 #' RayCollision GetRayCollisionSphere(Ray ray, Vector3 center, float radius);
 #' ```
 #'
-#' @family collision functions
+#' @family sphere functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -9654,7 +7737,7 @@ get_ray_collision_sphere <- function(ray, center, radius) {
   get_ray_collision_sphere_(ray, center, radius)
 }
 
-#' Get ray collision box
+#' Get Ray Collision Box
 #'
 #' Get collision info between ray and box.
 #'
@@ -9669,7 +7752,8 @@ get_ray_collision_sphere <- function(ray, center, radius) {
 #' RayCollision GetRayCollisionBox(Ray ray, BoundingBox box);
 #' ```
 #'
-#' @family collision functions
+#' @family box functions
+#' @family get functions
 #'
 #'
 #' @export
@@ -9679,41 +7763,13 @@ get_ray_collision_box <- function(ray, box) {
   get_ray_collision_box_(ray, box)
 }
 
-#' Get ray collision model
-#'
-#' Get collision info between ray and model.
-#'
-#' @param ray A ray.
-#' @param model A model.
-#'
-#' @return A ray_collision
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' RayCollision GetRayCollisionModel(Ray ray, Model model);
-#' ```
-#'
-#' @family collision functions
-#' @family model functions
-#'
-#'
-#' @seealso [model()] for creating model objects.
-#'
-#' @export
-get_ray_collision_model <- function(ray, model) {
-  if (!is_ray(ray)) abort(paste0('`ray` must be a ray, not ', friendly_typeof(ray), '.'), call = NULL)
-  if (!is_model(model)) abort(paste0('`model` must be a model, not ', friendly_typeof(model), '.'), call = NULL)
-  get_ray_collision_model_(ray, model)
-}
-
-#' Get ray collision mesh
+#' Get Ray Collision Mesh
 #'
 #' Get collision info between ray and mesh.
 #'
 #' @param ray A ray.
 #' @param mesh A mesh.
-#' @param transform A numeric matrix of 4 by 4.
+#' @param transform A 4x4 numeric matrix.
 #'
 #' @return A ray_collision
 #'
@@ -9723,28 +7779,26 @@ get_ray_collision_model <- function(ray, model) {
 #' RayCollision GetRayCollisionMesh(Ray ray, Mesh mesh, Matrix transform);
 #' ```
 #'
-#' @family collision functions
 #' @family mesh functions
+#' @family get functions
 #'
-#'
-#' @seealso [mesh()] for creating mesh objects.
 #'
 #' @export
 get_ray_collision_mesh <- function(ray, mesh, transform) {
   if (!is_ray(ray)) abort(paste0('`ray` must be a ray, not ', friendly_typeof(ray), '.'), call = NULL)
   if (!is_mesh(mesh)) abort(paste0('`mesh` must be a mesh, not ', friendly_typeof(mesh), '.'), call = NULL)
-  if (!is_raylib_matrix(transform)) abort(paste0('`transform` must be a numeric matrix of 4 by 4, not ', friendly_typeof(transform), '.'), call = NULL)
+  if (!is_raylib_matrix(transform)) abort(paste0('`transform` must be a 4x4 numeric matrix, not ', friendly_typeof(transform), '.'), call = NULL)
   get_ray_collision_mesh_(ray, mesh, transform)
 }
 
-#' Get ray collision triangle
+#' Get Ray Collision Triangle
 #'
 #' Get collision info between ray and triangle.
 #'
 #' @param ray A ray.
-#' @param p_1 A numeric vector of length 3.
-#' @param p_2 A numeric vector of length 3.
-#' @param p_3 A numeric vector of length 3.
+#' @param p1 A numeric vector of length 3.
+#' @param p2 A numeric vector of length 3.
+#' @param p3 A numeric vector of length 3.
 #'
 #' @return A ray_collision
 #'
@@ -9754,27 +7808,28 @@ get_ray_collision_mesh <- function(ray, mesh, transform) {
 #' RayCollision GetRayCollisionTriangle(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3);
 #' ```
 #'
-#' @family collision functions
+#' @family triangle functions
+#' @family get functions
 #'
 #'
 #' @export
-get_ray_collision_triangle <- function(ray, p_1, p_2, p_3) {
+get_ray_collision_triangle <- function(ray, p1, p2, p3) {
   if (!is_ray(ray)) abort(paste0('`ray` must be a ray, not ', friendly_typeof(ray), '.'), call = NULL)
-  if (!is_vector_3(p_1)) abort(paste0('`p_1` must be a numeric vector of length 3, not ', friendly_typeof(p_1), '.'), call = NULL)
-  if (!is_vector_3(p_2)) abort(paste0('`p_2` must be a numeric vector of length 3, not ', friendly_typeof(p_2), '.'), call = NULL)
-  if (!is_vector_3(p_3)) abort(paste0('`p_3` must be a numeric vector of length 3, not ', friendly_typeof(p_3), '.'), call = NULL)
-  get_ray_collision_triangle_(ray, p_1, p_2, p_3)
+  if (!is_vector_3(p1)) abort(paste0('`p1` must be a numeric vector of length 3, not ', friendly_typeof(p1), '.'), call = NULL)
+  if (!is_vector_3(p2)) abort(paste0('`p2` must be a numeric vector of length 3, not ', friendly_typeof(p2), '.'), call = NULL)
+  if (!is_vector_3(p3)) abort(paste0('`p3` must be a numeric vector of length 3, not ', friendly_typeof(p3), '.'), call = NULL)
+  get_ray_collision_triangle_(ray, p1, p2, p3)
 }
 
-#' Get ray collision quad
+#' Get Ray Collision Quad
 #'
 #' Get collision info between ray and quad.
 #'
 #' @param ray A ray.
-#' @param p_1 A numeric vector of length 3.
-#' @param p_2 A numeric vector of length 3.
-#' @param p_3 A numeric vector of length 3.
-#' @param p_4 A numeric vector of length 3.
+#' @param p1 A numeric vector of length 3.
+#' @param p2 A numeric vector of length 3.
+#' @param p3 A numeric vector of length 3.
+#' @param p4 A numeric vector of length 3.
 #'
 #' @return A ray_collision
 #'
@@ -9784,24 +7839,23 @@ get_ray_collision_triangle <- function(ray, p_1, p_2, p_3) {
 #' RayCollision GetRayCollisionQuad(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3, Vector3 p4);
 #' ```
 #'
-#' @family collision functions
+#' @family quad functions
+#' @family get functions
 #'
 #'
 #' @export
-get_ray_collision_quad <- function(ray, p_1, p_2, p_3, p_4) {
+get_ray_collision_quad <- function(ray, p1, p2, p3, p4) {
   if (!is_ray(ray)) abort(paste0('`ray` must be a ray, not ', friendly_typeof(ray), '.'), call = NULL)
-  if (!is_vector_3(p_1)) abort(paste0('`p_1` must be a numeric vector of length 3, not ', friendly_typeof(p_1), '.'), call = NULL)
-  if (!is_vector_3(p_2)) abort(paste0('`p_2` must be a numeric vector of length 3, not ', friendly_typeof(p_2), '.'), call = NULL)
-  if (!is_vector_3(p_3)) abort(paste0('`p_3` must be a numeric vector of length 3, not ', friendly_typeof(p_3), '.'), call = NULL)
-  if (!is_vector_3(p_4)) abort(paste0('`p_4` must be a numeric vector of length 3, not ', friendly_typeof(p_4), '.'), call = NULL)
-  get_ray_collision_quad_(ray, p_1, p_2, p_3, p_4)
+  if (!is_vector_3(p1)) abort(paste0('`p1` must be a numeric vector of length 3, not ', friendly_typeof(p1), '.'), call = NULL)
+  if (!is_vector_3(p2)) abort(paste0('`p2` must be a numeric vector of length 3, not ', friendly_typeof(p2), '.'), call = NULL)
+  if (!is_vector_3(p3)) abort(paste0('`p3` must be a numeric vector of length 3, not ', friendly_typeof(p3), '.'), call = NULL)
+  if (!is_vector_3(p4)) abort(paste0('`p4` must be a numeric vector of length 3, not ', friendly_typeof(p4), '.'), call = NULL)
+  get_ray_collision_quad_(ray, p1, p2, p3, p4)
 }
 
-#' Init audio device
+#' Init Audio Device
 #'
 #' Initialize audio device and context.
-#'
-
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -9810,8 +7864,8 @@ get_ray_collision_quad <- function(ray, p_1, p_2, p_3, p_4) {
 #' void InitAudioDevice(void);
 #' ```
 #'
+#' @family device functions
 #' @family init functions
-#' @family audio functions
 #'
 #'
 #' @export
@@ -9819,11 +7873,9 @@ init_audio_device <- function() {
   init_audio_device_()
 }
 
-#' Close audio device
+#' Close Audio Device
 #'
 #' Close the audio device and context.
-#'
-
 #'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
@@ -9832,7 +7884,8 @@ init_audio_device <- function() {
 #' void CloseAudioDevice(void);
 #' ```
 #'
-#' @family audio functions
+#' @family device functions
+#' @family close functions
 #'
 #'
 #' @export
@@ -9840,11 +7893,10 @@ close_audio_device <- function() {
   close_audio_device_()
 }
 
-#' Is audio device ready
+#' Is Audio Device Ready
 #'
 #' Check if audio device has been initialized successfully.
 #'
-
 #'
 #' @return A logical
 #'
@@ -9854,7 +7906,8 @@ close_audio_device <- function() {
 #' bool IsAudioDeviceReady(void);
 #' ```
 #'
-#' @family audio functions
+#' @family ready functions
+#' @family is functions
 #'
 #'
 #' @export
@@ -9862,29 +7915,7 @@ is_audio_device_ready <- function() {
   is_audio_device_ready_()
 }
 
-#' Set master volume
-#'
-#' Set master volume (listener).
-#'
-#' @param volume A number.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void SetMasterVolume(float volume);
-#' ```
-#'
-#' @family volume functions
-#'
-#'
-#' @export
-set_master_volume <- function(volume) {
-  if (!is_float(volume)) abort(paste0('`volume` must be a number, not ', friendly_typeof(volume), '.'), call = NULL)
-  set_master_volume_(volume)
-}
-
-#' Load wave
+#' Load Wave
 #'
 #' Load wave data from file.
 #'
@@ -9895,10 +7926,11 @@ set_master_volume <- function(volume) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' Wave LoadWave(const char *fileName);
+#' Wave LoadWave(const char * fileName);
 #' ```
 #'
 #' @family wave functions
+#' @family load functions
 #'
 #'
 #' @export
@@ -9907,7 +7939,31 @@ load_wave <- function(file_name) {
   load_wave_(file_name)
 }
 
-#' Load sound
+#' Is Wave Valid
+#'
+#' Checks if wave data is valid (data loaded and parameters).
+#'
+#' @param wave A wave.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool IsWaveValid(Wave wave);
+#' ```
+#'
+#' @family valid functions
+#' @family is functions
+#'
+#'
+#' @export
+is_wave_valid <- function(wave) {
+  if (!is_wave(wave)) abort(paste0('`wave` must be a wave, not ', friendly_typeof(wave), '.'), call = NULL)
+  is_wave_valid_(wave)
+}
+
+#' Load Sound
 #'
 #' Load sound from file.
 #'
@@ -9918,10 +7974,11 @@ load_wave <- function(file_name) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' Sound LoadSound(const char *fileName);
+#' Sound LoadSound(const char * fileName);
 #' ```
 #'
 #' @family sound functions
+#' @family load functions
 #'
 #'
 #' @export
@@ -9930,7 +7987,7 @@ load_sound <- function(file_name) {
   load_sound_(file_name)
 }
 
-#' Load sound from wave
+#' Load Sound From Wave
 #'
 #' Load sound from wave data.
 #'
@@ -9944,11 +8001,9 @@ load_sound <- function(file_name) {
 #' Sound LoadSoundFromWave(Wave wave);
 #' ```
 #'
-#' @family sound functions
 #' @family wave functions
+#' @family load functions
 #'
-#'
-#' @seealso [wave()] for creating wave objects.
 #'
 #' @export
 load_sound_from_wave <- function(wave) {
@@ -9956,12 +8011,59 @@ load_sound_from_wave <- function(wave) {
   load_sound_from_wave_(wave)
 }
 
-#' Unload wave
+#' Load Sound Alias
+#'
+#' Create a new sound that shares the same sample data as the source sound, does not own the sound data.
+#'
+#' @param source A sound.
+#'
+#' @return A sound
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Sound LoadSoundAlias(Sound source);
+#' ```
+#'
+#' @family alias functions
+#' @family load functions
+#'
+#'
+#' @export
+load_sound_alias <- function(source) {
+  if (!is_sound(source)) abort(paste0('`source` must be a sound, not ', friendly_typeof(source), '.'), call = NULL)
+  load_sound_alias_(source)
+}
+
+#' Is Sound Valid
+#'
+#' Checks if a sound is valid (data loaded and buffers initialized).
+#'
+#' @param sound A sound.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool IsSoundValid(Sound sound);
+#' ```
+#'
+#' @family valid functions
+#' @family is functions
+#'
+#'
+#' @export
+is_sound_valid <- function(sound) {
+  if (!is_sound(sound)) abort(paste0('`sound` must be a sound, not ', friendly_typeof(sound), '.'), call = NULL)
+  is_sound_valid_(sound)
+}
+
+#' Unload Wave
 #'
 #' Unload wave data.
 #'
 #' @param wave A wave.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -9970,9 +8072,8 @@ load_sound_from_wave <- function(wave) {
 #' ```
 #'
 #' @family wave functions
+#' @family unload functions
 #'
-#'
-#' @seealso [wave()] for creating wave objects.
 #'
 #' @export
 unload_wave <- function(wave) {
@@ -9980,12 +8081,11 @@ unload_wave <- function(wave) {
   unload_wave_(wave)
 }
 
-#' Unload sound
+#' Unload Sound
 #'
 #' Unload sound.
 #'
 #' @param sound A sound.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -9994,9 +8094,8 @@ unload_wave <- function(wave) {
 #' ```
 #'
 #' @family sound functions
+#' @family unload functions
 #'
-#'
-#' @seealso [sound()] for creating sound objects.
 #'
 #' @export
 unload_sound <- function(sound) {
@@ -10004,7 +8103,29 @@ unload_sound <- function(sound) {
   unload_sound_(sound)
 }
 
-#' Export wave
+#' Unload Sound Alias
+#'
+#' Unload a sound alias (does not deallocate sample data).
+#'
+#' @param alias A sound.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void UnloadSoundAlias(Sound alias);
+#' ```
+#'
+#' @family alias functions
+#' @family unload functions
+#'
+#'
+#' @export
+unload_sound_alias <- function(alias) {
+  if (!is_sound(alias)) abort(paste0('`alias` must be a sound, not ', friendly_typeof(alias), '.'), call = NULL)
+  unload_sound_alias_(alias)
+}
+
+#' Export Wave
 #'
 #' Export wave data to file, returns true on success.
 #'
@@ -10016,13 +8137,12 @@ unload_sound <- function(sound) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' bool ExportWave(Wave wave, const char *fileName);
+#' bool ExportWave(Wave wave, const char * fileName);
 #' ```
 #'
 #' @family wave functions
+#' @family export functions
 #'
-#'
-#' @seealso [wave()] for creating wave objects.
 #'
 #' @export
 export_wave <- function(wave, file_name) {
@@ -10031,7 +8151,7 @@ export_wave <- function(wave, file_name) {
   export_wave_(wave, file_name)
 }
 
-#' Export wave as code
+#' Export Wave As Code
 #'
 #' Export wave sample data to code (.h), returns true on success.
 #'
@@ -10043,13 +8163,12 @@ export_wave <- function(wave, file_name) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' bool ExportWaveAsCode(Wave wave, const char *fileName);
+#' bool ExportWaveAsCode(Wave wave, const char * fileName);
 #' ```
 #'
-#' @family wave functions
+#' @family code functions
+#' @family export functions
 #'
-#'
-#' @seealso [wave()] for creating wave objects.
 #'
 #' @export
 export_wave_as_code <- function(wave, file_name) {
@@ -10058,12 +8177,11 @@ export_wave_as_code <- function(wave, file_name) {
   export_wave_as_code_(wave, file_name)
 }
 
-#' Play sound
+#' Play Sound
 #'
 #' Play a sound.
 #'
 #' @param sound A sound.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10072,9 +8190,8 @@ export_wave_as_code <- function(wave, file_name) {
 #' ```
 #'
 #' @family sound functions
+#' @family play functions
 #'
-#'
-#' @seealso [sound()] for creating sound objects.
 #'
 #' @export
 play_sound <- function(sound) {
@@ -10082,12 +8199,11 @@ play_sound <- function(sound) {
   play_sound_(sound)
 }
 
-#' Stop sound
+#' Stop Sound
 #'
 #' Stop playing a sound.
 #'
 #' @param sound A sound.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10096,9 +8212,8 @@ play_sound <- function(sound) {
 #' ```
 #'
 #' @family sound functions
+#' @family stop functions
 #'
-#'
-#' @seealso [sound()] for creating sound objects.
 #'
 #' @export
 stop_sound <- function(sound) {
@@ -10106,12 +8221,11 @@ stop_sound <- function(sound) {
   stop_sound_(sound)
 }
 
-#' Pause sound
+#' Pause Sound
 #'
 #' Pause a sound.
 #'
 #' @param sound A sound.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10120,9 +8234,8 @@ stop_sound <- function(sound) {
 #' ```
 #'
 #' @family sound functions
+#' @family pause functions
 #'
-#'
-#' @seealso [sound()] for creating sound objects.
 #'
 #' @export
 pause_sound <- function(sound) {
@@ -10130,12 +8243,11 @@ pause_sound <- function(sound) {
   pause_sound_(sound)
 }
 
-#' Resume sound
+#' Resume Sound
 #'
 #' Resume a paused sound.
 #'
 #' @param sound A sound.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10144,9 +8256,8 @@ pause_sound <- function(sound) {
 #' ```
 #'
 #' @family sound functions
+#' @family resume functions
 #'
-#'
-#' @seealso [sound()] for creating sound objects.
 #'
 #' @export
 resume_sound <- function(sound) {
@@ -10154,72 +8265,7 @@ resume_sound <- function(sound) {
   resume_sound_(sound)
 }
 
-#' Play sound multi
-#'
-#' Play a sound (using multichannel buffer pool).
-#'
-#' @param sound A sound.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void PlaySoundMulti(Sound sound);
-#' ```
-#'
-#' @family sound functions
-#'
-#'
-#' @seealso [sound()] for creating sound objects.
-#'
-#' @export
-play_sound_multi <- function(sound) {
-  if (!is_sound(sound)) abort(paste0('`sound` must be a sound, not ', friendly_typeof(sound), '.'), call = NULL)
-  play_sound_multi_(sound)
-}
-
-#' Stop sound multi
-#'
-#' Stop any sound playing (using multichannel buffer pool).
-#'
-
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void StopSoundMulti(void);
-#' ```
-#'
-#' @family sound functions
-#'
-#'
-#' @export
-stop_sound_multi <- function() {
-  stop_sound_multi_()
-}
-
-#' Get sounds playing
-#'
-#' Get number of sounds playing in the multichannel.
-#'
-
-#'
-#' @return An integer
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' int GetSoundsPlaying(void);
-#' ```
-#'
-#'
-#' @export
-get_sounds_playing <- function() {
-  get_sounds_playing_()
-}
-
-#' Is sound playing
+#' Is Sound Playing
 #'
 #' Check if a sound is currently playing.
 #'
@@ -10233,10 +8279,9 @@ get_sounds_playing <- function() {
 #' bool IsSoundPlaying(Sound sound);
 #' ```
 #'
-#' @family sound functions
+#' @family playing functions
+#' @family is functions
 #'
-#'
-#' @seealso [sound()] for creating sound objects.
 #'
 #' @export
 is_sound_playing <- function(sound) {
@@ -10244,13 +8289,12 @@ is_sound_playing <- function(sound) {
   is_sound_playing_(sound)
 }
 
-#' Set sound volume
+#' Set Sound Volume
 #'
 #' Set volume for a sound (1.0 is max level).
 #'
 #' @param sound A sound.
 #' @param volume A number.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10258,11 +8302,9 @@ is_sound_playing <- function(sound) {
 #' void SetSoundVolume(Sound sound, float volume);
 #' ```
 #'
-#' @family sound functions
 #' @family volume functions
+#' @family set functions
 #'
-#'
-#' @seealso [sound()] for creating sound objects.
 #'
 #' @export
 set_sound_volume <- function(sound, volume) {
@@ -10271,13 +8313,12 @@ set_sound_volume <- function(sound, volume) {
   set_sound_volume_(sound, volume)
 }
 
-#' Set sound pitch
+#' Set Sound Pitch
 #'
 #' Set pitch for a sound (1.0 is base level).
 #'
 #' @param sound A sound.
 #' @param pitch A number.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10285,10 +8326,9 @@ set_sound_volume <- function(sound, volume) {
 #' void SetSoundPitch(Sound sound, float pitch);
 #' ```
 #'
-#' @family sound functions
+#' @family pitch functions
+#' @family set functions
 #'
-#'
-#' @seealso [sound()] for creating sound objects.
 #'
 #' @export
 set_sound_pitch <- function(sound, pitch) {
@@ -10297,7 +8337,30 @@ set_sound_pitch <- function(sound, pitch) {
   set_sound_pitch_(sound, pitch)
 }
 
-#' Load music stream
+#' Wave Copy
+#'
+#' Copy a wave to a new wave.
+#'
+#' @param wave A wave.
+#'
+#' @return A wave
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Wave WaveCopy(Wave wave);
+#' ```
+#'
+#' @family copy functions
+#'
+#'
+#' @export
+wave_copy <- function(wave) {
+  if (!is_wave(wave)) abort(paste0('`wave` must be a wave, not ', friendly_typeof(wave), '.'), call = NULL)
+  wave_copy_(wave)
+}
+
+#' Load Music Stream
 #'
 #' Load music stream from file.
 #'
@@ -10308,11 +8371,11 @@ set_sound_pitch <- function(sound, pitch) {
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
 #' ```
-#' Music LoadMusicStream(const char *fileName);
+#' Music LoadMusicStream(const char * fileName);
 #' ```
 #'
-#' @family music functions
 #' @family stream functions
+#' @family load functions
 #'
 #'
 #' @export
@@ -10321,12 +8384,35 @@ load_music_stream <- function(file_name) {
   load_music_stream_(file_name)
 }
 
-#' Unload music stream
+#' Is Music Valid
+#'
+#' Checks if a music stream is valid (context and buffers initialized).
+#'
+#' @param music A music.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool IsMusicValid(Music music);
+#' ```
+#'
+#' @family valid functions
+#' @family is functions
+#'
+#'
+#' @export
+is_music_valid <- function(music) {
+  if (!is_music(music)) abort(paste0('`music` must be a music, not ', friendly_typeof(music), '.'), call = NULL)
+  is_music_valid_(music)
+}
+
+#' Unload Music Stream
 #'
 #' Unload music stream.
 #'
 #' @param music A music.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10334,11 +8420,9 @@ load_music_stream <- function(file_name) {
 #' void UnloadMusicStream(Music music);
 #' ```
 #'
-#' @family music functions
 #' @family stream functions
+#' @family unload functions
 #'
-#'
-#' @seealso [music()] for creating music objects.
 #'
 #' @export
 unload_music_stream <- function(music) {
@@ -10346,12 +8430,11 @@ unload_music_stream <- function(music) {
   unload_music_stream_(music)
 }
 
-#' Play music stream
+#' Play Music Stream
 #'
 #' Start music playing.
 #'
 #' @param music A music.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10359,11 +8442,9 @@ unload_music_stream <- function(music) {
 #' void PlayMusicStream(Music music);
 #' ```
 #'
-#' @family music functions
 #' @family stream functions
+#' @family play functions
 #'
-#'
-#' @seealso [music()] for creating music objects.
 #'
 #' @export
 play_music_stream <- function(music) {
@@ -10371,7 +8452,7 @@ play_music_stream <- function(music) {
   play_music_stream_(music)
 }
 
-#' Is music stream playing
+#' Is Music Stream Playing
 #'
 #' Check if music is playing.
 #'
@@ -10385,11 +8466,9 @@ play_music_stream <- function(music) {
 #' bool IsMusicStreamPlaying(Music music);
 #' ```
 #'
-#' @family music functions
-#' @family stream functions
+#' @family playing functions
+#' @family is functions
 #'
-#'
-#' @seealso [music()] for creating music objects.
 #'
 #' @export
 is_music_stream_playing <- function(music) {
@@ -10397,12 +8476,11 @@ is_music_stream_playing <- function(music) {
   is_music_stream_playing_(music)
 }
 
-#' Update music stream
+#' Update Music Stream
 #'
 #' Updates buffers for music streaming.
 #'
 #' @param music A music.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10410,11 +8488,9 @@ is_music_stream_playing <- function(music) {
 #' void UpdateMusicStream(Music music);
 #' ```
 #'
-#' @family music functions
 #' @family stream functions
+#' @family update functions
 #'
-#'
-#' @seealso [music()] for creating music objects.
 #'
 #' @export
 update_music_stream <- function(music) {
@@ -10422,12 +8498,11 @@ update_music_stream <- function(music) {
   update_music_stream_(music)
 }
 
-#' Stop music stream
+#' Stop Music Stream
 #'
 #' Stop music playing.
 #'
 #' @param music A music.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10435,11 +8510,9 @@ update_music_stream <- function(music) {
 #' void StopMusicStream(Music music);
 #' ```
 #'
-#' @family music functions
 #' @family stream functions
+#' @family stop functions
 #'
-#'
-#' @seealso [music()] for creating music objects.
 #'
 #' @export
 stop_music_stream <- function(music) {
@@ -10447,12 +8520,11 @@ stop_music_stream <- function(music) {
   stop_music_stream_(music)
 }
 
-#' Pause music stream
+#' Pause Music Stream
 #'
 #' Pause music playing.
 #'
 #' @param music A music.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10460,11 +8532,9 @@ stop_music_stream <- function(music) {
 #' void PauseMusicStream(Music music);
 #' ```
 #'
-#' @family music functions
 #' @family stream functions
+#' @family pause functions
 #'
-#'
-#' @seealso [music()] for creating music objects.
 #'
 #' @export
 pause_music_stream <- function(music) {
@@ -10472,12 +8542,11 @@ pause_music_stream <- function(music) {
   pause_music_stream_(music)
 }
 
-#' Resume music stream
+#' Resume Music Stream
 #'
 #' Resume playing paused music.
 #'
 #' @param music A music.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10485,11 +8554,9 @@ pause_music_stream <- function(music) {
 #' void ResumeMusicStream(Music music);
 #' ```
 #'
-#' @family music functions
 #' @family stream functions
+#' @family resume functions
 #'
-#'
-#' @seealso [music()] for creating music objects.
 #'
 #' @export
 resume_music_stream <- function(music) {
@@ -10497,40 +8564,12 @@ resume_music_stream <- function(music) {
   resume_music_stream_(music)
 }
 
-#' Seek music stream
-#'
-#' Seek music to a position (in seconds).
-#'
-#' @param music A music.
-#' @param position A number.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void SeekMusicStream(Music music, float position);
-#' ```
-#'
-#' @family music functions
-#' @family stream functions
-#'
-#'
-#' @seealso [music()] for creating music objects.
-#'
-#' @export
-seek_music_stream <- function(music, position) {
-  if (!is_music(music)) abort(paste0('`music` must be a music, not ', friendly_typeof(music), '.'), call = NULL)
-  if (!is_float(position)) abort(paste0('`position` must be a number, not ', friendly_typeof(position), '.'), call = NULL)
-  seek_music_stream_(music, position)
-}
-
-#' Set music volume
+#' Set Music Volume
 #'
 #' Set volume for music (1.0 is max level).
 #'
 #' @param music A music.
 #' @param volume A number.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10538,11 +8577,9 @@ seek_music_stream <- function(music, position) {
 #' void SetMusicVolume(Music music, float volume);
 #' ```
 #'
-#' @family music functions
 #' @family volume functions
+#' @family set functions
 #'
-#'
-#' @seealso [music()] for creating music objects.
 #'
 #' @export
 set_music_volume <- function(music, volume) {
@@ -10551,13 +8588,12 @@ set_music_volume <- function(music, volume) {
   set_music_volume_(music, volume)
 }
 
-#' Set music pitch
+#' Set Music Pitch
 #'
 #' Set pitch for a music (1.0 is base level).
 #'
 #' @param music A music.
 #' @param pitch A number.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10565,10 +8601,9 @@ set_music_volume <- function(music, volume) {
 #' void SetMusicPitch(Music music, float pitch);
 #' ```
 #'
-#' @family music functions
+#' @family pitch functions
+#' @family set functions
 #'
-#'
-#' @seealso [music()] for creating music objects.
 #'
 #' @export
 set_music_pitch <- function(music, pitch) {
@@ -10577,7 +8612,7 @@ set_music_pitch <- function(music, pitch) {
   set_music_pitch_(music, pitch)
 }
 
-#' Get music time length
+#' Get Music Time Length
 #'
 #' Get music time length (in seconds).
 #'
@@ -10591,10 +8626,9 @@ set_music_pitch <- function(music, pitch) {
 #' float GetMusicTimeLength(Music music);
 #' ```
 #'
-#' @family music functions
+#' @family length functions
+#' @family get functions
 #'
-#'
-#' @seealso [music()] for creating music objects.
 #'
 #' @export
 get_music_time_length <- function(music) {
@@ -10602,7 +8636,7 @@ get_music_time_length <- function(music) {
   get_music_time_length_(music)
 }
 
-#' Get music time played
+#' Get Music Time Played
 #'
 #' Get current music time played (in seconds).
 #'
@@ -10616,10 +8650,9 @@ get_music_time_length <- function(music) {
 #' float GetMusicTimePlayed(Music music);
 #' ```
 #'
-#' @family music functions
+#' @family played functions
+#' @family get functions
 #'
-#'
-#' @seealso [music()] for creating music objects.
 #'
 #' @export
 get_music_time_played <- function(music) {
@@ -10627,7 +8660,7 @@ get_music_time_played <- function(music) {
   get_music_time_played_(music)
 }
 
-#' Load audio stream
+#' Load Audio Stream
 #'
 #' Load audio stream (to stream raw audio pcm data).
 #'
@@ -10643,8 +8676,8 @@ get_music_time_played <- function(music) {
 #' AudioStream LoadAudioStream(unsigned int sampleRate, unsigned int sampleSize, unsigned int channels);
 #' ```
 #'
-#' @family audio functions
 #' @family stream functions
+#' @family load functions
 #'
 #'
 #' @export
@@ -10655,12 +8688,35 @@ load_audio_stream <- function(sample_rate, sample_size, channels) {
   load_audio_stream_(sample_rate, sample_size, channels)
 }
 
-#' Unload audio stream
+#' Is Audio Stream Valid
+#'
+#' Checks if an audio stream is valid (buffers initialized).
+#'
+#' @param stream An audio_stream.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool IsAudioStreamValid(AudioStream stream);
+#' ```
+#'
+#' @family valid functions
+#' @family is functions
+#'
+#'
+#' @export
+is_audio_stream_valid <- function(stream) {
+  if (!is_audio_stream(stream)) abort(paste0('`stream` must be an audio_stream, not ', friendly_typeof(stream), '.'), call = NULL)
+  is_audio_stream_valid_(stream)
+}
+
+#' Unload Audio Stream
 #'
 #' Unload audio stream and free memory.
 #'
 #' @param stream An audio_stream.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10668,11 +8724,9 @@ load_audio_stream <- function(sample_rate, sample_size, channels) {
 #' void UnloadAudioStream(AudioStream stream);
 #' ```
 #'
-#' @family audio functions
 #' @family stream functions
+#' @family unload functions
 #'
-#'
-#' @seealso [audio_stream()] for creating audio_stream objects.
 #'
 #' @export
 unload_audio_stream <- function(stream) {
@@ -10680,7 +8734,7 @@ unload_audio_stream <- function(stream) {
   unload_audio_stream_(stream)
 }
 
-#' Is audio stream processed
+#' Is Audio Stream Processed
 #'
 #' Check if any audio stream buffers requires refill.
 #'
@@ -10694,11 +8748,9 @@ unload_audio_stream <- function(stream) {
 #' bool IsAudioStreamProcessed(AudioStream stream);
 #' ```
 #'
-#' @family audio functions
-#' @family stream functions
+#' @family processed functions
+#' @family is functions
 #'
-#'
-#' @seealso [audio_stream()] for creating audio_stream objects.
 #'
 #' @export
 is_audio_stream_processed <- function(stream) {
@@ -10706,12 +8758,11 @@ is_audio_stream_processed <- function(stream) {
   is_audio_stream_processed_(stream)
 }
 
-#' Play audio stream
+#' Play Audio Stream
 #'
 #' Play audio stream.
 #'
 #' @param stream An audio_stream.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10719,11 +8770,9 @@ is_audio_stream_processed <- function(stream) {
 #' void PlayAudioStream(AudioStream stream);
 #' ```
 #'
-#' @family audio functions
 #' @family stream functions
+#' @family play functions
 #'
-#'
-#' @seealso [audio_stream()] for creating audio_stream objects.
 #'
 #' @export
 play_audio_stream <- function(stream) {
@@ -10731,12 +8780,11 @@ play_audio_stream <- function(stream) {
   play_audio_stream_(stream)
 }
 
-#' Pause audio stream
+#' Pause Audio Stream
 #'
 #' Pause audio stream.
 #'
 #' @param stream An audio_stream.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10744,11 +8792,9 @@ play_audio_stream <- function(stream) {
 #' void PauseAudioStream(AudioStream stream);
 #' ```
 #'
-#' @family audio functions
 #' @family stream functions
+#' @family pause functions
 #'
-#'
-#' @seealso [audio_stream()] for creating audio_stream objects.
 #'
 #' @export
 pause_audio_stream <- function(stream) {
@@ -10756,12 +8802,11 @@ pause_audio_stream <- function(stream) {
   pause_audio_stream_(stream)
 }
 
-#' Resume audio stream
+#' Resume Audio Stream
 #'
 #' Resume audio stream.
 #'
 #' @param stream An audio_stream.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10769,11 +8814,9 @@ pause_audio_stream <- function(stream) {
 #' void ResumeAudioStream(AudioStream stream);
 #' ```
 #'
-#' @family audio functions
 #' @family stream functions
+#' @family resume functions
 #'
-#'
-#' @seealso [audio_stream()] for creating audio_stream objects.
 #'
 #' @export
 resume_audio_stream <- function(stream) {
@@ -10781,38 +8824,11 @@ resume_audio_stream <- function(stream) {
   resume_audio_stream_(stream)
 }
 
-#' Is audio stream playing
-#'
-#' Check if audio stream is playing.
-#'
-#' @param stream An audio_stream.
-#'
-#' @return A logical
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' bool IsAudioStreamPlaying(AudioStream stream);
-#' ```
-#'
-#' @family audio functions
-#' @family stream functions
-#'
-#'
-#' @seealso [audio_stream()] for creating audio_stream objects.
-#'
-#' @export
-is_audio_stream_playing <- function(stream) {
-  if (!is_audio_stream(stream)) abort(paste0('`stream` must be an audio_stream, not ', friendly_typeof(stream), '.'), call = NULL)
-  is_audio_stream_playing_(stream)
-}
-
-#' Stop audio stream
+#' Stop Audio Stream
 #'
 #' Stop audio stream.
 #'
 #' @param stream An audio_stream.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10820,11 +8836,9 @@ is_audio_stream_playing <- function(stream) {
 #' void StopAudioStream(AudioStream stream);
 #' ```
 #'
-#' @family audio functions
 #' @family stream functions
+#' @family stop functions
 #'
-#'
-#' @seealso [audio_stream()] for creating audio_stream objects.
 #'
 #' @export
 stop_audio_stream <- function(stream) {
@@ -10832,13 +8846,12 @@ stop_audio_stream <- function(stream) {
   stop_audio_stream_(stream)
 }
 
-#' Set audio stream volume
+#' Set Audio Stream Volume
 #'
 #' Set volume for audio stream (1.0 is max level).
 #'
 #' @param stream An audio_stream.
 #' @param volume A number.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10846,12 +8859,9 @@ stop_audio_stream <- function(stream) {
 #' void SetAudioStreamVolume(AudioStream stream, float volume);
 #' ```
 #'
-#' @family audio functions
-#' @family stream functions
 #' @family volume functions
+#' @family set functions
 #'
-#'
-#' @seealso [audio_stream()] for creating audio_stream objects.
 #'
 #' @export
 set_audio_stream_volume <- function(stream, volume) {
@@ -10860,13 +8870,12 @@ set_audio_stream_volume <- function(stream, volume) {
   set_audio_stream_volume_(stream, volume)
 }
 
-#' Set audio stream pitch
+#' Set Audio Stream Pitch
 #'
 #' Set pitch for audio stream (1.0 is base level).
 #'
 #' @param stream An audio_stream.
 #' @param pitch A number.
-#'
 #'
 #' @note This function has been auto-generated from the following Raylib function definition:
 #'
@@ -10874,133 +8883,14 @@ set_audio_stream_volume <- function(stream, volume) {
 #' void SetAudioStreamPitch(AudioStream stream, float pitch);
 #' ```
 #'
-#' @family audio functions
-#' @family stream functions
+#' @family pitch functions
+#' @family set functions
 #'
-#'
-#' @seealso [audio_stream()] for creating audio_stream objects.
 #'
 #' @export
 set_audio_stream_pitch <- function(stream, pitch) {
   if (!is_audio_stream(stream)) abort(paste0('`stream` must be an audio_stream, not ', friendly_typeof(stream), '.'), call = NULL)
   if (!is_float(pitch)) abort(paste0('`pitch` must be a number, not ', friendly_typeof(pitch), '.'), call = NULL)
   set_audio_stream_pitch_(stream, pitch)
-}
-
-#' Set audio stream buffer size default
-#'
-#' Default size for new audio streams.
-#'
-#' @param size An integer.
-#'
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' void SetAudioStreamBufferSizeDefault(int size);
-#' ```
-#'
-#' @family audio functions
-#' @family stream functions
-#'
-#'
-#' @export
-set_audio_stream_buffer_size_default <- function(size) {
-  if (!is_int(size)) abort(paste0('`size` must be an integer, not ', friendly_typeof(size), '.'), call = NULL)
-  set_audio_stream_buffer_size_default_(size)
-}
-
-#' Vector 2 angle
-#'
-#' .
-#'
-#' @param v_1 A numeric vector of length 2.
-#' @param v_2 A numeric vector of length 2.
-#'
-#' @return A number
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' float Vector2Angle(Vector2 v1, Vector2 v2);
-#' ```
-#'
-#'
-#' @export
-vector_2_angle <- function(v_1, v_2) {
-  if (!is_vector_2(v_1)) abort(paste0('`v_1` must be a numeric vector of length 2, not ', friendly_typeof(v_1), '.'), call = NULL)
-  if (!is_vector_2(v_2)) abort(paste0('`v_2` must be a numeric vector of length 2, not ', friendly_typeof(v_2), '.'), call = NULL)
-  vector_2_angle_(v_1, v_2)
-}
-
-#' Vector 2 move towards
-#'
-#' .
-#'
-#' @param v A numeric vector of length 2.
-#' @param target A numeric vector of length 2.
-#' @param max_distance A number.
-#'
-#' @return A numeric vector of length 2
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' Vector2 Vector2MoveTowards(Vector2 v, Vector2 target, float maxDistance);
-#' ```
-#'
-#'
-#' @export
-vector_2_move_towards <- function(v, target, max_distance) {
-  if (!is_vector_2(v)) abort(paste0('`v` must be a numeric vector of length 2, not ', friendly_typeof(v), '.'), call = NULL)
-  if (!is_vector_2(target)) abort(paste0('`target` must be a numeric vector of length 2, not ', friendly_typeof(target), '.'), call = NULL)
-  if (!is_float(max_distance)) abort(paste0('`max_distance` must be a number, not ', friendly_typeof(max_distance), '.'), call = NULL)
-  vector_2_move_towards_(v, target, max_distance)
-}
-
-#' Vector 2 distance
-#'
-#' .
-#'
-#' @param v_1 A numeric vector of length 2.
-#' @param v_2 A numeric vector of length 2.
-#'
-#' @return A number
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' float Vector2Distance(Vector2 v1, Vector2 v2);
-#' ```
-#'
-#'
-#' @export
-vector_2_distance <- function(v_1, v_2) {
-  if (!is_vector_2(v_1)) abort(paste0('`v_1` must be a numeric vector of length 2, not ', friendly_typeof(v_1), '.'), call = NULL)
-  if (!is_vector_2(v_2)) abort(paste0('`v_2` must be a numeric vector of length 2, not ', friendly_typeof(v_2), '.'), call = NULL)
-  vector_2_distance_(v_1, v_2)
-}
-
-#' Vector 2 rotate
-#'
-#' .
-#'
-#' @param v A numeric vector of length 2.
-#' @param angle A number.
-#'
-#' @return A numeric vector of length 2
-#'
-#' @note This function has been auto-generated from the following Raylib function definition:
-#'
-#' ```
-#' Vector2 Vector2Rotate(Vector2 v, float angle);
-#' ```
-#'
-#'
-#' @export
-vector_2_rotate <- function(v, angle) {
-  if (!is_vector_2(v)) abort(paste0('`v` must be a numeric vector of length 2, not ', friendly_typeof(v), '.'), call = NULL)
-  if (!is_float(angle)) abort(paste0('`angle` must be a number, not ', friendly_typeof(angle), '.'), call = NULL)
-  vector_2_rotate_(v, angle)
 }
 

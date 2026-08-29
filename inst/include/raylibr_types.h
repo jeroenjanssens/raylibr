@@ -25,7 +25,7 @@ namespace Rcpp {
   
   template <> SEXP wrap(const RaylibMatrix& x);
   template <> RaylibMatrix as(SEXP);
-  
+
   template <> SEXP wrap(const Color& x);
   template <> Color as(SEXP);
   
@@ -107,6 +107,8 @@ namespace Rcpp {
   template <> SEXP wrap(const VrStereoConfig& x);
   template <> VrStereoConfig as(SEXP);
   
+
 }
 
 #endif
+

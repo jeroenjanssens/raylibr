@@ -1,6 +1,6 @@
 # Do not edit by hand.
 
-#' Material map
+#' Material Map
 #'
 #' Create a new material_map object.
 #'
@@ -14,15 +14,16 @@
 #'
 #' ```
 #' typedef struct MaterialMap {
-#'     Texture2D texture;      // Material map texture
-#'     Color color;            // Material map color
-#'     float value;            // Material map value
+#'     Texture2D texture;        // Material map texture
+#'     Color color;        // Material map color
+#'     float value;        // Material map value
 #' } MaterialMap;
 #' ```
 #'
 #' @rdname material_map
 #'
 #' @family material_map functions
+#'
 #'
 #' @export
 material_map <- function(texture, color, value) {
@@ -100,9 +101,4 @@ as.character.material_map <- function(x, ...) {
   }, character(1))
   res <- paste(fields, values, sep = " = ", collapse = ", ")
   paste0("material_map(", res, ")")
-}
-
-#' @export
-is_material_map <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "material_map"
 }

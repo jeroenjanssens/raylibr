@@ -5,7 +5,7 @@
 #' Create a new ray object.
 #'
 #' @param position A numeric vector of length 3. Ray position (origin).
-#' @param direction A numeric vector of length 3. Ray direction.
+#' @param direction A numeric vector of length 3. Ray direction (normalized).
 #'
 #' @return A ray
 #'
@@ -13,14 +13,15 @@
 #'
 #' ```
 #' typedef struct Ray {
-#'     Vector3 position;       // Ray position (origin)
-#'     Vector3 direction;      // Ray direction
+#'     Vector3 position;        // Ray position (origin)
+#'     Vector3 direction;        // Ray direction (normalized)
 #' } Ray;
 #' ```
 #'
 #' @rdname ray
 #'
 #' @family ray functions
+#'
 #'
 #' @export
 ray <- function(position, direction) {
@@ -92,9 +93,4 @@ as.character.ray <- function(x, ...) {
   }, character(1))
   res <- paste(fields, values, sep = " = ", collapse = ", ")
   paste0("ray(", res, ")")
-}
-
-#' @export
-is_ray <- function(x) {
-  typeof(x) == "externalptr" && class(x) == "ray"
 }
