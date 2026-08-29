@@ -4,7 +4,13 @@
 \alias{camera_3d}
 \title{Camera 3d}
 \usage{
-camera_3d(position, target, up, fovy, projection)
+camera_3d(
+  position,
+  target = c(0, 0, 0),
+  up = c(0, 1, 0),
+  fovy = 45,
+  projection = 0L
+)
 }
 \arguments{
 \item{position}{A numeric vector of length 3. Camera position.}

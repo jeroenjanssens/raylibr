@@ -115,6 +115,16 @@ void set_window_monitor_(int monitor) {
 }
 
 // [[Rcpp::export]]
+void set_window_min_size_(int width, int height) {
+  return SetWindowMinSize(width, height);
+}
+
+// [[Rcpp::export]]
+void set_window_max_size_(int width, int height) {
+  return SetWindowMaxSize(width, height);
+}
+
+// [[Rcpp::export]]
 void set_window_size_(int width, int height) {
   return SetWindowSize(width, height);
 }
@@ -197,6 +207,21 @@ Vector2 get_window_position_() {
 // [[Rcpp::export]]
 Vector2 get_window_scale_dpi_() {
   return GetWindowScaleDPI();
+}
+
+// [[Rcpp::export]]
+const char * get_monitor_name_(int monitor) {
+  return GetMonitorName(monitor);
+}
+
+// [[Rcpp::export]]
+void set_clipboard_text_(const char * text) {
+  return SetClipboardText(text);
+}
+
+// [[Rcpp::export]]
+const char * get_clipboard_text_() {
+  return GetClipboardText();
 }
 
 // [[Rcpp::export]]
@@ -320,6 +345,11 @@ void end_vr_stereo_mode_() {
 }
 
 // [[Rcpp::export]]
+VrStereoConfig load_vr_stereo_config_(VrDeviceInfo device) {
+  return LoadVrStereoConfig(device);
+}
+
+// [[Rcpp::export]]
 void unload_vr_stereo_config_(VrStereoConfig config) {
   return UnloadVrStereoConfig(config);
 }
@@ -340,8 +370,38 @@ bool is_shader_valid_(Shader shader) {
 }
 
 // [[Rcpp::export]]
+int get_shader_location_(Shader shader, const char * uniform_name) {
+  return GetShaderLocation(shader, uniform_name);
+}
+
+// [[Rcpp::export]]
+int get_shader_location_attrib_(Shader shader, const char * attrib_name) {
+  return GetShaderLocationAttrib(shader, attrib_name);
+}
+
+// [[Rcpp::export]]
+void set_shader_value_matrix_(Shader shader, int loc_index, RaylibMatrix mat) {
+  return SetShaderValueMatrix(shader, loc_index, mat);
+}
+
+// [[Rcpp::export]]
+void set_shader_value_texture_(Shader shader, int loc_index, Texture2D texture) {
+  return SetShaderValueTexture(shader, loc_index, texture);
+}
+
+// [[Rcpp::export]]
 void unload_shader_(Shader shader) {
   return UnloadShader(shader);
+}
+
+// [[Rcpp::export]]
+Ray get_screen_to_world_ray_(Vector2 position, Camera3D camera) {
+  return GetScreenToWorldRay(position, camera);
+}
+
+// [[Rcpp::export]]
+Ray get_screen_to_world_ray_ex_(Vector2 position, Camera3D camera, int width, int height) {
+  return GetScreenToWorldRayEx(position, camera, width, height);
 }
 
 // [[Rcpp::export]]
@@ -362,6 +422,16 @@ Vector2 get_world_to_screen_2d_(Vector2 position, Camera2D camera) {
 // [[Rcpp::export]]
 Vector2 get_screen_to_world_2d_(Vector2 position, Camera2D camera) {
   return GetScreenToWorld2D(position, camera);
+}
+
+// [[Rcpp::export]]
+RaylibMatrix get_camera_matrix_(Camera3D camera) {
+  return GetCameraMatrix(camera);
+}
+
+// [[Rcpp::export]]
+RaylibMatrix get_camera_matrix_2d_(Camera2D camera) {
+  return GetCameraMatrix2D(camera);
 }
 
 // [[Rcpp::export]]
@@ -392,6 +462,11 @@ void swap_screen_buffer_() {
 // [[Rcpp::export]]
 void poll_input_events_() {
   return PollInputEvents();
+}
+
+// [[Rcpp::export]]
+void wait_time_(double seconds) {
+  return WaitTime(seconds);
 }
 
 // [[Rcpp::export]]
@@ -432,6 +507,31 @@ const char * load_file_text_(const char * file_name) {
 // [[Rcpp::export]]
 bool save_file_text_(const char * file_name, const char * text) {
   return SaveFileText(file_name, text);
+}
+
+// [[Rcpp::export]]
+int file_rename_(const char * file_name, const char * file_rename) {
+  return FileRename(file_name, file_rename);
+}
+
+// [[Rcpp::export]]
+int file_remove_(const char * file_name) {
+  return FileRemove(file_name);
+}
+
+// [[Rcpp::export]]
+int file_copy_(const char * src_path, const char * dst_path) {
+  return FileCopy(src_path, dst_path);
+}
+
+// [[Rcpp::export]]
+int file_move_(const char * src_path, const char * dst_path) {
+  return FileMove(src_path, dst_path);
+}
+
+// [[Rcpp::export]]
+int file_text_replace_(const char * file_name, const char * search, const char * replacement) {
+  return FileTextReplace(file_name, search, replacement);
 }
 
 // [[Rcpp::export]]
@@ -535,6 +635,21 @@ unsigned int get_directory_file_count_ex_(const char * base_path, const char * f
 }
 
 // [[Rcpp::export]]
+void set_automation_event_base_frame_(int frame) {
+  return SetAutomationEventBaseFrame(frame);
+}
+
+// [[Rcpp::export]]
+void start_automation_event_recording_() {
+  return StartAutomationEventRecording();
+}
+
+// [[Rcpp::export]]
+void stop_automation_event_recording_() {
+  return StopAutomationEventRecording();
+}
+
+// [[Rcpp::export]]
 bool is_key_pressed_(int key) {
   return IsKeyPressed(key);
 }
@@ -565,6 +680,16 @@ int get_key_pressed_() {
 }
 
 // [[Rcpp::export]]
+int get_char_pressed_() {
+  return GetCharPressed();
+}
+
+// [[Rcpp::export]]
+const char * get_key_name_(int key) {
+  return GetKeyName(key);
+}
+
+// [[Rcpp::export]]
 void set_exit_key_(int key) {
   return SetExitKey(key);
 }
@@ -572,6 +697,11 @@ void set_exit_key_(int key) {
 // [[Rcpp::export]]
 bool is_gamepad_available_(int gamepad) {
   return IsGamepadAvailable(gamepad);
+}
+
+// [[Rcpp::export]]
+const char * get_gamepad_name_(int gamepad) {
+  return GetGamepadName(gamepad);
 }
 
 // [[Rcpp::export]]
@@ -800,38 +930,8 @@ void set_text_line_spacing_(int spacing) {
 }
 
 // [[Rcpp::export]]
-bool text_is_equal_(const char * text1, const char * text2) {
-  return TextIsEqual(text1, text2);
-}
-
-// [[Rcpp::export]]
-unsigned int text_length_(const char * text) {
-  return TextLength(text);
-}
-
-// [[Rcpp::export]]
 const char * get_text_between_(const char * text, const char * begin, const char * end) {
   return GetTextBetween(text, begin, end);
-}
-
-// [[Rcpp::export]]
-const char * text_replace_alloc_(const char * text, const char * search, const char * replacement) {
-  return TextReplaceAlloc(text, search, replacement);
-}
-
-// [[Rcpp::export]]
-const char * text_replace_between_(const char * text, const char * begin, const char * end, const char * replacement) {
-  return TextReplaceBetween(text, begin, end, replacement);
-}
-
-// [[Rcpp::export]]
-const char * text_replace_between_alloc_(const char * text, const char * begin, const char * end, const char * replacement) {
-  return TextReplaceBetweenAlloc(text, begin, end, replacement);
-}
-
-// [[Rcpp::export]]
-const char * text_insert_alloc_(const char * text, const char * insert, int position) {
-  return TextInsertAlloc(text, insert, position);
 }
 
 // [[Rcpp::export]]
@@ -867,4 +967,11 @@ void close_audio_device_() {
 // [[Rcpp::export]]
 Wave wave_copy_(Wave wave) {
   return WaveCopy(wave);
+}
+
+// [[Rcpp::export]]
+void draw_bounding_box_vectorized_(List box, List color) {
+  for (int i = 0; i < box.length(); i++) {
+    DrawBoundingBox(as<BoundingBox>(box[i]), as<Color>(color[i]));
+  }
 }

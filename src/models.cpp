@@ -155,6 +155,76 @@ void draw_mesh_(Mesh mesh, Material material, RaylibMatrix transform) {
 }
 
 // [[Rcpp::export]]
+BoundingBox get_mesh_bounding_box_(Mesh mesh) {
+  return GetMeshBoundingBox(mesh);
+}
+
+// [[Rcpp::export]]
+bool export_mesh_(Mesh mesh, const char * file_name) {
+  return ExportMesh(mesh, file_name);
+}
+
+// [[Rcpp::export]]
+bool export_mesh_as_code_(Mesh mesh, const char * file_name) {
+  return ExportMeshAsCode(mesh, file_name);
+}
+
+// [[Rcpp::export]]
+Mesh gen_mesh_poly_(int sides, float radius) {
+  return GenMeshPoly(sides, radius);
+}
+
+// [[Rcpp::export]]
+Mesh gen_mesh_plane_(float width, float length, int res_x, int res_z) {
+  return GenMeshPlane(width, length, res_x, res_z);
+}
+
+// [[Rcpp::export]]
+Mesh gen_mesh_cube_(float width, float height, float length) {
+  return GenMeshCube(width, height, length);
+}
+
+// [[Rcpp::export]]
+Mesh gen_mesh_sphere_(float radius, int rings, int slices) {
+  return GenMeshSphere(radius, rings, slices);
+}
+
+// [[Rcpp::export]]
+Mesh gen_mesh_hemi_sphere_(float radius, int rings, int slices) {
+  return GenMeshHemiSphere(radius, rings, slices);
+}
+
+// [[Rcpp::export]]
+Mesh gen_mesh_cylinder_(float radius, float height, int slices) {
+  return GenMeshCylinder(radius, height, slices);
+}
+
+// [[Rcpp::export]]
+Mesh gen_mesh_cone_(float radius, float height, int slices) {
+  return GenMeshCone(radius, height, slices);
+}
+
+// [[Rcpp::export]]
+Mesh gen_mesh_torus_(float radius, float size, int rad_seg, int sides) {
+  return GenMeshTorus(radius, size, rad_seg, sides);
+}
+
+// [[Rcpp::export]]
+Mesh gen_mesh_knot_(float radius, float size, int rad_seg, int sides) {
+  return GenMeshKnot(radius, size, rad_seg, sides);
+}
+
+// [[Rcpp::export]]
+Mesh gen_mesh_heightmap_(Image heightmap, Vector3 size) {
+  return GenMeshHeightmap(heightmap, size);
+}
+
+// [[Rcpp::export]]
+Mesh gen_mesh_cubicmap_(Image cubicmap, Vector3 cube_size) {
+  return GenMeshCubicmap(cubicmap, cube_size);
+}
+
+// [[Rcpp::export]]
 Material load_material_default_() {
   return LoadMaterialDefault();
 }
@@ -197,4 +267,179 @@ RayCollision get_ray_collision_triangle_(Ray ray, Vector3 p1, Vector3 p2, Vector
 // [[Rcpp::export]]
 RayCollision get_ray_collision_quad_(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3, Vector3 p4) {
   return GetRayCollisionQuad(ray, p1, p2, p3, p4);
+}
+
+// [[Rcpp::export]]
+void draw_point_3d_vectorized_(NumericMatrix position, List color) {
+  for (int i = 0; i < position.nrow(); i++) {
+    DrawPoint3D(Vector3{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1))), as<float>(wrap(position(i,2)))}, as<Color>(color[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_cube_vectorized_(NumericMatrix position, NumericVector width, NumericVector height, NumericVector length, List color) {
+  for (int i = 0; i < position.nrow(); i++) {
+    DrawCube(Vector3{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1))), as<float>(wrap(position(i,2)))}, (float)width[i], (float)height[i], (float)length[i], as<Color>(color[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_cube_v_vectorized_(NumericMatrix position, NumericMatrix size, List color) {
+  for (int i = 0; i < position.nrow(); i++) {
+    DrawCubeV(Vector3{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1))), as<float>(wrap(position(i,2)))}, Vector3{as<float>(wrap(size(i,0))), as<float>(wrap(size(i,1))), as<float>(wrap(size(i,2)))}, as<Color>(color[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_cube_wires_vectorized_(NumericMatrix position, NumericVector width, NumericVector height, NumericVector length, List color) {
+  for (int i = 0; i < position.nrow(); i++) {
+    DrawCubeWires(Vector3{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1))), as<float>(wrap(position(i,2)))}, (float)width[i], (float)height[i], (float)length[i], as<Color>(color[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_cube_wires_v_vectorized_(NumericMatrix position, NumericMatrix size, List color) {
+  for (int i = 0; i < position.nrow(); i++) {
+    DrawCubeWiresV(Vector3{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1))), as<float>(wrap(position(i,2)))}, Vector3{as<float>(wrap(size(i,0))), as<float>(wrap(size(i,1))), as<float>(wrap(size(i,2)))}, as<Color>(color[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_sphere_vectorized_(NumericMatrix center_pos, NumericVector radius, List color) {
+  for (int i = 0; i < center_pos.nrow(); i++) {
+    DrawSphere(Vector3{as<float>(wrap(center_pos(i,0))), as<float>(wrap(center_pos(i,1))), as<float>(wrap(center_pos(i,2)))}, (float)radius[i], as<Color>(color[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_sphere_ex_vectorized_(NumericMatrix center_pos, NumericVector radius, NumericVector rings, NumericVector slices, List color) {
+  for (int i = 0; i < center_pos.nrow(); i++) {
+    DrawSphereEx(Vector3{as<float>(wrap(center_pos(i,0))), as<float>(wrap(center_pos(i,1))), as<float>(wrap(center_pos(i,2)))}, (float)radius[i], (int)rings[i], (int)slices[i], as<Color>(color[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_sphere_wires_vectorized_(NumericMatrix center_pos, NumericVector radius, NumericVector rings, NumericVector slices, List color) {
+  for (int i = 0; i < center_pos.nrow(); i++) {
+    DrawSphereWires(Vector3{as<float>(wrap(center_pos(i,0))), as<float>(wrap(center_pos(i,1))), as<float>(wrap(center_pos(i,2)))}, (float)radius[i], (int)rings[i], (int)slices[i], as<Color>(color[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_cylinder_vectorized_(NumericMatrix position, NumericVector radius_top, NumericVector radius_bottom, NumericVector height, NumericVector slices, List color) {
+  for (int i = 0; i < position.nrow(); i++) {
+    DrawCylinder(Vector3{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1))), as<float>(wrap(position(i,2)))}, (float)radius_top[i], (float)radius_bottom[i], (float)height[i], (int)slices[i], as<Color>(color[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_cylinder_ex_vectorized_(NumericMatrix start_pos, NumericMatrix end_pos, NumericVector start_radius, NumericVector end_radius, NumericVector sides, List color) {
+  for (int i = 0; i < start_pos.nrow(); i++) {
+    DrawCylinderEx(Vector3{as<float>(wrap(start_pos(i,0))), as<float>(wrap(start_pos(i,1))), as<float>(wrap(start_pos(i,2)))}, Vector3{as<float>(wrap(end_pos(i,0))), as<float>(wrap(end_pos(i,1))), as<float>(wrap(end_pos(i,2)))}, (float)start_radius[i], (float)end_radius[i], (int)sides[i], as<Color>(color[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_cylinder_wires_vectorized_(NumericMatrix position, NumericVector radius_top, NumericVector radius_bottom, NumericVector height, NumericVector slices, List color) {
+  for (int i = 0; i < position.nrow(); i++) {
+    DrawCylinderWires(Vector3{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1))), as<float>(wrap(position(i,2)))}, (float)radius_top[i], (float)radius_bottom[i], (float)height[i], (int)slices[i], as<Color>(color[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_cylinder_wires_ex_vectorized_(NumericMatrix start_pos, NumericMatrix end_pos, NumericVector start_radius, NumericVector end_radius, NumericVector sides, List color) {
+  for (int i = 0; i < start_pos.nrow(); i++) {
+    DrawCylinderWiresEx(Vector3{as<float>(wrap(start_pos(i,0))), as<float>(wrap(start_pos(i,1))), as<float>(wrap(start_pos(i,2)))}, Vector3{as<float>(wrap(end_pos(i,0))), as<float>(wrap(end_pos(i,1))), as<float>(wrap(end_pos(i,2)))}, (float)start_radius[i], (float)end_radius[i], (int)sides[i], as<Color>(color[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_capsule_vectorized_(NumericMatrix start_pos, NumericMatrix end_pos, NumericVector radius, NumericVector slices, NumericVector rings, List color) {
+  for (int i = 0; i < start_pos.nrow(); i++) {
+    DrawCapsule(Vector3{as<float>(wrap(start_pos(i,0))), as<float>(wrap(start_pos(i,1))), as<float>(wrap(start_pos(i,2)))}, Vector3{as<float>(wrap(end_pos(i,0))), as<float>(wrap(end_pos(i,1))), as<float>(wrap(end_pos(i,2)))}, (float)radius[i], (int)slices[i], (int)rings[i], as<Color>(color[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_capsule_wires_vectorized_(NumericMatrix start_pos, NumericMatrix end_pos, NumericVector radius, NumericVector slices, NumericVector rings, List color) {
+  for (int i = 0; i < start_pos.nrow(); i++) {
+    DrawCapsuleWires(Vector3{as<float>(wrap(start_pos(i,0))), as<float>(wrap(start_pos(i,1))), as<float>(wrap(start_pos(i,2)))}, Vector3{as<float>(wrap(end_pos(i,0))), as<float>(wrap(end_pos(i,1))), as<float>(wrap(end_pos(i,2)))}, (float)radius[i], (int)slices[i], (int)rings[i], as<Color>(color[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_plane_vectorized_(NumericMatrix center_pos, NumericMatrix size, List color) {
+  for (int i = 0; i < center_pos.nrow(); i++) {
+    DrawPlane(Vector3{as<float>(wrap(center_pos(i,0))), as<float>(wrap(center_pos(i,1))), as<float>(wrap(center_pos(i,2)))}, Vector2{as<float>(wrap(size(i,0))), as<float>(wrap(size(i,1)))}, as<Color>(color[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_ray_vectorized_(List ray, List color) {
+  for (int i = 0; i < ray.length(); i++) {
+    DrawRay(as<Ray>(ray[i]), as<Color>(color[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_grid_vectorized_(NumericVector slices, NumericVector spacing) {
+  for (int i = 0; i < slices.length(); i++) {
+    DrawGrid((int)slices[i], (float)spacing[i]);
+  }
+}
+
+// [[Rcpp::export]]
+void draw_model_vectorized_(List model, NumericMatrix position, NumericVector scale, List tint) {
+  for (int i = 0; i < model.length(); i++) {
+    DrawModel(as<Model>(model[i]), Vector3{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1))), as<float>(wrap(position(i,2)))}, (float)scale[i], as<Color>(tint[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_model_ex_vectorized_(List model, NumericMatrix position, NumericMatrix rotation_axis, NumericVector rotation_angle, NumericMatrix scale, List tint) {
+  for (int i = 0; i < model.length(); i++) {
+    DrawModelEx(as<Model>(model[i]), Vector3{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1))), as<float>(wrap(position(i,2)))}, Vector3{as<float>(wrap(rotation_axis(i,0))), as<float>(wrap(rotation_axis(i,1))), as<float>(wrap(rotation_axis(i,2)))}, (float)rotation_angle[i], Vector3{as<float>(wrap(scale(i,0))), as<float>(wrap(scale(i,1))), as<float>(wrap(scale(i,2)))}, as<Color>(tint[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_model_wires_vectorized_(List model, NumericMatrix position, NumericVector scale, List tint) {
+  for (int i = 0; i < model.length(); i++) {
+    DrawModelWires(as<Model>(model[i]), Vector3{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1))), as<float>(wrap(position(i,2)))}, (float)scale[i], as<Color>(tint[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_model_wires_ex_vectorized_(List model, NumericMatrix position, NumericMatrix rotation_axis, NumericVector rotation_angle, NumericMatrix scale, List tint) {
+  for (int i = 0; i < model.length(); i++) {
+    DrawModelWiresEx(as<Model>(model[i]), Vector3{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1))), as<float>(wrap(position(i,2)))}, Vector3{as<float>(wrap(rotation_axis(i,0))), as<float>(wrap(rotation_axis(i,1))), as<float>(wrap(rotation_axis(i,2)))}, (float)rotation_angle[i], Vector3{as<float>(wrap(scale(i,0))), as<float>(wrap(scale(i,1))), as<float>(wrap(scale(i,2)))}, as<Color>(tint[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_billboard_vectorized_(List camera, List texture, NumericMatrix position, NumericVector scale, List tint) {
+  for (int i = 0; i < camera.length(); i++) {
+    DrawBillboard(as<Camera3D>(camera[i]), as<Texture2D>(texture[i]), Vector3{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1))), as<float>(wrap(position(i,2)))}, (float)scale[i], as<Color>(tint[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_billboard_rec_vectorized_(List camera, List texture, List source, NumericMatrix position, NumericMatrix size, List tint) {
+  for (int i = 0; i < camera.length(); i++) {
+    DrawBillboardRec(as<Camera3D>(camera[i]), as<Texture2D>(texture[i]), as<Rectangle>(source[i]), Vector3{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1))), as<float>(wrap(position(i,2)))}, Vector2{as<float>(wrap(size(i,0))), as<float>(wrap(size(i,1)))}, as<Color>(tint[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_billboard_pro_vectorized_(List camera, List texture, List source, NumericMatrix position, NumericMatrix up, NumericMatrix size, NumericMatrix origin, NumericVector rotation, List tint) {
+  for (int i = 0; i < camera.length(); i++) {
+    DrawBillboardPro(as<Camera3D>(camera[i]), as<Texture2D>(texture[i]), as<Rectangle>(source[i]), Vector3{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1))), as<float>(wrap(position(i,2)))}, Vector3{as<float>(wrap(up(i,0))), as<float>(wrap(up(i,1))), as<float>(wrap(up(i,2)))}, Vector2{as<float>(wrap(size(i,0))), as<float>(wrap(size(i,1)))}, Vector2{as<float>(wrap(origin(i,0))), as<float>(wrap(origin(i,1)))}, (float)rotation[i], as<Color>(tint[i]));
+  }
+}
+
+// [[Rcpp::export]]
+void draw_mesh_vectorized_(List mesh, List material, List transform) {
+  for (int i = 0; i < mesh.length(); i++) {
+    DrawMesh(as<Mesh>(mesh[i]), as<Material>(material[i]), as<RaylibMatrix>(transform[i]));
+  }
 }

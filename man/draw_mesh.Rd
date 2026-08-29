@@ -24,9 +24,12 @@ This function has been auto-generated from the following Raylib function definit
 }
 \seealso{
 Other mesh functions: 
+\code{\link{export_mesh}()},
+\code{\link{gen_mesh_tangents}()},
 \code{\link{get_ray_collision_mesh}()},
 \code{\link{load_model_from_mesh}()},
-\code{\link{unload_mesh}()}
+\code{\link{unload_mesh}()},
+\code{\link{upload_mesh}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -62,7 +65,9 @@ Other draw functions:
 \code{\link{draw_line_bezier}()},
 \code{\link{draw_line_dashed}()},
 \code{\link{draw_line_ex}()},
+\code{\link{draw_line_strip}()},
 \code{\link{draw_line_v}()},
+\code{\link{draw_mesh_instanced}()},
 \code{\link{draw_model}()},
 \code{\link{draw_model_ex}()},
 \code{\link{draw_model_wires}()},
@@ -92,6 +97,16 @@ Other draw functions:
 \code{\link{draw_sphere}()},
 \code{\link{draw_sphere_ex}()},
 \code{\link{draw_sphere_wires}()},
+\code{\link{draw_spline_basis}()},
+\code{\link{draw_spline_bezier_cubic}()},
+\code{\link{draw_spline_bezier_quadratic}()},
+\code{\link{draw_spline_catmull_rom}()},
+\code{\link{draw_spline_linear}()},
+\code{\link{draw_spline_segment_basis}()},
+\code{\link{draw_spline_segment_bezier_cubic}()},
+\code{\link{draw_spline_segment_bezier_quadratic}()},
+\code{\link{draw_spline_segment_catmull_rom}()},
+\code{\link{draw_spline_segment_linear}()},
 \code{\link{draw_text}()},
 \code{\link{draw_text_codepoint}()},
 \code{\link{draw_text_ex}()},
@@ -104,7 +119,10 @@ Other draw functions:
 \code{\link{draw_texture_v}()},
 \code{\link{draw_triangle}()},
 \code{\link{draw_triangle_3d}()},
-\code{\link{draw_triangle_lines}()}
+\code{\link{draw_triangle_fan}()},
+\code{\link{draw_triangle_lines}()},
+\code{\link{draw_triangle_strip}()},
+\code{\link{draw_triangle_strip_3d}()}
 }
 \concept{draw functions}
 \concept{mesh functions}

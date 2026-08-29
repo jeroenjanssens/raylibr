@@ -20,6 +20,11 @@ Image load_image_(const char * file_name) {
 }
 
 // [[Rcpp::export]]
+Image load_image_raw_(const char * file_name, int width, int height, int format, int header_size) {
+  return LoadImageRaw(file_name, width, height, format, header_size);
+}
+
+// [[Rcpp::export]]
 Image load_image_from_texture_(Texture2D texture) {
   return LoadImageFromTexture(texture);
 }
@@ -80,6 +85,11 @@ Image gen_image_white_noise_(int width, int height, float factor) {
 }
 
 // [[Rcpp::export]]
+Image gen_image_perlin_noise_(int width, int height, int offset_x, int offset_y, float scale) {
+  return GenImagePerlinNoise(width, height, offset_x, offset_y, scale);
+}
+
+// [[Rcpp::export]]
 Image gen_image_cellular_(int width, int height, int tile_size) {
   return GenImageCellular(width, height, tile_size);
 }
@@ -97,6 +107,16 @@ Image image_copy_(Image image) {
 // [[Rcpp::export]]
 Image image_from_image_(Image image, Rectangle rec) {
   return ImageFromImage(image, rec);
+}
+
+// [[Rcpp::export]]
+Image image_from_channel_(Image image, int selected_channel) {
+  return ImageFromChannel(image, selected_channel);
+}
+
+// [[Rcpp::export]]
+Rectangle get_image_alpha_border_(Image image, float threshold) {
+  return GetImageAlphaBorder(image, threshold);
 }
 
 // [[Rcpp::export]]
@@ -150,6 +170,11 @@ void set_texture_wrap_(Texture2D texture, int wrap) {
 }
 
 // [[Rcpp::export]]
+bool color_is_equal_(Color col1, Color col2) {
+  return ColorIsEqual(col1, col2);
+}
+
+// [[Rcpp::export]]
 int color_to_int_(Color color) {
   return ColorToInt(color);
 }
@@ -160,8 +185,33 @@ Vector4 color_normalize_(Color color) {
 }
 
 // [[Rcpp::export]]
+Color color_from_normalized_(Vector4 normalized) {
+  return ColorFromNormalized(normalized);
+}
+
+// [[Rcpp::export]]
+Vector3 color_to_hsv_(Color color) {
+  return ColorToHSV(color);
+}
+
+// [[Rcpp::export]]
+Color color_from_hsv_(float hue, float saturation, float value) {
+  return ColorFromHSV(hue, saturation, value);
+}
+
+// [[Rcpp::export]]
 Color color_tint_(Color color, Color tint) {
   return ColorTint(color, tint);
+}
+
+// [[Rcpp::export]]
+Color color_brightness_(Color color, float factor) {
+  return ColorBrightness(color, factor);
+}
+
+// [[Rcpp::export]]
+Color color_contrast_(Color color, float contrast) {
+  return ColorContrast(color, contrast);
 }
 
 // [[Rcpp::export]]
@@ -172,4 +222,9 @@ Color color_alpha_(Color color, float alpha) {
 // [[Rcpp::export]]
 Color color_alpha_blend_(Color dst, Color src, Color tint) {
   return ColorAlphaBlend(dst, src, tint);
+}
+
+// [[Rcpp::export]]
+Color color_lerp_(Color color1, Color color2, float factor) {
+  return ColorLerp(color1, color2, factor);
 }

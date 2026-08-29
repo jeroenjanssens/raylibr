@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' @export
+is_camera_3d <- function(x) {
+  inherits(x, "camera_3d")
+}
+
+
 #' Camera 3d
 #'
 #' Create a new camera_3d object.
@@ -30,7 +36,7 @@
 #'
 #'
 #' @export
-camera_3d <- function(position, target, up, fovy, projection) {
+camera_3d <- function(position, target = c(0, 0, 0), up = c(0, 1, 0), fovy = 45, projection = 0L) {
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_vector_3(target)) abort(paste0('`target` must be a numeric vector of length 3, not ', friendly_typeof(target), '.'), call = NULL)
   if (!is_vector_3(up)) abort(paste0('`up` must be a numeric vector of length 3, not ', friendly_typeof(up), '.'), call = NULL)

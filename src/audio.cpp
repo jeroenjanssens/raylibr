@@ -10,6 +10,16 @@ bool is_audio_device_ready_() {
 }
 
 // [[Rcpp::export]]
+void set_master_volume_(float volume) {
+  return SetMasterVolume(volume);
+}
+
+// [[Rcpp::export]]
+float get_master_volume_() {
+  return GetMasterVolume();
+}
+
+// [[Rcpp::export]]
 Wave load_wave_(const char * file_name) {
   return LoadWave(file_name);
 }
@@ -100,6 +110,11 @@ void set_sound_pitch_(Sound sound, float pitch) {
 }
 
 // [[Rcpp::export]]
+void set_sound_pan_(Sound sound, float pan) {
+  return SetSoundPan(sound, pan);
+}
+
+// [[Rcpp::export]]
 Music load_music_stream_(const char * file_name) {
   return LoadMusicStream(file_name);
 }
@@ -145,6 +160,11 @@ void resume_music_stream_(Music music) {
 }
 
 // [[Rcpp::export]]
+void seek_music_stream_(Music music, float position) {
+  return SeekMusicStream(music, position);
+}
+
+// [[Rcpp::export]]
 void set_music_volume_(Music music, float volume) {
   return SetMusicVolume(music, volume);
 }
@@ -152,6 +172,11 @@ void set_music_volume_(Music music, float volume) {
 // [[Rcpp::export]]
 void set_music_pitch_(Music music, float pitch) {
   return SetMusicPitch(music, pitch);
+}
+
+// [[Rcpp::export]]
+void set_music_pan_(Music music, float pan) {
+  return SetMusicPan(music, pan);
 }
 
 // [[Rcpp::export]]
@@ -200,6 +225,11 @@ void resume_audio_stream_(AudioStream stream) {
 }
 
 // [[Rcpp::export]]
+bool is_audio_stream_playing_(AudioStream stream) {
+  return IsAudioStreamPlaying(stream);
+}
+
+// [[Rcpp::export]]
 void stop_audio_stream_(AudioStream stream) {
   return StopAudioStream(stream);
 }
@@ -212,4 +242,14 @@ void set_audio_stream_volume_(AudioStream stream, float volume) {
 // [[Rcpp::export]]
 void set_audio_stream_pitch_(AudioStream stream, float pitch) {
   return SetAudioStreamPitch(stream, pitch);
+}
+
+// [[Rcpp::export]]
+void set_audio_stream_pan_(AudioStream stream, float pan) {
+  return SetAudioStreamPan(stream, pan);
+}
+
+// [[Rcpp::export]]
+void set_audio_stream_buffer_size_default_(int size) {
+  return SetAudioStreamBufferSizeDefault(size);
 }

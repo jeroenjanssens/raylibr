@@ -1,8 +1,8 @@
-#include <raylib.h>
+#include "../inst/include/raylibr_types.h"
 #include <raymath.h>
-
-#undef DEG2RAD
-typedef Matrix RaylibMatrix;
+#include <rlgl.h>
+#include <rcamera.h>
+#include <raygui.h>
 
 #include <Rcpp.h>
 using namespace Rcpp;

@@ -1,5 +1,29 @@
 # Do not edit by hand.
 
+# Vectorization helpers for draw_* functions
+.vec_len <- function(x) if (is.matrix(x)) nrow(x) else 1L
+.vec_recycle <- function(x, n, nc) {
+  if (is.matrix(x) && nrow(x) == n) return(x)
+  if (!is.matrix(x)) x <- matrix(x, nrow = 1)
+  matrix(rep(t(x), length.out = n * nc), ncol = nc, byrow = TRUE)
+}
+.color_len <- function(x) {
+  if (is.list(x) && !inherits(x, "color") && !identical(names(x), c("r", "g", "b", "a"))) length(x)
+  else if (is.character(x)) length(x)
+  else 1L
+}
+.color_recycle <- function(x, n) {
+  cl <- .color_len(x)
+  if (is.character(x)) as.list(rep(x, length.out = n))
+  else if (cl > 1L) rep(x, length.out = n)
+  else rep(list(x), length.out = n)
+}
+.struct_len <- function(x) if (is.list(x) && is.null(attr(x, "class"))) length(x) else 1L
+.struct_recycle <- function(x, n) {
+  if (.struct_len(x) > 1L) rep(x, length.out = n)
+  else rep(list(x), length.out = n)
+}
+
 #' Init Window
 #'
 #' Initialize window and OpenGL context.
@@ -473,6 +497,54 @@ set_window_monitor <- function(monitor) {
   set_window_monitor_(monitor)
 }
 
+#' Set Window Min Size
+#'
+#' Set window minimum dimensions (for FLAG_WINDOW_RESIZABLE).
+#'
+#' @param width An integer.
+#' @param height An integer.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetWindowMinSize(int width, int height);
+#' ```
+#'
+#' @family size functions
+#' @family set functions
+#'
+#'
+#' @export
+set_window_min_size <- function(width, height) {
+  if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
+  if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
+  set_window_min_size_(width, height)
+}
+
+#' Set Window Max Size
+#'
+#' Set window maximum dimensions (for FLAG_WINDOW_RESIZABLE).
+#'
+#' @param width An integer.
+#' @param height An integer.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetWindowMaxSize(int width, int height);
+#' ```
+#'
+#' @family size functions
+#' @family set functions
+#'
+#'
+#' @export
+set_window_max_size <- function(width, height) {
+  if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
+  if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
+  set_window_max_size_(width, height)
+}
+
 #' Set Window Size
 #'
 #' Set window dimensions.
@@ -857,6 +929,74 @@ get_window_position <- function() {
 #' @export
 get_window_scale_dpi <- function() {
   get_window_scale_dpi_()
+}
+
+#' Get Monitor Name
+#'
+#' Get the human-readable, UTF-8 encoded name of the specified monitor.
+#'
+#' @param monitor An integer.
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' const char * GetMonitorName(int monitor);
+#' ```
+#'
+#' @family name functions
+#' @family get functions
+#'
+#'
+#' @export
+get_monitor_name <- function(monitor) {
+  if (!is_int(monitor)) abort(paste0('`monitor` must be an integer, not ', friendly_typeof(monitor), '.'), call = NULL)
+  get_monitor_name_(monitor)
+}
+
+#' Set Clipboard Text
+#'
+#' Set clipboard text content.
+#'
+#' @param text A string.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetClipboardText(const char * text);
+#' ```
+#'
+#' @family text functions
+#' @family set functions
+#'
+#'
+#' @export
+set_clipboard_text <- function(text) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  set_clipboard_text_(text)
+}
+
+#' Get Clipboard Text
+#'
+#' Get clipboard text content.
+#'
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' const char * GetClipboardText(void);
+#' ```
+#'
+#' @family text functions
+#' @family get functions
+#'
+#'
+#' @export
+get_clipboard_text <- function() {
+  get_clipboard_text_()
 }
 
 #' Get Clipboard Image
@@ -1400,6 +1540,30 @@ end_vr_stereo_mode <- function() {
   end_vr_stereo_mode_()
 }
 
+#' Load Vr Stereo Config
+#'
+#' Load VR stereo config for VR simulator device parameters.
+#'
+#' @param device A vr_device_info.
+#'
+#' @return A vr_stereo_config
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' VrStereoConfig LoadVrStereoConfig(VrDeviceInfo device);
+#' ```
+#'
+#' @family config functions
+#' @family load functions
+#'
+#'
+#' @export
+load_vr_stereo_config <- function(device) {
+  if (!is_vr_device_info(device)) abort(paste0('`device` must be a vr_device_info, not ', friendly_typeof(device), '.'), call = NULL)
+  load_vr_stereo_config_(device)
+}
+
 #' Unload Vr Stereo Config
 #'
 #' Unload VR stereo config.
@@ -1498,6 +1662,110 @@ is_shader_valid <- function(shader) {
   is_shader_valid_(shader)
 }
 
+#' Get Shader Location
+#'
+#' Get shader uniform location.
+#'
+#' @param shader A shader.
+#' @param uniform_name A string.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int GetShaderLocation(Shader shader, const char * uniformName);
+#' ```
+#'
+#' @family location functions
+#' @family get functions
+#'
+#'
+#' @export
+get_shader_location <- function(shader, uniform_name) {
+  if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
+  if (!is_const_char_pointer(uniform_name)) abort(paste0('`uniform_name` must be a string, not ', friendly_typeof(uniform_name), '.'), call = NULL)
+  get_shader_location_(shader, uniform_name)
+}
+
+#' Get Shader Location Attrib
+#'
+#' Get shader attribute location.
+#'
+#' @param shader A shader.
+#' @param attrib_name A string.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int GetShaderLocationAttrib(Shader shader, const char * attribName);
+#' ```
+#'
+#' @family attrib functions
+#' @family get functions
+#'
+#'
+#' @export
+get_shader_location_attrib <- function(shader, attrib_name) {
+  if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
+  if (!is_const_char_pointer(attrib_name)) abort(paste0('`attrib_name` must be a string, not ', friendly_typeof(attrib_name), '.'), call = NULL)
+  get_shader_location_attrib_(shader, attrib_name)
+}
+
+#' Set Shader Value Matrix
+#'
+#' Set shader uniform value (matrix 4x4).
+#'
+#' @param shader A shader.
+#' @param loc_index An integer.
+#' @param mat A 4x4 numeric matrix.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetShaderValueMatrix(Shader shader, int locIndex, Matrix mat);
+#' ```
+#'
+#' @family matrix functions
+#' @family set functions
+#'
+#'
+#' @export
+set_shader_value_matrix <- function(shader, loc_index, mat) {
+  if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
+  if (!is_int(loc_index)) abort(paste0('`loc_index` must be an integer, not ', friendly_typeof(loc_index), '.'), call = NULL)
+  if (!is_raylib_matrix(mat)) abort(paste0('`mat` must be a 4x4 numeric matrix, not ', friendly_typeof(mat), '.'), call = NULL)
+  set_shader_value_matrix_(shader, loc_index, mat)
+}
+
+#' Set Shader Value Texture
+#'
+#' Set shader uniform value and bind the texture (sampler2d).
+#'
+#' @param shader A shader.
+#' @param loc_index An integer.
+#' @param texture A texture.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetShaderValueTexture(Shader shader, int locIndex, Texture2D texture);
+#' ```
+#'
+#' @family texture functions
+#' @family set functions
+#'
+#'
+#' @export
+set_shader_value_texture <- function(shader, loc_index, texture) {
+  if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
+  if (!is_int(loc_index)) abort(paste0('`loc_index` must be an integer, not ', friendly_typeof(loc_index), '.'), call = NULL)
+  if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
+  set_shader_value_texture_(shader, loc_index, texture)
+}
+
 #' Unload Shader
 #'
 #' Unload shader from GPU memory (VRAM).
@@ -1518,6 +1786,62 @@ is_shader_valid <- function(shader) {
 unload_shader <- function(shader) {
   if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
   unload_shader_(shader)
+}
+
+#' Get Screen To World Ray
+#'
+#' Get a ray trace from screen position (i.e mouse).
+#'
+#' @param position A numeric vector of length 2.
+#' @param camera A camera_3d.
+#'
+#' @return A ray
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Ray GetScreenToWorldRay(Vector2 position, Camera camera);
+#' ```
+#'
+#' @family ray functions
+#' @family get functions
+#'
+#'
+#' @export
+get_screen_to_world_ray <- function(position, camera) {
+  if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
+  get_screen_to_world_ray_(position, camera)
+}
+
+#' Get Screen To World Ray Ex
+#'
+#' Get a ray trace from screen position (i.e mouse) in a viewport.
+#'
+#' @param position A numeric vector of length 2.
+#' @param camera A camera_3d.
+#' @param width An integer.
+#' @param height An integer.
+#'
+#' @return A ray
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Ray GetScreenToWorldRayEx(Vector2 position, Camera camera, int width, int height);
+#' ```
+#'
+#' @family ex functions
+#' @family get functions
+#'
+#'
+#' @export
+get_screen_to_world_ray_ex <- function(position, camera, width, height) {
+  if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
+  if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
+  if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
+  get_screen_to_world_ray_ex_(position, camera, width, height)
 }
 
 #' Get World To Screen
@@ -1626,6 +1950,54 @@ get_screen_to_world_2d <- function(position, camera) {
   if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_camera_2d(camera)) abort(paste0('`camera` must be a camera_2d, not ', friendly_typeof(camera), '.'), call = NULL)
   get_screen_to_world_2d_(position, camera)
+}
+
+#' Get Camera Matrix
+#'
+#' Get camera transform matrix (view matrix).
+#'
+#' @param camera A camera_3d.
+#'
+#' @return A 4x4 numeric matrix
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Matrix GetCameraMatrix(Camera camera);
+#' ```
+#'
+#' @family matrix functions
+#' @family get functions
+#'
+#'
+#' @export
+get_camera_matrix <- function(camera) {
+  if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
+  get_camera_matrix_(camera)
+}
+
+#' Get Camera Matrix 2d
+#'
+#' Get camera 2d transform matrix.
+#'
+#' @param camera A camera_2d.
+#'
+#' @return A 4x4 numeric matrix
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Matrix GetCameraMatrix2D(Camera2D camera);
+#' ```
+#'
+#' @family 2d functions
+#' @family get functions
+#'
+#'
+#' @export
+get_camera_matrix_2d <- function(camera) {
+  if (!is_camera_2d(camera)) abort(paste0('`camera` must be a camera_2d, not ', friendly_typeof(camera), '.'), call = NULL)
+  get_camera_matrix_2d_(camera)
 }
 
 #' Set Target Fps
@@ -1752,6 +2124,27 @@ swap_screen_buffer <- function() {
 #' @export
 poll_input_events <- function() {
   poll_input_events_()
+}
+
+#' Wait Time
+#'
+#' Wait for some time (halt program execution).
+#'
+#' @param seconds A number.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void WaitTime(double seconds);
+#' ```
+#'
+#' @family time functions
+#'
+#'
+#' @export
+wait_time <- function(seconds) {
+  if (!is_float(seconds)) abort(paste0('`seconds` must be a number, not ', friendly_typeof(seconds), '.'), call = NULL)
+  wait_time_(seconds)
 }
 
 #' Set Random Seed
@@ -1935,6 +2328,131 @@ save_file_text <- function(file_name, text) {
   if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
   if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
   save_file_text_(file_name, text)
+}
+
+#' File Rename
+#'
+#' Rename file (if exists).
+#'
+#' @param file_name A string.
+#' @param file_rename A string.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int FileRename(const char * fileName, const char * fileRename);
+#' ```
+#'
+#' @family rename functions
+#'
+#'
+#' @export
+file_rename <- function(file_name, file_rename) {
+  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
+  if (!is_const_char_pointer(file_rename)) abort(paste0('`file_rename` must be a string, not ', friendly_typeof(file_rename), '.'), call = NULL)
+  file_rename_(file_name, file_rename)
+}
+
+#' File Remove
+#'
+#' Remove file (if exists).
+#'
+#' @param file_name A string.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int FileRemove(const char * fileName);
+#' ```
+#'
+#' @family remove functions
+#'
+#'
+#' @export
+file_remove <- function(file_name) {
+  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
+  file_remove_(file_name)
+}
+
+#' File Copy
+#'
+#' Copy file from one path to another, dstPath created if it doesn't exist.
+#'
+#' @param src_path A string.
+#' @param dst_path A string.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int FileCopy(const char * srcPath, const char * dstPath);
+#' ```
+#'
+#' @family copy functions
+#'
+#'
+#' @export
+file_copy <- function(src_path, dst_path) {
+  if (!is_const_char_pointer(src_path)) abort(paste0('`src_path` must be a string, not ', friendly_typeof(src_path), '.'), call = NULL)
+  if (!is_const_char_pointer(dst_path)) abort(paste0('`dst_path` must be a string, not ', friendly_typeof(dst_path), '.'), call = NULL)
+  file_copy_(src_path, dst_path)
+}
+
+#' File Move
+#'
+#' Move file from one directory to another, dstPath created if it doesn't exist.
+#'
+#' @param src_path A string.
+#' @param dst_path A string.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int FileMove(const char * srcPath, const char * dstPath);
+#' ```
+#'
+#' @family move functions
+#'
+#'
+#' @export
+file_move <- function(src_path, dst_path) {
+  if (!is_const_char_pointer(src_path)) abort(paste0('`src_path` must be a string, not ', friendly_typeof(src_path), '.'), call = NULL)
+  if (!is_const_char_pointer(dst_path)) abort(paste0('`dst_path` must be a string, not ', friendly_typeof(dst_path), '.'), call = NULL)
+  file_move_(src_path, dst_path)
+}
+
+#' File Text Replace
+#'
+#' Replace text in an existing file.
+#'
+#' @param file_name A string.
+#' @param search A string.
+#' @param replacement A string.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int FileTextReplace(const char * fileName, const char * search, const char * replacement);
+#' ```
+#'
+#' @family replace functions
+#'
+#'
+#' @export
+file_text_replace <- function(file_name, search, replacement) {
+  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
+  if (!is_const_char_pointer(search)) abort(paste0('`search` must be a string, not ', friendly_typeof(search), '.'), call = NULL)
+  if (!is_const_char_pointer(replacement)) abort(paste0('`replacement` must be a string, not ', friendly_typeof(replacement), '.'), call = NULL)
+  file_text_replace_(file_name, search, replacement)
 }
 
 #' File Text Find Index
@@ -2414,6 +2932,67 @@ get_directory_file_count_ex <- function(base_path, filter, scan_subdirs) {
   get_directory_file_count_ex_(base_path, filter, scan_subdirs)
 }
 
+#' Set Automation Event Base Frame
+#'
+#' Set automation event internal base frame to start recording.
+#'
+#' @param frame An integer.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetAutomationEventBaseFrame(int frame);
+#' ```
+#'
+#' @family frame functions
+#' @family set functions
+#'
+#'
+#' @export
+set_automation_event_base_frame <- function(frame) {
+  if (!is_int(frame)) abort(paste0('`frame` must be an integer, not ', friendly_typeof(frame), '.'), call = NULL)
+  set_automation_event_base_frame_(frame)
+}
+
+#' Start Automation Event Recording
+#'
+#' Start recording automation events (AutomationEventList must be set).
+#'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void StartAutomationEventRecording(void);
+#' ```
+#'
+#' @family recording functions
+#'
+#'
+#' @export
+start_automation_event_recording <- function() {
+  start_automation_event_recording_()
+}
+
+#' Stop Automation Event Recording
+#'
+#' Stop recording automation events.
+#'
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void StopAutomationEventRecording(void);
+#' ```
+#'
+#' @family recording functions
+#' @family stop functions
+#'
+#'
+#' @export
+stop_automation_event_recording <- function() {
+  stop_automation_event_recording_()
+}
+
 #' Is Key Pressed
 #'
 #' Check if a key has been pressed once.
@@ -2556,6 +3135,52 @@ get_key_pressed <- function() {
   get_key_pressed_()
 }
 
+#' Get Char Pressed
+#'
+#' Get char pressed (unicode), call it multiple times for chars queued, returns 0 when the queue is empty.
+#'
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int GetCharPressed(void);
+#' ```
+#'
+#' @family pressed functions
+#' @family get functions
+#'
+#'
+#' @export
+get_char_pressed <- function() {
+  get_char_pressed_()
+}
+
+#' Get Key Name
+#'
+#' Get name of a QWERTY key on the current keyboard layout (eg returns string 'q' for KEY_A on an AZERTY keyboard).
+#'
+#' @param key An integer.
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' const char * GetKeyName(int key);
+#' ```
+#'
+#' @family name functions
+#' @family get functions
+#'
+#'
+#' @export
+get_key_name <- function(key) {
+  if (!is_int(key)) abort(paste0('`key` must be an integer, not ', friendly_typeof(key), '.'), call = NULL)
+  get_key_name_(key)
+}
+
 #' Set Exit Key
 #'
 #' Set a custom key to exit program (default is ESC).
@@ -2600,6 +3225,30 @@ set_exit_key <- function(key) {
 is_gamepad_available <- function(gamepad) {
   if (!is_int(gamepad)) abort(paste0('`gamepad` must be an integer, not ', friendly_typeof(gamepad), '.'), call = NULL)
   is_gamepad_available_(gamepad)
+}
+
+#' Get Gamepad Name
+#'
+#' Get gamepad internal name id.
+#'
+#' @param gamepad An integer.
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' const char * GetGamepadName(int gamepad);
+#' ```
+#'
+#' @family name functions
+#' @family get functions
+#'
+#'
+#' @export
+get_gamepad_name <- function(gamepad) {
+  if (!is_int(gamepad)) abort(paste0('`gamepad` must be an integer, not ', friendly_typeof(gamepad), '.'), call = NULL)
+  get_gamepad_name_(gamepad)
 }
 
 #' Is Gamepad Button Pressed
@@ -3532,6 +4181,14 @@ get_shapes_texture_rectangle <- function() {
 #'
 #' @export
 draw_pixel <- function(pos_x, pos_y, color) {
+  lens <- c(length(pos_x), length(pos_y), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    pos_x <- rep(pos_x, length.out = n)
+    pos_y <- rep(pos_y, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_pixel_vectorized_(pos_x, pos_y, color))
+  }
   if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
   if (!is_int(pos_y)) abort(paste0('`pos_y` must be an integer, not ', friendly_typeof(pos_y), '.'), call = NULL)
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
@@ -3557,6 +4214,13 @@ draw_pixel <- function(pos_x, pos_y, color) {
 #'
 #' @export
 draw_pixel_v <- function(position, color) {
+  lens <- c(.vec_len(position), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    position <- .vec_recycle(position, n, 2)
+    color <- .color_recycle(color, n)
+    return(draw_pixel_v_vectorized_(position, color))
+  }
   if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
   draw_pixel_v_(position, color)
@@ -3584,6 +4248,16 @@ draw_pixel_v <- function(position, color) {
 #'
 #' @export
 draw_line <- function(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color) {
+  lens <- c(length(start_pos_x), length(start_pos_y), length(end_pos_x), length(end_pos_y), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    start_pos_x <- rep(start_pos_x, length.out = n)
+    start_pos_y <- rep(start_pos_y, length.out = n)
+    end_pos_x <- rep(end_pos_x, length.out = n)
+    end_pos_y <- rep(end_pos_y, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_line_vectorized_(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color))
+  }
   if (!is_int(start_pos_x)) abort(paste0('`start_pos_x` must be an integer, not ', friendly_typeof(start_pos_x), '.'), call = NULL)
   if (!is_int(start_pos_y)) abort(paste0('`start_pos_y` must be an integer, not ', friendly_typeof(start_pos_y), '.'), call = NULL)
   if (!is_int(end_pos_x)) abort(paste0('`end_pos_x` must be an integer, not ', friendly_typeof(end_pos_x), '.'), call = NULL)
@@ -3612,6 +4286,14 @@ draw_line <- function(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color) {
 #'
 #' @export
 draw_line_v <- function(start_pos, end_pos, color) {
+  lens <- c(.vec_len(start_pos), .vec_len(end_pos), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    start_pos <- .vec_recycle(start_pos, n, 2)
+    end_pos <- .vec_recycle(end_pos, n, 2)
+    color <- .color_recycle(color, n)
+    return(draw_line_v_vectorized_(start_pos, end_pos, color))
+  }
   if (!is_vector_2(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 2, not ', friendly_typeof(start_pos), '.'), call = NULL)
   if (!is_vector_2(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 2, not ', friendly_typeof(end_pos), '.'), call = NULL)
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
@@ -3639,6 +4321,15 @@ draw_line_v <- function(start_pos, end_pos, color) {
 #'
 #' @export
 draw_line_ex <- function(start_pos, end_pos, thick, color) {
+  lens <- c(.vec_len(start_pos), .vec_len(end_pos), length(thick), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    start_pos <- .vec_recycle(start_pos, n, 2)
+    end_pos <- .vec_recycle(end_pos, n, 2)
+    thick <- rep(thick, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_line_ex_vectorized_(start_pos, end_pos, thick, color))
+  }
   if (!is_vector_2(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 2, not ', friendly_typeof(start_pos), '.'), call = NULL)
   if (!is_vector_2(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 2, not ', friendly_typeof(end_pos), '.'), call = NULL)
   if (!is_float(thick)) abort(paste0('`thick` must be a number, not ', friendly_typeof(thick), '.'), call = NULL)
@@ -3667,6 +4358,15 @@ draw_line_ex <- function(start_pos, end_pos, thick, color) {
 #'
 #' @export
 draw_line_bezier <- function(start_pos, end_pos, thick, color) {
+  lens <- c(.vec_len(start_pos), .vec_len(end_pos), length(thick), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    start_pos <- .vec_recycle(start_pos, n, 2)
+    end_pos <- .vec_recycle(end_pos, n, 2)
+    thick <- rep(thick, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_line_bezier_vectorized_(start_pos, end_pos, thick, color))
+  }
   if (!is_vector_2(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 2, not ', friendly_typeof(start_pos), '.'), call = NULL)
   if (!is_vector_2(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 2, not ', friendly_typeof(end_pos), '.'), call = NULL)
   if (!is_float(thick)) abort(paste0('`thick` must be a number, not ', friendly_typeof(thick), '.'), call = NULL)
@@ -3696,6 +4396,16 @@ draw_line_bezier <- function(start_pos, end_pos, thick, color) {
 #'
 #' @export
 draw_line_dashed <- function(start_pos, end_pos, dash_size, space_size, color) {
+  lens <- c(.vec_len(start_pos), .vec_len(end_pos), length(dash_size), length(space_size), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    start_pos <- .vec_recycle(start_pos, n, 2)
+    end_pos <- .vec_recycle(end_pos, n, 2)
+    dash_size <- rep(dash_size, length.out = n)
+    space_size <- rep(space_size, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_line_dashed_vectorized_(start_pos, end_pos, dash_size, space_size, color))
+  }
   if (!is_vector_2(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 2, not ', friendly_typeof(start_pos), '.'), call = NULL)
   if (!is_vector_2(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 2, not ', friendly_typeof(end_pos), '.'), call = NULL)
   if (!is_int(dash_size)) abort(paste0('`dash_size` must be an integer, not ', friendly_typeof(dash_size), '.'), call = NULL)
@@ -3725,6 +4435,15 @@ draw_line_dashed <- function(start_pos, end_pos, dash_size, space_size, color) {
 #'
 #' @export
 draw_circle <- function(center_x, center_y, radius, color) {
+  lens <- c(length(center_x), length(center_y), length(radius), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center_x <- rep(center_x, length.out = n)
+    center_y <- rep(center_y, length.out = n)
+    radius <- rep(radius, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_circle_vectorized_(center_x, center_y, radius, color))
+  }
   if (!is_int(center_x)) abort(paste0('`center_x` must be an integer, not ', friendly_typeof(center_x), '.'), call = NULL)
   if (!is_int(center_y)) abort(paste0('`center_y` must be an integer, not ', friendly_typeof(center_y), '.'), call = NULL)
   if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
@@ -3752,6 +4471,14 @@ draw_circle <- function(center_x, center_y, radius, color) {
 #'
 #' @export
 draw_circle_v <- function(center, radius, color) {
+  lens <- c(.vec_len(center), length(radius), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center <- .vec_recycle(center, n, 2)
+    radius <- rep(radius, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_circle_v_vectorized_(center, radius, color))
+  }
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
   if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
@@ -3779,6 +4506,15 @@ draw_circle_v <- function(center, radius, color) {
 #'
 #' @export
 draw_circle_gradient <- function(center, radius, inner, outer) {
+  lens <- c(.vec_len(center), length(radius), .color_len(inner), .color_len(outer))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center <- .vec_recycle(center, n, 2)
+    radius <- rep(radius, length.out = n)
+    inner <- .color_recycle(inner, n)
+    outer <- .color_recycle(outer, n)
+    return(draw_circle_gradient_vectorized_(center, radius, inner, outer))
+  }
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
   if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
   if (!is_color(inner)) abort(paste0('`inner` must be a color, not ', friendly_typeof(inner), '.'), call = NULL)
@@ -3809,6 +4545,17 @@ draw_circle_gradient <- function(center, radius, inner, outer) {
 #'
 #' @export
 draw_circle_sector <- function(center, radius, start_angle, end_angle, segments, color) {
+  lens <- c(.vec_len(center), length(radius), length(start_angle), length(end_angle), length(segments), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center <- .vec_recycle(center, n, 2)
+    radius <- rep(radius, length.out = n)
+    start_angle <- rep(start_angle, length.out = n)
+    end_angle <- rep(end_angle, length.out = n)
+    segments <- rep(segments, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_circle_sector_vectorized_(center, radius, start_angle, end_angle, segments, color))
+  }
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
   if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
   if (!is_float(start_angle)) abort(paste0('`start_angle` must be a number, not ', friendly_typeof(start_angle), '.'), call = NULL)
@@ -3841,6 +4588,17 @@ draw_circle_sector <- function(center, radius, start_angle, end_angle, segments,
 #'
 #' @export
 draw_circle_sector_lines <- function(center, radius, start_angle, end_angle, segments, color) {
+  lens <- c(.vec_len(center), length(radius), length(start_angle), length(end_angle), length(segments), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center <- .vec_recycle(center, n, 2)
+    radius <- rep(radius, length.out = n)
+    start_angle <- rep(start_angle, length.out = n)
+    end_angle <- rep(end_angle, length.out = n)
+    segments <- rep(segments, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_circle_sector_lines_vectorized_(center, radius, start_angle, end_angle, segments, color))
+  }
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
   if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
   if (!is_float(start_angle)) abort(paste0('`start_angle` must be a number, not ', friendly_typeof(start_angle), '.'), call = NULL)
@@ -3871,6 +4629,15 @@ draw_circle_sector_lines <- function(center, radius, start_angle, end_angle, seg
 #'
 #' @export
 draw_circle_lines <- function(center_x, center_y, radius, color) {
+  lens <- c(length(center_x), length(center_y), length(radius), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center_x <- rep(center_x, length.out = n)
+    center_y <- rep(center_y, length.out = n)
+    radius <- rep(radius, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_circle_lines_vectorized_(center_x, center_y, radius, color))
+  }
   if (!is_int(center_x)) abort(paste0('`center_x` must be an integer, not ', friendly_typeof(center_x), '.'), call = NULL)
   if (!is_int(center_y)) abort(paste0('`center_y` must be an integer, not ', friendly_typeof(center_y), '.'), call = NULL)
   if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
@@ -3898,6 +4665,14 @@ draw_circle_lines <- function(center_x, center_y, radius, color) {
 #'
 #' @export
 draw_circle_lines_v <- function(center, radius, color) {
+  lens <- c(.vec_len(center), length(radius), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center <- .vec_recycle(center, n, 2)
+    radius <- rep(radius, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_circle_lines_v_vectorized_(center, radius, color))
+  }
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
   if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
@@ -3926,6 +4701,16 @@ draw_circle_lines_v <- function(center, radius, color) {
 #'
 #' @export
 draw_ellipse <- function(center_x, center_y, radius_h, radius_v, color) {
+  lens <- c(length(center_x), length(center_y), length(radius_h), length(radius_v), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center_x <- rep(center_x, length.out = n)
+    center_y <- rep(center_y, length.out = n)
+    radius_h <- rep(radius_h, length.out = n)
+    radius_v <- rep(radius_v, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_ellipse_vectorized_(center_x, center_y, radius_h, radius_v, color))
+  }
   if (!is_int(center_x)) abort(paste0('`center_x` must be an integer, not ', friendly_typeof(center_x), '.'), call = NULL)
   if (!is_int(center_y)) abort(paste0('`center_y` must be an integer, not ', friendly_typeof(center_y), '.'), call = NULL)
   if (!is_float(radius_h)) abort(paste0('`radius_h` must be a number, not ', friendly_typeof(radius_h), '.'), call = NULL)
@@ -3955,6 +4740,15 @@ draw_ellipse <- function(center_x, center_y, radius_h, radius_v, color) {
 #'
 #' @export
 draw_ellipse_v <- function(center, radius_h, radius_v, color) {
+  lens <- c(.vec_len(center), length(radius_h), length(radius_v), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center <- .vec_recycle(center, n, 2)
+    radius_h <- rep(radius_h, length.out = n)
+    radius_v <- rep(radius_v, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_ellipse_v_vectorized_(center, radius_h, radius_v, color))
+  }
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
   if (!is_float(radius_h)) abort(paste0('`radius_h` must be a number, not ', friendly_typeof(radius_h), '.'), call = NULL)
   if (!is_float(radius_v)) abort(paste0('`radius_v` must be a number, not ', friendly_typeof(radius_v), '.'), call = NULL)
@@ -3984,6 +4778,16 @@ draw_ellipse_v <- function(center, radius_h, radius_v, color) {
 #'
 #' @export
 draw_ellipse_lines <- function(center_x, center_y, radius_h, radius_v, color) {
+  lens <- c(length(center_x), length(center_y), length(radius_h), length(radius_v), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center_x <- rep(center_x, length.out = n)
+    center_y <- rep(center_y, length.out = n)
+    radius_h <- rep(radius_h, length.out = n)
+    radius_v <- rep(radius_v, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_ellipse_lines_vectorized_(center_x, center_y, radius_h, radius_v, color))
+  }
   if (!is_int(center_x)) abort(paste0('`center_x` must be an integer, not ', friendly_typeof(center_x), '.'), call = NULL)
   if (!is_int(center_y)) abort(paste0('`center_y` must be an integer, not ', friendly_typeof(center_y), '.'), call = NULL)
   if (!is_float(radius_h)) abort(paste0('`radius_h` must be a number, not ', friendly_typeof(radius_h), '.'), call = NULL)
@@ -4013,6 +4817,15 @@ draw_ellipse_lines <- function(center_x, center_y, radius_h, radius_v, color) {
 #'
 #' @export
 draw_ellipse_lines_v <- function(center, radius_h, radius_v, color) {
+  lens <- c(.vec_len(center), length(radius_h), length(radius_v), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center <- .vec_recycle(center, n, 2)
+    radius_h <- rep(radius_h, length.out = n)
+    radius_v <- rep(radius_v, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_ellipse_lines_v_vectorized_(center, radius_h, radius_v, color))
+  }
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
   if (!is_float(radius_h)) abort(paste0('`radius_h` must be a number, not ', friendly_typeof(radius_h), '.'), call = NULL)
   if (!is_float(radius_v)) abort(paste0('`radius_v` must be a number, not ', friendly_typeof(radius_v), '.'), call = NULL)
@@ -4044,6 +4857,18 @@ draw_ellipse_lines_v <- function(center, radius_h, radius_v, color) {
 #'
 #' @export
 draw_ring <- function(center, inner_radius, outer_radius, start_angle, end_angle, segments, color) {
+  lens <- c(.vec_len(center), length(inner_radius), length(outer_radius), length(start_angle), length(end_angle), length(segments), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center <- .vec_recycle(center, n, 2)
+    inner_radius <- rep(inner_radius, length.out = n)
+    outer_radius <- rep(outer_radius, length.out = n)
+    start_angle <- rep(start_angle, length.out = n)
+    end_angle <- rep(end_angle, length.out = n)
+    segments <- rep(segments, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_ring_vectorized_(center, inner_radius, outer_radius, start_angle, end_angle, segments, color))
+  }
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
   if (!is_float(inner_radius)) abort(paste0('`inner_radius` must be a number, not ', friendly_typeof(inner_radius), '.'), call = NULL)
   if (!is_float(outer_radius)) abort(paste0('`outer_radius` must be a number, not ', friendly_typeof(outer_radius), '.'), call = NULL)
@@ -4078,6 +4903,18 @@ draw_ring <- function(center, inner_radius, outer_radius, start_angle, end_angle
 #'
 #' @export
 draw_ring_lines <- function(center, inner_radius, outer_radius, start_angle, end_angle, segments, color) {
+  lens <- c(.vec_len(center), length(inner_radius), length(outer_radius), length(start_angle), length(end_angle), length(segments), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center <- .vec_recycle(center, n, 2)
+    inner_radius <- rep(inner_radius, length.out = n)
+    outer_radius <- rep(outer_radius, length.out = n)
+    start_angle <- rep(start_angle, length.out = n)
+    end_angle <- rep(end_angle, length.out = n)
+    segments <- rep(segments, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_ring_lines_vectorized_(center, inner_radius, outer_radius, start_angle, end_angle, segments, color))
+  }
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
   if (!is_float(inner_radius)) abort(paste0('`inner_radius` must be a number, not ', friendly_typeof(inner_radius), '.'), call = NULL)
   if (!is_float(outer_radius)) abort(paste0('`outer_radius` must be a number, not ', friendly_typeof(outer_radius), '.'), call = NULL)
@@ -4110,6 +4947,16 @@ draw_ring_lines <- function(center, inner_radius, outer_radius, start_angle, end
 #'
 #' @export
 draw_rectangle <- function(pos_x, pos_y, width, height, color) {
+  lens <- c(length(pos_x), length(pos_y), length(width), length(height), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    pos_x <- rep(pos_x, length.out = n)
+    pos_y <- rep(pos_y, length.out = n)
+    width <- rep(width, length.out = n)
+    height <- rep(height, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_rectangle_vectorized_(pos_x, pos_y, width, height, color))
+  }
   if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
   if (!is_int(pos_y)) abort(paste0('`pos_y` must be an integer, not ', friendly_typeof(pos_y), '.'), call = NULL)
   if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
@@ -4138,6 +4985,14 @@ draw_rectangle <- function(pos_x, pos_y, width, height, color) {
 #'
 #' @export
 draw_rectangle_v <- function(position, size, color) {
+  lens <- c(.vec_len(position), .vec_len(size), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    position <- .vec_recycle(position, n, 2)
+    size <- .vec_recycle(size, n, 2)
+    color <- .color_recycle(color, n)
+    return(draw_rectangle_v_vectorized_(position, size, color))
+  }
   if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_vector_2(size)) abort(paste0('`size` must be a numeric vector of length 2, not ', friendly_typeof(size), '.'), call = NULL)
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
@@ -4163,6 +5018,13 @@ draw_rectangle_v <- function(position, size, color) {
 #'
 #' @export
 draw_rectangle_rec <- function(rec, color) {
+  lens <- c(.struct_len(rec), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    rec <- .struct_recycle(rec, n)
+    color <- .color_recycle(color, n)
+    return(draw_rectangle_rec_vectorized_(rec, color))
+  }
   if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
   draw_rectangle_rec_(rec, color)
@@ -4189,6 +5051,15 @@ draw_rectangle_rec <- function(rec, color) {
 #'
 #' @export
 draw_rectangle_pro <- function(rec, origin, rotation, color) {
+  lens <- c(.struct_len(rec), .vec_len(origin), length(rotation), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    rec <- .struct_recycle(rec, n)
+    origin <- .vec_recycle(origin, n, 2)
+    rotation <- rep(rotation, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_rectangle_pro_vectorized_(rec, origin, rotation, color))
+  }
   if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
   if (!is_vector_2(origin)) abort(paste0('`origin` must be a numeric vector of length 2, not ', friendly_typeof(origin), '.'), call = NULL)
   if (!is_float(rotation)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(rotation), '.'), call = NULL)
@@ -4219,6 +5090,17 @@ draw_rectangle_pro <- function(rec, origin, rotation, color) {
 #'
 #' @export
 draw_rectangle_gradient_v <- function(pos_x, pos_y, width, height, top, bottom) {
+  lens <- c(length(pos_x), length(pos_y), length(width), length(height), .color_len(top), .color_len(bottom))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    pos_x <- rep(pos_x, length.out = n)
+    pos_y <- rep(pos_y, length.out = n)
+    width <- rep(width, length.out = n)
+    height <- rep(height, length.out = n)
+    top <- .color_recycle(top, n)
+    bottom <- .color_recycle(bottom, n)
+    return(draw_rectangle_gradient_v_vectorized_(pos_x, pos_y, width, height, top, bottom))
+  }
   if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
   if (!is_int(pos_y)) abort(paste0('`pos_y` must be an integer, not ', friendly_typeof(pos_y), '.'), call = NULL)
   if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
@@ -4251,6 +5133,17 @@ draw_rectangle_gradient_v <- function(pos_x, pos_y, width, height, top, bottom) 
 #'
 #' @export
 draw_rectangle_gradient_h <- function(pos_x, pos_y, width, height, left, right) {
+  lens <- c(length(pos_x), length(pos_y), length(width), length(height), .color_len(left), .color_len(right))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    pos_x <- rep(pos_x, length.out = n)
+    pos_y <- rep(pos_y, length.out = n)
+    width <- rep(width, length.out = n)
+    height <- rep(height, length.out = n)
+    left <- .color_recycle(left, n)
+    right <- .color_recycle(right, n)
+    return(draw_rectangle_gradient_h_vectorized_(pos_x, pos_y, width, height, left, right))
+  }
   if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
   if (!is_int(pos_y)) abort(paste0('`pos_y` must be an integer, not ', friendly_typeof(pos_y), '.'), call = NULL)
   if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
@@ -4282,6 +5175,16 @@ draw_rectangle_gradient_h <- function(pos_x, pos_y, width, height, left, right) 
 #'
 #' @export
 draw_rectangle_gradient_ex <- function(rec, top_left, bottom_left, bottom_right, top_right) {
+  lens <- c(.struct_len(rec), .color_len(top_left), .color_len(bottom_left), .color_len(bottom_right), .color_len(top_right))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    rec <- .struct_recycle(rec, n)
+    top_left <- .color_recycle(top_left, n)
+    bottom_left <- .color_recycle(bottom_left, n)
+    bottom_right <- .color_recycle(bottom_right, n)
+    top_right <- .color_recycle(top_right, n)
+    return(draw_rectangle_gradient_ex_vectorized_(rec, top_left, bottom_left, bottom_right, top_right))
+  }
   if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
   if (!is_color(top_left)) abort(paste0('`top_left` must be a color, not ', friendly_typeof(top_left), '.'), call = NULL)
   if (!is_color(bottom_left)) abort(paste0('`bottom_left` must be a color, not ', friendly_typeof(bottom_left), '.'), call = NULL)
@@ -4312,6 +5215,16 @@ draw_rectangle_gradient_ex <- function(rec, top_left, bottom_left, bottom_right,
 #'
 #' @export
 draw_rectangle_lines <- function(pos_x, pos_y, width, height, color) {
+  lens <- c(length(pos_x), length(pos_y), length(width), length(height), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    pos_x <- rep(pos_x, length.out = n)
+    pos_y <- rep(pos_y, length.out = n)
+    width <- rep(width, length.out = n)
+    height <- rep(height, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_rectangle_lines_vectorized_(pos_x, pos_y, width, height, color))
+  }
   if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
   if (!is_int(pos_y)) abort(paste0('`pos_y` must be an integer, not ', friendly_typeof(pos_y), '.'), call = NULL)
   if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
@@ -4340,6 +5253,14 @@ draw_rectangle_lines <- function(pos_x, pos_y, width, height, color) {
 #'
 #' @export
 draw_rectangle_lines_ex <- function(rec, line_thick, color) {
+  lens <- c(.struct_len(rec), length(line_thick), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    rec <- .struct_recycle(rec, n)
+    line_thick <- rep(line_thick, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_rectangle_lines_ex_vectorized_(rec, line_thick, color))
+  }
   if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
   if (!is_float(line_thick)) abort(paste0('`line_thick` must be a number, not ', friendly_typeof(line_thick), '.'), call = NULL)
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
@@ -4367,6 +5288,15 @@ draw_rectangle_lines_ex <- function(rec, line_thick, color) {
 #'
 #' @export
 draw_rectangle_rounded <- function(rec, roundness, segments, color) {
+  lens <- c(.struct_len(rec), length(roundness), length(segments), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    rec <- .struct_recycle(rec, n)
+    roundness <- rep(roundness, length.out = n)
+    segments <- rep(segments, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_rectangle_rounded_vectorized_(rec, roundness, segments, color))
+  }
   if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
   if (!is_float(roundness)) abort(paste0('`roundness` must be a number, not ', friendly_typeof(roundness), '.'), call = NULL)
   if (!is_int(segments)) abort(paste0('`segments` must be an integer, not ', friendly_typeof(segments), '.'), call = NULL)
@@ -4395,6 +5325,15 @@ draw_rectangle_rounded <- function(rec, roundness, segments, color) {
 #'
 #' @export
 draw_rectangle_rounded_lines <- function(rec, roundness, segments, color) {
+  lens <- c(.struct_len(rec), length(roundness), length(segments), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    rec <- .struct_recycle(rec, n)
+    roundness <- rep(roundness, length.out = n)
+    segments <- rep(segments, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_rectangle_rounded_lines_vectorized_(rec, roundness, segments, color))
+  }
   if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
   if (!is_float(roundness)) abort(paste0('`roundness` must be a number, not ', friendly_typeof(roundness), '.'), call = NULL)
   if (!is_int(segments)) abort(paste0('`segments` must be an integer, not ', friendly_typeof(segments), '.'), call = NULL)
@@ -4424,6 +5363,16 @@ draw_rectangle_rounded_lines <- function(rec, roundness, segments, color) {
 #'
 #' @export
 draw_rectangle_rounded_lines_ex <- function(rec, roundness, segments, line_thick, color) {
+  lens <- c(.struct_len(rec), length(roundness), length(segments), length(line_thick), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    rec <- .struct_recycle(rec, n)
+    roundness <- rep(roundness, length.out = n)
+    segments <- rep(segments, length.out = n)
+    line_thick <- rep(line_thick, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_rectangle_rounded_lines_ex_vectorized_(rec, roundness, segments, line_thick, color))
+  }
   if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
   if (!is_float(roundness)) abort(paste0('`roundness` must be a number, not ', friendly_typeof(roundness), '.'), call = NULL)
   if (!is_int(segments)) abort(paste0('`segments` must be an integer, not ', friendly_typeof(segments), '.'), call = NULL)
@@ -4453,6 +5402,15 @@ draw_rectangle_rounded_lines_ex <- function(rec, roundness, segments, line_thick
 #'
 #' @export
 draw_triangle <- function(v1, v2, v3, color) {
+  lens <- c(.vec_len(v1), .vec_len(v2), .vec_len(v3), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    v1 <- .vec_recycle(v1, n, 2)
+    v2 <- .vec_recycle(v2, n, 2)
+    v3 <- .vec_recycle(v3, n, 2)
+    color <- .color_recycle(color, n)
+    return(draw_triangle_vectorized_(v1, v2, v3, color))
+  }
   if (!is_vector_2(v1)) abort(paste0('`v1` must be a numeric vector of length 2, not ', friendly_typeof(v1), '.'), call = NULL)
   if (!is_vector_2(v2)) abort(paste0('`v2` must be a numeric vector of length 2, not ', friendly_typeof(v2), '.'), call = NULL)
   if (!is_vector_2(v3)) abort(paste0('`v3` must be a numeric vector of length 2, not ', friendly_typeof(v3), '.'), call = NULL)
@@ -4481,6 +5439,15 @@ draw_triangle <- function(v1, v2, v3, color) {
 #'
 #' @export
 draw_triangle_lines <- function(v1, v2, v3, color) {
+  lens <- c(.vec_len(v1), .vec_len(v2), .vec_len(v3), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    v1 <- .vec_recycle(v1, n, 2)
+    v2 <- .vec_recycle(v2, n, 2)
+    v3 <- .vec_recycle(v3, n, 2)
+    color <- .color_recycle(color, n)
+    return(draw_triangle_lines_vectorized_(v1, v2, v3, color))
+  }
   if (!is_vector_2(v1)) abort(paste0('`v1` must be a numeric vector of length 2, not ', friendly_typeof(v1), '.'), call = NULL)
   if (!is_vector_2(v2)) abort(paste0('`v2` must be a numeric vector of length 2, not ', friendly_typeof(v2), '.'), call = NULL)
   if (!is_vector_2(v3)) abort(paste0('`v3` must be a numeric vector of length 2, not ', friendly_typeof(v3), '.'), call = NULL)
@@ -4510,6 +5477,16 @@ draw_triangle_lines <- function(v1, v2, v3, color) {
 #'
 #' @export
 draw_poly <- function(center, sides, radius, rotation, color) {
+  lens <- c(.vec_len(center), length(sides), length(radius), length(rotation), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center <- .vec_recycle(center, n, 2)
+    sides <- rep(sides, length.out = n)
+    radius <- rep(radius, length.out = n)
+    rotation <- rep(rotation, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_poly_vectorized_(center, sides, radius, rotation, color))
+  }
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
   if (!is_int(sides)) abort(paste0('`sides` must be an integer, not ', friendly_typeof(sides), '.'), call = NULL)
   if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
@@ -4540,6 +5517,16 @@ draw_poly <- function(center, sides, radius, rotation, color) {
 #'
 #' @export
 draw_poly_lines <- function(center, sides, radius, rotation, color) {
+  lens <- c(.vec_len(center), length(sides), length(radius), length(rotation), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center <- .vec_recycle(center, n, 2)
+    sides <- rep(sides, length.out = n)
+    radius <- rep(radius, length.out = n)
+    rotation <- rep(rotation, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_poly_lines_vectorized_(center, sides, radius, rotation, color))
+  }
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
   if (!is_int(sides)) abort(paste0('`sides` must be an integer, not ', friendly_typeof(sides), '.'), call = NULL)
   if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
@@ -4571,6 +5558,17 @@ draw_poly_lines <- function(center, sides, radius, rotation, color) {
 #'
 #' @export
 draw_poly_lines_ex <- function(center, sides, radius, rotation, line_thick, color) {
+  lens <- c(.vec_len(center), length(sides), length(radius), length(rotation), length(line_thick), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center <- .vec_recycle(center, n, 2)
+    sides <- rep(sides, length.out = n)
+    radius <- rep(radius, length.out = n)
+    rotation <- rep(rotation, length.out = n)
+    line_thick <- rep(line_thick, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_poly_lines_ex_vectorized_(center, sides, radius, rotation, line_thick, color))
+  }
   if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
   if (!is_int(sides)) abort(paste0('`sides` must be an integer, not ', friendly_typeof(sides), '.'), call = NULL)
   if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
@@ -4578,6 +5576,366 @@ draw_poly_lines_ex <- function(center, sides, radius, rotation, line_thick, colo
   if (!is_float(line_thick)) abort(paste0('`line_thick` must be a number, not ', friendly_typeof(line_thick), '.'), call = NULL)
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
   draw_poly_lines_ex_(center, sides, radius, rotation, line_thick, color)
+}
+
+#' Draw Spline Segment Linear
+#'
+#' Draw spline segment: Linear, 2 points.
+#'
+#' @param p1 A numeric vector of length 2.
+#' @param p2 A numeric vector of length 2.
+#' @param thick A number.
+#' @param color A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawSplineSegmentLinear(Vector2 p1, Vector2 p2, float thick, Color color);
+#' ```
+#'
+#' @family linear functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_spline_segment_linear <- function(p1, p2, thick, color) {
+  lens <- c(.vec_len(p1), .vec_len(p2), length(thick), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    p1 <- .vec_recycle(p1, n, 2)
+    p2 <- .vec_recycle(p2, n, 2)
+    thick <- rep(thick, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_spline_segment_linear_vectorized_(p1, p2, thick, color))
+  }
+  if (!is_vector_2(p1)) abort(paste0('`p1` must be a numeric vector of length 2, not ', friendly_typeof(p1), '.'), call = NULL)
+  if (!is_vector_2(p2)) abort(paste0('`p2` must be a numeric vector of length 2, not ', friendly_typeof(p2), '.'), call = NULL)
+  if (!is_float(thick)) abort(paste0('`thick` must be a number, not ', friendly_typeof(thick), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_spline_segment_linear_(p1, p2, thick, color)
+}
+
+#' Draw Spline Segment Basis
+#'
+#' Draw spline segment: B-Spline, 4 points.
+#'
+#' @param p1 A numeric vector of length 2.
+#' @param p2 A numeric vector of length 2.
+#' @param p3 A numeric vector of length 2.
+#' @param p4 A numeric vector of length 2.
+#' @param thick A number.
+#' @param color A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawSplineSegmentBasis(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, float thick, Color color);
+#' ```
+#'
+#' @family basis functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_spline_segment_basis <- function(p1, p2, p3, p4, thick, color) {
+  lens <- c(.vec_len(p1), .vec_len(p2), .vec_len(p3), .vec_len(p4), length(thick), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    p1 <- .vec_recycle(p1, n, 2)
+    p2 <- .vec_recycle(p2, n, 2)
+    p3 <- .vec_recycle(p3, n, 2)
+    p4 <- .vec_recycle(p4, n, 2)
+    thick <- rep(thick, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_spline_segment_basis_vectorized_(p1, p2, p3, p4, thick, color))
+  }
+  if (!is_vector_2(p1)) abort(paste0('`p1` must be a numeric vector of length 2, not ', friendly_typeof(p1), '.'), call = NULL)
+  if (!is_vector_2(p2)) abort(paste0('`p2` must be a numeric vector of length 2, not ', friendly_typeof(p2), '.'), call = NULL)
+  if (!is_vector_2(p3)) abort(paste0('`p3` must be a numeric vector of length 2, not ', friendly_typeof(p3), '.'), call = NULL)
+  if (!is_vector_2(p4)) abort(paste0('`p4` must be a numeric vector of length 2, not ', friendly_typeof(p4), '.'), call = NULL)
+  if (!is_float(thick)) abort(paste0('`thick` must be a number, not ', friendly_typeof(thick), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_spline_segment_basis_(p1, p2, p3, p4, thick, color)
+}
+
+#' Draw Spline Segment Catmull Rom
+#'
+#' Draw spline segment: Catmull-Rom, 4 points.
+#'
+#' @param p1 A numeric vector of length 2.
+#' @param p2 A numeric vector of length 2.
+#' @param p3 A numeric vector of length 2.
+#' @param p4 A numeric vector of length 2.
+#' @param thick A number.
+#' @param color A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawSplineSegmentCatmullRom(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, float thick, Color color);
+#' ```
+#'
+#' @family rom functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_spline_segment_catmull_rom <- function(p1, p2, p3, p4, thick, color) {
+  lens <- c(.vec_len(p1), .vec_len(p2), .vec_len(p3), .vec_len(p4), length(thick), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    p1 <- .vec_recycle(p1, n, 2)
+    p2 <- .vec_recycle(p2, n, 2)
+    p3 <- .vec_recycle(p3, n, 2)
+    p4 <- .vec_recycle(p4, n, 2)
+    thick <- rep(thick, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_spline_segment_catmull_rom_vectorized_(p1, p2, p3, p4, thick, color))
+  }
+  if (!is_vector_2(p1)) abort(paste0('`p1` must be a numeric vector of length 2, not ', friendly_typeof(p1), '.'), call = NULL)
+  if (!is_vector_2(p2)) abort(paste0('`p2` must be a numeric vector of length 2, not ', friendly_typeof(p2), '.'), call = NULL)
+  if (!is_vector_2(p3)) abort(paste0('`p3` must be a numeric vector of length 2, not ', friendly_typeof(p3), '.'), call = NULL)
+  if (!is_vector_2(p4)) abort(paste0('`p4` must be a numeric vector of length 2, not ', friendly_typeof(p4), '.'), call = NULL)
+  if (!is_float(thick)) abort(paste0('`thick` must be a number, not ', friendly_typeof(thick), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_spline_segment_catmull_rom_(p1, p2, p3, p4, thick, color)
+}
+
+#' Draw Spline Segment Bezier Quadratic
+#'
+#' Draw spline segment: Quadratic Bezier, 2 points, 1 control point.
+#'
+#' @param p1 A numeric vector of length 2.
+#' @param c2 A numeric vector of length 2.
+#' @param p3 A numeric vector of length 2.
+#' @param thick A number.
+#' @param color A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawSplineSegmentBezierQuadratic(Vector2 p1, Vector2 c2, Vector2 p3, float thick, Color color);
+#' ```
+#'
+#' @family quadratic functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_spline_segment_bezier_quadratic <- function(p1, c2, p3, thick, color) {
+  lens <- c(.vec_len(p1), .vec_len(c2), .vec_len(p3), length(thick), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    p1 <- .vec_recycle(p1, n, 2)
+    c2 <- .vec_recycle(c2, n, 2)
+    p3 <- .vec_recycle(p3, n, 2)
+    thick <- rep(thick, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_spline_segment_bezier_quadratic_vectorized_(p1, c2, p3, thick, color))
+  }
+  if (!is_vector_2(p1)) abort(paste0('`p1` must be a numeric vector of length 2, not ', friendly_typeof(p1), '.'), call = NULL)
+  if (!is_vector_2(c2)) abort(paste0('`c2` must be a numeric vector of length 2, not ', friendly_typeof(c2), '.'), call = NULL)
+  if (!is_vector_2(p3)) abort(paste0('`p3` must be a numeric vector of length 2, not ', friendly_typeof(p3), '.'), call = NULL)
+  if (!is_float(thick)) abort(paste0('`thick` must be a number, not ', friendly_typeof(thick), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_spline_segment_bezier_quadratic_(p1, c2, p3, thick, color)
+}
+
+#' Draw Spline Segment Bezier Cubic
+#'
+#' Draw spline segment: Cubic Bezier, 2 points, 2 control points.
+#'
+#' @param p1 A numeric vector of length 2.
+#' @param c2 A numeric vector of length 2.
+#' @param c3 A numeric vector of length 2.
+#' @param p4 A numeric vector of length 2.
+#' @param thick A number.
+#' @param color A color.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void DrawSplineSegmentBezierCubic(Vector2 p1, Vector2 c2, Vector2 c3, Vector2 p4, float thick, Color color);
+#' ```
+#'
+#' @family cubic functions
+#' @family draw functions
+#'
+#'
+#' @export
+draw_spline_segment_bezier_cubic <- function(p1, c2, c3, p4, thick, color) {
+  lens <- c(.vec_len(p1), .vec_len(c2), .vec_len(c3), .vec_len(p4), length(thick), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    p1 <- .vec_recycle(p1, n, 2)
+    c2 <- .vec_recycle(c2, n, 2)
+    c3 <- .vec_recycle(c3, n, 2)
+    p4 <- .vec_recycle(p4, n, 2)
+    thick <- rep(thick, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_spline_segment_bezier_cubic_vectorized_(p1, c2, c3, p4, thick, color))
+  }
+  if (!is_vector_2(p1)) abort(paste0('`p1` must be a numeric vector of length 2, not ', friendly_typeof(p1), '.'), call = NULL)
+  if (!is_vector_2(c2)) abort(paste0('`c2` must be a numeric vector of length 2, not ', friendly_typeof(c2), '.'), call = NULL)
+  if (!is_vector_2(c3)) abort(paste0('`c3` must be a numeric vector of length 2, not ', friendly_typeof(c3), '.'), call = NULL)
+  if (!is_vector_2(p4)) abort(paste0('`p4` must be a numeric vector of length 2, not ', friendly_typeof(p4), '.'), call = NULL)
+  if (!is_float(thick)) abort(paste0('`thick` must be a number, not ', friendly_typeof(thick), '.'), call = NULL)
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  draw_spline_segment_bezier_cubic_(p1, c2, c3, p4, thick, color)
+}
+
+#' Get Spline Point Linear
+#'
+#' Get (evaluate) spline point: Linear.
+#'
+#' @param start_pos A numeric vector of length 2.
+#' @param end_pos A numeric vector of length 2.
+#' @param t A number.
+#'
+#' @return A numeric vector of length 2
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Vector2 GetSplinePointLinear(Vector2 startPos, Vector2 endPos, float t);
+#' ```
+#'
+#' @family linear functions
+#' @family get functions
+#'
+#'
+#' @export
+get_spline_point_linear <- function(start_pos, end_pos, t) {
+  if (!is_vector_2(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 2, not ', friendly_typeof(start_pos), '.'), call = NULL)
+  if (!is_vector_2(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 2, not ', friendly_typeof(end_pos), '.'), call = NULL)
+  if (!is_float(t)) abort(paste0('`t` must be a number, not ', friendly_typeof(t), '.'), call = NULL)
+  get_spline_point_linear_(start_pos, end_pos, t)
+}
+
+#' Get Spline Point Basis
+#'
+#' Get (evaluate) spline point: B-Spline.
+#'
+#' @param p1 A numeric vector of length 2.
+#' @param p2 A numeric vector of length 2.
+#' @param p3 A numeric vector of length 2.
+#' @param p4 A numeric vector of length 2.
+#' @param t A number.
+#'
+#' @return A numeric vector of length 2
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Vector2 GetSplinePointBasis(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, float t);
+#' ```
+#'
+#' @family basis functions
+#' @family get functions
+#'
+#'
+#' @export
+get_spline_point_basis <- function(p1, p2, p3, p4, t) {
+  if (!is_vector_2(p1)) abort(paste0('`p1` must be a numeric vector of length 2, not ', friendly_typeof(p1), '.'), call = NULL)
+  if (!is_vector_2(p2)) abort(paste0('`p2` must be a numeric vector of length 2, not ', friendly_typeof(p2), '.'), call = NULL)
+  if (!is_vector_2(p3)) abort(paste0('`p3` must be a numeric vector of length 2, not ', friendly_typeof(p3), '.'), call = NULL)
+  if (!is_vector_2(p4)) abort(paste0('`p4` must be a numeric vector of length 2, not ', friendly_typeof(p4), '.'), call = NULL)
+  if (!is_float(t)) abort(paste0('`t` must be a number, not ', friendly_typeof(t), '.'), call = NULL)
+  get_spline_point_basis_(p1, p2, p3, p4, t)
+}
+
+#' Get Spline Point Catmull Rom
+#'
+#' Get (evaluate) spline point: Catmull-Rom.
+#'
+#' @param p1 A numeric vector of length 2.
+#' @param p2 A numeric vector of length 2.
+#' @param p3 A numeric vector of length 2.
+#' @param p4 A numeric vector of length 2.
+#' @param t A number.
+#'
+#' @return A numeric vector of length 2
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Vector2 GetSplinePointCatmullRom(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, float t);
+#' ```
+#'
+#' @family rom functions
+#' @family get functions
+#'
+#'
+#' @export
+get_spline_point_catmull_rom <- function(p1, p2, p3, p4, t) {
+  if (!is_vector_2(p1)) abort(paste0('`p1` must be a numeric vector of length 2, not ', friendly_typeof(p1), '.'), call = NULL)
+  if (!is_vector_2(p2)) abort(paste0('`p2` must be a numeric vector of length 2, not ', friendly_typeof(p2), '.'), call = NULL)
+  if (!is_vector_2(p3)) abort(paste0('`p3` must be a numeric vector of length 2, not ', friendly_typeof(p3), '.'), call = NULL)
+  if (!is_vector_2(p4)) abort(paste0('`p4` must be a numeric vector of length 2, not ', friendly_typeof(p4), '.'), call = NULL)
+  if (!is_float(t)) abort(paste0('`t` must be a number, not ', friendly_typeof(t), '.'), call = NULL)
+  get_spline_point_catmull_rom_(p1, p2, p3, p4, t)
+}
+
+#' Get Spline Point Bezier Quad
+#'
+#' Get (evaluate) spline point: Quadratic Bezier.
+#'
+#' @param p1 A numeric vector of length 2.
+#' @param c2 A numeric vector of length 2.
+#' @param p3 A numeric vector of length 2.
+#' @param t A number.
+#'
+#' @return A numeric vector of length 2
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Vector2 GetSplinePointBezierQuad(Vector2 p1, Vector2 c2, Vector2 p3, float t);
+#' ```
+#'
+#' @family quad functions
+#' @family get functions
+#'
+#'
+#' @export
+get_spline_point_bezier_quad <- function(p1, c2, p3, t) {
+  if (!is_vector_2(p1)) abort(paste0('`p1` must be a numeric vector of length 2, not ', friendly_typeof(p1), '.'), call = NULL)
+  if (!is_vector_2(c2)) abort(paste0('`c2` must be a numeric vector of length 2, not ', friendly_typeof(c2), '.'), call = NULL)
+  if (!is_vector_2(p3)) abort(paste0('`p3` must be a numeric vector of length 2, not ', friendly_typeof(p3), '.'), call = NULL)
+  if (!is_float(t)) abort(paste0('`t` must be a number, not ', friendly_typeof(t), '.'), call = NULL)
+  get_spline_point_bezier_quad_(p1, c2, p3, t)
+}
+
+#' Get Spline Point Bezier Cubic
+#'
+#' Get (evaluate) spline point: Cubic Bezier.
+#'
+#' @param p1 A numeric vector of length 2.
+#' @param c2 A numeric vector of length 2.
+#' @param c3 A numeric vector of length 2.
+#' @param p4 A numeric vector of length 2.
+#' @param t A number.
+#'
+#' @return A numeric vector of length 2
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Vector2 GetSplinePointBezierCubic(Vector2 p1, Vector2 c2, Vector2 c3, Vector2 p4, float t);
+#' ```
+#'
+#' @family cubic functions
+#' @family get functions
+#'
+#'
+#' @export
+get_spline_point_bezier_cubic <- function(p1, c2, c3, p4, t) {
+  if (!is_vector_2(p1)) abort(paste0('`p1` must be a numeric vector of length 2, not ', friendly_typeof(p1), '.'), call = NULL)
+  if (!is_vector_2(c2)) abort(paste0('`c2` must be a numeric vector of length 2, not ', friendly_typeof(c2), '.'), call = NULL)
+  if (!is_vector_2(c3)) abort(paste0('`c3` must be a numeric vector of length 2, not ', friendly_typeof(c3), '.'), call = NULL)
+  if (!is_vector_2(p4)) abort(paste0('`p4` must be a numeric vector of length 2, not ', friendly_typeof(p4), '.'), call = NULL)
+  if (!is_float(t)) abort(paste0('`t` must be a number, not ', friendly_typeof(t), '.'), call = NULL)
+  get_spline_point_bezier_cubic_(p1, c2, c3, p4, t)
 }
 
 #' Check Collision Recs
@@ -4662,6 +6020,36 @@ check_collision_circle_rec <- function(center, radius, rec) {
   if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
   if (!is_rectangle(rec)) abort(paste0('`rec` must be a rectangle, not ', friendly_typeof(rec), '.'), call = NULL)
   check_collision_circle_rec_(center, radius, rec)
+}
+
+#' Check Collision Circle Line
+#'
+#' Check if circle collides with a line created betweeen two points [p1] and [p2].
+#'
+#' @param center A numeric vector of length 2.
+#' @param radius A number.
+#' @param p1 A numeric vector of length 2.
+#' @param p2 A numeric vector of length 2.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool CheckCollisionCircleLine(Vector2 center, float radius, Vector2 p1, Vector2 p2);
+#' ```
+#'
+#' @family line functions
+#' @family check functions
+#'
+#'
+#' @export
+check_collision_circle_line <- function(center, radius, p1, p2) {
+  if (!is_vector_2(center)) abort(paste0('`center` must be a numeric vector of length 2, not ', friendly_typeof(center), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_vector_2(p1)) abort(paste0('`p1` must be a numeric vector of length 2, not ', friendly_typeof(p1), '.'), call = NULL)
+  if (!is_vector_2(p2)) abort(paste0('`p2` must be a numeric vector of length 2, not ', friendly_typeof(p2), '.'), call = NULL)
+  check_collision_circle_line_(center, radius, p1, p2)
 }
 
 #' Check Collision Point Rec
@@ -4826,6 +6214,38 @@ get_collision_rec <- function(rec1, rec2) {
 load_image <- function(file_name) {
   if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
   load_image_(file_name)
+}
+
+#' Load Image Raw
+#'
+#' Load image from RAW file data.
+#'
+#' @param file_name A string.
+#' @param width An integer.
+#' @param height An integer.
+#' @param format An integer.
+#' @param header_size An integer.
+#'
+#' @return An image
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Image LoadImageRaw(const char * fileName, int width, int height, int format, int headerSize);
+#' ```
+#'
+#' @family raw functions
+#' @family load functions
+#'
+#'
+#' @export
+load_image_raw <- function(file_name, width, height, format, header_size) {
+  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
+  if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
+  if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
+  if (!is_int(format)) abort(paste0('`format` must be an integer, not ', friendly_typeof(format), '.'), call = NULL)
+  if (!is_int(header_size)) abort(paste0('`header_size` must be an integer, not ', friendly_typeof(header_size), '.'), call = NULL)
+  load_image_raw_(file_name, width, height, format, header_size)
 }
 
 #' Load Image From Texture
@@ -5152,6 +6572,37 @@ gen_image_white_noise <- function(width, height, factor) {
   gen_image_white_noise_(width, height, factor)
 }
 
+#' Gen Image Perlin Noise
+#'
+#' Generate image: perlin noise.
+#'
+#' @param width An integer.
+#' @param height An integer.
+#' @param offset_x An integer.
+#' @param offset_y An integer.
+#' @param scale A number.
+#'
+#' @return An image
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Image GenImagePerlinNoise(int width, int height, int offsetX, int offsetY, float scale);
+#' ```
+#'
+#' @family noise functions
+#'
+#'
+#' @export
+gen_image_perlin_noise <- function(width, height, offset_x, offset_y, scale) {
+  if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
+  if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
+  if (!is_int(offset_x)) abort(paste0('`offset_x` must be an integer, not ', friendly_typeof(offset_x), '.'), call = NULL)
+  if (!is_int(offset_y)) abort(paste0('`offset_y` must be an integer, not ', friendly_typeof(offset_y), '.'), call = NULL)
+  if (!is_float(scale)) abort(paste0('`scale` must be a number, not ', friendly_typeof(scale), '.'), call = NULL)
+  gen_image_perlin_noise_(width, height, offset_x, offset_y, scale)
+}
+
 #' Gen Image Cellular
 #'
 #' Generate image: cellular algorithm, bigger tileSize means bigger cells.
@@ -5254,6 +6705,31 @@ image_from_image <- function(image, rec) {
   image_from_image_(image, rec)
 }
 
+#' Image From Channel
+#'
+#' Create an image from a selected channel of another image (GRAYSCALE).
+#'
+#' @param image An image.
+#' @param selected_channel An integer.
+#'
+#' @return An image
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Image ImageFromChannel(Image image, int selectedChannel);
+#' ```
+#'
+#' @family channel functions
+#'
+#'
+#' @export
+image_from_channel <- function(image, selected_channel) {
+  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
+  if (!is_int(selected_channel)) abort(paste0('`selected_channel` must be an integer, not ', friendly_typeof(selected_channel), '.'), call = NULL)
+  image_from_channel_(image, selected_channel)
+}
+
 #' Image Text
 #'
 #' Create an image from text (default font).
@@ -5310,6 +6786,32 @@ image_text_ex <- function(font, text, font_size, spacing, tint) {
   if (!is_float(spacing)) abort(paste0('`spacing` must be a number, not ', friendly_typeof(spacing), '.'), call = NULL)
   if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
   image_text_ex_(font, text, font_size, spacing, tint)
+}
+
+#' Get Image Alpha Border
+#'
+#' Get image alpha border rectangle.
+#'
+#' @param image An image.
+#' @param threshold A number.
+#'
+#' @return A rectangle
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Rectangle GetImageAlphaBorder(Image image, float threshold);
+#' ```
+#'
+#' @family border functions
+#' @family get functions
+#'
+#'
+#' @export
+get_image_alpha_border <- function(image, threshold) {
+  if (!is_image(image)) abort(paste0('`image` must be an image, not ', friendly_typeof(image), '.'), call = NULL)
+  if (!is_float(threshold)) abort(paste0('`threshold` must be a number, not ', friendly_typeof(threshold), '.'), call = NULL)
+  get_image_alpha_border_(image, threshold)
 }
 
 #' Get Image Color
@@ -5575,6 +7077,15 @@ set_texture_wrap <- function(texture, wrap) {
 #'
 #' @export
 draw_texture <- function(texture, pos_x, pos_y, tint) {
+  lens <- c(.struct_len(texture), length(pos_x), length(pos_y), .color_len(tint))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    texture <- .struct_recycle(texture, n)
+    pos_x <- rep(pos_x, length.out = n)
+    pos_y <- rep(pos_y, length.out = n)
+    tint <- .color_recycle(tint, n)
+    return(draw_texture_vectorized_(texture, pos_x, pos_y, tint))
+  }
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
   if (!is_int(pos_y)) abort(paste0('`pos_y` must be an integer, not ', friendly_typeof(pos_y), '.'), call = NULL)
@@ -5602,6 +7113,14 @@ draw_texture <- function(texture, pos_x, pos_y, tint) {
 #'
 #' @export
 draw_texture_v <- function(texture, position, tint) {
+  lens <- c(.struct_len(texture), .vec_len(position), .color_len(tint))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    texture <- .struct_recycle(texture, n)
+    position <- .vec_recycle(position, n, 2)
+    tint <- .color_recycle(tint, n)
+    return(draw_texture_v_vectorized_(texture, position, tint))
+  }
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
@@ -5630,6 +7149,16 @@ draw_texture_v <- function(texture, position, tint) {
 #'
 #' @export
 draw_texture_ex <- function(texture, position, rotation, scale, tint) {
+  lens <- c(.struct_len(texture), .vec_len(position), length(rotation), length(scale), .color_len(tint))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    texture <- .struct_recycle(texture, n)
+    position <- .vec_recycle(position, n, 2)
+    rotation <- rep(rotation, length.out = n)
+    scale <- rep(scale, length.out = n)
+    tint <- .color_recycle(tint, n)
+    return(draw_texture_ex_vectorized_(texture, position, rotation, scale, tint))
+  }
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_float(rotation)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(rotation), '.'), call = NULL)
@@ -5659,6 +7188,15 @@ draw_texture_ex <- function(texture, position, rotation, scale, tint) {
 #'
 #' @export
 draw_texture_rec <- function(texture, source, position, tint) {
+  lens <- c(.struct_len(texture), .struct_len(source), .vec_len(position), .color_len(tint))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    texture <- .struct_recycle(texture, n)
+    source <- .struct_recycle(source, n)
+    position <- .vec_recycle(position, n, 2)
+    tint <- .color_recycle(tint, n)
+    return(draw_texture_rec_vectorized_(texture, source, position, tint))
+  }
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_rectangle(source)) abort(paste0('`source` must be a rectangle, not ', friendly_typeof(source), '.'), call = NULL)
   if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
@@ -5689,6 +7227,17 @@ draw_texture_rec <- function(texture, source, position, tint) {
 #'
 #' @export
 draw_texture_pro <- function(texture, source, dest, origin, rotation, tint) {
+  lens <- c(.struct_len(texture), .struct_len(source), .struct_len(dest), .vec_len(origin), length(rotation), .color_len(tint))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    texture <- .struct_recycle(texture, n)
+    source <- .struct_recycle(source, n)
+    dest <- .struct_recycle(dest, n)
+    origin <- .vec_recycle(origin, n, 2)
+    rotation <- rep(rotation, length.out = n)
+    tint <- .color_recycle(tint, n)
+    return(draw_texture_pro_vectorized_(texture, source, dest, origin, rotation, tint))
+  }
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_rectangle(source)) abort(paste0('`source` must be a rectangle, not ', friendly_typeof(source), '.'), call = NULL)
   if (!is_rectangle(dest)) abort(paste0('`dest` must be a rectangle, not ', friendly_typeof(dest), '.'), call = NULL)
@@ -5721,6 +7270,17 @@ draw_texture_pro <- function(texture, source, dest, origin, rotation, tint) {
 #'
 #' @export
 draw_texture_n_patch <- function(texture, n_patch_info, dest, origin, rotation, tint) {
+  lens <- c(.struct_len(texture), .struct_len(n_patch_info), .struct_len(dest), .vec_len(origin), length(rotation), .color_len(tint))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    texture <- .struct_recycle(texture, n)
+    n_patch_info <- .struct_recycle(n_patch_info, n)
+    dest <- .struct_recycle(dest, n)
+    origin <- .vec_recycle(origin, n, 2)
+    rotation <- rep(rotation, length.out = n)
+    tint <- .color_recycle(tint, n)
+    return(draw_texture_n_patch_vectorized_(texture, n_patch_info, dest, origin, rotation, tint))
+  }
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_npatch_info(n_patch_info)) abort(paste0('`n_patch_info` must be an npatch_info, not ', friendly_typeof(n_patch_info), '.'), call = NULL)
   if (!is_rectangle(dest)) abort(paste0('`dest` must be a rectangle, not ', friendly_typeof(dest), '.'), call = NULL)
@@ -5728,6 +7288,31 @@ draw_texture_n_patch <- function(texture, n_patch_info, dest, origin, rotation, 
   if (!is_float(rotation)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(rotation), '.'), call = NULL)
   if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
   draw_texture_n_patch_(texture, n_patch_info, dest, origin, rotation, tint)
+}
+
+#' Color Is Equal
+#'
+#' Check if two colors are equal.
+#'
+#' @param col1 A color.
+#' @param col2 A color.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool ColorIsEqual(Color col1, Color col2);
+#' ```
+#'
+#' @family equal functions
+#'
+#'
+#' @export
+color_is_equal <- function(col1, col2) {
+  if (!is_color(col1)) abort(paste0('`col1` must be a color, not ', friendly_typeof(col1), '.'), call = NULL)
+  if (!is_color(col2)) abort(paste0('`col2` must be a color, not ', friendly_typeof(col2), '.'), call = NULL)
+  color_is_equal_(col1, col2)
 }
 
 #' Fade
@@ -5800,6 +7385,79 @@ color_normalize <- function(color) {
   color_normalize_(color)
 }
 
+#' Color From Normalized
+#'
+#' Get Color from normalized values [0..1].
+#'
+#' @param normalized A numeric vector of length 4.
+#'
+#' @return A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Color ColorFromNormalized(Vector4 normalized);
+#' ```
+#'
+#' @family normalized functions
+#'
+#'
+#' @export
+color_from_normalized <- function(normalized) {
+  if (!is_vector_4(normalized)) abort(paste0('`normalized` must be a numeric vector of length 4, not ', friendly_typeof(normalized), '.'), call = NULL)
+  color_from_normalized_(normalized)
+}
+
+#' Color To Hsv
+#'
+#' Get HSV values for a Color, hue [0..360], saturation/value [0..1].
+#'
+#' @param color A color.
+#'
+#' @return A numeric vector of length 3
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Vector3 ColorToHSV(Color color);
+#' ```
+#'
+#' @family hsv functions
+#'
+#'
+#' @export
+color_to_hsv <- function(color) {
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  color_to_hsv_(color)
+}
+
+#' Color From Hsv
+#'
+#' Get a Color from HSV values, hue [0..360], saturation/value [0..1].
+#'
+#' @param hue A number.
+#' @param saturation A number.
+#' @param value A number.
+#'
+#' @return A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Color ColorFromHSV(float hue, float saturation, float value);
+#' ```
+#'
+#' @family hsv functions
+#'
+#'
+#' @export
+color_from_hsv <- function(hue, saturation, value) {
+  if (!is_float(hue)) abort(paste0('`hue` must be a number, not ', friendly_typeof(hue), '.'), call = NULL)
+  if (!is_float(saturation)) abort(paste0('`saturation` must be a number, not ', friendly_typeof(saturation), '.'), call = NULL)
+  if (!is_float(value)) abort(paste0('`value` must be a number, not ', friendly_typeof(value), '.'), call = NULL)
+  color_from_hsv_(hue, saturation, value)
+}
+
 #' Color Tint
 #'
 #' Get color multiplied with another color.
@@ -5823,6 +7481,56 @@ color_tint <- function(color, tint) {
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
   if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
   color_tint_(color, tint)
+}
+
+#' Color Brightness
+#'
+#' Get color with brightness correction, brightness factor goes from -1.0f to 1.0f.
+#'
+#' @param color A color.
+#' @param factor A number.
+#'
+#' @return A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Color ColorBrightness(Color color, float factor);
+#' ```
+#'
+#' @family brightness functions
+#'
+#'
+#' @export
+color_brightness <- function(color, factor) {
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  if (!is_float(factor)) abort(paste0('`factor` must be a number, not ', friendly_typeof(factor), '.'), call = NULL)
+  color_brightness_(color, factor)
+}
+
+#' Color Contrast
+#'
+#' Get color with contrast correction, contrast values between -1.0f and 1.0f.
+#'
+#' @param color A color.
+#' @param contrast A number.
+#'
+#' @return A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Color ColorContrast(Color color, float contrast);
+#' ```
+#'
+#' @family contrast functions
+#'
+#'
+#' @export
+color_contrast <- function(color, contrast) {
+  if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
+  if (!is_float(contrast)) abort(paste0('`contrast` must be a number, not ', friendly_typeof(contrast), '.'), call = NULL)
+  color_contrast_(color, contrast)
 }
 
 #' Color Alpha
@@ -5875,6 +7583,33 @@ color_alpha_blend <- function(dst, src, tint) {
   if (!is_color(src)) abort(paste0('`src` must be a color, not ', friendly_typeof(src), '.'), call = NULL)
   if (!is_color(tint)) abort(paste0('`tint` must be a color, not ', friendly_typeof(tint), '.'), call = NULL)
   color_alpha_blend_(dst, src, tint)
+}
+
+#' Color Lerp
+#'
+#' Get color lerp interpolation between two colors, factor [0.0f..1.0f].
+#'
+#' @param color1 A color.
+#' @param color2 A color.
+#' @param factor A number.
+#'
+#' @return A color
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Color ColorLerp(Color color1, Color color2, float factor);
+#' ```
+#'
+#' @family lerp functions
+#'
+#'
+#' @export
+color_lerp <- function(color1, color2, factor) {
+  if (!is_color(color1)) abort(paste0('`color1` must be a color, not ', friendly_typeof(color1), '.'), call = NULL)
+  if (!is_color(color2)) abort(paste0('`color2` must be a color, not ', friendly_typeof(color2), '.'), call = NULL)
+  if (!is_float(factor)) abort(paste0('`factor` must be a number, not ', friendly_typeof(factor), '.'), call = NULL)
+  color_lerp_(color1, color2, factor)
 }
 
 #' Get Color
@@ -6094,6 +7829,13 @@ export_font_as_code <- function(font, file_name) {
 #'
 #' @export
 draw_fps <- function(pos_x, pos_y) {
+  lens <- c(length(pos_x), length(pos_y))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    pos_x <- rep(pos_x, length.out = n)
+    pos_y <- rep(pos_y, length.out = n)
+    return(draw_fps_vectorized_(pos_x, pos_y))
+  }
   if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
   if (!is_int(pos_y)) abort(paste0('`pos_y` must be an integer, not ', friendly_typeof(pos_y), '.'), call = NULL)
   draw_fps_(pos_x, pos_y)
@@ -6121,6 +7863,16 @@ draw_fps <- function(pos_x, pos_y) {
 #'
 #' @export
 draw_text <- function(text, pos_x, pos_y, font_size, color) {
+  lens <- c(length(text), length(pos_x), length(pos_y), length(font_size), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    text <- rep(text, length.out = n)
+    pos_x <- rep(pos_x, length.out = n)
+    pos_y <- rep(pos_y, length.out = n)
+    font_size <- rep(font_size, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_text_vectorized_(text, pos_x, pos_y, font_size, color))
+  }
   if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
   if (!is_int(pos_x)) abort(paste0('`pos_x` must be an integer, not ', friendly_typeof(pos_x), '.'), call = NULL)
   if (!is_int(pos_y)) abort(paste0('`pos_y` must be an integer, not ', friendly_typeof(pos_y), '.'), call = NULL)
@@ -6152,6 +7904,17 @@ draw_text <- function(text, pos_x, pos_y, font_size, color) {
 #'
 #' @export
 draw_text_ex <- function(font, text, position, font_size, spacing, tint) {
+  lens <- c(.struct_len(font), length(text), .vec_len(position), length(font_size), length(spacing), .color_len(tint))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    font <- .struct_recycle(font, n)
+    text <- rep(text, length.out = n)
+    position <- .vec_recycle(position, n, 2)
+    font_size <- rep(font_size, length.out = n)
+    spacing <- rep(spacing, length.out = n)
+    tint <- .color_recycle(tint, n)
+    return(draw_text_ex_vectorized_(font, text, position, font_size, spacing, tint))
+  }
   if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
   if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
   if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
@@ -6186,6 +7949,19 @@ draw_text_ex <- function(font, text, position, font_size, spacing, tint) {
 #'
 #' @export
 draw_text_pro <- function(font, text, position, origin, rotation, font_size, spacing, tint) {
+  lens <- c(.struct_len(font), length(text), .vec_len(position), .vec_len(origin), length(rotation), length(font_size), length(spacing), .color_len(tint))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    font <- .struct_recycle(font, n)
+    text <- rep(text, length.out = n)
+    position <- .vec_recycle(position, n, 2)
+    origin <- .vec_recycle(origin, n, 2)
+    rotation <- rep(rotation, length.out = n)
+    font_size <- rep(font_size, length.out = n)
+    spacing <- rep(spacing, length.out = n)
+    tint <- .color_recycle(tint, n)
+    return(draw_text_pro_vectorized_(font, text, position, origin, rotation, font_size, spacing, tint))
+  }
   if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
   if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
   if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
@@ -6219,6 +7995,16 @@ draw_text_pro <- function(font, text, position, origin, rotation, font_size, spa
 #'
 #' @export
 draw_text_codepoint <- function(font, codepoint, position, font_size, tint) {
+  lens <- c(.struct_len(font), length(codepoint), .vec_len(position), length(font_size), .color_len(tint))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    font <- .struct_recycle(font, n)
+    codepoint <- rep(codepoint, length.out = n)
+    position <- .vec_recycle(position, n, 2)
+    font_size <- rep(font_size, length.out = n)
+    tint <- .color_recycle(tint, n)
+    return(draw_text_codepoint_vectorized_(font, codepoint, position, font_size, tint))
+  }
   if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
   if (!is_int(codepoint)) abort(paste0('`codepoint` must be an integer, not ', friendly_typeof(codepoint), '.'), call = NULL)
   if (!is_vector_2(position)) abort(paste0('`position` must be a numeric vector of length 2, not ', friendly_typeof(position), '.'), call = NULL)
@@ -6303,6 +8089,108 @@ measure_text_ex <- function(font, text, font_size, spacing) {
   measure_text_ex_(font, text, font_size, spacing)
 }
 
+#' Get Glyph Index
+#'
+#' Get glyph index position in font for a codepoint (unicode character), fallback to '?' if not found.
+#'
+#' @param font A font.
+#' @param codepoint An integer.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int GetGlyphIndex(Font font, int codepoint);
+#' ```
+#'
+#' @family index functions
+#' @family get functions
+#'
+#'
+#' @export
+get_glyph_index <- function(font, codepoint) {
+  if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
+  if (!is_int(codepoint)) abort(paste0('`codepoint` must be an integer, not ', friendly_typeof(codepoint), '.'), call = NULL)
+  get_glyph_index_(font, codepoint)
+}
+
+#' Get Glyph Info
+#'
+#' Get glyph font info data for a codepoint (unicode character), fallback to '?' if not found.
+#'
+#' @param font A font.
+#' @param codepoint An integer.
+#'
+#' @return A glyph_info
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' GlyphInfo GetGlyphInfo(Font font, int codepoint);
+#' ```
+#'
+#' @family info functions
+#' @family get functions
+#'
+#'
+#' @export
+get_glyph_info <- function(font, codepoint) {
+  if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
+  if (!is_int(codepoint)) abort(paste0('`codepoint` must be an integer, not ', friendly_typeof(codepoint), '.'), call = NULL)
+  get_glyph_info_(font, codepoint)
+}
+
+#' Get Glyph Atlas Rec
+#'
+#' Get glyph rectangle in font atlas for a codepoint (unicode character), fallback to '?' if not found.
+#'
+#' @param font A font.
+#' @param codepoint An integer.
+#'
+#' @return A rectangle
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Rectangle GetGlyphAtlasRec(Font font, int codepoint);
+#' ```
+#'
+#' @family rec functions
+#' @family get functions
+#'
+#'
+#' @export
+get_glyph_atlas_rec <- function(font, codepoint) {
+  if (!is_font(font)) abort(paste0('`font` must be a font, not ', friendly_typeof(font), '.'), call = NULL)
+  if (!is_int(codepoint)) abort(paste0('`codepoint` must be an integer, not ', friendly_typeof(codepoint), '.'), call = NULL)
+  get_glyph_atlas_rec_(font, codepoint)
+}
+
+#' Get Codepoint Count
+#'
+#' Get total number of codepoints in a UTF-8 encoded string.
+#'
+#' @param text A string.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int GetCodepointCount(const char * text);
+#' ```
+#'
+#' @family count functions
+#' @family get functions
+#'
+#'
+#' @export
+get_codepoint_count <- function(text) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  get_codepoint_count_(text)
+}
+
 #' Text Is Equal
 #'
 #' Check if two text string are equal.
@@ -6351,6 +8239,56 @@ text_length <- function(text) {
   text_length_(text)
 }
 
+#' Text Subtext
+#'
+#' Get a piece of a text string.
+#'
+#' @param text A string.
+#' @param position An integer.
+#' @param length An integer.
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' const char * TextSubtext(const char * text, int position, int length);
+#' ```
+#'
+#' @family subtext functions
+#'
+#'
+#' @export
+text_subtext <- function(text, position, length) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  if (!is_int(position)) abort(paste0('`position` must be an integer, not ', friendly_typeof(position), '.'), call = NULL)
+  if (!is_int(length)) abort(paste0('`length` must be an integer, not ', friendly_typeof(length), '.'), call = NULL)
+  text_subtext_(text, position, length)
+}
+
+#' Text Remove Spaces
+#'
+#' Remove text spaces, concat words.
+#'
+#' @param text A string.
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' const char * TextRemoveSpaces(const char * text);
+#' ```
+#'
+#' @family spaces functions
+#'
+#'
+#' @export
+text_remove_spaces <- function(text) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  text_remove_spaces_(text)
+}
+
 #' Get Text Between
 #'
 #' Get text between two strings.
@@ -6377,6 +8315,33 @@ get_text_between <- function(text, begin, end) {
   if (!is_const_char_pointer(begin)) abort(paste0('`begin` must be a string, not ', friendly_typeof(begin), '.'), call = NULL)
   if (!is_const_char_pointer(end)) abort(paste0('`end` must be a string, not ', friendly_typeof(end), '.'), call = NULL)
   get_text_between_(text, begin, end)
+}
+
+#' Text Replace
+#'
+#' Replace text string with new string.
+#'
+#' @param text A string.
+#' @param search A string.
+#' @param replacement A string.
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' char * TextReplace(const char * text, const char * search, const char * replacement);
+#' ```
+#'
+#' @family replace functions
+#'
+#'
+#' @export
+text_replace <- function(text, search, replacement) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  if (!is_const_char_pointer(search)) abort(paste0('`search` must be a string, not ', friendly_typeof(search), '.'), call = NULL)
+  if (!is_const_char_pointer(replacement)) abort(paste0('`replacement` must be a string, not ', friendly_typeof(replacement), '.'), call = NULL)
+  text_replace_(text, search, replacement)
 }
 
 #' Text Replace Alloc
@@ -6464,6 +8429,33 @@ text_replace_between_alloc <- function(text, begin, end, replacement) {
   text_replace_between_alloc_(text, begin, end, replacement)
 }
 
+#' Text Insert
+#'
+#' Insert text in a defined byte position.
+#'
+#' @param text A string.
+#' @param insert A string.
+#' @param position An integer.
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' char * TextInsert(const char * text, const char * insert, int position);
+#' ```
+#'
+#' @family insert functions
+#'
+#'
+#' @export
+text_insert <- function(text, insert, position) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  if (!is_const_char_pointer(insert)) abort(paste0('`insert` must be a string, not ', friendly_typeof(insert), '.'), call = NULL)
+  if (!is_int(position)) abort(paste0('`position` must be an integer, not ', friendly_typeof(position), '.'), call = NULL)
+  text_insert_(text, insert, position)
+}
+
 #' Text Insert Alloc
 #'
 #' Insert text in a defined byte position, memory must be MemFree().
@@ -6491,6 +8483,192 @@ text_insert_alloc <- function(text, insert, position) {
   text_insert_alloc_(text, insert, position)
 }
 
+#' Text Find Index
+#'
+#' Find first text occurrence within a string, -1 if not found.
+#'
+#' @param text A string.
+#' @param search A string.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int TextFindIndex(const char * text, const char * search);
+#' ```
+#'
+#' @family index functions
+#'
+#'
+#' @export
+text_find_index <- function(text, search) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  if (!is_const_char_pointer(search)) abort(paste0('`search` must be a string, not ', friendly_typeof(search), '.'), call = NULL)
+  text_find_index_(text, search)
+}
+
+#' Text To Upper
+#'
+#' Get upper case version of provided string.
+#'
+#' @param text A string.
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' char * TextToUpper(const char * text);
+#' ```
+#'
+#' @family upper functions
+#'
+#'
+#' @export
+text_to_upper <- function(text) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  text_to_upper_(text)
+}
+
+#' Text To Lower
+#'
+#' Get lower case version of provided string.
+#'
+#' @param text A string.
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' char * TextToLower(const char * text);
+#' ```
+#'
+#' @family lower functions
+#'
+#'
+#' @export
+text_to_lower <- function(text) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  text_to_lower_(text)
+}
+
+#' Text To Pascal
+#'
+#' Get Pascal case notation version of provided string.
+#'
+#' @param text A string.
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' char * TextToPascal(const char * text);
+#' ```
+#'
+#' @family pascal functions
+#'
+#'
+#' @export
+text_to_pascal <- function(text) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  text_to_pascal_(text)
+}
+
+#' Text To Snake
+#'
+#' Get Snake case notation version of provided string.
+#'
+#' @param text A string.
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' char * TextToSnake(const char * text);
+#' ```
+#'
+#' @family snake functions
+#'
+#'
+#' @export
+text_to_snake <- function(text) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  text_to_snake_(text)
+}
+
+#' Text To Camel
+#'
+#' Get Camel case notation version of provided string.
+#'
+#' @param text A string.
+#'
+#' @return A string
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' char * TextToCamel(const char * text);
+#' ```
+#'
+#' @family camel functions
+#'
+#'
+#' @export
+text_to_camel <- function(text) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  text_to_camel_(text)
+}
+
+#' Text To Integer
+#'
+#' Get integer value from text.
+#'
+#' @param text A string.
+#'
+#' @return An integer
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' int TextToInteger(const char * text);
+#' ```
+#'
+#' @family integer functions
+#'
+#'
+#' @export
+text_to_integer <- function(text) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  text_to_integer_(text)
+}
+
+#' Text To Float
+#'
+#' Get float value from text.
+#'
+#' @param text A string.
+#'
+#' @return A number
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' float TextToFloat(const char * text);
+#' ```
+#'
+#' @family float functions
+#'
+#'
+#' @export
+text_to_float <- function(text) {
+  if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
+  text_to_float_(text)
+}
+
 #' Draw Line 3d
 #'
 #' Draw a line in 3D world space.
@@ -6511,6 +8689,14 @@ text_insert_alloc <- function(text, insert, position) {
 #'
 #' @export
 draw_line_3d <- function(start_pos, end_pos, color) {
+  lens <- c(.vec_len(start_pos), .vec_len(end_pos), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    start_pos <- .vec_recycle(start_pos, n, 3)
+    end_pos <- .vec_recycle(end_pos, n, 3)
+    color <- .color_recycle(color, n)
+    return(draw_line_3d_vectorized_(start_pos, end_pos, color))
+  }
   if (!is_vector_3(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 3, not ', friendly_typeof(start_pos), '.'), call = NULL)
   if (!is_vector_3(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 3, not ', friendly_typeof(end_pos), '.'), call = NULL)
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
@@ -6536,6 +8722,13 @@ draw_line_3d <- function(start_pos, end_pos, color) {
 #'
 #' @export
 draw_point_3d <- function(position, color) {
+  lens <- c(.vec_len(position), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    position <- .vec_recycle(position, n, 3)
+    color <- .color_recycle(color, n)
+    return(draw_point_3d_vectorized_(position, color))
+  }
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
   draw_point_3d_(position, color)
@@ -6563,6 +8756,16 @@ draw_point_3d <- function(position, color) {
 #'
 #' @export
 draw_circle_3d <- function(center, radius, rotation_axis, rotation_angle, color) {
+  lens <- c(.vec_len(center), length(radius), .vec_len(rotation_axis), length(rotation_angle), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center <- .vec_recycle(center, n, 3)
+    radius <- rep(radius, length.out = n)
+    rotation_axis <- .vec_recycle(rotation_axis, n, 3)
+    rotation_angle <- rep(rotation_angle, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_circle_3d_vectorized_(center, radius, rotation_axis, rotation_angle, color))
+  }
   if (!is_vector_3(center)) abort(paste0('`center` must be a numeric vector of length 3, not ', friendly_typeof(center), '.'), call = NULL)
   if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
   if (!is_vector_3(rotation_axis)) abort(paste0('`rotation_axis` must be a numeric vector of length 3, not ', friendly_typeof(rotation_axis), '.'), call = NULL)
@@ -6592,6 +8795,15 @@ draw_circle_3d <- function(center, radius, rotation_axis, rotation_angle, color)
 #'
 #' @export
 draw_triangle_3d <- function(v1, v2, v3, color) {
+  lens <- c(.vec_len(v1), .vec_len(v2), .vec_len(v3), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    v1 <- .vec_recycle(v1, n, 3)
+    v2 <- .vec_recycle(v2, n, 3)
+    v3 <- .vec_recycle(v3, n, 3)
+    color <- .color_recycle(color, n)
+    return(draw_triangle_3d_vectorized_(v1, v2, v3, color))
+  }
   if (!is_vector_3(v1)) abort(paste0('`v1` must be a numeric vector of length 3, not ', friendly_typeof(v1), '.'), call = NULL)
   if (!is_vector_3(v2)) abort(paste0('`v2` must be a numeric vector of length 3, not ', friendly_typeof(v2), '.'), call = NULL)
   if (!is_vector_3(v3)) abort(paste0('`v3` must be a numeric vector of length 3, not ', friendly_typeof(v3), '.'), call = NULL)
@@ -6621,6 +8833,16 @@ draw_triangle_3d <- function(v1, v2, v3, color) {
 #'
 #' @export
 draw_cube <- function(position, width, height, length, color) {
+  lens <- c(.vec_len(position), length(width), length(height), length(length), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    position <- .vec_recycle(position, n, 3)
+    width <- rep(width, length.out = n)
+    height <- rep(height, length.out = n)
+    length <- rep(length, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_cube_vectorized_(position, width, height, length, color))
+  }
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_float(width)) abort(paste0('`width` must be a number, not ', friendly_typeof(width), '.'), call = NULL)
   if (!is_float(height)) abort(paste0('`height` must be a number, not ', friendly_typeof(height), '.'), call = NULL)
@@ -6649,6 +8871,14 @@ draw_cube <- function(position, width, height, length, color) {
 #'
 #' @export
 draw_cube_v <- function(position, size, color) {
+  lens <- c(.vec_len(position), .vec_len(size), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    position <- .vec_recycle(position, n, 3)
+    size <- .vec_recycle(size, n, 3)
+    color <- .color_recycle(color, n)
+    return(draw_cube_v_vectorized_(position, size, color))
+  }
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_vector_3(size)) abort(paste0('`size` must be a numeric vector of length 3, not ', friendly_typeof(size), '.'), call = NULL)
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
@@ -6677,6 +8907,16 @@ draw_cube_v <- function(position, size, color) {
 #'
 #' @export
 draw_cube_wires <- function(position, width, height, length, color) {
+  lens <- c(.vec_len(position), length(width), length(height), length(length), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    position <- .vec_recycle(position, n, 3)
+    width <- rep(width, length.out = n)
+    height <- rep(height, length.out = n)
+    length <- rep(length, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_cube_wires_vectorized_(position, width, height, length, color))
+  }
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_float(width)) abort(paste0('`width` must be a number, not ', friendly_typeof(width), '.'), call = NULL)
   if (!is_float(height)) abort(paste0('`height` must be a number, not ', friendly_typeof(height), '.'), call = NULL)
@@ -6705,6 +8945,14 @@ draw_cube_wires <- function(position, width, height, length, color) {
 #'
 #' @export
 draw_cube_wires_v <- function(position, size, color) {
+  lens <- c(.vec_len(position), .vec_len(size), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    position <- .vec_recycle(position, n, 3)
+    size <- .vec_recycle(size, n, 3)
+    color <- .color_recycle(color, n)
+    return(draw_cube_wires_v_vectorized_(position, size, color))
+  }
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_vector_3(size)) abort(paste0('`size` must be a numeric vector of length 3, not ', friendly_typeof(size), '.'), call = NULL)
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
@@ -6731,6 +8979,14 @@ draw_cube_wires_v <- function(position, size, color) {
 #'
 #' @export
 draw_sphere <- function(center_pos, radius, color) {
+  lens <- c(.vec_len(center_pos), length(radius), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center_pos <- .vec_recycle(center_pos, n, 3)
+    radius <- rep(radius, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_sphere_vectorized_(center_pos, radius, color))
+  }
   if (!is_vector_3(center_pos)) abort(paste0('`center_pos` must be a numeric vector of length 3, not ', friendly_typeof(center_pos), '.'), call = NULL)
   if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
@@ -6759,6 +9015,16 @@ draw_sphere <- function(center_pos, radius, color) {
 #'
 #' @export
 draw_sphere_ex <- function(center_pos, radius, rings, slices, color) {
+  lens <- c(.vec_len(center_pos), length(radius), length(rings), length(slices), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center_pos <- .vec_recycle(center_pos, n, 3)
+    radius <- rep(radius, length.out = n)
+    rings <- rep(rings, length.out = n)
+    slices <- rep(slices, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_sphere_ex_vectorized_(center_pos, radius, rings, slices, color))
+  }
   if (!is_vector_3(center_pos)) abort(paste0('`center_pos` must be a numeric vector of length 3, not ', friendly_typeof(center_pos), '.'), call = NULL)
   if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
   if (!is_int(rings)) abort(paste0('`rings` must be an integer, not ', friendly_typeof(rings), '.'), call = NULL)
@@ -6789,6 +9055,16 @@ draw_sphere_ex <- function(center_pos, radius, rings, slices, color) {
 #'
 #' @export
 draw_sphere_wires <- function(center_pos, radius, rings, slices, color) {
+  lens <- c(.vec_len(center_pos), length(radius), length(rings), length(slices), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center_pos <- .vec_recycle(center_pos, n, 3)
+    radius <- rep(radius, length.out = n)
+    rings <- rep(rings, length.out = n)
+    slices <- rep(slices, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_sphere_wires_vectorized_(center_pos, radius, rings, slices, color))
+  }
   if (!is_vector_3(center_pos)) abort(paste0('`center_pos` must be a numeric vector of length 3, not ', friendly_typeof(center_pos), '.'), call = NULL)
   if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
   if (!is_int(rings)) abort(paste0('`rings` must be an integer, not ', friendly_typeof(rings), '.'), call = NULL)
@@ -6820,6 +9096,17 @@ draw_sphere_wires <- function(center_pos, radius, rings, slices, color) {
 #'
 #' @export
 draw_cylinder <- function(position, radius_top, radius_bottom, height, slices, color) {
+  lens <- c(.vec_len(position), length(radius_top), length(radius_bottom), length(height), length(slices), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    position <- .vec_recycle(position, n, 3)
+    radius_top <- rep(radius_top, length.out = n)
+    radius_bottom <- rep(radius_bottom, length.out = n)
+    height <- rep(height, length.out = n)
+    slices <- rep(slices, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_cylinder_vectorized_(position, radius_top, radius_bottom, height, slices, color))
+  }
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_float(radius_top)) abort(paste0('`radius_top` must be a number, not ', friendly_typeof(radius_top), '.'), call = NULL)
   if (!is_float(radius_bottom)) abort(paste0('`radius_bottom` must be a number, not ', friendly_typeof(radius_bottom), '.'), call = NULL)
@@ -6852,6 +9139,17 @@ draw_cylinder <- function(position, radius_top, radius_bottom, height, slices, c
 #'
 #' @export
 draw_cylinder_ex <- function(start_pos, end_pos, start_radius, end_radius, sides, color) {
+  lens <- c(.vec_len(start_pos), .vec_len(end_pos), length(start_radius), length(end_radius), length(sides), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    start_pos <- .vec_recycle(start_pos, n, 3)
+    end_pos <- .vec_recycle(end_pos, n, 3)
+    start_radius <- rep(start_radius, length.out = n)
+    end_radius <- rep(end_radius, length.out = n)
+    sides <- rep(sides, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_cylinder_ex_vectorized_(start_pos, end_pos, start_radius, end_radius, sides, color))
+  }
   if (!is_vector_3(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 3, not ', friendly_typeof(start_pos), '.'), call = NULL)
   if (!is_vector_3(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 3, not ', friendly_typeof(end_pos), '.'), call = NULL)
   if (!is_float(start_radius)) abort(paste0('`start_radius` must be a number, not ', friendly_typeof(start_radius), '.'), call = NULL)
@@ -6884,6 +9182,17 @@ draw_cylinder_ex <- function(start_pos, end_pos, start_radius, end_radius, sides
 #'
 #' @export
 draw_cylinder_wires <- function(position, radius_top, radius_bottom, height, slices, color) {
+  lens <- c(.vec_len(position), length(radius_top), length(radius_bottom), length(height), length(slices), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    position <- .vec_recycle(position, n, 3)
+    radius_top <- rep(radius_top, length.out = n)
+    radius_bottom <- rep(radius_bottom, length.out = n)
+    height <- rep(height, length.out = n)
+    slices <- rep(slices, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_cylinder_wires_vectorized_(position, radius_top, radius_bottom, height, slices, color))
+  }
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_float(radius_top)) abort(paste0('`radius_top` must be a number, not ', friendly_typeof(radius_top), '.'), call = NULL)
   if (!is_float(radius_bottom)) abort(paste0('`radius_bottom` must be a number, not ', friendly_typeof(radius_bottom), '.'), call = NULL)
@@ -6916,6 +9225,17 @@ draw_cylinder_wires <- function(position, radius_top, radius_bottom, height, sli
 #'
 #' @export
 draw_cylinder_wires_ex <- function(start_pos, end_pos, start_radius, end_radius, sides, color) {
+  lens <- c(.vec_len(start_pos), .vec_len(end_pos), length(start_radius), length(end_radius), length(sides), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    start_pos <- .vec_recycle(start_pos, n, 3)
+    end_pos <- .vec_recycle(end_pos, n, 3)
+    start_radius <- rep(start_radius, length.out = n)
+    end_radius <- rep(end_radius, length.out = n)
+    sides <- rep(sides, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_cylinder_wires_ex_vectorized_(start_pos, end_pos, start_radius, end_radius, sides, color))
+  }
   if (!is_vector_3(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 3, not ', friendly_typeof(start_pos), '.'), call = NULL)
   if (!is_vector_3(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 3, not ', friendly_typeof(end_pos), '.'), call = NULL)
   if (!is_float(start_radius)) abort(paste0('`start_radius` must be a number, not ', friendly_typeof(start_radius), '.'), call = NULL)
@@ -6948,6 +9268,17 @@ draw_cylinder_wires_ex <- function(start_pos, end_pos, start_radius, end_radius,
 #'
 #' @export
 draw_capsule <- function(start_pos, end_pos, radius, slices, rings, color) {
+  lens <- c(.vec_len(start_pos), .vec_len(end_pos), length(radius), length(slices), length(rings), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    start_pos <- .vec_recycle(start_pos, n, 3)
+    end_pos <- .vec_recycle(end_pos, n, 3)
+    radius <- rep(radius, length.out = n)
+    slices <- rep(slices, length.out = n)
+    rings <- rep(rings, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_capsule_vectorized_(start_pos, end_pos, radius, slices, rings, color))
+  }
   if (!is_vector_3(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 3, not ', friendly_typeof(start_pos), '.'), call = NULL)
   if (!is_vector_3(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 3, not ', friendly_typeof(end_pos), '.'), call = NULL)
   if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
@@ -6980,6 +9311,17 @@ draw_capsule <- function(start_pos, end_pos, radius, slices, rings, color) {
 #'
 #' @export
 draw_capsule_wires <- function(start_pos, end_pos, radius, slices, rings, color) {
+  lens <- c(.vec_len(start_pos), .vec_len(end_pos), length(radius), length(slices), length(rings), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    start_pos <- .vec_recycle(start_pos, n, 3)
+    end_pos <- .vec_recycle(end_pos, n, 3)
+    radius <- rep(radius, length.out = n)
+    slices <- rep(slices, length.out = n)
+    rings <- rep(rings, length.out = n)
+    color <- .color_recycle(color, n)
+    return(draw_capsule_wires_vectorized_(start_pos, end_pos, radius, slices, rings, color))
+  }
   if (!is_vector_3(start_pos)) abort(paste0('`start_pos` must be a numeric vector of length 3, not ', friendly_typeof(start_pos), '.'), call = NULL)
   if (!is_vector_3(end_pos)) abort(paste0('`end_pos` must be a numeric vector of length 3, not ', friendly_typeof(end_pos), '.'), call = NULL)
   if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
@@ -7009,6 +9351,14 @@ draw_capsule_wires <- function(start_pos, end_pos, radius, slices, rings, color)
 #'
 #' @export
 draw_plane <- function(center_pos, size, color) {
+  lens <- c(.vec_len(center_pos), .vec_len(size), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    center_pos <- .vec_recycle(center_pos, n, 3)
+    size <- .vec_recycle(size, n, 2)
+    color <- .color_recycle(color, n)
+    return(draw_plane_vectorized_(center_pos, size, color))
+  }
   if (!is_vector_3(center_pos)) abort(paste0('`center_pos` must be a numeric vector of length 3, not ', friendly_typeof(center_pos), '.'), call = NULL)
   if (!is_vector_2(size)) abort(paste0('`size` must be a numeric vector of length 2, not ', friendly_typeof(size), '.'), call = NULL)
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
@@ -7034,6 +9384,13 @@ draw_plane <- function(center_pos, size, color) {
 #'
 #' @export
 draw_ray <- function(ray, color) {
+  lens <- c(.struct_len(ray), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    ray <- .struct_recycle(ray, n)
+    color <- .color_recycle(color, n)
+    return(draw_ray_vectorized_(ray, color))
+  }
   if (!is_ray(ray)) abort(paste0('`ray` must be a ray, not ', friendly_typeof(ray), '.'), call = NULL)
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
   draw_ray_(ray, color)
@@ -7058,6 +9415,13 @@ draw_ray <- function(ray, color) {
 #'
 #' @export
 draw_grid <- function(slices, spacing) {
+  lens <- c(length(slices), length(spacing))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    slices <- rep(slices, length.out = n)
+    spacing <- rep(spacing, length.out = n)
+    return(draw_grid_vectorized_(slices, spacing))
+  }
   if (!is_int(slices)) abort(paste0('`slices` must be an integer, not ', friendly_typeof(slices), '.'), call = NULL)
   if (!is_float(spacing)) abort(paste0('`spacing` must be a number, not ', friendly_typeof(spacing), '.'), call = NULL)
   draw_grid_(slices, spacing)
@@ -7202,6 +9566,15 @@ get_model_bounding_box <- function(model) {
 #'
 #' @export
 draw_model <- function(model, position, scale, tint) {
+  lens <- c(.struct_len(model), .vec_len(position), length(scale), .color_len(tint))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    model <- .struct_recycle(model, n)
+    position <- .vec_recycle(position, n, 3)
+    scale <- rep(scale, length.out = n)
+    tint <- .color_recycle(tint, n)
+    return(draw_model_vectorized_(model, position, scale, tint))
+  }
   if (!is_model(model)) abort(paste0('`model` must be a model, not ', friendly_typeof(model), '.'), call = NULL)
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_float(scale)) abort(paste0('`scale` must be a number, not ', friendly_typeof(scale), '.'), call = NULL)
@@ -7232,6 +9605,17 @@ draw_model <- function(model, position, scale, tint) {
 #'
 #' @export
 draw_model_ex <- function(model, position, rotation_axis, rotation_angle, scale, tint) {
+  lens <- c(.struct_len(model), .vec_len(position), .vec_len(rotation_axis), length(rotation_angle), .vec_len(scale), .color_len(tint))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    model <- .struct_recycle(model, n)
+    position <- .vec_recycle(position, n, 3)
+    rotation_axis <- .vec_recycle(rotation_axis, n, 3)
+    rotation_angle <- rep(rotation_angle, length.out = n)
+    scale <- .vec_recycle(scale, n, 3)
+    tint <- .color_recycle(tint, n)
+    return(draw_model_ex_vectorized_(model, position, rotation_axis, rotation_angle, scale, tint))
+  }
   if (!is_model(model)) abort(paste0('`model` must be a model, not ', friendly_typeof(model), '.'), call = NULL)
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_vector_3(rotation_axis)) abort(paste0('`rotation_axis` must be a numeric vector of length 3, not ', friendly_typeof(rotation_axis), '.'), call = NULL)
@@ -7262,6 +9646,15 @@ draw_model_ex <- function(model, position, rotation_axis, rotation_angle, scale,
 #'
 #' @export
 draw_model_wires <- function(model, position, scale, tint) {
+  lens <- c(.struct_len(model), .vec_len(position), length(scale), .color_len(tint))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    model <- .struct_recycle(model, n)
+    position <- .vec_recycle(position, n, 3)
+    scale <- rep(scale, length.out = n)
+    tint <- .color_recycle(tint, n)
+    return(draw_model_wires_vectorized_(model, position, scale, tint))
+  }
   if (!is_model(model)) abort(paste0('`model` must be a model, not ', friendly_typeof(model), '.'), call = NULL)
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_float(scale)) abort(paste0('`scale` must be a number, not ', friendly_typeof(scale), '.'), call = NULL)
@@ -7292,6 +9685,17 @@ draw_model_wires <- function(model, position, scale, tint) {
 #'
 #' @export
 draw_model_wires_ex <- function(model, position, rotation_axis, rotation_angle, scale, tint) {
+  lens <- c(.struct_len(model), .vec_len(position), .vec_len(rotation_axis), length(rotation_angle), .vec_len(scale), .color_len(tint))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    model <- .struct_recycle(model, n)
+    position <- .vec_recycle(position, n, 3)
+    rotation_axis <- .vec_recycle(rotation_axis, n, 3)
+    rotation_angle <- rep(rotation_angle, length.out = n)
+    scale <- .vec_recycle(scale, n, 3)
+    tint <- .color_recycle(tint, n)
+    return(draw_model_wires_ex_vectorized_(model, position, rotation_axis, rotation_angle, scale, tint))
+  }
   if (!is_model(model)) abort(paste0('`model` must be a model, not ', friendly_typeof(model), '.'), call = NULL)
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
   if (!is_vector_3(rotation_axis)) abort(paste0('`rotation_axis` must be a numeric vector of length 3, not ', friendly_typeof(rotation_axis), '.'), call = NULL)
@@ -7320,6 +9724,13 @@ draw_model_wires_ex <- function(model, position, rotation_axis, rotation_angle, 
 #'
 #' @export
 draw_bounding_box <- function(box, color) {
+  lens <- c(.struct_len(box), .color_len(color))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    box <- .struct_recycle(box, n)
+    color <- .color_recycle(color, n)
+    return(draw_bounding_box_vectorized_(box, color))
+  }
   if (!is_bounding_box(box)) abort(paste0('`box` must be a bounding_box, not ', friendly_typeof(box), '.'), call = NULL)
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
   draw_bounding_box_(box, color)
@@ -7347,6 +9758,16 @@ draw_bounding_box <- function(box, color) {
 #'
 #' @export
 draw_billboard <- function(camera, texture, position, scale, tint) {
+  lens <- c(.struct_len(camera), .struct_len(texture), .vec_len(position), length(scale), .color_len(tint))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    camera <- .struct_recycle(camera, n)
+    texture <- .struct_recycle(texture, n)
+    position <- .vec_recycle(position, n, 3)
+    scale <- rep(scale, length.out = n)
+    tint <- .color_recycle(tint, n)
+    return(draw_billboard_vectorized_(camera, texture, position, scale, tint))
+  }
   if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_vector_3(position)) abort(paste0('`position` must be a numeric vector of length 3, not ', friendly_typeof(position), '.'), call = NULL)
@@ -7378,6 +9799,17 @@ draw_billboard <- function(camera, texture, position, scale, tint) {
 #'
 #' @export
 draw_billboard_rec <- function(camera, texture, source, position, size, tint) {
+  lens <- c(.struct_len(camera), .struct_len(texture), .struct_len(source), .vec_len(position), .vec_len(size), .color_len(tint))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    camera <- .struct_recycle(camera, n)
+    texture <- .struct_recycle(texture, n)
+    source <- .struct_recycle(source, n)
+    position <- .vec_recycle(position, n, 3)
+    size <- .vec_recycle(size, n, 2)
+    tint <- .color_recycle(tint, n)
+    return(draw_billboard_rec_vectorized_(camera, texture, source, position, size, tint))
+  }
   if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_rectangle(source)) abort(paste0('`source` must be a rectangle, not ', friendly_typeof(source), '.'), call = NULL)
@@ -7413,6 +9845,20 @@ draw_billboard_rec <- function(camera, texture, source, position, size, tint) {
 #'
 #' @export
 draw_billboard_pro <- function(camera, texture, source, position, up, size, origin, rotation, tint) {
+  lens <- c(.struct_len(camera), .struct_len(texture), .struct_len(source), .vec_len(position), .vec_len(up), .vec_len(size), .vec_len(origin), length(rotation), .color_len(tint))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    camera <- .struct_recycle(camera, n)
+    texture <- .struct_recycle(texture, n)
+    source <- .struct_recycle(source, n)
+    position <- .vec_recycle(position, n, 3)
+    up <- .vec_recycle(up, n, 3)
+    size <- .vec_recycle(size, n, 2)
+    origin <- .vec_recycle(origin, n, 2)
+    rotation <- rep(rotation, length.out = n)
+    tint <- .color_recycle(tint, n)
+    return(draw_billboard_pro_vectorized_(camera, texture, source, position, up, size, origin, rotation, tint))
+  }
   if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
   if (!is_rectangle(source)) abort(paste0('`source` must be a rectangle, not ', friendly_typeof(source), '.'), call = NULL)
@@ -7467,10 +9913,391 @@ unload_mesh <- function(mesh) {
 #'
 #' @export
 draw_mesh <- function(mesh, material, transform) {
+  lens <- c(.struct_len(mesh), .struct_len(material), .struct_len(transform))
+  if (any(lens > 1)) {
+    n <- max(lens)
+    mesh <- .struct_recycle(mesh, n)
+    material <- .struct_recycle(material, n)
+    transform <- .struct_recycle(transform, n)
+    return(draw_mesh_vectorized_(mesh, material, transform))
+  }
   if (!is_mesh(mesh)) abort(paste0('`mesh` must be a mesh, not ', friendly_typeof(mesh), '.'), call = NULL)
   if (!is_material(material)) abort(paste0('`material` must be a material, not ', friendly_typeof(material), '.'), call = NULL)
   if (!is_raylib_matrix(transform)) abort(paste0('`transform` must be a 4x4 numeric matrix, not ', friendly_typeof(transform), '.'), call = NULL)
   draw_mesh_(mesh, material, transform)
+}
+
+#' Get Mesh Bounding Box
+#'
+#' Compute mesh bounding box limits.
+#'
+#' @param mesh A mesh.
+#'
+#' @return A bounding_box
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' BoundingBox GetMeshBoundingBox(Mesh mesh);
+#' ```
+#'
+#' @family box functions
+#' @family get functions
+#'
+#'
+#' @export
+get_mesh_bounding_box <- function(mesh) {
+  if (!is_mesh(mesh)) abort(paste0('`mesh` must be a mesh, not ', friendly_typeof(mesh), '.'), call = NULL)
+  get_mesh_bounding_box_(mesh)
+}
+
+#' Export Mesh
+#'
+#' Export mesh data to file, returns true on success.
+#'
+#' @param mesh A mesh.
+#' @param file_name A string.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool ExportMesh(Mesh mesh, const char * fileName);
+#' ```
+#'
+#' @family mesh functions
+#' @family export functions
+#'
+#'
+#' @export
+export_mesh <- function(mesh, file_name) {
+  if (!is_mesh(mesh)) abort(paste0('`mesh` must be a mesh, not ', friendly_typeof(mesh), '.'), call = NULL)
+  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
+  export_mesh_(mesh, file_name)
+}
+
+#' Export Mesh As Code
+#'
+#' Export mesh as code file (.h) defining multiple arrays of vertex attributes.
+#'
+#' @param mesh A mesh.
+#' @param file_name A string.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool ExportMeshAsCode(Mesh mesh, const char * fileName);
+#' ```
+#'
+#' @family code functions
+#' @family export functions
+#'
+#'
+#' @export
+export_mesh_as_code <- function(mesh, file_name) {
+  if (!is_mesh(mesh)) abort(paste0('`mesh` must be a mesh, not ', friendly_typeof(mesh), '.'), call = NULL)
+  if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
+  export_mesh_as_code_(mesh, file_name)
+}
+
+#' Gen Mesh Poly
+#'
+#' Generate polygonal mesh.
+#'
+#' @param sides An integer.
+#' @param radius A number.
+#'
+#' @return A mesh
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Mesh GenMeshPoly(int sides, float radius);
+#' ```
+#'
+#' @family poly functions
+#'
+#'
+#' @export
+gen_mesh_poly <- function(sides, radius) {
+  if (!is_int(sides)) abort(paste0('`sides` must be an integer, not ', friendly_typeof(sides), '.'), call = NULL)
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  gen_mesh_poly_(sides, radius)
+}
+
+#' Gen Mesh Plane
+#'
+#' Generate plane mesh (with subdivisions).
+#'
+#' @param width A number.
+#' @param length A number.
+#' @param res_x An integer.
+#' @param res_z An integer.
+#'
+#' @return A mesh
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Mesh GenMeshPlane(float width, float length, int resX, int resZ);
+#' ```
+#'
+#' @family plane functions
+#'
+#'
+#' @export
+gen_mesh_plane <- function(width, length, res_x, res_z) {
+  if (!is_float(width)) abort(paste0('`width` must be a number, not ', friendly_typeof(width), '.'), call = NULL)
+  if (!is_float(length)) abort(paste0('`length` must be a number, not ', friendly_typeof(length), '.'), call = NULL)
+  if (!is_int(res_x)) abort(paste0('`res_x` must be an integer, not ', friendly_typeof(res_x), '.'), call = NULL)
+  if (!is_int(res_z)) abort(paste0('`res_z` must be an integer, not ', friendly_typeof(res_z), '.'), call = NULL)
+  gen_mesh_plane_(width, length, res_x, res_z)
+}
+
+#' Gen Mesh Cube
+#'
+#' Generate cuboid mesh.
+#'
+#' @param width A number.
+#' @param height A number.
+#' @param length A number.
+#'
+#' @return A mesh
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Mesh GenMeshCube(float width, float height, float length);
+#' ```
+#'
+#' @family cube functions
+#'
+#'
+#' @export
+gen_mesh_cube <- function(width, height, length) {
+  if (!is_float(width)) abort(paste0('`width` must be a number, not ', friendly_typeof(width), '.'), call = NULL)
+  if (!is_float(height)) abort(paste0('`height` must be a number, not ', friendly_typeof(height), '.'), call = NULL)
+  if (!is_float(length)) abort(paste0('`length` must be a number, not ', friendly_typeof(length), '.'), call = NULL)
+  gen_mesh_cube_(width, height, length)
+}
+
+#' Gen Mesh Sphere
+#'
+#' Generate sphere mesh (standard sphere).
+#'
+#' @param radius A number.
+#' @param rings An integer.
+#' @param slices An integer.
+#'
+#' @return A mesh
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Mesh GenMeshSphere(float radius, int rings, int slices);
+#' ```
+#'
+#' @family sphere functions
+#'
+#'
+#' @export
+gen_mesh_sphere <- function(radius, rings, slices) {
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_int(rings)) abort(paste0('`rings` must be an integer, not ', friendly_typeof(rings), '.'), call = NULL)
+  if (!is_int(slices)) abort(paste0('`slices` must be an integer, not ', friendly_typeof(slices), '.'), call = NULL)
+  gen_mesh_sphere_(radius, rings, slices)
+}
+
+#' Gen Mesh Hemi Sphere
+#'
+#' Generate half-sphere mesh (no bottom cap).
+#'
+#' @param radius A number.
+#' @param rings An integer.
+#' @param slices An integer.
+#'
+#' @return A mesh
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Mesh GenMeshHemiSphere(float radius, int rings, int slices);
+#' ```
+#'
+#' @family sphere functions
+#'
+#'
+#' @export
+gen_mesh_hemi_sphere <- function(radius, rings, slices) {
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_int(rings)) abort(paste0('`rings` must be an integer, not ', friendly_typeof(rings), '.'), call = NULL)
+  if (!is_int(slices)) abort(paste0('`slices` must be an integer, not ', friendly_typeof(slices), '.'), call = NULL)
+  gen_mesh_hemi_sphere_(radius, rings, slices)
+}
+
+#' Gen Mesh Cylinder
+#'
+#' Generate cylinder mesh.
+#'
+#' @param radius A number.
+#' @param height A number.
+#' @param slices An integer.
+#'
+#' @return A mesh
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Mesh GenMeshCylinder(float radius, float height, int slices);
+#' ```
+#'
+#' @family cylinder functions
+#'
+#'
+#' @export
+gen_mesh_cylinder <- function(radius, height, slices) {
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_float(height)) abort(paste0('`height` must be a number, not ', friendly_typeof(height), '.'), call = NULL)
+  if (!is_int(slices)) abort(paste0('`slices` must be an integer, not ', friendly_typeof(slices), '.'), call = NULL)
+  gen_mesh_cylinder_(radius, height, slices)
+}
+
+#' Gen Mesh Cone
+#'
+#' Generate cone/pyramid mesh.
+#'
+#' @param radius A number.
+#' @param height A number.
+#' @param slices An integer.
+#'
+#' @return A mesh
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Mesh GenMeshCone(float radius, float height, int slices);
+#' ```
+#'
+#' @family cone functions
+#'
+#'
+#' @export
+gen_mesh_cone <- function(radius, height, slices) {
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_float(height)) abort(paste0('`height` must be a number, not ', friendly_typeof(height), '.'), call = NULL)
+  if (!is_int(slices)) abort(paste0('`slices` must be an integer, not ', friendly_typeof(slices), '.'), call = NULL)
+  gen_mesh_cone_(radius, height, slices)
+}
+
+#' Gen Mesh Torus
+#'
+#' Generate torus mesh.
+#'
+#' @param radius A number.
+#' @param size A number.
+#' @param rad_seg An integer.
+#' @param sides An integer.
+#'
+#' @return A mesh
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Mesh GenMeshTorus(float radius, float size, int radSeg, int sides);
+#' ```
+#'
+#' @family torus functions
+#'
+#'
+#' @export
+gen_mesh_torus <- function(radius, size, rad_seg, sides) {
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_float(size)) abort(paste0('`size` must be a number, not ', friendly_typeof(size), '.'), call = NULL)
+  if (!is_int(rad_seg)) abort(paste0('`rad_seg` must be an integer, not ', friendly_typeof(rad_seg), '.'), call = NULL)
+  if (!is_int(sides)) abort(paste0('`sides` must be an integer, not ', friendly_typeof(sides), '.'), call = NULL)
+  gen_mesh_torus_(radius, size, rad_seg, sides)
+}
+
+#' Gen Mesh Knot
+#'
+#' Generate trefoil knot mesh.
+#'
+#' @param radius A number.
+#' @param size A number.
+#' @param rad_seg An integer.
+#' @param sides An integer.
+#'
+#' @return A mesh
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Mesh GenMeshKnot(float radius, float size, int radSeg, int sides);
+#' ```
+#'
+#' @family knot functions
+#'
+#'
+#' @export
+gen_mesh_knot <- function(radius, size, rad_seg, sides) {
+  if (!is_float(radius)) abort(paste0('`radius` must be a number, not ', friendly_typeof(radius), '.'), call = NULL)
+  if (!is_float(size)) abort(paste0('`size` must be a number, not ', friendly_typeof(size), '.'), call = NULL)
+  if (!is_int(rad_seg)) abort(paste0('`rad_seg` must be an integer, not ', friendly_typeof(rad_seg), '.'), call = NULL)
+  if (!is_int(sides)) abort(paste0('`sides` must be an integer, not ', friendly_typeof(sides), '.'), call = NULL)
+  gen_mesh_knot_(radius, size, rad_seg, sides)
+}
+
+#' Gen Mesh Heightmap
+#'
+#' Generate heightmap mesh from image data.
+#'
+#' @param heightmap An image.
+#' @param size A numeric vector of length 3.
+#'
+#' @return A mesh
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Mesh GenMeshHeightmap(Image heightmap, Vector3 size);
+#' ```
+#'
+#' @family heightmap functions
+#'
+#'
+#' @export
+gen_mesh_heightmap <- function(heightmap, size) {
+  if (!is_image(heightmap)) abort(paste0('`heightmap` must be an image, not ', friendly_typeof(heightmap), '.'), call = NULL)
+  if (!is_vector_3(size)) abort(paste0('`size` must be a numeric vector of length 3, not ', friendly_typeof(size), '.'), call = NULL)
+  gen_mesh_heightmap_(heightmap, size)
+}
+
+#' Gen Mesh Cubicmap
+#'
+#' Generate cubes-based map mesh from image data.
+#'
+#' @param cubicmap An image.
+#' @param cube_size A numeric vector of length 3.
+#'
+#' @return A mesh
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' Mesh GenMeshCubicmap(Image cubicmap, Vector3 cubeSize);
+#' ```
+#'
+#' @family cubicmap functions
+#'
+#'
+#' @export
+gen_mesh_cubicmap <- function(cubicmap, cube_size) {
+  if (!is_image(cubicmap)) abort(paste0('`cubicmap` must be an image, not ', friendly_typeof(cubicmap), '.'), call = NULL)
+  if (!is_vector_3(cube_size)) abort(paste0('`cube_size` must be a numeric vector of length 3, not ', friendly_typeof(cube_size), '.'), call = NULL)
+  gen_mesh_cubicmap_(cubicmap, cube_size)
 }
 
 #' Load Material Default
@@ -7915,6 +10742,50 @@ is_audio_device_ready <- function() {
   is_audio_device_ready_()
 }
 
+#' Set Master Volume
+#'
+#' Set master volume (listener).
+#'
+#' @param volume A number.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetMasterVolume(float volume);
+#' ```
+#'
+#' @family volume functions
+#' @family set functions
+#'
+#'
+#' @export
+set_master_volume <- function(volume) {
+  if (!is_float(volume)) abort(paste0('`volume` must be a number, not ', friendly_typeof(volume), '.'), call = NULL)
+  set_master_volume_(volume)
+}
+
+#' Get Master Volume
+#'
+#' Get master volume (listener).
+#'
+#'
+#' @return A number
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' float GetMasterVolume(void);
+#' ```
+#'
+#' @family volume functions
+#' @family get functions
+#'
+#'
+#' @export
+get_master_volume <- function() {
+  get_master_volume_()
+}
+
 #' Load Wave
 #'
 #' Load wave data from file.
@@ -8337,6 +11208,30 @@ set_sound_pitch <- function(sound, pitch) {
   set_sound_pitch_(sound, pitch)
 }
 
+#' Set Sound Pan
+#'
+#' Set pan for a sound (-1.0 left, 0.0 center, 1.0 right).
+#'
+#' @param sound A sound.
+#' @param pan A number.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetSoundPan(Sound sound, float pan);
+#' ```
+#'
+#' @family pan functions
+#' @family set functions
+#'
+#'
+#' @export
+set_sound_pan <- function(sound, pan) {
+  if (!is_sound(sound)) abort(paste0('`sound` must be a sound, not ', friendly_typeof(sound), '.'), call = NULL)
+  if (!is_float(pan)) abort(paste0('`pan` must be a number, not ', friendly_typeof(pan), '.'), call = NULL)
+  set_sound_pan_(sound, pan)
+}
+
 #' Wave Copy
 #'
 #' Copy a wave to a new wave.
@@ -8564,6 +11459,29 @@ resume_music_stream <- function(music) {
   resume_music_stream_(music)
 }
 
+#' Seek Music Stream
+#'
+#' Seek music to a position (in seconds).
+#'
+#' @param music A music.
+#' @param position A number.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SeekMusicStream(Music music, float position);
+#' ```
+#'
+#' @family stream functions
+#'
+#'
+#' @export
+seek_music_stream <- function(music, position) {
+  if (!is_music(music)) abort(paste0('`music` must be a music, not ', friendly_typeof(music), '.'), call = NULL)
+  if (!is_float(position)) abort(paste0('`position` must be a number, not ', friendly_typeof(position), '.'), call = NULL)
+  seek_music_stream_(music, position)
+}
+
 #' Set Music Volume
 #'
 #' Set volume for music (1.0 is max level).
@@ -8610,6 +11528,30 @@ set_music_pitch <- function(music, pitch) {
   if (!is_music(music)) abort(paste0('`music` must be a music, not ', friendly_typeof(music), '.'), call = NULL)
   if (!is_float(pitch)) abort(paste0('`pitch` must be a number, not ', friendly_typeof(pitch), '.'), call = NULL)
   set_music_pitch_(music, pitch)
+}
+
+#' Set Music Pan
+#'
+#' Set pan for a music (-1.0 left, 0.0 center, 1.0 right).
+#'
+#' @param music A music.
+#' @param pan A number.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetMusicPan(Music music, float pan);
+#' ```
+#'
+#' @family pan functions
+#' @family set functions
+#'
+#'
+#' @export
+set_music_pan <- function(music, pan) {
+  if (!is_music(music)) abort(paste0('`music` must be a music, not ', friendly_typeof(music), '.'), call = NULL)
+  if (!is_float(pan)) abort(paste0('`pan` must be a number, not ', friendly_typeof(pan), '.'), call = NULL)
+  set_music_pan_(music, pan)
 }
 
 #' Get Music Time Length
@@ -8824,6 +11766,30 @@ resume_audio_stream <- function(stream) {
   resume_audio_stream_(stream)
 }
 
+#' Is Audio Stream Playing
+#'
+#' Check if audio stream is playing.
+#'
+#' @param stream An audio_stream.
+#'
+#' @return A logical
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' bool IsAudioStreamPlaying(AudioStream stream);
+#' ```
+#'
+#' @family playing functions
+#' @family is functions
+#'
+#'
+#' @export
+is_audio_stream_playing <- function(stream) {
+  if (!is_audio_stream(stream)) abort(paste0('`stream` must be an audio_stream, not ', friendly_typeof(stream), '.'), call = NULL)
+  is_audio_stream_playing_(stream)
+}
+
 #' Stop Audio Stream
 #'
 #' Stop audio stream.
@@ -8892,5 +11858,51 @@ set_audio_stream_pitch <- function(stream, pitch) {
   if (!is_audio_stream(stream)) abort(paste0('`stream` must be an audio_stream, not ', friendly_typeof(stream), '.'), call = NULL)
   if (!is_float(pitch)) abort(paste0('`pitch` must be a number, not ', friendly_typeof(pitch), '.'), call = NULL)
   set_audio_stream_pitch_(stream, pitch)
+}
+
+#' Set Audio Stream Pan
+#'
+#' Set pan for audio stream (-1.0 to 1.0 range, 0.0 is centered).
+#'
+#' @param stream An audio_stream.
+#' @param pan A number.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetAudioStreamPan(AudioStream stream, float pan);
+#' ```
+#'
+#' @family pan functions
+#' @family set functions
+#'
+#'
+#' @export
+set_audio_stream_pan <- function(stream, pan) {
+  if (!is_audio_stream(stream)) abort(paste0('`stream` must be an audio_stream, not ', friendly_typeof(stream), '.'), call = NULL)
+  if (!is_float(pan)) abort(paste0('`pan` must be a number, not ', friendly_typeof(pan), '.'), call = NULL)
+  set_audio_stream_pan_(stream, pan)
+}
+
+#' Set Audio Stream Buffer Size Default
+#'
+#' Default size for new audio streams.
+#'
+#' @param size An integer.
+#'
+#' @note This function has been auto-generated from the following Raylib function definition:
+#'
+#' ```
+#' void SetAudioStreamBufferSizeDefault(int size);
+#' ```
+#'
+#' @family default functions
+#' @family set functions
+#'
+#'
+#' @export
+set_audio_stream_buffer_size_default <- function(size) {
+  if (!is_int(size)) abort(paste0('`size` must be an integer, not ', friendly_typeof(size), '.'), call = NULL)
+  set_audio_stream_buffer_size_default_(size)
 }
 
