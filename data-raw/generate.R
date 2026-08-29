@@ -179,8 +179,7 @@ wrapped_structs <- c(
 opaque_structs <- c(
   "Image", "Font", "Mesh", "Shader", "Material", "Model",
   "ModelAnimation", "Wave", "AudioStream", "Sound", "Music",
-  "VrDeviceInfo", "VrStereoConfig", "BoneInfo", "Texture",
-  "RenderTexture"
+  "VrDeviceInfo", "VrStereoConfig", "BoneInfo"
 )
 
 # Module classification for splitting generated C++ files

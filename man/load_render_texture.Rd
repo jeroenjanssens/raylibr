@@ -31,6 +31,7 @@ Other texture functions:
 \code{\link{load_texture}()},
 \code{\link{set_shader_value_texture}()},
 \code{\link{set_shapes_texture}()},
+\code{\link{texture}()},
 \code{\link{unload_render_texture}()},
 \code{\link{unload_texture}()}
 

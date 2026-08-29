@@ -201,6 +201,72 @@ namespace Rcpp {
   
 }
 
+// [[Rcpp::export]]
+Texture2D texture_(unsigned int id, int width, int height, int mipmaps, int format) {
+  Texture2D obj = {};
+  obj.id = id;
+  obj.width = width;
+  obj.height = height;
+  obj.mipmaps = mipmaps;
+  obj.format = format;
+  return obj;
+}
+
+// [[Rcpp::export]]
+unsigned int texture_get_id_(Texture2D obj) {
+  return obj.id;
+}
+
+// [[Rcpp::export]]
+Texture2D texture_set_id_(Texture2D obj, unsigned int id) {
+  obj.id = id;
+  return obj;
+}
+
+// [[Rcpp::export]]
+int texture_get_width_(Texture2D obj) {
+  return obj.width;
+}
+
+// [[Rcpp::export]]
+Texture2D texture_set_width_(Texture2D obj, int width) {
+  obj.width = width;
+  return obj;
+}
+
+// [[Rcpp::export]]
+int texture_get_height_(Texture2D obj) {
+  return obj.height;
+}
+
+// [[Rcpp::export]]
+Texture2D texture_set_height_(Texture2D obj, int height) {
+  obj.height = height;
+  return obj;
+}
+
+// [[Rcpp::export]]
+int texture_get_mipmaps_(Texture2D obj) {
+  return obj.mipmaps;
+}
+
+// [[Rcpp::export]]
+Texture2D texture_set_mipmaps_(Texture2D obj, int mipmaps) {
+  obj.mipmaps = mipmaps;
+  return obj;
+}
+
+// [[Rcpp::export]]
+int texture_get_format_(Texture2D obj) {
+  return obj.format;
+}
+
+// [[Rcpp::export]]
+Texture2D texture_set_format_(Texture2D obj, int format) {
+  obj.format = format;
+  return obj;
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // typedef struct RenderTexture {
@@ -224,6 +290,48 @@ namespace Rcpp {
     return xptr;
   };
   
+}
+
+// [[Rcpp::export]]
+RenderTexture2D render_texture_(unsigned int id, Texture2D texture, Texture2D depth) {
+  RenderTexture2D obj = {};
+  obj.id = id;
+  obj.texture = texture;
+  obj.depth = depth;
+  return obj;
+}
+
+// [[Rcpp::export]]
+unsigned int render_texture_get_id_(RenderTexture2D obj) {
+  return obj.id;
+}
+
+// [[Rcpp::export]]
+RenderTexture2D render_texture_set_id_(RenderTexture2D obj, unsigned int id) {
+  obj.id = id;
+  return obj;
+}
+
+// [[Rcpp::export]]
+Texture2D render_texture_get_texture_(RenderTexture2D obj) {
+  return obj.texture;
+}
+
+// [[Rcpp::export]]
+RenderTexture2D render_texture_set_texture_(RenderTexture2D obj, Texture2D texture) {
+  obj.texture = texture;
+  return obj;
+}
+
+// [[Rcpp::export]]
+Texture2D render_texture_get_depth_(RenderTexture2D obj) {
+  return obj.depth;
+}
+
+// [[Rcpp::export]]
+RenderTexture2D render_texture_set_depth_(RenderTexture2D obj, Texture2D depth) {
+  obj.depth = depth;
+  return obj;
 }
 
 

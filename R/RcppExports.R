@@ -3269,6 +3269,78 @@ rectangle_set_height_ <- function(obj, height) {
     .Call(`_raylibr_rectangle_set_height_`, obj, height)
 }
 
+texture_ <- function(id, width, height, mipmaps, format) {
+    .Call(`_raylibr_texture_`, id, width, height, mipmaps, format)
+}
+
+texture_get_id_ <- function(obj) {
+    .Call(`_raylibr_texture_get_id_`, obj)
+}
+
+texture_set_id_ <- function(obj, id) {
+    .Call(`_raylibr_texture_set_id_`, obj, id)
+}
+
+texture_get_width_ <- function(obj) {
+    .Call(`_raylibr_texture_get_width_`, obj)
+}
+
+texture_set_width_ <- function(obj, width) {
+    .Call(`_raylibr_texture_set_width_`, obj, width)
+}
+
+texture_get_height_ <- function(obj) {
+    .Call(`_raylibr_texture_get_height_`, obj)
+}
+
+texture_set_height_ <- function(obj, height) {
+    .Call(`_raylibr_texture_set_height_`, obj, height)
+}
+
+texture_get_mipmaps_ <- function(obj) {
+    .Call(`_raylibr_texture_get_mipmaps_`, obj)
+}
+
+texture_set_mipmaps_ <- function(obj, mipmaps) {
+    .Call(`_raylibr_texture_set_mipmaps_`, obj, mipmaps)
+}
+
+texture_get_format_ <- function(obj) {
+    .Call(`_raylibr_texture_get_format_`, obj)
+}
+
+texture_set_format_ <- function(obj, format) {
+    .Call(`_raylibr_texture_set_format_`, obj, format)
+}
+
+render_texture_ <- function(id, texture, depth) {
+    .Call(`_raylibr_render_texture_`, id, texture, depth)
+}
+
+render_texture_get_id_ <- function(obj) {
+    .Call(`_raylibr_render_texture_get_id_`, obj)
+}
+
+render_texture_set_id_ <- function(obj, id) {
+    .Call(`_raylibr_render_texture_set_id_`, obj, id)
+}
+
+render_texture_get_texture_ <- function(obj) {
+    .Call(`_raylibr_render_texture_get_texture_`, obj)
+}
+
+render_texture_set_texture_ <- function(obj, texture) {
+    .Call(`_raylibr_render_texture_set_texture_`, obj, texture)
+}
+
+render_texture_get_depth_ <- function(obj) {
+    .Call(`_raylibr_render_texture_get_depth_`, obj)
+}
+
+render_texture_set_depth_ <- function(obj, depth) {
+    .Call(`_raylibr_render_texture_set_depth_`, obj, depth)
+}
+
 n_patch_info_ <- function(source, left, top, right, bottom, layout) {
     .Call(`_raylibr_n_patch_info_`, source, left, top, right, bottom, layout)
 }
