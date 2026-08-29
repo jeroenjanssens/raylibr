@@ -4,7 +4,7 @@ title: "Snake"
 
 A complete Snake game built entirely in R: arrow keys steer the snake, eating food grows it, hitting a wall or its own body resets the game. It demonstrates keyboard input via `get_key_pressed()` and the `key` enum, grid-based collision detection using R lists, `draw_rectangle_v()` for rendering the board, and `set_target_fps()` to control game speed.
 
-![](../../man/figures/raylibr-demo-snake.gif)
+![](../reference/figures/raylibr-demo-snake.gif)
 
 ## Run
 

@@ -4,7 +4,7 @@ title: "Beatbox like Jeroen"
 
 Press letter keys to trigger individual percussion sound samples; each keystroke plays the corresponding WAV file and spawns a floating label that fades out over 30 frames. The demo shows `load_sound()` / `play_sound()` for one-shot audio, `load_texture()` / `draw_texture()` for a background image, `fade()` for decaying text opacity, and `draw_text()` called inside a loop to stack multiple simultaneous labels.
 
-![](../../man/figures/raylibr-demo-beatbox.gif)
+![](../reference/figures/raylibr-demo-beatbox.gif)
 
 ## Run
 

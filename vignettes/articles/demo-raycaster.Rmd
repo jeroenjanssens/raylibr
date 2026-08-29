@@ -4,7 +4,7 @@ title: "Raycaster"
 
 A Wolfenstein-style raycaster written entirely in R: WASD movement, mouse look, textured walls, depth-based fog, and an optional top-down debug view showing the live ray grid. The renderer fires a configurable number of rays per frame using vectorized R arithmetic, then draws all wall slices in a single `draw_texture_pro()` call with per-slice source/destination rectangles and tint colors. It demonstrates advanced use of `draw_texture_pro()` vectorization, `load_font_ex()`, `draw_text_ex()` for multi-line HUD text, `toggle_fullscreen()`, and `set_window_state()`.
 
-![](../../man/figures/raylibr-demo-raycaster.gif)
+![](../reference/figures/raylibr-demo-raycaster.gif)
 
 ## Run
 

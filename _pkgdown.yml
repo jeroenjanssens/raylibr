@@ -6,18 +6,18 @@ articles:
   - title: Demos
     navbar: Demos
     contents:
-    - demo-helloworld
-    - demo-mouse
-    - demo-balls
-    - demo-snake
-    - demo-stroop
-    - demo-cubes
-    - demo-beatbox
-    - demo-shader
-    - demo-julia
-    - demo-gui
-    - demo-model
-    - demo-raycaster
+    - "articles/demo-helloworld"
+    - "articles/demo-mouse"
+    - "articles/demo-balls"
+    - "articles/demo-snake"
+    - "articles/demo-stroop"
+    - "articles/demo-cubes"
+    - "articles/demo-beatbox"
+    - "articles/demo-shader"
+    - "articles/demo-julia"
+    - "articles/demo-gui"
+    - "articles/demo-model"
+    - "articles/demo-raycaster"
 
 reference:
   - title: Window and core

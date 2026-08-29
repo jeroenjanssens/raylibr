@@ -4,7 +4,7 @@ title: "Hello, World!"
 
 The simplest raylibr demo: open a window, draw a pulsing set of concentric circles, and fade two text labels in and out using `sin()` over time. It demonstrates the core game loop (`begin_drawing()` / `end_drawing()`), vectorized `draw_circle()` and `draw_text()` calls, `fade()` for transparency, and `draw_fps()` for a frame-rate overlay.
 
-![](../../man/figures/raylibr-demo-helloworld.gif)
+![](../reference/figures/raylibr-demo-helloworld.gif)
 
 ## Run
 

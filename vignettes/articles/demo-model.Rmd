@@ -4,7 +4,7 @@ title: "3D Model and Post-Processing Shaders"
 
 Loads a textured OBJ church model and renders it to a `render_texture`, then applies one of eleven post-processing fragment shaders (grayscale, blur, pixelizer, cross-hatching, sobel, and more) via left/right arrow keys. It demonstrates `load_model()`, `set_model_texture()`, `update_camera()` for orbital movement, `begin_texture_mode()` for off-screen rendering, `draw_texture_rec()` with a flipped rectangle to correct the render texture's Y axis, and `target$texture` field access.
 
-![](../../man/figures/raylibr-demo-model.gif)
+![](../reference/figures/raylibr-demo-model.gif)
 
 ## Run
 

@@ -4,7 +4,7 @@ title: "Waving Cubes and Music"
 
 A 3D grid of 3,375 color-coded cubes that wave and pulse in sync with a looping XM music track. Camera position orbits automatically via `camera_3d()` field access, cube positions are computed with `sin()` over R vectors, and the entire scene is rendered in a single vectorized `draw_cube()` call. This demo combines 3D mode (`begin_mode_3d()`), audio streaming (`load_music_stream()`, `update_music_stream()`), and `color_from_hsv()` for HSV-based coloring.
 
-![](../../man/figures/raylibr-demo-cubes.gif)
+![](../reference/figures/raylibr-demo-cubes.gif)
 
 ## Run
 
