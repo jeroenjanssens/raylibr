@@ -1,20 +1,23 @@
-.PHONY: all raylib cleanray
+.PHONY: all cleanray
 
-RAYLIB_SRC = raylib-4.0.0-modified
+RAYLIB_SRC = raylib-6.0-minimal
 
-PKG_LIBS = -L../inst/$(RAYLIB_SRC)/lib -lraylib -lopengl32 -lgdi32 -lwinmm 
+PKG_LIBS = -L../inst/$(RAYLIB_SRC)/src -lraylib -lopengl32 -lgdi32 -lwinmm
 PKG_CPPFLAGS = -I../inst/include
+
+OBJECTS = audio.o core.o models.o rcolors.o RcppExports.o shapes.o structs.o text.o textures.o types.o web.o
 
 all: cleanray
 
 cleanray: $(SHLIB)
 	rm -rf ../inst/$(RAYLIB_SRC)
 
-$(SHLIB): raylib
+$(OBJECTS): raylib_built
 
-raylib:
+raylib_built:
 	(cd ../inst; tar -xf $(RAYLIB_SRC).tar.gz)
 	(cd ../inst/$(RAYLIB_SRC)/src; $(MAKE) PLATFORM=PLATFORM_DESKTOP)
 	mkdir -p ../inst/include
 	cp ../inst/$(RAYLIB_SRC)/src/raylib.h ../inst/include
-
+	cp ../inst/$(RAYLIB_SRC)/src/raymath.h ../inst/include
+	touch $@

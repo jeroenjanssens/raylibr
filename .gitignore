@@ -10,3 +10,4 @@ docs
 *.o
 *.so
 *.dll
+src/raylib_built
