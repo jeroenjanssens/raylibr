@@ -2,7 +2,7 @@
 % Please edit documentation in R/material_map.R
 \name{material_map}
 \alias{material_map}
-\title{Material map}
+\title{Material Map}
 \usage{
 material_map(texture, color, value)
 }
@@ -23,9 +23,9 @@ Create a new material_map object.
 This class has been auto-generated from the following Raylib struct definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{typedef struct MaterialMap \{
-    Texture2D texture;      // Material map texture
-    Color color;            // Material map color
-    float value;            // Material map value
+    Texture2D texture;        // Material map texture
+    Color color;        // Material map color
+    float value;        // Material map value
 \} MaterialMap;
 }\if{html}{\out{</div>}}
 }

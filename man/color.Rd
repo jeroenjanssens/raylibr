@@ -7,13 +7,13 @@
 color(r, g, b, a)
 }
 \arguments{
-\item{r}{A non-negative integer. Color red value.}
+\item{r}{A non-negative integer (0-255). Color red value.}
 
-\item{g}{A non-negative integer. Color green value.}
+\item{g}{A non-negative integer (0-255). Color green value.}
 
-\item{b}{A non-negative integer. Color blue value.}
+\item{b}{A non-negative integer (0-255). Color blue value.}
 
-\item{a}{A non-negative integer. Color alpha value.}
+\item{a}{A non-negative integer (0-255). Color alpha value.}
 }
 \value{
 A color
@@ -34,22 +34,8 @@ This class has been auto-generated from the following Raylib struct definition:
 }
 \seealso{
 Other color functions: 
-\code{\link{as_color}()},
-\code{\link{color_alpha_blend}()},
-\code{\link{color_alpha}()},
-\code{\link{color_from_hsv}()},
-\code{\link{color_from_normalized}()},
-\code{\link{color_normalize}()},
-\code{\link{color_to_hsv}()},
-\code{\link{color_to_int}()},
 \code{\link{gen_image_color}()},
 \code{\link{get_color}()},
-\code{\link{get_image_color}()},
-\code{\link{image_color_brightness}()},
-\code{\link{image_color_contrast}()},
-\code{\link{image_color_grayscale}()},
-\code{\link{image_color_invert}()},
-\code{\link{image_color_replace}()},
-\code{\link{image_color_tint}()}
+\code{\link{get_image_color}()}
 }
 \concept{color functions}

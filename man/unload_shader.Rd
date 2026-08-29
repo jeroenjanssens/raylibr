@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{unload_shader}
 \alias{unload_shader}
-\title{Unload shader}
+\title{Unload Shader}
 \usage{
 unload_shader(shader)
 }
@@ -19,17 +19,24 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=shader]{shader()}} for creating shader objects.
-
 Other shader functions: 
-\code{\link{begin_shader_mode}()},
-\code{\link{end_shader_mode}()},
-\code{\link{get_shader_location_attrib}()},
-\code{\link{get_shader_location}()},
-\code{\link{load_shader_from_memory}()},
 \code{\link{load_shader}()},
-\code{\link{set_shader_value_matrix}()},
-\code{\link{set_shader_value_texture}()},
 \code{\link{set_shader_value}()}
+
+Other unload functions: 
+\code{\link{unload_audio_stream}()},
+\code{\link{unload_font}()},
+\code{\link{unload_image}()},
+\code{\link{unload_material}()},
+\code{\link{unload_mesh}()},
+\code{\link{unload_model}()},
+\code{\link{unload_music_stream}()},
+\code{\link{unload_render_texture}()},
+\code{\link{unload_sound}()},
+\code{\link{unload_sound_alias}()},
+\code{\link{unload_texture}()},
+\code{\link{unload_vr_stereo_config}()},
+\code{\link{unload_wave}()}
 }
 \concept{shader functions}
+\concept{unload functions}

@@ -2,12 +2,12 @@
 % Please edit documentation in R/functions.R
 \name{clear_background}
 \alias{clear_background}
-\title{Clear background}
+\title{Clear Background}
 \usage{
-clear_background(color = "white")
+clear_background(color)
 }
 \arguments{
-\item{color}{A color. Default: \code{"white"}.}
+\item{color}{A color.}
 }
 \description{
 Set background color (framebuffer clear color).
@@ -18,6 +18,4 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void ClearBackground(Color color);
 }\if{html}{\out{</div>}}
 }
-\seealso{
-\code{\link[=color]{color()}} for creating color objects.
-}
+\concept{background functions}

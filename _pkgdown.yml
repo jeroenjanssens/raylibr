@@ -2,3 +2,218 @@ url: https://jeroenjanssens.github.io/raylibr/
 template:
   bootstrap: 5
 
+reference:
+  - title: Window and core
+    contents:
+    - starts_with("init_window")
+    - starts_with("close_window")
+    - starts_with("window_")
+    - starts_with("set_window")
+    - starts_with("get_screen")
+    - starts_with("get_render")
+    - starts_with("get_monitor")
+    - starts_with("get_current_monitor")
+    - starts_with("set_target_fps")
+    - starts_with("get_fps")
+    - starts_with("get_frame_time")
+    - starts_with("get_time")
+    - starts_with("begin_drawing")
+    - starts_with("end_drawing")
+    - starts_with("clear_background")
+    - starts_with("swap_screen_buffer")
+    - starts_with("poll_input_events")
+    - is_web
+    - run_game_loop
+
+  - title: Shapes
+    contents:
+    - starts_with("draw_pixel")
+    - starts_with("draw_line")
+    - starts_with("draw_circle")
+    - starts_with("draw_ellipse")
+    - starts_with("draw_ring")
+    - starts_with("draw_rectangle")
+    - starts_with("draw_triangle")
+    - starts_with("draw_poly")
+
+  - title: Textures
+    contents:
+    - starts_with("load_texture")
+    - starts_with("load_image")
+    - starts_with("unload_texture")
+    - starts_with("unload_image")
+    - starts_with("draw_texture")
+    - starts_with("gen_image")
+    - starts_with("image_")
+    - starts_with("export_image")
+
+  - title: Text
+    contents:
+    - starts_with("draw_text")
+    - starts_with("measure_text")
+    - starts_with("load_font")
+    - starts_with("unload_font")
+
+  - title: Models (3D)
+    contents:
+    - starts_with("draw_cube")
+    - starts_with("draw_sphere")
+    - starts_with("draw_cylinder")
+    - starts_with("draw_capsule")
+    - starts_with("draw_plane")
+    - starts_with("draw_grid")
+    - starts_with("draw_point_3d")
+    - starts_with("draw_line_3d")
+    - starts_with("draw_circle_3d")
+    - starts_with("draw_triangle_3d")
+    - starts_with("draw_billboard")
+    - starts_with("draw_bounding_box")
+    - starts_with("draw_model")
+    - starts_with("draw_mesh")
+    - starts_with("draw_ray")
+    - starts_with("load_model")
+    - starts_with("unload_model")
+    - starts_with("unload_mesh")
+    - starts_with("unload_material")
+
+  - title: Audio
+    contents:
+    - starts_with("init_audio")
+    - starts_with("close_audio")
+    - starts_with("is_audio")
+    - starts_with("load_sound")
+    - starts_with("load_wave")
+    - starts_with("load_music")
+    - starts_with("load_audio_stream")
+    - starts_with("unload_sound")
+    - starts_with("unload_wave")
+    - starts_with("unload_music")
+    - starts_with("unload_audio_stream")
+    - starts_with("play_")
+    - starts_with("pause_")
+    - starts_with("resume_")
+    - starts_with("stop_")
+    - starts_with("is_sound")
+    - starts_with("is_music")
+    - starts_with("set_sound")
+    - starts_with("set_music")
+    - starts_with("set_audio")
+    - starts_with("update_music")
+
+  - title: Input
+    contents:
+    - starts_with("is_key")
+    - starts_with("get_key")
+    - starts_with("is_mouse")
+    - starts_with("get_mouse")
+    - starts_with("set_mouse")
+    - starts_with("is_gamepad")
+    - starts_with("get_gamepad")
+    - starts_with("set_gamepad")
+    - starts_with("is_gesture")
+    - starts_with("get_gesture")
+    - starts_with("get_touch")
+    - starts_with("is_cursor")
+    - starts_with("show_cursor")
+    - starts_with("hide_cursor")
+    - starts_with("enable_cursor")
+    - starts_with("disable_cursor")
+
+  - title: Colors
+    contents:
+    - color
+    - as_color
+    - starts_with("color_")
+    - fade
+    - get_color
+
+  - title: Structs
+    contents:
+    - rectangle
+    - bounding_box
+    - ray
+    - ray_collision
+    - camera_2d
+    - camera_3d
+    - glyph_info
+    - material_map
+    - n_patch_info
+    - npatch_info
+    - transform
+
+  - title: Type checking
+    contents:
+    - starts_with("is_")
+    - -starts_with("is_key")
+    - -starts_with("is_mouse")
+    - -starts_with("is_gamepad")
+    - -starts_with("is_gesture")
+    - -starts_with("is_cursor")
+    - -starts_with("is_audio")
+    - -starts_with("is_sound")
+    - -starts_with("is_music")
+    - -starts_with("is_window")
+
+  - title: Enums
+    contents:
+    - flag
+    - log
+    - key
+    - mouse_button
+    - mouse_cursor
+    - camera_mode
+    - camera_projection
+    - shader_uniform
+    - material_map_index
+
+  - title: Shaders
+    contents:
+    - starts_with("load_shader")
+    - starts_with("unload_shader")
+    - starts_with("begin_shader")
+    - starts_with("end_shader")
+    - set_shader_value
+    - starts_with("is_shader")
+
+  - title: Collision detection
+    contents:
+    - starts_with("check_collision")
+    - starts_with("get_collision")
+    - starts_with("get_ray_collision")
+
+  - title: Camera
+    contents:
+    - starts_with("begin_mode_2d")
+    - starts_with("end_mode_2d")
+    - starts_with("begin_mode_3d")
+    - starts_with("end_mode_3d")
+    - starts_with("get_screen_to_world")
+    - starts_with("get_world_to_screen")
+
+  - title: Utility
+    contents:
+    - raylib_version
+    - raylibr_resource
+    - starts_with("set_trace")
+    - starts_with("set_config")
+    - starts_with("set_exit")
+    - starts_with("take_screenshot")
+    - starts_with("open_url")
+    - starts_with("set_random")
+    - starts_with("get_random")
+
+  - title: File system
+    contents:
+    - starts_with("file_")
+    - starts_with("directory_")
+    - starts_with("change_directory")
+    - starts_with("get_working_directory")
+    - starts_with("get_application_directory")
+    - starts_with("get_directory")
+    - starts_with("get_prev_directory")
+    - starts_with("get_file")
+    - starts_with("is_file")
+    - starts_with("is_path")
+    - starts_with("load_file")
+    - starts_with("save_file")
+    - starts_with("make_directory")

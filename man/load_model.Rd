@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{load_model}
 \alias{load_model}
-\title{Load model}
+\title{Load Model}
 \usage{
 load_model(file_name)
 }
@@ -18,16 +18,34 @@ Load model from files (meshes and materials).
 \note{
 This function has been auto-generated from the following Raylib function definition:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{Model LoadModel(const char *fileName);
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Model LoadModel(const char * fileName);
 }\if{html}{\out{</div>}}
 }
 \seealso{
 Other model functions: 
-\code{\link{draw_model_ex}()},
-\code{\link{draw_model_wires}()},
 \code{\link{draw_model}()},
-\code{\link{get_model_bounding_box}()},
-\code{\link{get_ray_collision_model}()},
 \code{\link{unload_model}()}
+
+Other load functions: 
+\code{\link{load_audio_stream}()},
+\code{\link{load_file_text}()},
+\code{\link{load_font}()},
+\code{\link{load_font_from_image}()},
+\code{\link{load_image}()},
+\code{\link{load_image_from_screen}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_material_default}()},
+\code{\link{load_model_from_mesh}()},
+\code{\link{load_music_stream}()},
+\code{\link{load_render_texture}()},
+\code{\link{load_shader}()},
+\code{\link{load_shader_from_memory}()},
+\code{\link{load_sound}()},
+\code{\link{load_sound_alias}()},
+\code{\link{load_sound_from_wave}()},
+\code{\link{load_texture}()},
+\code{\link{load_texture_from_image}()},
+\code{\link{load_wave}()}
 }
+\concept{load functions}
 \concept{model functions}

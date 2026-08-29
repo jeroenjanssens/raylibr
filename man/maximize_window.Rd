@@ -2,12 +2,12 @@
 % Please edit documentation in R/functions.R
 \name{maximize_window}
 \alias{maximize_window}
-\title{Maximize window}
+\title{Maximize Window}
 \usage{
 maximize_window()
 }
 \description{
-Set window state: maximized, if resizable (only PLATFORM_DESKTOP).
+Set window state: maximized, if resizable.
 }
 \note{
 This function has been auto-generated from the following Raylib function definition:
@@ -17,28 +17,9 @@ This function has been auto-generated from the following Raylib function definit
 }
 \seealso{
 Other window functions: 
-\code{\link{clear_window_state}()},
 \code{\link{close_window}()},
-\code{\link{get_window_position}()},
-\code{\link{get_window_scale_dpi}()},
 \code{\link{init_window}()},
-\code{\link{is_window_focused}()},
-\code{\link{is_window_fullscreen}()},
-\code{\link{is_window_hidden}()},
-\code{\link{is_window_maximized}()},
-\code{\link{is_window_minimized}()},
-\code{\link{is_window_ready}()},
-\code{\link{is_window_resized}()},
-\code{\link{is_window_state}()},
 \code{\link{minimize_window}()},
-\code{\link{restore_window}()},
-\code{\link{set_window_icon}()},
-\code{\link{set_window_min_size}()},
-\code{\link{set_window_monitor}()},
-\code{\link{set_window_position}()},
-\code{\link{set_window_size}()},
-\code{\link{set_window_state}()},
-\code{\link{set_window_title}()},
-\code{\link{window_should_close}()}
+\code{\link{restore_window}()}
 }
 \concept{window functions}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{set_texture_wrap}
 \alias{set_texture_wrap}
-\title{Set texture wrap}
+\title{Set Texture Wrap}
 \usage{
 set_texture_wrap(texture, wrap)
 }
@@ -21,32 +21,36 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=texture]{texture()}} for creating texture objects.
-
-Other texture functions: 
-\code{\link{begin_texture_mode}()},
-\code{\link{draw_cube_texture_rec}()},
-\code{\link{draw_cube_texture}()},
-\code{\link{draw_texture_ex}()},
-\code{\link{draw_texture_npatch}()},
-\code{\link{draw_texture_poly}()},
-\code{\link{draw_texture_pro}()},
-\code{\link{draw_texture_quad}()},
-\code{\link{draw_texture_rec}()},
-\code{\link{draw_texture_tiled}()},
-\code{\link{draw_texture_v}()},
-\code{\link{draw_texture}()},
-\code{\link{end_texture_mode}()},
-\code{\link{gen_texture_mipmaps}()},
-\code{\link{load_image_from_texture}()},
-\code{\link{load_render_texture}()},
-\code{\link{load_texture_from_image}()},
-\code{\link{load_texture}()},
-\code{\link{set_shader_value_texture}()},
+Other set functions: 
+\code{\link{set_audio_stream_pitch}()},
+\code{\link{set_audio_stream_volume}()},
+\code{\link{set_config_flags}()},
+\code{\link{set_exit_key}()},
+\code{\link{set_gamepad_mappings}()},
+\code{\link{set_gamepad_vibration}()},
+\code{\link{set_gestures_enabled}()},
+\code{\link{set_mouse_cursor}()},
+\code{\link{set_mouse_offset}()},
+\code{\link{set_mouse_position}()},
+\code{\link{set_mouse_scale}()},
+\code{\link{set_music_pitch}()},
+\code{\link{set_music_volume}()},
+\code{\link{set_random_seed}()},
 \code{\link{set_shapes_texture}()},
+\code{\link{set_sound_pitch}()},
+\code{\link{set_sound_volume}()},
+\code{\link{set_target_fps}()},
+\code{\link{set_text_line_spacing}()},
 \code{\link{set_texture_filter}()},
-\code{\link{texture}()},
-\code{\link{unload_render_texture}()},
-\code{\link{unload_texture}()}
+\code{\link{set_trace_log_level}()},
+\code{\link{set_window_focused}()},
+\code{\link{set_window_icon}()},
+\code{\link{set_window_monitor}()},
+\code{\link{set_window_opacity}()},
+\code{\link{set_window_position}()},
+\code{\link{set_window_size}()},
+\code{\link{set_window_state}()},
+\code{\link{set_window_title}()}
 }
-\concept{texture functions}
+\concept{set functions}
+\concept{wrap functions}

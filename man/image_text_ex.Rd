@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{image_text_ex}
 \alias{image_text_ex}
-\title{Image text ex}
+\title{Image Text Ex}
 \usage{
 image_text_ex(font, text, font_size, spacing, tint)
 }
@@ -26,93 +26,26 @@ Create an image from text (custom sprite font).
 \note{
 This function has been auto-generated from the following Raylib function definition:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{Image ImageTextEx(Font font, const char *text, float fontSize, float spacing, Color tint);
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Image ImageTextEx(Font font, const char * text, float fontSize, float spacing, Color tint);
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=font]{font()}} for creating font objects.
-
-\code{\link[=color]{color()}} for creating color objects.
-
-Other image functions: 
-\code{\link{export_image_as_code}()},
-\code{\link{export_image}()},
-\code{\link{gen_image_cellular}()},
-\code{\link{gen_image_checked}()},
-\code{\link{gen_image_color}()},
-\code{\link{gen_image_gradient_h}()},
-\code{\link{gen_image_gradient_radial}()},
-\code{\link{gen_image_gradient_v}()},
-\code{\link{gen_image_white_noise}()},
-\code{\link{get_image_alpha_border}()},
-\code{\link{get_image_color}()},
-\code{\link{image_alpha_clear}()},
-\code{\link{image_alpha_crop}()},
-\code{\link{image_alpha_mask}()},
-\code{\link{image_alpha_premultiply}()},
-\code{\link{image_clear_background}()},
-\code{\link{image_color_brightness}()},
-\code{\link{image_color_contrast}()},
-\code{\link{image_color_grayscale}()},
-\code{\link{image_color_invert}()},
-\code{\link{image_color_replace}()},
-\code{\link{image_color_tint}()},
-\code{\link{image_copy}()},
-\code{\link{image_crop}()},
-\code{\link{image_dither}()},
-\code{\link{image_draw_circle_v}()},
-\code{\link{image_draw_circle}()},
-\code{\link{image_draw_line_v}()},
-\code{\link{image_draw_line}()},
-\code{\link{image_draw_pixel_v}()},
-\code{\link{image_draw_pixel}()},
-\code{\link{image_draw_rectangle_lines}()},
-\code{\link{image_draw_rectangle_rec}()},
-\code{\link{image_draw_rectangle_v}()},
-\code{\link{image_draw_rectangle}()},
-\code{\link{image_draw_text_ex}()},
-\code{\link{image_draw_text}()},
-\code{\link{image_draw}()},
-\code{\link{image_flip_horizontal}()},
-\code{\link{image_flip_vertical}()},
-\code{\link{image_format}()},
-\code{\link{image_from_image}()},
-\code{\link{image_mipmaps}()},
-\code{\link{image_resize_canvas}()},
-\code{\link{image_resize_nn}()},
-\code{\link{image_resize}()},
-\code{\link{image_rotate_ccw}()},
-\code{\link{image_rotate_cw}()},
-\code{\link{image_text}()},
-\code{\link{image_to_pot}()},
-\code{\link{load_font_from_image}()},
-\code{\link{load_image_from_screen}()},
-\code{\link{load_image_from_texture}()},
-\code{\link{load_image_raw}()},
-\code{\link{load_image}()},
-\code{\link{load_texture_from_image}()},
-\code{\link{unload_image_colors}()},
-\code{\link{unload_image_palette}()},
-\code{\link{unload_image}()}
-
-Other text functions: 
-\code{\link{draw_text_codepoint}()},
+Other ex functions: 
+\code{\link{draw_cylinder_ex}()},
+\code{\link{draw_cylinder_wires_ex}()},
+\code{\link{draw_line_ex}()},
+\code{\link{draw_model_ex}()},
+\code{\link{draw_model_wires_ex}()},
+\code{\link{draw_poly_lines_ex}()},
+\code{\link{draw_rectangle_gradient_ex}()},
+\code{\link{draw_rectangle_lines_ex}()},
+\code{\link{draw_rectangle_rounded_lines_ex}()},
+\code{\link{draw_sphere_ex}()},
 \code{\link{draw_text_ex}()},
-\code{\link{draw_text_pro}()},
-\code{\link{draw_text}()},
-\code{\link{image_draw_text_ex}()},
-\code{\link{image_draw_text}()},
-\code{\link{image_text}()},
-\code{\link{load_file_text}()},
+\code{\link{draw_texture_ex}()},
+\code{\link{get_directory_file_count_ex}()},
+\code{\link{get_world_to_screen_ex}()},
 \code{\link{measure_text_ex}()},
-\code{\link{measure_text}()},
-\code{\link{text_find_index}()},
-\code{\link{text_insert}()},
-\code{\link{text_replace}()},
-\code{\link{text_to_integer}()},
-\code{\link{text_to_lower}()},
-\code{\link{text_to_pascal}()},
-\code{\link{text_to_upper}()}
+\code{\link{update_model_animation_ex}()}
 }
-\concept{image functions}
-\concept{text functions}
+\concept{ex functions}

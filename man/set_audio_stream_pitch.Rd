@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{set_audio_stream_pitch}
 \alias{set_audio_stream_pitch}
-\title{Set audio stream pitch}
+\title{Set Audio Stream Pitch}
 \usage{
 set_audio_stream_pitch(stream, pitch)
 }
@@ -21,43 +21,40 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=audio_stream]{audio_stream()}} for creating audio_stream objects.
+Other pitch functions: 
+\code{\link{set_music_pitch}()},
+\code{\link{set_sound_pitch}()}
 
-Other audio functions: 
-\code{\link{close_audio_device}()},
-\code{\link{init_audio_device}()},
-\code{\link{is_audio_device_ready}()},
-\code{\link{is_audio_stream_playing}()},
-\code{\link{is_audio_stream_processed}()},
-\code{\link{load_audio_stream}()},
-\code{\link{pause_audio_stream}()},
-\code{\link{play_audio_stream}()},
-\code{\link{resume_audio_stream}()},
-\code{\link{set_audio_stream_buffer_size_default}()},
+Other set functions: 
 \code{\link{set_audio_stream_volume}()},
-\code{\link{stop_audio_stream}()},
-\code{\link{unload_audio_stream}()}
-
-Other stream functions: 
-\code{\link{is_audio_stream_playing}()},
-\code{\link{is_audio_stream_processed}()},
-\code{\link{is_music_stream_playing}()},
-\code{\link{load_audio_stream}()},
-\code{\link{load_music_stream}()},
-\code{\link{pause_audio_stream}()},
-\code{\link{pause_music_stream}()},
-\code{\link{play_audio_stream}()},
-\code{\link{play_music_stream}()},
-\code{\link{resume_audio_stream}()},
-\code{\link{resume_music_stream}()},
-\code{\link{seek_music_stream}()},
-\code{\link{set_audio_stream_buffer_size_default}()},
-\code{\link{set_audio_stream_volume}()},
-\code{\link{stop_audio_stream}()},
-\code{\link{stop_music_stream}()},
-\code{\link{unload_audio_stream}()},
-\code{\link{unload_music_stream}()},
-\code{\link{update_music_stream}()}
+\code{\link{set_config_flags}()},
+\code{\link{set_exit_key}()},
+\code{\link{set_gamepad_mappings}()},
+\code{\link{set_gamepad_vibration}()},
+\code{\link{set_gestures_enabled}()},
+\code{\link{set_mouse_cursor}()},
+\code{\link{set_mouse_offset}()},
+\code{\link{set_mouse_position}()},
+\code{\link{set_mouse_scale}()},
+\code{\link{set_music_pitch}()},
+\code{\link{set_music_volume}()},
+\code{\link{set_random_seed}()},
+\code{\link{set_shapes_texture}()},
+\code{\link{set_sound_pitch}()},
+\code{\link{set_sound_volume}()},
+\code{\link{set_target_fps}()},
+\code{\link{set_text_line_spacing}()},
+\code{\link{set_texture_filter}()},
+\code{\link{set_texture_wrap}()},
+\code{\link{set_trace_log_level}()},
+\code{\link{set_window_focused}()},
+\code{\link{set_window_icon}()},
+\code{\link{set_window_monitor}()},
+\code{\link{set_window_opacity}()},
+\code{\link{set_window_position}()},
+\code{\link{set_window_size}()},
+\code{\link{set_window_state}()},
+\code{\link{set_window_title}()}
 }
-\concept{audio functions}
-\concept{stream functions}
+\concept{pitch functions}
+\concept{set functions}

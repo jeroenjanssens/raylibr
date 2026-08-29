@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{show_cursor}
 \alias{show_cursor}
-\title{Show cursor}
+\title{Show Cursor}
 \usage{
 show_cursor()
 }
@@ -20,8 +20,6 @@ Other cursor functions:
 \code{\link{disable_cursor}()},
 \code{\link{enable_cursor}()},
 \code{\link{hide_cursor}()},
-\code{\link{is_cursor_hidden}()},
-\code{\link{is_cursor_on_screen}()},
 \code{\link{set_mouse_cursor}()}
 }
 \concept{cursor functions}

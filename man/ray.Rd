@@ -9,7 +9,7 @@ ray(position, direction)
 \arguments{
 \item{position}{A numeric vector of length 3. Ray position (origin).}
 
-\item{direction}{A numeric vector of length 3. Ray direction.}
+\item{direction}{A numeric vector of length 3. Ray direction (normalized).}
 }
 \value{
 A ray
@@ -21,9 +21,13 @@ Create a new ray object.
 This class has been auto-generated from the following Raylib struct definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{typedef struct Ray \{
-    Vector3 position;       // Ray position (origin)
-    Vector3 direction;      // Ray direction
+    Vector3 position;        // Ray position (origin)
+    Vector3 direction;        // Ray direction (normalized)
 \} Ray;
 }\if{html}{\out{</div>}}
+}
+\seealso{
+Other ray functions: 
+\code{\link{draw_ray}()}
 }
 \concept{ray functions}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{begin_mode_2d}
 \alias{begin_mode_2d}
-\title{Begin mode 2d}
+\title{Begin Mode 2d}
 \usage{
 begin_mode_2d(camera)
 }
@@ -19,21 +19,19 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=camera_2d]{camera_2d()}} for creating camera_2d objects.
+Other 2d functions: 
+\code{\link{end_mode_2d}()},
+\code{\link{get_screen_to_world_2d}()},
+\code{\link{get_world_to_screen_2d}()}
 
-Other mode functions: 
+Other begin functions: 
 \code{\link{begin_blend_mode}()},
+\code{\link{begin_drawing}()},
 \code{\link{begin_mode_3d}()},
 \code{\link{begin_scissor_mode}()},
 \code{\link{begin_shader_mode}()},
 \code{\link{begin_texture_mode}()},
-\code{\link{end_blend_mode}()},
-\code{\link{end_mode_2d}()},
-\code{\link{end_mode_3d}()},
-\code{\link{end_scissor_mode}()},
-\code{\link{end_shader_mode}()},
-\code{\link{end_texture_mode}()},
-\code{\link{end_vr_stereo_mode}()},
-\code{\link{set_camera_mode}()}
+\code{\link{begin_vr_stereo_mode}()}
 }
-\concept{mode functions}
+\concept{2d functions}
+\concept{begin functions}

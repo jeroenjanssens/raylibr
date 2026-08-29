@@ -2,12 +2,12 @@
 % Please edit documentation in R/functions.R
 \name{toggle_fullscreen}
 \alias{toggle_fullscreen}
-\title{Toggle fullscreen}
+\title{Toggle Fullscreen}
 \usage{
 toggle_fullscreen()
 }
 \description{
-Toggle window state: fullscreen/windowed (only PLATFORM_DESKTOP).
+Toggle window state: fullscreen/windowed, resizes monitor to match window resolution.
 }
 \note{
 This function has been auto-generated from the following Raylib function definition:
@@ -15,3 +15,8 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void ToggleFullscreen(void);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other fullscreen functions: 
+\code{\link{is_window_fullscreen}()}
+}
+\concept{fullscreen functions}

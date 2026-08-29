@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{set_sound_pitch}
 \alias{set_sound_pitch}
-\title{Set sound pitch}
+\title{Set Sound Pitch}
 \usage{
 set_sound_pitch(sound, pitch)
 }
@@ -21,20 +21,40 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=sound]{sound()}} for creating sound objects.
+Other pitch functions: 
+\code{\link{set_audio_stream_pitch}()},
+\code{\link{set_music_pitch}()}
 
-Other sound functions: 
-\code{\link{is_sound_playing}()},
-\code{\link{load_sound_from_wave}()},
-\code{\link{load_sound}()},
-\code{\link{pause_sound}()},
-\code{\link{play_sound_multi}()},
-\code{\link{play_sound}()},
-\code{\link{resume_sound}()},
+Other set functions: 
+\code{\link{set_audio_stream_pitch}()},
+\code{\link{set_audio_stream_volume}()},
+\code{\link{set_config_flags}()},
+\code{\link{set_exit_key}()},
+\code{\link{set_gamepad_mappings}()},
+\code{\link{set_gamepad_vibration}()},
+\code{\link{set_gestures_enabled}()},
+\code{\link{set_mouse_cursor}()},
+\code{\link{set_mouse_offset}()},
+\code{\link{set_mouse_position}()},
+\code{\link{set_mouse_scale}()},
+\code{\link{set_music_pitch}()},
+\code{\link{set_music_volume}()},
+\code{\link{set_random_seed}()},
+\code{\link{set_shapes_texture}()},
 \code{\link{set_sound_volume}()},
-\code{\link{sound}()},
-\code{\link{stop_sound_multi}()},
-\code{\link{stop_sound}()},
-\code{\link{unload_sound}()}
+\code{\link{set_target_fps}()},
+\code{\link{set_text_line_spacing}()},
+\code{\link{set_texture_filter}()},
+\code{\link{set_texture_wrap}()},
+\code{\link{set_trace_log_level}()},
+\code{\link{set_window_focused}()},
+\code{\link{set_window_icon}()},
+\code{\link{set_window_monitor}()},
+\code{\link{set_window_opacity}()},
+\code{\link{set_window_position}()},
+\code{\link{set_window_size}()},
+\code{\link{set_window_state}()},
+\code{\link{set_window_title}()}
 }
-\concept{sound functions}
+\concept{pitch functions}
+\concept{set functions}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{measure_text_ex}
 \alias{measure_text_ex}
-\title{Measure text ex}
+\title{Measure Text Ex}
 \usage{
 measure_text_ex(font, text, font_size, spacing)
 }
@@ -24,29 +24,26 @@ Measure string size for Font.
 \note{
 This function has been auto-generated from the following Raylib function definition:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{Vector2 MeasureTextEx(Font font, const char *text, float fontSize, float spacing);
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Vector2 MeasureTextEx(Font font, const char * text, float fontSize, float spacing);
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=font]{font()}} for creating font objects.
-
-Other text functions: 
-\code{\link{draw_text_codepoint}()},
+Other ex functions: 
+\code{\link{draw_cylinder_ex}()},
+\code{\link{draw_cylinder_wires_ex}()},
+\code{\link{draw_line_ex}()},
+\code{\link{draw_model_ex}()},
+\code{\link{draw_model_wires_ex}()},
+\code{\link{draw_poly_lines_ex}()},
+\code{\link{draw_rectangle_gradient_ex}()},
+\code{\link{draw_rectangle_lines_ex}()},
+\code{\link{draw_rectangle_rounded_lines_ex}()},
+\code{\link{draw_sphere_ex}()},
 \code{\link{draw_text_ex}()},
-\code{\link{draw_text_pro}()},
-\code{\link{draw_text}()},
-\code{\link{image_draw_text_ex}()},
-\code{\link{image_draw_text}()},
+\code{\link{draw_texture_ex}()},
+\code{\link{get_directory_file_count_ex}()},
+\code{\link{get_world_to_screen_ex}()},
 \code{\link{image_text_ex}()},
-\code{\link{image_text}()},
-\code{\link{load_file_text}()},
-\code{\link{measure_text}()},
-\code{\link{text_find_index}()},
-\code{\link{text_insert}()},
-\code{\link{text_replace}()},
-\code{\link{text_to_integer}()},
-\code{\link{text_to_lower}()},
-\code{\link{text_to_pascal}()},
-\code{\link{text_to_upper}()}
+\code{\link{update_model_animation_ex}()}
 }
-\concept{text functions}
+\concept{ex functions}

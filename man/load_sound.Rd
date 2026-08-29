@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{load_sound}
 \alias{load_sound}
-\title{Load sound}
+\title{Load Sound}
 \usage{
 load_sound(file_name)
 }
@@ -18,22 +18,37 @@ Load sound from file.
 \note{
 This function has been auto-generated from the following Raylib function definition:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{Sound LoadSound(const char *fileName);
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Sound LoadSound(const char * fileName);
 }\if{html}{\out{</div>}}
 }
 \seealso{
 Other sound functions: 
-\code{\link{is_sound_playing}()},
-\code{\link{load_sound_from_wave}()},
 \code{\link{pause_sound}()},
-\code{\link{play_sound_multi}()},
 \code{\link{play_sound}()},
 \code{\link{resume_sound}()},
-\code{\link{set_sound_pitch}()},
-\code{\link{set_sound_volume}()},
-\code{\link{sound}()},
-\code{\link{stop_sound_multi}()},
 \code{\link{stop_sound}()},
 \code{\link{unload_sound}()}
+
+Other load functions: 
+\code{\link{load_audio_stream}()},
+\code{\link{load_file_text}()},
+\code{\link{load_font}()},
+\code{\link{load_font_from_image}()},
+\code{\link{load_image}()},
+\code{\link{load_image_from_screen}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_material_default}()},
+\code{\link{load_model}()},
+\code{\link{load_model_from_mesh}()},
+\code{\link{load_music_stream}()},
+\code{\link{load_render_texture}()},
+\code{\link{load_shader}()},
+\code{\link{load_shader_from_memory}()},
+\code{\link{load_sound_alias}()},
+\code{\link{load_sound_from_wave}()},
+\code{\link{load_texture}()},
+\code{\link{load_texture_from_image}()},
+\code{\link{load_wave}()}
 }
+\concept{load functions}
 \concept{sound functions}

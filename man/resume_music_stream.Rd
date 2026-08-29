@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{resume_music_stream}
 \alias{resume_music_stream}
-\title{Resume music stream}
+\title{Resume Music Stream}
 \usage{
 resume_music_stream(music)
 }
@@ -19,26 +19,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=music]{music()}} for creating music objects.
-
-Other music functions: 
-\code{\link{get_music_time_length}()},
-\code{\link{get_music_time_played}()},
-\code{\link{is_music_stream_playing}()},
-\code{\link{load_music_stream}()},
-\code{\link{pause_music_stream}()},
-\code{\link{play_music_stream}()},
-\code{\link{seek_music_stream}()},
-\code{\link{set_music_pitch}()},
-\code{\link{set_music_volume}()},
-\code{\link{stop_music_stream}()},
-\code{\link{unload_music_stream}()},
-\code{\link{update_music_stream}()}
-
 Other stream functions: 
-\code{\link{is_audio_stream_playing}()},
-\code{\link{is_audio_stream_processed}()},
-\code{\link{is_music_stream_playing}()},
 \code{\link{load_audio_stream}()},
 \code{\link{load_music_stream}()},
 \code{\link{pause_audio_stream}()},
@@ -46,15 +27,15 @@ Other stream functions:
 \code{\link{play_audio_stream}()},
 \code{\link{play_music_stream}()},
 \code{\link{resume_audio_stream}()},
-\code{\link{seek_music_stream}()},
-\code{\link{set_audio_stream_buffer_size_default}()},
-\code{\link{set_audio_stream_pitch}()},
-\code{\link{set_audio_stream_volume}()},
 \code{\link{stop_audio_stream}()},
 \code{\link{stop_music_stream}()},
 \code{\link{unload_audio_stream}()},
 \code{\link{unload_music_stream}()},
 \code{\link{update_music_stream}()}
+
+Other resume functions: 
+\code{\link{resume_audio_stream}()},
+\code{\link{resume_sound}()}
 }
-\concept{music functions}
+\concept{resume functions}
 \concept{stream functions}

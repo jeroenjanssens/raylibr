@@ -25,29 +25,16 @@ Create a new rectangle object.
 This class has been auto-generated from the following Raylib struct definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{typedef struct Rectangle \{
-    float x;                // Rectangle top-left corner position x
-    float y;                // Rectangle top-left corner position y
-    float width;            // Rectangle width
-    float height;           // Rectangle height
+    float x;        // Rectangle top-left corner position x
+    float y;        // Rectangle top-left corner position y
+    float width;        // Rectangle width
+    float height;        // Rectangle height
 \} Rectangle;
 }\if{html}{\out{</div>}}
 }
 \seealso{
 Other rectangle functions: 
-\code{\link{draw_rectangle_gradient_ex}()},
-\code{\link{draw_rectangle_gradient_h}()},
-\code{\link{draw_rectangle_gradient_v}()},
-\code{\link{draw_rectangle_lines_ex}()},
-\code{\link{draw_rectangle_lines}()},
-\code{\link{draw_rectangle_pro}()},
-\code{\link{draw_rectangle_rec}()},
-\code{\link{draw_rectangle_rounded_lines}()},
-\code{\link{draw_rectangle_rounded}()},
-\code{\link{draw_rectangle_v}()},
 \code{\link{draw_rectangle}()},
-\code{\link{image_draw_rectangle_lines}()},
-\code{\link{image_draw_rectangle_rec}()},
-\code{\link{image_draw_rectangle_v}()},
-\code{\link{image_draw_rectangle}()}
+\code{\link{get_shapes_texture_rectangle}()}
 }
 \concept{rectangle functions}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{load_shader_from_memory}
 \alias{load_shader_from_memory}
-\title{Load shader from memory}
+\title{Load Shader From Memory}
 \usage{
 load_shader_from_memory(vs_code, fs_code)
 }
@@ -20,19 +20,30 @@ Load shader from code strings and bind default locations.
 \note{
 This function has been auto-generated from the following Raylib function definition:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{Shader LoadShaderFromMemory(const char *vsCode, const char *fsCode);
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Shader LoadShaderFromMemory(const char * vsCode, const char * fsCode);
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other shader functions: 
-\code{\link{begin_shader_mode}()},
-\code{\link{end_shader_mode}()},
-\code{\link{get_shader_location_attrib}()},
-\code{\link{get_shader_location}()},
+Other load functions: 
+\code{\link{load_audio_stream}()},
+\code{\link{load_file_text}()},
+\code{\link{load_font}()},
+\code{\link{load_font_from_image}()},
+\code{\link{load_image}()},
+\code{\link{load_image_from_screen}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_material_default}()},
+\code{\link{load_model}()},
+\code{\link{load_model_from_mesh}()},
+\code{\link{load_music_stream}()},
+\code{\link{load_render_texture}()},
 \code{\link{load_shader}()},
-\code{\link{set_shader_value_matrix}()},
-\code{\link{set_shader_value_texture}()},
-\code{\link{set_shader_value}()},
-\code{\link{unload_shader}()}
+\code{\link{load_sound}()},
+\code{\link{load_sound_alias}()},
+\code{\link{load_sound_from_wave}()},
+\code{\link{load_texture}()},
+\code{\link{load_texture_from_image}()},
+\code{\link{load_wave}()}
 }
-\concept{shader functions}
+\concept{load functions}
+\concept{memory functions}

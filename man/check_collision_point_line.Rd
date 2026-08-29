@@ -2,16 +2,16 @@
 % Please edit documentation in R/functions.R
 \name{check_collision_point_line}
 \alias{check_collision_point_line}
-\title{Check collision point line}
+\title{Check Collision Point Line}
 \usage{
-check_collision_point_line(point, p_1, p_2, threshold)
+check_collision_point_line(point, p1, p2, threshold)
 }
 \arguments{
 \item{point}{A numeric vector of length 2.}
 
-\item{p_1}{A numeric vector of length 2.}
+\item{p1}{A numeric vector of length 2.}
 
-\item{p_2}{A numeric vector of length 2.}
+\item{p2}{A numeric vector of length 2.}
 
 \item{threshold}{An integer.}
 }
@@ -28,35 +28,19 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other collision functions: 
+Other line functions: 
+\code{\link{draw_line}()}
+
+Other check functions: 
 \code{\link{check_collision_box_sphere}()},
 \code{\link{check_collision_boxes}()},
 \code{\link{check_collision_circle_rec}()},
 \code{\link{check_collision_circles}()},
-\code{\link{check_collision_lines}()},
 \code{\link{check_collision_point_circle}()},
 \code{\link{check_collision_point_rec}()},
 \code{\link{check_collision_point_triangle}()},
 \code{\link{check_collision_recs}()},
-\code{\link{check_collision_spheres}()},
-\code{\link{get_collision_rec}()},
-\code{\link{get_ray_collision_box}()},
-\code{\link{get_ray_collision_mesh}()},
-\code{\link{get_ray_collision_model}()},
-\code{\link{get_ray_collision_quad}()},
-\code{\link{get_ray_collision_sphere}()},
-\code{\link{get_ray_collision_triangle}()}
-
-Other line functions: 
-\code{\link{draw_line_3d}()},
-\code{\link{draw_line_bezier_cubic}()},
-\code{\link{draw_line_bezier_quad}()},
-\code{\link{draw_line_bezier}()},
-\code{\link{draw_line_ex}()},
-\code{\link{draw_line_v}()},
-\code{\link{draw_line}()},
-\code{\link{image_draw_line_v}()},
-\code{\link{image_draw_line}()}
+\code{\link{check_collision_spheres}()}
 }
-\concept{collision functions}
+\concept{check functions}
 \concept{line functions}

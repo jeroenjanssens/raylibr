@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{directory_exists}
 \alias{directory_exists}
-\title{Directory exists}
+\title{Directory Exists}
 \usage{
 directory_exists(dir_path)
 }
@@ -18,15 +18,11 @@ Check if a directory path exists.
 \note{
 This function has been auto-generated from the following Raylib function definition:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{bool DirectoryExists(const char *dirPath);
+\if{html}{\out{<div class="sourceCode">}}\preformatted{bool DirectoryExists(const char * dirPath);
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other directory functions: 
-\code{\link{change_directory}()},
-\code{\link{clear_directory_files}()},
-\code{\link{get_directory_path}()},
-\code{\link{get_prev_directory_path}()},
-\code{\link{get_working_directory}()}
+Other exists functions: 
+\code{\link{file_exists}()}
 }
-\concept{directory functions}
+\concept{exists functions}

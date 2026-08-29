@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{load_texture}
 \alias{load_texture}
-\title{Load texture}
+\title{Load Texture}
 \usage{
 load_texture(file_name)
 }
@@ -18,34 +18,39 @@ Load texture from file into GPU memory (VRAM).
 \note{
 This function has been auto-generated from the following Raylib function definition:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{Texture2D LoadTexture(const char *fileName);
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Texture2D LoadTexture(const char * fileName);
 }\if{html}{\out{</div>}}
 }
 \seealso{
 Other texture functions: 
-\code{\link{begin_texture_mode}()},
-\code{\link{draw_cube_texture_rec}()},
-\code{\link{draw_cube_texture}()},
-\code{\link{draw_texture_ex}()},
-\code{\link{draw_texture_npatch}()},
-\code{\link{draw_texture_poly}()},
-\code{\link{draw_texture_pro}()},
-\code{\link{draw_texture_quad}()},
-\code{\link{draw_texture_rec}()},
-\code{\link{draw_texture_tiled}()},
-\code{\link{draw_texture_v}()},
 \code{\link{draw_texture}()},
-\code{\link{end_texture_mode}()},
-\code{\link{gen_texture_mipmaps}()},
+\code{\link{get_shapes_texture}()},
 \code{\link{load_image_from_texture}()},
 \code{\link{load_render_texture}()},
-\code{\link{load_texture_from_image}()},
-\code{\link{set_shader_value_texture}()},
 \code{\link{set_shapes_texture}()},
-\code{\link{set_texture_filter}()},
-\code{\link{set_texture_wrap}()},
-\code{\link{texture}()},
 \code{\link{unload_render_texture}()},
 \code{\link{unload_texture}()}
+
+Other load functions: 
+\code{\link{load_audio_stream}()},
+\code{\link{load_file_text}()},
+\code{\link{load_font}()},
+\code{\link{load_font_from_image}()},
+\code{\link{load_image}()},
+\code{\link{load_image_from_screen}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_material_default}()},
+\code{\link{load_model}()},
+\code{\link{load_model_from_mesh}()},
+\code{\link{load_music_stream}()},
+\code{\link{load_render_texture}()},
+\code{\link{load_shader}()},
+\code{\link{load_shader_from_memory}()},
+\code{\link{load_sound}()},
+\code{\link{load_sound_alias}()},
+\code{\link{load_sound_from_wave}()},
+\code{\link{load_texture_from_image}()},
+\code{\link{load_wave}()}
 }
+\concept{load functions}
 \concept{texture functions}

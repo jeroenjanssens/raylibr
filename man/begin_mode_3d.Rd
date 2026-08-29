@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{begin_mode_3d}
 \alias{begin_mode_3d}
-\title{Begin mode 3d}
+\title{Begin Mode 3d}
 \usage{
 begin_mode_3d(camera)
 }
@@ -19,21 +19,21 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=camera_3d]{camera_3d()}} for creating camera_3d objects.
+Other 3d functions: 
+\code{\link{draw_circle_3d}()},
+\code{\link{draw_line_3d}()},
+\code{\link{draw_point_3d}()},
+\code{\link{draw_triangle_3d}()},
+\code{\link{end_mode_3d}()}
 
-Other mode functions: 
+Other begin functions: 
 \code{\link{begin_blend_mode}()},
+\code{\link{begin_drawing}()},
 \code{\link{begin_mode_2d}()},
 \code{\link{begin_scissor_mode}()},
 \code{\link{begin_shader_mode}()},
 \code{\link{begin_texture_mode}()},
-\code{\link{end_blend_mode}()},
-\code{\link{end_mode_2d}()},
-\code{\link{end_mode_3d}()},
-\code{\link{end_scissor_mode}()},
-\code{\link{end_shader_mode}()},
-\code{\link{end_texture_mode}()},
-\code{\link{end_vr_stereo_mode}()},
-\code{\link{set_camera_mode}()}
+\code{\link{begin_vr_stereo_mode}()}
 }
-\concept{mode functions}
+\concept{3d functions}
+\concept{begin functions}

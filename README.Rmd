@@ -16,10 +16,11 @@ knitr::opts_chunk$set(
 # raylibr <img src="man/figures/logo.png" align="right" height="139"/>
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/jeroenjanssens/raylibr/actions/workflows/check.yaml/badge.svg)](https://github.com/jeroenjanssens/raylibr/actions/workflows/check.yaml)
 <!-- badges: end -->
 
 
-This R package wraps [Raylib](https://www.raylib.com/), a simple and easy-to-use library to enjoy videogames programming.
+This R package wraps [Raylib 6.0](https://www.raylib.com/), a simple and easy-to-use library to enjoy videogames programming. It includes webR/WASM support for running Raylib games in the browser.
 
 
 ## Installation

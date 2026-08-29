@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{load_file_text}
 \alias{load_file_text}
-\title{Load file text}
+\title{Load File Text}
 \usage{
 load_file_text(file_name)
 }
@@ -18,37 +18,37 @@ Load text data from file (read), returns a '\0' terminated string.
 \note{
 This function has been auto-generated from the following Raylib function definition:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{char *LoadFileText(const char *fileName);
+\if{html}{\out{<div class="sourceCode">}}\preformatted{char * LoadFileText(const char * fileName);
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other file functions: 
-\code{\link{file_exists}()},
-\code{\link{get_file_extension}()},
-\code{\link{get_file_mod_time}()},
-\code{\link{get_file_name_without_ext}()},
-\code{\link{get_file_name}()},
-\code{\link{is_file_dropped}()},
-\code{\link{is_file_extension}()}
-
 Other text functions: 
-\code{\link{draw_text_codepoint}()},
-\code{\link{draw_text_ex}()},
-\code{\link{draw_text_pro}()},
 \code{\link{draw_text}()},
-\code{\link{image_draw_text_ex}()},
-\code{\link{image_draw_text}()},
-\code{\link{image_text_ex}()},
+\code{\link{gen_image_text}()},
 \code{\link{image_text}()},
-\code{\link{measure_text_ex}()},
 \code{\link{measure_text}()},
-\code{\link{text_find_index}()},
-\code{\link{text_insert}()},
-\code{\link{text_replace}()},
-\code{\link{text_to_integer}()},
-\code{\link{text_to_lower}()},
-\code{\link{text_to_pascal}()},
-\code{\link{text_to_upper}()}
+\code{\link{save_file_text}()}
+
+Other load functions: 
+\code{\link{load_audio_stream}()},
+\code{\link{load_font}()},
+\code{\link{load_font_from_image}()},
+\code{\link{load_image}()},
+\code{\link{load_image_from_screen}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_material_default}()},
+\code{\link{load_model}()},
+\code{\link{load_model_from_mesh}()},
+\code{\link{load_music_stream}()},
+\code{\link{load_render_texture}()},
+\code{\link{load_shader}()},
+\code{\link{load_shader_from_memory}()},
+\code{\link{load_sound}()},
+\code{\link{load_sound_alias}()},
+\code{\link{load_sound_from_wave}()},
+\code{\link{load_texture}()},
+\code{\link{load_texture_from_image}()},
+\code{\link{load_wave}()}
 }
-\concept{file functions}
+\concept{load functions}
 \concept{text functions}

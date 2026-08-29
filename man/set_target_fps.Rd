@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{set_target_fps}
 \alias{set_target_fps}
-\title{Set target fps}
+\title{Set Target Fps}
 \usage{
 set_target_fps(fps)
 }
@@ -22,5 +22,37 @@ This function has been auto-generated from the following Raylib function definit
 Other fps functions: 
 \code{\link{draw_fps}()},
 \code{\link{get_fps}()}
+
+Other set functions: 
+\code{\link{set_audio_stream_pitch}()},
+\code{\link{set_audio_stream_volume}()},
+\code{\link{set_config_flags}()},
+\code{\link{set_exit_key}()},
+\code{\link{set_gamepad_mappings}()},
+\code{\link{set_gamepad_vibration}()},
+\code{\link{set_gestures_enabled}()},
+\code{\link{set_mouse_cursor}()},
+\code{\link{set_mouse_offset}()},
+\code{\link{set_mouse_position}()},
+\code{\link{set_mouse_scale}()},
+\code{\link{set_music_pitch}()},
+\code{\link{set_music_volume}()},
+\code{\link{set_random_seed}()},
+\code{\link{set_shapes_texture}()},
+\code{\link{set_sound_pitch}()},
+\code{\link{set_sound_volume}()},
+\code{\link{set_text_line_spacing}()},
+\code{\link{set_texture_filter}()},
+\code{\link{set_texture_wrap}()},
+\code{\link{set_trace_log_level}()},
+\code{\link{set_window_focused}()},
+\code{\link{set_window_icon}()},
+\code{\link{set_window_monitor}()},
+\code{\link{set_window_opacity}()},
+\code{\link{set_window_position}()},
+\code{\link{set_window_size}()},
+\code{\link{set_window_state}()},
+\code{\link{set_window_title}()}
 }
 \concept{fps functions}
+\concept{set functions}

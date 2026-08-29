@@ -2,16 +2,16 @@
 % Please edit documentation in R/ray_collision.R
 \name{ray_collision}
 \alias{ray_collision}
-\title{Ray collision}
+\title{Ray Collision}
 \usage{
 ray_collision(hit, distance, point, normal)
 }
 \arguments{
 \item{hit}{A logical. Did the ray hit something?.}
 
-\item{distance}{A number. Distance to nearest hit.}
+\item{distance}{A number. Distance to the nearest hit.}
 
-\item{point}{A numeric vector of length 3. Point of nearest hit.}
+\item{point}{A numeric vector of length 3. Point of the nearest hit.}
 
 \item{normal}{A numeric vector of length 3. Surface normal of hit.}
 }
@@ -25,10 +25,10 @@ Create a new ray_collision object.
 This class has been auto-generated from the following Raylib struct definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{typedef struct RayCollision \{
-    bool hit;               // Did the ray hit something?
-    float distance;         // Distance to nearest hit
-    Vector3 point;          // Point of nearest hit
-    Vector3 normal;         // Surface normal of hit
+    bool hit;        // Did the ray hit something?
+    float distance;        // Distance to the nearest hit
+    Vector3 point;        // Point of the nearest hit
+    Vector3 normal;        // Surface normal of hit
 \} RayCollision;
 }\if{html}{\out{</div>}}
 }

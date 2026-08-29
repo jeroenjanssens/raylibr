@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{unload_texture}
 \alias{unload_texture}
-\title{Unload texture}
+\title{Unload Texture}
 \usage{
 unload_texture(texture)
 }
@@ -19,32 +19,29 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=texture]{texture()}} for creating texture objects.
-
 Other texture functions: 
-\code{\link{begin_texture_mode}()},
-\code{\link{draw_cube_texture_rec}()},
-\code{\link{draw_cube_texture}()},
-\code{\link{draw_texture_ex}()},
-\code{\link{draw_texture_npatch}()},
-\code{\link{draw_texture_poly}()},
-\code{\link{draw_texture_pro}()},
-\code{\link{draw_texture_quad}()},
-\code{\link{draw_texture_rec}()},
-\code{\link{draw_texture_tiled}()},
-\code{\link{draw_texture_v}()},
 \code{\link{draw_texture}()},
-\code{\link{end_texture_mode}()},
-\code{\link{gen_texture_mipmaps}()},
+\code{\link{get_shapes_texture}()},
 \code{\link{load_image_from_texture}()},
 \code{\link{load_render_texture}()},
-\code{\link{load_texture_from_image}()},
 \code{\link{load_texture}()},
-\code{\link{set_shader_value_texture}()},
 \code{\link{set_shapes_texture}()},
-\code{\link{set_texture_filter}()},
-\code{\link{set_texture_wrap}()},
-\code{\link{texture}()},
 \code{\link{unload_render_texture}()}
+
+Other unload functions: 
+\code{\link{unload_audio_stream}()},
+\code{\link{unload_font}()},
+\code{\link{unload_image}()},
+\code{\link{unload_material}()},
+\code{\link{unload_mesh}()},
+\code{\link{unload_model}()},
+\code{\link{unload_music_stream}()},
+\code{\link{unload_render_texture}()},
+\code{\link{unload_shader}()},
+\code{\link{unload_sound}()},
+\code{\link{unload_sound_alias}()},
+\code{\link{unload_vr_stereo_config}()},
+\code{\link{unload_wave}()}
 }
 \concept{texture functions}
+\concept{unload functions}

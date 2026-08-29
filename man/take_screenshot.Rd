@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{take_screenshot}
 \alias{take_screenshot}
-\title{Take screenshot}
+\title{Take Screenshot}
 \usage{
 take_screenshot(file_name)
 }
@@ -15,6 +15,7 @@ Takes a screenshot of current screen (filename extension defines format).
 \note{
 This function has been auto-generated from the following Raylib function definition:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{void TakeScreenshot(const char *fileName);
+\if{html}{\out{<div class="sourceCode">}}\preformatted{void TakeScreenshot(const char * fileName);
 }\if{html}{\out{</div>}}
 }
+\concept{screenshot functions}

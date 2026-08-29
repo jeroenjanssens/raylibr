@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{color_normalize}
 \alias{color_normalize}
-\title{Color normalize}
+\title{Color Normalize}
 \usage{
 color_normalize(color)
 }
@@ -21,26 +21,4 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Vector4 ColorNormalize(Color color);
 }\if{html}{\out{</div>}}
 }
-\seealso{
-\code{\link[=color]{color()}} for creating color objects.
-
-Other color functions: 
-\code{\link{as_color}()},
-\code{\link{color_alpha_blend}()},
-\code{\link{color_alpha}()},
-\code{\link{color_from_hsv}()},
-\code{\link{color_from_normalized}()},
-\code{\link{color_to_hsv}()},
-\code{\link{color_to_int}()},
-\code{\link{color}()},
-\code{\link{gen_image_color}()},
-\code{\link{get_color}()},
-\code{\link{get_image_color}()},
-\code{\link{image_color_brightness}()},
-\code{\link{image_color_contrast}()},
-\code{\link{image_color_grayscale}()},
-\code{\link{image_color_invert}()},
-\code{\link{image_color_replace}()},
-\code{\link{image_color_tint}()}
-}
-\concept{color functions}
+\concept{normalize functions}

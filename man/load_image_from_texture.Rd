@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{load_image_from_texture}
 \alias{load_image_from_texture}
-\title{Load image from texture}
+\title{Load Image From Texture}
 \usage{
 load_image_from_texture(texture)
 }
@@ -22,94 +22,35 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=texture]{texture()}} for creating texture objects.
-
-Other image functions: 
-\code{\link{export_image_as_code}()},
-\code{\link{export_image}()},
-\code{\link{gen_image_cellular}()},
-\code{\link{gen_image_checked}()},
-\code{\link{gen_image_color}()},
-\code{\link{gen_image_gradient_h}()},
-\code{\link{gen_image_gradient_radial}()},
-\code{\link{gen_image_gradient_v}()},
-\code{\link{gen_image_white_noise}()},
-\code{\link{get_image_alpha_border}()},
-\code{\link{get_image_color}()},
-\code{\link{image_alpha_clear}()},
-\code{\link{image_alpha_crop}()},
-\code{\link{image_alpha_mask}()},
-\code{\link{image_alpha_premultiply}()},
-\code{\link{image_clear_background}()},
-\code{\link{image_color_brightness}()},
-\code{\link{image_color_contrast}()},
-\code{\link{image_color_grayscale}()},
-\code{\link{image_color_invert}()},
-\code{\link{image_color_replace}()},
-\code{\link{image_color_tint}()},
-\code{\link{image_copy}()},
-\code{\link{image_crop}()},
-\code{\link{image_dither}()},
-\code{\link{image_draw_circle_v}()},
-\code{\link{image_draw_circle}()},
-\code{\link{image_draw_line_v}()},
-\code{\link{image_draw_line}()},
-\code{\link{image_draw_pixel_v}()},
-\code{\link{image_draw_pixel}()},
-\code{\link{image_draw_rectangle_lines}()},
-\code{\link{image_draw_rectangle_rec}()},
-\code{\link{image_draw_rectangle_v}()},
-\code{\link{image_draw_rectangle}()},
-\code{\link{image_draw_text_ex}()},
-\code{\link{image_draw_text}()},
-\code{\link{image_draw}()},
-\code{\link{image_flip_horizontal}()},
-\code{\link{image_flip_vertical}()},
-\code{\link{image_format}()},
-\code{\link{image_from_image}()},
-\code{\link{image_mipmaps}()},
-\code{\link{image_resize_canvas}()},
-\code{\link{image_resize_nn}()},
-\code{\link{image_resize}()},
-\code{\link{image_rotate_ccw}()},
-\code{\link{image_rotate_cw}()},
-\code{\link{image_text_ex}()},
-\code{\link{image_text}()},
-\code{\link{image_to_pot}()},
-\code{\link{load_font_from_image}()},
-\code{\link{load_image_from_screen}()},
-\code{\link{load_image_raw}()},
-\code{\link{load_image}()},
-\code{\link{load_texture_from_image}()},
-\code{\link{unload_image_colors}()},
-\code{\link{unload_image_palette}()},
-\code{\link{unload_image}()}
-
 Other texture functions: 
-\code{\link{begin_texture_mode}()},
-\code{\link{draw_cube_texture_rec}()},
-\code{\link{draw_cube_texture}()},
-\code{\link{draw_texture_ex}()},
-\code{\link{draw_texture_npatch}()},
-\code{\link{draw_texture_poly}()},
-\code{\link{draw_texture_pro}()},
-\code{\link{draw_texture_quad}()},
-\code{\link{draw_texture_rec}()},
-\code{\link{draw_texture_tiled}()},
-\code{\link{draw_texture_v}()},
 \code{\link{draw_texture}()},
-\code{\link{end_texture_mode}()},
-\code{\link{gen_texture_mipmaps}()},
+\code{\link{get_shapes_texture}()},
 \code{\link{load_render_texture}()},
-\code{\link{load_texture_from_image}()},
 \code{\link{load_texture}()},
-\code{\link{set_shader_value_texture}()},
 \code{\link{set_shapes_texture}()},
-\code{\link{set_texture_filter}()},
-\code{\link{set_texture_wrap}()},
-\code{\link{texture}()},
 \code{\link{unload_render_texture}()},
 \code{\link{unload_texture}()}
+
+Other load functions: 
+\code{\link{load_audio_stream}()},
+\code{\link{load_file_text}()},
+\code{\link{load_font}()},
+\code{\link{load_font_from_image}()},
+\code{\link{load_image}()},
+\code{\link{load_image_from_screen}()},
+\code{\link{load_material_default}()},
+\code{\link{load_model}()},
+\code{\link{load_model_from_mesh}()},
+\code{\link{load_music_stream}()},
+\code{\link{load_render_texture}()},
+\code{\link{load_shader}()},
+\code{\link{load_shader_from_memory}()},
+\code{\link{load_sound}()},
+\code{\link{load_sound_alias}()},
+\code{\link{load_sound_from_wave}()},
+\code{\link{load_texture}()},
+\code{\link{load_texture_from_image}()},
+\code{\link{load_wave}()}
 }
-\concept{image functions}
+\concept{load functions}
 \concept{texture functions}

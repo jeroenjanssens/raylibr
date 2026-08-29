@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{set_gamepad_mappings}
 \alias{set_gamepad_mappings}
-\title{Set gamepad mappings}
+\title{Set Gamepad Mappings}
 \usage{
 set_gamepad_mappings(mappings)
 }
@@ -18,19 +18,40 @@ Set internal gamepad mappings (SDL_GameControllerDB).
 \note{
 This function has been auto-generated from the following Raylib function definition:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{int SetGamepadMappings(const char *mappings);
+\if{html}{\out{<div class="sourceCode">}}\preformatted{int SetGamepadMappings(const char * mappings);
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other gamepad functions: 
-\code{\link{get_gamepad_axis_count}()},
-\code{\link{get_gamepad_axis_movement}()},
-\code{\link{get_gamepad_button_pressed}()},
-\code{\link{get_gamepad_name}()},
-\code{\link{is_gamepad_available}()},
-\code{\link{is_gamepad_button_down}()},
-\code{\link{is_gamepad_button_pressed}()},
-\code{\link{is_gamepad_button_released}()},
-\code{\link{is_gamepad_button_up}()}
+Other set functions: 
+\code{\link{set_audio_stream_pitch}()},
+\code{\link{set_audio_stream_volume}()},
+\code{\link{set_config_flags}()},
+\code{\link{set_exit_key}()},
+\code{\link{set_gamepad_vibration}()},
+\code{\link{set_gestures_enabled}()},
+\code{\link{set_mouse_cursor}()},
+\code{\link{set_mouse_offset}()},
+\code{\link{set_mouse_position}()},
+\code{\link{set_mouse_scale}()},
+\code{\link{set_music_pitch}()},
+\code{\link{set_music_volume}()},
+\code{\link{set_random_seed}()},
+\code{\link{set_shapes_texture}()},
+\code{\link{set_sound_pitch}()},
+\code{\link{set_sound_volume}()},
+\code{\link{set_target_fps}()},
+\code{\link{set_text_line_spacing}()},
+\code{\link{set_texture_filter}()},
+\code{\link{set_texture_wrap}()},
+\code{\link{set_trace_log_level}()},
+\code{\link{set_window_focused}()},
+\code{\link{set_window_icon}()},
+\code{\link{set_window_monitor}()},
+\code{\link{set_window_opacity}()},
+\code{\link{set_window_position}()},
+\code{\link{set_window_size}()},
+\code{\link{set_window_state}()},
+\code{\link{set_window_title}()}
 }
-\concept{gamepad functions}
+\concept{mappings functions}
+\concept{set functions}

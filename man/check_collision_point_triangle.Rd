@@ -2,18 +2,18 @@
 % Please edit documentation in R/functions.R
 \name{check_collision_point_triangle}
 \alias{check_collision_point_triangle}
-\title{Check collision point triangle}
+\title{Check Collision Point Triangle}
 \usage{
-check_collision_point_triangle(point, p_1, p_2, p_3)
+check_collision_point_triangle(point, p1, p2, p3)
 }
 \arguments{
 \item{point}{A numeric vector of length 2.}
 
-\item{p_1}{A numeric vector of length 2.}
+\item{p1}{A numeric vector of length 2.}
 
-\item{p_2}{A numeric vector of length 2.}
+\item{p2}{A numeric vector of length 2.}
 
-\item{p_3}{A numeric vector of length 2.}
+\item{p3}{A numeric vector of length 2.}
 }
 \value{
 A logical
@@ -28,23 +28,20 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other collision functions: 
+Other triangle functions: 
+\code{\link{draw_triangle}()},
+\code{\link{get_ray_collision_triangle}()}
+
+Other check functions: 
 \code{\link{check_collision_box_sphere}()},
 \code{\link{check_collision_boxes}()},
 \code{\link{check_collision_circle_rec}()},
 \code{\link{check_collision_circles}()},
-\code{\link{check_collision_lines}()},
 \code{\link{check_collision_point_circle}()},
 \code{\link{check_collision_point_line}()},
 \code{\link{check_collision_point_rec}()},
 \code{\link{check_collision_recs}()},
-\code{\link{check_collision_spheres}()},
-\code{\link{get_collision_rec}()},
-\code{\link{get_ray_collision_box}()},
-\code{\link{get_ray_collision_mesh}()},
-\code{\link{get_ray_collision_model}()},
-\code{\link{get_ray_collision_quad}()},
-\code{\link{get_ray_collision_sphere}()},
-\code{\link{get_ray_collision_triangle}()}
+\code{\link{check_collision_spheres}()}
 }
-\concept{collision functions}
+\concept{check functions}
+\concept{triangle functions}

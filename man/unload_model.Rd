@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{unload_model}
 \alias{unload_model}
-\title{Unload model}
+\title{Unload Model}
 \usage{
 unload_model(model)
 }
@@ -19,14 +19,24 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=model]{model()}} for creating model objects.
-
 Other model functions: 
-\code{\link{draw_model_ex}()},
-\code{\link{draw_model_wires}()},
 \code{\link{draw_model}()},
-\code{\link{get_model_bounding_box}()},
-\code{\link{get_ray_collision_model}()},
 \code{\link{load_model}()}
+
+Other unload functions: 
+\code{\link{unload_audio_stream}()},
+\code{\link{unload_font}()},
+\code{\link{unload_image}()},
+\code{\link{unload_material}()},
+\code{\link{unload_mesh}()},
+\code{\link{unload_music_stream}()},
+\code{\link{unload_render_texture}()},
+\code{\link{unload_shader}()},
+\code{\link{unload_sound}()},
+\code{\link{unload_sound_alias}()},
+\code{\link{unload_texture}()},
+\code{\link{unload_vr_stereo_config}()},
+\code{\link{unload_wave}()}
 }
 \concept{model functions}
+\concept{unload functions}

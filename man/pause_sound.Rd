@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{pause_sound}
 \alias{pause_sound}
-\title{Pause sound}
+\title{Pause Sound}
 \usage{
 pause_sound(sound)
 }
@@ -19,20 +19,16 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=sound]{sound()}} for creating sound objects.
-
 Other sound functions: 
-\code{\link{is_sound_playing}()},
-\code{\link{load_sound_from_wave}()},
 \code{\link{load_sound}()},
-\code{\link{play_sound_multi}()},
 \code{\link{play_sound}()},
 \code{\link{resume_sound}()},
-\code{\link{set_sound_pitch}()},
-\code{\link{set_sound_volume}()},
-\code{\link{sound}()},
-\code{\link{stop_sound_multi}()},
 \code{\link{stop_sound}()},
 \code{\link{unload_sound}()}
+
+Other pause functions: 
+\code{\link{pause_audio_stream}()},
+\code{\link{pause_music_stream}()}
 }
+\concept{pause functions}
 \concept{sound functions}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{load_shader}
 \alias{load_shader}
-\title{Load shader}
+\title{Load Shader}
 \usage{
 load_shader(vs_file_name, fs_file_name)
 }
@@ -20,19 +20,34 @@ Load shader from files and bind default locations.
 \note{
 This function has been auto-generated from the following Raylib function definition:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{Shader LoadShader(const char *vsFileName, const char *fsFileName);
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Shader LoadShader(const char * vsFileName, const char * fsFileName);
 }\if{html}{\out{</div>}}
 }
 \seealso{
 Other shader functions: 
-\code{\link{begin_shader_mode}()},
-\code{\link{end_shader_mode}()},
-\code{\link{get_shader_location_attrib}()},
-\code{\link{get_shader_location}()},
-\code{\link{load_shader_from_memory}()},
-\code{\link{set_shader_value_matrix}()},
-\code{\link{set_shader_value_texture}()},
 \code{\link{set_shader_value}()},
 \code{\link{unload_shader}()}
+
+Other load functions: 
+\code{\link{load_audio_stream}()},
+\code{\link{load_file_text}()},
+\code{\link{load_font}()},
+\code{\link{load_font_from_image}()},
+\code{\link{load_image}()},
+\code{\link{load_image_from_screen}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_material_default}()},
+\code{\link{load_model}()},
+\code{\link{load_model_from_mesh}()},
+\code{\link{load_music_stream}()},
+\code{\link{load_render_texture}()},
+\code{\link{load_shader_from_memory}()},
+\code{\link{load_sound}()},
+\code{\link{load_sound_alias}()},
+\code{\link{load_sound_from_wave}()},
+\code{\link{load_texture}()},
+\code{\link{load_texture_from_image}()},
+\code{\link{load_wave}()}
 }
+\concept{load functions}
 \concept{shader functions}

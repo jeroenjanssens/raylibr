@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{window_should_close}
 \alias{window_should_close}
-\title{Window should close}
+\title{Window Should Close}
 \usage{
 window_should_close()
 }
@@ -10,7 +10,7 @@ window_should_close()
 A logical
 }
 \description{
-Check if KEY_ESCAPE pressed or Close icon pressed.
+Check if application should close (KEY_ESCAPE pressed or windows close icon clicked).
 }
 \note{
 This function has been auto-generated from the following Raylib function definition:
@@ -19,29 +19,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other window functions: 
-\code{\link{clear_window_state}()},
-\code{\link{close_window}()},
-\code{\link{get_window_position}()},
-\code{\link{get_window_scale_dpi}()},
-\code{\link{init_window}()},
-\code{\link{is_window_focused}()},
-\code{\link{is_window_fullscreen}()},
-\code{\link{is_window_hidden}()},
-\code{\link{is_window_maximized}()},
-\code{\link{is_window_minimized}()},
-\code{\link{is_window_ready}()},
-\code{\link{is_window_resized}()},
-\code{\link{is_window_state}()},
-\code{\link{maximize_window}()},
-\code{\link{minimize_window}()},
-\code{\link{restore_window}()},
-\code{\link{set_window_icon}()},
-\code{\link{set_window_min_size}()},
-\code{\link{set_window_monitor}()},
-\code{\link{set_window_position}()},
-\code{\link{set_window_size}()},
-\code{\link{set_window_state}()},
-\code{\link{set_window_title}()}
+Other close functions: 
+\code{\link{close_audio_device}()},
+\code{\link{close_window}()}
 }
-\concept{window functions}
+\concept{close functions}

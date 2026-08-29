@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{end_mode_2d}
 \alias{end_mode_2d}
-\title{End mode 2d}
+\title{End Mode 2d}
 \usage{
 end_mode_2d()
 }
@@ -16,19 +16,19 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other mode functions: 
-\code{\link{begin_blend_mode}()},
+Other 2d functions: 
 \code{\link{begin_mode_2d}()},
-\code{\link{begin_mode_3d}()},
-\code{\link{begin_scissor_mode}()},
-\code{\link{begin_shader_mode}()},
-\code{\link{begin_texture_mode}()},
+\code{\link{get_screen_to_world_2d}()},
+\code{\link{get_world_to_screen_2d}()}
+
+Other end functions: 
 \code{\link{end_blend_mode}()},
+\code{\link{end_drawing}()},
 \code{\link{end_mode_3d}()},
 \code{\link{end_scissor_mode}()},
 \code{\link{end_shader_mode}()},
 \code{\link{end_texture_mode}()},
-\code{\link{end_vr_stereo_mode}()},
-\code{\link{set_camera_mode}()}
+\code{\link{end_vr_stereo_mode}()}
 }
-\concept{mode functions}
+\concept{2d functions}
+\concept{end functions}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{get_key_pressed}
 \alias{get_key_pressed}
-\title{Get key pressed}
+\title{Get Key Pressed}
 \usage{
 get_key_pressed()
 }
@@ -19,12 +19,83 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other key functions: 
-\code{\link{get_char_pressed}()},
-\code{\link{is_key_down}()},
+Other pressed functions: 
+\code{\link{get_gamepad_button_pressed}()},
+\code{\link{is_gamepad_button_pressed}()},
 \code{\link{is_key_pressed}()},
-\code{\link{is_key_released}()},
-\code{\link{is_key_up}()},
-\code{\link{set_exit_key}()}
+\code{\link{is_mouse_button_pressed}()}
+
+Other get functions: 
+\code{\link{get_application_directory}()},
+\code{\link{get_clipboard_image}()},
+\code{\link{get_collision_rec}()},
+\code{\link{get_color}()},
+\code{\link{get_current_monitor}()},
+\code{\link{get_directory_file_count}()},
+\code{\link{get_directory_file_count_ex}()},
+\code{\link{get_directory_path}()},
+\code{\link{get_file_extension}()},
+\code{\link{get_file_length}()},
+\code{\link{get_file_mod_time}()},
+\code{\link{get_file_name}()},
+\code{\link{get_file_name_without_ext}()},
+\code{\link{get_font_default}()},
+\code{\link{get_fps}()},
+\code{\link{get_frame_time}()},
+\code{\link{get_gamepad_axis_count}()},
+\code{\link{get_gamepad_axis_movement}()},
+\code{\link{get_gamepad_button_pressed}()},
+\code{\link{get_gesture_detected}()},
+\code{\link{get_gesture_drag_angle}()},
+\code{\link{get_gesture_drag_vector}()},
+\code{\link{get_gesture_hold_duration}()},
+\code{\link{get_gesture_pinch_angle}()},
+\code{\link{get_gesture_pinch_vector}()},
+\code{\link{get_image_color}()},
+\code{\link{get_model_bounding_box}()},
+\code{\link{get_monitor_count}()},
+\code{\link{get_monitor_height}()},
+\code{\link{get_monitor_physical_height}()},
+\code{\link{get_monitor_physical_width}()},
+\code{\link{get_monitor_position}()},
+\code{\link{get_monitor_refresh_rate}()},
+\code{\link{get_monitor_width}()},
+\code{\link{get_mouse_delta}()},
+\code{\link{get_mouse_position}()},
+\code{\link{get_mouse_wheel_move}()},
+\code{\link{get_mouse_wheel_move_v}()},
+\code{\link{get_mouse_x}()},
+\code{\link{get_mouse_y}()},
+\code{\link{get_music_time_length}()},
+\code{\link{get_music_time_played}()},
+\code{\link{get_pixel_data_size}()},
+\code{\link{get_prev_directory_path}()},
+\code{\link{get_random_value}()},
+\code{\link{get_ray_collision_box}()},
+\code{\link{get_ray_collision_mesh}()},
+\code{\link{get_ray_collision_quad}()},
+\code{\link{get_ray_collision_sphere}()},
+\code{\link{get_ray_collision_triangle}()},
+\code{\link{get_render_height}()},
+\code{\link{get_render_width}()},
+\code{\link{get_screen_height}()},
+\code{\link{get_screen_to_world_2d}()},
+\code{\link{get_screen_width}()},
+\code{\link{get_shapes_texture}()},
+\code{\link{get_shapes_texture_rectangle}()},
+\code{\link{get_text_between}()},
+\code{\link{get_time}()},
+\code{\link{get_touch_point_count}()},
+\code{\link{get_touch_point_id}()},
+\code{\link{get_touch_position}()},
+\code{\link{get_touch_x}()},
+\code{\link{get_touch_y}()},
+\code{\link{get_window_position}()},
+\code{\link{get_window_scale_dpi}()},
+\code{\link{get_working_directory}()},
+\code{\link{get_world_to_screen}()},
+\code{\link{get_world_to_screen_2d}()},
+\code{\link{get_world_to_screen_ex}()}
 }
-\concept{key functions}
+\concept{get functions}
+\concept{pressed functions}

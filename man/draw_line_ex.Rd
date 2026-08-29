@@ -2,129 +2,124 @@
 % Please edit documentation in R/functions.R
 \name{draw_line_ex}
 \alias{draw_line_ex}
-\title{Draw line ex}
+\title{Draw Line Ex}
 \usage{
 draw_line_ex(start_pos, end_pos, thick, color)
 }
 \arguments{
-\item{start_pos}{A numeric vector of length 2 or a numeric matrix of width 2.}
+\item{start_pos}{A numeric vector of length 2.}
 
-\item{end_pos}{A numeric vector of length 2 or a numeric matrix of width 2.}
+\item{end_pos}{A numeric vector of length 2.}
 
-\item{thick}{A number or a vector of numbers.}
+\item{thick}{A number.}
 
-\item{color}{A color or a list of colors.}
+\item{color}{A color.}
 }
 \description{
-Draw a line defining thickness.
+Draw a line (using triangles/quads).
 }
 \note{
-This function is vectorized to allow for faster drawing. This function has been auto-generated from the following Raylib function definition:
+This function has been auto-generated from the following Raylib function definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawLineEx(Vector2 startPos, Vector2 endPos, float thick, Color color);
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=color]{color()}} for creating color objects.
+Other ex functions: 
+\code{\link{draw_cylinder_ex}()},
+\code{\link{draw_cylinder_wires_ex}()},
+\code{\link{draw_model_ex}()},
+\code{\link{draw_model_wires_ex}()},
+\code{\link{draw_poly_lines_ex}()},
+\code{\link{draw_rectangle_gradient_ex}()},
+\code{\link{draw_rectangle_lines_ex}()},
+\code{\link{draw_rectangle_rounded_lines_ex}()},
+\code{\link{draw_sphere_ex}()},
+\code{\link{draw_text_ex}()},
+\code{\link{draw_texture_ex}()},
+\code{\link{get_directory_file_count_ex}()},
+\code{\link{get_world_to_screen_ex}()},
+\code{\link{image_text_ex}()},
+\code{\link{measure_text_ex}()},
+\code{\link{update_model_animation_ex}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
+\code{\link{draw_billboard_pro}()},
+\code{\link{draw_billboard_rec}()},
 \code{\link{draw_bounding_box}()},
+\code{\link{draw_capsule}()},
+\code{\link{draw_capsule_wires}()},
+\code{\link{draw_circle}()},
 \code{\link{draw_circle_3d}()},
 \code{\link{draw_circle_gradient}()},
 \code{\link{draw_circle_lines}()},
-\code{\link{draw_circle_sector_lines}()},
+\code{\link{draw_circle_lines_v}()},
 \code{\link{draw_circle_sector}()},
+\code{\link{draw_circle_sector_lines}()},
 \code{\link{draw_circle_v}()},
-\code{\link{draw_circle}()},
-\code{\link{draw_cube_texture_rec}()},
-\code{\link{draw_cube_texture}()},
-\code{\link{draw_cube_v}()},
-\code{\link{draw_cube_wires_v}()},
-\code{\link{draw_cube_wires}()},
 \code{\link{draw_cube}()},
-\code{\link{draw_cylinder_ex}()},
-\code{\link{draw_cylinder_wires_ex}()},
-\code{\link{draw_cylinder_wires}()},
+\code{\link{draw_cube_v}()},
+\code{\link{draw_cube_wires}()},
+\code{\link{draw_cube_wires_v}()},
 \code{\link{draw_cylinder}()},
-\code{\link{draw_ellipse_lines}()},
+\code{\link{draw_cylinder_ex}()},
+\code{\link{draw_cylinder_wires}()},
+\code{\link{draw_cylinder_wires_ex}()},
 \code{\link{draw_ellipse}()},
+\code{\link{draw_ellipse_lines}()},
+\code{\link{draw_ellipse_lines_v}()},
+\code{\link{draw_ellipse_v}()},
 \code{\link{draw_fps}()},
 \code{\link{draw_grid}()},
-\code{\link{draw_line_3d}()},
-\code{\link{draw_line_bezier_cubic}()},
-\code{\link{draw_line_bezier_quad}()},
-\code{\link{draw_line_bezier}()},
-\code{\link{draw_line_v}()},
 \code{\link{draw_line}()},
+\code{\link{draw_line_3d}()},
+\code{\link{draw_line_bezier}()},
+\code{\link{draw_line_dashed}()},
+\code{\link{draw_line_v}()},
+\code{\link{draw_mesh}()},
+\code{\link{draw_model}()},
 \code{\link{draw_model_ex}()},
 \code{\link{draw_model_wires}()},
-\code{\link{draw_model}()},
-\code{\link{draw_pixel_v}()},
+\code{\link{draw_model_wires_ex}()},
 \code{\link{draw_pixel}()},
+\code{\link{draw_pixel_v}()},
 \code{\link{draw_plane}()},
 \code{\link{draw_point_3d}()},
-\code{\link{draw_poly_lines_ex}()},
-\code{\link{draw_poly_lines}()},
 \code{\link{draw_poly}()},
+\code{\link{draw_poly_lines}()},
+\code{\link{draw_poly_lines_ex}()},
 \code{\link{draw_ray}()},
+\code{\link{draw_rectangle}()},
 \code{\link{draw_rectangle_gradient_ex}()},
 \code{\link{draw_rectangle_gradient_h}()},
 \code{\link{draw_rectangle_gradient_v}()},
-\code{\link{draw_rectangle_lines_ex}()},
 \code{\link{draw_rectangle_lines}()},
+\code{\link{draw_rectangle_lines_ex}()},
 \code{\link{draw_rectangle_pro}()},
 \code{\link{draw_rectangle_rec}()},
-\code{\link{draw_rectangle_rounded_lines}()},
 \code{\link{draw_rectangle_rounded}()},
+\code{\link{draw_rectangle_rounded_lines}()},
+\code{\link{draw_rectangle_rounded_lines_ex}()},
 \code{\link{draw_rectangle_v}()},
-\code{\link{draw_rectangle}()},
-\code{\link{draw_ring_lines}()},
 \code{\link{draw_ring}()},
+\code{\link{draw_ring_lines}()},
+\code{\link{draw_sphere}()},
 \code{\link{draw_sphere_ex}()},
 \code{\link{draw_sphere_wires}()},
-\code{\link{draw_sphere}()},
+\code{\link{draw_text}()},
 \code{\link{draw_text_codepoint}()},
 \code{\link{draw_text_ex}()},
 \code{\link{draw_text_pro}()},
-\code{\link{draw_texture_ex}()},
-\code{\link{draw_texture_npatch}()},
-\code{\link{draw_texture_poly}()},
-\code{\link{draw_texture_pro}()},
-\code{\link{draw_texture_quad}()},
-\code{\link{draw_texture_rec}()},
-\code{\link{draw_texture_tiled}()},
-\code{\link{draw_texture_v}()},
 \code{\link{draw_texture}()},
-\code{\link{draw_text}()},
-\code{\link{draw_triangle_3d}()},
-\code{\link{draw_triangle_lines}()},
-\code{\link{draw_triangle_strip_3d}()},
+\code{\link{draw_texture_ex}()},
+\code{\link{draw_texture_n_patch}()},
+\code{\link{draw_texture_pro}()},
+\code{\link{draw_texture_rec}()},
+\code{\link{draw_texture_v}()},
 \code{\link{draw_triangle}()},
-\code{\link{image_draw_circle_v}()},
-\code{\link{image_draw_circle}()},
-\code{\link{image_draw_line_v}()},
-\code{\link{image_draw_line}()},
-\code{\link{image_draw_pixel_v}()},
-\code{\link{image_draw_pixel}()},
-\code{\link{image_draw_rectangle_lines}()},
-\code{\link{image_draw_rectangle_rec}()},
-\code{\link{image_draw_rectangle_v}()},
-\code{\link{image_draw_rectangle}()},
-\code{\link{image_draw_text_ex}()},
-\code{\link{image_draw_text}()},
-\code{\link{image_draw}()}
-
-Other line functions: 
-\code{\link{check_collision_point_line}()},
-\code{\link{draw_line_3d}()},
-\code{\link{draw_line_bezier_cubic}()},
-\code{\link{draw_line_bezier_quad}()},
-\code{\link{draw_line_bezier}()},
-\code{\link{draw_line_v}()},
-\code{\link{draw_line}()},
-\code{\link{image_draw_line_v}()},
-\code{\link{image_draw_line}()}
+\code{\link{draw_triangle_3d}()},
+\code{\link{draw_triangle_lines}()}
 }
 \concept{draw functions}
-\concept{line functions}
+\concept{ex functions}

@@ -2,14 +2,14 @@
 % Please edit documentation in R/functions.R
 \name{check_collision_recs}
 \alias{check_collision_recs}
-\title{Check collision recs}
+\title{Check Collision Recs}
 \usage{
-check_collision_recs(rec_1, rec_2)
+check_collision_recs(rec1, rec2)
 }
 \arguments{
-\item{rec_1}{A rectangle.}
+\item{rec1}{A rectangle.}
 
-\item{rec_2}{A rectangle.}
+\item{rec2}{A rectangle.}
 }
 \value{
 A logical
@@ -24,25 +24,16 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=rectangle]{rectangle()}} for creating rectangle objects.
-
-Other collision functions: 
+Other check functions: 
 \code{\link{check_collision_box_sphere}()},
 \code{\link{check_collision_boxes}()},
 \code{\link{check_collision_circle_rec}()},
 \code{\link{check_collision_circles}()},
-\code{\link{check_collision_lines}()},
 \code{\link{check_collision_point_circle}()},
 \code{\link{check_collision_point_line}()},
 \code{\link{check_collision_point_rec}()},
 \code{\link{check_collision_point_triangle}()},
-\code{\link{check_collision_spheres}()},
-\code{\link{get_collision_rec}()},
-\code{\link{get_ray_collision_box}()},
-\code{\link{get_ray_collision_mesh}()},
-\code{\link{get_ray_collision_model}()},
-\code{\link{get_ray_collision_quad}()},
-\code{\link{get_ray_collision_sphere}()},
-\code{\link{get_ray_collision_triangle}()}
+\code{\link{check_collision_spheres}()}
 }
-\concept{collision functions}
+\concept{check functions}
+\concept{recs functions}

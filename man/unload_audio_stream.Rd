@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{unload_audio_stream}
 \alias{unload_audio_stream}
-\title{Unload audio stream}
+\title{Unload Audio Stream}
 \usage{
 unload_audio_stream(stream)
 }
@@ -19,27 +19,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=audio_stream]{audio_stream()}} for creating audio_stream objects.
-
-Other audio functions: 
-\code{\link{close_audio_device}()},
-\code{\link{init_audio_device}()},
-\code{\link{is_audio_device_ready}()},
-\code{\link{is_audio_stream_playing}()},
-\code{\link{is_audio_stream_processed}()},
-\code{\link{load_audio_stream}()},
-\code{\link{pause_audio_stream}()},
-\code{\link{play_audio_stream}()},
-\code{\link{resume_audio_stream}()},
-\code{\link{set_audio_stream_buffer_size_default}()},
-\code{\link{set_audio_stream_pitch}()},
-\code{\link{set_audio_stream_volume}()},
-\code{\link{stop_audio_stream}()}
-
 Other stream functions: 
-\code{\link{is_audio_stream_playing}()},
-\code{\link{is_audio_stream_processed}()},
-\code{\link{is_music_stream_playing}()},
 \code{\link{load_audio_stream}()},
 \code{\link{load_music_stream}()},
 \code{\link{pause_audio_stream}()},
@@ -48,14 +28,25 @@ Other stream functions:
 \code{\link{play_music_stream}()},
 \code{\link{resume_audio_stream}()},
 \code{\link{resume_music_stream}()},
-\code{\link{seek_music_stream}()},
-\code{\link{set_audio_stream_buffer_size_default}()},
-\code{\link{set_audio_stream_pitch}()},
-\code{\link{set_audio_stream_volume}()},
 \code{\link{stop_audio_stream}()},
 \code{\link{stop_music_stream}()},
 \code{\link{unload_music_stream}()},
 \code{\link{update_music_stream}()}
+
+Other unload functions: 
+\code{\link{unload_font}()},
+\code{\link{unload_image}()},
+\code{\link{unload_material}()},
+\code{\link{unload_mesh}()},
+\code{\link{unload_model}()},
+\code{\link{unload_music_stream}()},
+\code{\link{unload_render_texture}()},
+\code{\link{unload_shader}()},
+\code{\link{unload_sound}()},
+\code{\link{unload_sound_alias}()},
+\code{\link{unload_texture}()},
+\code{\link{unload_vr_stereo_config}()},
+\code{\link{unload_wave}()}
 }
-\concept{audio functions}
 \concept{stream functions}
+\concept{unload functions}

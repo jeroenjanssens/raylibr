@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{unload_font}
 \alias{unload_font}
-\title{Unload font}
+\title{Unload Font}
 \usage{
 unload_font(font)
 }
@@ -10,7 +10,7 @@ unload_font(font)
 \item{font}{A font.}
 }
 \description{
-Unload Font from GPU memory (VRAM).
+Unload font from GPU memory (VRAM).
 }
 \note{
 This function has been auto-generated from the following Raylib function definition:
@@ -19,13 +19,24 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=font]{font()}} for creating font objects.
-
 Other font functions: 
-\code{\link{get_font_default}()},
-\code{\link{load_font_ex}()},
-\code{\link{load_font_from_image}()},
 \code{\link{load_font}()},
-\code{\link{unload_font_data}()}
+\code{\link{load_font_ex}()}
+
+Other unload functions: 
+\code{\link{unload_audio_stream}()},
+\code{\link{unload_image}()},
+\code{\link{unload_material}()},
+\code{\link{unload_mesh}()},
+\code{\link{unload_model}()},
+\code{\link{unload_music_stream}()},
+\code{\link{unload_render_texture}()},
+\code{\link{unload_shader}()},
+\code{\link{unload_sound}()},
+\code{\link{unload_sound_alias}()},
+\code{\link{unload_texture}()},
+\code{\link{unload_vr_stereo_config}()},
+\code{\link{unload_wave}()}
 }
 \concept{font functions}
+\concept{unload functions}

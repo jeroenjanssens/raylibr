@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{end_drawing}
 \alias{end_drawing}
-\title{End drawing}
+\title{End Drawing}
 \usage{
 end_drawing()
 }
@@ -15,3 +15,18 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void EndDrawing(void);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other drawing functions: 
+\code{\link{begin_drawing}()}
+
+Other end functions: 
+\code{\link{end_blend_mode}()},
+\code{\link{end_mode_2d}()},
+\code{\link{end_mode_3d}()},
+\code{\link{end_scissor_mode}()},
+\code{\link{end_shader_mode}()},
+\code{\link{end_texture_mode}()},
+\code{\link{end_vr_stereo_mode}()}
+}
+\concept{drawing functions}
+\concept{end functions}

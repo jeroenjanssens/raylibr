@@ -2,7 +2,7 @@
 % Please edit documentation in R/glyph_info.R
 \name{glyph_info}
 \alias{glyph_info}
-\title{Glyph info}
+\title{Glyph Info}
 \usage{
 glyph_info(value, offset_x, offset_y, advance_x, image)
 }
@@ -27,11 +27,11 @@ Create a new glyph_info object.
 This class has been auto-generated from the following Raylib struct definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{typedef struct GlyphInfo \{
-    int value;              // Character value (Unicode)
-    int offsetX;            // Character offset X when drawing
-    int offsetY;            // Character offset Y when drawing
-    int advanceX;           // Character advance position X
-    Image image;            // Character image data
+    int value;        // Character value (Unicode)
+    int offsetX;        // Character offset X when drawing
+    int offsetY;        // Character offset Y when drawing
+    int advanceX;        // Character advance position X
+    Image image;        // Character image data
 \} GlyphInfo;
 }\if{html}{\out{</div>}}
 }

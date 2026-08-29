@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{file_exists}
 \alias{file_exists}
-\title{File exists}
+\title{File Exists}
 \usage{
 file_exists(file_name)
 }
@@ -18,17 +18,11 @@ Check if file exists.
 \note{
 This function has been auto-generated from the following Raylib function definition:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{bool FileExists(const char *fileName);
+\if{html}{\out{<div class="sourceCode">}}\preformatted{bool FileExists(const char * fileName);
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other file functions: 
-\code{\link{get_file_extension}()},
-\code{\link{get_file_mod_time}()},
-\code{\link{get_file_name_without_ext}()},
-\code{\link{get_file_name}()},
-\code{\link{is_file_dropped}()},
-\code{\link{is_file_extension}()},
-\code{\link{load_file_text}()}
+Other exists functions: 
+\code{\link{directory_exists}()}
 }
-\concept{file functions}
+\concept{exists functions}

@@ -2,14 +2,14 @@
 % Please edit documentation in R/functions.R
 \name{check_collision_boxes}
 \alias{check_collision_boxes}
-\title{Check collision boxes}
+\title{Check Collision Boxes}
 \usage{
-check_collision_boxes(box_1, box_2)
+check_collision_boxes(box1, box2)
 }
 \arguments{
-\item{box_1}{A bounding_box.}
+\item{box1}{A bounding_box.}
 
-\item{box_2}{A bounding_box.}
+\item{box2}{A bounding_box.}
 }
 \value{
 A logical
@@ -24,23 +24,16 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other collision functions: 
+Other check functions: 
 \code{\link{check_collision_box_sphere}()},
 \code{\link{check_collision_circle_rec}()},
 \code{\link{check_collision_circles}()},
-\code{\link{check_collision_lines}()},
 \code{\link{check_collision_point_circle}()},
 \code{\link{check_collision_point_line}()},
 \code{\link{check_collision_point_rec}()},
 \code{\link{check_collision_point_triangle}()},
 \code{\link{check_collision_recs}()},
-\code{\link{check_collision_spheres}()},
-\code{\link{get_collision_rec}()},
-\code{\link{get_ray_collision_box}()},
-\code{\link{get_ray_collision_mesh}()},
-\code{\link{get_ray_collision_model}()},
-\code{\link{get_ray_collision_quad}()},
-\code{\link{get_ray_collision_sphere}()},
-\code{\link{get_ray_collision_triangle}()}
+\code{\link{check_collision_spheres}()}
 }
-\concept{collision functions}
+\concept{boxes functions}
+\concept{check functions}

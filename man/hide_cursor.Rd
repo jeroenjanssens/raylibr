@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{hide_cursor}
 \alias{hide_cursor}
-\title{Hide cursor}
+\title{Hide Cursor}
 \usage{
 hide_cursor()
 }
@@ -19,8 +19,6 @@ This function has been auto-generated from the following Raylib function definit
 Other cursor functions: 
 \code{\link{disable_cursor}()},
 \code{\link{enable_cursor}()},
-\code{\link{is_cursor_hidden}()},
-\code{\link{is_cursor_on_screen}()},
 \code{\link{set_mouse_cursor}()},
 \code{\link{show_cursor}()}
 }

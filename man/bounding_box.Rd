@@ -2,7 +2,7 @@
 % Please edit documentation in R/bounding_box.R
 \name{bounding_box}
 \alias{bounding_box}
-\title{Bounding box}
+\title{Bounding Box}
 \usage{
 bounding_box(min, max)
 }
@@ -21,8 +21,8 @@ Create a new bounding_box object.
 This class has been auto-generated from the following Raylib struct definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{typedef struct BoundingBox \{
-    Vector3 min;            // Minimum vertex box-corner
-    Vector3 max;            // Maximum vertex box-corner
+    Vector3 min;        // Minimum vertex box-corner
+    Vector3 max;        // Maximum vertex box-corner
 \} BoundingBox;
 }\if{html}{\out{</div>}}
 }

@@ -23,9 +23,9 @@ Create a new transform object.
 This class has been auto-generated from the following Raylib struct definition:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{typedef struct Transform \{
-    Vector3 translation;    // Translation
-    Quaternion rotation;    // Rotation
-    Vector3 scale;          // Scale
+    Vector3 translation;        // Translation
+    Quaternion rotation;        // Rotation
+    Vector3 scale;        // Scale
 \} Transform;
 }\if{html}{\out{</div>}}
 }

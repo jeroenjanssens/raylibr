@@ -2,12 +2,12 @@
 % Please edit documentation in R/functions.R
 \name{begin_texture_mode}
 \alias{begin_texture_mode}
-\title{Begin texture mode}
+\title{Begin Texture Mode}
 \usage{
 begin_texture_mode(target)
 }
 \arguments{
-\item{target}{A render_texture.}
+\item{target}{A render texture.}
 }
 \description{
 Begin drawing to render texture.
@@ -19,46 +19,25 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other texture functions: 
-\code{\link{draw_cube_texture_rec}()},
-\code{\link{draw_cube_texture}()},
-\code{\link{draw_texture_ex}()},
-\code{\link{draw_texture_npatch}()},
-\code{\link{draw_texture_poly}()},
-\code{\link{draw_texture_pro}()},
-\code{\link{draw_texture_quad}()},
-\code{\link{draw_texture_rec}()},
-\code{\link{draw_texture_tiled}()},
-\code{\link{draw_texture_v}()},
-\code{\link{draw_texture}()},
-\code{\link{end_texture_mode}()},
-\code{\link{gen_texture_mipmaps}()},
-\code{\link{load_image_from_texture}()},
-\code{\link{load_render_texture}()},
-\code{\link{load_texture_from_image}()},
-\code{\link{load_texture}()},
-\code{\link{set_shader_value_texture}()},
-\code{\link{set_shapes_texture}()},
-\code{\link{set_texture_filter}()},
-\code{\link{set_texture_wrap}()},
-\code{\link{texture}()},
-\code{\link{unload_render_texture}()},
-\code{\link{unload_texture}()}
-
 Other mode functions: 
 \code{\link{begin_blend_mode}()},
+\code{\link{begin_scissor_mode}()},
+\code{\link{begin_shader_mode}()},
+\code{\link{begin_vr_stereo_mode}()},
+\code{\link{end_blend_mode}()},
+\code{\link{end_scissor_mode}()},
+\code{\link{end_shader_mode}()},
+\code{\link{end_texture_mode}()},
+\code{\link{end_vr_stereo_mode}()}
+
+Other begin functions: 
+\code{\link{begin_blend_mode}()},
+\code{\link{begin_drawing}()},
 \code{\link{begin_mode_2d}()},
 \code{\link{begin_mode_3d}()},
 \code{\link{begin_scissor_mode}()},
 \code{\link{begin_shader_mode}()},
-\code{\link{end_blend_mode}()},
-\code{\link{end_mode_2d}()},
-\code{\link{end_mode_3d}()},
-\code{\link{end_scissor_mode}()},
-\code{\link{end_shader_mode}()},
-\code{\link{end_texture_mode}()},
-\code{\link{end_vr_stereo_mode}()},
-\code{\link{set_camera_mode}()}
+\code{\link{begin_vr_stereo_mode}()}
 }
+\concept{begin functions}
 \concept{mode functions}
-\concept{texture functions}

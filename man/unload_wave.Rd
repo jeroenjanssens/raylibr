@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{unload_wave}
 \alias{unload_wave}
-\title{Unload wave}
+\title{Unload Wave}
 \usage{
 unload_wave(wave)
 }
@@ -19,12 +19,25 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=wave]{wave()}} for creating wave objects.
-
 Other wave functions: 
-\code{\link{export_wave_as_code}()},
 \code{\link{export_wave}()},
 \code{\link{load_sound_from_wave}()},
 \code{\link{load_wave}()}
+
+Other unload functions: 
+\code{\link{unload_audio_stream}()},
+\code{\link{unload_font}()},
+\code{\link{unload_image}()},
+\code{\link{unload_material}()},
+\code{\link{unload_mesh}()},
+\code{\link{unload_model}()},
+\code{\link{unload_music_stream}()},
+\code{\link{unload_render_texture}()},
+\code{\link{unload_shader}()},
+\code{\link{unload_sound}()},
+\code{\link{unload_sound_alias}()},
+\code{\link{unload_texture}()},
+\code{\link{unload_vr_stereo_config}()}
 }
+\concept{unload functions}
 \concept{wave functions}

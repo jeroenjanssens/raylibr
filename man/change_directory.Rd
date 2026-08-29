@@ -2,12 +2,12 @@
 % Please edit documentation in R/functions.R
 \name{change_directory}
 \alias{change_directory}
-\title{Change directory}
+\title{Change Directory}
 \usage{
-change_directory(dir)
+change_directory(dir_path)
 }
 \arguments{
-\item{dir}{A string.}
+\item{dir_path}{A string.}
 }
 \value{
 A logical
@@ -18,15 +18,13 @@ Change working directory, return true on success.
 \note{
 This function has been auto-generated from the following Raylib function definition:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{bool ChangeDirectory(const char *dir);
+\if{html}{\out{<div class="sourceCode">}}\preformatted{bool ChangeDirectory(const char * dirPath);
 }\if{html}{\out{</div>}}
 }
 \seealso{
 Other directory functions: 
-\code{\link{clear_directory_files}()},
-\code{\link{directory_exists}()},
-\code{\link{get_directory_path}()},
-\code{\link{get_prev_directory_path}()},
-\code{\link{get_working_directory}()}
+\code{\link{get_application_directory}()},
+\code{\link{get_working_directory}()},
+\code{\link{make_directory}()}
 }
 \concept{directory functions}

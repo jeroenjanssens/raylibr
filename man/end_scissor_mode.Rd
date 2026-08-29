@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{end_scissor_mode}
 \alias{end_scissor_mode}
-\title{End scissor mode}
+\title{End Scissor Mode}
 \usage{
 end_scissor_mode()
 }
@@ -18,17 +18,23 @@ This function has been auto-generated from the following Raylib function definit
 \seealso{
 Other mode functions: 
 \code{\link{begin_blend_mode}()},
-\code{\link{begin_mode_2d}()},
-\code{\link{begin_mode_3d}()},
 \code{\link{begin_scissor_mode}()},
 \code{\link{begin_shader_mode}()},
 \code{\link{begin_texture_mode}()},
+\code{\link{begin_vr_stereo_mode}()},
 \code{\link{end_blend_mode}()},
+\code{\link{end_shader_mode}()},
+\code{\link{end_texture_mode}()},
+\code{\link{end_vr_stereo_mode}()}
+
+Other end functions: 
+\code{\link{end_blend_mode}()},
+\code{\link{end_drawing}()},
 \code{\link{end_mode_2d}()},
 \code{\link{end_mode_3d}()},
 \code{\link{end_shader_mode}()},
 \code{\link{end_texture_mode}()},
-\code{\link{end_vr_stereo_mode}()},
-\code{\link{set_camera_mode}()}
+\code{\link{end_vr_stereo_mode}()}
 }
+\concept{end functions}
 \concept{mode functions}

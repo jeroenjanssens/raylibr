@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{set_window_position}
 \alias{set_window_position}
-\title{Set window position}
+\title{Set Window Position}
 \usage{
 set_window_position(x, y)
 }
@@ -12,7 +12,7 @@ set_window_position(x, y)
 \item{y}{An integer.}
 }
 \description{
-Set window position on screen (only PLATFORM_DESKTOP).
+Set window position on screen.
 }
 \note{
 This function has been auto-generated from the following Raylib function definition:
@@ -21,29 +21,43 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other window functions: 
-\code{\link{clear_window_state}()},
-\code{\link{close_window}()},
+Other position functions: 
+\code{\link{get_monitor_position}()},
+\code{\link{get_mouse_position}()},
+\code{\link{get_touch_position}()},
 \code{\link{get_window_position}()},
-\code{\link{get_window_scale_dpi}()},
-\code{\link{init_window}()},
-\code{\link{is_window_focused}()},
-\code{\link{is_window_fullscreen}()},
-\code{\link{is_window_hidden}()},
-\code{\link{is_window_maximized}()},
-\code{\link{is_window_minimized}()},
-\code{\link{is_window_ready}()},
-\code{\link{is_window_resized}()},
-\code{\link{is_window_state}()},
-\code{\link{maximize_window}()},
-\code{\link{minimize_window}()},
-\code{\link{restore_window}()},
+\code{\link{set_mouse_position}()}
+
+Other set functions: 
+\code{\link{set_audio_stream_pitch}()},
+\code{\link{set_audio_stream_volume}()},
+\code{\link{set_config_flags}()},
+\code{\link{set_exit_key}()},
+\code{\link{set_gamepad_mappings}()},
+\code{\link{set_gamepad_vibration}()},
+\code{\link{set_gestures_enabled}()},
+\code{\link{set_mouse_cursor}()},
+\code{\link{set_mouse_offset}()},
+\code{\link{set_mouse_position}()},
+\code{\link{set_mouse_scale}()},
+\code{\link{set_music_pitch}()},
+\code{\link{set_music_volume}()},
+\code{\link{set_random_seed}()},
+\code{\link{set_shapes_texture}()},
+\code{\link{set_sound_pitch}()},
+\code{\link{set_sound_volume}()},
+\code{\link{set_target_fps}()},
+\code{\link{set_text_line_spacing}()},
+\code{\link{set_texture_filter}()},
+\code{\link{set_texture_wrap}()},
+\code{\link{set_trace_log_level}()},
+\code{\link{set_window_focused}()},
 \code{\link{set_window_icon}()},
-\code{\link{set_window_min_size}()},
 \code{\link{set_window_monitor}()},
+\code{\link{set_window_opacity}()},
 \code{\link{set_window_size}()},
 \code{\link{set_window_state}()},
-\code{\link{set_window_title}()},
-\code{\link{window_should_close}()}
+\code{\link{set_window_title}()}
 }
-\concept{window functions}
+\concept{position functions}
+\concept{set functions}

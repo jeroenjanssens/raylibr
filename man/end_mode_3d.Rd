@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{end_mode_3d}
 \alias{end_mode_3d}
-\title{End mode 3d}
+\title{End Mode 3d}
 \usage{
 end_mode_3d()
 }
@@ -16,19 +16,21 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other mode functions: 
-\code{\link{begin_blend_mode}()},
-\code{\link{begin_mode_2d}()},
+Other 3d functions: 
 \code{\link{begin_mode_3d}()},
-\code{\link{begin_scissor_mode}()},
-\code{\link{begin_shader_mode}()},
-\code{\link{begin_texture_mode}()},
+\code{\link{draw_circle_3d}()},
+\code{\link{draw_line_3d}()},
+\code{\link{draw_point_3d}()},
+\code{\link{draw_triangle_3d}()}
+
+Other end functions: 
 \code{\link{end_blend_mode}()},
+\code{\link{end_drawing}()},
 \code{\link{end_mode_2d}()},
 \code{\link{end_scissor_mode}()},
 \code{\link{end_shader_mode}()},
 \code{\link{end_texture_mode}()},
-\code{\link{end_vr_stereo_mode}()},
-\code{\link{set_camera_mode}()}
+\code{\link{end_vr_stereo_mode}()}
 }
-\concept{mode functions}
+\concept{3d functions}
+\concept{end functions}

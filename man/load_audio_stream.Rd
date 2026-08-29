@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{load_audio_stream}
 \alias{load_audio_stream}
-\title{Load audio stream}
+\title{Load Audio Stream}
 \usage{
 load_audio_stream(sample_rate, sample_size, channels)
 }
@@ -26,25 +26,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other audio functions: 
-\code{\link{close_audio_device}()},
-\code{\link{init_audio_device}()},
-\code{\link{is_audio_device_ready}()},
-\code{\link{is_audio_stream_playing}()},
-\code{\link{is_audio_stream_processed}()},
-\code{\link{pause_audio_stream}()},
-\code{\link{play_audio_stream}()},
-\code{\link{resume_audio_stream}()},
-\code{\link{set_audio_stream_buffer_size_default}()},
-\code{\link{set_audio_stream_pitch}()},
-\code{\link{set_audio_stream_volume}()},
-\code{\link{stop_audio_stream}()},
-\code{\link{unload_audio_stream}()}
-
 Other stream functions: 
-\code{\link{is_audio_stream_playing}()},
-\code{\link{is_audio_stream_processed}()},
-\code{\link{is_music_stream_playing}()},
 \code{\link{load_music_stream}()},
 \code{\link{pause_audio_stream}()},
 \code{\link{pause_music_stream}()},
@@ -52,15 +34,32 @@ Other stream functions:
 \code{\link{play_music_stream}()},
 \code{\link{resume_audio_stream}()},
 \code{\link{resume_music_stream}()},
-\code{\link{seek_music_stream}()},
-\code{\link{set_audio_stream_buffer_size_default}()},
-\code{\link{set_audio_stream_pitch}()},
-\code{\link{set_audio_stream_volume}()},
 \code{\link{stop_audio_stream}()},
 \code{\link{stop_music_stream}()},
 \code{\link{unload_audio_stream}()},
 \code{\link{unload_music_stream}()},
 \code{\link{update_music_stream}()}
+
+Other load functions: 
+\code{\link{load_file_text}()},
+\code{\link{load_font}()},
+\code{\link{load_font_from_image}()},
+\code{\link{load_image}()},
+\code{\link{load_image_from_screen}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_material_default}()},
+\code{\link{load_model}()},
+\code{\link{load_model_from_mesh}()},
+\code{\link{load_music_stream}()},
+\code{\link{load_render_texture}()},
+\code{\link{load_shader}()},
+\code{\link{load_shader_from_memory}()},
+\code{\link{load_sound}()},
+\code{\link{load_sound_alias}()},
+\code{\link{load_sound_from_wave}()},
+\code{\link{load_texture}()},
+\code{\link{load_texture_from_image}()},
+\code{\link{load_wave}()}
 }
-\concept{audio functions}
+\concept{load functions}
 \concept{stream functions}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{export_wave_as_code}
 \alias{export_wave_as_code}
-\title{Export wave as code}
+\title{Export Wave As Code}
 \usage{
 export_wave_as_code(wave, file_name)
 }
@@ -20,16 +20,19 @@ Export wave sample data to code (.h), returns true on success.
 \note{
 This function has been auto-generated from the following Raylib function definition:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{bool ExportWaveAsCode(Wave wave, const char *fileName);
+\if{html}{\out{<div class="sourceCode">}}\preformatted{bool ExportWaveAsCode(Wave wave, const char * fileName);
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=wave]{wave()}} for creating wave objects.
+Other code functions: 
+\code{\link{export_font_as_code}()},
+\code{\link{export_image_as_code}()}
 
-Other wave functions: 
-\code{\link{export_wave}()},
-\code{\link{load_sound_from_wave}()},
-\code{\link{load_wave}()},
-\code{\link{unload_wave}()}
+Other export functions: 
+\code{\link{export_font_as_code}()},
+\code{\link{export_image}()},
+\code{\link{export_image_as_code}()},
+\code{\link{export_wave}()}
 }
-\concept{wave functions}
+\concept{code functions}
+\concept{export functions}

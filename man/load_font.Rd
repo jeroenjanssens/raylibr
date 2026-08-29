@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{load_font}
 \alias{load_font}
-\title{Load font}
+\title{Load Font}
 \usage{
 load_font(file_name)
 }
@@ -18,15 +18,34 @@ Load font from file into GPU memory (VRAM).
 \note{
 This function has been auto-generated from the following Raylib function definition:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{Font LoadFont(const char *fileName);
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Font LoadFont(const char * fileName);
 }\if{html}{\out{</div>}}
 }
 \seealso{
 Other font functions: 
-\code{\link{get_font_default}()},
 \code{\link{load_font_ex}()},
-\code{\link{load_font_from_image}()},
-\code{\link{unload_font_data}()},
 \code{\link{unload_font}()}
+
+Other load functions: 
+\code{\link{load_audio_stream}()},
+\code{\link{load_file_text}()},
+\code{\link{load_font_from_image}()},
+\code{\link{load_image}()},
+\code{\link{load_image_from_screen}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_material_default}()},
+\code{\link{load_model}()},
+\code{\link{load_model_from_mesh}()},
+\code{\link{load_music_stream}()},
+\code{\link{load_render_texture}()},
+\code{\link{load_shader}()},
+\code{\link{load_shader_from_memory}()},
+\code{\link{load_sound}()},
+\code{\link{load_sound_alias}()},
+\code{\link{load_sound_from_wave}()},
+\code{\link{load_texture}()},
+\code{\link{load_texture_from_image}()},
+\code{\link{load_wave}()}
 }
 \concept{font functions}
+\concept{load functions}

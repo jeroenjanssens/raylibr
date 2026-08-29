@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{unload_sound}
 \alias{unload_sound}
-\title{Unload sound}
+\title{Unload Sound}
 \usage{
 unload_sound(sound)
 }
@@ -19,20 +19,27 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-\code{\link[=sound]{sound()}} for creating sound objects.
-
 Other sound functions: 
-\code{\link{is_sound_playing}()},
-\code{\link{load_sound_from_wave}()},
 \code{\link{load_sound}()},
 \code{\link{pause_sound}()},
-\code{\link{play_sound_multi}()},
 \code{\link{play_sound}()},
 \code{\link{resume_sound}()},
-\code{\link{set_sound_pitch}()},
-\code{\link{set_sound_volume}()},
-\code{\link{sound}()},
-\code{\link{stop_sound_multi}()},
 \code{\link{stop_sound}()}
+
+Other unload functions: 
+\code{\link{unload_audio_stream}()},
+\code{\link{unload_font}()},
+\code{\link{unload_image}()},
+\code{\link{unload_material}()},
+\code{\link{unload_mesh}()},
+\code{\link{unload_model}()},
+\code{\link{unload_music_stream}()},
+\code{\link{unload_render_texture}()},
+\code{\link{unload_shader}()},
+\code{\link{unload_sound_alias}()},
+\code{\link{unload_texture}()},
+\code{\link{unload_vr_stereo_config}()},
+\code{\link{unload_wave}()}
 }
 \concept{sound functions}
+\concept{unload functions}

@@ -2,16 +2,16 @@
 % Please edit documentation in R/functions.R
 \name{init_window}
 \alias{init_window}
-\title{Init window}
+\title{Init Window}
 \usage{
-init_window(width = 640, height = 480, title = "Raylibr")
+init_window(width, height, title)
 }
 \arguments{
-\item{width}{An integer. Default: \code{640}.}
+\item{width}{An integer.}
 
-\item{height}{An integer. Default: \code{480}.}
+\item{height}{An integer.}
 
-\item{title}{A string. Default: \code{"Raylibr"}.}
+\item{title}{A string.}
 }
 \description{
 Initialize window and OpenGL context.
@@ -19,37 +19,18 @@ Initialize window and OpenGL context.
 \note{
 This function has been auto-generated from the following Raylib function definition:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{void InitWindow(int width, int height, const char *title);
+\if{html}{\out{<div class="sourceCode">}}\preformatted{void InitWindow(int width, int height, const char * title);
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other init functions: 
-\code{\link{init_audio_device}()}
-
 Other window functions: 
-\code{\link{clear_window_state}()},
 \code{\link{close_window}()},
-\code{\link{get_window_position}()},
-\code{\link{get_window_scale_dpi}()},
-\code{\link{is_window_focused}()},
-\code{\link{is_window_fullscreen}()},
-\code{\link{is_window_hidden}()},
-\code{\link{is_window_maximized}()},
-\code{\link{is_window_minimized}()},
-\code{\link{is_window_ready}()},
-\code{\link{is_window_resized}()},
-\code{\link{is_window_state}()},
 \code{\link{maximize_window}()},
 \code{\link{minimize_window}()},
-\code{\link{restore_window}()},
-\code{\link{set_window_icon}()},
-\code{\link{set_window_min_size}()},
-\code{\link{set_window_monitor}()},
-\code{\link{set_window_position}()},
-\code{\link{set_window_size}()},
-\code{\link{set_window_state}()},
-\code{\link{set_window_title}()},
-\code{\link{window_should_close}()}
+\code{\link{restore_window}()}
+
+Other init functions: 
+\code{\link{init_audio_device}()}
 }
 \concept{init functions}
 \concept{window functions}

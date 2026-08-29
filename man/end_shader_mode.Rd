@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{end_shader_mode}
 \alias{end_shader_mode}
-\title{End shader mode}
+\title{End Shader Mode}
 \usage{
 end_shader_mode()
 }
@@ -16,31 +16,25 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other shader functions: 
-\code{\link{begin_shader_mode}()},
-\code{\link{get_shader_location_attrib}()},
-\code{\link{get_shader_location}()},
-\code{\link{load_shader_from_memory}()},
-\code{\link{load_shader}()},
-\code{\link{set_shader_value_matrix}()},
-\code{\link{set_shader_value_texture}()},
-\code{\link{set_shader_value}()},
-\code{\link{unload_shader}()}
-
 Other mode functions: 
 \code{\link{begin_blend_mode}()},
-\code{\link{begin_mode_2d}()},
-\code{\link{begin_mode_3d}()},
 \code{\link{begin_scissor_mode}()},
 \code{\link{begin_shader_mode}()},
 \code{\link{begin_texture_mode}()},
+\code{\link{begin_vr_stereo_mode}()},
 \code{\link{end_blend_mode}()},
+\code{\link{end_scissor_mode}()},
+\code{\link{end_texture_mode}()},
+\code{\link{end_vr_stereo_mode}()}
+
+Other end functions: 
+\code{\link{end_blend_mode}()},
+\code{\link{end_drawing}()},
 \code{\link{end_mode_2d}()},
 \code{\link{end_mode_3d}()},
 \code{\link{end_scissor_mode}()},
 \code{\link{end_texture_mode}()},
-\code{\link{end_vr_stereo_mode}()},
-\code{\link{set_camera_mode}()}
+\code{\link{end_vr_stereo_mode}()}
 }
+\concept{end functions}
 \concept{mode functions}
-\concept{shader functions}

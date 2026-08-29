@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{begin_drawing}
 \alias{begin_drawing}
-\title{Begin drawing}
+\title{Begin Drawing}
 \usage{
 begin_drawing()
 }
@@ -15,3 +15,18 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void BeginDrawing(void);
 }\if{html}{\out{</div>}}
 }
+\seealso{
+Other drawing functions: 
+\code{\link{end_drawing}()}
+
+Other begin functions: 
+\code{\link{begin_blend_mode}()},
+\code{\link{begin_mode_2d}()},
+\code{\link{begin_mode_3d}()},
+\code{\link{begin_scissor_mode}()},
+\code{\link{begin_shader_mode}()},
+\code{\link{begin_texture_mode}()},
+\code{\link{begin_vr_stereo_mode}()}
+}
+\concept{begin functions}
+\concept{drawing functions}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{is_audio_device_ready}
 \alias{is_audio_device_ready}
-\title{Is audio device ready}
+\title{Is Audio Device Ready}
 \usage{
 is_audio_device_ready()
 }
@@ -19,19 +19,54 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \seealso{
-Other audio functions: 
-\code{\link{close_audio_device}()},
-\code{\link{init_audio_device}()},
-\code{\link{is_audio_stream_playing}()},
+Other ready functions: 
+\code{\link{is_window_ready}()}
+
+Other is functions: 
 \code{\link{is_audio_stream_processed}()},
-\code{\link{load_audio_stream}()},
-\code{\link{pause_audio_stream}()},
-\code{\link{play_audio_stream}()},
-\code{\link{resume_audio_stream}()},
-\code{\link{set_audio_stream_buffer_size_default}()},
-\code{\link{set_audio_stream_pitch}()},
-\code{\link{set_audio_stream_volume}()},
-\code{\link{stop_audio_stream}()},
-\code{\link{unload_audio_stream}()}
+\code{\link{is_audio_stream_valid}()},
+\code{\link{is_cursor_hidden}()},
+\code{\link{is_cursor_on_screen}()},
+\code{\link{is_file_dropped}()},
+\code{\link{is_file_extension}()},
+\code{\link{is_file_name_valid}()},
+\code{\link{is_font_valid}()},
+\code{\link{is_gamepad_available}()},
+\code{\link{is_gamepad_button_down}()},
+\code{\link{is_gamepad_button_pressed}()},
+\code{\link{is_gamepad_button_released}()},
+\code{\link{is_gamepad_button_up}()},
+\code{\link{is_gesture_detected}()},
+\code{\link{is_image_valid}()},
+\code{\link{is_key_down}()},
+\code{\link{is_key_pressed}()},
+\code{\link{is_key_pressed_repeat}()},
+\code{\link{is_key_released}()},
+\code{\link{is_key_up}()},
+\code{\link{is_material_valid}()},
+\code{\link{is_model_animation_valid}()},
+\code{\link{is_model_valid}()},
+\code{\link{is_mouse_button_down}()},
+\code{\link{is_mouse_button_pressed}()},
+\code{\link{is_mouse_button_released}()},
+\code{\link{is_mouse_button_up}()},
+\code{\link{is_music_stream_playing}()},
+\code{\link{is_music_valid}()},
+\code{\link{is_path_file}()},
+\code{\link{is_render_texture_valid}()},
+\code{\link{is_shader_valid}()},
+\code{\link{is_sound_playing}()},
+\code{\link{is_sound_valid}()},
+\code{\link{is_texture_valid}()},
+\code{\link{is_wave_valid}()},
+\code{\link{is_window_focused}()},
+\code{\link{is_window_fullscreen}()},
+\code{\link{is_window_hidden}()},
+\code{\link{is_window_maximized}()},
+\code{\link{is_window_minimized}()},
+\code{\link{is_window_ready}()},
+\code{\link{is_window_resized}()},
+\code{\link{is_window_state}()}
 }
-\concept{audio functions}
+\concept{is functions}
+\concept{ready functions}
