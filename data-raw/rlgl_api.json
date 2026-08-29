@@ -1,0 +1,2193 @@
+{
+  "functions": [
+    {
+      "name": "rlMatrixMode",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "mode"
+        }
+      ]
+    },
+    {
+      "name": "rlPushMatrix",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlPopMatrix",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlLoadIdentity",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlTranslatef",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "float",
+          "name": "x"
+        },
+        {
+          "type": "float",
+          "name": "y"
+        },
+        {
+          "type": "float",
+          "name": "z"
+        }
+      ]
+    },
+    {
+      "name": "rlRotatef",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "float",
+          "name": "angle"
+        },
+        {
+          "type": "float",
+          "name": "x"
+        },
+        {
+          "type": "float",
+          "name": "y"
+        },
+        {
+          "type": "float",
+          "name": "z"
+        }
+      ]
+    },
+    {
+      "name": "rlScalef",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "float",
+          "name": "x"
+        },
+        {
+          "type": "float",
+          "name": "y"
+        },
+        {
+          "type": "float",
+          "name": "z"
+        }
+      ]
+    },
+    {
+      "name": "rlMultMatrixf",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "const float *",
+          "name": "matf"
+        }
+      ]
+    },
+    {
+      "name": "rlFrustum",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "double",
+          "name": "left"
+        },
+        {
+          "type": "double",
+          "name": "right"
+        },
+        {
+          "type": "double",
+          "name": "bottom"
+        },
+        {
+          "type": "double",
+          "name": "top"
+        },
+        {
+          "type": "double",
+          "name": "znear"
+        },
+        {
+          "type": "double",
+          "name": "zfar"
+        }
+      ]
+    },
+    {
+      "name": "rlOrtho",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "double",
+          "name": "left"
+        },
+        {
+          "type": "double",
+          "name": "right"
+        },
+        {
+          "type": "double",
+          "name": "bottom"
+        },
+        {
+          "type": "double",
+          "name": "top"
+        },
+        {
+          "type": "double",
+          "name": "znear"
+        },
+        {
+          "type": "double",
+          "name": "zfar"
+        }
+      ]
+    },
+    {
+      "name": "rlViewport",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "x"
+        },
+        {
+          "type": "int",
+          "name": "y"
+        },
+        {
+          "type": "int",
+          "name": "width"
+        },
+        {
+          "type": "int",
+          "name": "height"
+        }
+      ]
+    },
+    {
+      "name": "rlSetClipPlanes",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "double",
+          "name": "nearPlane"
+        },
+        {
+          "type": "double",
+          "name": "farPlane"
+        }
+      ]
+    },
+    {
+      "name": "rlGetCullDistanceNear",
+      "description": "",
+      "returnType": "double",
+      "params": []
+    },
+    {
+      "name": "rlGetCullDistanceFar",
+      "description": "",
+      "returnType": "double",
+      "params": []
+    },
+    {
+      "name": "rlBegin",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "mode"
+        }
+      ]
+    },
+    {
+      "name": "rlEnd",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlVertex2i",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "x"
+        },
+        {
+          "type": "int",
+          "name": "y"
+        }
+      ]
+    },
+    {
+      "name": "rlVertex2f",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "float",
+          "name": "x"
+        },
+        {
+          "type": "float",
+          "name": "y"
+        }
+      ]
+    },
+    {
+      "name": "rlVertex3f",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "float",
+          "name": "x"
+        },
+        {
+          "type": "float",
+          "name": "y"
+        },
+        {
+          "type": "float",
+          "name": "z"
+        }
+      ]
+    },
+    {
+      "name": "rlTexCoord2f",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "float",
+          "name": "x"
+        },
+        {
+          "type": "float",
+          "name": "y"
+        }
+      ]
+    },
+    {
+      "name": "rlNormal3f",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "float",
+          "name": "x"
+        },
+        {
+          "type": "float",
+          "name": "y"
+        },
+        {
+          "type": "float",
+          "name": "z"
+        }
+      ]
+    },
+    {
+      "name": "rlColor4ub",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned char",
+          "name": "r"
+        },
+        {
+          "type": "unsigned char",
+          "name": "g"
+        },
+        {
+          "type": "unsigned char",
+          "name": "b"
+        },
+        {
+          "type": "unsigned char",
+          "name": "a"
+        }
+      ]
+    },
+    {
+      "name": "rlColor3f",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "float",
+          "name": "x"
+        },
+        {
+          "type": "float",
+          "name": "y"
+        },
+        {
+          "type": "float",
+          "name": "z"
+        }
+      ]
+    },
+    {
+      "name": "rlColor4f",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "float",
+          "name": "x"
+        },
+        {
+          "type": "float",
+          "name": "y"
+        },
+        {
+          "type": "float",
+          "name": "z"
+        },
+        {
+          "type": "float",
+          "name": "w"
+        }
+      ]
+    },
+    {
+      "name": "rlEnableVertexArray",
+      "description": "",
+      "returnType": "bool",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "vaoId"
+        }
+      ]
+    },
+    {
+      "name": "rlDisableVertexArray",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlEnableVertexBuffer",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        }
+      ]
+    },
+    {
+      "name": "rlDisableVertexBuffer",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlEnableVertexBufferElement",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        }
+      ]
+    },
+    {
+      "name": "rlDisableVertexBufferElement",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlEnableVertexAttribute",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "index"
+        }
+      ]
+    },
+    {
+      "name": "rlDisableVertexAttribute",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "index"
+        }
+      ]
+    },
+    {
+      "name": "rlEnableStatePointer",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "vertexAttribType"
+        },
+        {
+          "type": "void *",
+          "name": "buffer"
+        }
+      ]
+    },
+    {
+      "name": "rlDisableStatePointer",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "vertexAttribType"
+        }
+      ]
+    },
+    {
+      "name": "rlActiveTextureSlot",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "slot"
+        }
+      ]
+    },
+    {
+      "name": "rlEnableTexture",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        }
+      ]
+    },
+    {
+      "name": "rlDisableTexture",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlEnableTextureCubemap",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        }
+      ]
+    },
+    {
+      "name": "rlDisableTextureCubemap",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlTextureParameters",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        },
+        {
+          "type": "int",
+          "name": "param"
+        },
+        {
+          "type": "int",
+          "name": "value"
+        }
+      ]
+    },
+    {
+      "name": "rlCubemapParameters",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        },
+        {
+          "type": "int",
+          "name": "param"
+        },
+        {
+          "type": "int",
+          "name": "value"
+        }
+      ]
+    },
+    {
+      "name": "rlEnableShader",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        }
+      ]
+    },
+    {
+      "name": "rlDisableShader",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlEnableFramebuffer",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        }
+      ]
+    },
+    {
+      "name": "rlDisableFramebuffer",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlGetActiveFramebuffer",
+      "description": "",
+      "returnType": "unsigned int",
+      "params": []
+    },
+    {
+      "name": "rlActiveDrawBuffers",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "count"
+        }
+      ]
+    },
+    {
+      "name": "rlBlitFramebuffer",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "srcX"
+        },
+        {
+          "type": "int",
+          "name": "srcY"
+        },
+        {
+          "type": "int",
+          "name": "srcWidth"
+        },
+        {
+          "type": "int",
+          "name": "srcHeight"
+        },
+        {
+          "type": "int",
+          "name": "dstX"
+        },
+        {
+          "type": "int",
+          "name": "dstY"
+        },
+        {
+          "type": "int",
+          "name": "dstWidth"
+        },
+        {
+          "type": "int",
+          "name": "dstHeight"
+        },
+        {
+          "type": "int",
+          "name": "bufferMask"
+        }
+      ]
+    },
+    {
+      "name": "rlBindFramebuffer",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "target"
+        },
+        {
+          "type": "unsigned int",
+          "name": "framebuffer"
+        }
+      ]
+    },
+    {
+      "name": "rlEnableColorBlend",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlDisableColorBlend",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlEnableDepthTest",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlDisableDepthTest",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlEnableDepthMask",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlDisableDepthMask",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlEnableBackfaceCulling",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlDisableBackfaceCulling",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlColorMask",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "bool",
+          "name": "r"
+        },
+        {
+          "type": "bool",
+          "name": "g"
+        },
+        {
+          "type": "bool",
+          "name": "b"
+        },
+        {
+          "type": "bool",
+          "name": "a"
+        }
+      ]
+    },
+    {
+      "name": "rlSetCullFace",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "mode"
+        }
+      ]
+    },
+    {
+      "name": "rlEnableScissorTest",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlDisableScissorTest",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlScissor",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "x"
+        },
+        {
+          "type": "int",
+          "name": "y"
+        },
+        {
+          "type": "int",
+          "name": "width"
+        },
+        {
+          "type": "int",
+          "name": "height"
+        }
+      ]
+    },
+    {
+      "name": "rlEnablePointMode",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlDisablePointMode",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlSetPointSize",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "float",
+          "name": "size"
+        }
+      ]
+    },
+    {
+      "name": "rlGetPointSize",
+      "description": "",
+      "returnType": "float",
+      "params": []
+    },
+    {
+      "name": "rlEnableWireMode",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlDisableWireMode",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlSetLineWidth",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "float",
+          "name": "width"
+        }
+      ]
+    },
+    {
+      "name": "rlGetLineWidth",
+      "description": "",
+      "returnType": "float",
+      "params": []
+    },
+    {
+      "name": "rlEnableSmoothLines",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlDisableSmoothLines",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlEnableStereoRender",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlDisableStereoRender",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlIsStereoRenderEnabled",
+      "description": "",
+      "returnType": "bool",
+      "params": []
+    },
+    {
+      "name": "rlClearColor",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned char",
+          "name": "r"
+        },
+        {
+          "type": "unsigned char",
+          "name": "g"
+        },
+        {
+          "type": "unsigned char",
+          "name": "b"
+        },
+        {
+          "type": "unsigned char",
+          "name": "a"
+        }
+      ]
+    },
+    {
+      "name": "rlClearScreenBuffers",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlCheckErrors",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlSetBlendMode",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "mode"
+        }
+      ]
+    },
+    {
+      "name": "rlSetBlendFactors",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "glSrcFactor"
+        },
+        {
+          "type": "int",
+          "name": "glDstFactor"
+        },
+        {
+          "type": "int",
+          "name": "glEquation"
+        }
+      ]
+    },
+    {
+      "name": "rlSetBlendFactorsSeparate",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "glSrcRGB"
+        },
+        {
+          "type": "int",
+          "name": "glDstRGB"
+        },
+        {
+          "type": "int",
+          "name": "glSrcAlpha"
+        },
+        {
+          "type": "int",
+          "name": "glDstAlpha"
+        },
+        {
+          "type": "int",
+          "name": "glEqRGB"
+        },
+        {
+          "type": "int",
+          "name": "glEqAlpha"
+        }
+      ]
+    },
+    {
+      "name": "rlglInit",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "width"
+        },
+        {
+          "type": "int",
+          "name": "height"
+        }
+      ]
+    },
+    {
+      "name": "rlglClose",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlLoadExtensions",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "void *",
+          "name": "loader"
+        }
+      ]
+    },
+    {
+      "name": "rlGetProcAddress",
+      "description": "",
+      "returnType": "void *",
+      "params": [
+        {
+          "type": "const char *",
+          "name": "procName"
+        }
+      ]
+    },
+    {
+      "name": "rlGetVersion",
+      "description": "",
+      "returnType": "int",
+      "params": []
+    },
+    {
+      "name": "rlSetFramebufferWidth",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "width"
+        }
+      ]
+    },
+    {
+      "name": "rlGetFramebufferWidth",
+      "description": "",
+      "returnType": "int",
+      "params": []
+    },
+    {
+      "name": "rlSetFramebufferHeight",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "height"
+        }
+      ]
+    },
+    {
+      "name": "rlGetFramebufferHeight",
+      "description": "",
+      "returnType": "int",
+      "params": []
+    },
+    {
+      "name": "rlGetTextureIdDefault",
+      "description": "",
+      "returnType": "unsigned int",
+      "params": []
+    },
+    {
+      "name": "rlGetShaderIdDefault",
+      "description": "",
+      "returnType": "unsigned int",
+      "params": []
+    },
+    {
+      "name": "rlGetShaderLocsDefault",
+      "description": "",
+      "returnType": "int *",
+      "params": []
+    },
+    {
+      "name": "rlLoadRenderBatch",
+      "description": "",
+      "returnType": "rlRenderBatch",
+      "params": [
+        {
+          "type": "int",
+          "name": "numBuffers"
+        },
+        {
+          "type": "int",
+          "name": "bufferElements"
+        }
+      ]
+    },
+    {
+      "name": "rlUnloadRenderBatch",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "rlRenderBatch",
+          "name": "batch"
+        }
+      ]
+    },
+    {
+      "name": "rlDrawRenderBatch",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "rlRenderBatch *",
+          "name": "batch"
+        }
+      ]
+    },
+    {
+      "name": "rlSetRenderBatchActive",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "rlRenderBatch *",
+          "name": "batch"
+        }
+      ]
+    },
+    {
+      "name": "rlDrawRenderBatchActive",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlCheckRenderBatchLimit",
+      "description": "",
+      "returnType": "bool",
+      "params": [
+        {
+          "type": "int",
+          "name": "vCount"
+        }
+      ]
+    },
+    {
+      "name": "rlSetTexture",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        }
+      ]
+    },
+    {
+      "name": "rlLoadVertexArray",
+      "description": "",
+      "returnType": "unsigned int",
+      "params": []
+    },
+    {
+      "name": "rlLoadVertexBuffer",
+      "description": "",
+      "returnType": "unsigned int",
+      "params": [
+        {
+          "type": "const void *",
+          "name": "buffer"
+        },
+        {
+          "type": "int",
+          "name": "size"
+        },
+        {
+          "type": "bool",
+          "name": "dynamic"
+        }
+      ]
+    },
+    {
+      "name": "rlLoadVertexBufferElement",
+      "description": "",
+      "returnType": "unsigned int",
+      "params": [
+        {
+          "type": "const void *",
+          "name": "buffer"
+        },
+        {
+          "type": "int",
+          "name": "size"
+        },
+        {
+          "type": "bool",
+          "name": "dynamic"
+        }
+      ]
+    },
+    {
+      "name": "rlUpdateVertexBuffer",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "bufferId"
+        },
+        {
+          "type": "const void *",
+          "name": "data"
+        },
+        {
+          "type": "int",
+          "name": "dataSize"
+        },
+        {
+          "type": "int",
+          "name": "offset"
+        }
+      ]
+    },
+    {
+      "name": "rlUpdateVertexBufferElements",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        },
+        {
+          "type": "const void *",
+          "name": "data"
+        },
+        {
+          "type": "int",
+          "name": "dataSize"
+        },
+        {
+          "type": "int",
+          "name": "offset"
+        }
+      ]
+    },
+    {
+      "name": "rlUnloadVertexArray",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "vaoId"
+        }
+      ]
+    },
+    {
+      "name": "rlUnloadVertexBuffer",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "vboId"
+        }
+      ]
+    },
+    {
+      "name": "rlSetVertexAttribute",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "index"
+        },
+        {
+          "type": "int",
+          "name": "compSize"
+        },
+        {
+          "type": "int",
+          "name": "type"
+        },
+        {
+          "type": "bool",
+          "name": "normalized"
+        },
+        {
+          "type": "int",
+          "name": "stride"
+        },
+        {
+          "type": "int",
+          "name": "offset"
+        }
+      ]
+    },
+    {
+      "name": "rlSetVertexAttributeDivisor",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "index"
+        },
+        {
+          "type": "int",
+          "name": "divisor"
+        }
+      ]
+    },
+    {
+      "name": "rlSetVertexAttributeDefault",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "locIndex"
+        },
+        {
+          "type": "const void *",
+          "name": "value"
+        },
+        {
+          "type": "int",
+          "name": "attribType"
+        },
+        {
+          "type": "int",
+          "name": "count"
+        }
+      ]
+    },
+    {
+      "name": "rlDrawVertexArray",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "offset"
+        },
+        {
+          "type": "int",
+          "name": "count"
+        }
+      ]
+    },
+    {
+      "name": "rlDrawVertexArrayElements",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "offset"
+        },
+        {
+          "type": "int",
+          "name": "count"
+        },
+        {
+          "type": "const void *",
+          "name": "buffer"
+        }
+      ]
+    },
+    {
+      "name": "rlDrawVertexArrayInstanced",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "offset"
+        },
+        {
+          "type": "int",
+          "name": "count"
+        },
+        {
+          "type": "int",
+          "name": "instances"
+        }
+      ]
+    },
+    {
+      "name": "rlDrawVertexArrayElementsInstanced",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "offset"
+        },
+        {
+          "type": "int",
+          "name": "count"
+        },
+        {
+          "type": "const void *",
+          "name": "buffer"
+        },
+        {
+          "type": "int",
+          "name": "instances"
+        }
+      ]
+    },
+    {
+      "name": "rlLoadTexture",
+      "description": "",
+      "returnType": "unsigned int",
+      "params": [
+        {
+          "type": "const void *",
+          "name": "data"
+        },
+        {
+          "type": "int",
+          "name": "width"
+        },
+        {
+          "type": "int",
+          "name": "height"
+        },
+        {
+          "type": "int",
+          "name": "format"
+        },
+        {
+          "type": "int",
+          "name": "mipmapCount"
+        }
+      ]
+    },
+    {
+      "name": "rlLoadTextureDepth",
+      "description": "",
+      "returnType": "unsigned int",
+      "params": [
+        {
+          "type": "int",
+          "name": "width"
+        },
+        {
+          "type": "int",
+          "name": "height"
+        },
+        {
+          "type": "bool",
+          "name": "useRenderBuffer"
+        }
+      ]
+    },
+    {
+      "name": "rlLoadTextureCubemap",
+      "description": "",
+      "returnType": "unsigned int",
+      "params": [
+        {
+          "type": "const void *",
+          "name": "data"
+        },
+        {
+          "type": "int",
+          "name": "size"
+        },
+        {
+          "type": "int",
+          "name": "format"
+        },
+        {
+          "type": "int",
+          "name": "mipmapCount"
+        }
+      ]
+    },
+    {
+      "name": "rlUpdateTexture",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        },
+        {
+          "type": "int",
+          "name": "offsetX"
+        },
+        {
+          "type": "int",
+          "name": "offsetY"
+        },
+        {
+          "type": "int",
+          "name": "width"
+        },
+        {
+          "type": "int",
+          "name": "height"
+        },
+        {
+          "type": "int",
+          "name": "format"
+        },
+        {
+          "type": "const void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "rlGetGlTextureFormats",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "format"
+        },
+        {
+          "type": "unsigned int *",
+          "name": "glInternalFormat"
+        },
+        {
+          "type": "unsigned int *",
+          "name": "glFormat"
+        },
+        {
+          "type": "unsigned int *",
+          "name": "glType"
+        }
+      ]
+    },
+    {
+      "name": "rlGetPixelFormatName",
+      "description": "",
+      "returnType": "const char *",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "format"
+        }
+      ]
+    },
+    {
+      "name": "rlUnloadTexture",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        }
+      ]
+    },
+    {
+      "name": "rlGenTextureMipmaps",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        },
+        {
+          "type": "int",
+          "name": "width"
+        },
+        {
+          "type": "int",
+          "name": "height"
+        },
+        {
+          "type": "int",
+          "name": "format"
+        },
+        {
+          "type": "int *",
+          "name": "mipmaps"
+        }
+      ]
+    },
+    {
+      "name": "rlReadTexturePixels",
+      "description": "",
+      "returnType": "void *",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        },
+        {
+          "type": "int",
+          "name": "width"
+        },
+        {
+          "type": "int",
+          "name": "height"
+        },
+        {
+          "type": "int",
+          "name": "format"
+        }
+      ]
+    },
+    {
+      "name": "rlReadScreenPixels",
+      "description": "",
+      "returnType": "unsigned char *",
+      "params": [
+        {
+          "type": "int",
+          "name": "width"
+        },
+        {
+          "type": "int",
+          "name": "height"
+        }
+      ]
+    },
+    {
+      "name": "rlLoadFramebuffer",
+      "description": "",
+      "returnType": "unsigned int",
+      "params": []
+    },
+    {
+      "name": "rlFramebufferAttach",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        },
+        {
+          "type": "unsigned int",
+          "name": "texId"
+        },
+        {
+          "type": "int",
+          "name": "attachType"
+        },
+        {
+          "type": "int",
+          "name": "texType"
+        },
+        {
+          "type": "int",
+          "name": "mipLevel"
+        }
+      ]
+    },
+    {
+      "name": "rlFramebufferComplete",
+      "description": "",
+      "returnType": "bool",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        }
+      ]
+    },
+    {
+      "name": "rlUnloadFramebuffer",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        }
+      ]
+    },
+    {
+      "name": "rlCopyFramebuffer",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "x"
+        },
+        {
+          "type": "int",
+          "name": "y"
+        },
+        {
+          "type": "int",
+          "name": "width"
+        },
+        {
+          "type": "int",
+          "name": "height"
+        },
+        {
+          "type": "int",
+          "name": "format"
+        },
+        {
+          "type": "void *",
+          "name": "pixels"
+        }
+      ]
+    },
+    {
+      "name": "rlResizeFramebuffer",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "width"
+        },
+        {
+          "type": "int",
+          "name": "height"
+        }
+      ]
+    },
+    {
+      "name": "rlLoadShader",
+      "description": "",
+      "returnType": "unsigned int",
+      "params": [
+        {
+          "type": "const char *",
+          "name": "code"
+        },
+        {
+          "type": "int",
+          "name": "type"
+        }
+      ]
+    },
+    {
+      "name": "rlLoadShaderProgram",
+      "description": "",
+      "returnType": "unsigned int",
+      "params": [
+        {
+          "type": "const char *",
+          "name": "vsCode"
+        },
+        {
+          "type": "const char *",
+          "name": "fsCode"
+        }
+      ]
+    },
+    {
+      "name": "rlLoadShaderProgramEx",
+      "description": "",
+      "returnType": "unsigned int",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "vsId"
+        },
+        {
+          "type": "unsigned int",
+          "name": "fsId"
+        }
+      ]
+    },
+    {
+      "name": "rlLoadShaderProgramCompute",
+      "description": "",
+      "returnType": "unsigned int",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "csId"
+        }
+      ]
+    },
+    {
+      "name": "rlUnloadShader",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        }
+      ]
+    },
+    {
+      "name": "rlUnloadShaderProgram",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        }
+      ]
+    },
+    {
+      "name": "rlGetLocationUniform",
+      "description": "",
+      "returnType": "int",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        },
+        {
+          "type": "const char *",
+          "name": "uniformName"
+        }
+      ]
+    },
+    {
+      "name": "rlGetLocationAttrib",
+      "description": "",
+      "returnType": "int",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        },
+        {
+          "type": "const char *",
+          "name": "attribName"
+        }
+      ]
+    },
+    {
+      "name": "rlSetUniform",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "locIndex"
+        },
+        {
+          "type": "const void *",
+          "name": "value"
+        },
+        {
+          "type": "int",
+          "name": "uniformType"
+        },
+        {
+          "type": "int",
+          "name": "count"
+        }
+      ]
+    },
+    {
+      "name": "rlSetUniformMatrix",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "locIndex"
+        },
+        {
+          "type": "Matrix",
+          "name": "mat"
+        }
+      ]
+    },
+    {
+      "name": "rlSetUniformMatrices",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "locIndex"
+        },
+        {
+          "type": "const Matrix *",
+          "name": "mat"
+        },
+        {
+          "type": "int",
+          "name": "count"
+        }
+      ]
+    },
+    {
+      "name": "rlSetUniformSampler",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "locIndex"
+        },
+        {
+          "type": "unsigned int",
+          "name": "textureId"
+        }
+      ]
+    },
+    {
+      "name": "rlSetShader",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        },
+        {
+          "type": "int *",
+          "name": "locs"
+        }
+      ]
+    },
+    {
+      "name": "rlComputeShaderDispatch",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "groupX"
+        },
+        {
+          "type": "unsigned int",
+          "name": "groupY"
+        },
+        {
+          "type": "unsigned int",
+          "name": "groupZ"
+        }
+      ]
+    },
+    {
+      "name": "rlLoadShaderBuffer",
+      "description": "",
+      "returnType": "unsigned int",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "size"
+        },
+        {
+          "type": "const void *",
+          "name": "data"
+        },
+        {
+          "type": "int",
+          "name": "usageHint"
+        }
+      ]
+    },
+    {
+      "name": "rlUnloadShaderBuffer",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "ssboId"
+        }
+      ]
+    },
+    {
+      "name": "rlUpdateShaderBuffer",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        },
+        {
+          "type": "const void *",
+          "name": "data"
+        },
+        {
+          "type": "unsigned int",
+          "name": "dataSize"
+        },
+        {
+          "type": "unsigned int",
+          "name": "offset"
+        }
+      ]
+    },
+    {
+      "name": "rlBindShaderBuffer",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        },
+        {
+          "type": "unsigned int",
+          "name": "index"
+        }
+      ]
+    },
+    {
+      "name": "rlReadShaderBuffer",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        },
+        {
+          "type": "void *",
+          "name": "dest"
+        },
+        {
+          "type": "unsigned int",
+          "name": "count"
+        },
+        {
+          "type": "unsigned int",
+          "name": "offset"
+        }
+      ]
+    },
+    {
+      "name": "rlCopyShaderBuffer",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "destId"
+        },
+        {
+          "type": "unsigned int",
+          "name": "srcId"
+        },
+        {
+          "type": "unsigned int",
+          "name": "destOffset"
+        },
+        {
+          "type": "unsigned int",
+          "name": "srcOffset"
+        },
+        {
+          "type": "unsigned int",
+          "name": "count"
+        }
+      ]
+    },
+    {
+      "name": "rlGetShaderBufferSize",
+      "description": "",
+      "returnType": "unsigned int",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        }
+      ]
+    },
+    {
+      "name": "rlBindImageTexture",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "unsigned int",
+          "name": "id"
+        },
+        {
+          "type": "unsigned int",
+          "name": "index"
+        },
+        {
+          "type": "int",
+          "name": "format"
+        },
+        {
+          "type": "bool",
+          "name": "readonly"
+        }
+      ]
+    },
+    {
+      "name": "rlGetMatrixModelview",
+      "description": "",
+      "returnType": "Matrix",
+      "params": []
+    },
+    {
+      "name": "rlGetMatrixProjection",
+      "description": "",
+      "returnType": "Matrix",
+      "params": []
+    },
+    {
+      "name": "rlGetMatrixTransform",
+      "description": "",
+      "returnType": "Matrix",
+      "params": []
+    },
+    {
+      "name": "rlGetMatrixProjectionStereo",
+      "description": "",
+      "returnType": "Matrix",
+      "params": [
+        {
+          "type": "int",
+          "name": "eye"
+        }
+      ]
+    },
+    {
+      "name": "rlGetMatrixViewOffsetStereo",
+      "description": "",
+      "returnType": "Matrix",
+      "params": [
+        {
+          "type": "int",
+          "name": "eye"
+        }
+      ]
+    },
+    {
+      "name": "rlSetMatrixProjection",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "proj"
+        }
+      ]
+    },
+    {
+      "name": "rlSetMatrixModelview",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "view"
+        }
+      ]
+    },
+    {
+      "name": "rlSetMatrixProjectionStereo",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "right"
+        },
+        {
+          "type": "Matrix",
+          "name": "left"
+        }
+      ]
+    },
+    {
+      "name": "rlSetMatrixViewOffsetStereo",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "right"
+        },
+        {
+          "type": "Matrix",
+          "name": "left"
+        }
+      ]
+    },
+    {
+      "name": "rlLoadDrawCube",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "rlLoadDrawQuad",
+      "description": "",
+      "returnType": "void",
+      "params": []
+    }
+  ]
+}
