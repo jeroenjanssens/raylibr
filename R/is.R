@@ -31,7 +31,7 @@ is_vector_4 <- function(x) {
 
 #' @export
 is_raylib_matrix <- function(x) {
-  is.numeric(x) && is.matrix(x) && dim(x) == c(4, 4)
+  is.numeric(x) && is.matrix(x) && nrow(x) == 4 && ncol(x) == 4
 }
 
 #' @export
