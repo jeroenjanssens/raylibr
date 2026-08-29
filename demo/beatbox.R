@@ -20,7 +20,7 @@ while (!window_should_close()) {
   k <- get_key_pressed()
   if (k == key$space) {
     message("Pressed Space: Stopping all sounds")
-    stop_sound_multi()
+    lapply(sounds, stop_sound)
   } else if ((k >= key$a) && (k <= key$z)) {
     keyname <- tolower(rawToChar(as.raw(k)))
     ix <- k - key$a + 1
@@ -30,7 +30,7 @@ while (!window_should_close()) {
     }
     texts <- c(texts, ids[ix])
     lives <- c(lives, max_life)
-    play_sound_multi(sounds[[ix]])
+    play_sound(sounds[[ix]])
     message(paste0("Pressed ", keyname, ": Playing ", files[[ix]]))
   }
 

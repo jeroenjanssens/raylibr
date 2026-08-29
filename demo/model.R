@@ -12,7 +12,7 @@ init_window(screen_width, screen_height, "R & Raylib: 3D Model and Post-Processi
 
 church_model <- load_model(file.path(system.file(package = "raylibr"), "demo_resources", "model", "church.obj"))
 church_texture <- load_texture(file.path(system.file(package = "raylibr"), "demo_resources", "model", "church_diffuse.png"))
-set_model_texture(church_model, 0, material_map_index$diffuse, church_texture)
+set_model_texture(church_model, 0, material_map_index$albedo, church_texture)
 church_position <- c(0, 0, 0)
 
 shaders <- lapply(shader_files, function(x) { load_shader("", x) })
@@ -20,11 +20,10 @@ current_shader <- 1
 target <- load_render_texture(screen_width, screen_height)
 
 cam <- camera_3d(c(2, 3, 2), c(0, 1, 0), fovy = 70)
-set_camera_mode(cam, camera_mode$orbital)
 set_target_fps(60)
 
 while (!window_should_close()) {
-  cam <- update_camera(cam)
+  update_camera(cam, camera_mode$orbital)
 
   if (is_key_pressed(key$right)) current_shader <- current_shader + 1
   if (is_key_pressed(key$left)) current_shader <- current_shader - 1

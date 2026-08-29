@@ -27,10 +27,10 @@ while(!window_should_close()) {
   for (x in xs) {
     for (y in ys) {
       from <- c(x, y)
-      d <- vector_2_distance(mp, from)
+      d <- vector2_distance(mp, from)
       m <- max(l - d, 0)
-      to <- vector_2_move_towards(from, mp, -m/4)
-      dd <- vector_2_distance(mp, to)
+      to <- vector2_move_towards(from, mp, -m/4)
+      dd <- vector2_distance(mp, to)
       if (dd < l/2) {
         draw_line_v(to, mp, "white")
       }
