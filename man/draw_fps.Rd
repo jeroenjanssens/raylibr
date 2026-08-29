@@ -4,7 +4,7 @@
 \alias{draw_fps}
 \title{Draw Fps}
 \usage{
-draw_fps(pos_x, pos_y)
+draw_fps(pos_x = 10L, pos_y = 10L)
 }
 \arguments{
 \item{pos_x}{An integer.}

@@ -4,7 +4,7 @@
 \alias{init_window}
 \title{Init Window}
 \usage{
-init_window(width, height, title)
+init_window(width = 640L, height = 480L, title = "raylibr")
 }
 \arguments{
 \item{width}{An integer.}

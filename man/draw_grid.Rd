@@ -4,7 +4,7 @@
 \alias{draw_grid}
 \title{Draw Grid}
 \usage{
-draw_grid(slices, spacing)
+draw_grid(slices = 10L, spacing = 1)
 }
 \arguments{
 \item{slices}{An integer.}

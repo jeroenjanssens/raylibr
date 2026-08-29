@@ -4,7 +4,7 @@
 \alias{camera_2d}
 \title{Camera 2d}
 \usage{
-camera_2d(offset, target, rotation, zoom)
+camera_2d(offset, target, rotation = 0, zoom = 1)
 }
 \arguments{
 \item{offset}{A numeric vector of length 2. Camera offset (screen space offset from window origin).}

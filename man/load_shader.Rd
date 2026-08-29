@@ -4,7 +4,7 @@
 \alias{load_shader}
 \title{Load Shader}
 \usage{
-load_shader(vs_file_name, fs_file_name)
+load_shader(vs_file_name = "", fs_file_name)
 }
 \arguments{
 \item{vs_file_name}{A string.}

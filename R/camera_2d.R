@@ -34,7 +34,7 @@ is_camera_2d <- function(x) {
 #'
 #'
 #' @export
-camera_2d <- function(offset, target, rotation, zoom) {
+camera_2d <- function(offset, target, rotation = 0, zoom = 1) {
   if (!is_vector_2(offset)) abort(paste0('`offset` must be a numeric vector of length 2, not ', friendly_typeof(offset), '.'), call = NULL)
   if (!is_vector_2(target)) abort(paste0('`target` must be a numeric vector of length 2, not ', friendly_typeof(target), '.'), call = NULL)
   if (!is_float(rotation)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(rotation), '.'), call = NULL)

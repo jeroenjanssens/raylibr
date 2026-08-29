@@ -4,7 +4,7 @@
 \alias{clear_background}
 \title{Clear Background}
 \usage{
-clear_background(color)
+clear_background(color = "white")
 }
 \arguments{
 \item{color}{A color.}

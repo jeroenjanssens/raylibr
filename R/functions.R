@@ -43,7 +43,7 @@
 #'
 #'
 #' @export
-init_window <- function(width, height, title) {
+init_window <- function(width = 640L, height = 480L, title = "raylibr") {
   if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
   if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
   if (!is_const_char_pointer(title)) abort(paste0('`title` must be a string, not ', friendly_typeof(title), '.'), call = NULL)
@@ -1195,7 +1195,7 @@ is_cursor_on_screen <- function() {
 #'
 #'
 #' @export
-clear_background <- function(color) {
+clear_background <- function(color = "white") {
   if (!is_color(color)) abort(paste0('`color` must be a color, not ', friendly_typeof(color), '.'), call = NULL)
   clear_background_(color)
 }
@@ -1606,7 +1606,7 @@ unload_vr_stereo_config <- function(config) {
 #'
 #'
 #' @export
-load_shader <- function(vs_file_name, fs_file_name) {
+load_shader <- function(vs_file_name = "", fs_file_name) {
   if (!is_const_char_pointer(vs_file_name)) abort(paste0('`vs_file_name` must be a string, not ', friendly_typeof(vs_file_name), '.'), call = NULL)
   if (!is_const_char_pointer(fs_file_name)) abort(paste0('`fs_file_name` must be a string, not ', friendly_typeof(fs_file_name), '.'), call = NULL)
   load_shader_(vs_file_name, fs_file_name)
@@ -2017,7 +2017,7 @@ get_camera_matrix_2d <- function(camera) {
 #'
 #'
 #' @export
-set_target_fps <- function(fps) {
+set_target_fps <- function(fps = 60L) {
   if (!is_int(fps)) abort(paste0('`fps` must be an integer, not ', friendly_typeof(fps), '.'), call = NULL)
   set_target_fps_(fps)
 }
@@ -7828,7 +7828,7 @@ export_font_as_code <- function(font, file_name) {
 #'
 #'
 #' @export
-draw_fps <- function(pos_x, pos_y) {
+draw_fps <- function(pos_x = 10L, pos_y = 10L) {
   lens <- c(length(pos_x), length(pos_y))
   if (any(lens > 1)) {
     n <- max(lens)
@@ -7862,7 +7862,7 @@ draw_fps <- function(pos_x, pos_y) {
 #'
 #'
 #' @export
-draw_text <- function(text, pos_x, pos_y, font_size, color) {
+draw_text <- function(text, pos_x, pos_y, font_size, color = "black") {
   lens <- c(length(text), length(pos_x), length(pos_y), length(font_size), .color_len(color))
   if (any(lens > 1)) {
     n <- max(lens)
@@ -9414,7 +9414,7 @@ draw_ray <- function(ray, color) {
 #'
 #'
 #' @export
-draw_grid <- function(slices, spacing) {
+draw_grid <- function(slices = 10L, spacing = 1) {
   lens <- c(length(slices), length(spacing))
   if (any(lens > 1)) {
     n <- max(lens)

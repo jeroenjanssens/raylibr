@@ -107,6 +107,17 @@ return_map <- list(
   "Camera"         = list(r_doc = "A camera_3d")
 )
 
+# Per-function parameter defaults (PascalCase C name -> list of snake_case param = "R expression"))
+function_defaults <- list(
+  InitWindow       = list(width = "640L", height = "480L", title = '"raylibr"'),
+  ClearBackground  = list(color = '"white"'),
+  SetTargetFPS     = list(fps = "60L"),
+  DrawText         = list(color = '"black"'),
+  DrawGrid         = list(slices = "10L", spacing = "1"),
+  LoadShader       = list(vs_file_name = '""'),
+  DrawFPS          = list(pos_x = "10L", pos_y = "10L")
+)
+
 # Functions to skip (pointer params we can't auto-wrap, internal, or manually handled)
 skip_functions <- c(
   # Manually handled in R/extra.R or src/manual_wrappers.cpp
@@ -622,7 +633,11 @@ generate_function_r <- function(func_row) {
     lines <- c(lines, paste0("  ", snake, "_()"))
   } else {
     param_names <- field_to_snake(params$name)
-    lines <- c(lines, paste0(snake, " <- function(", paste(param_names, collapse = ", "), ") {"))
+    fn_defaults <- function_defaults[[name]]
+    func_args <- sapply(param_names, function(p) {
+      if (!is.null(fn_defaults[[p]])) paste0(p, " = ", fn_defaults[[p]]) else p
+    })
+    lines <- c(lines, paste0(snake, " <- function(", paste(func_args, collapse = ", "), ") {"))
 
     # Vectorized dispatch
     if (vectorized) {
@@ -738,7 +753,8 @@ generate_struct_r <- function(struct_row) {
   # Per-field defaults for specific structs
   field_defaults <- list(
     Color = list(a = "255"),
-    Camera3D = list(target = "c(0, 0, 0)", up = "c(0, 1, 0)", fovy = "45", projection = "0L")
+    Camera3D = list(target = "c(0, 0, 0)", up = "c(0, 1, 0)", fovy = "70", projection = "0L"),
+    Camera2D = list(rotation = "0", zoom = "1")
   )
   defaults <- field_defaults[[name]]
 

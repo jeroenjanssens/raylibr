@@ -4,7 +4,7 @@
 \alias{draw_text}
 \title{Draw Text}
 \usage{
-draw_text(text, pos_x, pos_y, font_size, color)
+draw_text(text, pos_x, pos_y, font_size, color = "black")
 }
 \arguments{
 \item{text}{A string.}

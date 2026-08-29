@@ -8,7 +8,7 @@ camera_3d(
   position,
   target = c(0, 0, 0),
   up = c(0, 1, 0),
-  fovy = 45,
+  fovy = 70,
   projection = 0L
 )
 }

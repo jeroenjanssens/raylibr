@@ -4,7 +4,7 @@
 \alias{set_target_fps}
 \title{Set Target Fps}
 \usage{
-set_target_fps(fps)
+set_target_fps(fps = 60L)
 }
 \arguments{
 \item{fps}{An integer.}
