@@ -1,0 +1,16 @@
+#!/bin/sh
+
+UNAME=$(uname)
+case "$UNAME" in
+  Linux)
+    SYS_LIBS="-lGL -lm -lpthread -ldl -lrt -lX11"
+    ;;
+  Darwin)
+    SYS_LIBS="-framework OpenGL -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreGraphics"
+    ;;
+  *)
+    SYS_LIBS=""
+    ;;
+esac
+
+sed "s|@SYS_LIBS@|$SYS_LIBS|" src/Makevars.in > src/Makevars
