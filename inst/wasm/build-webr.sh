@@ -86,7 +86,7 @@ COPYFILE_DISABLE=1 tar -czf raylibr_6.0.0.9001.tgz raylibr
 mkdir -p "$REPO_DIR"
 cp "$PKG_DIR/raylibr_6.0.0.9001.tgz" "$REPO_DIR/"
 cd "$REPO_DIR"
-Rscript -e 'tools::write_PACKAGES(".", type="source")'
+Rscript -e 'tools::write_PACKAGES(".", type="mac.binary")'
 
 echo "=== Done! Package at $REPO_DIR/raylibr_6.0.0.9001.tgz ==="
 ls -la "$REPO_DIR/raylibr_6.0.0.9001.tgz"
