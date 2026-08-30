@@ -36,7 +36,10 @@ done
 emcc -Wall -fPIC -D_GNU_SOURCE -DPLATFORM_WEB_EMSCRIPTEN -DGRAPHICS_API_OPENGL_ES2 \
     -Wno-missing-braces -std=gnu99 -Os -I. -c raudio.c -o raudio.o
 
-emar rcs "$BUILD_DIR/libraylib.web.a" rcore.o rshapes.o rtextures.o rtext.o rmodels.o raudio.o
+emcc -Wall -fPIC -fno-builtin -D_GNU_SOURCE -DPLATFORM_WEB_EMSCRIPTEN \
+    -std=gnu99 -Os -I. -c "$RAYLIBR_DIR/inst/wasm/wasm_compat.c" -o wasm_compat.o
+
+emar rcs "$BUILD_DIR/libraylib.web.a" rcore.o rshapes.o rtextures.o rtext.o rmodels.o raudio.o wasm_compat.o
 
 # Copy headers
 for h in raylib.h raymath.h rlgl.h rcamera.h; do
