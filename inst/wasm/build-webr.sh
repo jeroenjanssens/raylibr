@@ -7,7 +7,9 @@ RAYLIBR_DIR="$(cd "$(dirname "$0")/../.."; pwd)"
 BUILD_DIR="${BUILD_DIR:-/tmp/webr-local-build}"
 REPO_DIR="$RAYLIBR_DIR/pkgdown/assets/wasm/repo/bin/emscripten/contrib/4.6"
 
-source ~/emsdk/emsdk_env.sh 2>/dev/null
+if [ -f ~/emsdk/emsdk_env.sh ]; then
+  source ~/emsdk/emsdk_env.sh 2>/dev/null
+fi
 
 R_INCLUDE="$(R RHOME)/include"
 RCPP_INCLUDE="$(Rscript -e 'cat(system.file("include", package="Rcpp"))')"
@@ -79,7 +81,7 @@ cp -r "$R_LIB/raylibr/Meta" "$PKG_DIR/raylibr/"
 
 cd "$PKG_DIR"
 xattr -cr raylibr 2>/dev/null || true
-COPYFILE_DISABLE=1 tar --no-xattrs --no-mac-metadata -czf raylibr_6.0.0.9001.tgz raylibr
+COPYFILE_DISABLE=1 tar -czf raylibr_6.0.0.9001.tgz raylibr
 
 mkdir -p "$REPO_DIR"
 cp "$PKG_DIR/raylibr_6.0.0.9001.tgz" "$REPO_DIR/"
