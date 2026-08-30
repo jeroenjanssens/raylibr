@@ -205,12 +205,59 @@ def patch_platform():
     else:
         print("WARNING: Could not find callback registration block", file=sys.stderr)
 
-    # 7. Patch SetMouseCursor: skip DOM style manipulation in worker
+    # 7. Patch cursor functions: replace EM_ASM with emscripten_run_script
+    # EM_ASM JS strings are not registered in SIDE_MODULE builds, so we must
+    # use emscripten_run_script instead.  In worker mode, we proxy the cursor
+    # change to the main thread via self.postMessage (the main thread HTML
+    # listens for __raylibr_cursor messages and updates canvas.style.cursor).
+    # 7a. SetMouseCursor
     old_cursor = '        if (!CORE.Input.Mouse.cursorLocked) EM_ASM( { Module.canvas.style.cursor = UTF8ToString($0); }, cursorLUT[cursor]);'
-    new_cursor = '        if (!CORE.Input.Mouse.cursorLocked && !IsWorkerMode()) EM_ASM( { Module.canvas.style.cursor = UTF8ToString($0); }, cursorLUT[cursor]);'
+    new_cursor = (
+        '        if (!CORE.Input.Mouse.cursorLocked) {\n'
+        '            char _ccmd[192];\n'
+        '            snprintf(_ccmd, sizeof(_ccmd),\n'
+        '                "if(Module.canvas&&Module.canvas.style)"\n'
+        f'                "Module.canvas.style.cursor={SQ}%s{SQ};"\n'
+        f'                "else if(typeof self!={SQ}undefined{SQ})"\n'
+        f'                "self.postMessage({{type:{SQ}__raylibr_cursor{SQ},cursor:{SQ}%s{SQ}}})",\n'
+        '                cursorLUT[cursor], cursorLUT[cursor]);\n'
+        '            emscripten_run_script(_ccmd);\n'
+        '        }'
+    )
     if old_cursor in p:
         p = p.replace(old_cursor, new_cursor, 1)
         print("SetMouseCursor patched")
+
+    # 7b. ShowCursor
+    old_show = '        EM_ASM( { Module.canvas.style.cursor = UTF8ToString($0); }, cursorLUT[CORE.Input.Mouse.cursor]);'
+    new_show = (
+        '        {\n'
+        '            char _ccmd[192];\n'
+        '            snprintf(_ccmd, sizeof(_ccmd),\n'
+        '                "if(Module.canvas&&Module.canvas.style)"\n'
+        f'                "Module.canvas.style.cursor={SQ}%s{SQ};"\n'
+        f'                "else if(typeof self!={SQ}undefined{SQ})"\n'
+        f'                "self.postMessage({{type:{SQ}__raylibr_cursor{SQ},cursor:{SQ}%s{SQ}}})",\n'
+        '                cursorLUT[CORE.Input.Mouse.cursor], cursorLUT[CORE.Input.Mouse.cursor]);\n'
+        '            emscripten_run_script(_ccmd);\n'
+        '        }'
+    )
+    if old_show in p:
+        p = p.replace(old_show, new_show, 1)
+        print("ShowCursor patched")
+
+    # 7c. HideCursor
+    old_hide = "        EM_ASM(Module.canvas.style.cursor = 'none';);"
+    new_hide = (
+        "        emscripten_run_script(\n"
+        "            \"if(Module.canvas&&Module.canvas.style)\"\n"
+        "            \"Module.canvas.style.cursor='none';\"\n"
+        "            \"else if(typeof self!='undefined')\"\n"
+        "            \"self.postMessage({type:'__raylibr_cursor',cursor:'none'})\");"
+    )
+    if old_hide in p:
+        p = p.replace(old_hide, new_hide, 1)
+        print("HideCursor patched")
 
     # 8. Patch PollInputEvents: read input from SAB
     # SAB layout (8 x Int32 = 32 bytes):

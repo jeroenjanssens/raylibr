@@ -27,7 +27,11 @@ globalThis.Worker = class extends _OrigWorker {
     super(...args);
     webRWorker = this;
     this.addEventListener('message', (e) => {
-      if (e.data && e.data.type === '__raylibr_frame') {
+      if (e.data && e.data.type === '__raylibr_audio') {
+        audioProxy.handle(e.data);
+      } else if (e.data && e.data.type === '__raylibr_cursor') {
+        canvas.style.cursor = e.data.cursor;
+      } else if (e.data && e.data.type === '__raylibr_frame') {
         const src = new Uint8ClampedArray(e.data.px);
         const w = e.data.w, h = e.data.h, stride = w * 4;
         const dst = new Uint8ClampedArray(src.length);
@@ -41,9 +45,10 @@ globalThis.Worker = class extends _OrigWorker {
   }
 };
 
+import { audioProxy } from './raylibr-audio.js';
 import { WebR } from 'https://webr.r-wasm.org/v0.6.0/webr.mjs';
 
-canvas.addEventListener("click", () => { if (webRWorker) webRWorker.postMessage({type: "__raylibr_audio_unlock"}); });
+canvas.addEventListener("click", () => { audioProxy.unlock(); if (webRWorker) webRWorker.postMessage({type: "__raylibr_audio_unlock"}); });
 
 async function main() {
   const webR = new WebR();

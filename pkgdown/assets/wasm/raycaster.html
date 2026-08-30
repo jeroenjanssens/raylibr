@@ -30,6 +30,8 @@ globalThis.Worker = class extends _OrigWorker {
     this.addEventListener('message', (e) => {
       if (e.data && e.data.type === '__raylibr_sab') {
         inputSAB = new Int32Array(e.data.sab);
+      } else if (e.data && e.data.type === '__raylibr_cursor') {
+        canvas.style.cursor = e.data.cursor;
       } else if (e.data && e.data.type === '__raylibr_frame') {
         const src = new Uint8ClampedArray(e.data.px);
         const w = e.data.w, h = e.data.h, stride = w * 4;
