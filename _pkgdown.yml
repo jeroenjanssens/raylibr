@@ -2,7 +2,7 @@ url: https://jeroenjanssens.github.io/raylibr/
 template:
   bootstrap: 5
   includes:
-    in_header: <script src="coi-serviceworker.js"></script>
+    in_header: <script src="https://jeroenjanssens.github.io/raylibr/coi-serviceworker.js"></script>
 
 articles:
   - title: Guides
