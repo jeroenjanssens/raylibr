@@ -2,8 +2,17 @@
 
 RAYLIB_SRC = raylib-6.0-minimal
 
-PKG_LIBS = -L../inst/$(RAYLIB_SRC)/src -lraylib
+UNAME := $(shell uname)
+
 PKG_CPPFLAGS = -I../inst/include
+PKG_LIBS = -L../inst/$(RAYLIB_SRC)/src -lraylib
+
+ifeq ($(UNAME),Linux)
+  PKG_LIBS += -lGL -lm -lpthread -ldl -lrt -lX11
+endif
+ifeq ($(UNAME),Darwin)
+  PKG_LIBS += -framework OpenGL -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreGraphics
+endif
 
 OBJECTS = audio.o core.o manual_wrappers.o models.o raygui_impl.o raygui_funcs.o raymath_funcs.o rcolors.o RcppExports.o rlgl.o shapes.o structs.o text.o textures.o types.o web.o
 
