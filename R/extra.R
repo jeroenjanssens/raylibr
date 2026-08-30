@@ -83,6 +83,15 @@ is_web <- function() {
   is_web_()
 }
 
+#' Evaluate JavaScript
+#'
+#' @param script Character string of JavaScript to evaluate.
+#' @return Character string result.
+#' @export
+eval_js <- function(script) {
+  eval_js_(script)
+}
+
 #' Run game loop
 #'
 #' Portable game loop that works on both desktop and web (webR/Emscripten).

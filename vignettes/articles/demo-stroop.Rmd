@@ -4,6 +4,12 @@ title: "Stroop Test"
 
 An implementation of the classic Stroop psychological experiment: press any key to display a color word (e.g. "red") rendered in a *different* color (e.g. blue), challenging the brain's automatic reading response. It demonstrates `load_font_ex()` for custom fonts, `measure_text_ex()` and `draw_text_ex()` for precise text layout, and `get_key_pressed()` for input handling.
 
+## Try it
+
+Click the canvas to focus it, then press any key to generate a new word.
+
+<iframe src="../wasm/stroop.html" width="600" height="460" style="border:none; display:block; margin:0 auto;"></iframe>
+
 ## Run
 
 ```r

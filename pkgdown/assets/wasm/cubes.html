@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>raylibr: Waving Cubes and Music</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #000; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+  canvas { display: block; image-rendering: pixelated; }
+  #loading { position: absolute; color: #888; font-family: monospace; font-size: 14px; }
+</style>
+</head>
+<body>
+<canvas id="canvas" width="600" height="400" tabindex="0"></canvas>
+<div id="loading">Loading raylibr...</div>
+
+<script type="module">
+const canvas = document.getElementById('canvas');
+const ctx2d = canvas.getContext('2d');
+const loading = document.getElementById('loading');
+
+const _OrigWorker = Worker;
+let webRWorker = null;
+globalThis.Worker = class extends _OrigWorker {
+  constructor(...args) {
+    super(...args);
+    webRWorker = this;
+    this.addEventListener('message', (e) => {
+      if (e.data && e.data.type === '__raylibr_frame') {
+        const src = new Uint8ClampedArray(e.data.px);
+        const w = e.data.w, h = e.data.h, stride = w * 4;
+        const dst = new Uint8ClampedArray(src.length);
+        for (let y = 0; y < h; y++) {
+          dst.set(src.subarray((h - 1 - y) * stride, (h - y) * stride), y * stride);
+        }
+        ctx2d.putImageData(new ImageData(dst, w, h), 0, 0);
+        if (loading.style.display !== 'none') loading.style.display = 'none';
+      }
+    });
+  }
+};
+
+import { WebR } from 'https://webr.r-wasm.org/v0.6.0/webr.mjs';
+
+canvas.addEventListener("click", () => { if (webRWorker) webRWorker.postMessage({type: "__raylibr_audio_unlock"}); });
+
+async function main() {
+  const webR = new WebR();
+  await webR.init();
+  loading.textContent = 'Installing packages...';
+  await webR.installPackages(['Rcpp'], { repos: ['https://repo.r-wasm.org'], quiet: true });
+  const localRepo = new URL('repo', window.location.href).href;
+  await webR.installPackages(['raylibr'], { repos: [localRepo], quiet: true });
+  loading.textContent = 'Starting demo...';
+  await webR.evalR('library(raylibr)');
+  await webR.evalR(`
+    init_audio_device()
+    music <- load_music_stream(file.path(system.file(package = "raylibr"), "demo_resources", "mini1111.xm"))
+
+    init_window(600, 400, "R & Raylib: Waving Cubes and Music")
+
+    cam <- camera_3d(position = c(30, 20, 30))
+
+    num_blocks <- 15
+    blocks <- seq(num_blocks) - 1
+
+    play_music_stream(music)
+    set_target_fps(60)
+
+    xyz <- as.matrix(expand.grid(blocks, blocks, blocks))
+    block_scale <- rowSums(xyz) / 30
+    cube_color <- lapply((rowSums(xyz) * 18) %% 360, color_from_hsv, 0.75, 0.9)
+
+    while (!window_should_close()) {
+      update_music_stream(music)
+      time <- get_time()
+      scale <- (2 + sin(time)) * 0.7
+      camera_time <- time * 0.3
+      cam$position[c("x", "z")] <- c(cos(camera_time), sin(camera_time)) * 40
+
+      scatter <- sin(block_scale * 20 + time * 4)
+      cube_pos <- (xyz - num_blocks / 2) * scale * c(3, 2, 3) + scatter
+      cube_size <- (2.4 - scale) * block_scale
+
+      begin_drawing()
+      clear_background("white")
+      begin_mode_3d(cam)
+      draw_grid(10, 5)
+      draw_cube(cube_pos, cube_size, cube_size, cube_size, cube_color)
+      end_mode_3d()
+      draw_fps(10, 10)
+      end_drawing()
+    }
+
+    close_window()
+    unload_music_stream(music)
+    close_audio_device()
+  `);
+}
+
+main().catch(e => { loading.textContent = 'Error: ' + e.message; console.error(e); });
+</script>
+</body>
+</html>

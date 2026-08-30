@@ -6,6 +6,12 @@ Press letter keys to trigger individual percussion sound samples; each keystroke
 
 ![](../reference/figures/raylibr-demo-beatbox.gif)
 
+## Try it
+
+Click the canvas to focus it and enable audio. Press letter keys (a-z) to play percussion samples; hold Shift for uppercase variants. Press Space to stop all sounds.
+
+<iframe src="../wasm/beatbox.html" width="600" height="660" style="border:none; display:block; margin:0 auto;"></iframe>
+
 ## Run
 
 ```r

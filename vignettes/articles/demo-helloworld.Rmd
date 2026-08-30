@@ -6,6 +6,10 @@ The simplest raylibr demo: open a window, draw a pulsing set of concentric circl
 
 ![](../reference/figures/raylibr-demo-helloworld.gif)
 
+## Try it
+
+<iframe src="../wasm/hello.html" width="600" height="400" style="border:none; display:block; margin:0 auto;"></iframe>
+
 ## Run
 
 ```r

@@ -6,6 +6,12 @@ A 3D grid of 3,375 color-coded cubes that wave and pulse in sync with a looping 
 
 ![](../reference/figures/raylibr-demo-cubes.gif)
 
+## Try it
+
+3,375 color-coded cubes wave and pulse in sync with a looping XM music track while the camera orbits automatically. Click the canvas to enable audio.
+
+<iframe src="../wasm/cubes.html" width="600" height="460" style="border:none; display:block; margin:0 auto;"></iframe>
+
 ## Run
 
 ```r

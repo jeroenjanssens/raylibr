@@ -4,6 +4,12 @@ title: "Stars"
 
 A tiled starfield texture is warped by a GLSL wave distortion fragment shader, with frequency, amplitude, and speed parameters passed from R each frame via `set_shader_value()`. The demo shows the full shader workflow: `load_shader()`, `get_shader_location()`, per-frame uniform updates, `begin_shader_mode()` / `end_shader_mode()`, and accessing struct fields via `t$width` to tile the texture seamlessly.
 
+## Try it
+
+A tiled starfield warped by a GLSL wave distortion shader. Just sit back and watch.
+
+<iframe src="../wasm/shader.html" width="800" height="510" style="border:none; display:block; margin:0 auto;"></iframe>
+
 ## Run
 
 ```r

@@ -11,3 +11,6 @@ docs
 *.so
 *.dll
 src/raylib_built
+
+# webR WASM build output (rebuilt by CI)
+pkgdown/assets/wasm/repo/

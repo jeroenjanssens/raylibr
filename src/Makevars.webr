@@ -1,0 +1,26 @@
+.PHONY: all cleanray
+
+RAYLIB_SRC = raylib-6.0-minimal
+
+PKG_LIBS = -L../inst/$(RAYLIB_SRC)/src -lraylib
+PKG_CPPFLAGS = -I../inst/include -DPLATFORM_WEB
+
+OBJECTS = audio.o core.o manual_wrappers.o models.o raygui_impl.o raygui_funcs.o raymath_funcs.o rcolors.o RcppExports.o rlgl.o shapes.o structs.o text.o textures.o types.o web.o
+
+all: cleanray
+
+cleanray: $(SHLIB)
+	rm -rf ../inst/$(RAYLIB_SRC)
+
+$(OBJECTS): raylib_built
+
+raylib_built:
+	(cd ../inst; tar -xf $(RAYLIB_SRC).tar.gz)
+	(cd ../inst/$(RAYLIB_SRC)/src; $(MAKE) PLATFORM=PLATFORM_WEB CC=emcc AR=emar -j$$(nproc 2>/dev/null || echo 4))
+	mkdir -p ../inst/include
+	cp ../inst/$(RAYLIB_SRC)/src/raylib.h ../inst/include
+	cp ../inst/$(RAYLIB_SRC)/src/raymath.h ../inst/include
+	cp ../inst/$(RAYLIB_SRC)/src/rlgl.h ../inst/include
+	cp ../inst/$(RAYLIB_SRC)/src/rcamera.h ../inst/include
+	cp ../inst/raygui.h ../inst/include
+	touch $@

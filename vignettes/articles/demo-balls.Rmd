@@ -6,6 +6,10 @@ One thousand balls with random sizes, positions, velocities, and colors bounce a
 
 ![](../reference/figures/raylibr-demo-balls.gif)
 
+## Try it
+
+<iframe src="../wasm/balls.html" width="600" height="400" style="border:none; display:block; margin:0 auto;"></iframe>
+
 ## Run
 
 ```r

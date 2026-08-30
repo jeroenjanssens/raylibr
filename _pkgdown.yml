@@ -3,6 +3,10 @@ template:
   bootstrap: 5
 
 articles:
+  - title: Guides
+    navbar: Guides
+    contents:
+    - "articles/wasm"
   - title: Demos
     navbar: Demos
     contents:

@@ -4,6 +4,12 @@ title: "GUI Controls"
 
 A showcase of raygui's immediate-mode GUI widgets: a button, toggle, checkbox, sliders, a progress bar, combo box, spinner, text input, a hue color bar, and a status bar — all live and interactive. The background color shifts with the hue slider via `color_from_hsv()`. This demo covers the output-pointer pattern used by raygui controls, where each call returns a list with a `result` code and the updated control value.
 
+## Try it
+
+Click and drag the sliders, click the button and toggle, and type in the text box.
+
+<iframe src="../wasm/gui.html" width="500" height="580" style="border:none; display:block; margin:0 auto;"></iframe>
+
 ## Run
 
 ```r

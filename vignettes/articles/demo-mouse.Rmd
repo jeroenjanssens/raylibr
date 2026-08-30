@@ -4,6 +4,12 @@ title: "Mouse Test"
 
 A grid of dots that react to the mouse cursor: each dot moves away from the pointer proportional to proximity, and its color shifts with `color_from_hsv()` based on how far it was pushed. This demo exercises mouse input (`get_mouse_position()`, `is_cursor_on_screen()`, `set_mouse_cursor()`), raymath functions (`vector2_distance()`, `vector2_move_towards()`), and `draw_circle_v()` / `draw_line_v()` for rendering.
 
+## Try it
+
+Move your mouse over the canvas to interact with the dots.
+
+<iframe src="../wasm/mouse.html" width="600" height="600" style="border:none; display:block; margin:0 auto;"></iframe>
+
 ## Run
 
 ```r

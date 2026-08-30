@@ -6,6 +6,12 @@ A Wolfenstein-style raycaster written entirely in R: WASD movement, mouse look, 
 
 ![](../reference/figures/raylibr-demo-raycaster.gif)
 
+## Try it
+
+Click the canvas to focus it. Move the mouse to look around, WASD to move. Tab toggles the debug map view.
+
+<iframe src="../wasm/raycaster.html" width="1024" height="572" style="border:none; display:block; margin:0 auto; max-width:100%;"></iframe>
+
 ## Run
 
 ```r

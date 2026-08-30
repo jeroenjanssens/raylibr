@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>raylibr: Raycaster</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #000; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+  canvas { display: block; image-rendering: pixelated; cursor: crosshair; }
+  #loading { position: absolute; color: #888; font-family: monospace; font-size: 14px; }
+</style>
+</head>
+<body>
+<canvas id="canvas" width="1024" height="512" tabindex="0"></canvas>
+<div id="loading">Loading raylibr...</div>
+
+<script type="module">
+const canvas = document.getElementById('canvas');
+const ctx2d = canvas.getContext('2d');
+const loading = document.getElementById('loading');
+
+const _OrigWorker = Worker;
+let inputSAB = null;
+let webRWorker = null;
+globalThis.Worker = class extends _OrigWorker {
+  constructor(...args) {
+    super(...args);
+    webRWorker = this;
+    this.addEventListener('message', (e) => {
+      if (e.data && e.data.type === '__raylibr_sab') {
+        inputSAB = new Int32Array(e.data.sab);
+      } else if (e.data && e.data.type === '__raylibr_frame') {
+        const src = new Uint8ClampedArray(e.data.px);
+        const w = e.data.w, h = e.data.h, stride = w * 4;
+        const dst = new Uint8ClampedArray(src.length);
+        for (let y = 0; y < h; y++) {
+          dst.set(src.subarray((h - 1 - y) * stride, (h - y) * stride), y * stride);
+        }
+        ctx2d.putImageData(new ImageData(dst, w, h), 0, 0);
+        if (loading.style.display !== 'none') {
+          loading.style.display = 'none';
+          canvas.focus();
+        }
+      }
+    });
+  }
+};
+
+import { WebR } from 'https://webr.r-wasm.org/v0.6.0/webr.mjs';
+
+// SAB[6] key-down bitmask: W=1,A=2,S=4,D=8,Left=16,Right=32,Up=64,Down=128,Space=256,[=512,]=1024,.=2048,,=4096
+const KEYDOWN_MAP = {
+  'KeyW': 1, 'KeyA': 2, 'KeyS': 4, 'KeyD': 8,
+  'ArrowLeft': 16, 'ArrowRight': 32, 'ArrowUp': 64, 'ArrowDown': 128,
+  'Space': 256, 'BracketLeft': 512, 'BracketRight': 1024,
+  'Period': 2048, 'Comma': 4096,
+};
+
+const KEY_MAP = {
+  'ArrowLeft': 263, 'ArrowRight': 262, 'ArrowUp': 265, 'ArrowDown': 264,
+  'Escape': 256, 'Enter': 257, ' ': 32, 'Tab': 258,
+  '-': 45, '=': 61,
+  '1': 49, '2': 50, '3': 51, '4': 52, '5': 53,
+  '6': 54, '7': 55, '8': 56, '9': 57,
+};
+
+canvas.addEventListener('mousemove', (e) => {
+  if (!inputSAB) return;
+  const rect = canvas.getBoundingClientRect();
+  const sx = canvas.width / rect.width, sy = canvas.height / rect.height;
+  Atomics.store(inputSAB, 0, Math.round((e.clientX - rect.left) * sx));
+  Atomics.store(inputSAB, 1, Math.round((e.clientY - rect.top) * sy));
+  Atomics.store(inputSAB, 2, 1);
+});
+canvas.addEventListener('mouseenter', () => { if (inputSAB) Atomics.store(inputSAB, 2, 1); });
+canvas.addEventListener('mouseleave', () => { if (inputSAB) Atomics.store(inputSAB, 2, 0); });
+
+canvas.addEventListener('keydown', (e) => {
+  if (!inputSAB) return;
+  const bit = KEYDOWN_MAP[e.code];
+  if (bit !== undefined) {
+    Atomics.or(inputSAB, 6, bit);
+    e.preventDefault();
+  }
+  const raylibKey = KEY_MAP[e.key] || (e.key.length === 1 ? e.key.toUpperCase().charCodeAt(0) : 0);
+  if (raylibKey) {
+    Atomics.store(inputSAB, 3, raylibKey);
+    if (!bit) e.preventDefault();
+  }
+});
+canvas.addEventListener('keyup', (e) => {
+  if (!inputSAB) return;
+  const bit = KEYDOWN_MAP[e.code];
+  if (bit !== undefined) Atomics.and(inputSAB, 6, ~bit);
+});
+canvas.addEventListener('blur', () => { if (inputSAB) Atomics.store(inputSAB, 6, 0); });
+
+canvas.addEventListener("click", () => { if (webRWorker) webRWorker.postMessage({type: "__raylibr_audio_unlock"}); });
+
+async function main() {
+  const webR = new WebR();
+  await webR.init();
+  loading.textContent = 'Installing packages...';
+  await webR.installPackages(['Rcpp'], { repos: ['https://repo.r-wasm.org'], quiet: true });
+  const localRepo = new URL('repo', window.location.href).href;
+  await webR.installPackages(['raylibr'], { repos: [localRepo], quiet: true });
+  loading.textContent = 'Starting demo...';
+  await webR.evalR('library(raylibr)');
+  await webR.evalR(`
+    library(raylibr)
+    set_trace_log_level(log$none)
+
+    blend_colors <- function(c1, c2, p = 0.5) {
+      p <- min(1, max(0, p))
+      if (is.null(c1)) c1 <- "black"
+      if (is.null(c2)) c2 <- "black"
+      c1 <- as_color(c1)
+      c2 <- as_color(c2)
+      r <- (c1$r * p) + (c2$r * (1-p))
+      g <- (c1$g * p) + (c2$g * (1-p))
+      b <- (c1$b * p) + (c2$b * (1-p))
+      color(r, g, b, c1$a)
+    }
+
+    get_tile <- function(x, y) {
+      tile_grid[floor(y / 64) * tile_dims[1] + floor(x / 64) + 1]
+    }
+
+    get_diff <- function(pos) {
+      diff <- pos - 64 * floor(pos / 64)
+      over_half <- diff > (tile_size / 2)
+      diff[over_half] <- 64 - diff[over_half]
+      diff
+    }
+
+    window_size <- c(1024, 512)
+    window_fps <- 100
+
+    viewport_size <- c(512, 384)
+    viewport_position <- c(512, 64)
+    viewport_resolution <- 128
+    viewport_fov <- 70
+    viewport_dof <- 8
+    viewport_fog <- 0.15
+
+    player_position <- c(320, 256)
+    player_angle <- 2.3
+    player_offset <- 8
+
+    player_walk_speed <- 2
+    player_strafe_speed <- 1
+
+    tile_dims <- c(8, 8)
+    tile_size <- 64
+    tile_grid <- c(1,1,1,1,1,1,1,1,
+                   1,0,0,0,0,0,0,1,
+                   1,0,2,2,2,0,0,1,
+                   1,0,2,0,0,0,0,1,
+                   1,0,2,0,0,0,0,1,
+                   1,0,0,0,0,1,0,1,
+                   1,0,0,0,0,1,0,1,
+                   1,1,1,1,1,1,1,1)
+
+    color_fog <- blend_colors("grey", "black", 0.5)
+    color_floor <- "moccasin"
+    color_ceiling <- "darkgrey"
+    color_wall <- list(fade(color_floor, 0), "tan1", "tan2", "dodgerblue3",
+                       "dodgerblue4", "tomato")
+
+    textures_files <- c("transparent.png", "Bricks_01-128x128.png", "Wood_20-128x128.png")
+    texture_size <- 128
+
+    frame <- 0
+    fps <- 0
+
+    two_pi <- pi * 2
+    half_pi <- pi / 2
+
+    tile_xz <- as.matrix(expand.grid(seq(tile_dims[1]) - 1, seq(tile_dims[2]) - 1))
+    tile_colors <- lapply(color_wall[tile_grid+1], blend_colors, "black", 0.8)
+    tile_sizes <- matrix(rep(tile_size, tile_dims[1] * tile_dims[2] * 2), ncol = 2)
+
+    player_offsets <- as.matrix(expand.grid(c(-1, 1), c(-1, 1))) * player_offset
+
+    help_lines <- c(
+      sprintf("W: FORWARD"),
+      sprintf("S: BACKPEDAL"),
+      sprintf("A: STRAFE LEFT          TAB: TOGGLE DEBUG"),
+      sprintf("D: STRAFE RIGHT       MOUSE: ROTATE")
+    )
+
+    update_view <- TRUE
+    debug <- TRUE
+    init_window(window_size[1], window_size[2], "R & Raylib: Raycaster")
+    set_target_fps(window_fps)
+    hide_cursor()
+
+    base_path <- system.file(package = "raylibr")
+    font <- load_font_ex(file.path(base_path, "demo_resources", "ShareTechMono-Regular.ttf"), 32)
+    textures <- lapply(paste0(base_path, "/demo_resources/", textures_files), load_texture)
+
+    while (!window_should_close()) {
+
+      player_angle <- (player_angle + get_mouse_delta()[1] / 60) %% two_pi
+      player_angle_s <- (player_angle + half_pi) %% two_pi
+      player_delta <- c(0, 0)
+
+      if (is_key_down(key$w)) player_delta <- player_delta +
+        c(cos(player_angle), sin(player_angle)) * player_walk_speed
+      if (is_key_down(key$s)) player_delta <- player_delta -
+        c(cos(player_angle), sin(player_angle)) * player_walk_speed
+      if (is_key_down(key$d)) player_delta <- player_delta +
+        c(cos(player_angle_s), sin(player_angle_s)) * player_strafe_speed
+      if (is_key_down(key$a)) player_delta <- player_delta -
+        c(cos(player_angle_s), sin(player_angle_s)) * player_strafe_speed
+
+      player_position <- player_position + player_delta
+
+      player_bb <- rep(player_position, each = 4) + player_offsets
+      player_bbi <- floor(player_bb / 64)
+      bc_col <- tile_grid[player_bbi[,2] * tile_dims[1] + player_bbi[,1] + 1] > 0
+
+      if (sum(bc_col) == 1) {
+        if (bc_col[1]) {
+          diff <- get_diff(player_bb[1,])
+          bc_col[ifelse(diff[2] < diff[1], 2, 3)] <- TRUE
+        } else if (bc_col[2]) {
+          diff <- get_diff(player_bb[2,])
+          bc_col[ifelse(diff[2] < diff[1], 1, 4)] <- TRUE
+        } else if (bc_col[3]) {
+          diff <- get_diff(player_bb[3,])
+          bc_col[ifelse(diff[2] < diff[1], 4, 1)] <- TRUE
+        } else if (bc_col[4]) {
+          diff <- get_diff(player_bb[4,])
+          bc_col[ifelse(diff[2] < diff[1], 3, 2)] <- TRUE
+        }
+      }
+
+      player_diff <- get_diff(player_position)
+
+      if (bc_col[1] && bc_col[2])
+        player_position[2] <- player_position[2] - player_diff[2] + player_offset
+      if (bc_col[3] && bc_col[4])
+        player_position[2] <- player_position[2] + player_diff[2] - player_offset
+      if (bc_col[1] && bc_col[3])
+        player_position[1] <- player_position[1] - player_diff[1] + player_offset
+      if (bc_col[2] && bc_col[4])
+        player_position[1] <- player_position[1] + player_diff[1] - player_offset
+
+      player_bb <- rep(player_position, each = 4) + player_offsets
+
+      k <- get_key_pressed()
+
+      if (k == key$minus) {
+        update_view <- TRUE
+        viewport_resolution <- viewport_resolution / 2
+      } else if (k == key$equal) {
+        update_view <- TRUE
+        viewport_resolution <- viewport_resolution * 2
+      } else if (k == key$tab) {
+        update_view <- TRUE
+        debug <- !debug
+        viewport_position <- c(0, 0)
+        viewport_size <- window_size
+      }
+
+      if (k == key$one)   { update_view <- TRUE; viewport_dof <- 1 }
+      if (k == key$two)   { update_view <- TRUE; viewport_dof <- 2 }
+      if (k == key$three) { update_view <- TRUE; viewport_dof <- 3 }
+      if (k == key$four)  { update_view <- TRUE; viewport_dof <- 4 }
+      if (k == key$five)  { update_view <- TRUE; viewport_dof <- 5 }
+      if (k == key$six)   { update_view <- TRUE; viewport_dof <- 6 }
+      if (k == key$seven) { update_view <- TRUE; viewport_dof <- 7 }
+      if (k == key$eight) { update_view <- TRUE; viewport_dof <- 8 }
+      if (k == key$nine)  { update_view <- TRUE; viewport_dof <- 9 }
+
+      if (is_key_down(key$left_bracket)) { update_view <- TRUE; viewport_fov <- viewport_fov - 1 }
+      if (is_key_down(key$right_bracket)) { update_view <- TRUE; viewport_fov <- viewport_fov + 1 }
+      if (is_key_down(key$period)) { update_view <- TRUE; viewport_fog <- viewport_fog + 0.01 }
+      if (is_key_down(key$comma))  { update_view <- TRUE; viewport_fog <- viewport_fog - 0.01 }
+
+      if (update_view) {
+        if (debug) {
+          viewport_size[1] <- window_size[1] / 2
+          viewport_size[2] <- window_size[2] - 128
+          viewport_position[1] <- window_size[1] / 2
+          viewport_position[2] <- 64
+        } else {
+          viewport_size <- window_size
+          viewport_position <- c(0, 0)
+        }
+
+        viewport_center <- viewport_position + (viewport_size / 2)
+        viewport_resolution <- max(2, min(viewport_resolution, viewport_size[1]))
+        viewport_fov <- max(30, min(viewport_fov, 170))
+        viewport_fog <- max(0, min(viewport_fog, 1))
+
+        angles <- atan(seq(-viewport_fov / 2, viewport_fov / 2, length.out =
+                             (viewport_resolution + 2))[2:(viewport_resolution + 1)] * pi / 180)
+        bars_width <- viewport_size[1] / viewport_resolution
+        bars_x <- viewport_position[1] + head(seq(from = 0, to = viewport_size[1],
+                                                  length.out = viewport_resolution + 1), -1)
+        sixty_fours <- rep(64, viewport_resolution)
+        color_fogs <- rep(list(color_fog), length.out = viewport_resolution)
+        lines_x <- rep(viewport_position[1] + 6, 8)
+        lines_y <- c(seq(4) * 14 - 12, seq(4) * 14 + viewport_size[2] + viewport_position[2] - 11)
+        lines_xy <- cbind(lines_x, lines_y)
+        zeros_vector <- rep(0, viewport_resolution)
+        zeros_matrix <- matrix(0, nrow = viewport_resolution, ncol = 2)
+      }
+      update_view <- FALSE
+
+      rays_angle <- (player_angle + angles) %% two_pi
+      rays_quadrant <- floor(rays_angle / half_pi)
+      rays_up <- rays_quadrant >= 2
+      rays_left <- (rays_quadrant == 1) | (rays_quadrant == 2)
+
+      rays_atan <- -1 / tan(rays_angle)
+      ry <- bitwShiftL(bitwShiftR(player_position[2], 6), 6) + ifelse(rays_up, -0.0000001, 64)
+      rx <- (player_position[2] - ry) * rays_atan + player_position[1]
+      yo <- sixty_fours; yo[rays_up] <- -64
+      xo <- -yo * rays_atan
+
+      todo <- rep(TRUE, viewport_resolution)
+      mx <- rep(0, viewport_resolution)
+      my <- rep(0, viewport_resolution)
+      tile <- rep(0, viewport_resolution)
+      dof <- 0
+
+      while (any(todo) & (dof < viewport_dof)) {
+        mx[todo] <- floor(rx[todo] / 64)
+        my[todo] <- floor(ry[todo] / 64)
+        mp <- ifelse(mx >= 0 & my >= 0 & mx < tile_dims[1] & my < tile_dims[2],
+                     my * tile_dims[1] + mx + 1, NA)
+        tile[todo] <- tile_grid[mp[todo]]
+        todo <- todo & (is.na(tile) | (tile == 0))
+        rx[todo] <- rx[todo] + xo[todo]
+        ry[todo] <- ry[todo] + yo[todo]
+        dof <- dof + 1
+      }
+
+      texture_h <- tile + 1
+      dists_h <- sqrt((rx - player_position[1])^2 + (ry - player_position[2])^2) * cos(angles)
+      h_rx <- rx; h_ry <- ry
+      h_ti <- floor(2 * (rx %% tile_size))
+      h_ti[!rays_up] <- texture_size - h_ti[!rays_up]
+
+      rays_ntan <- -tan(rays_angle)
+      rx <- bitwShiftL(bitwShiftR(player_position[1], 6), 6) + ifelse(rays_left, -0.0000001, 64)
+      ry <- (player_position[1] - rx) * rays_ntan + player_position[2]
+      xo <- sixty_fours; xo[rays_left] <- -64
+      yo <- -xo * rays_ntan
+
+      todo <- rep(TRUE, viewport_resolution)
+      dof <- 0
+
+      while (any(todo) & (dof < viewport_dof)) {
+        mx[todo] <- floor(rx[todo] / 64)
+        my[todo] <- floor(ry[todo] / 64)
+        mp <- ifelse(mx >= 0 & my >= 0 & mx < tile_dims[1] & my < tile_dims[2],
+                     my * tile_dims[1] + mx + 1, NA)
+        tile[todo] <- tile_grid[mp[todo]]
+        todo <- todo & (is.na(tile) | (tile == 0))
+        rx[todo] <- rx[todo] + xo[todo]
+        ry[todo] <- ry[todo] + yo[todo]
+        dof <- dof + 1
+      }
+
+      texture_v <- tile + 1
+      dists_v <- sqrt((rx - player_position[1])^2 + (ry - player_position[2])^2) * cos(angles)
+      v_rx <- rx; v_ry <- ry
+      v_ti <- floor(2 * (ry %% tile_size))
+      v_ti[rays_left] <- texture_size - v_ti[rays_left]
+
+      t_light <- rep(1, viewport_resolution)
+      h_wins <- dists_h < dists_v
+      bars_texture <- texture_v
+      bars_texture[h_wins] <- texture_h[h_wins]
+      dists_t <- dists_v
+      dists_t[h_wins] <- dists_h[h_wins]
+      t_light[h_wins] <- 0.7
+
+      t_rx <- ifelse(h_wins, h_rx, v_rx)
+      t_ry <- ifelse(h_wins, h_ry, v_ry)
+      t_ti <- ifelse(h_wins, h_ti, v_ti)
+
+      bars_height <- tile_size * viewport_size[2] / dists_t
+      height_fractions <- viewport_size[2] / bars_height
+      height_fractions[height_fractions > 1] <- 1
+      bars_height[bars_height > viewport_size[2]] <- viewport_size[2]
+      rects_src <- Map(rectangle, t_ti, tile_size - (tile_size * height_fractions), 1, texture_size * height_fractions)
+      rects_dst <- Map(rectangle, bars_x, viewport_center[2] - (bars_height / 2), bars_width, bars_height)
+
+      fog_ratio <- dists_t * viewport_fog / 100
+      fog_ratio[fog_ratio > 1] <- 1
+
+      textures_light <- Map(blend_colors, "white", "black", t_light)
+      textures_tint <- Map(blend_colors, color_fogs, textures_light, fog_ratio)
+
+      begin_drawing()
+      clear_background("black")
+
+      if (debug) {
+        draw_rectangle_v(tile_xz * tile_size + 1, tile_sizes - 2, tile_colors)
+        draw_line_ex(player_position, cbind(t_rx, t_ry), 1, textures_tint)
+        draw_triangle(player_position + c(cos(player_angle), sin(player_angle)) * 8,
+                      player_position - c(cos(player_angle), sin(player_angle)) * 7 -
+                        c(cos(player_angle_s), sin(player_angle_s)) * 4,
+                      player_position - c(cos(player_angle), sin(player_angle)) * 7 +
+                        c(cos(player_angle_s), sin(player_angle_s)) * 4,
+                      "white")
+      }
+
+      color_floor_far <- blend_colors(color_fog, color_floor, viewport_fog * 5)
+      color_floor_near <- blend_colors(color_fog, color_floor, viewport_fog * 0.9)
+      color_ceiling_far <- blend_colors(color_fog, color_ceiling, viewport_fog * 5)
+      color_ceiling_near <- blend_colors(color_fog, color_ceiling, viewport_fog * 0.9)
+      draw_rectangle_gradient_v(viewport_position[1], viewport_center[2],
+                                viewport_size[1], viewport_size[2] / 2,
+                                color_floor_far, color_floor_near)
+      draw_rectangle_gradient_v(viewport_position[1], viewport_position[2],
+                                viewport_size[1], viewport_size[2] / 2,
+                                color_ceiling_near, color_ceiling_far)
+
+      draw_texture_pro(textures[bars_texture], rects_src, rects_dst, zeros_matrix, zeros_vector, textures_tint)
+
+      if (frame > 20) { fps <- get_fps(); frame <- 0 }
+      frame <- frame + 1
+
+      if (debug) {
+        lines <- c(
+          sprintf("RES -/+: %3d                          FPS: %3d", viewport_resolution, fps),
+          sprintf("FOG ,/.: %3.f", viewport_fog * 100),
+          sprintf("DOF 1-9: %3d", viewport_dof),
+          sprintf("FOV [/]: %3d", viewport_fov),
+          help_lines
+        )
+        draw_text_ex(font, lines, lines_xy, 16, 0, "darkgrey")
+      }
+
+      end_drawing()
+    }
+
+    show_cursor()
+    close_window()
+  `);
+}
+
+main().catch(e => { loading.textContent = 'Error: ' + e.message; console.error(e); });
+</script>
+</body>
+</html>

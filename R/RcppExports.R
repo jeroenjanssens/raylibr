@@ -4049,3 +4049,15 @@ is_web_ <- function() {
     .Call(`_raylibr_is_web_impl`)
 }
 
+transfer_frame_ <- function() {
+    invisible(.Call(`_raylibr_transfer_frame_r`))
+}
+
+eval_js_ <- function(script) {
+    .Call(`_raylibr_eval_js_impl`, script)
+}
+
+setup_canvas_ <- function(width, height) {
+    .Call(`_raylibr_setup_canvas_impl`, width, height)
+}
+

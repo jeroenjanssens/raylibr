@@ -6,6 +6,12 @@ A complete Snake game built entirely in R: arrow keys steer the snake, eating fo
 
 ![](../reference/figures/raylibr-demo-snake.gif)
 
+## Try it
+
+Click the canvas and use the arrow keys to steer the snake.
+
+<iframe src="../wasm/snake.html" width="600" height="480" style="border:none; display:block; margin:0 auto;"></iframe>
+
 ## Run
 
 ```r

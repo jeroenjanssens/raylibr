@@ -11900,6 +11900,38 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// transfer_frame_r
+void transfer_frame_r();
+RcppExport SEXP _raylibr_transfer_frame_r() {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    transfer_frame_r();
+    return R_NilValue;
+END_RCPP
+}
+// eval_js_impl
+std::string eval_js_impl(std::string script);
+RcppExport SEXP _raylibr_eval_js_impl(SEXP scriptSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::string >::type script(scriptSEXP);
+    rcpp_result_gen = Rcpp::wrap(eval_js_impl(script));
+    return rcpp_result_gen;
+END_RCPP
+}
+// setup_canvas_impl
+std::string setup_canvas_impl(int width, int height);
+RcppExport SEXP _raylibr_setup_canvas_impl(SEXP widthSEXP, SEXP heightSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type width(widthSEXP);
+    Rcpp::traits::input_parameter< int >::type height(heightSEXP);
+    rcpp_result_gen = Rcpp::wrap(setup_canvas_impl(width, height));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_is_audio_device_ready_", (DL_FUNC) &_raylibr_is_audio_device_ready_, 0},
@@ -12914,6 +12946,9 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_set_main_loop_callback", (DL_FUNC) &_raylibr_set_main_loop_callback, 2},
     {"_raylibr_raylib_version_impl", (DL_FUNC) &_raylibr_raylib_version_impl, 0},
     {"_raylibr_is_web_impl", (DL_FUNC) &_raylibr_is_web_impl, 0},
+    {"_raylibr_transfer_frame_r", (DL_FUNC) &_raylibr_transfer_frame_r, 0},
+    {"_raylibr_eval_js_impl", (DL_FUNC) &_raylibr_eval_js_impl, 1},
+    {"_raylibr_setup_canvas_impl", (DL_FUNC) &_raylibr_setup_canvas_impl, 2},
     {NULL, NULL, 0}
 };
 
