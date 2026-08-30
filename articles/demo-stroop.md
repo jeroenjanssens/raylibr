@@ -1,0 +1,66 @@
+# Stroop Test
+
+An implementation of the classic Stroop psychological experiment: press
+any key to display a color word (e.g. “red”) rendered in a *different*
+color (e.g. blue), challenging the brain’s automatic reading response.
+It demonstrates
+[`load_font_ex()`](https://jeroenjanssens.github.io/raylibr/reference/load_font_ex.md)
+for custom fonts,
+[`measure_text_ex()`](https://jeroenjanssens.github.io/raylibr/reference/measure_text_ex.md)
+and
+[`draw_text_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_text_ex.md)
+for precise text layout, and
+[`get_key_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/get_key_pressed.md)
+for input handling.
+
+## Try it
+
+Click the canvas to focus it, then press any key to generate a new word.
+
+## Run
+
+``` r
+
+demo("stroop", package = "raylibr")
+```
+
+## Source code
+
+``` r
+
+library(raylibr)
+
+candidates <- c("red", "green", "blue", "orange", "black", "purple", "hotpink")
+word <- ""
+color <- ""
+
+screen_size <- c(600, 400)
+init_window(screen_size[1], screen_size[2], "R & Raylib: Stroop Test")
+
+font_size <- 200
+font <- load_font_ex(file.path(system.file(package = "raylibr"), "demo_resources", "source-sans-pro-v14-latin-regular.ttf"), font_size)
+
+while (!window_should_close()) {
+  screen_size <- c(get_screen_width(), get_screen_height())
+
+  if (get_key_pressed()) {
+    prev_word <- word
+    prev_color <- color
+    while ((word == color) || (word == prev_word) || (color == prev_color)) {
+      word <- sample(candidates, 1)
+      color <- sample(candidates, 1)
+    }
+    text_size <- measure_text_ex(font, word, font_size, 0)
+    text_pos <- screen_size / 2 - text_size / 2 - c(0, 20)
+  }
+
+  begin_drawing()
+  clear_background("white")
+  if (word != "") {
+    draw_text_ex(font, word, text_pos, font_size, 0, color)
+  }
+  end_drawing()
+}
+
+close_window()
+```

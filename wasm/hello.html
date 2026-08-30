@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>raylibr: Hello, World!</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #000; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+  canvas { display: block; image-rendering: pixelated; }
+  #loading { position: absolute; color: #888; font-family: monospace; font-size: 14px; }
+</style>
+</head>
+<body>
+<canvas id="canvas" width="600" height="400"></canvas>
+<div id="loading">Loading raylibr...</div>
+
+<script type="module">
+const canvas = document.getElementById('canvas');
+const ctx2d = canvas.getContext('2d');
+const loading = document.getElementById('loading');
+
+const _OrigWorker = Worker;
+let webRWorker = null;
+globalThis.Worker = class extends _OrigWorker {
+  constructor(...args) {
+    super(...args);
+    webRWorker = this;
+    this.addEventListener('message', (e) => {
+      if (e.data && e.data.type === '__raylibr_cursor') {
+        canvas.style.cursor = e.data.cursor;
+      } else if (e.data && e.data.type === '__raylibr_frame') {
+        const src = new Uint8ClampedArray(e.data.px);
+        const w = e.data.w, h = e.data.h, stride = w * 4;
+        const dst = new Uint8ClampedArray(src.length);
+        for (let y = 0; y < h; y++) {
+          dst.set(src.subarray((h - 1 - y) * stride, (h - y) * stride), y * stride);
+        }
+        ctx2d.putImageData(new ImageData(dst, w, h), 0, 0);
+        if (loading.style.display !== 'none') loading.style.display = 'none';
+      }
+    });
+  }
+};
+
+import { WebR } from 'https://webr.r-wasm.org/v0.6.0/webr.mjs';
+
+canvas.addEventListener("click", () => { if (webRWorker) webRWorker.postMessage({type: "__raylibr_audio_unlock"}); });
+
+async function main() {
+  const webR = new WebR();
+  await webR.init();
+
+  loading.textContent = 'Installing packages...';
+  await webR.installPackages(['Rcpp'], { repos: ['https://repo.r-wasm.org'], quiet: true });
+  const localRepo = new URL('repo', window.location.href).href;
+  await webR.installPackages(['raylibr'], { repos: [localRepo], quiet: true });
+
+  loading.textContent = 'Starting demo...';
+  await webR.evalR('library(raylibr)');
+
+  await webR.evalR(`
+    init_window(600, 400, "R & Raylib: Hello, World!")
+
+    while (!window_should_close()) {
+      alpha <- abs(sin(get_time()))
+      begin_drawing()
+      clear_background("black")
+      draw_circle(300, 200, seq(150, 10, by = -10), c("red", "white"))
+      draw_text(c("hello,", "world!"), 225, c(120, 220), 64, fade("black", alpha))
+      draw_fps(10, 10)
+      end_drawing()
+    }
+
+    close_window()
+  `);
+}
+
+main().catch(e => { loading.textContent = 'Error: ' + e.message; });
+</script>
+</body>
+</html>

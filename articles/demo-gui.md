@@ -1,0 +1,117 @@
+# GUI Controls
+
+A showcase of raygui’s immediate-mode GUI widgets: a button, toggle,
+checkbox, sliders, a progress bar, combo box, spinner, text input, a hue
+color bar, and a status bar — all live and interactive. The background
+color shifts with the hue slider via
+[`color_from_hsv()`](https://jeroenjanssens.github.io/raylibr/reference/color_from_hsv.md).
+This demo covers the output-pointer pattern used by raygui controls,
+where each call returns a list with a `result` code and the updated
+control value.
+
+## Try it
+
+Click and drag the sliders, click the button and toggle, and type in the
+text box.
+
+## Run
+
+``` r
+
+demo("gui", package = "raylibr")
+```
+
+## Source code
+
+``` r
+
+library(raylibr)
+
+width <- 500
+height <- 520
+
+init_window(width, height, "R & Raylib: GUI Controls")
+set_target_fps(60)
+
+# State for all controls
+slider_val <- 50.0
+bar_val <- 0.3
+checked <- FALSE
+toggle_active <- 0L
+combo_active <- 0L
+spinner_val <- 5L
+spinner_edit <- FALSE
+text_val <- "Type here"
+hue <- 180.0
+progress <- 0.0
+progress_dir <- 1.0
+
+while (!window_should_close()) {
+  # Animate progress bar
+  progress <- progress + progress_dir * get_frame_time() * 0.3
+  if (progress >= 1.0) { progress <- 1.0; progress_dir <- -1.0 }
+  if (progress <= 0.0) { progress <- 0.0; progress_dir <- 1.0 }
+
+  begin_drawing()
+  clear_background(color_from_hsv(hue, 0.15, 0.95))
+
+  # Title
+  gui_label(rectangle(10, 10, width - 20, 30), "raylibr GUI Demo")
+  gui_line(rectangle(10, 40, width - 20, 1), "")
+
+  # Row 1: Button + Toggle + Checkbox
+  r <- gui_button(rectangle(20, 60, 120, 30), "Click Me")
+  if (r == 1L) cat("Button clicked!\n")
+
+  r <- gui_toggle(rectangle(160, 60, 140, 30), "Toggle", toggle_active != 0L)
+  toggle_active <- as.integer(r$active)
+
+  r <- gui_check_box(rectangle(320, 60, 20, 20), "Check", checked)
+  checked <- r$checked
+
+  # Row 2: Slider
+  gui_label(rectangle(20, 110, 460, 20), sprintf("Slider: %.1f", slider_val))
+  r <- gui_slider(rectangle(20, 130, 460, 20), "0", "100", slider_val, 0.0, 100.0)
+  slider_val <- r$value
+
+  # Row 3: Slider Bar
+  gui_label(rectangle(20, 165, 460, 20), sprintf("Slider Bar: %.2f", bar_val))
+  r <- gui_slider_bar(rectangle(20, 185, 460, 20), "0", "1", bar_val, 0.0, 1.0)
+  bar_val <- r$value
+
+  # Row 4: Progress Bar (animated)
+  gui_label(rectangle(20, 220, 460, 20), sprintf("Progress: %.0f%%", progress * 100))
+  gui_progress_bar(rectangle(20, 240, 460, 20), "", "", progress, 0.0, 1.0)
+
+  # Row 5: Combo Box + Spinner
+  r <- gui_combo_box(rectangle(20, 280, 200, 30), "Red;Green;Blue;Yellow", combo_active)
+  combo_active <- r$active
+
+  r <- gui_spinner(rectangle(240, 280, 200, 30), "Count", spinner_val,
+                   0L, 100L, spinner_edit)
+  if (r$result == 1L) spinner_edit <- !spinner_edit
+  spinner_val <- r$value
+
+  # Row 6: Text Box
+  gui_label(rectangle(20, 325, 460, 20), "Text Input:")
+  r <- gui_text_box(rectangle(20, 345, 460, 30), text_val, 128L, TRUE)
+  text_val <- r$text
+
+  # Row 7: Hue bar
+  gui_label(rectangle(20, 390, 460, 20), sprintf("Background Hue: %.0f", hue))
+  r <- gui_color_bar_hue(rectangle(20, 410, 460, 20), "", hue)
+  hue <- r$value
+
+  # Status bar
+  status <- sprintf("Toggle: %s | Check: %s | Combo: %d | Spin: %d",
+                    if (toggle_active != 0L) "ON" else "OFF",
+                    if (checked) "YES" else "NO",
+                    combo_active, spinner_val)
+  gui_status_bar(rectangle(0, height - 30, width, 30), status)
+
+  draw_fps(width - 80, 10)
+  end_drawing()
+}
+
+close_window()
+```

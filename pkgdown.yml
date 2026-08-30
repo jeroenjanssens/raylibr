@@ -1,9 +1,21 @@
-pandoc: 2.19.2
-pkgdown: 2.0.6
+pandoc: 3.8.3
+pkgdown: 2.2.1
 pkgdown_sha: ~
-articles: {}
-last_built: 2022-11-30T13:38Z
+articles:
+  articles/demo-balls: demo-balls.html
+  articles/demo-beatbox: demo-beatbox.html
+  articles/demo-cubes: demo-cubes.html
+  articles/demo-gui: demo-gui.html
+  articles/demo-helloworld: demo-helloworld.html
+  articles/demo-julia: demo-julia.html
+  articles/demo-model: demo-model.html
+  articles/demo-mouse: demo-mouse.html
+  articles/demo-raycaster: demo-raycaster.html
+  articles/demo-shader: demo-shader.html
+  articles/demo-snake: demo-snake.html
+  articles/demo-stroop: demo-stroop.html
+  articles/wasm: wasm.html
+last_built: 2026-08-30T14:50Z
 urls:
   reference: https://jeroenjanssens.github.io/raylibr/reference
   article: https://jeroenjanssens.github.io/raylibr/articles
-

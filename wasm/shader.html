@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>raylibr: Stars</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #000; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+  canvas { display: block; image-rendering: pixelated; }
+  #loading { position: absolute; color: #888; font-family: monospace; font-size: 14px; }
+</style>
+</head>
+<body>
+<canvas id="canvas" width="800" height="450" tabindex="0"></canvas>
+<div id="loading">Loading raylibr...</div>
+
+<script type="module">
+const canvas = document.getElementById('canvas');
+const ctx2d = canvas.getContext('2d');
+const loading = document.getElementById('loading');
+
+const _OrigWorker = Worker;
+let webRWorker = null;
+globalThis.Worker = class extends _OrigWorker {
+  constructor(...args) {
+    super(...args);
+    webRWorker = this;
+    this.addEventListener('message', (e) => {
+      if (e.data && e.data.type === '__raylibr_cursor') {
+        canvas.style.cursor = e.data.cursor;
+      } else if (e.data && e.data.type === '__raylibr_frame') {
+        const src = new Uint8ClampedArray(e.data.px);
+        const w = e.data.w, h = e.data.h, stride = w * 4;
+        const dst = new Uint8ClampedArray(src.length);
+        for (let y = 0; y < h; y++) {
+          dst.set(src.subarray((h - 1 - y) * stride, (h - y) * stride), y * stride);
+        }
+        ctx2d.putImageData(new ImageData(dst, w, h), 0, 0);
+        if (loading.style.display !== 'none') loading.style.display = 'none';
+      }
+    });
+  }
+};
+
+import { WebR } from 'https://webr.r-wasm.org/v0.6.0/webr.mjs';
+
+canvas.addEventListener("click", () => { if (webRWorker) webRWorker.postMessage({type: "__raylibr_audio_unlock"}); });
+
+async function main() {
+  const webR = new WebR();
+  await webR.init();
+  loading.textContent = 'Installing packages...';
+  await webR.installPackages(['Rcpp'], { repos: ['https://repo.r-wasm.org'], quiet: true });
+  const localRepo = new URL('repo', window.location.href).href;
+  await webR.installPackages(['raylibr'], { repos: [localRepo], quiet: true });
+  loading.textContent = 'Starting demo...';
+  await webR.evalR('library(raylibr)');
+  await webR.evalR(`
+    init_window(800, 450, "R & Raylib: Stars")
+
+    t <- load_texture(file.path(system.file(package = "raylibr"), "demo_resources", "space.png"))
+    s <- load_shader("", file.path(system.file(package = "raylibr"), "demo_resources", "wave.fs"))
+
+    loc_seconds <- get_shader_location(s, "secondes")
+    loc_freq_x <- get_shader_location(s, "freqX")
+    loc_freq_y <- get_shader_location(s, "freqY")
+    loc_amp_x <- get_shader_location(s, "ampX")
+    loc_amp_y <- get_shader_location(s, "ampY")
+    loc_speed_x <- get_shader_location(s, "speedX")
+    loc_speed_y <- get_shader_location(s, "speedY")
+
+    freq_x <- 25
+    freq_y <- 25
+    amp_x <- 5
+    amp_y <- 5
+    speed_x <- 8
+    speed_y <- 8
+
+    screen_size <- c(get_screen_width(), get_screen_height())
+    l <- get_shader_location(s, "size")
+    set_shader_value(s, l, screen_size)
+    set_shader_value(s, loc_freq_x, freq_x)
+    set_shader_value(s, loc_freq_y, freq_y)
+    set_shader_value(s, loc_amp_x, amp_x)
+    set_shader_value(s, loc_amp_y, amp_y)
+    set_shader_value(s, loc_speed_x, speed_x)
+    set_shader_value(s, loc_speed_y, speed_y)
+
+    seconds <- 0
+    set_target_fps(60)
+
+    while (!window_should_close()) {
+      seconds <- seconds + get_frame_time()
+      set_shader_value(s, loc_seconds, seconds)
+
+      begin_drawing()
+      clear_background("white")
+      begin_shader_mode(s)
+      draw_texture(t, 0, 0, "white")
+      draw_texture(t, t$width, 0, "white")
+      end_shader_mode()
+      end_drawing()
+    }
+
+    unload_shader(s)
+    close_window()
+  `);
+}
+
+main().catch(e => { loading.textContent = 'Error: ' + e.message; console.error(e); });
+</script>
+</body>
+</html>

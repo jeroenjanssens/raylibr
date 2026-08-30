@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>raylibr: GUI Controls</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #ddd; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+  canvas { display: block; image-rendering: pixelated; cursor: default; }
+  #loading { position: absolute; color: #888; font-family: monospace; font-size: 14px; }
+</style>
+</head>
+<body>
+<canvas id="canvas" width="500" height="520" tabindex="0"></canvas>
+<div id="loading">Loading raylibr...</div>
+
+<script type="module">
+const canvas = document.getElementById('canvas');
+const ctx2d = canvas.getContext('2d');
+const loading = document.getElementById('loading');
+
+const _OrigWorker = Worker;
+let inputSAB = null;
+let webRWorker = null;
+globalThis.Worker = class extends _OrigWorker {
+  constructor(...args) {
+    super(...args);
+    webRWorker = this;
+    this.addEventListener('message', (e) => {
+      if (e.data && e.data.type === '__raylibr_sab') {
+        inputSAB = new Int32Array(e.data.sab);
+      } else if (e.data && e.data.type === '__raylibr_cursor') {
+        canvas.style.cursor = e.data.cursor;
+      } else if (e.data && e.data.type === '__raylibr_frame') {
+        const src = new Uint8ClampedArray(e.data.px);
+        const w = e.data.w, h = e.data.h, stride = w * 4;
+        const dst = new Uint8ClampedArray(src.length);
+        for (let y = 0; y < h; y++) {
+          dst.set(src.subarray((h - 1 - y) * stride, (h - y) * stride), y * stride);
+        }
+        ctx2d.putImageData(new ImageData(dst, w, h), 0, 0);
+        if (loading.style.display !== 'none') loading.style.display = 'none';
+      }
+    });
+  }
+};
+
+import { WebR } from 'https://webr.r-wasm.org/v0.6.0/webr.mjs';
+
+const KEYDOWN_MAP = { 'ShiftLeft': 8192, 'ShiftRight': 16384 };
+
+canvas.addEventListener('mousemove', (e) => {
+  if (!inputSAB) return;
+  const rect = canvas.getBoundingClientRect();
+  const sx = canvas.width / rect.width, sy = canvas.height / rect.height;
+  Atomics.store(inputSAB, 0, Math.round((e.clientX - rect.left) * sx));
+  Atomics.store(inputSAB, 1, Math.round((e.clientY - rect.top) * sy));
+  Atomics.store(inputSAB, 2, 1);
+});
+canvas.addEventListener('mouseenter', () => { if (inputSAB) Atomics.store(inputSAB, 2, 1); });
+canvas.addEventListener('mouseleave', () => {
+  if (!inputSAB) return;
+  Atomics.store(inputSAB, 2, 0);
+  Atomics.store(inputSAB, 4, 0);
+  Atomics.store(inputSAB, 5, 0);
+});
+canvas.addEventListener('mousedown', (e) => {
+  if (!inputSAB) return;
+  if (e.button === 0) Atomics.store(inputSAB, 4, 1);
+  if (e.button === 2) Atomics.store(inputSAB, 5, 1);
+  canvas.focus();
+});
+canvas.addEventListener('mouseup', (e) => {
+  if (!inputSAB) return;
+  if (e.button === 0) Atomics.store(inputSAB, 4, 0);
+  if (e.button === 2) Atomics.store(inputSAB, 5, 0);
+});
+canvas.addEventListener('contextmenu', (e) => e.preventDefault());
+canvas.addEventListener('keydown', (e) => {
+  if (!inputSAB) return;
+  const bit = KEYDOWN_MAP[e.code];
+  if (bit !== undefined) Atomics.or(inputSAB, 6, bit);
+  if (e.key.length === 1) {
+    Atomics.store(inputSAB, 7, e.key.codePointAt(0));
+    e.preventDefault();
+  }
+});
+canvas.addEventListener('keyup', (e) => {
+  if (!inputSAB) return;
+  const bit = KEYDOWN_MAP[e.code];
+  if (bit !== undefined) Atomics.and(inputSAB, 6, ~bit);
+});
+canvas.addEventListener('blur', () => { if (inputSAB) Atomics.store(inputSAB, 6, 0); });
+
+canvas.addEventListener("click", () => { if (webRWorker) webRWorker.postMessage({type: "__raylibr_audio_unlock"}); });
+
+async function main() {
+  const webR = new WebR();
+  await webR.init();
+  loading.textContent = 'Installing packages...';
+  await webR.installPackages(['Rcpp'], { repos: ['https://repo.r-wasm.org'], quiet: true });
+  const localRepo = new URL('repo', window.location.href).href;
+  await webR.installPackages(['raylibr'], { repos: [localRepo], quiet: true });
+  loading.textContent = 'Starting demo...';
+  await webR.evalR('library(raylibr)');
+  await webR.evalR(`
+    width <- 500
+    height <- 520
+
+    init_window(width, height, "R & Raylib: GUI Controls")
+    set_target_fps(60)
+
+    slider_val <- 50.0
+    bar_val <- 0.3
+    checked <- FALSE
+    toggle_active <- 0L
+    combo_active <- 0L
+    spinner_val <- 5L
+    spinner_edit <- FALSE
+    text_val <- "Type here"
+    hue <- 180.0
+    progress <- 0.0
+    progress_dir <- 1.0
+
+    while (!window_should_close()) {
+      progress <- progress + progress_dir * get_frame_time() * 0.3
+      if (progress >= 1.0) { progress <- 1.0; progress_dir <- -1.0 }
+      if (progress <= 0.0) { progress <- 0.0; progress_dir <- 1.0 }
+
+      begin_drawing()
+      clear_background(color_from_hsv(hue, 0.15, 0.95))
+
+      gui_label(rectangle(10, 10, width - 20, 30), "raylibr GUI Demo")
+      gui_line(rectangle(10, 40, width - 20, 1), "")
+
+      r <- gui_button(rectangle(20, 60, 120, 30), "Click Me")
+      if (r == 1L) cat("Button clicked!")
+
+      r <- gui_toggle(rectangle(160, 60, 140, 30), "Toggle", toggle_active != 0L)
+      toggle_active <- as.integer(r$active)
+
+      r <- gui_check_box(rectangle(320, 60, 20, 20), "Check", checked)
+      checked <- r$checked
+
+      gui_label(rectangle(20, 110, 460, 20), sprintf("Slider: %.1f", slider_val))
+      r <- gui_slider(rectangle(20, 130, 460, 20), "0", "100", slider_val, 0.0, 100.0)
+      slider_val <- r$value
+
+      gui_label(rectangle(20, 165, 460, 20), sprintf("Slider Bar: %.2f", bar_val))
+      r <- gui_slider_bar(rectangle(20, 185, 460, 20), "0", "1", bar_val, 0.0, 1.0)
+      bar_val <- r$value
+
+      gui_label(rectangle(20, 220, 460, 20), sprintf("Progress: %.0f%%", progress * 100))
+      gui_progress_bar(rectangle(20, 240, 460, 20), "", "", progress, 0.0, 1.0)
+
+      r <- gui_combo_box(rectangle(20, 280, 200, 30), "Red;Green;Blue;Yellow", combo_active)
+      combo_active <- r$active
+
+      r <- gui_spinner(rectangle(240, 280, 200, 30), "Count", spinner_val, 0L, 100L, spinner_edit)
+      if (r$result == 1L) spinner_edit <- !spinner_edit
+      spinner_val <- r$value
+
+      gui_label(rectangle(20, 325, 460, 20), "Text Input:")
+      r <- gui_text_box(rectangle(20, 345, 460, 30), text_val, 128L, TRUE)
+      text_val <- r$text
+
+      gui_label(rectangle(20, 390, 460, 20), sprintf("Background Hue: %.0f", hue))
+      r <- gui_color_bar_hue(rectangle(20, 410, 460, 20), "", hue)
+      hue <- r$value
+
+      status <- sprintf("Toggle: %s | Check: %s | Combo: %d | Spin: %d",
+                        if (toggle_active != 0L) "ON" else "OFF",
+                        if (checked) "YES" else "NO",
+                        combo_active, spinner_val)
+      gui_status_bar(rectangle(0, height - 30, width, 30), status)
+
+      draw_fps(width - 80, 10)
+      end_drawing()
+    }
+
+    close_window()
+  `);
+}
+
+main().catch(e => { loading.textContent = 'Error: ' + e.message; console.error(e); });
+</script>
+</body>
+</html>

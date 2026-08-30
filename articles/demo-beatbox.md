@@ -1,0 +1,92 @@
+# Beatbox like Jeroen
+
+Press letter keys to trigger individual percussion sound samples; each
+keystroke plays the corresponding WAV file and spawns a floating label
+that fades out over 30 frames. The demo shows
+[`load_sound()`](https://jeroenjanssens.github.io/raylibr/reference/load_sound.md)
+/
+[`play_sound()`](https://jeroenjanssens.github.io/raylibr/reference/play_sound.md)
+for one-shot audio,
+[`load_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture.md)
+/
+[`draw_texture()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture.md)
+for a background image,
+[`fade()`](https://jeroenjanssens.github.io/raylibr/reference/fade.md)
+for decaying text opacity, and
+[`draw_text()`](https://jeroenjanssens.github.io/raylibr/reference/draw_text.md)
+called inside a loop to stack multiple simultaneous labels.
+
+![](../reference/figures/raylibr-demo-beatbox.gif)
+
+## Try it
+
+Click the canvas to focus it and enable audio. Press letter keys (a-z)
+to play percussion samples; hold Shift for uppercase variants. Press
+Space to stop all sounds.
+
+## Run
+
+``` r
+
+demo("beatbox", package = "raylibr")
+```
+
+## Source code
+
+``` r
+
+library(raylibr)
+
+files <- list.files(file.path(system.file(package = "raylibr"), "demo_resources", "beatbox-samples"), full.names = TRUE)
+ids <- sub("^.*\\/([a-z0-9]+)\\.wav$", "\\1", files)
+texts <- c()
+lives <- c()
+angles <- c()
+max_life <- 30
+
+init_audio_device()
+sounds <- lapply(files, load_sound)
+
+s <- 600
+init_window(s, s, "R & Raylib: Beatbox like Jeroen")
+set_target_fps(30)
+
+background <- load_texture(file.path(system.file(package = "raylibr"), "demo_resources","beatbox.png"))
+
+while (!window_should_close()) {
+  k <- get_key_pressed()
+  if (k == key$space) {
+    message("Pressed Space: Stopping all sounds")
+    lapply(sounds, stop_sound)
+  } else if ((k >= key$a) && (k <= key$z)) {
+    keyname <- tolower(rawToChar(as.raw(k)))
+    ix <- k - key$a + 1
+    if (is_key_down(key$left_shift) || is_key_down(key$right_shift)) {
+      ix <- ix + 26
+      keyname <- toupper(keyname)
+    }
+    texts <- c(texts, ids[ix])
+    lives <- c(lives, max_life)
+    play_sound(sounds[[ix]])
+    message(paste0("Pressed ", keyname, ": Playing ", files[[ix]]))
+  }
+
+  lives <- lives - 1
+  keep <- lives > 0
+  lives <- lives[keep]
+  texts <- texts[keep]
+
+  begin_drawing()
+  clear_background("black")
+  draw_texture(background, 0, 0, "white")
+
+  for (t in seq_along(texts)) {
+    draw_text(texts[t], 320 + 2*(max_life - lives[t]), 290 + 1.5*(max_life - lives[t]), 20 + (max_life - lives[t]), fade("white", lives[t] / max_life))
+  }
+
+  end_drawing()
+}
+
+close_window()
+close_audio_device()
+```
