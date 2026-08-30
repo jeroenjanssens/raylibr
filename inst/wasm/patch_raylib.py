@@ -58,6 +58,14 @@ def patch_rcore():
     )
     c = c.replace(old, new, 1)
 
+    c = c.replace(
+        "    SetRandomSeed((unsigned int)time(NULL));",
+        "#if defined(PLATFORM_WEB_EMSCRIPTEN)\n"
+        "    SetRandomSeed((unsigned int)emscripten_get_now());\n"
+        "#else\n"
+        "    SetRandomSeed((unsigned int)time(NULL));\n"
+        "#endif")
+
     with open("rcore.c", "w") as f:
         f.write(c)
     print("rcore.c patched")
