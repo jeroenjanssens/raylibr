@@ -2,7 +2,7 @@ Package: raylibr
 Version: 6.0.0.9001
 Imports: Rcpp, utils
 LinkingTo: Rcpp
-Suggests: knitr, rlang, testthat (>= 3.0.0)
+Suggests: knitr, rmarkdown, rlang, testthat (>= 3.0.0)
 License: MIT + file LICENSE
-MD5sum: 2c4f85069c50c770ef16aae3495df4d7
+MD5sum: 87d325611289d20f6fd7a799281ee413
 File: raylibr_6.0.0.9001.tgz
