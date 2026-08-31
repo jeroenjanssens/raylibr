@@ -48,12 +48,19 @@ jobs:
             libxi-dev \
             libxext-dev \
             libwayland-dev \
-            libxkbcommon-dev
+            libxkbcommon-dev \
+            xvfb
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: any::rcmdcheck
           needs: check
+
+      - name: Start virtual display (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          Xvfb :99 -screen 0 1024x768x24 &
+          echo "DISPLAY=:99" >> $GITHUB_ENV
 
       - uses: r-lib/actions/check-r-package@v2
         with:
