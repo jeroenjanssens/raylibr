@@ -172,6 +172,7 @@ raylibr_resource <- function(name) {
 }
 
 has_display <- function() {
+  if (nzchar(Sys.getenv("CI"))) return(FALSE)
   sysname <- Sys.info()[["sysname"]]
   if (sysname == "Linux") return(nzchar(Sys.getenv("DISPLAY")))
   TRUE
