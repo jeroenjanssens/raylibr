@@ -193,7 +193,6 @@ reference:
     - glyph_info
     - material_map
     - n_patch_info
-    - npatch_info
     - transform
 
   - title: Type checking

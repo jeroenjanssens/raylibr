@@ -13,4 +13,13 @@ case "$UNAME" in
     ;;
 esac
 
-sed "s|@SYS_LIBS@|$SYS_LIBS|" src/Makevars.in > src/Makevars
+# Detect clang and suppress warnings from R's own headers
+CXX=$("${R_HOME}/bin/R" CMD config CXX 2>/dev/null)
+EXTRA_CXXFLAGS=""
+if $CXX --version 2>&1 | grep -qi clang; then
+  EXTRA_CXXFLAGS="-Wno-unknown-warning-option"
+fi
+
+sed -e "s|@SYS_LIBS@|$SYS_LIBS|" \
+    -e "s|@EXTRA_CXXFLAGS@|$EXTRA_CXXFLAGS|" \
+    src/Makevars.in > src/Makevars

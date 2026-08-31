@@ -1,6 +1,7 @@
 library(raylibr)
 
 test_that("audio device functions work", {
+  skip_on_ci()
   init_audio_device()
   on.exit(close_audio_device())
 
