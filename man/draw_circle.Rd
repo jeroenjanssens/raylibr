@@ -25,10 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 raylibr_screenshot(function() {
   draw_circle(200L, 150L, 80.0, "yellow")
-  draw_circle(200L, 150L, 80.0, color_alpha("white", 0.3))
+  draw_circle(210L, 160L, 80.0, color_alpha("white", 0.3))
 })
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other circle functions: 

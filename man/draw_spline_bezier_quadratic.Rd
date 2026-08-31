@@ -17,9 +17,10 @@ draw_spline_bezier_quadratic(points, thick, color)
 Draw spline: Quadratic Bezier, minimum 3 points (1 control point).
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 pts <- matrix(c(50, 200, 350, 250, 50, 250), ncol = 2)
 raylibr_screenshot(function() draw_spline_bezier_quadratic(pts, 3.0, "purple"))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other draw functions: 

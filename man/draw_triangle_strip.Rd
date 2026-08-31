@@ -15,9 +15,10 @@ draw_triangle_strip(points, color)
 Draw a triangle strip defined by points.
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 pts <- matrix(c(50, 150, 250, 350, 80, 220, 80, 220), ncol = 2)
 raylibr_screenshot(function() draw_triangle_strip(pts, "green"))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other draw functions: 

@@ -4693,7 +4693,7 @@ get_shapes_texture_rectangle <- function() {
 #' @family pixel functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_pixel(100L, 100L, "red"))
 #'
 #' @export
@@ -4729,7 +4729,7 @@ draw_pixel <- function(pos_x, pos_y, color) {
 #' @family pixel functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_pixel_v(c(200, 150), "red"))
 #'
 #' @export
@@ -4765,7 +4765,7 @@ draw_pixel_v <- function(position, color) {
 #' @family line functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_line(50L, 250L, 350L, 50L, "red"))
 #'
 #' @export
@@ -4806,7 +4806,7 @@ draw_line <- function(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color) {
 #' @family line functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_line_v(c(200, 150), c(200, 150), "red"))
 #'
 #' @export
@@ -4844,7 +4844,7 @@ draw_line_v <- function(start_pos, end_pos, color) {
 #' @family line functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_line_ex(c(200, 150), c(200, 150), 3.0, "red"))
 #'
 #' @export
@@ -4884,7 +4884,7 @@ draw_line_ex <- function(start_pos, end_pos, thick, color) {
 #' @family line functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_line_bezier(c(200, 150), c(200, 150), 3.0, "red"))
 #'
 #' @export
@@ -4925,7 +4925,7 @@ draw_line_bezier <- function(start_pos, end_pos, thick, color) {
 #' @family line functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_line_dashed(c(200, 150), c(200, 150), 0L, 0L, "red"))
 #'
 #' @export
@@ -4966,7 +4966,11 @@ draw_line_dashed <- function(start_pos, end_pos, dash_size, space_size, color) {
 #' @family circle functions
 #' @family draw functions
 #'
-#' @example man/examples/draw_circle.R
+#' @examplesIf raylibr:::has_display()
+#' raylibr_screenshot(function() {
+#'   draw_circle(200L, 150L, 80.0, "yellow")
+#'   draw_circle(210L, 160L, 80.0, color_alpha("white", 0.3))
+#' })
 #'
 #' @export
 draw_circle <- function(center_x, center_y, radius, color) {
@@ -5004,7 +5008,7 @@ draw_circle <- function(center_x, center_y, radius, color) {
 #' @family circle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_circle_v(c(200, 150), 80.0, "red"))
 #'
 #' @export
@@ -5042,7 +5046,7 @@ draw_circle_v <- function(center, radius, color) {
 #' @family circle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_circle_gradient(c(200, 150), 80.0, "red", "red"))
 #'
 #' @export
@@ -5084,7 +5088,7 @@ draw_circle_gradient <- function(center, radius, inner, outer) {
 #' @family circle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_circle_sector(c(200, 150), 80.0, 0.0, 270.0, 36L, "red"))
 #'
 #' @export
@@ -5130,7 +5134,7 @@ draw_circle_sector <- function(center, radius, start_angle, end_angle, segments,
 #' @family circle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_circle_sector_lines(c(200, 150), 80.0, 0.0, 270.0, 36L, "red"))
 #'
 #' @export
@@ -5174,7 +5178,7 @@ draw_circle_sector_lines <- function(center, radius, start_angle, end_angle, seg
 #' @family circle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_circle_lines(200L, 150L, 80.0, "red"))
 #'
 #' @export
@@ -5213,7 +5217,7 @@ draw_circle_lines <- function(center_x, center_y, radius, color) {
 #' @family circle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_circle_lines_v(c(200, 150), 80.0, "red"))
 #'
 #' @export
@@ -5251,7 +5255,7 @@ draw_circle_lines_v <- function(center, radius, color) {
 #' @family ellipse functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_ellipse(200L, 150L, 80.0, 80.0, "red"))
 #'
 #' @export
@@ -5293,7 +5297,7 @@ draw_ellipse <- function(center_x, center_y, radius_h, radius_v, color) {
 #' @family ellipse functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_ellipse_v(c(200, 150), 80.0, 80.0, "red"))
 #'
 #' @export
@@ -5334,7 +5338,7 @@ draw_ellipse_v <- function(center, radius_h, radius_v, color) {
 #' @family ellipse functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_ellipse_lines(200L, 150L, 80.0, 80.0, "red"))
 #'
 #' @export
@@ -5376,7 +5380,7 @@ draw_ellipse_lines <- function(center_x, center_y, radius_h, radius_v, color) {
 #' @family ellipse functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_ellipse_lines_v(c(200, 150), 80.0, 80.0, "red"))
 #'
 #' @export
@@ -5418,7 +5422,7 @@ draw_ellipse_lines_v <- function(center, radius_h, radius_v, color) {
 #' @family ring functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_ring(c(200, 150), 80.0, 80.0, 0.0, 270.0, 36L, "red"))
 #'
 #' @export
@@ -5467,7 +5471,7 @@ draw_ring <- function(center, inner_radius, outer_radius, start_angle, end_angle
 #' @family ring functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_ring_lines(c(200, 150), 80.0, 80.0, 0.0, 270.0, 36L, "red"))
 #'
 #' @export
@@ -5513,7 +5517,7 @@ draw_ring_lines <- function(center, inner_radius, outer_radius, start_angle, end
 #' @family rectangle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle(100L, 100L, 200L, 100L, "red"))
 #'
 #' @export
@@ -5554,7 +5558,7 @@ draw_rectangle <- function(pos_x, pos_y, width, height, color) {
 #' @family rectangle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_v(c(200, 150), c(200, 150), "red"))
 #'
 #' @export
@@ -5590,7 +5594,7 @@ draw_rectangle_v <- function(position, size, color) {
 #' @family rectangle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_rec(rectangle(100, 75, 200, 150), "red"))
 #'
 #' @export
@@ -5626,7 +5630,7 @@ draw_rectangle_rec <- function(rec, color) {
 #' @family rectangle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_pro(rectangle(100, 75, 200, 150), c(0, 0), 0.0, "red"))
 #'
 #' @export
@@ -5668,7 +5672,7 @@ draw_rectangle_pro <- function(rec, origin, rotation, color) {
 #' @family rectangle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_gradient_v(100L, 100L, 200L, 100L, "red", "red"))
 #'
 #' @export
@@ -5714,7 +5718,7 @@ draw_rectangle_gradient_v <- function(pos_x, pos_y, width, height, top, bottom) 
 #' @family rectangle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_gradient_h(100L, 100L, 200L, 100L, "red", "red"))
 #'
 #' @export
@@ -5759,7 +5763,7 @@ draw_rectangle_gradient_h <- function(pos_x, pos_y, width, height, left, right) 
 #' @family rectangle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_gradient_ex(rectangle(100, 75, 200, 150), "red", "red", "red", "red"))
 #'
 #' @export
@@ -5802,7 +5806,7 @@ draw_rectangle_gradient_ex <- function(rec, top_left, bottom_left, bottom_right,
 #' @family rectangle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_lines(100L, 100L, 200L, 100L, "red"))
 #'
 #' @export
@@ -5843,7 +5847,7 @@ draw_rectangle_lines <- function(pos_x, pos_y, width, height, color) {
 #' @family rectangle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_lines_ex(rectangle(100, 75, 200, 150), 3.0, "red"))
 #'
 #' @export
@@ -5881,7 +5885,7 @@ draw_rectangle_lines_ex <- function(rec, line_thick, color) {
 #' @family rectangle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_rounded(rectangle(100, 75, 200, 150), 0.3, 36L, "red"))
 #'
 #' @export
@@ -5921,7 +5925,7 @@ draw_rectangle_rounded <- function(rec, roundness, segments, color) {
 #' @family rectangle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_rounded_lines(rectangle(100, 75, 200, 150), 0.3, 36L, "red"))
 #'
 #' @export
@@ -5962,7 +5966,7 @@ draw_rectangle_rounded_lines <- function(rec, roundness, segments, color) {
 #' @family rectangle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_rounded_lines_ex(rectangle(100, 75, 200, 150), 0.3, 36L, 3.0, "red"))
 #'
 #' @export
@@ -6003,7 +6007,7 @@ draw_rectangle_rounded_lines_ex <- function(rec, roundness, segments, line_thick
 #' @family triangle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_triangle(c(200, 50), c(100, 250), c(300, 250), "red"))
 #'
 #' @export
@@ -6043,7 +6047,7 @@ draw_triangle <- function(v1, v2, v3, color) {
 #' @family triangle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_triangle_lines(c(200, 50), c(100, 250), c(300, 250), "red"))
 #'
 #' @export
@@ -6083,7 +6087,7 @@ draw_triangle_lines <- function(v1, v2, v3, color) {
 #' @family poly functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_poly(c(200, 150), 6L, 80.0, 0.0, "red"))
 #'
 #' @export
@@ -6126,7 +6130,7 @@ draw_poly <- function(center, sides, radius, rotation, color) {
 #' @family poly functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_poly_lines(c(200, 150), 6L, 80.0, 0.0, "red"))
 #'
 #' @export
@@ -6170,7 +6174,7 @@ draw_poly_lines <- function(center, sides, radius, rotation, color) {
 #' @family poly functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_poly_lines_ex(c(200, 150), 6L, 80.0, 0.0, 3.0, "red"))
 #'
 #' @export
@@ -6214,7 +6218,7 @@ draw_poly_lines_ex <- function(center, sides, radius, rotation, line_thick, colo
 #' @family spline functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_spline_segment_linear(c(200, 50), c(100, 250), 3.0, "red"))
 #'
 #' @export
@@ -6256,7 +6260,7 @@ draw_spline_segment_linear <- function(p1, p2, thick, color) {
 #' @family spline functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_spline_segment_basis(c(200, 50), c(100, 250), c(300, 250), c(350, 100), 3.0, "red"))
 #'
 #' @export
@@ -6302,7 +6306,7 @@ draw_spline_segment_basis <- function(p1, p2, p3, p4, thick, color) {
 #' @family spline functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_spline_segment_catmull_rom(c(200, 50), c(100, 250), c(300, 250), c(350, 100), 3.0, "red"))
 #'
 #' @export
@@ -6347,7 +6351,7 @@ draw_spline_segment_catmull_rom <- function(p1, p2, p3, p4, thick, color) {
 #' @family spline functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_spline_segment_bezier_quadratic(c(200, 50), c(200, 150), c(300, 250), 3.0, "red"))
 #'
 #' @export
@@ -6391,7 +6395,7 @@ draw_spline_segment_bezier_quadratic <- function(p1, c2, p3, thick, color) {
 #' @family spline functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_spline_segment_bezier_cubic(c(200, 50), c(200, 150), c(200, 150), c(350, 100), 3.0, "red"))
 #'
 #' @export
@@ -8662,7 +8666,7 @@ export_font_as_code <- function(font, file_name) {
 #' @family fps functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_fps(100L, 100L))
 #'
 #' @export
@@ -8698,7 +8702,7 @@ draw_fps <- function(pos_x = 10L, pos_y = 10L) {
 #' @family text functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_text("Hello", 100L, 100L, 30L, "red"))
 #'
 #' @export
@@ -9609,7 +9613,7 @@ text_to_float <- function(text) {
 #' @family line functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_line_3d(c(-1, 0, 0), c(1, 0, 0), "red"))
 #'
 #' @export
@@ -9645,7 +9649,7 @@ draw_line_3d <- function(start_pos, end_pos, color) {
 #' @family point functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_point_3d(c(0, 0, 0), "red"))
 #'
 #' @export
@@ -9682,7 +9686,7 @@ draw_point_3d <- function(position, color) {
 #' @family circle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_circle_3d(c(0, 0, 0), 1.0, c(0, 1, 0), 0.0, "red"))
 #'
 #' @export
@@ -9724,7 +9728,7 @@ draw_circle_3d <- function(center, radius, rotation_axis, rotation_angle, color)
 #' @family triangle functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_triangle_3d(c(-1, 0, 0), c(1, 0, 0), c(0, 1, 0), "red"))
 #'
 #' @export
@@ -9764,7 +9768,7 @@ draw_triangle_3d <- function(v1, v2, v3, color) {
 #' @family cube functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_cube(c(0, 0, 0), 2.0, 2.0, 2.0, "red"))
 #'
 #' @export
@@ -9805,7 +9809,7 @@ draw_cube <- function(position, width, height, length, color) {
 #' @family cube functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_cube_v(c(0, 0, 0), c(2, 2, 2), "red"))
 #'
 #' @export
@@ -9844,7 +9848,7 @@ draw_cube_v <- function(position, size, color) {
 #' @family cube functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_cube_wires(c(0, 0, 0), 2.0, 2.0, 2.0, "red"))
 #'
 #' @export
@@ -9885,7 +9889,7 @@ draw_cube_wires <- function(position, width, height, length, color) {
 #' @family cube functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_cube_wires_v(c(0, 0, 0), c(2, 2, 2), "red"))
 #'
 #' @export
@@ -9921,7 +9925,7 @@ draw_cube_wires_v <- function(position, size, color) {
 #' @family sphere functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_sphere(c(0, 0, 0), 1.0, "red"))
 #'
 #' @export
@@ -9960,7 +9964,7 @@ draw_sphere <- function(center_pos, radius, color) {
 #' @family sphere functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_sphere_ex(c(0, 0, 0), 1.0, 16L, 16L, "red"))
 #'
 #' @export
@@ -10003,7 +10007,7 @@ draw_sphere_ex <- function(center_pos, radius, rings, slices, color) {
 #' @family sphere functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_sphere_wires(c(0, 0, 0), 1.0, 16L, 16L, "red"))
 #'
 #' @export
@@ -10046,7 +10050,7 @@ draw_sphere_wires <- function(center_pos, radius, rings, slices, color) {
 #' @family cylinder functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_cylinder(c(0, 0, 0), 1.0, 1.0, 2.0, 16L, "red"))
 #'
 #' @export
@@ -10092,7 +10096,7 @@ draw_cylinder <- function(position, radius_top, radius_bottom, height, slices, c
 #' @family cylinder functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_cylinder_ex(c(-1, 0, 0), c(1, 0, 0), 1.0, 1.0, 16L, "red"))
 #'
 #' @export
@@ -10138,7 +10142,7 @@ draw_cylinder_ex <- function(start_pos, end_pos, start_radius, end_radius, sides
 #' @family cylinder functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_cylinder_wires(c(0, 0, 0), 1.0, 1.0, 2.0, 16L, "red"))
 #'
 #' @export
@@ -10184,7 +10188,7 @@ draw_cylinder_wires <- function(position, radius_top, radius_bottom, height, sli
 #' @family cylinder functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_cylinder_wires_ex(c(-1, 0, 0), c(1, 0, 0), 1.0, 1.0, 16L, "red"))
 #'
 #' @export
@@ -10229,7 +10233,7 @@ draw_cylinder_wires_ex <- function(start_pos, end_pos, start_radius, end_radius,
 #' @family capsule functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_capsule(c(-1, 0, 0), c(1, 0, 0), 1.0, 16L, 16L, "red"))
 #'
 #' @export
@@ -10275,7 +10279,7 @@ draw_capsule <- function(start_pos, end_pos, radius, slices, rings, color) {
 #' @family capsule functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_capsule_wires(c(-1, 0, 0), c(1, 0, 0), 1.0, 16L, 16L, "red"))
 #'
 #' @export
@@ -10317,7 +10321,7 @@ draw_capsule_wires <- function(start_pos, end_pos, radius, slices, rings, color)
 #' @family plane functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_plane(c(0, 0, 0), c(4, 4), "red"))
 #'
 #' @export
@@ -10385,7 +10389,7 @@ draw_ray <- function(ray, color) {
 #' @family grid functions
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_grid(16L, 1.0))
 #'
 #' @export

@@ -17,9 +17,10 @@ draw_spline_basis(points, thick, color)
 Draw spline: B-Spline, minimum 4 points.
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 pts <- matrix(c(50, 150, 250, 350, 50, 200, 50, 250), ncol = 2)
 raylibr_screenshot(function() draw_spline_basis(pts, 3.0, "blue"))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other draw functions: 

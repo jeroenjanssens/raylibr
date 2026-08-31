@@ -23,8 +23,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 raylibr_screenshot(function() draw_rectangle_lines_ex(rectangle(100, 75, 200, 150), 3.0, "red"))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other ex functions: 

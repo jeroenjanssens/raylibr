@@ -27,8 +27,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 raylibr_screenshot(function() draw_poly_lines(c(200, 150), 6L, 80.0, 0.0, "red"))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other lines functions: 

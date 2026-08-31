@@ -27,8 +27,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 raylibr_screenshot(function() draw_ellipse(200L, 150L, 80.0, 80.0, "red"))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other ellipse functions: 

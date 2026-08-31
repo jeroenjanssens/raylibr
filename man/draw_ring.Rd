@@ -39,8 +39,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 raylibr_screenshot(function() draw_ring(c(200, 150), 80.0, 80.0, 0.0, 270.0, 36L, "red"))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other ring functions: 

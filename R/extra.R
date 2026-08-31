@@ -171,6 +171,12 @@ raylibr_resource <- function(name) {
   system.file("demo_resources", name, package = "raylibr")
 }
 
+has_display <- function() {
+  sysname <- Sys.info()[["sysname"]]
+  if (sysname == "Linux") return(nzchar(Sys.getenv("DISPLAY")))
+  TRUE
+}
+
 #' Render a 2D scene to an image
 #'
 #' Creates a hidden window, calls the supplied drawing function
@@ -316,7 +322,7 @@ update_camera_pro <- function(camera, movement, rotation, zoom) {
 #'
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(50, 200, 350, 50, 150, 250), ncol = 2)
 #' raylibr_screenshot(function() draw_line_strip(pts, "red"))
 #'
@@ -335,7 +341,7 @@ draw_line_strip <- function(points, color) {
 #'
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(200, 300, 100, 300, 100, 50, 250, 250), ncol = 2)
 #' raylibr_screenshot(function() draw_triangle_fan(pts, "blue"))
 #'
@@ -354,7 +360,7 @@ draw_triangle_fan <- function(points, color) {
 #'
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(50, 150, 250, 350, 80, 220, 80, 220), ncol = 2)
 #' raylibr_screenshot(function() draw_triangle_strip(pts, "green"))
 #'
@@ -374,7 +380,7 @@ draw_triangle_strip <- function(points, color) {
 #'
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(50, 200, 350, 50, 250, 100), ncol = 2)
 #' raylibr_screenshot(function() draw_spline_linear(pts, 3.0, "red"))
 #'
@@ -394,7 +400,7 @@ draw_spline_linear <- function(points, thick, color) {
 #'
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(50, 150, 250, 350, 50, 200, 50, 250), ncol = 2)
 #' raylibr_screenshot(function() draw_spline_basis(pts, 3.0, "blue"))
 #'
@@ -414,7 +420,7 @@ draw_spline_basis <- function(points, thick, color) {
 #'
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(50, 150, 250, 350, 50, 250, 250, 50), ncol = 2)
 #' raylibr_screenshot(function() draw_spline_catmull_rom(pts, 3.0, "green"))
 #'
@@ -434,7 +440,7 @@ draw_spline_catmull_rom <- function(points, thick, color) {
 #'
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(50, 200, 350, 250, 50, 250), ncol = 2)
 #' raylibr_screenshot(function() draw_spline_bezier_quadratic(pts, 3.0, "purple"))
 #'
@@ -454,7 +460,7 @@ draw_spline_bezier_quadratic <- function(points, thick, color) {
 #'
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(50, 150, 250, 350, 50, 250, 250, 50), ncol = 2)
 #' raylibr_screenshot(function() draw_spline_bezier_cubic(pts, 3.0, "orange"))
 #'
@@ -473,7 +479,7 @@ draw_spline_bezier_cubic <- function(points, thick, color) {
 #'
 #' @family draw functions
 #'
-#' @examples
+#' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(0, 1, 2, 3, 0, 1, 0, 1, 0, 0, 0, 0), ncol = 3)
 #' raylibr_screenshot_3d(function() draw_triangle_strip_3d(pts, "red"))
 #'

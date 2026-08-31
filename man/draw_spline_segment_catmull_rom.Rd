@@ -29,8 +29,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 raylibr_screenshot(function() draw_spline_segment_catmull_rom(c(200, 50), c(100, 250), c(300, 250), c(350, 100), 3.0, "red"))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rom functions: 

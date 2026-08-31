@@ -21,8 +21,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 raylibr_screenshot(function() draw_fps(100L, 100L))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other fps functions: 

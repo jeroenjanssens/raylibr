@@ -27,8 +27,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 raylibr_screenshot(function() draw_text("Hello", 100L, 100L, 30L, "red"))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other text functions: 

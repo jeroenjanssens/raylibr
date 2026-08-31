@@ -29,8 +29,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 raylibr_screenshot_3d(function() draw_cylinder_wires(c(0, 0, 0), 1.0, 1.0, 2.0, 16L, "red"))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other wires functions: 

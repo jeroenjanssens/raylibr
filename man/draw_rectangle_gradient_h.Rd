@@ -29,8 +29,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 raylibr_screenshot(function() draw_rectangle_gradient_h(100L, 100L, 200L, 100L, "red", "red"))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rectangle functions: 

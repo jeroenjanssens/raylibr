@@ -17,9 +17,10 @@ draw_spline_bezier_cubic(points, thick, color)
 Draw spline: Cubic Bezier, minimum 4 points (2 control points).
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 pts <- matrix(c(50, 150, 250, 350, 50, 250, 250, 50), ncol = 2)
 raylibr_screenshot(function() draw_spline_bezier_cubic(pts, 3.0, "orange"))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other draw functions: 

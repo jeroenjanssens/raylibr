@@ -17,9 +17,10 @@ draw_spline_catmull_rom(points, thick, color)
 Draw spline: Catmull-Rom, minimum 4 points.
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 pts <- matrix(c(50, 150, 250, 350, 50, 250, 250, 50), ncol = 2)
 raylibr_screenshot(function() draw_spline_catmull_rom(pts, 3.0, "green"))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other draw functions: 

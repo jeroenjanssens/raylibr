@@ -15,9 +15,10 @@ draw_triangle_strip_3d(points, color)
 Draw a triangle strip defined by points (3D version).
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 pts <- matrix(c(0, 1, 2, 3, 0, 1, 0, 1, 0, 0, 0, 0), ncol = 3)
 raylibr_screenshot_3d(function() draw_triangle_strip_3d(pts, "red"))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other draw functions: 

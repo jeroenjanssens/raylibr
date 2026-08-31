@@ -29,8 +29,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 raylibr_screenshot_3d(function() draw_capsule(c(-1, 0, 0), c(1, 0, 0), 1.0, 16L, 16L, "red"))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other capsule functions: 

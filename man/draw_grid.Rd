@@ -21,8 +21,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 raylibr_screenshot_3d(function() draw_grid(16L, 1.0))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other draw functions: 

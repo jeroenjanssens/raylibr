@@ -23,8 +23,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 raylibr_screenshot_3d(function() draw_cube_v(c(0, 0, 0), c(2, 2, 2), "red"))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other v functions: 

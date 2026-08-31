@@ -25,8 +25,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
+\dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
 raylibr_screenshot(function() draw_circle_gradient(c(200, 150), 80.0, "red", "red"))
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other circle functions: 

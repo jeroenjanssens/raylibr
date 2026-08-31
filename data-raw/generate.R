@@ -840,7 +840,9 @@ generate_function_r <- function(func_row) {
   draw_cat <- classify_draw_example(name, param_types)
 
   if (file.exists(example_file)) {
-    lines <- c(lines, paste0("#' @example ", example_file))
+    lines <- c(lines, "#' @examplesIf raylibr:::has_display()")
+    ex_lines <- readLines(example_file)
+    lines <- c(lines, paste0("#' ", ex_lines))
   } else if (is_safe_example(name)) {
     lines <- c(lines, "#' @examples")
     if (is.null(params) || nrow(params) == 0) {
@@ -852,7 +854,7 @@ generate_function_r <- function(func_row) {
       lines <- c(lines, paste0("#' ", snake, "(", paste(example_args, collapse = ", "), ")"))
     }
   } else if (draw_cat == "2d") {
-    lines <- c(lines, "#' @examples")
+    lines <- c(lines, "#' @examplesIf raylibr:::has_display()")
     if (is.null(params) || nrow(params) == 0) {
       lines <- c(lines, paste0("#' raylibr_screenshot(function() ", snake, "())"))
     } else {
@@ -863,7 +865,7 @@ generate_function_r <- function(func_row) {
       lines <- c(lines, paste0("#' raylibr_screenshot(function() ", call_str, ")"))
     }
   } else if (draw_cat == "3d") {
-    lines <- c(lines, "#' @examples")
+    lines <- c(lines, "#' @examplesIf raylibr:::has_display()")
     if (is.null(params) || nrow(params) == 0) {
       lines <- c(lines, paste0("#' raylibr_screenshot_3d(function() ", snake, "())"))
     } else {
