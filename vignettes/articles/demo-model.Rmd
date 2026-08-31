@@ -6,6 +6,10 @@ Loads a textured OBJ church model and renders it to a `render_texture`, then app
 
 ![](../reference/figures/raylibr-demo-model.gif)
 
+## Try it
+
+<iframe src="../wasm/model.html" width="600" height="450" style="border:none; display:block; margin:0 auto;"></iframe>
+
 ## Run
 
 ```r
