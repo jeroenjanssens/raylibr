@@ -16,6 +16,8 @@ with a flipped rectangle to correct the render texture’s Y axis, and
 
 ![](../reference/figures/raylibr-demo-model.gif)
 
+## Try it
+
 ## Run
 
 ``` r
