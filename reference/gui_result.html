@@ -15,28 +15,38 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+      <ul class="navbar-nav me-auto"><li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-guide" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Guide</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-guide"><li><a class="dropdown-item" href="../articles/guide-getting-started.html">Getting Started</a></li>
+    <li><a class="dropdown-item" href="../articles/guide-drawing-2d.html">Drawing 2D Shapes</a></li>
+    <li><a class="dropdown-item" href="../articles/guide-drawing-3d.html">Drawing 3D</a></li>
+    <li><a class="dropdown-item" href="../articles/guide-colors.html">Colors</a></li>
+    <li><a class="dropdown-item" href="../articles/guide-text.html">Text &amp; Fonts</a></li>
+    <li><a class="dropdown-item" href="../articles/guide-images.html">Images &amp; Textures</a></li>
+    <li><a class="dropdown-item" href="../articles/guide-input.html">Input</a></li>
+    <li><a class="dropdown-item" href="../articles/guide-audio.html">Audio</a></li>
+    <li><a class="dropdown-item" href="../articles/guide-camera.html">Camera</a></li>
+    <li><a class="dropdown-item" href="../articles/guide-shaders.html">Shaders</a></li>
+    <li><a class="dropdown-item" href="../articles/guide-raygui.html">raygui</a></li>
+    <li><a class="dropdown-item" href="../articles/guide-raymath.html">raymath</a></li>
+    <li><a class="dropdown-item" href="../articles/guide-webr.html">webR</a></li>
+  </ul></li>
 <li class="nav-item dropdown">
-  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Guides</h6></li>
-    <li><a class="dropdown-item" href="../articles/screenshot.html">Screenshot</a></li>
-    <li><a class="dropdown-item" href="../articles/wasm.html">Compiling raylibr to WebAssembly</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Demos</h6></li>
-    <li><a class="dropdown-item" href="../articles/demo-helloworld.html">Hello, World!</a></li>
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-demos" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Demos</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-demos"><li><a class="dropdown-item" href="../articles/demo-helloworld.html">Hello, World!</a></li>
     <li><a class="dropdown-item" href="../articles/demo-mouse.html">Mouse Test</a></li>
     <li><a class="dropdown-item" href="../articles/demo-balls.html">Bouncing Balls</a></li>
     <li><a class="dropdown-item" href="../articles/demo-snake.html">Snake</a></li>
     <li><a class="dropdown-item" href="../articles/demo-stroop.html">Stroop Test</a></li>
-    <li><a class="dropdown-item" href="../articles/demo-cubes.html">Waving Cubes and Music</a></li>
-    <li><a class="dropdown-item" href="../articles/demo-beatbox.html">Beatbox like Jeroen</a></li>
-    <li><a class="dropdown-item" href="../articles/demo-shader.html">Stars</a></li>
+    <li><a class="dropdown-item" href="../articles/demo-cubes.html">Waving Cubes</a></li>
+    <li><a class="dropdown-item" href="../articles/demo-beatbox.html">Beatbox</a></li>
+    <li><a class="dropdown-item" href="../articles/demo-shader.html">Shader Stars</a></li>
     <li><a class="dropdown-item" href="../articles/demo-julia.html">Julia Sets</a></li>
     <li><a class="dropdown-item" href="../articles/demo-gui.html">GUI Controls</a></li>
-    <li><a class="dropdown-item" href="../articles/demo-model.html">3D Model and Post-Processing Shaders</a></li>
+    <li><a class="dropdown-item" href="../articles/demo-model.html">3D Model</a></li>
     <li><a class="dropdown-item" href="../articles/demo-raycaster.html">Raycaster</a></li>
   </ul></li>
+<li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
 <li class="nav-item"><a class="external-link nav-link" href="https://github.com/jeroenjanssens/raylibr/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>

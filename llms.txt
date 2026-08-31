@@ -2043,11 +2043,26 @@ The `raylibr` package is licensed under the MIT License.
 
 # Articles
 
-### Guides
+### Guide
 
-- [Screenshot](https://jeroenjanssens.github.io/raylibr/articles/screenshot.md):
-- [Compiling raylibr to
-  WebAssembly](https://jeroenjanssens.github.io/raylibr/articles/wasm.md):
+- [Getting
+  Started](https://jeroenjanssens.github.io/raylibr/articles/guide-getting-started.md):
+- [Drawing 2D
+  Shapes](https://jeroenjanssens.github.io/raylibr/articles/guide-drawing-2d.md):
+- [Drawing
+  3D](https://jeroenjanssens.github.io/raylibr/articles/guide-drawing-3d.md):
+- [Colors](https://jeroenjanssens.github.io/raylibr/articles/guide-colors.md):
+- [Text &
+  Fonts](https://jeroenjanssens.github.io/raylibr/articles/guide-text.md):
+- [Images &
+  Textures](https://jeroenjanssens.github.io/raylibr/articles/guide-images.md):
+- [Input](https://jeroenjanssens.github.io/raylibr/articles/guide-input.md):
+- [Audio](https://jeroenjanssens.github.io/raylibr/articles/guide-audio.md):
+- [Camera](https://jeroenjanssens.github.io/raylibr/articles/guide-camera.md):
+- [Shaders](https://jeroenjanssens.github.io/raylibr/articles/guide-shaders.md):
+- [raygui](https://jeroenjanssens.github.io/raylibr/articles/guide-raygui.md):
+- [raymath](https://jeroenjanssens.github.io/raylibr/articles/guide-raymath.md):
+- [webR](https://jeroenjanssens.github.io/raylibr/articles/guide-webr.md):
 
 ### Demos
 

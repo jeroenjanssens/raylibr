@@ -14,9 +14,20 @@ articles:
   articles/demo-shader: demo-shader.html
   articles/demo-snake: demo-snake.html
   articles/demo-stroop: demo-stroop.html
-  articles/screenshot: screenshot.html
-  articles/wasm: wasm.html
-last_built: 2026-08-31T12:40Z
+  articles/guide-audio: guide-audio.html
+  articles/guide-camera: guide-camera.html
+  articles/guide-colors: guide-colors.html
+  articles/guide-drawing-2d: guide-drawing-2d.html
+  articles/guide-drawing-3d: guide-drawing-3d.html
+  articles/guide-getting-started: guide-getting-started.html
+  articles/guide-images: guide-images.html
+  articles/guide-input: guide-input.html
+  articles/guide-raygui: guide-raygui.html
+  articles/guide-raymath: guide-raymath.html
+  articles/guide-shaders: guide-shaders.html
+  articles/guide-text: guide-text.html
+  articles/guide-webr: guide-webr.html
+last_built: 2026-08-31T14:28Z
 urls:
   reference: https://jeroenjanssens.github.io/raylibr/reference
   article: https://jeroenjanssens.github.io/raylibr/articles
