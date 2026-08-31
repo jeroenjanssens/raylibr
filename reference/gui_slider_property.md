@@ -23,8 +23,8 @@ An object of class `list` of length 2.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_slider_property$slider_width
+#> [1] 16
 gui_slider_property$slider_padding
-} # }
+#> [1] 17
 ```

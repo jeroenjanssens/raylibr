@@ -55,9 +55,9 @@ definition:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 n_p <- n_patch_info(rectangle(10, 10, 200, 100), 0L, 0L, 0L, 0L, 0L)
 n_p$source
+#> rectangle(x = 10, y = 10, width = 200, height = 100) 
 n_p$left
-} # }
+#> [1] 0
 ```

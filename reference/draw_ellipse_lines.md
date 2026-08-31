@@ -48,6 +48,11 @@ Other lines functions:
 [`draw_ring_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_ring_lines.md),
 [`draw_triangle_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_lines.md)
 
+Other ellipse functions:
+[`draw_ellipse()`](https://jeroenjanssens.github.io/raylibr/reference/draw_ellipse.md),
+[`draw_ellipse_lines_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_ellipse_lines_v.md),
+[`draw_ellipse_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_ellipse_v.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -144,7 +149,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_ellipse_lines(100L, 100L, 50.0, 50.0, "red")
-} # }
+raylibr_screenshot(function() draw_ellipse_lines(200L, 150L, 80.0, 80.0, "red"))
 ```

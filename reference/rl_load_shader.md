@@ -161,7 +161,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_load_shader("text", 0L)
-} # }
+}
 ```

@@ -147,7 +147,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_draw_render_batch_active()
-} # }
+}
 ```

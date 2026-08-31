@@ -50,6 +50,9 @@ Other wires functions:
 [`draw_model_wires()`](https://jeroenjanssens.github.io/raylibr/reference/draw_model_wires.md),
 [`draw_sphere_wires()`](https://jeroenjanssens.github.io/raylibr/reference/draw_sphere_wires.md)
 
+Other capsule functions:
+[`draw_capsule()`](https://jeroenjanssens.github.io/raylibr/reference/draw_capsule.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -146,7 +149,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_capsule_wires(c(0, 5, 0), c(0, 5, 0), 50.0, 16L, 8L, "red")
-} # }
+raylibr_screenshot_3d(function() draw_capsule_wires(c(-1, 0, 0), c(1, 0, 0), 1.0, 16L, 16L, "red"))
 ```

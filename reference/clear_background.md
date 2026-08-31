@@ -24,7 +24,7 @@ definition:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 clear_background("red")
-} # }
+}
 ```

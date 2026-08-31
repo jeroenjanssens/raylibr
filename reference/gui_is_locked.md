@@ -72,7 +72,7 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 gui_is_locked()
-} # }
+}
 ```

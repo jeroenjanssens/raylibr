@@ -41,7 +41,34 @@ Other valid functions:
 [`is_texture_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_texture_valid.md),
 [`is_wave_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_wave_valid.md)
 
+Other image functions:
+[`export_image()`](https://jeroenjanssens.github.io/raylibr/reference/export_image.md),
+[`export_image_as_code()`](https://jeroenjanssens.github.io/raylibr/reference/export_image_as_code.md),
+[`gen_image_cellular()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_cellular.md),
+[`gen_image_checked()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_checked.md),
+[`gen_image_color()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_color.md),
+[`gen_image_gradient_linear()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_gradient_linear.md),
+[`gen_image_gradient_radial()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_gradient_radial.md),
+[`gen_image_gradient_square()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_gradient_square.md),
+[`gen_image_perlin_noise()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_perlin_noise.md),
+[`gen_image_text()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_text.md),
+[`gen_image_white_noise()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_white_noise.md),
+[`get_clipboard_image()`](https://jeroenjanssens.github.io/raylibr/reference/get_clipboard_image.md),
+[`get_image_alpha_border()`](https://jeroenjanssens.github.io/raylibr/reference/get_image_alpha_border.md),
+[`get_image_color()`](https://jeroenjanssens.github.io/raylibr/reference/get_image_color.md),
+[`image_draw_line_ex()`](https://jeroenjanssens.github.io/raylibr/reference/image_draw_line_ex.md),
+[`image_draw_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/image_draw_triangle.md),
+[`image_from_image()`](https://jeroenjanssens.github.io/raylibr/reference/image_from_image.md),
+[`load_font_from_image()`](https://jeroenjanssens.github.io/raylibr/reference/load_font_from_image.md),
+[`load_image()`](https://jeroenjanssens.github.io/raylibr/reference/load_image.md),
+[`load_image_from_screen()`](https://jeroenjanssens.github.io/raylibr/reference/load_image_from_screen.md),
+[`load_image_from_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_image_from_texture.md),
+[`load_image_raw()`](https://jeroenjanssens.github.io/raylibr/reference/load_image_raw.md),
+[`load_texture_from_image()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture_from_image.md),
+[`unload_image()`](https://jeroenjanssens.github.io/raylibr/reference/unload_image.md)
+
 Other is functions:
+[`color_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/color_is_equal.md),
 [`is_audio_device_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_device_ready.md),
 [`is_audio_stream_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_playing.md),
 [`is_audio_stream_processed()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_processed.md),
@@ -86,12 +113,13 @@ Other is functions:
 [`is_window_minimized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_minimized.md),
 [`is_window_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_ready.md),
 [`is_window_resized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_resized.md),
-[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md)
+[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md),
+[`text_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/text_is_equal.md)
 
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 is_image_valid(gen_image_color(100, 100, "blue"))
-} # }
+}
 ```

@@ -25,6 +25,11 @@ Other default functions:
 [`get_font_default()`](https://jeroenjanssens.github.io/raylibr/reference/get_font_default.md),
 [`set_audio_stream_buffer_size_default()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_buffer_size_default.md)
 
+Other material functions:
+[`is_material_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_material_valid.md),
+[`set_material_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_material_texture.md),
+[`unload_material()`](https://jeroenjanssens.github.io/raylibr/reference/unload_material.md)
+
 Other load functions:
 [`load_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/load_audio_stream.md),
 [`load_file_text()`](https://jeroenjanssens.github.io/raylibr/reference/load_file_text.md),
@@ -51,7 +56,7 @@ Other load functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 load_material_default()
-} # }
+}
 ```

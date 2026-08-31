@@ -39,6 +39,19 @@ Other rec functions:
 [`draw_texture_rec()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_rec.md),
 [`get_glyph_atlas_rec()`](https://jeroenjanssens.github.io/raylibr/reference/get_glyph_atlas_rec.md)
 
+Other collision functions:
+[`check_collision_box_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_box_sphere.md),
+[`check_collision_boxes()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_boxes.md),
+[`check_collision_circle_line()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_circle_line.md),
+[`check_collision_circle_rec()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_circle_rec.md),
+[`check_collision_circles()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_circles.md),
+[`check_collision_point_circle()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_point_circle.md),
+[`check_collision_point_line()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_point_line.md),
+[`check_collision_point_rec()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_point_rec.md),
+[`check_collision_point_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_point_triangle.md),
+[`check_collision_recs()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_recs.md),
+[`check_collision_spheres()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_spheres.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -137,7 +150,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 get_collision_rec(rectangle(10, 10, 200, 100), rectangle(10, 10, 200, 100))
-} # }
+#> rectangle(x = 10, y = 10, width = 200, height = 100) 
 ```

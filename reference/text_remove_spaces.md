@@ -25,10 +25,15 @@ definition:
 
     const char * TextRemoveSpaces(const char * text);
 
+## See also
+
+Other remove functions:
+[`file_remove()`](https://jeroenjanssens.github.io/raylibr/reference/file_remove.md)
+
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 text_remove_spaces("Hello")
-} # }
+}
 ```

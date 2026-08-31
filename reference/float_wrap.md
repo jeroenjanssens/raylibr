@@ -39,7 +39,6 @@ Other float functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 float_wrap(0.0, 0.0, 0.0)
-} # }
+#> [1] NaN
 ```

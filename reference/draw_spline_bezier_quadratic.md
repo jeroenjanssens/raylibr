@@ -120,8 +120,6 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-pts <- matrix(c(100, 200, 300, 100, 300, 100), ncol = 2)
-draw_spline_bezier_quadratic(pts, 2.0, "purple")
-} # }
+pts <- matrix(c(50, 200, 350, 250, 50, 250), ncol = 2)
+raylibr_screenshot(function() draw_spline_bezier_quadratic(pts, 3.0, "purple"))
 ```

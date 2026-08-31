@@ -34,9 +34,10 @@ An object of class `list` of length 13.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 shader_uniform$float
+#> [1] 0
 shader_uniform$ivec3
+#> [1] 6
 shader_uniform$sampler2d
-} # }
+#> [1] 12
 ```

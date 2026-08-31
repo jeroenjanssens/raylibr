@@ -165,7 +165,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_load_texture_depth(800L, 450L, TRUE)
-} # }
+}
 ```

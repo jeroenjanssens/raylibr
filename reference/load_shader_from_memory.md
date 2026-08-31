@@ -31,6 +31,18 @@ definition:
 
 ## See also
 
+Other shader functions:
+[`begin_shader_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_shader_mode.md),
+[`end_shader_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_shader_mode.md),
+[`get_shader_location()`](https://jeroenjanssens.github.io/raylibr/reference/get_shader_location.md),
+[`get_shader_location_attrib()`](https://jeroenjanssens.github.io/raylibr/reference/get_shader_location_attrib.md),
+[`is_shader_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_shader_valid.md),
+[`load_shader()`](https://jeroenjanssens.github.io/raylibr/reference/load_shader.md),
+[`set_shader_value()`](https://jeroenjanssens.github.io/raylibr/reference/set_shader_value.md),
+[`set_shader_value_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/set_shader_value_matrix.md),
+[`set_shader_value_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_shader_value_texture.md),
+[`unload_shader()`](https://jeroenjanssens.github.io/raylibr/reference/unload_shader.md)
+
 Other load functions:
 [`load_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/load_audio_stream.md),
 [`load_file_text()`](https://jeroenjanssens.github.io/raylibr/reference/load_file_text.md),
@@ -57,7 +69,7 @@ Other load functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 load_shader_from_memory("text", "text")
-} # }
+}
 ```

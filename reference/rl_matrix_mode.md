@@ -153,7 +153,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_matrix_mode(0L)
-} # }
+}
 ```

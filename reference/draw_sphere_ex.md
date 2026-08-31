@@ -58,6 +58,14 @@ Other ex functions:
 [`measure_text_ex()`](https://jeroenjanssens.github.io/raylibr/reference/measure_text_ex.md),
 [`update_model_animation_ex()`](https://jeroenjanssens.github.io/raylibr/reference/update_model_animation_ex.md)
 
+Other sphere functions:
+[`check_collision_box_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_box_sphere.md),
+[`draw_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/draw_sphere.md),
+[`draw_sphere_wires()`](https://jeroenjanssens.github.io/raylibr/reference/draw_sphere_wires.md),
+[`gen_mesh_hemi_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/gen_mesh_hemi_sphere.md),
+[`gen_mesh_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/gen_mesh_sphere.md),
+[`get_ray_collision_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_sphere.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -154,7 +162,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_sphere_ex(c(0, 5, 0), 50.0, 8L, 16L, "red")
-} # }
+raylibr_screenshot_3d(function() draw_sphere_ex(c(0, 0, 0), 1.0, 16L, 16L, "red"))
 ```

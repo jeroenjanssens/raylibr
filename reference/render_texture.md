@@ -40,9 +40,9 @@ definition:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 ren <- render_texture(0L, load_texture("file.png"), load_texture("file.png"))
 ren$id
+#> [1] 0
 ren$texture
-} # }
+#> texture(id = 0, width = 0, height = 0, mipmaps = 0, format = 0) 
 ```

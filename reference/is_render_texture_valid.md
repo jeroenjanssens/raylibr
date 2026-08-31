@@ -41,7 +41,14 @@ Other valid functions:
 [`is_texture_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_texture_valid.md),
 [`is_wave_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_wave_valid.md)
 
+Other render functions:
+[`get_render_height()`](https://jeroenjanssens.github.io/raylibr/reference/get_render_height.md),
+[`get_render_width()`](https://jeroenjanssens.github.io/raylibr/reference/get_render_width.md),
+[`load_render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_render_texture.md),
+[`unload_render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/unload_render_texture.md)
+
 Other is functions:
+[`color_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/color_is_equal.md),
 [`is_audio_device_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_device_ready.md),
 [`is_audio_stream_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_playing.md),
 [`is_audio_stream_processed()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_processed.md),
@@ -86,12 +93,13 @@ Other is functions:
 [`is_window_minimized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_minimized.md),
 [`is_window_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_ready.md),
 [`is_window_resized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_resized.md),
-[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md)
+[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md),
+[`text_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/text_is_equal.md)
 
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 is_render_texture_valid(load_render_texture(800, 450))
-} # }
+}
 ```

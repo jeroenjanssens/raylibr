@@ -21,8 +21,8 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 is_vector_3(c(1, 2, 3))
+#> [1] TRUE
 is_vector_3(c(1, 2))
-} # }
+#> [1] FALSE
 ```

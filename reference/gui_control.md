@@ -37,9 +37,10 @@ An object of class `list` of length 16.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_control$default
+#> [1] 0
 gui_control$combobox
+#> [1] 7
 gui_control$statusbar
-} # }
+#> [1] 15
 ```

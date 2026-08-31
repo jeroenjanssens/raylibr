@@ -29,6 +29,15 @@ Other pressed functions:
 [`is_key_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_pressed.md),
 [`is_mouse_button_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/is_mouse_button_pressed.md)
 
+Other key functions:
+[`get_key_name()`](https://jeroenjanssens.github.io/raylibr/reference/get_key_name.md),
+[`is_key_down()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_down.md),
+[`is_key_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_pressed.md),
+[`is_key_pressed_repeat()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_pressed_repeat.md),
+[`is_key_released()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_released.md),
+[`is_key_up()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_up.md),
+[`set_exit_key()`](https://jeroenjanssens.github.io/raylibr/reference/set_exit_key.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -127,7 +136,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_key_pressed()
-} # }
+}
 ```

@@ -128,7 +128,7 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 draw_bounding_box(bounding_box(c(-1, -1, -1), c(1, 1, 1)), "red")
-} # }
+}
 ```

@@ -42,6 +42,12 @@ Other 3d functions:
 [`draw_point_3d()`](https://jeroenjanssens.github.io/raylibr/reference/draw_point_3d.md),
 [`end_mode_3d()`](https://jeroenjanssens.github.io/raylibr/reference/end_mode_3d.md)
 
+Other triangle functions:
+[`check_collision_point_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_point_triangle.md),
+[`draw_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle.md),
+[`draw_triangle_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_lines.md),
+[`get_ray_collision_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_triangle.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -138,7 +144,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_triangle_3d(c(0, 0, 0), c(0, 0, 0), c(0, 0, 0), "red")
-} # }
+raylibr_screenshot_3d(function() draw_triangle_3d(c(-1, 0, 0), c(1, 0, 0), c(0, 1, 0), "red"))
 ```

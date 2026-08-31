@@ -25,10 +25,15 @@ definition:
 
     int FileRemove(const char * fileName);
 
+## See also
+
+Other remove functions:
+[`text_remove_spaces()`](https://jeroenjanssens.github.io/raylibr/reference/text_remove_spaces.md)
+
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 file_remove("file.png")
-} # }
+}
 ```

@@ -130,7 +130,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_point_3d(c(0, 5, 0), "red")
-} # }
+raylibr_screenshot_3d(function() draw_point_3d(c(0, 0, 0), "red"))
 ```

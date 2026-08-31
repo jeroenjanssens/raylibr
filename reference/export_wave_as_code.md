@@ -36,6 +36,15 @@ Other code functions:
 [`export_image_as_code()`](https://jeroenjanssens.github.io/raylibr/reference/export_image_as_code.md),
 [`export_mesh_as_code()`](https://jeroenjanssens.github.io/raylibr/reference/export_mesh_as_code.md)
 
+Other wave functions:
+[`export_wave()`](https://jeroenjanssens.github.io/raylibr/reference/export_wave.md),
+[`is_wave_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_wave_valid.md),
+[`load_sound_from_wave()`](https://jeroenjanssens.github.io/raylibr/reference/load_sound_from_wave.md),
+[`load_wave()`](https://jeroenjanssens.github.io/raylibr/reference/load_wave.md),
+[`unload_wave()`](https://jeroenjanssens.github.io/raylibr/reference/unload_wave.md),
+[`wave_crop()`](https://jeroenjanssens.github.io/raylibr/reference/wave_crop.md),
+[`wave_format()`](https://jeroenjanssens.github.io/raylibr/reference/wave_format.md)
+
 Other export functions:
 [`export_font_as_code()`](https://jeroenjanssens.github.io/raylibr/reference/export_font_as_code.md),
 [`export_image()`](https://jeroenjanssens.github.io/raylibr/reference/export_image.md),
@@ -47,7 +56,7 @@ Other export functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 export_wave_as_code(load_wave("sound.wav"), "file.png")
-} # }
+}
 ```

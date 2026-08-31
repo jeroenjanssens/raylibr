@@ -173,7 +173,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_set_vertex_attribute(0L, 32L, 0L, TRUE, 0L, 0L)
-} # }
+}
 ```

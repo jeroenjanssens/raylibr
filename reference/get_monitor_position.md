@@ -34,6 +34,17 @@ Other position functions:
 [`set_mouse_position()`](https://jeroenjanssens.github.io/raylibr/reference/set_mouse_position.md),
 [`set_window_position()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_position.md)
 
+Other monitor functions:
+[`get_current_monitor()`](https://jeroenjanssens.github.io/raylibr/reference/get_current_monitor.md),
+[`get_monitor_count()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_count.md),
+[`get_monitor_height()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_height.md),
+[`get_monitor_name()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_name.md),
+[`get_monitor_physical_height()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_physical_height.md),
+[`get_monitor_physical_width()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_physical_width.md),
+[`get_monitor_refresh_rate()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_refresh_rate.md),
+[`get_monitor_width()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_width.md),
+[`set_window_monitor()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_monitor.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -132,7 +143,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_monitor_position(0L)
-} # }
+}
 ```

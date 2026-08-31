@@ -21,7 +21,6 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 is_transform("not a transform")
-} # }
+#> [1] FALSE
 ```

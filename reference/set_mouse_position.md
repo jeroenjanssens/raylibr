@@ -34,6 +34,21 @@ Other position functions:
 [`get_window_position()`](https://jeroenjanssens.github.io/raylibr/reference/get_window_position.md),
 [`set_window_position()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_position.md)
 
+Other mouse functions:
+[`get_mouse_delta()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_delta.md),
+[`get_mouse_position()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_position.md),
+[`get_mouse_wheel_move()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_wheel_move.md),
+[`get_mouse_wheel_move_v()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_wheel_move_v.md),
+[`get_mouse_x()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_x.md),
+[`get_mouse_y()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_y.md),
+[`is_mouse_button_down()`](https://jeroenjanssens.github.io/raylibr/reference/is_mouse_button_down.md),
+[`is_mouse_button_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/is_mouse_button_pressed.md),
+[`is_mouse_button_released()`](https://jeroenjanssens.github.io/raylibr/reference/is_mouse_button_released.md),
+[`is_mouse_button_up()`](https://jeroenjanssens.github.io/raylibr/reference/is_mouse_button_up.md),
+[`set_mouse_cursor()`](https://jeroenjanssens.github.io/raylibr/reference/set_mouse_cursor.md),
+[`set_mouse_offset()`](https://jeroenjanssens.github.io/raylibr/reference/set_mouse_offset.md),
+[`set_mouse_scale()`](https://jeroenjanssens.github.io/raylibr/reference/set_mouse_scale.md)
+
 Other set functions:
 [`set_audio_stream_buffer_size_default()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_buffer_size_default.md),
 [`set_audio_stream_pan()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_pan.md),
@@ -79,7 +94,7 @@ Other set functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 set_mouse_position(100L, 100L)
-} # }
+}
 ```

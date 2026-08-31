@@ -22,7 +22,6 @@ Full path to the resource file.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 raylibr_resource("texture.png")
-} # }
+#> [1] ""
 ```

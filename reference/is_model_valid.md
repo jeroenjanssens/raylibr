@@ -41,7 +41,23 @@ Other valid functions:
 [`is_texture_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_texture_valid.md),
 [`is_wave_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_wave_valid.md)
 
+Other model functions:
+[`draw_model()`](https://jeroenjanssens.github.io/raylibr/reference/draw_model.md),
+[`draw_model_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_model_ex.md),
+[`draw_model_wires()`](https://jeroenjanssens.github.io/raylibr/reference/draw_model_wires.md),
+[`draw_model_wires_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_model_wires_ex.md),
+[`get_model_bounding_box()`](https://jeroenjanssens.github.io/raylibr/reference/get_model_bounding_box.md),
+[`is_model_animation_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_model_animation_valid.md),
+[`load_model()`](https://jeroenjanssens.github.io/raylibr/reference/load_model.md),
+[`load_model_from_mesh()`](https://jeroenjanssens.github.io/raylibr/reference/load_model_from_mesh.md),
+[`set_model_mesh_material()`](https://jeroenjanssens.github.io/raylibr/reference/set_model_mesh_material.md),
+[`set_model_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_model_texture.md),
+[`unload_model()`](https://jeroenjanssens.github.io/raylibr/reference/unload_model.md),
+[`update_model_animation()`](https://jeroenjanssens.github.io/raylibr/reference/update_model_animation.md),
+[`update_model_animation_ex()`](https://jeroenjanssens.github.io/raylibr/reference/update_model_animation_ex.md)
+
 Other is functions:
+[`color_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/color_is_equal.md),
 [`is_audio_device_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_device_ready.md),
 [`is_audio_stream_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_playing.md),
 [`is_audio_stream_processed()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_processed.md),
@@ -86,12 +102,13 @@ Other is functions:
 [`is_window_minimized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_minimized.md),
 [`is_window_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_ready.md),
 [`is_window_resized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_resized.md),
-[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md)
+[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md),
+[`text_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/text_is_equal.md)
 
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 is_model_valid(load_model("model.obj"))
-} # }
+}
 ```

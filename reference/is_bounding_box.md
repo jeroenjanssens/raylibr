@@ -21,7 +21,6 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 is_bounding_box("not a bounding_box")
-} # }
+#> [1] FALSE
 ```

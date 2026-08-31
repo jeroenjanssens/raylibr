@@ -46,6 +46,17 @@ definition:
 Other basis functions:
 [`get_spline_point_basis()`](https://jeroenjanssens.github.io/raylibr/reference/get_spline_point_basis.md)
 
+Other spline functions:
+[`draw_spline_segment_bezier_cubic()`](https://jeroenjanssens.github.io/raylibr/reference/draw_spline_segment_bezier_cubic.md),
+[`draw_spline_segment_bezier_quadratic()`](https://jeroenjanssens.github.io/raylibr/reference/draw_spline_segment_bezier_quadratic.md),
+[`draw_spline_segment_catmull_rom()`](https://jeroenjanssens.github.io/raylibr/reference/draw_spline_segment_catmull_rom.md),
+[`draw_spline_segment_linear()`](https://jeroenjanssens.github.io/raylibr/reference/draw_spline_segment_linear.md),
+[`get_spline_point_basis()`](https://jeroenjanssens.github.io/raylibr/reference/get_spline_point_basis.md),
+[`get_spline_point_bezier_cubic()`](https://jeroenjanssens.github.io/raylibr/reference/get_spline_point_bezier_cubic.md),
+[`get_spline_point_bezier_quad()`](https://jeroenjanssens.github.io/raylibr/reference/get_spline_point_bezier_quad.md),
+[`get_spline_point_catmull_rom()`](https://jeroenjanssens.github.io/raylibr/reference/get_spline_point_catmull_rom.md),
+[`get_spline_point_linear()`](https://jeroenjanssens.github.io/raylibr/reference/get_spline_point_linear.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -142,7 +153,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_spline_segment_basis(c(100, 100), c(100, 100), c(100, 100), c(100, 100), 2.0, "red")
-} # }
+raylibr_screenshot(function() draw_spline_segment_basis(c(200, 50), c(100, 250), c(300, 250), c(350, 100), 3.0, "red"))
 ```

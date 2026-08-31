@@ -28,7 +28,7 @@ definition:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 color_normalize("red")
-} # }
+#> x y z w 
+#> 1 0 0 1 
 ```

@@ -157,7 +157,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_set_matrix_view_offset_stereo(diag(4), diag(4))
-} # }
+}
 ```

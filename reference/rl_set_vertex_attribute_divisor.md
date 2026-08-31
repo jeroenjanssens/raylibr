@@ -157,7 +157,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_set_vertex_attribute_divisor(0L, 0L)
-} # }
+}
 ```

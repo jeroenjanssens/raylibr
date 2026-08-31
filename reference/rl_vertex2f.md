@@ -157,7 +157,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_vertex2f(0.0, 0.0)
-} # }
+}
 ```

@@ -78,7 +78,7 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 gui_get_text_width("Hello")
-} # }
+}
 ```

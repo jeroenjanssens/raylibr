@@ -120,8 +120,6 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-pts <- matrix(c(50, 150, 250, 350, 100, 300, 300, 100), ncol = 2)
-draw_spline_bezier_cubic(pts, 2.0, "orange")
-} # }
+pts <- matrix(c(50, 150, 250, 350, 50, 250, 250, 50), ncol = 2)
+raylibr_screenshot(function() draw_spline_bezier_cubic(pts, 3.0, "orange"))
 ```

@@ -62,7 +62,6 @@ Other vector3 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector3_length_sqr(c(0, 0, 0))
-} # }
+#> [1] 0
 ```

@@ -161,7 +161,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_set_blend_factors(0L, 0L, 0L)
-} # }
+}
 ```

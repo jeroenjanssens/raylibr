@@ -23,8 +23,8 @@ An object of class `list` of length 2.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_toggle_property$group_padding
+#> [1] 16
 gui_toggle_property$group_width_full
-} # }
+#> [1] 17
 ```

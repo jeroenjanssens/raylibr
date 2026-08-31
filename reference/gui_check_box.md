@@ -86,7 +86,7 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 gui_check_box(rectangle(10, 10, 200, 100), "Hello", TRUE)
-} # }
+}
 ```

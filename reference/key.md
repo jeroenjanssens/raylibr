@@ -130,9 +130,10 @@ An object of class `list` of length 109.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 key$apostrophe
+#> [1] 39
 key$right
+#> [1] 262
 key$volume_down
-} # }
+#> [1] 25
 ```

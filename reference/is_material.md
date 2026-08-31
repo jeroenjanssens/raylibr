@@ -21,8 +21,6 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-m <- load_material_default()
-is_material(m)
-} # }
+is_material("not a material")
+#> [1] FALSE
 ```

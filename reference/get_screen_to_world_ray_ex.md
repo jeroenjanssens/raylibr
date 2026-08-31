@@ -58,6 +58,16 @@ Other ex functions:
 [`measure_text_ex()`](https://jeroenjanssens.github.io/raylibr/reference/measure_text_ex.md),
 [`update_model_animation_ex()`](https://jeroenjanssens.github.io/raylibr/reference/update_model_animation_ex.md)
 
+Other screen functions:
+[`get_screen_height()`](https://jeroenjanssens.github.io/raylibr/reference/get_screen_height.md),
+[`get_screen_to_world_2d()`](https://jeroenjanssens.github.io/raylibr/reference/get_screen_to_world_2d.md),
+[`get_screen_to_world_ray()`](https://jeroenjanssens.github.io/raylibr/reference/get_screen_to_world_ray.md),
+[`get_screen_width()`](https://jeroenjanssens.github.io/raylibr/reference/get_screen_width.md),
+[`get_world_to_screen()`](https://jeroenjanssens.github.io/raylibr/reference/get_world_to_screen.md),
+[`is_cursor_on_screen()`](https://jeroenjanssens.github.io/raylibr/reference/is_cursor_on_screen.md),
+[`load_image_from_screen()`](https://jeroenjanssens.github.io/raylibr/reference/load_image_from_screen.md),
+[`swap_screen_buffer()`](https://jeroenjanssens.github.io/raylibr/reference/swap_screen_buffer.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -156,7 +166,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_screen_to_world_ray_ex(c(100, 100), camera_3d(c(0, 10, 10)), 800L, 450L)
-} # }
+}
 ```

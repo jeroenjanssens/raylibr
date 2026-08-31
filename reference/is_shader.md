@@ -21,8 +21,6 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-s <- load_shader("", "shader.fs")
-is_shader(s)
-} # }
+is_shader("not a shader")
+#> [1] FALSE
 ```

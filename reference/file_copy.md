@@ -38,7 +38,7 @@ Other copy functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 file_copy("file.png", "file.png")
-} # }
+}
 ```

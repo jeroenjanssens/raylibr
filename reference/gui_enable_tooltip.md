@@ -68,7 +68,7 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 gui_enable_tooltip()
-} # }
+}
 ```

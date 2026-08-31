@@ -20,6 +20,7 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Guides</h6></li>
+    <li><a class="dropdown-item" href="../articles/screenshot.html">Screenshot</a></li>
     <li><a class="dropdown-item" href="../articles/wasm.html">Compiling raylibr to WebAssembly</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Demos</h6></li>
@@ -105,6 +106,13 @@
 <code><a href="image_text_ex.html">image_text_ex()</a></code>,
 <code><a href="measure_text_ex.html">measure_text_ex()</a></code>,
 <code><a href="update_model_animation_ex.html">update_model_animation_ex()</a></code></p>
+<p>Other directory functions:
+<code><a href="change_directory.html">change_directory()</a></code>,
+<code><a href="get_application_directory.html">get_application_directory()</a></code>,
+<code><a href="get_directory_file_count.html">get_directory_file_count()</a></code>,
+<code><a href="get_directory_path.html">get_directory_path()</a></code>,
+<code><a href="get_working_directory.html">get_working_directory()</a></code>,
+<code><a href="make_directory.html">make_directory()</a></code></p>
 <p>Other get functions:
 <code><a href="get_application_directory.html">get_application_directory()</a></code>,
 <code><a href="get_camera_matrix.html">get_camera_matrix()</a></code>,
@@ -203,10 +211,9 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="fu">get_directory_file_count_ex</span><span class="op">(</span><span class="st">"file.png"</span>, <span class="st">"text"</span>, <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

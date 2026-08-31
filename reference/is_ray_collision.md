@@ -21,7 +21,6 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 is_ray_collision("not a ray_collision")
-} # }
+#> [1] FALSE
 ```

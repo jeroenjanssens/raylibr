@@ -24,6 +24,7 @@ emscripten_set_main_loop so the browser event loop stays responsive."><meta prop
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Guides</h6></li>
+    <li><a class="dropdown-item" href="../articles/screenshot.html">Screenshot</a></li>
     <li><a class="dropdown-item" href="../articles/wasm.html">Compiling raylibr to WebAssembly</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Demos</h6></li>
@@ -87,7 +88,7 @@ On desktop, runs a standard while loop. On web, registers a callback with
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="fu">run_game_loop</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  update_fn <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span>    <span class="fu"><a href="begin_drawing.html">begin_drawing</a></span><span class="op">(</span><span class="op">)</span></span></span>
@@ -98,8 +99,7 @@ On desktop, runs a standard while loop. On web, registers a callback with
 <span class="r-in"><span>  init_fn <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="fu"><a href="init_window.html">init_window</a></span><span class="op">(</span><span class="fl">800L</span>, <span class="fl">450L</span>, <span class="st">"Game"</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>  cleanup_fn <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="fu"><a href="close_window.html">close_window</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

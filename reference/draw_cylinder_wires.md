@@ -49,6 +49,12 @@ Other wires functions:
 [`draw_model_wires()`](https://jeroenjanssens.github.io/raylibr/reference/draw_model_wires.md),
 [`draw_sphere_wires()`](https://jeroenjanssens.github.io/raylibr/reference/draw_sphere_wires.md)
 
+Other cylinder functions:
+[`draw_cylinder()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cylinder.md),
+[`draw_cylinder_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cylinder_ex.md),
+[`draw_cylinder_wires_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cylinder_wires_ex.md),
+[`gen_mesh_cylinder()`](https://jeroenjanssens.github.io/raylibr/reference/gen_mesh_cylinder.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -145,7 +151,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_cylinder_wires(c(0, 5, 0), 50.0, 50.0, 100.0, 16L, "red")
-} # }
+raylibr_screenshot_3d(function() draw_cylinder_wires(c(0, 0, 0), 1.0, 1.0, 2.0, 16L, "red"))
 ```

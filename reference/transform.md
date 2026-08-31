@@ -40,9 +40,11 @@ definition:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 tra <- transform(c(0, 0, 0), c(0, 0, 0, 1), c(1, 1, 1))
 tra$translation
+#> x y z 
+#> 0 0 0 
 tra$rotation
-} # }
+#> x y z w 
+#> 0 0 0 1 
 ```

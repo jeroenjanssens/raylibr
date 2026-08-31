@@ -28,9 +28,10 @@ An object of class `list` of length 7.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 mouse_button$left
+#> [1] 0
 mouse_button$side
+#> [1] 3
 mouse_button$back
-} # }
+#> [1] 6
 ```

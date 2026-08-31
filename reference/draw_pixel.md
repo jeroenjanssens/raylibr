@@ -31,6 +31,10 @@ definition:
 
 ## See also
 
+Other pixel functions:
+[`draw_pixel_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_pixel_v.md),
+[`get_pixel_data_size()`](https://jeroenjanssens.github.io/raylibr/reference/get_pixel_data_size.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -127,7 +131,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_pixel(100L, 100L, "red")
-} # }
+raylibr_screenshot(function() draw_pixel(100L, 100L, "red"))
 ```

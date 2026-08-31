@@ -24,6 +24,8 @@ definition:
 ## See also
 
 Other material functions:
+[`is_material_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_material_valid.md),
+[`load_material_default()`](https://jeroenjanssens.github.io/raylibr/reference/load_material_default.md),
 [`set_material_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_material_texture.md)
 
 Other unload functions:
@@ -44,7 +46,7 @@ Other unload functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 unload_material(load_material_default())
-} # }
+}
 ```

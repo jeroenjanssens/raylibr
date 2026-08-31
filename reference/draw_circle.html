@@ -20,6 +20,7 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Guides</h6></li>
+    <li><a class="dropdown-item" href="../articles/screenshot.html">Screenshot</a></li>
     <li><a class="dropdown-item" href="../articles/wasm.html">Compiling raylibr to WebAssembly</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Demos</h6></li>
@@ -88,7 +89,14 @@
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other circle functions:
-<code><a href="check_collision_point_circle.html">check_collision_point_circle()</a></code></p>
+<code><a href="check_collision_point_circle.html">check_collision_point_circle()</a></code>,
+<code><a href="draw_circle_3d.html">draw_circle_3d()</a></code>,
+<code><a href="draw_circle_gradient.html">draw_circle_gradient()</a></code>,
+<code><a href="draw_circle_lines.html">draw_circle_lines()</a></code>,
+<code><a href="draw_circle_lines_v.html">draw_circle_lines_v()</a></code>,
+<code><a href="draw_circle_sector.html">draw_circle_sector()</a></code>,
+<code><a href="draw_circle_sector_lines.html">draw_circle_sector_lines()</a></code>,
+<code><a href="draw_circle_v.html">draw_circle_v()</a></code></p>
 <p>Other draw functions:
 <code><a href="draw_billboard.html">draw_billboard()</a></code>,
 <code><a href="draw_billboard_pro.html">draw_billboard_pro()</a></code>,
@@ -185,10 +193,11 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
-<span class="r-in"><span><span class="fu">draw_circle</span><span class="op">(</span><span class="fl">100L</span>, <span class="fl">100L</span>, <span class="fl">50.0</span>, <span class="st">"red"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
-<span class="r-in"><span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span>  <span class="fu">draw_circle</span><span class="op">(</span><span class="fl">200L</span>, <span class="fl">150L</span>, <span class="fl">80.0</span>, <span class="st">"yellow"</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="fu">draw_circle</span><span class="op">(</span><span class="fl">210L</span>, <span class="fl">160L</span>, <span class="fl">80.0</span>, <span class="fu"><a href="color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"white"</span>, <span class="fl">0.3</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="draw_circle-1.png" alt="" width="400" height="300"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

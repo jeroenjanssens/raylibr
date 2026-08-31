@@ -50,7 +50,7 @@ Other vector4 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector4_multiply(c(0, 0, 0, 1), c(0, 0, 0, 1))
-} # }
+#> x y z w 
+#> 0 0 0 1 
 ```

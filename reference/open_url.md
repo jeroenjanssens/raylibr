@@ -24,7 +24,7 @@ definition:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 open_url("https://example.com")
-} # }
+}
 ```

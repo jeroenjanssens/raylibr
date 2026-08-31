@@ -70,6 +70,10 @@ Other pro functions:
 [`draw_text_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_text_pro.md),
 [`draw_texture_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_pro.md)
 
+Other billboard functions:
+[`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
+[`draw_billboard_rec()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_rec.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_rec()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_rec.md),
@@ -166,7 +170,7 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 draw_billboard_pro(camera_3d(c(0, 10, 10)), load_texture("file.png"), rectangle(10, 10, 200, 100), c(0, 5, 0), c(0, 1, 0), c(100, 100), c(100, 100), 0.0, "red")
-} # }
+}
 ```

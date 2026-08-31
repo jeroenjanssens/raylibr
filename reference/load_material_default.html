@@ -20,6 +20,7 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Guides</h6></li>
+    <li><a class="dropdown-item" href="../articles/screenshot.html">Screenshot</a></li>
     <li><a class="dropdown-item" href="../articles/wasm.html">Compiling raylibr to WebAssembly</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Demos</h6></li>
@@ -74,6 +75,10 @@
     <div class="dont-index"><p>Other default functions:
 <code><a href="get_font_default.html">get_font_default()</a></code>,
 <code><a href="set_audio_stream_buffer_size_default.html">set_audio_stream_buffer_size_default()</a></code></p>
+<p>Other material functions:
+<code><a href="is_material_valid.html">is_material_valid()</a></code>,
+<code><a href="set_material_texture.html">set_material_texture()</a></code>,
+<code><a href="unload_material.html">unload_material()</a></code></p>
 <p>Other load functions:
 <code><a href="load_audio_stream.html">load_audio_stream()</a></code>,
 <code><a href="load_file_text.html">load_file_text()</a></code>,
@@ -100,10 +105,9 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="fu">load_material_default</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

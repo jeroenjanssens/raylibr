@@ -21,7 +21,6 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-is_model_animation(x)
-} # }
+is_model_animation("not a model_animation")
+#> [1] FALSE
 ```

@@ -116,10 +116,10 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 gui_text_input_box(
   rectangle(100, 100, 400, 200), "Title", "Enter text:",
   "", 256L, "Ok;Cancel", 0L, FALSE
 )
-} # }
+}
 ```

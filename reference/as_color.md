@@ -22,8 +22,8 @@ A color object.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 as_color("red")
+#> color(r = 255, g = 0, b = 0, a = 255) 
 as_color(list(r = 255, g = 0, b = 0, a = 255))
-} # }
+#> color(r = 255, g = 0, b = 0, a = 255) 
 ```

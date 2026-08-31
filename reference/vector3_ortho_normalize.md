@@ -66,9 +66,11 @@ Other vector3 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 result <- vector3_ortho_normalize(c(1, 0, 0), c(0, 1, 0))
 result$v1
+#> x y z 
+#> 1 0 0 
 result$v2
-} # }
+#> x y z 
+#> 0 1 0 
 ```

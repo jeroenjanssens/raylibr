@@ -27,7 +27,17 @@ definition:
 
 ## See also
 
+Other key functions:
+[`get_key_name()`](https://jeroenjanssens.github.io/raylibr/reference/get_key_name.md),
+[`get_key_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/get_key_pressed.md),
+[`is_key_down()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_down.md),
+[`is_key_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_pressed.md),
+[`is_key_released()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_released.md),
+[`is_key_up()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_up.md),
+[`set_exit_key()`](https://jeroenjanssens.github.io/raylibr/reference/set_exit_key.md)
+
 Other is functions:
+[`color_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/color_is_equal.md),
 [`is_audio_device_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_device_ready.md),
 [`is_audio_stream_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_playing.md),
 [`is_audio_stream_processed()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_processed.md),
@@ -72,12 +82,13 @@ Other is functions:
 [`is_window_minimized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_minimized.md),
 [`is_window_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_ready.md),
 [`is_window_resized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_resized.md),
-[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md)
+[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md),
+[`text_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/text_is_equal.md)
 
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 is_key_pressed_repeat(0L)
-} # }
+}
 ```

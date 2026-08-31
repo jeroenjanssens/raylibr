@@ -42,7 +42,7 @@ Other quaternion functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 quaternion_identity()
-} # }
+#> x y z w 
+#> 0 0 0 1 
 ```

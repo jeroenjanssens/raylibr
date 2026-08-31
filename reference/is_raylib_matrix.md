@@ -21,8 +21,8 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 is_raylib_matrix(diag(4))
+#> [1] TRUE
 is_raylib_matrix(matrix(1:9, 3, 3))
-} # }
+#> [1] FALSE
 ```

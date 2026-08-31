@@ -22,6 +22,14 @@ definition:
 ## See also
 
 Other monitor functions:
+[`get_monitor_count()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_count.md),
+[`get_monitor_height()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_height.md),
+[`get_monitor_name()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_name.md),
+[`get_monitor_physical_height()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_physical_height.md),
+[`get_monitor_physical_width()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_physical_width.md),
+[`get_monitor_position()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_position.md),
+[`get_monitor_refresh_rate()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_refresh_rate.md),
+[`get_monitor_width()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_width.md),
 [`set_window_monitor()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_monitor.md)
 
 Other get functions:
@@ -122,7 +130,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_current_monitor()
-} # }
+}
 ```

@@ -53,7 +53,10 @@ Other matrix functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 matrix_subtract(diag(4), diag(4))
-} # }
+#>      [,1] [,2] [,3] [,4]
+#> [1,]    0    0    0    0
+#> [2,]    0    0    0    0
+#> [3,]    0    0    0    0
+#> [4,]    0    0    0    0
 ```

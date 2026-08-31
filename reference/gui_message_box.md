@@ -94,7 +94,7 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 gui_message_box(rectangle(10, 10, 200, 100), "My Window", "Hello", "Hello", 0L)
-} # }
+}
 ```

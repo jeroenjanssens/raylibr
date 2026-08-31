@@ -28,6 +28,8 @@ Other camera functions:
 [`camera_pitch()`](https://jeroenjanssens.github.io/raylibr/reference/camera_pitch.md),
 [`camera_yaw()`](https://jeroenjanssens.github.io/raylibr/reference/camera_yaw.md),
 [`get_camera_forward()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_forward.md),
+[`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
+[`get_camera_matrix_2d()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix_2d.md),
 [`get_camera_projection_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_projection_matrix.md),
 [`get_camera_right()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_right.md),
 [`get_camera_up()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_up.md),
@@ -38,8 +40,6 @@ Other camera functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 cam <- camera_3d(c(0, 10, 10))
 camera_roll(cam, 0.1)
-} # }
 ```

@@ -35,6 +35,21 @@ definition:
 
 ## See also
 
+Other rectangle functions:
+[`draw_rectangle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle.md),
+[`draw_rectangle_gradient_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_gradient_ex.md),
+[`draw_rectangle_gradient_h()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_gradient_h.md),
+[`draw_rectangle_gradient_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_gradient_v.md),
+[`draw_rectangle_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_lines.md),
+[`draw_rectangle_lines_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_lines_ex.md),
+[`draw_rectangle_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_pro.md),
+[`draw_rectangle_rec()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_rec.md),
+[`draw_rectangle_rounded_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_rounded_lines.md),
+[`draw_rectangle_rounded_lines_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_rounded_lines_ex.md),
+[`draw_rectangle_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_v.md),
+[`get_shapes_texture_rectangle()`](https://jeroenjanssens.github.io/raylibr/reference/get_shapes_texture_rectangle.md),
+[`rectangle()`](https://jeroenjanssens.github.io/raylibr/reference/rectangle.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -131,7 +146,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_rectangle_rounded(rectangle(10, 10, 200, 100), 0.0, 16L, "red")
-} # }
+raylibr_screenshot(function() draw_rectangle_rounded(rectangle(100, 75, 200, 150), 0.3, 36L, "red"))
 ```

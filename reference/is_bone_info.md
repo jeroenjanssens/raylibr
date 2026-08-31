@@ -21,7 +21,6 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-is_bone_info(x)
-} # }
+is_bone_info("not a bone_info")
+#> [1] FALSE
 ```

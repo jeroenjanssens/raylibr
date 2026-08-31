@@ -41,7 +41,20 @@ Other valid functions:
 [`is_texture_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_texture_valid.md),
 [`is_wave_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_wave_valid.md)
 
+Other file functions:
+[`get_file_extension()`](https://jeroenjanssens.github.io/raylibr/reference/get_file_extension.md),
+[`get_file_length()`](https://jeroenjanssens.github.io/raylibr/reference/get_file_length.md),
+[`get_file_mod_time()`](https://jeroenjanssens.github.io/raylibr/reference/get_file_mod_time.md),
+[`get_file_name()`](https://jeroenjanssens.github.io/raylibr/reference/get_file_name.md),
+[`get_file_name_without_ext()`](https://jeroenjanssens.github.io/raylibr/reference/get_file_name_without_ext.md),
+[`is_file_dropped()`](https://jeroenjanssens.github.io/raylibr/reference/is_file_dropped.md),
+[`is_file_extension()`](https://jeroenjanssens.github.io/raylibr/reference/is_file_extension.md),
+[`is_path_file()`](https://jeroenjanssens.github.io/raylibr/reference/is_path_file.md),
+[`load_file_text()`](https://jeroenjanssens.github.io/raylibr/reference/load_file_text.md),
+[`save_file_text()`](https://jeroenjanssens.github.io/raylibr/reference/save_file_text.md)
+
 Other is functions:
+[`color_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/color_is_equal.md),
 [`is_audio_device_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_device_ready.md),
 [`is_audio_stream_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_playing.md),
 [`is_audio_stream_processed()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_processed.md),
@@ -86,12 +99,13 @@ Other is functions:
 [`is_window_minimized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_minimized.md),
 [`is_window_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_ready.md),
 [`is_window_resized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_resized.md),
-[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md)
+[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md),
+[`text_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/text_is_equal.md)
 
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 is_file_name_valid("file.png")
-} # }
+}
 ```

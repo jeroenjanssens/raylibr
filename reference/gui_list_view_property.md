@@ -27,9 +27,10 @@ An object of class `list` of length 6.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_list_view_property$list_items_height
+#> [1] 16
 gui_list_view_property$scrollbar_width
+#> [1] 18
 gui_list_view_property$list_items_border_width
-} # }
+#> [1] 21
 ```

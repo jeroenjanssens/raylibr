@@ -32,9 +32,10 @@ An object of class `list` of length 11.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 mouse_cursor$default
+#> [1] 0
 mouse_cursor$resize_ew
+#> [1] 5
 mouse_cursor$not_allowed
-} # }
+#> [1] 10
 ```

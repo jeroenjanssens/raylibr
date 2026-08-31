@@ -29,7 +29,7 @@ Other close functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 window_should_close()
-} # }
+}
 ```

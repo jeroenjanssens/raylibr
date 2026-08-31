@@ -59,7 +59,7 @@ Other vector2 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector2_transform(c(100, 100), diag(4))
-} # }
+#>   x   y 
+#> 100 100 
 ```

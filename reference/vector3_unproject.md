@@ -70,7 +70,7 @@ Other vector3 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector3_unproject(c(0, 0, 0), diag(4), diag(4))
-} # }
+#> x y z 
+#> 0 0 0 
 ```

@@ -169,7 +169,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_copy_shader_buffer(0L, 0L, 0L, 0L, 10L)
-} # }
+}
 ```

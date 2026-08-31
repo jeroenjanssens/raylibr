@@ -20,6 +20,10 @@ definition:
 Other recording functions:
 [`start_automation_event_recording()`](https://jeroenjanssens.github.io/raylibr/reference/start_automation_event_recording.md)
 
+Other automation functions:
+[`set_automation_event_base_frame()`](https://jeroenjanssens.github.io/raylibr/reference/set_automation_event_base_frame.md),
+[`start_automation_event_recording()`](https://jeroenjanssens.github.io/raylibr/reference/start_automation_event_recording.md)
+
 Other stop functions:
 [`stop_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/stop_audio_stream.md),
 [`stop_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/stop_music_stream.md),
@@ -28,7 +32,7 @@ Other stop functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 stop_automation_event_recording()
-} # }
+}
 ```

@@ -21,8 +21,6 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-s <- load_sound("sound.wav")
-is_sound(s)
-} # }
+is_sound("not a sound")
+#> [1] FALSE
 ```

@@ -28,6 +28,11 @@ definition:
 ## See also
 
 Other ray functions:
+[`get_ray_collision_box()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_box.md),
+[`get_ray_collision_mesh()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_mesh.md),
+[`get_ray_collision_quad()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_quad.md),
+[`get_ray_collision_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_sphere.md),
+[`get_ray_collision_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_triangle.md),
 [`get_screen_to_world_ray()`](https://jeroenjanssens.github.io/raylibr/reference/get_screen_to_world_ray.md),
 [`ray()`](https://jeroenjanssens.github.io/raylibr/reference/ray.md)
 
@@ -127,7 +132,7 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 draw_ray(ray(c(0, 0, 0), c(0, 0, 1)), "red")
-} # }
+}
 ```

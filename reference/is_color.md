@@ -21,7 +21,6 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 is_color("not a color")
-} # }
+#> [1] FALSE
 ```

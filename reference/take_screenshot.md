@@ -25,7 +25,7 @@ definition:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 take_screenshot("file.png")
-} # }
+}
 ```

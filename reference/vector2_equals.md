@@ -59,7 +59,6 @@ Other vector2 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector2_equals(c(100, 100), c(100, 100))
-} # }
+#> [1] 1
 ```

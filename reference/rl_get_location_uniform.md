@@ -161,7 +161,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_get_location_uniform(0L, "text")
-} # }
+}
 ```

@@ -21,7 +21,6 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-is_vr_stereo_config(x)
-} # }
+is_vr_stereo_config("not a vr_stereo_config")
+#> [1] FALSE
 ```

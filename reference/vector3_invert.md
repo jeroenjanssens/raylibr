@@ -62,7 +62,7 @@ Other vector3 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector3_invert(c(0, 0, 0))
-} # }
+#>   x   y   z 
+#> Inf Inf Inf 
 ```

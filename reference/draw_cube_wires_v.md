@@ -44,6 +44,12 @@ Other v functions:
 [`draw_texture_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_v.md),
 [`get_mouse_wheel_move_v()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_wheel_move_v.md)
 
+Other cube functions:
+[`draw_cube()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cube.md),
+[`draw_cube_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cube_v.md),
+[`draw_cube_wires()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cube_wires.md),
+[`gen_mesh_cube()`](https://jeroenjanssens.github.io/raylibr/reference/gen_mesh_cube.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -140,7 +146,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_cube_wires_v(c(0, 5, 0), c(1, 1, 1), "red")
-} # }
+raylibr_screenshot_3d(function() draw_cube_wires_v(c(0, 0, 0), c(2, 2, 2), "red"))
 ```

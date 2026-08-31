@@ -24,15 +24,32 @@ definition:
 ## See also
 
 Other texture functions:
+[`begin_texture_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_texture_mode.md),
 [`draw_texture()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture.md),
+[`draw_texture_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_ex.md),
+[`draw_texture_n_patch()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_n_patch.md),
+[`draw_texture_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_pro.md),
+[`draw_texture_rec()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_rec.md),
+[`draw_texture_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_v.md),
+[`end_texture_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_texture_mode.md),
 [`get_shapes_texture()`](https://jeroenjanssens.github.io/raylibr/reference/get_shapes_texture.md),
+[`is_texture_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_texture_valid.md),
 [`load_image_from_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_image_from_texture.md),
 [`load_render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_render_texture.md),
 [`load_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture.md),
+[`load_texture_from_image()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture_from_image.md),
 [`set_shader_value_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_shader_value_texture.md),
 [`set_shapes_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_shapes_texture.md),
+[`set_texture_filter()`](https://jeroenjanssens.github.io/raylibr/reference/set_texture_filter.md),
+[`set_texture_wrap()`](https://jeroenjanssens.github.io/raylibr/reference/set_texture_wrap.md),
 [`texture()`](https://jeroenjanssens.github.io/raylibr/reference/texture.md),
 [`unload_texture()`](https://jeroenjanssens.github.io/raylibr/reference/unload_texture.md)
+
+Other render functions:
+[`get_render_height()`](https://jeroenjanssens.github.io/raylibr/reference/get_render_height.md),
+[`get_render_width()`](https://jeroenjanssens.github.io/raylibr/reference/get_render_width.md),
+[`is_render_texture_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_render_texture_valid.md),
+[`load_render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_render_texture.md)
 
 Other unload functions:
 [`unload_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/unload_audio_stream.md),
@@ -52,7 +69,7 @@ Other unload functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 unload_render_texture(load_render_texture(800, 450))
-} # }
+}
 ```

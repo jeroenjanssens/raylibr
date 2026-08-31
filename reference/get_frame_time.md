@@ -26,6 +26,9 @@ Other time functions:
 [`get_time()`](https://jeroenjanssens.github.io/raylibr/reference/get_time.md),
 [`wait_time()`](https://jeroenjanssens.github.io/raylibr/reference/wait_time.md)
 
+Other frame functions:
+[`set_automation_event_base_frame()`](https://jeroenjanssens.github.io/raylibr/reference/set_automation_event_base_frame.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -124,7 +127,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_frame_time()
-} # }
+}
 ```

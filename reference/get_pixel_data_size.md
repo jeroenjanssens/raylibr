@@ -40,6 +40,10 @@ Other size functions:
 [`set_window_min_size()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_min_size.md),
 [`set_window_size()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_size.md)
 
+Other pixel functions:
+[`draw_pixel()`](https://jeroenjanssens.github.io/raylibr/reference/draw_pixel.md),
+[`draw_pixel_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_pixel_v.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -138,7 +142,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 get_pixel_data_size(800L, 450L, 0L)
-} # }
+#> [1] 0
 ```

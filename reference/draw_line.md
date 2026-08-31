@@ -41,7 +41,12 @@ definition:
 
 Other line functions:
 [`check_collision_circle_line()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_circle_line.md),
-[`check_collision_point_line()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_point_line.md)
+[`check_collision_point_line()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_point_line.md),
+[`draw_line_3d()`](https://jeroenjanssens.github.io/raylibr/reference/draw_line_3d.md),
+[`draw_line_bezier()`](https://jeroenjanssens.github.io/raylibr/reference/draw_line_bezier.md),
+[`draw_line_dashed()`](https://jeroenjanssens.github.io/raylibr/reference/draw_line_dashed.md),
+[`draw_line_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_line_ex.md),
+[`draw_line_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_line_v.md)
 
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
@@ -139,7 +144,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_line(100L, 100L, 100L, 100L, "red")
-} # }
+raylibr_screenshot(function() draw_line(50L, 250L, 350L, 50L, "red"))
 ```

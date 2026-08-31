@@ -120,10 +120,10 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 mesh <- gen_mesh_cube(1.0, 1.0, 1.0)
 mat <- load_material_default()
 transforms <- list(diag(4), diag(4))
 draw_mesh_instanced(mesh, mat, transforms)
-} # }
+}
 ```

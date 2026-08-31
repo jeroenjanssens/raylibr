@@ -40,7 +40,7 @@ Other vector4 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector4_one()
-} # }
+#> x y z w 
+#> 1 1 1 1 
 ```

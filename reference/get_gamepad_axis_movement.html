@@ -20,6 +20,7 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Guides</h6></li>
+    <li><a class="dropdown-item" href="../articles/screenshot.html">Screenshot</a></li>
     <li><a class="dropdown-item" href="../articles/wasm.html">Compiling raylibr to WebAssembly</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Demos</h6></li>
@@ -83,7 +84,18 @@
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p>Other get functions:
+    <div class="dont-index"><p>Other gamepad functions:
+<code><a href="get_gamepad_axis_count.html">get_gamepad_axis_count()</a></code>,
+<code><a href="get_gamepad_button_pressed.html">get_gamepad_button_pressed()</a></code>,
+<code><a href="get_gamepad_name.html">get_gamepad_name()</a></code>,
+<code><a href="is_gamepad_available.html">is_gamepad_available()</a></code>,
+<code><a href="is_gamepad_button_down.html">is_gamepad_button_down()</a></code>,
+<code><a href="is_gamepad_button_pressed.html">is_gamepad_button_pressed()</a></code>,
+<code><a href="is_gamepad_button_released.html">is_gamepad_button_released()</a></code>,
+<code><a href="is_gamepad_button_up.html">is_gamepad_button_up()</a></code>,
+<code><a href="set_gamepad_mappings.html">set_gamepad_mappings()</a></code>,
+<code><a href="set_gamepad_vibration.html">set_gamepad_vibration()</a></code></p>
+<p>Other get functions:
 <code><a href="get_application_directory.html">get_application_directory()</a></code>,
 <code><a href="get_camera_matrix.html">get_camera_matrix()</a></code>,
 <code><a href="get_camera_matrix_2d.html">get_camera_matrix_2d()</a></code>,
@@ -181,10 +193,9 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="fu">get_gamepad_axis_movement</span><span class="op">(</span><span class="fl">0L</span>, <span class="fl">0L</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

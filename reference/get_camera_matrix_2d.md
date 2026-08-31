@@ -33,6 +33,23 @@ Other 2d functions:
 [`get_screen_to_world_2d()`](https://jeroenjanssens.github.io/raylibr/reference/get_screen_to_world_2d.md),
 [`get_world_to_screen_2d()`](https://jeroenjanssens.github.io/raylibr/reference/get_world_to_screen_2d.md)
 
+Other camera functions:
+[`camera_move_forward()`](https://jeroenjanssens.github.io/raylibr/reference/camera_move_forward.md),
+[`camera_move_right()`](https://jeroenjanssens.github.io/raylibr/reference/camera_move_right.md),
+[`camera_move_to_target()`](https://jeroenjanssens.github.io/raylibr/reference/camera_move_to_target.md),
+[`camera_move_up()`](https://jeroenjanssens.github.io/raylibr/reference/camera_move_up.md),
+[`camera_pitch()`](https://jeroenjanssens.github.io/raylibr/reference/camera_pitch.md),
+[`camera_roll()`](https://jeroenjanssens.github.io/raylibr/reference/camera_roll.md),
+[`camera_yaw()`](https://jeroenjanssens.github.io/raylibr/reference/camera_yaw.md),
+[`get_camera_forward()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_forward.md),
+[`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
+[`get_camera_projection_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_projection_matrix.md),
+[`get_camera_right()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_right.md),
+[`get_camera_up()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_up.md),
+[`get_camera_view_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_view_matrix.md),
+[`update_camera()`](https://jeroenjanssens.github.io/raylibr/reference/update_camera.md),
+[`update_camera_pro()`](https://jeroenjanssens.github.io/raylibr/reference/update_camera_pro.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -131,7 +148,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_camera_matrix_2d(camera_2d(c(400, 300), c(0, 0)))
-} # }
+}
 ```

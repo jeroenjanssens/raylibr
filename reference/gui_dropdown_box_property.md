@@ -25,9 +25,10 @@ An object of class `list` of length 4.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_dropdown_box_property$arrow_padding
+#> [1] 16
 gui_dropdown_box_property$dropdown_items_spacing
+#> [1] 17
 gui_dropdown_box_property$dropdown_roll_up
-} # }
+#> [1] 19
 ```

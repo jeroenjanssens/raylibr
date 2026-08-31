@@ -120,8 +120,6 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-pts <- matrix(c(50, 150, 250, 350, 100, 200, 50, 150), ncol = 2)
-draw_spline_basis(pts, 2.0, "blue")
-} # }
+pts <- matrix(c(50, 150, 250, 350, 50, 200, 50, 250), ncol = 2)
+raylibr_screenshot(function() draw_spline_basis(pts, 3.0, "blue"))
 ```

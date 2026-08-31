@@ -31,6 +31,18 @@ definition:
 
 ## See also
 
+Other gamepad functions:
+[`get_gamepad_axis_count()`](https://jeroenjanssens.github.io/raylibr/reference/get_gamepad_axis_count.md),
+[`get_gamepad_button_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/get_gamepad_button_pressed.md),
+[`get_gamepad_name()`](https://jeroenjanssens.github.io/raylibr/reference/get_gamepad_name.md),
+[`is_gamepad_available()`](https://jeroenjanssens.github.io/raylibr/reference/is_gamepad_available.md),
+[`is_gamepad_button_down()`](https://jeroenjanssens.github.io/raylibr/reference/is_gamepad_button_down.md),
+[`is_gamepad_button_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/is_gamepad_button_pressed.md),
+[`is_gamepad_button_released()`](https://jeroenjanssens.github.io/raylibr/reference/is_gamepad_button_released.md),
+[`is_gamepad_button_up()`](https://jeroenjanssens.github.io/raylibr/reference/is_gamepad_button_up.md),
+[`set_gamepad_mappings()`](https://jeroenjanssens.github.io/raylibr/reference/set_gamepad_mappings.md),
+[`set_gamepad_vibration()`](https://jeroenjanssens.github.io/raylibr/reference/set_gamepad_vibration.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -129,7 +141,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_gamepad_axis_movement(0L, 0L)
-} # }
+}
 ```

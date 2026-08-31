@@ -33,6 +33,9 @@ Other count functions:
 [`get_monitor_count()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_count.md),
 [`get_touch_point_count()`](https://jeroenjanssens.github.io/raylibr/reference/get_touch_point_count.md)
 
+Other codepoint functions:
+[`draw_text_codepoint()`](https://jeroenjanssens.github.io/raylibr/reference/draw_text_codepoint.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -131,7 +134,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_codepoint_count("Hello")
-} # }
+}
 ```

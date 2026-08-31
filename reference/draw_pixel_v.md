@@ -41,6 +41,10 @@ Other v functions:
 [`draw_texture_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_v.md),
 [`get_mouse_wheel_move_v()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_wheel_move_v.md)
 
+Other pixel functions:
+[`draw_pixel()`](https://jeroenjanssens.github.io/raylibr/reference/draw_pixel.md),
+[`get_pixel_data_size()`](https://jeroenjanssens.github.io/raylibr/reference/get_pixel_data_size.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -137,7 +141,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_pixel_v(c(100, 100), "red")
-} # }
+raylibr_screenshot(function() draw_pixel_v(c(200, 150), "red"))
 ```

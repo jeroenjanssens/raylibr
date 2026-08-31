@@ -39,10 +39,13 @@ Other alloc functions:
 [`text_replace_alloc()`](https://jeroenjanssens.github.io/raylibr/reference/text_replace_alloc.md),
 [`text_replace_between_alloc()`](https://jeroenjanssens.github.io/raylibr/reference/text_replace_between_alloc.md)
 
+Other insert functions:
+[`text_insert()`](https://jeroenjanssens.github.io/raylibr/reference/text_insert.md)
+
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 text_insert_alloc("Hello", "text", 0L)
-} # }
+}
 ```

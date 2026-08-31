@@ -36,6 +36,15 @@ Other box functions:
 [`get_mesh_bounding_box()`](https://jeroenjanssens.github.io/raylibr/reference/get_mesh_bounding_box.md),
 [`get_model_bounding_box()`](https://jeroenjanssens.github.io/raylibr/reference/get_model_bounding_box.md)
 
+Other ray functions:
+[`draw_ray()`](https://jeroenjanssens.github.io/raylibr/reference/draw_ray.md),
+[`get_ray_collision_mesh()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_mesh.md),
+[`get_ray_collision_quad()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_quad.md),
+[`get_ray_collision_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_sphere.md),
+[`get_ray_collision_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_triangle.md),
+[`get_screen_to_world_ray()`](https://jeroenjanssens.github.io/raylibr/reference/get_screen_to_world_ray.md),
+[`ray()`](https://jeroenjanssens.github.io/raylibr/reference/ray.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -134,7 +143,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 get_ray_collision_box(ray(c(0, 0, 0), c(0, 0, 1)), bounding_box(c(-1, -1, -1), c(1, 1, 1)))
-} # }
+#> ray_collision(hit = TRUE, distance = 1, point = 0, 0, 1, normal = 0, 0, -1) 
 ```

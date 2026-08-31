@@ -38,7 +38,7 @@ Other move functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 file_move("file.png", "file.png")
-} # }
+}
 ```

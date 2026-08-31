@@ -29,10 +29,17 @@ definition:
 
     Image ImageFromChannel(Image image, int selectedChannel);
 
+## See also
+
+Other from functions:
+[`color_from_hsv()`](https://jeroenjanssens.github.io/raylibr/reference/color_from_hsv.md),
+[`color_from_normalized()`](https://jeroenjanssens.github.io/raylibr/reference/color_from_normalized.md),
+[`image_from_image()`](https://jeroenjanssens.github.io/raylibr/reference/image_from_image.md)
+
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 image_from_channel(gen_image_color(100, 100, "blue"), 0L)
-} # }
+}
 ```

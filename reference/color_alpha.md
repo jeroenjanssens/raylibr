@@ -29,10 +29,14 @@ definition:
 
     Color ColorAlpha(Color color, float alpha);
 
+## See also
+
+Other alpha functions:
+[`color_alpha_blend()`](https://jeroenjanssens.github.io/raylibr/reference/color_alpha_blend.md)
+
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 color_alpha("red", 0.0)
-} # }
+#> color(r = 255, g = 0, b = 0, a = 0) 
 ```

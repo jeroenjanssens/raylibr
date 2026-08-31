@@ -35,7 +35,6 @@ Other float functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 float_equals(0.0, 0.0)
-} # }
+#> [1] 1
 ```

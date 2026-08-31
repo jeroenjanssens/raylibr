@@ -21,8 +21,6 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-i <- gen_image_color(100, 100, "blue")
-is_image(i)
-} # }
+is_image("not a image")
+#> [1] FALSE
 ```

@@ -32,6 +32,21 @@ Other box functions:
 [`get_mesh_bounding_box()`](https://jeroenjanssens.github.io/raylibr/reference/get_mesh_bounding_box.md),
 [`get_ray_collision_box()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_box.md)
 
+Other model functions:
+[`draw_model()`](https://jeroenjanssens.github.io/raylibr/reference/draw_model.md),
+[`draw_model_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_model_ex.md),
+[`draw_model_wires()`](https://jeroenjanssens.github.io/raylibr/reference/draw_model_wires.md),
+[`draw_model_wires_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_model_wires_ex.md),
+[`is_model_animation_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_model_animation_valid.md),
+[`is_model_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_model_valid.md),
+[`load_model()`](https://jeroenjanssens.github.io/raylibr/reference/load_model.md),
+[`load_model_from_mesh()`](https://jeroenjanssens.github.io/raylibr/reference/load_model_from_mesh.md),
+[`set_model_mesh_material()`](https://jeroenjanssens.github.io/raylibr/reference/set_model_mesh_material.md),
+[`set_model_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_model_texture.md),
+[`unload_model()`](https://jeroenjanssens.github.io/raylibr/reference/unload_model.md),
+[`update_model_animation()`](https://jeroenjanssens.github.io/raylibr/reference/update_model_animation.md),
+[`update_model_animation_ex()`](https://jeroenjanssens.github.io/raylibr/reference/update_model_animation_ex.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -130,7 +145,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_model_bounding_box(load_model("model.obj"))
-} # }
+}
 ```

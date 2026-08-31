@@ -29,9 +29,10 @@ An object of class `list` of length 8.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 log$all
+#> [1] 0
 log$info
+#> [1] 3
 log$none
-} # }
+#> [1] 7
 ```

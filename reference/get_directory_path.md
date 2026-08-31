@@ -28,7 +28,16 @@ definition:
 ## See also
 
 Other path functions:
-[`get_prev_directory_path()`](https://jeroenjanssens.github.io/raylibr/reference/get_prev_directory_path.md)
+[`get_prev_directory_path()`](https://jeroenjanssens.github.io/raylibr/reference/get_prev_directory_path.md),
+[`is_path_file()`](https://jeroenjanssens.github.io/raylibr/reference/is_path_file.md)
+
+Other directory functions:
+[`change_directory()`](https://jeroenjanssens.github.io/raylibr/reference/change_directory.md),
+[`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
+[`get_directory_file_count()`](https://jeroenjanssens.github.io/raylibr/reference/get_directory_file_count.md),
+[`get_directory_file_count_ex()`](https://jeroenjanssens.github.io/raylibr/reference/get_directory_file_count_ex.md),
+[`get_working_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_working_directory.md),
+[`make_directory()`](https://jeroenjanssens.github.io/raylibr/reference/make_directory.md)
 
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
@@ -128,7 +137,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_directory_path("file.png")
-} # }
+}
 ```

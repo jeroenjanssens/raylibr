@@ -16,6 +16,7 @@
 <url><loc>https://jeroenjanssens.github.io/raylibr/articles/demo-snake.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/articles/demo-stroop.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/articles/index.html</loc></url>
+<url><loc>https://jeroenjanssens.github.io/raylibr/articles/screenshot.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/articles/wasm.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/authors.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/index.html</loc></url>
@@ -577,6 +578,8 @@
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/raylib_version.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/raylibr-package.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/raylibr_resource.html</loc></url>
+<url><loc>https://jeroenjanssens.github.io/raylibr/reference/raylibr_screenshot.html</loc></url>
+<url><loc>https://jeroenjanssens.github.io/raylibr/reference/raylibr_screenshot_3d.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/rectangle.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/render_texture.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/restore_window.html</loc></url>

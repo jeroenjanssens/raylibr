@@ -20,6 +20,7 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Guides</h6></li>
+    <li><a class="dropdown-item" href="../articles/screenshot.html">Screenshot</a></li>
     <li><a class="dropdown-item" href="../articles/wasm.html">Compiling raylibr to WebAssembly</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Demos</h6></li>
@@ -104,6 +105,22 @@
 <code><a href="matrix_translate.html">matrix_translate()</a></code>,
 <code><a href="matrix_transpose.html">matrix_transpose()</a></code>,
 <code><a href="set_shader_value_matrix.html">set_shader_value_matrix()</a></code></p>
+<p>Other camera functions:
+<code><a href="camera_move_forward.html">camera_move_forward()</a></code>,
+<code><a href="camera_move_right.html">camera_move_right()</a></code>,
+<code><a href="camera_move_to_target.html">camera_move_to_target()</a></code>,
+<code><a href="camera_move_up.html">camera_move_up()</a></code>,
+<code><a href="camera_pitch.html">camera_pitch()</a></code>,
+<code><a href="camera_roll.html">camera_roll()</a></code>,
+<code><a href="camera_yaw.html">camera_yaw()</a></code>,
+<code><a href="get_camera_forward.html">get_camera_forward()</a></code>,
+<code><a href="get_camera_matrix_2d.html">get_camera_matrix_2d()</a></code>,
+<code><a href="get_camera_projection_matrix.html">get_camera_projection_matrix()</a></code>,
+<code><a href="get_camera_right.html">get_camera_right()</a></code>,
+<code><a href="get_camera_up.html">get_camera_up()</a></code>,
+<code><a href="get_camera_view_matrix.html">get_camera_view_matrix()</a></code>,
+<code><a href="update_camera.html">update_camera()</a></code>,
+<code><a href="update_camera_pro.html">update_camera_pro()</a></code></p>
 <p>Other get functions:
 <code><a href="get_application_directory.html">get_application_directory()</a></code>,
 <code><a href="get_camera_matrix_2d.html">get_camera_matrix_2d()</a></code>,
@@ -202,10 +219,9 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="fu">get_camera_matrix</span><span class="op">(</span><span class="fu"><a href="camera_3d.html">camera_3d</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">10</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

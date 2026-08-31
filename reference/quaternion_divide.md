@@ -52,7 +52,7 @@ Other quaternion functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 quaternion_divide(c(0, 0, 0, 1), c(0, 0, 0, 1))
-} # }
+#>   x   y   z   w 
+#> NaN NaN NaN   1 
 ```

@@ -31,6 +31,18 @@ Other length functions:
 [`get_music_time_length()`](https://jeroenjanssens.github.io/raylibr/reference/get_music_time_length.md),
 [`text_length()`](https://jeroenjanssens.github.io/raylibr/reference/text_length.md)
 
+Other file functions:
+[`get_file_extension()`](https://jeroenjanssens.github.io/raylibr/reference/get_file_extension.md),
+[`get_file_mod_time()`](https://jeroenjanssens.github.io/raylibr/reference/get_file_mod_time.md),
+[`get_file_name()`](https://jeroenjanssens.github.io/raylibr/reference/get_file_name.md),
+[`get_file_name_without_ext()`](https://jeroenjanssens.github.io/raylibr/reference/get_file_name_without_ext.md),
+[`is_file_dropped()`](https://jeroenjanssens.github.io/raylibr/reference/is_file_dropped.md),
+[`is_file_extension()`](https://jeroenjanssens.github.io/raylibr/reference/is_file_extension.md),
+[`is_file_name_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_file_name_valid.md),
+[`is_path_file()`](https://jeroenjanssens.github.io/raylibr/reference/is_path_file.md),
+[`load_file_text()`](https://jeroenjanssens.github.io/raylibr/reference/load_file_text.md),
+[`save_file_text()`](https://jeroenjanssens.github.io/raylibr/reference/save_file_text.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -129,7 +141,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_file_length("file.png")
-} # }
+}
 ```

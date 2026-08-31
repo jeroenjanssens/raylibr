@@ -2,6 +2,7 @@
 
 ### Guides
 
+- [Screenshot](https://jeroenjanssens.github.io/raylibr/articles/screenshot.md):
 - [Compiling raylibr to
   WebAssembly](https://jeroenjanssens.github.io/raylibr/articles/wasm.md):
 

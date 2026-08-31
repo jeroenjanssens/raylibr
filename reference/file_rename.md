@@ -32,7 +32,7 @@ definition:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 file_rename("file.png", "text")
-} # }
+}
 ```

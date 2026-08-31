@@ -30,7 +30,16 @@ definition:
 Other detected functions:
 [`get_gesture_detected()`](https://jeroenjanssens.github.io/raylibr/reference/get_gesture_detected.md)
 
+Other gesture functions:
+[`get_gesture_detected()`](https://jeroenjanssens.github.io/raylibr/reference/get_gesture_detected.md),
+[`get_gesture_drag_angle()`](https://jeroenjanssens.github.io/raylibr/reference/get_gesture_drag_angle.md),
+[`get_gesture_drag_vector()`](https://jeroenjanssens.github.io/raylibr/reference/get_gesture_drag_vector.md),
+[`get_gesture_hold_duration()`](https://jeroenjanssens.github.io/raylibr/reference/get_gesture_hold_duration.md),
+[`get_gesture_pinch_angle()`](https://jeroenjanssens.github.io/raylibr/reference/get_gesture_pinch_angle.md),
+[`get_gesture_pinch_vector()`](https://jeroenjanssens.github.io/raylibr/reference/get_gesture_pinch_vector.md)
+
 Other is functions:
+[`color_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/color_is_equal.md),
 [`is_audio_device_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_device_ready.md),
 [`is_audio_stream_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_playing.md),
 [`is_audio_stream_processed()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_processed.md),
@@ -75,12 +84,13 @@ Other is functions:
 [`is_window_minimized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_minimized.md),
 [`is_window_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_ready.md),
 [`is_window_resized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_resized.md),
-[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md)
+[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md),
+[`text_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/text_is_equal.md)
 
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 is_gesture_detected(0L)
-} # }
+}
 ```

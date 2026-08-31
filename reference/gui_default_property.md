@@ -29,9 +29,10 @@ An object of class `list` of length 8.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_default_property$text_size
+#> [1] 16
 gui_default_property$background_color
+#> [1] 19
 gui_default_property$extprop08
-} # }
+#> [1] 23
 ```

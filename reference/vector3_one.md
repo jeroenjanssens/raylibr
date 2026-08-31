@@ -56,7 +56,7 @@ Other vector3 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector3_one()
-} # }
+#> x y z 
+#> 1 1 1 
 ```

@@ -55,6 +55,9 @@ definition:
 
 ## See also
 
+Other ring functions:
+[`draw_ring_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_ring_lines.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -151,7 +154,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_ring(c(100, 100), 50.0, 50.0, 0.0, 0.0, 16L, "red")
-} # }
+raylibr_screenshot(function() draw_ring(c(200, 150), 80.0, 80.0, 0.0, 270.0, 36L, "red"))
 ```

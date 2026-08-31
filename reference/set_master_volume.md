@@ -29,6 +29,9 @@ Other volume functions:
 [`set_music_volume()`](https://jeroenjanssens.github.io/raylibr/reference/set_music_volume.md),
 [`set_sound_volume()`](https://jeroenjanssens.github.io/raylibr/reference/set_sound_volume.md)
 
+Other master functions:
+[`get_master_volume()`](https://jeroenjanssens.github.io/raylibr/reference/get_master_volume.md)
+
 Other set functions:
 [`set_audio_stream_buffer_size_default()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_buffer_size_default.md),
 [`set_audio_stream_pan()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_pan.md),
@@ -74,7 +77,7 @@ Other set functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 set_master_volume(0.5)
-} # }
+}
 ```

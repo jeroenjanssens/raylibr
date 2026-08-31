@@ -151,7 +151,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_is_stereo_render_enabled()
-} # }
+}
 ```

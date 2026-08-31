@@ -35,7 +35,20 @@ Other released functions:
 [`is_key_released()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_released.md),
 [`is_mouse_button_released()`](https://jeroenjanssens.github.io/raylibr/reference/is_mouse_button_released.md)
 
+Other gamepad functions:
+[`get_gamepad_axis_count()`](https://jeroenjanssens.github.io/raylibr/reference/get_gamepad_axis_count.md),
+[`get_gamepad_axis_movement()`](https://jeroenjanssens.github.io/raylibr/reference/get_gamepad_axis_movement.md),
+[`get_gamepad_button_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/get_gamepad_button_pressed.md),
+[`get_gamepad_name()`](https://jeroenjanssens.github.io/raylibr/reference/get_gamepad_name.md),
+[`is_gamepad_available()`](https://jeroenjanssens.github.io/raylibr/reference/is_gamepad_available.md),
+[`is_gamepad_button_down()`](https://jeroenjanssens.github.io/raylibr/reference/is_gamepad_button_down.md),
+[`is_gamepad_button_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/is_gamepad_button_pressed.md),
+[`is_gamepad_button_up()`](https://jeroenjanssens.github.io/raylibr/reference/is_gamepad_button_up.md),
+[`set_gamepad_mappings()`](https://jeroenjanssens.github.io/raylibr/reference/set_gamepad_mappings.md),
+[`set_gamepad_vibration()`](https://jeroenjanssens.github.io/raylibr/reference/set_gamepad_vibration.md)
+
 Other is functions:
+[`color_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/color_is_equal.md),
 [`is_audio_device_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_device_ready.md),
 [`is_audio_stream_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_playing.md),
 [`is_audio_stream_processed()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_processed.md),
@@ -80,12 +93,13 @@ Other is functions:
 [`is_window_minimized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_minimized.md),
 [`is_window_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_ready.md),
 [`is_window_resized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_resized.md),
-[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md)
+[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md),
+[`text_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/text_is_equal.md)
 
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 is_gamepad_button_released(0L, 0L)
-} # }
+}
 ```

@@ -52,7 +52,7 @@ Other quaternion functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 quaternion_from_vector3_to_vector3(c(0, 0, 0), c(0, 0, 0))
-} # }
+#> x y z w 
+#> 0 0 0 0 
 ```

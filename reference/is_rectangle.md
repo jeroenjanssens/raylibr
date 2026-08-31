@@ -21,7 +21,6 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 is_rectangle("not a rectangle")
-} # }
+#> [1] FALSE
 ```

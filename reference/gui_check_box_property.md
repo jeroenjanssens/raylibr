@@ -22,7 +22,6 @@ An object of class `list` of length 1.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_check_box_property$check_padding
-} # }
+#> [1] 16
 ```

@@ -20,10 +20,14 @@ definition:
 Other recording functions:
 [`stop_automation_event_recording()`](https://jeroenjanssens.github.io/raylibr/reference/stop_automation_event_recording.md)
 
+Other automation functions:
+[`set_automation_event_base_frame()`](https://jeroenjanssens.github.io/raylibr/reference/set_automation_event_base_frame.md),
+[`stop_automation_event_recording()`](https://jeroenjanssens.github.io/raylibr/reference/stop_automation_event_recording.md)
+
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 start_automation_event_recording()
-} # }
+}
 ```

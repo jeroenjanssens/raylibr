@@ -40,9 +40,9 @@ definition:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 mat <- material_map(load_texture("file.png"), "red", 0.0)
 mat$texture
+#> texture(id = 0, width = 0, height = 0, mipmaps = 0, format = 0) 
 mat$color
-} # }
+#> color(r = 255, g = 0, b = 0, a = 255) 
 ```

@@ -20,6 +20,7 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Guides</h6></li>
+    <li><a class="dropdown-item" href="../articles/screenshot.html">Screenshot</a></li>
     <li><a class="dropdown-item" href="../articles/wasm.html">Compiling raylibr to WebAssembly</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Demos</h6></li>
@@ -82,6 +83,21 @@
     <div class="dont-index"><p>Other length functions:
 <code><a href="get_file_length.html">get_file_length()</a></code>,
 <code><a href="text_length.html">text_length()</a></code></p>
+<p>Other music functions:
+<code><a href="get_music_time_played.html">get_music_time_played()</a></code>,
+<code><a href="is_music_stream_playing.html">is_music_stream_playing()</a></code>,
+<code><a href="is_music_valid.html">is_music_valid()</a></code>,
+<code><a href="load_music_stream.html">load_music_stream()</a></code>,
+<code><a href="pause_music_stream.html">pause_music_stream()</a></code>,
+<code><a href="play_music_stream.html">play_music_stream()</a></code>,
+<code><a href="resume_music_stream.html">resume_music_stream()</a></code>,
+<code><a href="seek_music_stream.html">seek_music_stream()</a></code>,
+<code><a href="set_music_pan.html">set_music_pan()</a></code>,
+<code><a href="set_music_pitch.html">set_music_pitch()</a></code>,
+<code><a href="set_music_volume.html">set_music_volume()</a></code>,
+<code><a href="stop_music_stream.html">stop_music_stream()</a></code>,
+<code><a href="unload_music_stream.html">unload_music_stream()</a></code>,
+<code><a href="update_music_stream.html">update_music_stream()</a></code></p>
 <p>Other get functions:
 <code><a href="get_application_directory.html">get_application_directory()</a></code>,
 <code><a href="get_camera_matrix.html">get_camera_matrix()</a></code>,
@@ -180,10 +196,9 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="fu">get_music_time_length</span><span class="op">(</span><span class="fu"><a href="load_music_stream.html">load_music_stream</a></span><span class="op">(</span><span class="st">"music.mp3"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

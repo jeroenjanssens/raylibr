@@ -29,13 +29,51 @@ definition:
 
 Other image functions:
 [`export_image()`](https://jeroenjanssens.github.io/raylibr/reference/export_image.md),
+[`export_image_as_code()`](https://jeroenjanssens.github.io/raylibr/reference/export_image_as_code.md),
+[`gen_image_cellular()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_cellular.md),
+[`gen_image_checked()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_checked.md),
+[`gen_image_color()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_color.md),
+[`gen_image_gradient_linear()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_gradient_linear.md),
+[`gen_image_gradient_radial()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_gradient_radial.md),
+[`gen_image_gradient_square()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_gradient_square.md),
+[`gen_image_perlin_noise()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_perlin_noise.md),
+[`gen_image_text()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_text.md),
+[`gen_image_white_noise()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_white_noise.md),
 [`get_clipboard_image()`](https://jeroenjanssens.github.io/raylibr/reference/get_clipboard_image.md),
+[`get_image_alpha_border()`](https://jeroenjanssens.github.io/raylibr/reference/get_image_alpha_border.md),
+[`get_image_color()`](https://jeroenjanssens.github.io/raylibr/reference/get_image_color.md),
 [`image_draw_line_ex()`](https://jeroenjanssens.github.io/raylibr/reference/image_draw_line_ex.md),
 [`image_draw_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/image_draw_triangle.md),
 [`image_from_image()`](https://jeroenjanssens.github.io/raylibr/reference/image_from_image.md),
+[`is_image_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_image_valid.md),
 [`load_font_from_image()`](https://jeroenjanssens.github.io/raylibr/reference/load_font_from_image.md),
 [`load_image()`](https://jeroenjanssens.github.io/raylibr/reference/load_image.md),
+[`load_image_from_screen()`](https://jeroenjanssens.github.io/raylibr/reference/load_image_from_screen.md),
+[`load_image_from_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_image_from_texture.md),
+[`load_image_raw()`](https://jeroenjanssens.github.io/raylibr/reference/load_image_raw.md),
 [`unload_image()`](https://jeroenjanssens.github.io/raylibr/reference/unload_image.md)
+
+Other texture functions:
+[`begin_texture_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_texture_mode.md),
+[`draw_texture()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture.md),
+[`draw_texture_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_ex.md),
+[`draw_texture_n_patch()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_n_patch.md),
+[`draw_texture_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_pro.md),
+[`draw_texture_rec()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_rec.md),
+[`draw_texture_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_v.md),
+[`end_texture_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_texture_mode.md),
+[`get_shapes_texture()`](https://jeroenjanssens.github.io/raylibr/reference/get_shapes_texture.md),
+[`is_texture_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_texture_valid.md),
+[`load_image_from_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_image_from_texture.md),
+[`load_render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_render_texture.md),
+[`load_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture.md),
+[`set_shader_value_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_shader_value_texture.md),
+[`set_shapes_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_shapes_texture.md),
+[`set_texture_filter()`](https://jeroenjanssens.github.io/raylibr/reference/set_texture_filter.md),
+[`set_texture_wrap()`](https://jeroenjanssens.github.io/raylibr/reference/set_texture_wrap.md),
+[`texture()`](https://jeroenjanssens.github.io/raylibr/reference/texture.md),
+[`unload_render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/unload_render_texture.md),
+[`unload_texture()`](https://jeroenjanssens.github.io/raylibr/reference/unload_texture.md)
 
 Other load functions:
 [`load_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/load_audio_stream.md),
@@ -63,7 +101,7 @@ Other load functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 load_texture_from_image(gen_image_color(100, 100, "blue"))
-} # }
+}
 ```

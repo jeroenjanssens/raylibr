@@ -35,9 +35,11 @@ definition:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 bou <- bounding_box(c(0, 0, 0), c(0, 0, 0))
 bou$min
+#> x y z 
+#> 0 0 0 
 bou$max
-} # }
+#> x y z 
+#> 0 0 0 
 ```

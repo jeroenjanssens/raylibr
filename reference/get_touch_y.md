@@ -24,6 +24,12 @@ definition:
 Other y functions:
 [`get_mouse_y()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_y.md)
 
+Other touch functions:
+[`get_touch_point_count()`](https://jeroenjanssens.github.io/raylibr/reference/get_touch_point_count.md),
+[`get_touch_point_id()`](https://jeroenjanssens.github.io/raylibr/reference/get_touch_point_id.md),
+[`get_touch_position()`](https://jeroenjanssens.github.io/raylibr/reference/get_touch_position.md),
+[`get_touch_x()`](https://jeroenjanssens.github.io/raylibr/reference/get_touch_x.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -122,7 +128,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_touch_y()
-} # }
+}
 ```

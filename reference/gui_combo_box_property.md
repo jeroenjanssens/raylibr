@@ -23,8 +23,8 @@ An object of class `list` of length 2.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_combo_box_property$combo_button_width
+#> [1] 16
 gui_combo_box_property$combo_button_spacing
-} # }
+#> [1] 17
 ```

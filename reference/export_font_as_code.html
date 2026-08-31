@@ -20,6 +20,7 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Guides</h6></li>
+    <li><a class="dropdown-item" href="../articles/screenshot.html">Screenshot</a></li>
     <li><a class="dropdown-item" href="../articles/wasm.html">Compiling raylibr to WebAssembly</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Demos</h6></li>
@@ -87,6 +88,13 @@
 <code><a href="export_image_as_code.html">export_image_as_code()</a></code>,
 <code><a href="export_mesh_as_code.html">export_mesh_as_code()</a></code>,
 <code><a href="export_wave_as_code.html">export_wave_as_code()</a></code></p>
+<p>Other font functions:
+<code><a href="get_font_default.html">get_font_default()</a></code>,
+<code><a href="is_font_valid.html">is_font_valid()</a></code>,
+<code><a href="load_font.html">load_font()</a></code>,
+<code><a href="load_font_ex.html">load_font_ex()</a></code>,
+<code><a href="load_font_from_image.html">load_font_from_image()</a></code>,
+<code><a href="unload_font.html">unload_font()</a></code></p>
 <p>Other export functions:
 <code><a href="export_image.html">export_image()</a></code>,
 <code><a href="export_image_as_code.html">export_image_as_code()</a></code>,
@@ -98,10 +106,9 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="fu">export_font_as_code</span><span class="op">(</span><span class="fu"><a href="get_font_default.html">get_font_default</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">"file.png"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

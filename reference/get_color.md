@@ -130,7 +130,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 get_color(0L)
-} # }
+#> color(r = 0, g = 0, b = 0, a = 0) 
 ```

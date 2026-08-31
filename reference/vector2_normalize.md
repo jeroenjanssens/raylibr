@@ -55,7 +55,7 @@ Other vector2 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector2_normalize(c(100, 100))
-} # }
+#>         x         y 
+#> 0.7071068 0.7071068 
 ```

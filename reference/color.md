@@ -52,9 +52,9 @@ Other color functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 col <- color(255L, 255L, 255L)
 col$r
+#> [1] 255
 col$g
-} # }
+#> [1] 255
 ```

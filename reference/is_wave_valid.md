@@ -41,7 +41,17 @@ Other valid functions:
 [`is_sound_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_sound_valid.md),
 [`is_texture_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_texture_valid.md)
 
+Other wave functions:
+[`export_wave()`](https://jeroenjanssens.github.io/raylibr/reference/export_wave.md),
+[`export_wave_as_code()`](https://jeroenjanssens.github.io/raylibr/reference/export_wave_as_code.md),
+[`load_sound_from_wave()`](https://jeroenjanssens.github.io/raylibr/reference/load_sound_from_wave.md),
+[`load_wave()`](https://jeroenjanssens.github.io/raylibr/reference/load_wave.md),
+[`unload_wave()`](https://jeroenjanssens.github.io/raylibr/reference/unload_wave.md),
+[`wave_crop()`](https://jeroenjanssens.github.io/raylibr/reference/wave_crop.md),
+[`wave_format()`](https://jeroenjanssens.github.io/raylibr/reference/wave_format.md)
+
 Other is functions:
+[`color_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/color_is_equal.md),
 [`is_audio_device_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_device_ready.md),
 [`is_audio_stream_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_playing.md),
 [`is_audio_stream_processed()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_processed.md),
@@ -86,12 +96,13 @@ Other is functions:
 [`is_window_minimized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_minimized.md),
 [`is_window_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_ready.md),
 [`is_window_resized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_resized.md),
-[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md)
+[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md),
+[`text_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/text_is_equal.md)
 
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 is_wave_valid(load_wave("sound.wav"))
-} # }
+}
 ```

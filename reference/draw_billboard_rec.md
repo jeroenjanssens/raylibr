@@ -51,6 +51,10 @@ Other rec functions:
 [`get_collision_rec()`](https://jeroenjanssens.github.io/raylibr/reference/get_collision_rec.md),
 [`get_glyph_atlas_rec()`](https://jeroenjanssens.github.io/raylibr/reference/get_glyph_atlas_rec.md)
 
+Other billboard functions:
+[`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
+[`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -147,7 +151,7 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 draw_billboard_rec(camera_3d(c(0, 10, 10)), load_texture("file.png"), rectangle(10, 10, 200, 100), c(0, 5, 0), c(100, 100), "red")
-} # }
+}
 ```

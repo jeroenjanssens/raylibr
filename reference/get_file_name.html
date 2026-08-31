@@ -20,6 +20,7 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Guides</h6></li>
+    <li><a class="dropdown-item" href="../articles/screenshot.html">Screenshot</a></li>
     <li><a class="dropdown-item" href="../articles/wasm.html">Compiling raylibr to WebAssembly</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Demos</h6></li>
@@ -83,6 +84,17 @@
 <code><a href="get_gamepad_name.html">get_gamepad_name()</a></code>,
 <code><a href="get_key_name.html">get_key_name()</a></code>,
 <code><a href="get_monitor_name.html">get_monitor_name()</a></code></p>
+<p>Other file functions:
+<code><a href="get_file_extension.html">get_file_extension()</a></code>,
+<code><a href="get_file_length.html">get_file_length()</a></code>,
+<code><a href="get_file_mod_time.html">get_file_mod_time()</a></code>,
+<code><a href="get_file_name_without_ext.html">get_file_name_without_ext()</a></code>,
+<code><a href="is_file_dropped.html">is_file_dropped()</a></code>,
+<code><a href="is_file_extension.html">is_file_extension()</a></code>,
+<code><a href="is_file_name_valid.html">is_file_name_valid()</a></code>,
+<code><a href="is_path_file.html">is_path_file()</a></code>,
+<code><a href="load_file_text.html">load_file_text()</a></code>,
+<code><a href="save_file_text.html">save_file_text()</a></code></p>
 <p>Other get functions:
 <code><a href="get_application_directory.html">get_application_directory()</a></code>,
 <code><a href="get_camera_matrix.html">get_camera_matrix()</a></code>,
@@ -181,10 +193,9 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="fu">get_file_name</span><span class="op">(</span><span class="st">"file.png"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

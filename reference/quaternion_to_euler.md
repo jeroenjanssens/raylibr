@@ -48,7 +48,7 @@ Other quaternion functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 quaternion_to_euler(c(0, 0, 0, 1))
-} # }
+#> x y z 
+#> 0 0 0 
 ```

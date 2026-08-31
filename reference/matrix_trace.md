@@ -49,7 +49,6 @@ Other matrix functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 matrix_trace(diag(4))
-} # }
+#> [1] 4
 ```

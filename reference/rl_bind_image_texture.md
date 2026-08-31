@@ -165,7 +165,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_bind_image_texture(0L, 0L, 0L, TRUE)
-} # }
+}
 ```

@@ -24,9 +24,10 @@ An object of class `list` of length 3.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_tab_bar_property$tab_items_width
+#> [1] 16
 gui_tab_bar_property$tab_close_button
+#> [1] 17
 gui_tab_bar_property$tab_line_side
-} # }
+#> [1] 18
 ```

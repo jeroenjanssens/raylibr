@@ -64,7 +64,7 @@ Other quaternion functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 quaternion_cubic_hermite_spline(c(0, 0, 0, 1), c(0, 0, 0, 1), c(0, 0, 0, 1), c(0, 0, 0, 1), 0.0)
-} # }
+#> x y z w 
+#> 0 0 0 1 
 ```

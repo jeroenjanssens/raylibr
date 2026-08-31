@@ -153,7 +153,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_unload_shader_buffer(0L)
-} # }
+}
 ```

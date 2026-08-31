@@ -57,6 +57,18 @@ Other matrix functions:
 [`matrix_translate()`](https://jeroenjanssens.github.io/raylibr/reference/matrix_translate.md),
 [`matrix_transpose()`](https://jeroenjanssens.github.io/raylibr/reference/matrix_transpose.md)
 
+Other shader functions:
+[`begin_shader_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_shader_mode.md),
+[`end_shader_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_shader_mode.md),
+[`get_shader_location()`](https://jeroenjanssens.github.io/raylibr/reference/get_shader_location.md),
+[`get_shader_location_attrib()`](https://jeroenjanssens.github.io/raylibr/reference/get_shader_location_attrib.md),
+[`is_shader_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_shader_valid.md),
+[`load_shader()`](https://jeroenjanssens.github.io/raylibr/reference/load_shader.md),
+[`load_shader_from_memory()`](https://jeroenjanssens.github.io/raylibr/reference/load_shader_from_memory.md),
+[`set_shader_value()`](https://jeroenjanssens.github.io/raylibr/reference/set_shader_value.md),
+[`set_shader_value_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_shader_value_texture.md),
+[`unload_shader()`](https://jeroenjanssens.github.io/raylibr/reference/unload_shader.md)
+
 Other set functions:
 [`set_audio_stream_buffer_size_default()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_buffer_size_default.md),
 [`set_audio_stream_pan()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_pan.md),
@@ -102,7 +114,7 @@ Other set functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 set_shader_value_matrix(load_shader("", "shader.fs"), 0L, diag(4))
-} # }
+}
 ```

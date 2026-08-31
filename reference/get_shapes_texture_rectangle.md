@@ -23,7 +23,22 @@ definition:
 
 Other rectangle functions:
 [`draw_rectangle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle.md),
+[`draw_rectangle_gradient_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_gradient_ex.md),
+[`draw_rectangle_gradient_h()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_gradient_h.md),
+[`draw_rectangle_gradient_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_gradient_v.md),
+[`draw_rectangle_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_lines.md),
+[`draw_rectangle_lines_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_lines_ex.md),
+[`draw_rectangle_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_pro.md),
+[`draw_rectangle_rec()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_rec.md),
+[`draw_rectangle_rounded()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_rounded.md),
+[`draw_rectangle_rounded_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_rounded_lines.md),
+[`draw_rectangle_rounded_lines_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_rounded_lines_ex.md),
+[`draw_rectangle_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_v.md),
 [`rectangle()`](https://jeroenjanssens.github.io/raylibr/reference/rectangle.md)
+
+Other shapes functions:
+[`get_shapes_texture()`](https://jeroenjanssens.github.io/raylibr/reference/get_shapes_texture.md),
+[`set_shapes_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_shapes_texture.md)
 
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
@@ -123,7 +138,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_shapes_texture_rectangle()
-} # }
+}
 ```

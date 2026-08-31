@@ -15,7 +15,6 @@ A string
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 raylib_version()
-} # }
+#> [1] "6.0"
 ```

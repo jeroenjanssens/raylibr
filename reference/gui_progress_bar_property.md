@@ -23,8 +23,8 @@ An object of class `list` of length 2.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_progress_bar_property$progress_padding
+#> [1] 16
 gui_progress_bar_property$progress_side
-} # }
+#> [1] 17
 ```

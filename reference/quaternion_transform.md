@@ -52,7 +52,7 @@ Other quaternion functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 quaternion_transform(c(0, 0, 0, 1), diag(4))
-} # }
+#> x y z w 
+#> 0 0 0 1 
 ```

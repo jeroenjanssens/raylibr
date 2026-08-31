@@ -27,6 +27,22 @@ definition:
 
 ## See also
 
+Other music functions:
+[`get_music_time_length()`](https://jeroenjanssens.github.io/raylibr/reference/get_music_time_length.md),
+[`is_music_stream_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_music_stream_playing.md),
+[`is_music_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_music_valid.md),
+[`load_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/load_music_stream.md),
+[`pause_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/pause_music_stream.md),
+[`play_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/play_music_stream.md),
+[`resume_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/resume_music_stream.md),
+[`seek_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/seek_music_stream.md),
+[`set_music_pan()`](https://jeroenjanssens.github.io/raylibr/reference/set_music_pan.md),
+[`set_music_pitch()`](https://jeroenjanssens.github.io/raylibr/reference/set_music_pitch.md),
+[`set_music_volume()`](https://jeroenjanssens.github.io/raylibr/reference/set_music_volume.md),
+[`stop_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/stop_music_stream.md),
+[`unload_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/unload_music_stream.md),
+[`update_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/update_music_stream.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -125,7 +141,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_music_time_played(load_music_stream("music.mp3"))
-} # }
+}
 ```

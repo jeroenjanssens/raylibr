@@ -123,7 +123,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_fps()
-} # }
+}
 ```

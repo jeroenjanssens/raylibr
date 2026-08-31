@@ -23,6 +23,15 @@ definition:
 
 ## See also
 
+Other key functions:
+[`get_key_name()`](https://jeroenjanssens.github.io/raylibr/reference/get_key_name.md),
+[`get_key_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/get_key_pressed.md),
+[`is_key_down()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_down.md),
+[`is_key_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_pressed.md),
+[`is_key_pressed_repeat()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_pressed_repeat.md),
+[`is_key_released()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_released.md),
+[`is_key_up()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_up.md)
+
 Other set functions:
 [`set_audio_stream_buffer_size_default()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_buffer_size_default.md),
 [`set_audio_stream_pan()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_pan.md),
@@ -68,7 +77,7 @@ Other set functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 set_exit_key(0L)
-} # }
+}
 ```

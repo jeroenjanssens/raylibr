@@ -59,9 +59,11 @@ definition:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 cam <- camera_3d(c(0, 5, 0))
 cam$position
+#> x y z 
+#> 0 5 0 
 cam$target
-} # }
+#> x y z 
+#> 0 0 0 
 ```

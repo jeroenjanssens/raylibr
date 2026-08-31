@@ -62,6 +62,11 @@ Other ex functions:
 [`measure_text_ex()`](https://jeroenjanssens.github.io/raylibr/reference/measure_text_ex.md),
 [`update_model_animation_ex()`](https://jeroenjanssens.github.io/raylibr/reference/update_model_animation_ex.md)
 
+Other poly functions:
+[`draw_poly()`](https://jeroenjanssens.github.io/raylibr/reference/draw_poly.md),
+[`draw_poly_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_poly_lines.md),
+[`gen_mesh_poly()`](https://jeroenjanssens.github.io/raylibr/reference/gen_mesh_poly.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -158,7 +163,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_poly_lines_ex(c(100, 100), 0L, 50.0, 0.0, 2.0, "red")
-} # }
+raylibr_screenshot(function() draw_poly_lines_ex(c(200, 150), 6L, 80.0, 0.0, 3.0, "red"))
 ```

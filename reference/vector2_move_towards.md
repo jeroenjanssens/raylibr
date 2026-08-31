@@ -63,7 +63,7 @@ Other vector2 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector2_move_towards(c(100, 100), c(100, 100), 0.0)
-} # }
+#>   x   y 
+#> 100 100 
 ```

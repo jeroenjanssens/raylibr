@@ -26,9 +26,10 @@ An object of class `list` of length 5.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_color_picker_property$color_selector_size
+#> [1] 16
 gui_color_picker_property$huebar_padding
+#> [1] 18
 gui_color_picker_property$huebar_selector_overflow
-} # }
+#> [1] 20
 ```

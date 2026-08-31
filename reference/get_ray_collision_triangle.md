@@ -41,7 +41,18 @@ definition:
 
 Other triangle functions:
 [`check_collision_point_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_point_triangle.md),
-[`draw_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle.md)
+[`draw_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle.md),
+[`draw_triangle_3d()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_3d.md),
+[`draw_triangle_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_lines.md)
+
+Other ray functions:
+[`draw_ray()`](https://jeroenjanssens.github.io/raylibr/reference/draw_ray.md),
+[`get_ray_collision_box()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_box.md),
+[`get_ray_collision_mesh()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_mesh.md),
+[`get_ray_collision_quad()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_quad.md),
+[`get_ray_collision_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_sphere.md),
+[`get_screen_to_world_ray()`](https://jeroenjanssens.github.io/raylibr/reference/get_screen_to_world_ray.md),
+[`ray()`](https://jeroenjanssens.github.io/raylibr/reference/ray.md)
 
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
@@ -141,7 +152,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 get_ray_collision_triangle(ray(c(0, 0, 0), c(0, 0, 1)), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0))
-} # }
+#> ray_collision(hit = FALSE, distance = 0, point = 0, 0, 0, normal = 0, 0, 0) 
 ```

@@ -40,6 +40,8 @@ definition:
 ## See also
 
 Other poly functions:
+[`draw_poly_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_poly_lines.md),
+[`draw_poly_lines_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_poly_lines_ex.md),
 [`gen_mesh_poly()`](https://jeroenjanssens.github.io/raylibr/reference/gen_mesh_poly.md)
 
 Other draw functions:
@@ -138,7 +140,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_poly(c(100, 100), 0L, 50.0, 0.0, "red")
-} # }
+raylibr_screenshot(function() draw_poly(c(200, 150), 6L, 80.0, 0.0, "red"))
 ```

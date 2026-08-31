@@ -153,7 +153,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_set_blend_mode(0L)
-} # }
+}
 ```

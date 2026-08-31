@@ -66,7 +66,7 @@ Other vector3 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector3_reject(c(0, 0, 0), c(0, 0, 0))
-} # }
+#>   x   y   z 
+#> NaN NaN NaN 
 ```

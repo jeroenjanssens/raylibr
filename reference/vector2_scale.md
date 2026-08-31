@@ -59,7 +59,7 @@ Other vector2 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector2_scale(c(100, 100), 1.0)
-} # }
+#>   x   y 
+#> 100 100 
 ```

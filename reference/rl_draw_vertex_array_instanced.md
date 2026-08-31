@@ -161,7 +161,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_draw_vertex_array_instanced(0L, 10L, 0L)
-} # }
+}
 ```

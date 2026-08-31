@@ -36,6 +36,14 @@ Other code functions:
 [`export_mesh_as_code()`](https://jeroenjanssens.github.io/raylibr/reference/export_mesh_as_code.md),
 [`export_wave_as_code()`](https://jeroenjanssens.github.io/raylibr/reference/export_wave_as_code.md)
 
+Other font functions:
+[`get_font_default()`](https://jeroenjanssens.github.io/raylibr/reference/get_font_default.md),
+[`is_font_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_font_valid.md),
+[`load_font()`](https://jeroenjanssens.github.io/raylibr/reference/load_font.md),
+[`load_font_ex()`](https://jeroenjanssens.github.io/raylibr/reference/load_font_ex.md),
+[`load_font_from_image()`](https://jeroenjanssens.github.io/raylibr/reference/load_font_from_image.md),
+[`unload_font()`](https://jeroenjanssens.github.io/raylibr/reference/unload_font.md)
+
 Other export functions:
 [`export_image()`](https://jeroenjanssens.github.io/raylibr/reference/export_image.md),
 [`export_image_as_code()`](https://jeroenjanssens.github.io/raylibr/reference/export_image_as_code.md),
@@ -47,7 +55,7 @@ Other export functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 export_font_as_code(get_font_default(), "file.png")
-} # }
+}
 ```

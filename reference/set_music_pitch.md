@@ -31,6 +31,22 @@ Other pitch functions:
 [`set_audio_stream_pitch()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_pitch.md),
 [`set_sound_pitch()`](https://jeroenjanssens.github.io/raylibr/reference/set_sound_pitch.md)
 
+Other music functions:
+[`get_music_time_length()`](https://jeroenjanssens.github.io/raylibr/reference/get_music_time_length.md),
+[`get_music_time_played()`](https://jeroenjanssens.github.io/raylibr/reference/get_music_time_played.md),
+[`is_music_stream_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_music_stream_playing.md),
+[`is_music_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_music_valid.md),
+[`load_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/load_music_stream.md),
+[`pause_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/pause_music_stream.md),
+[`play_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/play_music_stream.md),
+[`resume_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/resume_music_stream.md),
+[`seek_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/seek_music_stream.md),
+[`set_music_pan()`](https://jeroenjanssens.github.io/raylibr/reference/set_music_pan.md),
+[`set_music_volume()`](https://jeroenjanssens.github.io/raylibr/reference/set_music_volume.md),
+[`stop_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/stop_music_stream.md),
+[`unload_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/unload_music_stream.md),
+[`update_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/update_music_stream.md)
+
 Other set functions:
 [`set_audio_stream_buffer_size_default()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_buffer_size_default.md),
 [`set_audio_stream_pan()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_pan.md),
@@ -76,7 +92,7 @@ Other set functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 set_music_pitch(load_music_stream("music.mp3"), 1.0)
-} # }
+}
 ```

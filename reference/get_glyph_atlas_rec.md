@@ -40,6 +40,10 @@ Other rec functions:
 [`draw_texture_rec()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_rec.md),
 [`get_collision_rec()`](https://jeroenjanssens.github.io/raylibr/reference/get_collision_rec.md)
 
+Other glyph functions:
+[`get_glyph_index()`](https://jeroenjanssens.github.io/raylibr/reference/get_glyph_index.md),
+[`get_glyph_info()`](https://jeroenjanssens.github.io/raylibr/reference/get_glyph_info.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -138,7 +142,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_glyph_atlas_rec(get_font_default(), 0L)
-} # }
+}
 ```

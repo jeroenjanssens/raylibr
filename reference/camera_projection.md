@@ -23,8 +23,8 @@ An object of class `list` of length 2.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 camera_projection$perspective
+#> [1] 0
 camera_projection$orthographic
-} # }
+#> [1] 1
 ```

@@ -28,6 +28,12 @@ definition:
 ## See also
 
 Other config functions:
+[`set_config_flags()`](https://jeroenjanssens.github.io/raylibr/reference/set_config_flags.md),
+[`unload_vr_stereo_config()`](https://jeroenjanssens.github.io/raylibr/reference/unload_vr_stereo_config.md)
+
+Other vr functions:
+[`begin_vr_stereo_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_vr_stereo_mode.md),
+[`end_vr_stereo_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_vr_stereo_mode.md),
 [`unload_vr_stereo_config()`](https://jeroenjanssens.github.io/raylibr/reference/unload_vr_stereo_config.md)
 
 Other load functions:
@@ -56,7 +62,7 @@ Other load functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 load_vr_stereo_config(device)
-} # }
+}
 ```

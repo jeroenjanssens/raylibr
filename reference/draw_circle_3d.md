@@ -46,6 +46,16 @@ Other 3d functions:
 [`draw_triangle_3d()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_3d.md),
 [`end_mode_3d()`](https://jeroenjanssens.github.io/raylibr/reference/end_mode_3d.md)
 
+Other circle functions:
+[`check_collision_point_circle()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_point_circle.md),
+[`draw_circle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle.md),
+[`draw_circle_gradient()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_gradient.md),
+[`draw_circle_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_lines.md),
+[`draw_circle_lines_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_lines_v.md),
+[`draw_circle_sector()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_sector.md),
+[`draw_circle_sector_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_sector_lines.md),
+[`draw_circle_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_v.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -142,7 +152,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_circle_3d(c(0, 0, 0), 50.0, c(0, 0, 0), 0.0, "red")
-} # }
+raylibr_screenshot_3d(function() draw_circle_3d(c(0, 0, 0), 1.0, c(0, 1, 0), 0.0, "red"))
 ```

@@ -36,14 +36,21 @@ definition:
 
 Other ray functions:
 [`draw_ray()`](https://jeroenjanssens.github.io/raylibr/reference/draw_ray.md),
+[`get_ray_collision_box()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_box.md),
+[`get_ray_collision_mesh()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_mesh.md),
+[`get_ray_collision_quad()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_quad.md),
+[`get_ray_collision_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_sphere.md),
+[`get_ray_collision_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_triangle.md),
 [`get_screen_to_world_ray()`](https://jeroenjanssens.github.io/raylibr/reference/get_screen_to_world_ray.md)
 
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 ray <- ray(c(0, 5, 0), c(0, 0, 0))
 ray$position
+#> x y z 
+#> 0 5 0 
 ray$direction
-} # }
+#> x y z 
+#> 0 0 0 
 ```

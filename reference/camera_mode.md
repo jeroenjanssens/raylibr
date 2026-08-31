@@ -26,9 +26,10 @@ An object of class `list` of length 5.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 camera_mode$custom
+#> [1] 0
 camera_mode$orbital
+#> [1] 2
 camera_mode$third_person
-} # }
+#> [1] 4
 ```

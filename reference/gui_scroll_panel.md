@@ -95,11 +95,11 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 gui_scroll_panel(
   rectangle(10, 10, 200, 200), "Panel",
   rectangle(0, 0, 400, 400), c(0, 0),
   rectangle(0, 0, 200, 200)
 )
-} # }
+}
 ```

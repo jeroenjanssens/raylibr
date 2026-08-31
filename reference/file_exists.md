@@ -33,7 +33,7 @@ Other exists functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 file_exists("file.png")
-} # }
+}
 ```

@@ -38,6 +38,22 @@ Other stream functions:
 [`unload_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/unload_music_stream.md),
 [`update_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/update_music_stream.md)
 
+Other music functions:
+[`get_music_time_length()`](https://jeroenjanssens.github.io/raylibr/reference/get_music_time_length.md),
+[`get_music_time_played()`](https://jeroenjanssens.github.io/raylibr/reference/get_music_time_played.md),
+[`is_music_stream_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_music_stream_playing.md),
+[`is_music_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_music_valid.md),
+[`load_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/load_music_stream.md),
+[`pause_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/pause_music_stream.md),
+[`play_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/play_music_stream.md),
+[`resume_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/resume_music_stream.md),
+[`seek_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/seek_music_stream.md),
+[`set_music_pan()`](https://jeroenjanssens.github.io/raylibr/reference/set_music_pan.md),
+[`set_music_pitch()`](https://jeroenjanssens.github.io/raylibr/reference/set_music_pitch.md),
+[`set_music_volume()`](https://jeroenjanssens.github.io/raylibr/reference/set_music_volume.md),
+[`unload_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/unload_music_stream.md),
+[`update_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/update_music_stream.md)
+
 Other stop functions:
 [`stop_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/stop_audio_stream.md),
 [`stop_automation_event_recording()`](https://jeroenjanssens.github.io/raylibr/reference/stop_automation_event_recording.md),
@@ -46,7 +62,7 @@ Other stop functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 stop_music_stream(load_music_stream("music.mp3"))
-} # }
+}
 ```

@@ -90,7 +90,7 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 gui_text_box(rectangle(10, 10, 200, 30), "Hello", 64L, FALSE)
-} # }
+}
 ```

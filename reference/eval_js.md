@@ -21,7 +21,7 @@ Character string result.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 eval_js("document.title")
-} # }
+}
 ```

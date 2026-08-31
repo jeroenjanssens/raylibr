@@ -33,10 +33,15 @@ definition:
 
     char * TextInsert(const char * text, const char * insert, int position);
 
+## See also
+
+Other insert functions:
+[`text_insert_alloc()`](https://jeroenjanssens.github.io/raylibr/reference/text_insert_alloc.md)
+
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 text_insert("Hello", "text", 0L)
-} # }
+}
 ```

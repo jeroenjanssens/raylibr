@@ -21,7 +21,6 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 is_texture("not a texture")
-} # }
+#> [1] FALSE
 ```

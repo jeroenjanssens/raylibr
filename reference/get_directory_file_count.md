@@ -33,6 +33,14 @@ Other count functions:
 [`get_monitor_count()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_count.md),
 [`get_touch_point_count()`](https://jeroenjanssens.github.io/raylibr/reference/get_touch_point_count.md)
 
+Other directory functions:
+[`change_directory()`](https://jeroenjanssens.github.io/raylibr/reference/change_directory.md),
+[`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
+[`get_directory_file_count_ex()`](https://jeroenjanssens.github.io/raylibr/reference/get_directory_file_count_ex.md),
+[`get_directory_path()`](https://jeroenjanssens.github.io/raylibr/reference/get_directory_path.md),
+[`get_working_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_working_directory.md),
+[`make_directory()`](https://jeroenjanssens.github.io/raylibr/reference/make_directory.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -131,7 +139,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_directory_file_count("file.png")
-} # }
+}
 ```

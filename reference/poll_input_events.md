@@ -18,7 +18,7 @@ definition:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 poll_input_events()
-} # }
+}
 ```

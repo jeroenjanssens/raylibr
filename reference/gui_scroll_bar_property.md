@@ -27,9 +27,10 @@ An object of class `list` of length 6.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_scroll_bar_property$arrows_size
+#> [1] 16
 gui_scroll_bar_property$scroll_slider_padding
+#> [1] 18
 gui_scroll_bar_property$scroll_speed
-} # }
+#> [1] 21
 ```

@@ -50,7 +50,6 @@ Other vector4 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector4_equals(c(0, 0, 0, 1), c(0, 0, 0, 1))
-} # }
+#> [1] 1
 ```

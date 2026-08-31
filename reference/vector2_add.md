@@ -59,7 +59,7 @@ Other vector2 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector2_add(c(100, 100), c(100, 100))
-} # }
+#>   x   y 
+#> 200 200 
 ```

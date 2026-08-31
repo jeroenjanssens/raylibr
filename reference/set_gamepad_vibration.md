@@ -35,6 +35,18 @@ definition:
 
 ## See also
 
+Other gamepad functions:
+[`get_gamepad_axis_count()`](https://jeroenjanssens.github.io/raylibr/reference/get_gamepad_axis_count.md),
+[`get_gamepad_axis_movement()`](https://jeroenjanssens.github.io/raylibr/reference/get_gamepad_axis_movement.md),
+[`get_gamepad_button_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/get_gamepad_button_pressed.md),
+[`get_gamepad_name()`](https://jeroenjanssens.github.io/raylibr/reference/get_gamepad_name.md),
+[`is_gamepad_available()`](https://jeroenjanssens.github.io/raylibr/reference/is_gamepad_available.md),
+[`is_gamepad_button_down()`](https://jeroenjanssens.github.io/raylibr/reference/is_gamepad_button_down.md),
+[`is_gamepad_button_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/is_gamepad_button_pressed.md),
+[`is_gamepad_button_released()`](https://jeroenjanssens.github.io/raylibr/reference/is_gamepad_button_released.md),
+[`is_gamepad_button_up()`](https://jeroenjanssens.github.io/raylibr/reference/is_gamepad_button_up.md),
+[`set_gamepad_mappings()`](https://jeroenjanssens.github.io/raylibr/reference/set_gamepad_mappings.md)
+
 Other set functions:
 [`set_audio_stream_buffer_size_default()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_buffer_size_default.md),
 [`set_audio_stream_pan()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_pan.md),
@@ -80,7 +92,7 @@ Other set functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 set_gamepad_vibration(0L, 0.0, 0.0, 0.0)
-} # }
+}
 ```

@@ -24,9 +24,10 @@ An object of class `list` of length 3.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_text_alignment$left
+#> [1] 0
 gui_text_alignment$center
+#> [1] 1
 gui_text_alignment$right
-} # }
+#> [1] 2
 ```

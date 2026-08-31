@@ -20,6 +20,7 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Guides</h6></li>
+    <li><a class="dropdown-item" href="../articles/screenshot.html">Screenshot</a></li>
     <li><a class="dropdown-item" href="../articles/wasm.html">Compiling raylibr to WebAssembly</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Demos</h6></li>
@@ -92,7 +93,33 @@
 <code><a href="is_sound_valid.html">is_sound_valid()</a></code>,
 <code><a href="is_texture_valid.html">is_texture_valid()</a></code>,
 <code><a href="is_wave_valid.html">is_wave_valid()</a></code></p>
+<p>Other image functions:
+<code><a href="export_image.html">export_image()</a></code>,
+<code><a href="export_image_as_code.html">export_image_as_code()</a></code>,
+<code><a href="gen_image_cellular.html">gen_image_cellular()</a></code>,
+<code><a href="gen_image_checked.html">gen_image_checked()</a></code>,
+<code><a href="gen_image_color.html">gen_image_color()</a></code>,
+<code><a href="gen_image_gradient_linear.html">gen_image_gradient_linear()</a></code>,
+<code><a href="gen_image_gradient_radial.html">gen_image_gradient_radial()</a></code>,
+<code><a href="gen_image_gradient_square.html">gen_image_gradient_square()</a></code>,
+<code><a href="gen_image_perlin_noise.html">gen_image_perlin_noise()</a></code>,
+<code><a href="gen_image_text.html">gen_image_text()</a></code>,
+<code><a href="gen_image_white_noise.html">gen_image_white_noise()</a></code>,
+<code><a href="get_clipboard_image.html">get_clipboard_image()</a></code>,
+<code><a href="get_image_alpha_border.html">get_image_alpha_border()</a></code>,
+<code><a href="get_image_color.html">get_image_color()</a></code>,
+<code><a href="image_draw_line_ex.html">image_draw_line_ex()</a></code>,
+<code><a href="image_draw_triangle.html">image_draw_triangle()</a></code>,
+<code><a href="image_from_image.html">image_from_image()</a></code>,
+<code><a href="load_font_from_image.html">load_font_from_image()</a></code>,
+<code><a href="load_image.html">load_image()</a></code>,
+<code><a href="load_image_from_screen.html">load_image_from_screen()</a></code>,
+<code><a href="load_image_from_texture.html">load_image_from_texture()</a></code>,
+<code><a href="load_image_raw.html">load_image_raw()</a></code>,
+<code><a href="load_texture_from_image.html">load_texture_from_image()</a></code>,
+<code><a href="unload_image.html">unload_image()</a></code></p>
 <p>Other is functions:
+<code><a href="color_is_equal.html">color_is_equal()</a></code>,
 <code><a href="is_audio_device_ready.html">is_audio_device_ready()</a></code>,
 <code><a href="is_audio_stream_playing.html">is_audio_stream_playing()</a></code>,
 <code><a href="is_audio_stream_processed.html">is_audio_stream_processed()</a></code>,
@@ -137,15 +164,15 @@
 <code><a href="is_window_minimized.html">is_window_minimized()</a></code>,
 <code><a href="is_window_ready.html">is_window_ready()</a></code>,
 <code><a href="is_window_resized.html">is_window_resized()</a></code>,
-<code><a href="is_window_state.html">is_window_state()</a></code></p></div>
+<code><a href="is_window_state.html">is_window_state()</a></code>,
+<code><a href="text_is_equal.html">text_is_equal()</a></code></p></div>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="fu">is_image_valid</span><span class="op">(</span><span class="fu"><a href="gen_image_color.html">gen_image_color</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">100</span>, <span class="st">"blue"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

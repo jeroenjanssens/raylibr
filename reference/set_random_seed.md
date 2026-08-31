@@ -23,6 +23,9 @@ definition:
 
 ## See also
 
+Other random functions:
+[`get_random_value()`](https://jeroenjanssens.github.io/raylibr/reference/get_random_value.md)
+
 Other set functions:
 [`set_audio_stream_buffer_size_default()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_buffer_size_default.md),
 [`set_audio_stream_pan()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_pan.md),
@@ -68,7 +71,5 @@ Other set functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 set_random_seed(42L)
-} # }
 ```

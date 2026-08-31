@@ -34,7 +34,7 @@ Other length functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 text_length("Hello")
-} # }
+}
 ```

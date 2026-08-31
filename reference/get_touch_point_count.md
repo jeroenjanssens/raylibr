@@ -27,6 +27,12 @@ Other count functions:
 [`get_gamepad_axis_count()`](https://jeroenjanssens.github.io/raylibr/reference/get_gamepad_axis_count.md),
 [`get_monitor_count()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_count.md)
 
+Other touch functions:
+[`get_touch_point_id()`](https://jeroenjanssens.github.io/raylibr/reference/get_touch_point_id.md),
+[`get_touch_position()`](https://jeroenjanssens.github.io/raylibr/reference/get_touch_position.md),
+[`get_touch_x()`](https://jeroenjanssens.github.io/raylibr/reference/get_touch_x.md),
+[`get_touch_y()`](https://jeroenjanssens.github.io/raylibr/reference/get_touch_y.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -125,7 +131,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_touch_point_count()
-} # }
+}
 ```

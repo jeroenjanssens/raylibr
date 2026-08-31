@@ -48,9 +48,11 @@ definition:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 cam <- camera_2d(c(100, 100), c(100, 100))
 cam$offset
+#>   x   y 
+#> 100 100 
 cam$target
-} # }
+#>   x   y 
+#> 100 100 
 ```

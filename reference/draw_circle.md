@@ -36,7 +36,14 @@ definition:
 ## See also
 
 Other circle functions:
-[`check_collision_point_circle()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_point_circle.md)
+[`check_collision_point_circle()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_point_circle.md),
+[`draw_circle_3d()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_3d.md),
+[`draw_circle_gradient()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_gradient.md),
+[`draw_circle_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_lines.md),
+[`draw_circle_lines_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_lines_v.md),
+[`draw_circle_sector()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_sector.md),
+[`draw_circle_sector_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_sector_lines.md),
+[`draw_circle_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_v.md)
 
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
@@ -134,7 +141,8 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_circle(100L, 100L, 50.0, "red")
-} # }
+raylibr_screenshot(function() {
+  draw_circle(200L, 150L, 80.0, "yellow")
+  draw_circle(210L, 160L, 80.0, color_alpha("white", 0.3))
+})
 ```

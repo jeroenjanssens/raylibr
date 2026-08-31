@@ -127,7 +127,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_fps(100L, 100L)
-} # }
+raylibr_screenshot(function() draw_fps(100L, 100L))
 ```

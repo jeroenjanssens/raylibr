@@ -33,6 +33,21 @@ Other volume functions:
 [`set_master_volume()`](https://jeroenjanssens.github.io/raylibr/reference/set_master_volume.md),
 [`set_music_volume()`](https://jeroenjanssens.github.io/raylibr/reference/set_music_volume.md)
 
+Other sound functions:
+[`is_sound_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_sound_playing.md),
+[`is_sound_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_sound_valid.md),
+[`load_sound()`](https://jeroenjanssens.github.io/raylibr/reference/load_sound.md),
+[`load_sound_alias()`](https://jeroenjanssens.github.io/raylibr/reference/load_sound_alias.md),
+[`load_sound_from_wave()`](https://jeroenjanssens.github.io/raylibr/reference/load_sound_from_wave.md),
+[`pause_sound()`](https://jeroenjanssens.github.io/raylibr/reference/pause_sound.md),
+[`play_sound()`](https://jeroenjanssens.github.io/raylibr/reference/play_sound.md),
+[`resume_sound()`](https://jeroenjanssens.github.io/raylibr/reference/resume_sound.md),
+[`set_sound_pan()`](https://jeroenjanssens.github.io/raylibr/reference/set_sound_pan.md),
+[`set_sound_pitch()`](https://jeroenjanssens.github.io/raylibr/reference/set_sound_pitch.md),
+[`stop_sound()`](https://jeroenjanssens.github.io/raylibr/reference/stop_sound.md),
+[`unload_sound()`](https://jeroenjanssens.github.io/raylibr/reference/unload_sound.md),
+[`unload_sound_alias()`](https://jeroenjanssens.github.io/raylibr/reference/unload_sound_alias.md)
+
 Other set functions:
 [`set_audio_stream_buffer_size_default()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_buffer_size_default.md),
 [`set_audio_stream_pan()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_pan.md),
@@ -78,7 +93,7 @@ Other set functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 set_sound_volume(load_sound("sound.wav"), 0.5)
-} # }
+}
 ```

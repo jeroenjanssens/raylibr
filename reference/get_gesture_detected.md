@@ -24,6 +24,14 @@ definition:
 Other detected functions:
 [`is_gesture_detected()`](https://jeroenjanssens.github.io/raylibr/reference/is_gesture_detected.md)
 
+Other gesture functions:
+[`get_gesture_drag_angle()`](https://jeroenjanssens.github.io/raylibr/reference/get_gesture_drag_angle.md),
+[`get_gesture_drag_vector()`](https://jeroenjanssens.github.io/raylibr/reference/get_gesture_drag_vector.md),
+[`get_gesture_hold_duration()`](https://jeroenjanssens.github.io/raylibr/reference/get_gesture_hold_duration.md),
+[`get_gesture_pinch_angle()`](https://jeroenjanssens.github.io/raylibr/reference/get_gesture_pinch_angle.md),
+[`get_gesture_pinch_vector()`](https://jeroenjanssens.github.io/raylibr/reference/get_gesture_pinch_vector.md),
+[`is_gesture_detected()`](https://jeroenjanssens.github.io/raylibr/reference/is_gesture_detected.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -122,7 +130,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_gesture_detected()
-} # }
+}
 ```

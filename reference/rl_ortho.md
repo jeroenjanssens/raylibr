@@ -173,7 +173,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_ortho(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
-} # }
+}
 ```

@@ -147,7 +147,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_disable_depth_test()
-} # }
+}
 ```

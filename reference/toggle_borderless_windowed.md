@@ -19,7 +19,7 @@ definition:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 toggle_borderless_windowed()
-} # }
+}
 ```

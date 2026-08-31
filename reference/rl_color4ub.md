@@ -165,7 +165,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_color4ub(255L, 255L, 255L, 255L)
-} # }
+}
 ```

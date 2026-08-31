@@ -169,7 +169,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_framebuffer_attach(0L, 0L, 0L, 0L, 0L)
-} # }
+}
 ```

@@ -22,7 +22,6 @@ An object of class `list` of length 1.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_text_box_property$text_readonly
-} # }
+#> [1] 16
 ```

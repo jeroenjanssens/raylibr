@@ -34,7 +34,7 @@ Other copy functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 wave_copy(load_wave("sound.wav"))
-} # }
+}
 ```

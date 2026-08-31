@@ -32,7 +32,7 @@ Other begin functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 begin_drawing()
-} # }
+}
 ```

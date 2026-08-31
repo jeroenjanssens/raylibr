@@ -116,8 +116,6 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 pts <- matrix(c(0, 1, 2, 3, 0, 1, 0, 1, 0, 0, 0, 0), ncol = 3)
-draw_triangle_strip_3d(pts, "red")
-} # }
+raylibr_screenshot_3d(function() draw_triangle_strip_3d(pts, "red"))
 ```

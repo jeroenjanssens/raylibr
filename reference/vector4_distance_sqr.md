@@ -50,7 +50,6 @@ Other vector4 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector4_distance_sqr(c(0, 0, 0, 1), c(0, 0, 0, 1))
-} # }
+#> [1] 0
 ```

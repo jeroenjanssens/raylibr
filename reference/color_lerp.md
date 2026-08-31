@@ -36,7 +36,6 @@ definition:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 color_lerp("red", "red", 0.0)
-} # }
+#> color(r = 255, g = 0, b = 0, a = 255) 
 ```

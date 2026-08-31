@@ -21,7 +21,6 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 is_n_patch_info("not a n_patch_info")
-} # }
+#> [1] FALSE
 ```

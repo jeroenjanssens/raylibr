@@ -37,9 +37,10 @@ An object of class `list` of length 16.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_control_property$border_color_normal
+#> [1] 0
 gui_control_property$base_color_pressed
+#> [1] 7
 gui_control_property$baseprop16
-} # }
+#> [1] 15
 ```

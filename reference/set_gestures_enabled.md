@@ -68,7 +68,7 @@ Other set functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 set_gestures_enabled(0L)
-} # }
+}
 ```

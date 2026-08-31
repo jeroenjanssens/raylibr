@@ -25,9 +25,10 @@ An object of class `list` of length 4.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_result$none
+#> [1] 0
 gui_result$pressed
+#> [1] 1
 gui_result$tab_close
-} # }
+#> [1] 4
 ```

@@ -45,9 +45,9 @@ definition:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 ray <- ray_collision(TRUE, 1.0, c(0, 0, 0), c(0, 0, 0))
 ray$hit
+#> [1] TRUE
 ray$distance
-} # }
+#> [1] 1
 ```

@@ -59,7 +59,6 @@ Other vector2 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector2_dot_product(c(100, 100), c(100, 100))
-} # }
+#> [1] 20000
 ```

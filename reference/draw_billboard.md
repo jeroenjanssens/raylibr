@@ -39,6 +39,10 @@ definition:
 
 ## See also
 
+Other billboard functions:
+[`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
+[`draw_billboard_rec()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_rec.md)
+
 Other draw functions:
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
 [`draw_billboard_rec()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_rec.md),
@@ -135,7 +139,7 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 draw_billboard(camera_3d(c(0, 10, 10)), load_texture("file.png"), c(0, 5, 0), 1.0, "red")
-} # }
+}
 ```

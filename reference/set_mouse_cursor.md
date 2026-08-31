@@ -27,7 +27,24 @@ Other cursor functions:
 [`disable_cursor()`](https://jeroenjanssens.github.io/raylibr/reference/disable_cursor.md),
 [`enable_cursor()`](https://jeroenjanssens.github.io/raylibr/reference/enable_cursor.md),
 [`hide_cursor()`](https://jeroenjanssens.github.io/raylibr/reference/hide_cursor.md),
+[`is_cursor_hidden()`](https://jeroenjanssens.github.io/raylibr/reference/is_cursor_hidden.md),
+[`is_cursor_on_screen()`](https://jeroenjanssens.github.io/raylibr/reference/is_cursor_on_screen.md),
 [`show_cursor()`](https://jeroenjanssens.github.io/raylibr/reference/show_cursor.md)
+
+Other mouse functions:
+[`get_mouse_delta()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_delta.md),
+[`get_mouse_position()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_position.md),
+[`get_mouse_wheel_move()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_wheel_move.md),
+[`get_mouse_wheel_move_v()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_wheel_move_v.md),
+[`get_mouse_x()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_x.md),
+[`get_mouse_y()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_y.md),
+[`is_mouse_button_down()`](https://jeroenjanssens.github.io/raylibr/reference/is_mouse_button_down.md),
+[`is_mouse_button_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/is_mouse_button_pressed.md),
+[`is_mouse_button_released()`](https://jeroenjanssens.github.io/raylibr/reference/is_mouse_button_released.md),
+[`is_mouse_button_up()`](https://jeroenjanssens.github.io/raylibr/reference/is_mouse_button_up.md),
+[`set_mouse_offset()`](https://jeroenjanssens.github.io/raylibr/reference/set_mouse_offset.md),
+[`set_mouse_position()`](https://jeroenjanssens.github.io/raylibr/reference/set_mouse_position.md),
+[`set_mouse_scale()`](https://jeroenjanssens.github.io/raylibr/reference/set_mouse_scale.md)
 
 Other set functions:
 [`set_audio_stream_buffer_size_default()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_buffer_size_default.md),
@@ -74,7 +91,7 @@ Other set functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 set_mouse_cursor(0L)
-} # }
+}
 ```

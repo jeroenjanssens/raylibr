@@ -41,7 +41,30 @@ Other valid functions:
 [`is_sound_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_sound_valid.md),
 [`is_wave_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_wave_valid.md)
 
+Other texture functions:
+[`begin_texture_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_texture_mode.md),
+[`draw_texture()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture.md),
+[`draw_texture_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_ex.md),
+[`draw_texture_n_patch()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_n_patch.md),
+[`draw_texture_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_pro.md),
+[`draw_texture_rec()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_rec.md),
+[`draw_texture_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_v.md),
+[`end_texture_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_texture_mode.md),
+[`get_shapes_texture()`](https://jeroenjanssens.github.io/raylibr/reference/get_shapes_texture.md),
+[`load_image_from_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_image_from_texture.md),
+[`load_render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_render_texture.md),
+[`load_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture.md),
+[`load_texture_from_image()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture_from_image.md),
+[`set_shader_value_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_shader_value_texture.md),
+[`set_shapes_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_shapes_texture.md),
+[`set_texture_filter()`](https://jeroenjanssens.github.io/raylibr/reference/set_texture_filter.md),
+[`set_texture_wrap()`](https://jeroenjanssens.github.io/raylibr/reference/set_texture_wrap.md),
+[`texture()`](https://jeroenjanssens.github.io/raylibr/reference/texture.md),
+[`unload_render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/unload_render_texture.md),
+[`unload_texture()`](https://jeroenjanssens.github.io/raylibr/reference/unload_texture.md)
+
 Other is functions:
+[`color_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/color_is_equal.md),
 [`is_audio_device_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_device_ready.md),
 [`is_audio_stream_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_playing.md),
 [`is_audio_stream_processed()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_processed.md),
@@ -86,12 +109,13 @@ Other is functions:
 [`is_window_minimized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_minimized.md),
 [`is_window_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_ready.md),
 [`is_window_resized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_resized.md),
-[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md)
+[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md),
+[`text_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/text_is_equal.md)
 
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 is_texture_valid(load_texture("file.png"))
-} # }
+}
 ```

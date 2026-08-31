@@ -59,6 +59,16 @@ Other lines functions:
 [`draw_ring_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_ring_lines.md),
 [`draw_triangle_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_lines.md)
 
+Other circle functions:
+[`check_collision_point_circle()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_point_circle.md),
+[`draw_circle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle.md),
+[`draw_circle_3d()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_3d.md),
+[`draw_circle_gradient()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_gradient.md),
+[`draw_circle_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_lines.md),
+[`draw_circle_lines_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_lines_v.md),
+[`draw_circle_sector()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_sector.md),
+[`draw_circle_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_v.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -155,7 +165,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_circle_sector_lines(c(100, 100), 50.0, 0.0, 0.0, 16L, "red")
-} # }
+raylibr_screenshot(function() draw_circle_sector_lines(c(200, 150), 80.0, 0.0, 270.0, 36L, "red"))
 ```

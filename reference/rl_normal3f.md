@@ -161,7 +161,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_normal3f(0.0, 0.0, 0.0)
-} # }
+}
 ```

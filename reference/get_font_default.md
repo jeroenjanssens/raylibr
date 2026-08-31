@@ -25,6 +25,14 @@ Other default functions:
 [`load_material_default()`](https://jeroenjanssens.github.io/raylibr/reference/load_material_default.md),
 [`set_audio_stream_buffer_size_default()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_buffer_size_default.md)
 
+Other font functions:
+[`export_font_as_code()`](https://jeroenjanssens.github.io/raylibr/reference/export_font_as_code.md),
+[`is_font_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_font_valid.md),
+[`load_font()`](https://jeroenjanssens.github.io/raylibr/reference/load_font.md),
+[`load_font_ex()`](https://jeroenjanssens.github.io/raylibr/reference/load_font_ex.md),
+[`load_font_from_image()`](https://jeroenjanssens.github.io/raylibr/reference/load_font_from_image.md),
+[`unload_font()`](https://jeroenjanssens.github.io/raylibr/reference/unload_font.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -123,7 +131,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_font_default()
-} # }
+}
 ```

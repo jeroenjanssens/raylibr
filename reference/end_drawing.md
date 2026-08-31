@@ -32,7 +32,7 @@ Other end functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 end_drawing()
-} # }
+}
 ```

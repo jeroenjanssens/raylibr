@@ -62,6 +62,12 @@ Other ex functions:
 [`measure_text_ex()`](https://jeroenjanssens.github.io/raylibr/reference/measure_text_ex.md),
 [`update_model_animation_ex()`](https://jeroenjanssens.github.io/raylibr/reference/update_model_animation_ex.md)
 
+Other cylinder functions:
+[`draw_cylinder()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cylinder.md),
+[`draw_cylinder_wires()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cylinder_wires.md),
+[`draw_cylinder_wires_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cylinder_wires_ex.md),
+[`gen_mesh_cylinder()`](https://jeroenjanssens.github.io/raylibr/reference/gen_mesh_cylinder.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -158,7 +164,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_cylinder_ex(c(0, 5, 0), c(0, 5, 0), 50.0, 50.0, 0L, "red")
-} # }
+raylibr_screenshot_3d(function() draw_cylinder_ex(c(-1, 0, 0), c(1, 0, 0), 1.0, 1.0, 16L, "red"))
 ```

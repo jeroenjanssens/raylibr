@@ -48,7 +48,6 @@ Other quaternion functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 quaternion_length(c(0, 0, 0, 1))
-} # }
+#> [1] 1
 ```

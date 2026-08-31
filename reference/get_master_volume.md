@@ -27,6 +27,9 @@ Other volume functions:
 [`set_music_volume()`](https://jeroenjanssens.github.io/raylibr/reference/set_music_volume.md),
 [`set_sound_volume()`](https://jeroenjanssens.github.io/raylibr/reference/set_sound_volume.md)
 
+Other master functions:
+[`set_master_volume()`](https://jeroenjanssens.github.io/raylibr/reference/set_master_volume.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -125,7 +128,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_master_volume()
-} # }
+}
 ```

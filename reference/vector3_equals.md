@@ -66,7 +66,6 @@ Other vector3 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector3_equals(c(0, 0, 0), c(0, 0, 0))
-} # }
+#> [1] 1
 ```

@@ -23,6 +23,13 @@ definition:
 
 ## See also
 
+Other frame functions:
+[`get_frame_time()`](https://jeroenjanssens.github.io/raylibr/reference/get_frame_time.md)
+
+Other automation functions:
+[`start_automation_event_recording()`](https://jeroenjanssens.github.io/raylibr/reference/start_automation_event_recording.md),
+[`stop_automation_event_recording()`](https://jeroenjanssens.github.io/raylibr/reference/stop_automation_event_recording.md)
+
 Other set functions:
 [`set_audio_stream_buffer_size_default()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_buffer_size_default.md),
 [`set_audio_stream_pan()`](https://jeroenjanssens.github.io/raylibr/reference/set_audio_stream_pan.md),
@@ -68,7 +75,7 @@ Other set functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 set_automation_event_base_frame(0L)
-} # }
+}
 ```

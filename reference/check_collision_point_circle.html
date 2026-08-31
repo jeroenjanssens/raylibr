@@ -20,6 +20,7 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Guides</h6></li>
+    <li><a class="dropdown-item" href="../articles/screenshot.html">Screenshot</a></li>
     <li><a class="dropdown-item" href="../articles/wasm.html">Compiling raylibr to WebAssembly</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Demos</h6></li>
@@ -88,7 +89,26 @@
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other circle functions:
-<code><a href="draw_circle.html">draw_circle()</a></code></p>
+<code><a href="draw_circle.html">draw_circle()</a></code>,
+<code><a href="draw_circle_3d.html">draw_circle_3d()</a></code>,
+<code><a href="draw_circle_gradient.html">draw_circle_gradient()</a></code>,
+<code><a href="draw_circle_lines.html">draw_circle_lines()</a></code>,
+<code><a href="draw_circle_lines_v.html">draw_circle_lines_v()</a></code>,
+<code><a href="draw_circle_sector.html">draw_circle_sector()</a></code>,
+<code><a href="draw_circle_sector_lines.html">draw_circle_sector_lines()</a></code>,
+<code><a href="draw_circle_v.html">draw_circle_v()</a></code></p>
+<p>Other collision functions:
+<code><a href="check_collision_box_sphere.html">check_collision_box_sphere()</a></code>,
+<code><a href="check_collision_boxes.html">check_collision_boxes()</a></code>,
+<code><a href="check_collision_circle_line.html">check_collision_circle_line()</a></code>,
+<code><a href="check_collision_circle_rec.html">check_collision_circle_rec()</a></code>,
+<code><a href="check_collision_circles.html">check_collision_circles()</a></code>,
+<code><a href="check_collision_point_line.html">check_collision_point_line()</a></code>,
+<code><a href="check_collision_point_rec.html">check_collision_point_rec()</a></code>,
+<code><a href="check_collision_point_triangle.html">check_collision_point_triangle()</a></code>,
+<code><a href="check_collision_recs.html">check_collision_recs()</a></code>,
+<code><a href="check_collision_spheres.html">check_collision_spheres()</a></code>,
+<code><a href="get_collision_rec.html">get_collision_rec()</a></code></p>
 <p>Other check functions:
 <code><a href="check_collision_box_sphere.html">check_collision_box_sphere()</a></code>,
 <code><a href="check_collision_boxes.html">check_collision_boxes()</a></code>,
@@ -104,9 +124,8 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
-<span class="r-in"><span><span class="fu">check_collision_point_circle</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">100</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">100</span><span class="op">)</span>, <span class="fl">50.0</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">check_collision_point_circle</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">100</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">100</span><span class="op">)</span>, <span class="fl">50.0</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>

@@ -55,7 +55,6 @@ Other vector2 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector2_length(c(100, 100))
-} # }
+#> [1] 141.4214
 ```

@@ -130,7 +130,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_plane(c(0, 5, 0), c(100, 100), "red")
-} # }
+raylibr_screenshot_3d(function() draw_plane(c(0, 0, 0), c(4, 4), "red"))
 ```

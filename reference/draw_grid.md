@@ -123,7 +123,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_grid(16L, 1.0)
-} # }
+raylibr_screenshot_3d(function() draw_grid(16L, 1.0))
 ```

@@ -24,6 +24,21 @@ definition:
 Other y functions:
 [`get_touch_y()`](https://jeroenjanssens.github.io/raylibr/reference/get_touch_y.md)
 
+Other mouse functions:
+[`get_mouse_delta()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_delta.md),
+[`get_mouse_position()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_position.md),
+[`get_mouse_wheel_move()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_wheel_move.md),
+[`get_mouse_wheel_move_v()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_wheel_move_v.md),
+[`get_mouse_x()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_x.md),
+[`is_mouse_button_down()`](https://jeroenjanssens.github.io/raylibr/reference/is_mouse_button_down.md),
+[`is_mouse_button_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/is_mouse_button_pressed.md),
+[`is_mouse_button_released()`](https://jeroenjanssens.github.io/raylibr/reference/is_mouse_button_released.md),
+[`is_mouse_button_up()`](https://jeroenjanssens.github.io/raylibr/reference/is_mouse_button_up.md),
+[`set_mouse_cursor()`](https://jeroenjanssens.github.io/raylibr/reference/set_mouse_cursor.md),
+[`set_mouse_offset()`](https://jeroenjanssens.github.io/raylibr/reference/set_mouse_offset.md),
+[`set_mouse_position()`](https://jeroenjanssens.github.io/raylibr/reference/set_mouse_position.md),
+[`set_mouse_scale()`](https://jeroenjanssens.github.io/raylibr/reference/set_mouse_scale.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -122,7 +137,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_mouse_y()
-} # }
+}
 ```

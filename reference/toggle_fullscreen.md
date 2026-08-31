@@ -24,7 +24,7 @@ Other fullscreen functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 toggle_fullscreen()
-} # }
+}
 ```

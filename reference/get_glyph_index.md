@@ -36,6 +36,10 @@ Other index functions:
 [`file_text_find_index()`](https://jeroenjanssens.github.io/raylibr/reference/file_text_find_index.md),
 [`text_find_index()`](https://jeroenjanssens.github.io/raylibr/reference/text_find_index.md)
 
+Other glyph functions:
+[`get_glyph_atlas_rec()`](https://jeroenjanssens.github.io/raylibr/reference/get_glyph_atlas_rec.md),
+[`get_glyph_info()`](https://jeroenjanssens.github.io/raylibr/reference/get_glyph_info.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -134,7 +138,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_glyph_index(get_font_default(), 0L)
-} # }
+}
 ```

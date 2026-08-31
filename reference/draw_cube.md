@@ -40,6 +40,9 @@ definition:
 ## See also
 
 Other cube functions:
+[`draw_cube_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cube_v.md),
+[`draw_cube_wires()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cube_wires.md),
+[`draw_cube_wires_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cube_wires_v.md),
 [`gen_mesh_cube()`](https://jeroenjanssens.github.io/raylibr/reference/gen_mesh_cube.md)
 
 Other draw functions:
@@ -138,7 +141,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_cube(c(0, 5, 0), 200.0, 100.0, 100.0, "red")
-} # }
+raylibr_screenshot_3d(function() draw_cube(c(0, 0, 0), 2.0, 2.0, 2.0, "red"))
 ```

@@ -31,7 +31,7 @@ Other time functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 wait_time(0.0)
-} # }
+}
 ```

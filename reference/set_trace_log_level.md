@@ -68,7 +68,7 @@ Other set functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 set_trace_log_level(0L)
-} # }
+}
 ```

@@ -21,8 +21,6 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-f <- get_font_default()
-is_font(f)
-} # }
+is_font("not a font")
+#> [1] FALSE
 ```

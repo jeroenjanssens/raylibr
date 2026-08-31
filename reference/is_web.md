@@ -15,7 +15,6 @@ Logical
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 is_web()
-} # }
+#> [1] FALSE
 ```

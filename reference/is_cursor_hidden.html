@@ -20,6 +20,7 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Guides</h6></li>
+    <li><a class="dropdown-item" href="../articles/screenshot.html">Screenshot</a></li>
     <li><a class="dropdown-item" href="../articles/wasm.html">Compiling raylibr to WebAssembly</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Demos</h6></li>
@@ -73,7 +74,15 @@
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other hidden functions:
 <code><a href="is_window_hidden.html">is_window_hidden()</a></code></p>
+<p>Other cursor functions:
+<code><a href="disable_cursor.html">disable_cursor()</a></code>,
+<code><a href="enable_cursor.html">enable_cursor()</a></code>,
+<code><a href="hide_cursor.html">hide_cursor()</a></code>,
+<code><a href="is_cursor_on_screen.html">is_cursor_on_screen()</a></code>,
+<code><a href="set_mouse_cursor.html">set_mouse_cursor()</a></code>,
+<code><a href="show_cursor.html">show_cursor()</a></code></p>
 <p>Other is functions:
+<code><a href="color_is_equal.html">color_is_equal()</a></code>,
 <code><a href="is_audio_device_ready.html">is_audio_device_ready()</a></code>,
 <code><a href="is_audio_stream_playing.html">is_audio_stream_playing()</a></code>,
 <code><a href="is_audio_stream_processed.html">is_audio_stream_processed()</a></code>,
@@ -118,15 +127,15 @@
 <code><a href="is_window_minimized.html">is_window_minimized()</a></code>,
 <code><a href="is_window_ready.html">is_window_ready()</a></code>,
 <code><a href="is_window_resized.html">is_window_resized()</a></code>,
-<code><a href="is_window_state.html">is_window_state()</a></code></p></div>
+<code><a href="is_window_state.html">is_window_state()</a></code>,
+<code><a href="text_is_equal.html">text_is_equal()</a></code></p></div>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="fu">is_cursor_hidden</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

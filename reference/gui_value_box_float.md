@@ -95,7 +95,7 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 gui_value_box_float(rectangle(10, 10, 100, 30), "Value:", "0.0", 0.0, FALSE)
-} # }
+}
 ```

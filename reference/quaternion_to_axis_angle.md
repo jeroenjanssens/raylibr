@@ -49,9 +49,10 @@ Other quaternion functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 result <- quaternion_to_axis_angle(c(0, 0, 0, 1))
 result$axis
+#> x y z 
+#> 1 0 0 
 result$angle
-} # }
+#> [1] 0
 ```

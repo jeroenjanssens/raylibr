@@ -20,6 +20,7 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Guides</h6></li>
+    <li><a class="dropdown-item" href="../articles/screenshot.html">Screenshot</a></li>
     <li><a class="dropdown-item" href="../articles/wasm.html">Compiling raylibr to WebAssembly</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Demos</h6></li>
@@ -85,6 +86,20 @@
 <code><a href="get_touch_position.html">get_touch_position()</a></code>,
 <code><a href="get_window_position.html">get_window_position()</a></code>,
 <code><a href="set_window_position.html">set_window_position()</a></code></p>
+<p>Other mouse functions:
+<code><a href="get_mouse_delta.html">get_mouse_delta()</a></code>,
+<code><a href="get_mouse_position.html">get_mouse_position()</a></code>,
+<code><a href="get_mouse_wheel_move.html">get_mouse_wheel_move()</a></code>,
+<code><a href="get_mouse_wheel_move_v.html">get_mouse_wheel_move_v()</a></code>,
+<code><a href="get_mouse_x.html">get_mouse_x()</a></code>,
+<code><a href="get_mouse_y.html">get_mouse_y()</a></code>,
+<code><a href="is_mouse_button_down.html">is_mouse_button_down()</a></code>,
+<code><a href="is_mouse_button_pressed.html">is_mouse_button_pressed()</a></code>,
+<code><a href="is_mouse_button_released.html">is_mouse_button_released()</a></code>,
+<code><a href="is_mouse_button_up.html">is_mouse_button_up()</a></code>,
+<code><a href="set_mouse_cursor.html">set_mouse_cursor()</a></code>,
+<code><a href="set_mouse_offset.html">set_mouse_offset()</a></code>,
+<code><a href="set_mouse_scale.html">set_mouse_scale()</a></code></p>
 <p>Other set functions:
 <code><a href="set_audio_stream_buffer_size_default.html">set_audio_stream_buffer_size_default()</a></code>,
 <code><a href="set_audio_stream_pan.html">set_audio_stream_pan()</a></code>,
@@ -130,10 +145,9 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="fu">set_mouse_position</span><span class="op">(</span><span class="fl">100L</span>, <span class="fl">100L</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

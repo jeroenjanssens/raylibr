@@ -24,9 +24,10 @@ An object of class `list` of length 3.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_text_wrap_mode$none
+#> [1] 0
 gui_text_wrap_mode$char
+#> [1] 1
 gui_text_wrap_mode$word
-} # }
+#> [1] 2
 ```

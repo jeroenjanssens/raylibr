@@ -40,7 +40,7 @@ Other vector4 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector4_zero()
-} # }
+#> x y z w 
+#> 0 0 0 0 
 ```

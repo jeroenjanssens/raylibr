@@ -20,10 +20,13 @@ definition:
 Other waiting functions:
 [`disable_event_waiting()`](https://jeroenjanssens.github.io/raylibr/reference/disable_event_waiting.md)
 
+Other event functions:
+[`disable_event_waiting()`](https://jeroenjanssens.github.io/raylibr/reference/disable_event_waiting.md)
+
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 enable_event_waiting()
-} # }
+}
 ```

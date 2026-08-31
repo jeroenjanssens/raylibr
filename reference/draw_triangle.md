@@ -37,6 +37,8 @@ definition:
 
 Other triangle functions:
 [`check_collision_point_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_point_triangle.md),
+[`draw_triangle_3d()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_3d.md),
+[`draw_triangle_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_lines.md),
 [`get_ray_collision_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_triangle.md)
 
 Other draw functions:
@@ -135,7 +137,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_triangle(c(100, 100), c(100, 100), c(100, 100), "red")
-} # }
+raylibr_screenshot(function() draw_triangle(c(200, 50), c(100, 250), c(300, 250), "red"))
 ```

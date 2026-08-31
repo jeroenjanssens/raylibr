@@ -23,8 +23,8 @@ An object of class `list` of length 2.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_value_box_property$spinner_button_width
+#> [1] 16
 gui_value_box_property$spinner_button_spacing
-} # }
+#> [1] 17
 ```

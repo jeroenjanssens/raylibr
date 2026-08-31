@@ -82,7 +82,7 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 gui_get_style(0L, 0L)
-} # }
+}
 ```

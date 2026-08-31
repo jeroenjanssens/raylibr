@@ -26,6 +26,12 @@ Other width functions:
 [`get_monitor_width()`](https://jeroenjanssens.github.io/raylibr/reference/get_monitor_width.md),
 [`get_screen_width()`](https://jeroenjanssens.github.io/raylibr/reference/get_screen_width.md)
 
+Other render functions:
+[`get_render_height()`](https://jeroenjanssens.github.io/raylibr/reference/get_render_height.md),
+[`is_render_texture_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_render_texture_valid.md),
+[`load_render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_render_texture.md),
+[`unload_render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/unload_render_texture.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -124,7 +130,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_render_width()
-} # }
+}
 ```

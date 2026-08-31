@@ -52,10 +52,14 @@ Other matrix functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 result <- matrix_decompose(diag(4))
 result$translation
+#> x y z 
+#> 0 0 0 
 result$rotation
+#> x y z w 
+#> 0 0 0 1 
 result$scale
-} # }
+#> x y z 
+#> 1 1 1 
 ```

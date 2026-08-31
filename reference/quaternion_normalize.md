@@ -48,7 +48,7 @@ Other quaternion functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 quaternion_normalize(c(0, 0, 0, 1))
-} # }
+#> x y z w 
+#> 0 0 0 1 
 ```

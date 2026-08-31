@@ -28,7 +28,8 @@ definition:
 ## See also
 
 Other path functions:
-[`get_directory_path()`](https://jeroenjanssens.github.io/raylibr/reference/get_directory_path.md)
+[`get_directory_path()`](https://jeroenjanssens.github.io/raylibr/reference/get_directory_path.md),
+[`is_path_file()`](https://jeroenjanssens.github.io/raylibr/reference/is_path_file.md)
 
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
@@ -128,7 +129,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 get_prev_directory_path("file.png")
-} # }
+}
 ```

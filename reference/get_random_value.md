@@ -31,6 +31,9 @@ definition:
 
 ## See also
 
+Other random functions:
+[`set_random_seed()`](https://jeroenjanssens.github.io/raylibr/reference/set_random_seed.md)
+
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_camera_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_matrix.md),
@@ -129,7 +132,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 get_random_value(0L, 0L)
-} # }
+#> [1] 0
 ```

@@ -90,7 +90,7 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 gui_draw_icon(0L, 100L, 100L, 32L, "red")
-} # }
+}
 ```

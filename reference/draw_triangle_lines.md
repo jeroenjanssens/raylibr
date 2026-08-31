@@ -44,6 +44,12 @@ Other lines functions:
 [`draw_rectangle_rounded_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_rounded_lines.md),
 [`draw_ring_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_ring_lines.md)
 
+Other triangle functions:
+[`check_collision_point_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_point_triangle.md),
+[`draw_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle.md),
+[`draw_triangle_3d()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_3d.md),
+[`get_ray_collision_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_triangle.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -140,7 +146,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_triangle_lines(c(100, 100), c(100, 100), c(100, 100), "red")
-} # }
+raylibr_screenshot(function() draw_triangle_lines(c(200, 50), c(100, 250), c(300, 250), "red"))
 ```

@@ -56,7 +56,7 @@ Other quaternion functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 quaternion_from_euler(1.0, 0.0, 0.0)
-} # }
+#>         x         y         z         w 
+#> 0.4794255 0.0000000 0.0000000 0.8775826 
 ```

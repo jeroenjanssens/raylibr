@@ -25,14 +25,16 @@ set_material_texture(material, map_type, texture)
 ## See also
 
 Other material functions:
+[`is_material_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_material_valid.md),
+[`load_material_default()`](https://jeroenjanssens.github.io/raylibr/reference/load_material_default.md),
 [`unload_material()`](https://jeroenjanssens.github.io/raylibr/reference/unload_material.md)
 
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 mat <- load_material_default()
 tex <- load_texture("texture.png")
 set_material_texture(mat, material_map_index$albedo, tex)
-} # }
+}
 ```

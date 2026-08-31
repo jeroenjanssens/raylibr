@@ -95,7 +95,7 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 gui_grid(rectangle(10, 10, 200, 100), "Hello", 1.0, 0L, c(100, 100))
-} # }
+}
 ```

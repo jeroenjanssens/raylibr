@@ -45,6 +45,12 @@ Other wires functions:
 [`draw_model_wires()`](https://jeroenjanssens.github.io/raylibr/reference/draw_model_wires.md),
 [`draw_sphere_wires()`](https://jeroenjanssens.github.io/raylibr/reference/draw_sphere_wires.md)
 
+Other cube functions:
+[`draw_cube()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cube.md),
+[`draw_cube_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cube_v.md),
+[`draw_cube_wires_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cube_wires_v.md),
+[`gen_mesh_cube()`](https://jeroenjanssens.github.io/raylibr/reference/gen_mesh_cube.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -141,7 +147,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_cube_wires(c(0, 5, 0), 200.0, 100.0, 100.0, "red")
-} # }
+raylibr_screenshot_3d(function() draw_cube_wires(c(0, 0, 0), 2.0, 2.0, 2.0, "red"))
 ```

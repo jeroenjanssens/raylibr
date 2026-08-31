@@ -34,7 +34,7 @@ Other copy functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 image_copy(gen_image_color(100, 100, "blue"))
-} # }
+}
 ```

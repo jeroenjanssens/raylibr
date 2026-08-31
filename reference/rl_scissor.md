@@ -165,7 +165,7 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 rl_scissor(100L, 100L, 800L, 450L)
-} # }
+}
 ```

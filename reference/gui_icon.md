@@ -278,9 +278,10 @@ An object of class `list` of length 257.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_icon$none
+#> [1] 0
 gui_icon$cross_small
+#> [1] 128
 gui_icon$filetype_icon
-} # }
+#> [1] 256
 ```

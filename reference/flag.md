@@ -37,9 +37,10 @@ An object of class `list` of length 16.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 flag$vsync_hint
+#> [1] 64
 flag$window_unfocused
+#> [1] 2048
 flag$interlaced_hint
-} # }
+#> [1] 65536
 ```

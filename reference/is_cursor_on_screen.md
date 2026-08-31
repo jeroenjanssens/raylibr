@@ -22,10 +22,25 @@ definition:
 ## See also
 
 Other screen functions:
+[`get_screen_height()`](https://jeroenjanssens.github.io/raylibr/reference/get_screen_height.md),
+[`get_screen_to_world_2d()`](https://jeroenjanssens.github.io/raylibr/reference/get_screen_to_world_2d.md),
+[`get_screen_to_world_ray()`](https://jeroenjanssens.github.io/raylibr/reference/get_screen_to_world_ray.md),
+[`get_screen_to_world_ray_ex()`](https://jeroenjanssens.github.io/raylibr/reference/get_screen_to_world_ray_ex.md),
+[`get_screen_width()`](https://jeroenjanssens.github.io/raylibr/reference/get_screen_width.md),
 [`get_world_to_screen()`](https://jeroenjanssens.github.io/raylibr/reference/get_world_to_screen.md),
-[`load_image_from_screen()`](https://jeroenjanssens.github.io/raylibr/reference/load_image_from_screen.md)
+[`load_image_from_screen()`](https://jeroenjanssens.github.io/raylibr/reference/load_image_from_screen.md),
+[`swap_screen_buffer()`](https://jeroenjanssens.github.io/raylibr/reference/swap_screen_buffer.md)
+
+Other cursor functions:
+[`disable_cursor()`](https://jeroenjanssens.github.io/raylibr/reference/disable_cursor.md),
+[`enable_cursor()`](https://jeroenjanssens.github.io/raylibr/reference/enable_cursor.md),
+[`hide_cursor()`](https://jeroenjanssens.github.io/raylibr/reference/hide_cursor.md),
+[`is_cursor_hidden()`](https://jeroenjanssens.github.io/raylibr/reference/is_cursor_hidden.md),
+[`set_mouse_cursor()`](https://jeroenjanssens.github.io/raylibr/reference/set_mouse_cursor.md),
+[`show_cursor()`](https://jeroenjanssens.github.io/raylibr/reference/show_cursor.md)
 
 Other is functions:
+[`color_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/color_is_equal.md),
 [`is_audio_device_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_device_ready.md),
 [`is_audio_stream_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_playing.md),
 [`is_audio_stream_processed()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_processed.md),
@@ -70,12 +85,13 @@ Other is functions:
 [`is_window_minimized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_minimized.md),
 [`is_window_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_ready.md),
 [`is_window_resized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_resized.md),
-[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md)
+[`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md),
+[`text_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/text_is_equal.md)
 
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 is_cursor_on_screen()
-} # }
+}
 ```

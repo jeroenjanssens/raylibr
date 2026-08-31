@@ -24,6 +24,12 @@ definition:
 ## See also
 
 Other config functions:
+[`load_vr_stereo_config()`](https://jeroenjanssens.github.io/raylibr/reference/load_vr_stereo_config.md),
+[`set_config_flags()`](https://jeroenjanssens.github.io/raylibr/reference/set_config_flags.md)
+
+Other vr functions:
+[`begin_vr_stereo_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_vr_stereo_mode.md),
+[`end_vr_stereo_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_vr_stereo_mode.md),
 [`load_vr_stereo_config()`](https://jeroenjanssens.github.io/raylibr/reference/load_vr_stereo_config.md)
 
 Other unload functions:
@@ -44,7 +50,7 @@ Other unload functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 unload_vr_stereo_config(config)
-} # }
+}
 ```

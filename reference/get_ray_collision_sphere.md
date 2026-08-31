@@ -38,8 +38,19 @@ definition:
 Other sphere functions:
 [`check_collision_box_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_box_sphere.md),
 [`draw_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/draw_sphere.md),
+[`draw_sphere_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_sphere_ex.md),
+[`draw_sphere_wires()`](https://jeroenjanssens.github.io/raylibr/reference/draw_sphere_wires.md),
 [`gen_mesh_hemi_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/gen_mesh_hemi_sphere.md),
 [`gen_mesh_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/gen_mesh_sphere.md)
+
+Other ray functions:
+[`draw_ray()`](https://jeroenjanssens.github.io/raylibr/reference/draw_ray.md),
+[`get_ray_collision_box()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_box.md),
+[`get_ray_collision_mesh()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_mesh.md),
+[`get_ray_collision_quad()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_quad.md),
+[`get_ray_collision_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_triangle.md),
+[`get_screen_to_world_ray()`](https://jeroenjanssens.github.io/raylibr/reference/get_screen_to_world_ray.md),
+[`ray()`](https://jeroenjanssens.github.io/raylibr/reference/ray.md)
 
 Other get functions:
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
@@ -139,7 +150,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 get_ray_collision_sphere(ray(c(0, 0, 0), c(0, 0, 1)), c(0, 0, 0), 50.0)
-} # }
+#> ray_collision(hit = TRUE, distance = 50, point = 0, 0, 50, normal = 0, 0, -1) 
 ```

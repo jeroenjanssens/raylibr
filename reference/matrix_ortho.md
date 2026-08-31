@@ -69,7 +69,10 @@ Other matrix functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 matrix_ortho(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
-} # }
+#>      [,1] [,2] [,3] [,4]
+#> [1,]  Inf    0    0  NaN
+#> [2,]    0  Inf    0  NaN
+#> [3,]    0    0 -Inf  NaN
+#> [4,]    0    0    0    1
 ```

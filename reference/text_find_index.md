@@ -38,7 +38,7 @@ Other index functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 text_find_index("Hello", "text")
-} # }
+}
 ```

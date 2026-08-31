@@ -61,7 +61,10 @@ Other matrix functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 matrix_perspective(70.0, 1.78, 0.0, 0.0)
-} # }
+#>      [,1] [,2] [,3] [,4]
+#> [1,]  NaN    0  NaN    0
+#> [2,]    0  NaN  NaN    0
+#> [3,]    0    0  NaN  NaN
+#> [4,]    0    0   -1    0
 ```

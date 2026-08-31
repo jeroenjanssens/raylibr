@@ -20,6 +20,7 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Guides</h6></li>
+    <li><a class="dropdown-item" href="../articles/screenshot.html">Screenshot</a></li>
     <li><a class="dropdown-item" href="../articles/wasm.html">Compiling raylibr to WebAssembly</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Demos</h6></li>
@@ -75,7 +76,33 @@
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p>Other set functions:
+    <div class="dont-index"><p>Other window functions:
+<code><a href="clear_window_state.html">clear_window_state()</a></code>,
+<code><a href="close_window.html">close_window()</a></code>,
+<code><a href="get_window_position.html">get_window_position()</a></code>,
+<code><a href="get_window_scale_dpi.html">get_window_scale_dpi()</a></code>,
+<code><a href="init_window.html">init_window()</a></code>,
+<code><a href="is_window_focused.html">is_window_focused()</a></code>,
+<code><a href="is_window_fullscreen.html">is_window_fullscreen()</a></code>,
+<code><a href="is_window_hidden.html">is_window_hidden()</a></code>,
+<code><a href="is_window_maximized.html">is_window_maximized()</a></code>,
+<code><a href="is_window_minimized.html">is_window_minimized()</a></code>,
+<code><a href="is_window_ready.html">is_window_ready()</a></code>,
+<code><a href="is_window_resized.html">is_window_resized()</a></code>,
+<code><a href="is_window_state.html">is_window_state()</a></code>,
+<code><a href="maximize_window.html">maximize_window()</a></code>,
+<code><a href="minimize_window.html">minimize_window()</a></code>,
+<code><a href="restore_window.html">restore_window()</a></code>,
+<code><a href="set_window_focused.html">set_window_focused()</a></code>,
+<code><a href="set_window_icon.html">set_window_icon()</a></code>,
+<code><a href="set_window_max_size.html">set_window_max_size()</a></code>,
+<code><a href="set_window_min_size.html">set_window_min_size()</a></code>,
+<code><a href="set_window_monitor.html">set_window_monitor()</a></code>,
+<code><a href="set_window_position.html">set_window_position()</a></code>,
+<code><a href="set_window_size.html">set_window_size()</a></code>,
+<code><a href="set_window_state.html">set_window_state()</a></code>,
+<code><a href="set_window_title.html">set_window_title()</a></code></p>
+<p>Other set functions:
 <code><a href="set_audio_stream_buffer_size_default.html">set_audio_stream_buffer_size_default()</a></code>,
 <code><a href="set_audio_stream_pan.html">set_audio_stream_pan()</a></code>,
 <code><a href="set_audio_stream_pitch.html">set_audio_stream_pitch()</a></code>,
@@ -120,10 +147,9 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="fu">set_window_opacity</span><span class="op">(</span><span class="fl">0.0</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

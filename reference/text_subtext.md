@@ -36,7 +36,7 @@ definition:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 text_subtext("Hello", 0L, 0L)
-} # }
+}
 ```

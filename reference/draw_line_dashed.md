@@ -39,6 +39,15 @@ definition:
 
 ## See also
 
+Other line functions:
+[`check_collision_circle_line()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_circle_line.md),
+[`check_collision_point_line()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_point_line.md),
+[`draw_line()`](https://jeroenjanssens.github.io/raylibr/reference/draw_line.md),
+[`draw_line_3d()`](https://jeroenjanssens.github.io/raylibr/reference/draw_line_3d.md),
+[`draw_line_bezier()`](https://jeroenjanssens.github.io/raylibr/reference/draw_line_bezier.md),
+[`draw_line_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_line_ex.md),
+[`draw_line_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_line_v.md)
+
 Other draw functions:
 [`draw_billboard()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard.md),
 [`draw_billboard_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_billboard_pro.md),
@@ -135,7 +144,5 @@ Other draw functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-draw_line_dashed(c(100, 100), c(100, 100), 32L, 32L, "red")
-} # }
+raylibr_screenshot(function() draw_line_dashed(c(200, 150), c(200, 150), 0L, 0L, "red"))
 ```

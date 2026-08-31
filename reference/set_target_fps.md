@@ -72,7 +72,7 @@ Other set functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 set_target_fps(60L)
-} # }
+}
 ```

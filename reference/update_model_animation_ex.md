@@ -62,6 +62,21 @@ Other ex functions:
 [`image_text_ex()`](https://jeroenjanssens.github.io/raylibr/reference/image_text_ex.md),
 [`measure_text_ex()`](https://jeroenjanssens.github.io/raylibr/reference/measure_text_ex.md)
 
+Other model functions:
+[`draw_model()`](https://jeroenjanssens.github.io/raylibr/reference/draw_model.md),
+[`draw_model_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_model_ex.md),
+[`draw_model_wires()`](https://jeroenjanssens.github.io/raylibr/reference/draw_model_wires.md),
+[`draw_model_wires_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_model_wires_ex.md),
+[`get_model_bounding_box()`](https://jeroenjanssens.github.io/raylibr/reference/get_model_bounding_box.md),
+[`is_model_animation_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_model_animation_valid.md),
+[`is_model_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_model_valid.md),
+[`load_model()`](https://jeroenjanssens.github.io/raylibr/reference/load_model.md),
+[`load_model_from_mesh()`](https://jeroenjanssens.github.io/raylibr/reference/load_model_from_mesh.md),
+[`set_model_mesh_material()`](https://jeroenjanssens.github.io/raylibr/reference/set_model_mesh_material.md),
+[`set_model_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_model_texture.md),
+[`unload_model()`](https://jeroenjanssens.github.io/raylibr/reference/unload_model.md),
+[`update_model_animation()`](https://jeroenjanssens.github.io/raylibr/reference/update_model_animation.md)
+
 Other update functions:
 [`update_model_animation()`](https://jeroenjanssens.github.io/raylibr/reference/update_model_animation.md),
 [`update_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/update_music_stream.md)
@@ -69,7 +84,7 @@ Other update functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 update_model_animation_ex(load_model("model.obj"), anim, 0.0, anim, 0.0, 0.0)
-} # }
+}
 ```

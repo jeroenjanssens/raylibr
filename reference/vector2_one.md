@@ -49,7 +49,7 @@ Other vector2 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector2_one()
-} # }
+#> x y 
+#> 1 1 
 ```

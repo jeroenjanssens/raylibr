@@ -25,9 +25,10 @@ An object of class `list` of length 4.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 gui_state$normal
+#> [1] 0
 gui_state$focused
+#> [1] 1
 gui_state$disabled
-} # }
+#> [1] 3
 ```

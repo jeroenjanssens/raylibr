@@ -1011,6 +1011,10 @@
   : Set Exit Key
 - [`take_screenshot()`](https://jeroenjanssens.github.io/raylibr/reference/take_screenshot.md)
   : Take Screenshot
+- [`raylibr_screenshot()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_screenshot.md)
+  : Render a 2D scene to an image
+- [`raylibr_screenshot_3d()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_screenshot_3d.md)
+  : Render a 3D scene to an image
 - [`open_url()`](https://jeroenjanssens.github.io/raylibr/reference/open_url.md)
   : Open Url
 - [`set_random_seed()`](https://jeroenjanssens.github.io/raylibr/reference/set_random_seed.md)

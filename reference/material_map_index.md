@@ -32,9 +32,10 @@ An object of class `list` of length 11.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 material_map_index$albedo
+#> [1] 0
 material_map_index$emission
+#> [1] 5
 material_map_index$brdf
-} # }
+#> [1] 10
 ```

@@ -19,14 +19,22 @@ definition:
 
 Other mode functions:
 [`begin_blend_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_blend_mode.md),
+[`begin_mode_2d()`](https://jeroenjanssens.github.io/raylibr/reference/begin_mode_2d.md),
+[`begin_mode_3d()`](https://jeroenjanssens.github.io/raylibr/reference/begin_mode_3d.md),
 [`begin_scissor_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_scissor_mode.md),
 [`begin_shader_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_shader_mode.md),
 [`begin_texture_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_texture_mode.md),
 [`begin_vr_stereo_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_vr_stereo_mode.md),
+[`end_mode_2d()`](https://jeroenjanssens.github.io/raylibr/reference/end_mode_2d.md),
+[`end_mode_3d()`](https://jeroenjanssens.github.io/raylibr/reference/end_mode_3d.md),
 [`end_scissor_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_scissor_mode.md),
 [`end_shader_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_shader_mode.md),
 [`end_texture_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_texture_mode.md),
 [`end_vr_stereo_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_vr_stereo_mode.md)
+
+Other blend functions:
+[`begin_blend_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_blend_mode.md),
+[`color_alpha_blend()`](https://jeroenjanssens.github.io/raylibr/reference/color_alpha_blend.md)
 
 Other end functions:
 [`end_drawing()`](https://jeroenjanssens.github.io/raylibr/reference/end_drawing.md),
@@ -40,7 +48,7 @@ Other end functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 end_blend_mode()
-} # }
+}
 ```

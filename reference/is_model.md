@@ -21,8 +21,6 @@ A logical.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-m <- load_model("model.obj")
-is_model(m)
-} # }
+is_model("not a model")
+#> [1] FALSE
 ```

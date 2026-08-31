@@ -48,7 +48,10 @@ Other quaternion functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 quaternion_to_matrix(c(0, 0, 0, 1))
-} # }
+#>      [,1] [,2] [,3] [,4]
+#> [1,]    1    0    0    0
+#> [2,]    0    1    0    0
+#> [3,]    0    0    1    0
+#> [4,]    0    0    0    1
 ```

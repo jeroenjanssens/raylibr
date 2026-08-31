@@ -20,6 +20,7 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Guides</h6></li>
+    <li><a class="dropdown-item" href="../articles/screenshot.html">Screenshot</a></li>
     <li><a class="dropdown-item" href="../articles/wasm.html">Compiling raylibr to WebAssembly</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Demos</h6></li>
@@ -101,6 +102,22 @@
 <code><a href="unload_audio_stream.html">unload_audio_stream()</a></code>,
 <code><a href="unload_music_stream.html">unload_music_stream()</a></code>,
 <code><a href="update_music_stream.html">update_music_stream()</a></code></p>
+<p>Other audio functions:
+<code><a href="close_audio_device.html">close_audio_device()</a></code>,
+<code><a href="init_audio_device.html">init_audio_device()</a></code>,
+<code><a href="is_audio_device_ready.html">is_audio_device_ready()</a></code>,
+<code><a href="is_audio_stream_playing.html">is_audio_stream_playing()</a></code>,
+<code><a href="is_audio_stream_processed.html">is_audio_stream_processed()</a></code>,
+<code><a href="is_audio_stream_valid.html">is_audio_stream_valid()</a></code>,
+<code><a href="pause_audio_stream.html">pause_audio_stream()</a></code>,
+<code><a href="play_audio_stream.html">play_audio_stream()</a></code>,
+<code><a href="resume_audio_stream.html">resume_audio_stream()</a></code>,
+<code><a href="set_audio_stream_buffer_size_default.html">set_audio_stream_buffer_size_default()</a></code>,
+<code><a href="set_audio_stream_pan.html">set_audio_stream_pan()</a></code>,
+<code><a href="set_audio_stream_pitch.html">set_audio_stream_pitch()</a></code>,
+<code><a href="set_audio_stream_volume.html">set_audio_stream_volume()</a></code>,
+<code><a href="stop_audio_stream.html">stop_audio_stream()</a></code>,
+<code><a href="unload_audio_stream.html">unload_audio_stream()</a></code></p>
 <p>Other load functions:
 <code><a href="load_file_text.html">load_file_text()</a></code>,
 <code><a href="load_font.html">load_font()</a></code>,
@@ -127,10 +144,9 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="fu">load_audio_stream</span><span class="op">(</span><span class="fl">0L</span>, <span class="fl">32L</span>, <span class="fl">0L</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

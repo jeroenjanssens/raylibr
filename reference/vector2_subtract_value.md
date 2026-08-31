@@ -59,7 +59,7 @@ Other vector2 functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 vector2_subtract_value(c(100, 100), 0.0)
-} # }
+#>   x   y 
+#> 100 100 
 ```

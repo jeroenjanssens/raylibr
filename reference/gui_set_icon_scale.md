@@ -74,7 +74,7 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+if (FALSE) {
 gui_set_icon_scale(0L)
-} # }
+}
 ```
