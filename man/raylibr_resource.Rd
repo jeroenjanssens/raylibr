@@ -16,3 +16,9 @@ Full path to the resource file.
 Get the path to a file in the package's demo resources directory.
 Works correctly on both desktop and web (Emscripten virtual filesystem).
 }
+\examples{
+\dontrun{
+raylibr_resource("texture.png")
+}
+
+}

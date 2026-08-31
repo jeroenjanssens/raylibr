@@ -15,3 +15,10 @@ A logical.
 \description{
 Test if object is a vector of length 3
 }
+\examples{
+\dontrun{
+is_vector_3(c(1, 2, 3))
+is_vector_3(c(1, 2))
+}
+
+}

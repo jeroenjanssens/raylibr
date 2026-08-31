@@ -15,6 +15,14 @@ A list with elements \code{axis} (numeric vector of length 3) and \code{angle} (
 \description{
 Get the rotation angle and axis for a given quaternion.
 }
+\examples{
+\dontrun{
+result <- quaternion_to_axis_angle(c(0, 0, 0, 1))
+result$axis
+result$angle
+}
+
+}
 \seealso{
 Other quaternion functions: 
 \code{\link{quaternion_add}()},

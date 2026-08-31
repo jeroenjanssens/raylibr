@@ -16,6 +16,13 @@ draw_spline_basis(points, thick, color)
 \description{
 Draw spline: B-Spline, minimum 4 points.
 }
+\examples{
+\dontrun{
+pts <- matrix(c(50, 150, 250, 350, 100, 200, 50, 150), ncol = 2)
+draw_spline_basis(pts, 2.0, "blue")
+}
+
+}
 \seealso{
 Other draw functions: 
 \code{\link{draw_billboard}()},

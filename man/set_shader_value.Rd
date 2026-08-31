@@ -16,6 +16,15 @@ set_shader_value(shader, loc_index, value)
 \description{
 Set shader uniform value.
 }
+\examples{
+\dontrun{
+shader <- load_shader("", "shader.fs")
+loc <- get_shader_location(shader, "myUniform")
+set_shader_value(shader, loc, 1.0)
+set_shader_value(shader, loc, c(1.0, 0.0))
+}
+
+}
 \seealso{
 Other shader functions: 
 \code{\link{load_shader}()},

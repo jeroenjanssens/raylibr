@@ -14,6 +14,13 @@ draw_triangle_strip_3d(points, color)
 \description{
 Draw a triangle strip defined by points (3D version).
 }
+\examples{
+\dontrun{
+pts <- matrix(c(0, 1, 2, 3, 0, 1, 0, 1, 0, 0, 0, 0), ncol = 3)
+draw_triangle_strip_3d(pts, "red")
+}
+
+}
 \seealso{
 Other draw functions: 
 \code{\link{draw_billboard}()},

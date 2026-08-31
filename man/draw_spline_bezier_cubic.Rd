@@ -16,6 +16,13 @@ draw_spline_bezier_cubic(points, thick, color)
 \description{
 Draw spline: Cubic Bezier, minimum 4 points (2 control points).
 }
+\examples{
+\dontrun{
+pts <- matrix(c(50, 150, 250, 350, 100, 300, 300, 100), ncol = 2)
+draw_spline_bezier_cubic(pts, 2.0, "orange")
+}
+
+}
 \seealso{
 Other draw functions: 
 \code{\link{draw_billboard}()},

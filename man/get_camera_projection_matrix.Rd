@@ -17,6 +17,13 @@ A 4x4 numeric matrix.
 \description{
 Get camera projection matrix
 }
+\examples{
+\dontrun{
+cam <- camera_3d(c(0, 10, 10))
+get_camera_projection_matrix(cam, 800 / 450)
+}
+
+}
 \seealso{
 Other camera functions: 
 \code{\link{camera_move_forward}()},

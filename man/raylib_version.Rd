@@ -12,3 +12,9 @@ A string
 \description{
 Get the version of the Raylib library that is being used.
 }
+\examples{
+\dontrun{
+raylib_version()
+}
+
+}

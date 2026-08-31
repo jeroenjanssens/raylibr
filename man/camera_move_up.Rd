@@ -14,6 +14,13 @@ camera_move_up(camera, distance)
 \description{
 Move camera up
 }
+\examples{
+\dontrun{
+cam <- camera_3d(c(0, 10, 10))
+camera_move_up(cam, 1.0)
+}
+
+}
 \seealso{
 Other camera functions: 
 \code{\link{camera_move_forward}()},

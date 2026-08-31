@@ -16,6 +16,15 @@ draw_mesh_instanced(mesh, material, transforms)
 \description{
 Draw multiple mesh instances with material and different transforms.
 }
+\examples{
+\dontrun{
+mesh <- gen_mesh_cube(1.0, 1.0, 1.0)
+mat <- load_material_default()
+transforms <- list(diag(4), diag(4))
+draw_mesh_instanced(mesh, mat, transforms)
+}
+
+}
 \seealso{
 Other draw functions: 
 \code{\link{draw_billboard}()},

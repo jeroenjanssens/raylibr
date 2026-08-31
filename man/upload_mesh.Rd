@@ -14,6 +14,13 @@ upload_mesh(mesh, dynamic)
 \description{
 Upload mesh vertex data to GPU (VRAM). Modifies the mesh in place.
 }
+\examples{
+\dontrun{
+mesh <- gen_mesh_cube(1.0, 1.0, 1.0)
+upload_mesh(mesh, FALSE)
+}
+
+}
 \seealso{
 Other mesh functions: 
 \code{\link{draw_mesh}()},

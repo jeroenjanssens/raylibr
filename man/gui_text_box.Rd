@@ -21,6 +21,12 @@ A list with \code{result} (integer) and \code{text} (string).
 \description{
 Text box control, updates text string.
 }
+\examples{
+\dontrun{
+gui_text_box(rectangle(10, 10, 200, 30), "Hello", 64L, FALSE)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

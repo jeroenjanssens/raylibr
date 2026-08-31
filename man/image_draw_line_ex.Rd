@@ -20,6 +20,13 @@ image_draw_line_ex(dst, start, end, thick, color)
 \description{
 Draw line within an image (Vector version). Modifies the image in place.
 }
+\examples{
+\dontrun{
+img <- gen_image_color(100, 100, "white")
+image_draw_line_ex(img, c(0, 0), c(100, 100), 2L, "red")
+}
+
+}
 \seealso{
 Other image functions: 
 \code{\link{export_image}()},

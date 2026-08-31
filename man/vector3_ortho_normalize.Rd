@@ -17,6 +17,14 @@ A list with elements \code{v1} and \code{v2}, both numeric vectors of length 3.
 \description{
 Makes vectors normalized and orthogonal to each other.
 }
+\examples{
+\dontrun{
+result <- vector3_ortho_normalize(c(1, 0, 0), c(0, 1, 0))
+result$v1
+result$v2
+}
+
+}
 \seealso{
 Other vector3 functions: 
 \code{\link{vector3_add}()},

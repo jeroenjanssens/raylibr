@@ -16,6 +16,13 @@ draw_spline_catmull_rom(points, thick, color)
 \description{
 Draw spline: Catmull-Rom, minimum 4 points.
 }
+\examples{
+\dontrun{
+pts <- matrix(c(50, 150, 250, 350, 100, 200, 50, 150), ncol = 2)
+draw_spline_catmull_rom(pts, 2.0, "green")
+}
+
+}
 \seealso{
 Other draw functions: 
 \code{\link{draw_billboard}()},

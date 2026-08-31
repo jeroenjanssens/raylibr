@@ -16,6 +16,13 @@ set_model_mesh_material(model, mesh_id, material_id)
 \description{
 Set material for a mesh in a model. Modifies the model in place.
 }
+\examples{
+\dontrun{
+model <- load_model("model.obj")
+set_model_mesh_material(model, 0L, 0L)
+}
+
+}
 \seealso{
 Other model functions: 
 \code{\link{draw_model}()},

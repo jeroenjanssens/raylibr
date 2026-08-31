@@ -20,6 +20,13 @@ image_draw_triangle(dst, v1, v2, v3, color)
 \description{
 Draw triangle within an image. Modifies the image in place.
 }
+\examples{
+\dontrun{
+img <- gen_image_color(200, 200, "white")
+image_draw_triangle(img, c(100, 10), c(10, 190), c(190, 190), "blue")
+}
+
+}
 \seealso{
 Other image functions: 
 \code{\link{export_image}()},

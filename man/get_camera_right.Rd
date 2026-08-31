@@ -15,6 +15,13 @@ A numeric vector of length 3.
 \description{
 Get camera right vector
 }
+\examples{
+\dontrun{
+cam <- camera_3d(c(0, 10, 10))
+get_camera_right(cam)
+}
+
+}
 \seealso{
 Other camera functions: 
 \code{\link{camera_move_forward}()},

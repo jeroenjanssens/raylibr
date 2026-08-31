@@ -16,6 +16,14 @@ set_material_texture(material, map_type, texture)
 \description{
 Set texture for a material map type. Modifies the material in place.
 }
+\examples{
+\dontrun{
+mat <- load_material_default()
+tex <- load_texture("texture.png")
+set_material_texture(mat, material_map_index$albedo, tex)
+}
+
+}
 \seealso{
 Other material functions: 
 \code{\link{unload_material}()}

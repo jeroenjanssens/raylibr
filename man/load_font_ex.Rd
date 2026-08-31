@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Font LoadFontEx(const char *fileName, int fontSize, int *fontChars, int glyphCount);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+font <- load_font_ex("myfont.ttf", 32L)
+}
+
+}
 \seealso{
 Other font functions: 
 \code{\link{load_font}()},

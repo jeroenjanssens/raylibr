@@ -15,3 +15,9 @@ Character string result.
 \description{
 Evaluate JavaScript
 }
+\examples{
+\dontrun{
+eval_js("document.title")
+}
+
+}

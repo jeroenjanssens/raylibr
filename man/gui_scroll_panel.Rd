@@ -24,6 +24,16 @@ and \code{view} (rectangle).
 \description{
 Scroll panel control, returns scroll offset and view rectangle.
 }
+\examples{
+\dontrun{
+gui_scroll_panel(
+  rectangle(10, 10, 200, 200), "Panel",
+  rectangle(0, 0, 400, 400), c(0, 0),
+  rectangle(0, 0, 200, 200)
+)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

@@ -8,6 +8,14 @@
 #'
 #' @family shader functions
 #'
+#' @examples
+#' \dontrun{
+#' shader <- load_shader("", "shader.fs")
+#' loc <- get_shader_location(shader, "myUniform")
+#' set_shader_value(shader, loc, 1.0)
+#' set_shader_value(shader, loc, c(1.0, 0.0))
+#' }
+#'
 #' @export
 set_shader_value <- function(shader, loc_index, value) {
   if (!is_shader(shader)) abort(paste0('`shader` must be a shader, not ', friendly_typeof(shader), '.'), call = NULL)
@@ -44,6 +52,11 @@ set_shader_value <- function(shader, loc_index, value) {
 #'
 #' @family font functions
 #'
+#' @examples
+#' \dontrun{
+#' font <- load_font_ex("myfont.ttf", 32L)
+#' }
+#'
 #' @export
 load_font_ex <- function(file_name, font_size) {
   if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
@@ -56,6 +69,12 @@ load_font_ex <- function(file_name, font_size) {
 #' Get the version of the Raylib library that is being used.
 #'
 #' @return A string
+#'
+#' @examples
+#' \dontrun{
+#' raylib_version()
+#' }
+#'
 #' @export
 raylib_version <- function() {
   raylib_version_()
@@ -68,6 +87,13 @@ raylib_version <- function() {
 #'
 #' @param x A color name (string), hex integer, list, or color object.
 #' @return A color object.
+#'
+#' @examples
+#' \dontrun{
+#' as_color("red")
+#' as_color(list(r = 255, g = 0, b = 0, a = 255))
+#' }
+#'
 #' @export
 as_color <- function(x) {
   color_from_(x)
@@ -78,6 +104,12 @@ as_color <- function(x) {
 #' Returns TRUE when running under Emscripten/webR, FALSE otherwise.
 #'
 #' @return Logical
+#'
+#' @examples
+#' \dontrun{
+#' is_web()
+#' }
+#'
 #' @export
 is_web <- function() {
   is_web_()
@@ -87,6 +119,12 @@ is_web <- function() {
 #'
 #' @param script Character string of JavaScript to evaluate.
 #' @return Character string result.
+#'
+#' @examples
+#' \dontrun{
+#' eval_js("document.title")
+#' }
+#'
 #' @export
 eval_js <- function(script) {
   eval_js_(script)
@@ -103,6 +141,20 @@ eval_js <- function(script) {
 #' @param init_fn Optional function called once before the loop starts.
 #' @param cleanup_fn Optional function called after the loop ends
 #'   (e.g., to call \code{close_window()}).
+#'
+#' @examples
+#' \dontrun{
+#' run_game_loop(
+#'   update_fn = function() {
+#'     begin_drawing()
+#'     clear_background("white")
+#'     draw_text("Hello!", 100L, 100L, 20L, "black")
+#'     end_drawing()
+#'   },
+#'   init_fn = function() init_window(800L, 450L, "Game"),
+#'   cleanup_fn = function() close_window()
+#' )
+#' }
 #'
 #' @export
 run_game_loop <- function(update_fn, init_fn = NULL, cleanup_fn = NULL) {
@@ -124,6 +176,12 @@ run_game_loop <- function(update_fn, init_fn = NULL, cleanup_fn = NULL) {
 #'
 #' @param name File name (e.g., \code{"texture.png"}).
 #' @return Full path to the resource file.
+#'
+#' @examples
+#' \dontrun{
+#' raylibr_resource("texture.png")
+#' }
+#'
 #' @export
 raylibr_resource <- function(name) {
   system.file("demo_resources", name, package = "raylibr")
@@ -139,6 +197,12 @@ raylibr_resource <- function(name) {
 #' @param mode An integer. Camera mode (use camera_mode enum).
 #'
 #' @family camera functions
+#'
+#' @examples
+#' \dontrun{
+#' cam <- camera_3d(c(0, 10, 10))
+#' update_camera(cam, camera_mode$orbital)
+#' }
 #'
 #' @export
 update_camera <- function(camera, mode) {
@@ -158,6 +222,12 @@ update_camera <- function(camera, mode) {
 #' @param zoom A number.
 #'
 #' @family camera functions
+#'
+#' @examples
+#' \dontrun{
+#' cam <- camera_3d(c(0, 10, 10))
+#' update_camera_pro(cam, c(0, 0, 0), c(0, 0, 0), 1.0)
+#' }
 #'
 #' @export
 update_camera_pro <- function(camera, movement, rotation, zoom) {
@@ -180,6 +250,12 @@ update_camera_pro <- function(camera, movement, rotation, zoom) {
 #'
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' pts <- matrix(c(100, 200, 300, 100, 200, 300), ncol = 2)
+#' draw_line_strip(pts, "red")
+#' }
+#'
 #' @export
 draw_line_strip <- function(points, color) {
   if (!is.matrix(points) || ncol(points) != 2) abort('`points` must be a numeric matrix with 2 columns.', call = NULL)
@@ -195,6 +271,12 @@ draw_line_strip <- function(points, color) {
 #'
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' pts <- matrix(c(200, 250, 150, 250, 150, 200, 300, 300), ncol = 2)
+#' draw_triangle_fan(pts, "blue")
+#' }
+#'
 #' @export
 draw_triangle_fan <- function(points, color) {
   if (!is.matrix(points) || ncol(points) != 2) abort('`points` must be a numeric matrix with 2 columns.', call = NULL)
@@ -209,6 +291,12 @@ draw_triangle_fan <- function(points, color) {
 #' @param color A color.
 #'
 #' @family draw functions
+#'
+#' @examples
+#' \dontrun{
+#' pts <- matrix(c(100, 150, 200, 250, 100, 200, 100, 200), ncol = 2)
+#' draw_triangle_strip(pts, "green")
+#' }
 #'
 #' @export
 draw_triangle_strip <- function(points, color) {
@@ -226,6 +314,12 @@ draw_triangle_strip <- function(points, color) {
 #'
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' pts <- matrix(c(100, 200, 300, 100, 200, 100), ncol = 2)
+#' draw_spline_linear(pts, 2.0, "red")
+#' }
+#'
 #' @export
 draw_spline_linear <- function(points, thick, color) {
   if (!is.matrix(points) || ncol(points) != 2) abort('`points` must be a numeric matrix with 2 columns.', call = NULL)
@@ -241,6 +335,12 @@ draw_spline_linear <- function(points, thick, color) {
 #' @param color A color.
 #'
 #' @family draw functions
+#'
+#' @examples
+#' \dontrun{
+#' pts <- matrix(c(50, 150, 250, 350, 100, 200, 50, 150), ncol = 2)
+#' draw_spline_basis(pts, 2.0, "blue")
+#' }
 #'
 #' @export
 draw_spline_basis <- function(points, thick, color) {
@@ -258,6 +358,12 @@ draw_spline_basis <- function(points, thick, color) {
 #'
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' pts <- matrix(c(50, 150, 250, 350, 100, 200, 50, 150), ncol = 2)
+#' draw_spline_catmull_rom(pts, 2.0, "green")
+#' }
+#'
 #' @export
 draw_spline_catmull_rom <- function(points, thick, color) {
   if (!is.matrix(points) || ncol(points) != 2) abort('`points` must be a numeric matrix with 2 columns.', call = NULL)
@@ -273,6 +379,12 @@ draw_spline_catmull_rom <- function(points, thick, color) {
 #' @param color A color.
 #'
 #' @family draw functions
+#'
+#' @examples
+#' \dontrun{
+#' pts <- matrix(c(100, 200, 300, 100, 300, 100), ncol = 2)
+#' draw_spline_bezier_quadratic(pts, 2.0, "purple")
+#' }
 #'
 #' @export
 draw_spline_bezier_quadratic <- function(points, thick, color) {
@@ -290,6 +402,12 @@ draw_spline_bezier_quadratic <- function(points, thick, color) {
 #'
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' pts <- matrix(c(50, 150, 250, 350, 100, 300, 300, 100), ncol = 2)
+#' draw_spline_bezier_cubic(pts, 2.0, "orange")
+#' }
+#'
 #' @export
 draw_spline_bezier_cubic <- function(points, thick, color) {
   if (!is.matrix(points) || ncol(points) != 2) abort('`points` must be a numeric matrix with 2 columns.', call = NULL)
@@ -304,6 +422,12 @@ draw_spline_bezier_cubic <- function(points, thick, color) {
 #' @param color A color.
 #'
 #' @family draw functions
+#'
+#' @examples
+#' \dontrun{
+#' pts <- matrix(c(0, 1, 2, 3, 0, 1, 0, 1, 0, 0, 0, 0), ncol = 3)
+#' draw_triangle_strip_3d(pts, "red")
+#' }
 #'
 #' @export
 draw_triangle_strip_3d <- function(points, color) {
@@ -322,6 +446,12 @@ draw_triangle_strip_3d <- function(points, color) {
 #' @param final_frame An integer. Final frame.
 #'
 #' @family wave functions
+#'
+#' @examples
+#' \dontrun{
+#' w <- load_wave("sound.wav")
+#' wave_crop(w, 0L, 44100L)
+#' }
 #'
 #' @export
 wave_crop <- function(wave, init_frame, final_frame) {
@@ -342,6 +472,12 @@ wave_crop <- function(wave, init_frame, final_frame) {
 #' @param channels An integer.
 #'
 #' @family wave functions
+#'
+#' @examples
+#' \dontrun{
+#' w <- load_wave("sound.wav")
+#' wave_format(w, 44100L, 16L, 1L)
+#' }
 #'
 #' @export
 wave_format <- function(wave, sample_rate, sample_size, channels) {
@@ -366,6 +502,13 @@ wave_format <- function(wave, sample_rate, sample_size, channels) {
 #'
 #' @family model functions
 #'
+#' @examples
+#' \dontrun{
+#' model <- load_model("model.obj")
+#' tex <- load_texture("texture.png")
+#' set_model_texture(model, 0L, material_map_index$albedo, tex)
+#' }
+#'
 #' @export
 set_model_texture <- function(model, material_id, map_type, texture) {
   if (!is_model(model)) abort(paste0('`model` must be a model, not ', friendly_typeof(model), '.'), call = NULL)
@@ -386,6 +529,13 @@ set_model_texture <- function(model, material_id, map_type, texture) {
 #'
 #' @family material functions
 #'
+#' @examples
+#' \dontrun{
+#' mat <- load_material_default()
+#' tex <- load_texture("texture.png")
+#' set_material_texture(mat, material_map_index$albedo, tex)
+#' }
+#'
 #' @export
 set_material_texture <- function(material, map_type, texture) {
   if (!is_material(material)) abort(paste0('`material` must be a material, not ', friendly_typeof(material), '.'), call = NULL)
@@ -405,6 +555,12 @@ set_material_texture <- function(material, map_type, texture) {
 #'
 #' @family model functions
 #'
+#' @examples
+#' \dontrun{
+#' model <- load_model("model.obj")
+#' set_model_mesh_material(model, 0L, 0L)
+#' }
+#'
 #' @export
 set_model_mesh_material <- function(model, mesh_id, material_id) {
   if (!is_model(model)) abort(paste0('`model` must be a model, not ', friendly_typeof(model), '.'), call = NULL)
@@ -422,6 +578,12 @@ set_model_mesh_material <- function(model, mesh_id, material_id) {
 #'
 #' @family mesh functions
 #'
+#' @examples
+#' \dontrun{
+#' mesh <- gen_mesh_cube(1.0, 1.0, 1.0)
+#' gen_mesh_tangents(mesh)
+#' }
+#'
 #' @export
 gen_mesh_tangents <- function(mesh) {
   if (!is_mesh(mesh)) abort(paste0('`mesh` must be a mesh, not ', friendly_typeof(mesh), '.'), call = NULL)
@@ -437,6 +599,12 @@ gen_mesh_tangents <- function(mesh) {
 #' @param dynamic A logical. Whether the mesh data is dynamic.
 #'
 #' @family mesh functions
+#'
+#' @examples
+#' \dontrun{
+#' mesh <- gen_mesh_cube(1.0, 1.0, 1.0)
+#' upload_mesh(mesh, FALSE)
+#' }
 #'
 #' @export
 upload_mesh <- function(mesh, dynamic) {
@@ -460,6 +628,12 @@ upload_mesh <- function(mesh, dynamic) {
 #'
 #' @family image functions
 #'
+#' @examples
+#' \dontrun{
+#' img <- gen_image_color(100, 100, "white")
+#' image_draw_line_ex(img, c(0, 0), c(100, 100), 2L, "red")
+#' }
+#'
 #' @export
 image_draw_line_ex <- function(dst, start, end, thick, color) {
   if (!is_image(dst)) abort(paste0('`dst` must be an image, not ', friendly_typeof(dst), '.'), call = NULL)
@@ -480,6 +654,12 @@ image_draw_line_ex <- function(dst, start, end, thick, color) {
 #' @param color A color.
 #'
 #' @family image functions
+#'
+#' @examples
+#' \dontrun{
+#' img <- gen_image_color(200, 200, "white")
+#' image_draw_triangle(img, c(100, 10), c(10, 190), c(190, 190), "blue")
+#' }
 #'
 #' @export
 image_draw_triangle <- function(dst, v1, v2, v3, color) {
@@ -503,6 +683,14 @@ image_draw_triangle <- function(dst, v1, v2, v3, color) {
 #'
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' mesh <- gen_mesh_cube(1.0, 1.0, 1.0)
+#' mat <- load_material_default()
+#' transforms <- list(diag(4), diag(4))
+#' draw_mesh_instanced(mesh, mat, transforms)
+#' }
+#'
 #' @export
 draw_mesh_instanced <- function(mesh, material, transforms) {
   if (!is_mesh(mesh)) abort(paste0('`mesh` must be a mesh, not ', friendly_typeof(mesh), '.'), call = NULL)
@@ -524,6 +712,13 @@ draw_mesh_instanced <- function(mesh, material, transforms) {
 #'
 #' @family vector3 functions
 #'
+#' @examples
+#' \dontrun{
+#' result <- vector3_ortho_normalize(c(1, 0, 0), c(0, 1, 0))
+#' result$v1
+#' result$v2
+#' }
+#'
 #' @export
 vector3_ortho_normalize <- function(v1, v2) {
   if (!is_vector_3(v1)) abort(paste0('`v1` must be a numeric vector of length 3, not ', friendly_typeof(v1), '.'), call = NULL)
@@ -540,6 +735,13 @@ vector3_ortho_normalize <- function(v1, v2) {
 #' @return A list with elements `axis` (numeric vector of length 3) and `angle` (number).
 #'
 #' @family quaternion functions
+#'
+#' @examples
+#' \dontrun{
+#' result <- quaternion_to_axis_angle(c(0, 0, 0, 1))
+#' result$axis
+#' result$angle
+#' }
 #'
 #' @export
 quaternion_to_axis_angle <- function(q) {
@@ -558,6 +760,14 @@ quaternion_to_axis_angle <- function(q) {
 #'
 #' @family matrix functions
 #'
+#' @examples
+#' \dontrun{
+#' result <- matrix_decompose(diag(4))
+#' result$translation
+#' result$rotation
+#' result$scale
+#' }
+#'
 #' @export
 matrix_decompose <- function(mat) {
   if (!is_raylib_matrix(mat)) abort(paste0('`mat` must be a 4x4 numeric matrix, not ', friendly_typeof(mat), '.'), call = NULL)
@@ -574,6 +784,12 @@ matrix_decompose <- function(mat) {
 #'
 #' @family camera functions
 #'
+#' @examples
+#' \dontrun{
+#' cam <- camera_3d(c(0, 10, 10))
+#' get_camera_forward(cam)
+#' }
+#'
 #' @export
 get_camera_forward <- function(camera) {
   if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
@@ -587,6 +803,12 @@ get_camera_forward <- function(camera) {
 #' @return A numeric vector of length 3.
 #'
 #' @family camera functions
+#'
+#' @examples
+#' \dontrun{
+#' cam <- camera_3d(c(0, 10, 10))
+#' get_camera_up(cam)
+#' }
 #'
 #' @export
 get_camera_up <- function(camera) {
@@ -602,6 +824,12 @@ get_camera_up <- function(camera) {
 #'
 #' @family camera functions
 #'
+#' @examples
+#' \dontrun{
+#' cam <- camera_3d(c(0, 10, 10))
+#' get_camera_right(cam)
+#' }
+#'
 #' @export
 get_camera_right <- function(camera) {
   if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
@@ -615,6 +843,12 @@ get_camera_right <- function(camera) {
 #' @return A 4x4 numeric matrix.
 #'
 #' @family camera functions
+#'
+#' @examples
+#' \dontrun{
+#' cam <- camera_3d(c(0, 10, 10))
+#' get_camera_view_matrix(cam)
+#' }
 #'
 #' @export
 get_camera_view_matrix <- function(camera) {
@@ -631,6 +865,12 @@ get_camera_view_matrix <- function(camera) {
 #'
 #' @family camera functions
 #'
+#' @examples
+#' \dontrun{
+#' cam <- camera_3d(c(0, 10, 10))
+#' get_camera_projection_matrix(cam, 800 / 450)
+#' }
+#'
 #' @export
 get_camera_projection_matrix <- function(camera, aspect) {
   if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
@@ -645,6 +885,12 @@ get_camera_projection_matrix <- function(camera, aspect) {
 #' @param move_in_world_plane A logical.
 #'
 #' @family camera functions
+#'
+#' @examples
+#' \dontrun{
+#' cam <- camera_3d(c(0, 10, 10))
+#' camera_move_forward(cam, 1.0, TRUE)
+#' }
 #'
 #' @export
 camera_move_forward <- function(camera, distance, move_in_world_plane) {
@@ -662,6 +908,12 @@ camera_move_forward <- function(camera, distance, move_in_world_plane) {
 #'
 #' @family camera functions
 #'
+#' @examples
+#' \dontrun{
+#' cam <- camera_3d(c(0, 10, 10))
+#' camera_move_up(cam, 1.0)
+#' }
+#'
 #' @export
 camera_move_up <- function(camera, distance) {
   if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
@@ -677,6 +929,12 @@ camera_move_up <- function(camera, distance) {
 #' @param move_in_world_plane A logical.
 #'
 #' @family camera functions
+#'
+#' @examples
+#' \dontrun{
+#' cam <- camera_3d(c(0, 10, 10))
+#' camera_move_right(cam, 1.0, TRUE)
+#' }
 #'
 #' @export
 camera_move_right <- function(camera, distance, move_in_world_plane) {
@@ -694,6 +952,12 @@ camera_move_right <- function(camera, distance, move_in_world_plane) {
 #'
 #' @family camera functions
 #'
+#' @examples
+#' \dontrun{
+#' cam <- camera_3d(c(0, 10, 10))
+#' camera_move_to_target(cam, 1.0)
+#' }
+#'
 #' @export
 camera_move_to_target <- function(camera, delta) {
   if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
@@ -709,6 +973,12 @@ camera_move_to_target <- function(camera, delta) {
 #' @param rotate_around_target A logical.
 #'
 #' @family camera functions
+#'
+#' @examples
+#' \dontrun{
+#' cam <- camera_3d(c(0, 10, 10))
+#' camera_yaw(cam, 0.1, TRUE)
+#' }
 #'
 #' @export
 camera_yaw <- function(camera, angle, rotate_around_target) {
@@ -729,6 +999,12 @@ camera_yaw <- function(camera, angle, rotate_around_target) {
 #'
 #' @family camera functions
 #'
+#' @examples
+#' \dontrun{
+#' cam <- camera_3d(c(0, 10, 10))
+#' camera_pitch(cam, 0.1, TRUE, TRUE, FALSE)
+#' }
+#'
 #' @export
 camera_pitch <- function(camera, angle, lock_view, rotate_around_target, rotate_up) {
   if (!is_camera_3d(camera)) abort(paste0('`camera` must be a camera_3d, not ', friendly_typeof(camera), '.'), call = NULL)
@@ -746,6 +1022,12 @@ camera_pitch <- function(camera, angle, lock_view, rotate_around_target, rotate_
 #' @param angle A number. Rotation angle in radians.
 #'
 #' @family camera functions
+#'
+#' @examples
+#' \dontrun{
+#' cam <- camera_3d(c(0, 10, 10))
+#' camera_roll(cam, 0.1)
+#' }
 #'
 #' @export
 camera_roll <- function(camera, angle) {
@@ -772,6 +1054,15 @@ camera_roll <- function(camera, angle) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_scroll_panel(
+#'   rectangle(10, 10, 200, 200), "Panel",
+#'   rectangle(0, 0, 400, 400), c(0, 0),
+#'   rectangle(0, 0, 200, 200)
+#' )
+#' }
+#'
 #' @export
 gui_scroll_panel <- function(bounds, text, content, scroll, view) {
   if (!is_rectangle(bounds)) abort(paste0('`bounds` must be a rectangle, not ', friendly_typeof(bounds), '.'), call = NULL)
@@ -791,6 +1082,11 @@ gui_scroll_panel <- function(bounds, text, content, scroll, view) {
 #' @return A list with \code{result} (integer) and \code{text} (string).
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_text_box(rectangle(10, 10, 200, 30), "Hello", 64L, FALSE)
+#' }
 #'
 #' @export
 gui_text_box <- function(bounds, text, text_size, edit_mode) {
@@ -816,6 +1112,14 @@ gui_text_box <- function(bounds, text, text_size, edit_mode) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_text_input_box(
+#'   rectangle(100, 100, 400, 200), "Title", "Enter text:",
+#'   "", 256L, "Ok;Cancel", 0L, FALSE
+#' )
+#' }
+#'
 #' @export
 gui_text_input_box <- function(bounds, title, message, text, text_size, btn_text,
                                 btn_active, secret_view_active) {
@@ -838,6 +1142,11 @@ gui_text_input_box <- function(bounds, title, message, text, text_size, btn_text
 #'   and \code{value} (number).
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_value_box_float(rectangle(10, 10, 100, 30), "Value:", "0.0", 0.0, FALSE)
+#' }
 #'
 #' @export
 gui_value_box_float <- function(bounds, text, text_value, value, edit_mode) {

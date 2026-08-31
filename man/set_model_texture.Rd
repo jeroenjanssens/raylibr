@@ -18,6 +18,14 @@ set_model_texture(model, material_id, map_type, texture)
 \description{
 Set texture for a material map of a model. Modifies the model in place.
 }
+\examples{
+\dontrun{
+model <- load_model("model.obj")
+tex <- load_texture("texture.png")
+set_model_texture(model, 0L, material_map_index$albedo, tex)
+}
+
+}
 \seealso{
 Other model functions: 
 \code{\link{draw_model}()},

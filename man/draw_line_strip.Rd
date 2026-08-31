@@ -14,6 +14,13 @@ draw_line_strip(points, color)
 \description{
 Draw lines sequence (using gl lines).
 }
+\examples{
+\dontrun{
+pts <- matrix(c(100, 200, 300, 100, 200, 300), ncol = 2)
+draw_line_strip(pts, "red")
+}
+
+}
 \seealso{
 Other draw functions: 
 \code{\link{draw_billboard}()},

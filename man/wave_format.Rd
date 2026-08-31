@@ -18,6 +18,13 @@ wave_format(wave, sample_rate, sample_size, channels)
 \description{
 Convert wave data to desired format. Modifies the wave in place.
 }
+\examples{
+\dontrun{
+w <- load_wave("sound.wav")
+wave_format(w, 44100L, 16L, 1L)
+}
+
+}
 \seealso{
 Other wave functions: 
 \code{\link{export_wave}()},

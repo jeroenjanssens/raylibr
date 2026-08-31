@@ -39,6 +39,15 @@ A list with \code{result} (integer), \code{text} (string),
 \description{
 Text input box control with title and buttons.
 }
+\examples{
+\dontrun{
+gui_text_input_box(
+  rectangle(100, 100, 400, 200), "Title", "Enter text:",
+  "", 256L, "Ok;Cancel", 0L, FALSE
+)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

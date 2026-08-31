@@ -14,6 +14,13 @@ update_camera(camera, mode)
 \description{
 Update camera position for selected mode. Modifies the camera in place.
 }
+\examples{
+\dontrun{
+cam <- camera_3d(c(0, 10, 10))
+update_camera(cam, camera_mode$orbital)
+}
+
+}
 \seealso{
 Other camera functions: 
 \code{\link{camera_move_forward}()},

@@ -20,3 +20,18 @@ Portable game loop that works on both desktop and web (webR/Emscripten).
 On desktop, runs a standard while loop. On web, registers a callback with
 \code{emscripten_set_main_loop} so the browser event loop stays responsive.
 }
+\examples{
+\dontrun{
+run_game_loop(
+  update_fn = function() {
+    begin_drawing()
+    clear_background("white")
+    draw_text("Hello!", 100L, 100L, 20L, "black")
+    end_drawing()
+  },
+  init_fn = function() init_window(800L, 450L, "Game"),
+  cleanup_fn = function() close_window()
+)
+}
+
+}

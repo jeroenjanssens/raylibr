@@ -16,6 +16,13 @@ camera_move_forward(camera, distance, move_in_world_plane)
 \description{
 Move camera forward
 }
+\examples{
+\dontrun{
+cam <- camera_3d(c(0, 10, 10))
+camera_move_forward(cam, 1.0, TRUE)
+}
+
+}
 \seealso{
 Other camera functions: 
 \code{\link{camera_move_right}()},

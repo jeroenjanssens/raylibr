@@ -16,6 +16,15 @@ A list with elements \code{translation} (numeric vector of length 3),
 \description{
 Decompose a transformation matrix into its translation, rotation, and scale components.
 }
+\examples{
+\dontrun{
+result <- matrix_decompose(diag(4))
+result$translation
+result$rotation
+result$scale
+}
+
+}
 \seealso{
 Other matrix functions: 
 \code{\link{get_camera_matrix}()},

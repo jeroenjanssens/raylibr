@@ -16,6 +16,13 @@ camera_yaw(camera, angle, rotate_around_target)
 \description{
 Rotate camera around up axis (yaw)
 }
+\examples{
+\dontrun{
+cam <- camera_3d(c(0, 10, 10))
+camera_yaw(cam, 0.1, TRUE)
+}
+
+}
 \seealso{
 Other camera functions: 
 \code{\link{camera_move_forward}()},

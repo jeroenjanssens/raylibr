@@ -16,6 +16,13 @@ wave_crop(wave, init_frame, final_frame)
 \description{
 Crop a wave to defined frames range. Modifies the wave in place.
 }
+\examples{
+\dontrun{
+w <- load_wave("sound.wav")
+wave_crop(w, 0L, 44100L)
+}
+
+}
 \seealso{
 Other wave functions: 
 \code{\link{export_wave}()},

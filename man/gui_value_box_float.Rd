@@ -24,6 +24,12 @@ and \code{value} (number).
 \description{
 Value box control for float values.
 }
+\examples{
+\dontrun{
+gui_value_box_float(rectangle(10, 10, 100, 30), "Value:", "0.0", 0.0, FALSE)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

@@ -12,6 +12,13 @@ gen_mesh_tangents(mesh)
 \description{
 Compute mesh tangents. Modifies the mesh in place.
 }
+\examples{
+\dontrun{
+mesh <- gen_mesh_cube(1.0, 1.0, 1.0)
+gen_mesh_tangents(mesh)
+}
+
+}
 \seealso{
 Other mesh functions: 
 \code{\link{draw_mesh}()},

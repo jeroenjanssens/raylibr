@@ -18,6 +18,13 @@ update_camera_pro(camera, movement, rotation, zoom)
 \description{
 Update camera movement/rotation. Modifies the camera in place.
 }
+\examples{
+\dontrun{
+cam <- camera_3d(c(0, 10, 10))
+update_camera_pro(cam, c(0, 0, 0), c(0, 0, 0), 1.0)
+}
+
+}
 \seealso{
 Other camera functions: 
 \code{\link{camera_move_forward}()},

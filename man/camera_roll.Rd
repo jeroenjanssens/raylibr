@@ -14,6 +14,13 @@ camera_roll(camera, angle)
 \description{
 Rotate camera around forward axis (roll)
 }
+\examples{
+\dontrun{
+cam <- camera_3d(c(0, 10, 10))
+camera_roll(cam, 0.1)
+}
+
+}
 \seealso{
 Other camera functions: 
 \code{\link{camera_move_forward}()},

@@ -16,6 +16,13 @@ draw_spline_bezier_quadratic(points, thick, color)
 \description{
 Draw spline: Quadratic Bezier, minimum 3 points (1 control point).
 }
+\examples{
+\dontrun{
+pts <- matrix(c(100, 200, 300, 100, 300, 100), ncol = 2)
+draw_spline_bezier_quadratic(pts, 2.0, "purple")
+}
+
+}
 \seealso{
 Other draw functions: 
 \code{\link{draw_billboard}()},
