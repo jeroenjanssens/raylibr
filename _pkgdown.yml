@@ -26,100 +26,148 @@ articles:
     - "articles/demo-raycaster"
 
 reference:
-  - title: Window and core
+  - title: Window management
     contents:
-    - starts_with("init_window")
-    - starts_with("close_window")
-    - starts_with("window_")
+    - init_window
+    - close_window
+    - window_should_close
+    - starts_with("is_window")
     - starts_with("set_window")
-    - starts_with("get_screen")
-    - starts_with("get_render")
+    - clear_window_state
+    - toggle_fullscreen
+    - toggle_borderless_windowed
+    - maximize_window
+    - minimize_window
+    - restore_window
+    - get_screen_width
+    - get_screen_height
+    - get_render_width
+    - get_render_height
+    - get_window_position
+    - get_window_scale_dpi
     - starts_with("get_monitor")
-    - starts_with("get_current_monitor")
-    - starts_with("set_target_fps")
-    - starts_with("get_fps")
-    - starts_with("get_frame_time")
-    - starts_with("get_time")
-    - starts_with("begin_drawing")
-    - starts_with("end_drawing")
-    - starts_with("clear_background")
-    - starts_with("swap_screen_buffer")
-    - starts_with("poll_input_events")
-    - is_web
-    - run_game_loop
+    - get_current_monitor
+    - enable_event_waiting
+    - disable_event_waiting
 
-  - title: Shapes
+  - title: Drawing & timing
+    contents:
+    - begin_drawing
+    - end_drawing
+    - clear_background
+    - swap_screen_buffer
+    - poll_input_events
+    - set_target_fps
+    - get_fps
+    - get_frame_time
+    - get_time
+    - draw_fps
+
+  - title: Shapes (2D)
     contents:
     - starts_with("draw_pixel")
-    - starts_with("draw_line")
-    - -draw_line_strip
+    - draw_line
+    - draw_line_v
+    - draw_line_ex
+    - draw_line_strip
+    - draw_line_bezier
+    - draw_line_dashed
     - starts_with("draw_circle")
+    - -draw_circle_3d
     - starts_with("draw_ellipse")
     - starts_with("draw_ring")
     - starts_with("draw_rectangle")
-    - starts_with("draw_triangle")
-    - -draw_triangle_strip_3d
+    - draw_triangle
+    - draw_triangle_lines
+    - draw_triangle_fan
+    - draw_triangle_strip
     - starts_with("draw_poly")
     - starts_with("draw_spline")
     - starts_with("get_spline")
-    - draw_line_strip
-    - draw_triangle_fan
+    - get_shapes_texture
+    - get_shapes_texture_rectangle
+    - set_shapes_texture
 
-  - title: Textures
+  - title: Textures & images
     contents:
     - starts_with("load_texture")
     - starts_with("load_image")
+    - load_render_texture
     - starts_with("unload_texture")
     - starts_with("unload_image")
+    - unload_render_texture
     - starts_with("draw_texture")
     - starts_with("gen_image")
     - starts_with("image_")
     - starts_with("export_image")
+    - get_image_alpha_border
+    - get_image_color
+    - set_texture_filter
+    - set_texture_wrap
+    - get_pixel_data_size
+    - is_image_valid
+    - is_texture_valid
+    - is_render_texture_valid
 
-  - title: Text
+  - title: Text & fonts
     contents:
-    - starts_with("draw_text")
+    - draw_text
+    - draw_text_ex
+    - draw_text_pro
+    - draw_text_codepoint
     - starts_with("measure_text")
     - starts_with("load_font")
     - starts_with("unload_font")
+    - get_font_default
+    - export_font_as_code
+    - is_font_valid
     - starts_with("get_glyph")
     - starts_with("get_codepoint")
     - starts_with("text_")
+    - set_text_line_spacing
+    - get_text_between
 
-  - title: Models (3D)
+  - title: 3D models & meshes
     contents:
     - starts_with("draw_cube")
     - starts_with("draw_sphere")
     - starts_with("draw_cylinder")
     - starts_with("draw_capsule")
-    - starts_with("draw_plane")
-    - starts_with("draw_grid")
-    - starts_with("draw_point_3d")
-    - starts_with("draw_line_3d")
-    - starts_with("draw_circle_3d")
-    - starts_with("draw_triangle_3d")
+    - draw_plane
+    - draw_grid
+    - draw_point_3d
+    - draw_line_3d
+    - draw_circle_3d
+    - draw_triangle_3d
     - draw_triangle_strip_3d
     - starts_with("draw_billboard")
-    - starts_with("draw_bounding_box")
+    - draw_bounding_box
     - starts_with("draw_model")
     - starts_with("draw_mesh")
-    - starts_with("draw_ray")
+    - draw_ray
     - starts_with("load_model")
     - starts_with("unload_model")
     - starts_with("unload_mesh")
     - starts_with("unload_material")
+    - load_material_default
     - starts_with("gen_mesh")
     - starts_with("export_mesh")
     - get_mesh_bounding_box
+    - get_model_bounding_box
     - upload_mesh
     - set_material_texture
     - set_model_mesh_material
+    - set_model_texture
+    - starts_with("update_model")
+    - is_model_valid
+    - is_model_animation_valid
+    - is_material_valid
 
   - title: Audio
     contents:
-    - starts_with("init_audio")
-    - starts_with("close_audio")
-    - starts_with("is_audio")
+    - init_audio_device
+    - close_audio_device
+    - is_audio_device_ready
     - starts_with("load_sound")
     - starts_with("load_wave")
     - starts_with("load_music")
@@ -131,37 +179,112 @@ reference:
     - starts_with("play_")
     - starts_with("pause_")
     - starts_with("resume_")
-    - starts_with("stop_")
-    - starts_with("is_sound")
-    - starts_with("is_music")
+    - stop_sound
+    - stop_music_stream
+    - stop_audio_stream
     - starts_with("set_sound")
     - starts_with("set_music")
     - starts_with("set_audio")
     - starts_with("update_music")
     - set_master_volume
     - get_master_volume
+    - get_music_time_length
+    - get_music_time_played
     - seek_music_stream
+    - wave_copy
     - wave_crop
     - wave_format
+    - export_wave
+    - export_wave_as_code
+    - is_audio_stream_playing
+    - is_audio_stream_processed
+    - is_audio_stream_valid
+    - is_sound_playing
+    - is_sound_valid
+    - is_music_stream_playing
+    - is_music_valid
+    - is_wave_valid
 
-  - title: Input
+  - title: Input — Keyboard
     contents:
     - starts_with("is_key")
     - starts_with("get_key")
+    - get_char_pressed
+
+  - title: Input — Mouse
+    contents:
     - starts_with("is_mouse")
     - starts_with("get_mouse")
     - starts_with("set_mouse")
+
+  - title: Input — Gamepad
+    contents:
     - starts_with("is_gamepad")
     - starts_with("get_gamepad")
     - starts_with("set_gamepad")
+
+  - title: Input — Touch & gestures
+    contents:
     - starts_with("is_gesture")
     - starts_with("get_gesture")
     - starts_with("get_touch")
+    - set_gestures_enabled
+
+  - title: Input — Cursor
+    contents:
     - starts_with("is_cursor")
-    - starts_with("show_cursor")
-    - starts_with("hide_cursor")
-    - starts_with("enable_cursor")
-    - starts_with("disable_cursor")
+    - show_cursor
+    - hide_cursor
+    - enable_cursor
+    - disable_cursor
+
+  - title: Camera
+    contents:
+    - begin_mode_2d
+    - end_mode_2d
+    - begin_mode_3d
+    - end_mode_3d
+    - starts_with("get_screen_to_world")
+    - starts_with("get_world_to_screen")
+    - update_camera
+    - update_camera_pro
+    - starts_with("get_camera")
+    - starts_with("camera_move")
+    - camera_yaw
+    - camera_pitch
+    - camera_roll
+
+  - title: Shaders
+    contents:
+    - starts_with("load_shader")
+    - starts_with("unload_shader")
+    - begin_shader_mode
+    - end_shader_mode
+    - set_shader_value
+    - set_shader_value_matrix
+    - set_shader_value_texture
+    - get_shader_location
+    - get_shader_location_attrib
+    - is_shader_valid
+
+  - title: Rendering modes
+    contents:
+    - begin_blend_mode
+    - end_blend_mode
+    - begin_scissor_mode
+    - end_scissor_mode
+    - begin_texture_mode
+    - end_texture_mode
+    - begin_vr_stereo_mode
+    - end_vr_stereo_mode
+    - load_vr_stereo_config
+    - unload_vr_stereo_config
+
+  - title: Collision detection
+    contents:
+    - starts_with("check_collision")
+    - get_collision_rec
+    - starts_with("get_ray_collision")
 
   - title: Colors
     contents:
@@ -170,17 +293,50 @@ reference:
     - starts_with("color_")
     - fade
     - get_color
-    - color_is_equal
-    - color_normalize
-    - color_from_normalized
-    - color_to_hsv
-    - color_from_hsv
-    - color_brightness
-    - color_contrast
-    - color_lerp
-    - color_alpha
-    - color_alpha_blend
-    - color_tint
+
+  - title: File system
+    contents:
+    - starts_with("file_")
+    - starts_with("is_file")
+    - is_path_file
+    - directory_exists
+    - change_directory
+    - get_working_directory
+    - get_application_directory
+    - starts_with("get_directory")
+    - get_prev_directory_path
+    - starts_with("get_file")
+    - load_file_text
+    - save_file_text
+    - make_directory
+
+  - title: Automation events
+    contents:
+    - set_automation_event_base_frame
+    - start_automation_event_recording
+    - stop_automation_event_recording
+
+  - title: Utility
+    contents:
+    - raylib_version
+    - raylibr_resource
+    - set_trace_log_level
+    - set_config_flags
+    - set_exit_key
+    - take_screenshot
+    - open_url
+    - set_random_seed
+    - get_random_value
+    - wait_time
+    - get_clipboard_text
+    - set_clipboard_text
+    - get_clipboard_image
+
+  - title: webR / Emscripten
+    contents:
+    - is_web
+    - run_game_loop
+    - eval_js
 
   - title: Structs
     contents:
@@ -194,99 +350,52 @@ reference:
     - material_map
     - n_patch_info
     - transform
+    - texture
+    - render_texture
 
   - title: Type checking
     contents:
     - starts_with("is_")
+    - -starts_with("is_window")
     - -starts_with("is_key")
     - -starts_with("is_mouse")
     - -starts_with("is_gamepad")
     - -starts_with("is_gesture")
     - -starts_with("is_cursor")
-    - -starts_with("is_audio")
-    - -starts_with("is_sound")
-    - -starts_with("is_music")
-    - -starts_with("is_window")
+    - -starts_with("is_file")
+    - -is_path_file
+    - -is_audio_device_ready
+    - -is_audio_stream_playing
+    - -is_audio_stream_processed
+    - -is_audio_stream_valid
+    - -is_sound_playing
+    - -is_sound_valid
+    - -is_music_stream_playing
+    - -is_music_valid
+    - -is_wave_valid
+    - -is_font_valid
+    - -is_image_valid
+    - -is_texture_valid
+    - -is_render_texture_valid
+    - -is_model_valid
+    - -is_model_animation_valid
+    - -is_material_valid
+    - -is_shader_valid
+    - -is_web
 
-  - title: Shaders
+  - title: Enums & constants
     contents:
-    - starts_with("load_shader")
-    - starts_with("unload_shader")
-    - starts_with("begin_shader")
-    - starts_with("end_shader")
-    - set_shader_value
-    - set_shader_value_matrix
-    - set_shader_value_texture
-    - get_shader_location
-    - get_shader_location_attrib
-    - starts_with("is_shader")
+    - flag
+    - key
+    - log
+    - mouse_button
+    - mouse_cursor
+    - camera_mode
+    - camera_projection
+    - material_map_index
+    - shader_uniform
 
-  - title: Collision detection
-    contents:
-    - starts_with("check_collision")
-    - starts_with("get_collision")
-    - starts_with("get_ray_collision")
-
-  - title: Camera
-    contents:
-    - starts_with("begin_mode_2d")
-    - starts_with("end_mode_2d")
-    - starts_with("begin_mode_3d")
-    - starts_with("end_mode_3d")
-    - starts_with("get_screen_to_world")
-    - starts_with("get_world_to_screen")
-    - update_camera
-    - update_camera_pro
-    - starts_with("get_camera")
-    - starts_with("camera_move")
-    - camera_yaw
-    - camera_pitch
-    - camera_roll
-
-  - title: Utility
-    contents:
-    - raylib_version
-    - raylibr_resource
-    - starts_with("set_trace")
-    - starts_with("set_config")
-    - starts_with("set_exit")
-    - starts_with("take_screenshot")
-    - starts_with("open_url")
-    - starts_with("set_random")
-    - starts_with("get_random")
-    - wait_time
-    - get_char_pressed
-    - get_clipboard_text
-    - set_clipboard_text
-    - get_clipboard_image
-    - get_gamepad_name
-    - get_key_name
-
-  - title: Automation events
-    contents:
-    - starts_with("set_automation")
-    - starts_with("start_automation")
-    - starts_with("stop_automation")
-    - starts_with("load_automation")
-    - starts_with("unload_automation")
-
-  - title: File system
-    contents:
-    - starts_with("file_")
-    - starts_with("directory_")
-    - starts_with("change_directory")
-    - starts_with("get_working_directory")
-    - starts_with("get_application_directory")
-    - starts_with("get_directory")
-    - starts_with("get_prev_directory")
-    - starts_with("get_file")
-    - starts_with("is_file")
-    - starts_with("is_path")
-    - starts_with("load_file")
-    - starts_with("save_file")
-    - starts_with("make_directory")
-
-  - title: "raymath — Float utilities"
+  - title: "raymath — Float"
     contents:
     - starts_with("float_")
 
@@ -302,7 +411,7 @@ reference:
     contents:
     - starts_with("vector4_")
 
-  - title: "raymath — Matrix math"
+  - title: "raymath — Matrix"
     contents:
     - starts_with("matrix_")
 
@@ -310,7 +419,7 @@ reference:
     contents:
     - starts_with("quaternion_")
 
-  - title: "raygui — State and style"
+  - title: "raygui — State & style"
     contents:
     - gui_enable
     - gui_disable
@@ -335,14 +444,16 @@ reference:
 
   - title: "raygui — Controls"
     contents:
-    - starts_with("gui_window")
-    - starts_with("gui_group")
+    - gui_window_box
+    - gui_group_box
     - gui_line
     - gui_panel
     - gui_label
     - gui_button
     - gui_label_button
-    - starts_with("gui_toggle")
+    - gui_toggle
+    - gui_toggle_group
+    - gui_toggle_slider
     - gui_check_box
     - gui_combo_box
     - gui_dropdown_box
@@ -351,21 +462,47 @@ reference:
     - gui_value_box_float
     - gui_text_box
     - gui_text_input_box
-    - starts_with("gui_slider")
+    - gui_slider
+    - gui_slider_bar
     - gui_progress_bar
     - gui_status_bar
     - gui_dummy_rec
     - gui_grid
-    - starts_with("gui_list")
-    - starts_with("gui_tab")
+    - gui_list_view
+    - gui_tab_bar
     - gui_message_box
     - gui_scroll_panel
-    - starts_with("gui_color")
+    - gui_color_picker
+    - gui_color_picker_hsv
+    - gui_color_panel
+    - gui_color_panel_hsv
+    - gui_color_bar_alpha
+    - gui_color_bar_hue
 
-  - title: rlgl (low-level OpenGL)
+  - title: "raygui — Enums"
+    contents:
+    - gui_state
+    - gui_control
+    - gui_control_property
+    - gui_default_property
+    - gui_icon
+    - gui_result
+    - gui_text_alignment
+    - gui_text_alignment_vertical
+    - gui_text_wrap_mode
+    - gui_check_box_property
+    - gui_color_picker_property
+    - gui_combo_box_property
+    - gui_dropdown_box_property
+    - gui_list_view_property
+    - gui_progress_bar_property
+    - gui_scroll_bar_property
+    - gui_slider_property
+    - gui_tab_bar_property
+    - gui_text_box_property
+    - gui_toggle_property
+    - gui_value_box_property
+
+  - title: "rlgl (low-level OpenGL)"
     contents:
     - starts_with("rl_")
-
-  - title: Other
-    contents:
-    - matches(".")
