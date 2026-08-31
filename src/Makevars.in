@@ -17,7 +17,8 @@ $(OBJECTS): raylib_built
 
 raylib_built:
 	(cd ../inst; tar -xf $(RAYLIB_SRC).tar.gz)
-	(cd ../inst/$(RAYLIB_SRC)/src; $(MAKE) PLATFORM=PLATFORM_DESKTOP CFLAGS="-D_GNU_SOURCE -DPLATFORM_DESKTOP_GLFW -DGRAPHICS_API_OPENGL_33 -fno-strict-aliasing -std=c99 -O1 -fPIC" > /dev/null 2>&1)
+	(cd ../inst/$(RAYLIB_SRC)/src; $(MAKE) PLATFORM=PLATFORM_DESKTOP > /dev/null 2>&1) || \
+	(cd ../inst/$(RAYLIB_SRC)/src; $(MAKE) PLATFORM=PLATFORM_DESKTOP)
 	mkdir -p ../inst/include
 	cp ../inst/$(RAYLIB_SRC)/src/raylib.h ../inst/include
 	cp ../inst/$(RAYLIB_SRC)/src/raymath.h ../inst/include
