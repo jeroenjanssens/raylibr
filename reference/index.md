@@ -467,6 +467,8 @@
   : Close Audio Device
 - [`is_audio_device_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_device_ready.md)
   : Is Audio Device Ready
+- [`is_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream.md)
+  : Test if object is a audio_stream
 - [`is_audio_stream_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_playing.md)
   : Is Audio Stream Playing
 - [`is_audio_stream_processed()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_processed.md)
@@ -521,10 +523,14 @@
   : Stop Music Stream
 - [`stop_sound()`](https://jeroenjanssens.github.io/raylibr/reference/stop_sound.md)
   : Stop Sound
+- [`is_sound()`](https://jeroenjanssens.github.io/raylibr/reference/is_sound.md)
+  : Test if object is a sound
 - [`is_sound_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_sound_playing.md)
   : Is Sound Playing
 - [`is_sound_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_sound_valid.md)
   : Is Sound Valid
+- [`is_music()`](https://jeroenjanssens.github.io/raylibr/reference/is_music.md)
+  : Test if object is a music
 - [`is_music_stream_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_music_stream_playing.md)
   : Is Music Stream Playing
 - [`is_music_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_music_valid.md)
@@ -720,37 +726,91 @@
   : Material Map
 - [`n_patch_info()`](https://jeroenjanssens.github.io/raylibr/reference/n_patch_info.md)
   : n Patch Info
-- [`npatch_info()`](https://jeroenjanssens.github.io/raylibr/reference/npatch_info.md)
-  : Npatch info
 - [`transform()`](https://jeroenjanssens.github.io/raylibr/reference/transform.md)
   : Transform
 
 ## Type checking
 
+- [`is_bone_info()`](https://jeroenjanssens.github.io/raylibr/reference/is_bone_info.md)
+  : Test if object is a bone_info
+- [`is_bounding_box()`](https://jeroenjanssens.github.io/raylibr/reference/is_bounding_box.md)
+  : Test if object is a bounding_box
+- [`is_camera_2d()`](https://jeroenjanssens.github.io/raylibr/reference/is_camera_2d.md)
+  : Test if object is a camera_2d
+- [`is_camera_3d()`](https://jeroenjanssens.github.io/raylibr/reference/is_camera_3d.md)
+  : Test if object is a camera_3d
+- [`is_color()`](https://jeroenjanssens.github.io/raylibr/reference/is_color.md)
+  : Test if object is a color
 - [`is_file_dropped()`](https://jeroenjanssens.github.io/raylibr/reference/is_file_dropped.md)
   : Is File Dropped
 - [`is_file_extension()`](https://jeroenjanssens.github.io/raylibr/reference/is_file_extension.md)
   : Is File Extension
 - [`is_file_name_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_file_name_valid.md)
   : Is File Name Valid
+- [`is_font()`](https://jeroenjanssens.github.io/raylibr/reference/is_font.md)
+  : Test if object is a font
 - [`is_font_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_font_valid.md)
   : Is Font Valid
+- [`is_glyph_info()`](https://jeroenjanssens.github.io/raylibr/reference/is_glyph_info.md)
+  : Test if object is a glyph_info
+- [`is_image()`](https://jeroenjanssens.github.io/raylibr/reference/is_image.md)
+  : Test if object is a image
 - [`is_image_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_image_valid.md)
   : Is Image Valid
+- [`is_material()`](https://jeroenjanssens.github.io/raylibr/reference/is_material.md)
+  : Test if object is a material
+- [`is_material_map()`](https://jeroenjanssens.github.io/raylibr/reference/is_material_map.md)
+  : Test if object is a material_map
 - [`is_material_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_material_valid.md)
   : Is Material Valid
+- [`is_mesh()`](https://jeroenjanssens.github.io/raylibr/reference/is_mesh.md)
+  : Test if object is a mesh
+- [`is_model()`](https://jeroenjanssens.github.io/raylibr/reference/is_model.md)
+  : Test if object is a model
+- [`is_model_animation()`](https://jeroenjanssens.github.io/raylibr/reference/is_model_animation.md)
+  : Test if object is a model_animation
 - [`is_model_animation_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_model_animation_valid.md)
   : Is Model Animation Valid
 - [`is_model_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_model_valid.md)
   : Is Model Valid
+- [`is_n_patch_info()`](https://jeroenjanssens.github.io/raylibr/reference/is_n_patch_info.md)
+  : Test if object is a n_patch_info
 - [`is_path_file()`](https://jeroenjanssens.github.io/raylibr/reference/is_path_file.md)
   : Is Path File
+- [`is_ray()`](https://jeroenjanssens.github.io/raylibr/reference/is_ray.md)
+  : Test if object is a ray
+- [`is_ray_collision()`](https://jeroenjanssens.github.io/raylibr/reference/is_ray_collision.md)
+  : Test if object is a ray_collision
+- [`is_raylib_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/is_raylib_matrix.md)
+  : Test if object is a raylib matrix
+- [`is_rectangle()`](https://jeroenjanssens.github.io/raylibr/reference/is_rectangle.md)
+  : Test if object is a rectangle
+- [`is_render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/is_render_texture.md)
+  : Test if object is a render_texture
 - [`is_render_texture_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_render_texture_valid.md)
   : Is Render Texture Valid
+- [`is_shader()`](https://jeroenjanssens.github.io/raylibr/reference/is_shader.md)
+  : Test if object is a shader
 - [`is_shader_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_shader_valid.md)
   : Is Shader Valid
+- [`is_texture()`](https://jeroenjanssens.github.io/raylibr/reference/is_texture.md)
+  : Test if object is a texture
 - [`is_texture_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_texture_valid.md)
   : Is Texture Valid
+- [`is_transform()`](https://jeroenjanssens.github.io/raylibr/reference/is_transform.md)
+  : Test if object is a transform
+- [`is_vector_2()`](https://jeroenjanssens.github.io/raylibr/reference/is_vector_2.md)
+  : Test if object is a vector of length 2
+- [`is_vector_3()`](https://jeroenjanssens.github.io/raylibr/reference/is_vector_3.md)
+  : Test if object is a vector of length 3
+- [`is_vector_4()`](https://jeroenjanssens.github.io/raylibr/reference/is_vector_4.md)
+  : Test if object is a vector of length 4
+- [`is_vr_device_info()`](https://jeroenjanssens.github.io/raylibr/reference/is_vr_device_info.md)
+  : Test if object is a vr_device_info
+- [`is_vr_stereo_config()`](https://jeroenjanssens.github.io/raylibr/reference/is_vr_stereo_config.md)
+  : Test if object is a vr_stereo_config
+- [`is_wave()`](https://jeroenjanssens.github.io/raylibr/reference/is_wave.md)
+  : Test if object is a wave
 - [`is_wave_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_wave_valid.md)
   : Is Wave Valid
 - [`is_web()`](https://jeroenjanssens.github.io/raylibr/reference/is_web.md)
@@ -778,6 +838,8 @@
   : Get Shader Location
 - [`get_shader_location_attrib()`](https://jeroenjanssens.github.io/raylibr/reference/get_shader_location_attrib.md)
   : Get Shader Location Attrib
+- [`is_shader()`](https://jeroenjanssens.github.io/raylibr/reference/is_shader.md)
+  : Test if object is a shader
 - [`is_shader_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_shader_valid.md)
   : Is Shader Valid
 
@@ -1343,6 +1405,8 @@
   : Gui Toggle
 - [`gui_toggle_group()`](https://jeroenjanssens.github.io/raylibr/reference/gui_toggle_group.md)
   : Gui Toggle Group
+- [`gui_toggle_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_toggle_property.md)
+  : Gui Toggle Property
 - [`gui_toggle_slider()`](https://jeroenjanssens.github.io/raylibr/reference/gui_toggle_slider.md)
   : Gui Toggle Slider
 - [`gui_check_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_check_box.md)
@@ -1365,6 +1429,8 @@
   : Gui Slider
 - [`gui_slider_bar()`](https://jeroenjanssens.github.io/raylibr/reference/gui_slider_bar.md)
   : Gui Slider Bar
+- [`gui_slider_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_slider_property.md)
+  : Gui Slider Property
 - [`gui_progress_bar()`](https://jeroenjanssens.github.io/raylibr/reference/gui_progress_bar.md)
   : Gui Progress Bar
 - [`gui_status_bar()`](https://jeroenjanssens.github.io/raylibr/reference/gui_status_bar.md)
@@ -1375,8 +1441,12 @@
   : Gui Grid
 - [`gui_list_view()`](https://jeroenjanssens.github.io/raylibr/reference/gui_list_view.md)
   : Gui List View
+- [`gui_list_view_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_list_view_property.md)
+  : Gui List View Property
 - [`gui_tab_bar()`](https://jeroenjanssens.github.io/raylibr/reference/gui_tab_bar.md)
   : Gui Tab Bar
+- [`gui_tab_bar_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_tab_bar_property.md)
+  : Gui Tab Bar Property
 - [`gui_message_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_message_box.md)
   : Gui Message Box
 - [`gui_scroll_panel()`](https://jeroenjanssens.github.io/raylibr/reference/gui_scroll_panel.md)
@@ -1393,6 +1463,8 @@
   : Gui Color Picker
 - [`gui_color_picker_hsv()`](https://jeroenjanssens.github.io/raylibr/reference/gui_color_picker_hsv.md)
   : Gui Color Picker Hsv
+- [`gui_color_picker_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_color_picker_property.md)
+  : Gui Color Picker Property
 
 ## rlgl (low-level OpenGL)
 
@@ -1689,6 +1761,8 @@
   : Camera 2d
 - [`camera_3d()`](https://jeroenjanssens.github.io/raylibr/reference/camera_3d.md)
   : Camera 3d
+- [`camera_mode`](https://jeroenjanssens.github.io/raylibr/reference/camera_mode.md)
+  : Camera Mode
 - [`camera_move_forward()`](https://jeroenjanssens.github.io/raylibr/reference/camera_move_forward.md)
   : Move camera forward
 - [`camera_move_right()`](https://jeroenjanssens.github.io/raylibr/reference/camera_move_right.md)
@@ -1699,6 +1773,8 @@
   : Move camera up
 - [`camera_pitch()`](https://jeroenjanssens.github.io/raylibr/reference/camera_pitch.md)
   : Rotate camera around right axis (pitch)
+- [`camera_projection`](https://jeroenjanssens.github.io/raylibr/reference/camera_projection.md)
+  : Camera Projection
 - [`camera_roll()`](https://jeroenjanssens.github.io/raylibr/reference/camera_roll.md)
   : Rotate camera around forward axis (roll)
 - [`camera_yaw()`](https://jeroenjanssens.github.io/raylibr/reference/camera_yaw.md)
@@ -1971,6 +2047,8 @@
   : End Texture Mode
 - [`end_vr_stereo_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_vr_stereo_mode.md)
   : End Vr Stereo Mode
+- [`eval_js()`](https://jeroenjanssens.github.io/raylibr/reference/eval_js.md)
+  : Evaluate JavaScript
 - [`export_font_as_code()`](https://jeroenjanssens.github.io/raylibr/reference/export_font_as_code.md)
   : Export Font As Code
 - [`export_image()`](https://jeroenjanssens.github.io/raylibr/reference/export_image.md)
@@ -2001,6 +2079,8 @@
   : File Text Find Index
 - [`file_text_replace()`](https://jeroenjanssens.github.io/raylibr/reference/file_text_replace.md)
   : File Text Replace
+- [`flag`](https://jeroenjanssens.github.io/raylibr/reference/flag.md) :
+  Flag
 - [`float_clamp()`](https://jeroenjanssens.github.io/raylibr/reference/float_clamp.md)
   : Float Clamp
 - [`float_equals()`](https://jeroenjanssens.github.io/raylibr/reference/float_equals.md)
@@ -2259,6 +2339,8 @@
   : Gui Button
 - [`gui_check_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_check_box.md)
   : Gui Check Box
+- [`gui_check_box_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_check_box_property.md)
+  : Gui Check Box Property
 - [`gui_color_bar_alpha()`](https://jeroenjanssens.github.io/raylibr/reference/gui_color_bar_alpha.md)
   : Gui Color Bar Alpha
 - [`gui_color_bar_hue()`](https://jeroenjanssens.github.io/raylibr/reference/gui_color_bar_hue.md)
@@ -2271,8 +2353,18 @@
   : Gui Color Picker
 - [`gui_color_picker_hsv()`](https://jeroenjanssens.github.io/raylibr/reference/gui_color_picker_hsv.md)
   : Gui Color Picker Hsv
+- [`gui_color_picker_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_color_picker_property.md)
+  : Gui Color Picker Property
 - [`gui_combo_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_combo_box.md)
   : Gui Combo Box
+- [`gui_combo_box_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_combo_box_property.md)
+  : Gui Combo Box Property
+- [`gui_control`](https://jeroenjanssens.github.io/raylibr/reference/gui_control.md)
+  : Gui Control
+- [`gui_control_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_control_property.md)
+  : Gui Control Property
+- [`gui_default_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_default_property.md)
+  : Gui Default Property
 - [`gui_disable()`](https://jeroenjanssens.github.io/raylibr/reference/gui_disable.md)
   : Gui Disable
 - [`gui_disable_tooltip()`](https://jeroenjanssens.github.io/raylibr/reference/gui_disable_tooltip.md)
@@ -2281,6 +2373,8 @@
   : Gui Draw Icon
 - [`gui_dropdown_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_dropdown_box.md)
   : Gui Dropdown Box
+- [`gui_dropdown_box_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_dropdown_box_property.md)
+  : Gui Dropdown Box Property
 - [`gui_dummy_rec()`](https://jeroenjanssens.github.io/raylibr/reference/gui_dummy_rec.md)
   : Gui Dummy Rec
 - [`gui_enable()`](https://jeroenjanssens.github.io/raylibr/reference/gui_enable.md)
@@ -2299,6 +2393,8 @@
   : Gui Grid
 - [`gui_group_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_group_box.md)
   : Gui Group Box
+- [`gui_icon`](https://jeroenjanssens.github.io/raylibr/reference/gui_icon.md)
+  : Gui Icon
 - [`gui_is_locked()`](https://jeroenjanssens.github.io/raylibr/reference/gui_is_locked.md)
   : Gui Is Locked
 - [`gui_label()`](https://jeroenjanssens.github.io/raylibr/reference/gui_label.md)
@@ -2309,6 +2405,8 @@
   : Gui Line
 - [`gui_list_view()`](https://jeroenjanssens.github.io/raylibr/reference/gui_list_view.md)
   : Gui List View
+- [`gui_list_view_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_list_view_property.md)
+  : Gui List View Property
 - [`gui_load_style()`](https://jeroenjanssens.github.io/raylibr/reference/gui_load_style.md)
   : Gui Load Style
 - [`gui_load_style_default()`](https://jeroenjanssens.github.io/raylibr/reference/gui_load_style_default.md)
@@ -2321,6 +2419,12 @@
   : Gui Panel
 - [`gui_progress_bar()`](https://jeroenjanssens.github.io/raylibr/reference/gui_progress_bar.md)
   : Gui Progress Bar
+- [`gui_progress_bar_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_progress_bar_property.md)
+  : Gui Progress Bar Property
+- [`gui_result`](https://jeroenjanssens.github.io/raylibr/reference/gui_result.md)
+  : Gui Result
+- [`gui_scroll_bar_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_scroll_bar_property.md)
+  : Gui Scroll Bar Property
 - [`gui_scroll_panel()`](https://jeroenjanssens.github.io/raylibr/reference/gui_scroll_panel.md)
   : Gui Scroll Panel
 - [`gui_set_alpha()`](https://jeroenjanssens.github.io/raylibr/reference/gui_set_alpha.md)
@@ -2339,20 +2443,36 @@
   : Gui Slider
 - [`gui_slider_bar()`](https://jeroenjanssens.github.io/raylibr/reference/gui_slider_bar.md)
   : Gui Slider Bar
+- [`gui_slider_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_slider_property.md)
+  : Gui Slider Property
 - [`gui_spinner()`](https://jeroenjanssens.github.io/raylibr/reference/gui_spinner.md)
   : Gui Spinner
+- [`gui_state`](https://jeroenjanssens.github.io/raylibr/reference/gui_state.md)
+  : Gui State
 - [`gui_status_bar()`](https://jeroenjanssens.github.io/raylibr/reference/gui_status_bar.md)
   : Gui Status Bar
 - [`gui_tab_bar()`](https://jeroenjanssens.github.io/raylibr/reference/gui_tab_bar.md)
   : Gui Tab Bar
+- [`gui_tab_bar_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_tab_bar_property.md)
+  : Gui Tab Bar Property
+- [`gui_text_alignment`](https://jeroenjanssens.github.io/raylibr/reference/gui_text_alignment.md)
+  : Gui Text Alignment
+- [`gui_text_alignment_vertical`](https://jeroenjanssens.github.io/raylibr/reference/gui_text_alignment_vertical.md)
+  : Gui Text Alignment Vertical
 - [`gui_text_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_text_box.md)
   : Gui Text Box
+- [`gui_text_box_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_text_box_property.md)
+  : Gui Text Box Property
 - [`gui_text_input_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_text_input_box.md)
   : Gui Text Input Box
+- [`gui_text_wrap_mode`](https://jeroenjanssens.github.io/raylibr/reference/gui_text_wrap_mode.md)
+  : Gui Text Wrap Mode
 - [`gui_toggle()`](https://jeroenjanssens.github.io/raylibr/reference/gui_toggle.md)
   : Gui Toggle
 - [`gui_toggle_group()`](https://jeroenjanssens.github.io/raylibr/reference/gui_toggle_group.md)
   : Gui Toggle Group
+- [`gui_toggle_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_toggle_property.md)
+  : Gui Toggle Property
 - [`gui_toggle_slider()`](https://jeroenjanssens.github.io/raylibr/reference/gui_toggle_slider.md)
   : Gui Toggle Slider
 - [`gui_unlock()`](https://jeroenjanssens.github.io/raylibr/reference/gui_unlock.md)
@@ -2361,6 +2481,8 @@
   : Gui Value Box
 - [`gui_value_box_float()`](https://jeroenjanssens.github.io/raylibr/reference/gui_value_box_float.md)
   : Gui Value Box Float
+- [`gui_value_box_property`](https://jeroenjanssens.github.io/raylibr/reference/gui_value_box_property.md)
+  : Gui Value Box Property
 - [`gui_window_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_window_box.md)
   : Gui Window Box
 - [`hide_cursor()`](https://jeroenjanssens.github.io/raylibr/reference/hide_cursor.md)
@@ -2385,12 +2507,24 @@
   : Init Window
 - [`is_audio_device_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_device_ready.md)
   : Is Audio Device Ready
+- [`is_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream.md)
+  : Test if object is a audio_stream
 - [`is_audio_stream_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_playing.md)
   : Is Audio Stream Playing
 - [`is_audio_stream_processed()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_processed.md)
   : Is Audio Stream Processed
 - [`is_audio_stream_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_audio_stream_valid.md)
   : Is Audio Stream Valid
+- [`is_bone_info()`](https://jeroenjanssens.github.io/raylibr/reference/is_bone_info.md)
+  : Test if object is a bone_info
+- [`is_bounding_box()`](https://jeroenjanssens.github.io/raylibr/reference/is_bounding_box.md)
+  : Test if object is a bounding_box
+- [`is_camera_2d()`](https://jeroenjanssens.github.io/raylibr/reference/is_camera_2d.md)
+  : Test if object is a camera_2d
+- [`is_camera_3d()`](https://jeroenjanssens.github.io/raylibr/reference/is_camera_3d.md)
+  : Test if object is a camera_3d
+- [`is_color()`](https://jeroenjanssens.github.io/raylibr/reference/is_color.md)
+  : Test if object is a color
 - [`is_cursor_hidden()`](https://jeroenjanssens.github.io/raylibr/reference/is_cursor_hidden.md)
   : Is Cursor Hidden
 - [`is_cursor_on_screen()`](https://jeroenjanssens.github.io/raylibr/reference/is_cursor_on_screen.md)
@@ -2401,6 +2535,8 @@
   : Is File Extension
 - [`is_file_name_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_file_name_valid.md)
   : Is File Name Valid
+- [`is_font()`](https://jeroenjanssens.github.io/raylibr/reference/is_font.md)
+  : Test if object is a font
 - [`is_font_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_font_valid.md)
   : Is Font Valid
 - [`is_gamepad_available()`](https://jeroenjanssens.github.io/raylibr/reference/is_gamepad_available.md)
@@ -2415,6 +2551,10 @@
   : Is Gamepad Button Up
 - [`is_gesture_detected()`](https://jeroenjanssens.github.io/raylibr/reference/is_gesture_detected.md)
   : Is Gesture Detected
+- [`is_glyph_info()`](https://jeroenjanssens.github.io/raylibr/reference/is_glyph_info.md)
+  : Test if object is a glyph_info
+- [`is_image()`](https://jeroenjanssens.github.io/raylibr/reference/is_image.md)
+  : Test if object is a image
 - [`is_image_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_image_valid.md)
   : Is Image Valid
 - [`is_key_down()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_down.md)
@@ -2427,8 +2567,18 @@
   : Is Key Released
 - [`is_key_up()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_up.md)
   : Is Key Up
+- [`is_material()`](https://jeroenjanssens.github.io/raylibr/reference/is_material.md)
+  : Test if object is a material
+- [`is_material_map()`](https://jeroenjanssens.github.io/raylibr/reference/is_material_map.md)
+  : Test if object is a material_map
 - [`is_material_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_material_valid.md)
   : Is Material Valid
+- [`is_mesh()`](https://jeroenjanssens.github.io/raylibr/reference/is_mesh.md)
+  : Test if object is a mesh
+- [`is_model()`](https://jeroenjanssens.github.io/raylibr/reference/is_model.md)
+  : Test if object is a model
+- [`is_model_animation()`](https://jeroenjanssens.github.io/raylibr/reference/is_model_animation.md)
+  : Test if object is a model_animation
 - [`is_model_animation_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_model_animation_valid.md)
   : Is Model Animation Valid
 - [`is_model_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_model_valid.md)
@@ -2441,22 +2591,56 @@
   : Is Mouse Button Released
 - [`is_mouse_button_up()`](https://jeroenjanssens.github.io/raylibr/reference/is_mouse_button_up.md)
   : Is Mouse Button Up
+- [`is_music()`](https://jeroenjanssens.github.io/raylibr/reference/is_music.md)
+  : Test if object is a music
 - [`is_music_stream_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_music_stream_playing.md)
   : Is Music Stream Playing
 - [`is_music_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_music_valid.md)
   : Is Music Valid
+- [`is_n_patch_info()`](https://jeroenjanssens.github.io/raylibr/reference/is_n_patch_info.md)
+  : Test if object is a n_patch_info
 - [`is_path_file()`](https://jeroenjanssens.github.io/raylibr/reference/is_path_file.md)
   : Is Path File
+- [`is_ray()`](https://jeroenjanssens.github.io/raylibr/reference/is_ray.md)
+  : Test if object is a ray
+- [`is_ray_collision()`](https://jeroenjanssens.github.io/raylibr/reference/is_ray_collision.md)
+  : Test if object is a ray_collision
+- [`is_raylib_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/is_raylib_matrix.md)
+  : Test if object is a raylib matrix
+- [`is_rectangle()`](https://jeroenjanssens.github.io/raylibr/reference/is_rectangle.md)
+  : Test if object is a rectangle
+- [`is_render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/is_render_texture.md)
+  : Test if object is a render_texture
 - [`is_render_texture_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_render_texture_valid.md)
   : Is Render Texture Valid
+- [`is_shader()`](https://jeroenjanssens.github.io/raylibr/reference/is_shader.md)
+  : Test if object is a shader
 - [`is_shader_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_shader_valid.md)
   : Is Shader Valid
+- [`is_sound()`](https://jeroenjanssens.github.io/raylibr/reference/is_sound.md)
+  : Test if object is a sound
 - [`is_sound_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_sound_playing.md)
   : Is Sound Playing
 - [`is_sound_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_sound_valid.md)
   : Is Sound Valid
+- [`is_texture()`](https://jeroenjanssens.github.io/raylibr/reference/is_texture.md)
+  : Test if object is a texture
 - [`is_texture_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_texture_valid.md)
   : Is Texture Valid
+- [`is_transform()`](https://jeroenjanssens.github.io/raylibr/reference/is_transform.md)
+  : Test if object is a transform
+- [`is_vector_2()`](https://jeroenjanssens.github.io/raylibr/reference/is_vector_2.md)
+  : Test if object is a vector of length 2
+- [`is_vector_3()`](https://jeroenjanssens.github.io/raylibr/reference/is_vector_3.md)
+  : Test if object is a vector of length 3
+- [`is_vector_4()`](https://jeroenjanssens.github.io/raylibr/reference/is_vector_4.md)
+  : Test if object is a vector of length 4
+- [`is_vr_device_info()`](https://jeroenjanssens.github.io/raylibr/reference/is_vr_device_info.md)
+  : Test if object is a vr_device_info
+- [`is_vr_stereo_config()`](https://jeroenjanssens.github.io/raylibr/reference/is_vr_stereo_config.md)
+  : Test if object is a vr_stereo_config
+- [`is_wave()`](https://jeroenjanssens.github.io/raylibr/reference/is_wave.md)
+  : Test if object is a wave
 - [`is_wave_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_wave_valid.md)
   : Is Wave Valid
 - [`is_web()`](https://jeroenjanssens.github.io/raylibr/reference/is_web.md)
@@ -2477,6 +2661,8 @@
   : Is Window Resized
 - [`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md)
   : Is Window State
+- [`key`](https://jeroenjanssens.github.io/raylibr/reference/key.md) :
+  Key
 - [`load_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/load_audio_stream.md)
   : Load Audio Stream
 - [`load_file_text()`](https://jeroenjanssens.github.io/raylibr/reference/load_file_text.md)
@@ -2523,10 +2709,14 @@
   : Load Vr Stereo Config
 - [`load_wave()`](https://jeroenjanssens.github.io/raylibr/reference/load_wave.md)
   : Load Wave
+- [`log`](https://jeroenjanssens.github.io/raylibr/reference/log.md) :
+  log
 - [`make_directory()`](https://jeroenjanssens.github.io/raylibr/reference/make_directory.md)
   : Make Directory
 - [`material_map()`](https://jeroenjanssens.github.io/raylibr/reference/material_map.md)
   : Material Map
+- [`material_map_index`](https://jeroenjanssens.github.io/raylibr/reference/material_map_index.md)
+  : Material Map Index
 - [`matrix_add()`](https://jeroenjanssens.github.io/raylibr/reference/matrix_add.md)
   : Matrix Add
 - [`matrix_compose()`](https://jeroenjanssens.github.io/raylibr/reference/matrix_compose.md)
@@ -2581,10 +2771,12 @@
   : Measure Text Ex
 - [`minimize_window()`](https://jeroenjanssens.github.io/raylibr/reference/minimize_window.md)
   : Minimize Window
+- [`mouse_button`](https://jeroenjanssens.github.io/raylibr/reference/mouse_button.md)
+  : Mouse Button
+- [`mouse_cursor`](https://jeroenjanssens.github.io/raylibr/reference/mouse_cursor.md)
+  : Mouse Cursor
 - [`n_patch_info()`](https://jeroenjanssens.github.io/raylibr/reference/n_patch_info.md)
   : n Patch Info
-- [`npatch_info()`](https://jeroenjanssens.github.io/raylibr/reference/npatch_info.md)
-  : Npatch info
 - [`open_url()`](https://jeroenjanssens.github.io/raylibr/reference/open_url.md)
   : Open Url
 - [`pause_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/pause_audio_stream.md)
@@ -3031,6 +3223,8 @@
   : Set Window State
 - [`set_window_title()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_title.md)
   : Set Window Title
+- [`shader_uniform`](https://jeroenjanssens.github.io/raylibr/reference/shader_uniform.md)
+  : Shader Uniform
 - [`show_cursor()`](https://jeroenjanssens.github.io/raylibr/reference/show_cursor.md)
   : Show Cursor
 - [`start_automation_event_recording()`](https://jeroenjanssens.github.io/raylibr/reference/start_automation_event_recording.md)

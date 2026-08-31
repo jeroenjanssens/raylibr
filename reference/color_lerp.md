@@ -1,6 +1,6 @@
 # Color Lerp
 
-Get color lerp interpolation between two colors, factor 0.0f..1.0f.
+Get color lerp interpolation between two colors, factor \\0.0f..1.0f\\.
 
 ## Usage
 

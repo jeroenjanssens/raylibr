@@ -1,6 +1,6 @@
 # Draw Pixel
 
-Draw a pixel using geometry Can be slow, use with care.
+Draw a pixel using geometry \\Can be slow, use with care\\.
 
 ## Usage
 

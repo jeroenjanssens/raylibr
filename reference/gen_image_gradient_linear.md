@@ -1,7 +1,7 @@
 # Gen Image Gradient Linear
 
-Generate image: linear gradient, direction in degrees 0..360, 0=Vertical
-gradient.
+Generate image: linear gradient, direction in degrees \\0..360\\,
+0=Vertical gradient.
 
 ## Usage
 

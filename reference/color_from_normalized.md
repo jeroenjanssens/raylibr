@@ -1,6 +1,6 @@
 # Color From Normalized
 
-Get Color from normalized values 0..1.
+Get Color from normalized values \\0..1\\.
 
 ## Usage
 

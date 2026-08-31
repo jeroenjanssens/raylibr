@@ -1,6 +1,7 @@
 # Draw Pixel V
 
-Draw a pixel using geometry (Vector version) Can be slow, use with care.
+Draw a pixel using geometry (Vector version) \\Can be slow, use with
+care\\.
 
 ## Usage
 

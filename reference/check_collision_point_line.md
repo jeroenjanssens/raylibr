@@ -1,7 +1,7 @@
 # Check Collision Point Line
 
-Check if point belongs to line created between two points p1 and p2 with
-defined margin in pixels threshold.
+Check if point belongs to line created between two points \\p1\\ and
+\\p2\\ with defined margin in pixels \\threshold\\.
 
 ## Usage
 

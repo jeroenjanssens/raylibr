@@ -16,7 +16,7 @@ draw_texture_n_patch(texture, n_patch_info, dest, origin, rotation, tint)
 
 - n_patch_info:
 
-  An npatch_info.
+  An n_patch_info.
 
 - dest:
 

@@ -1,7 +1,7 @@
 # Check Collision Circle Line
 
-Check if circle collides with a line created betweeen two points p1 and
-p2.
+Check if circle collides with a line created betweeen two points \\p1\\
+and \\p2\\.
 
 ## Usage
 

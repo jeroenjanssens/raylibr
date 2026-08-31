@@ -1,6 +1,6 @@
 # Color Normalize
 
-Get Color normalized as float 0..1.
+Get Color normalized as float \\0..1\\.
 
 ## Usage
 

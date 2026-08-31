@@ -1,6 +1,6 @@
 # Set Window Opacity
 
-Set window opacity 0.0f..1.0f.
+Set window opacity \\0.0f..1.0f\\.
 
 ## Usage
 

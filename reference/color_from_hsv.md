@@ -1,6 +1,6 @@
 # Color From Hsv
 
-Get a Color from HSV values, hue 0..360, saturation/value 0..1.
+Get a Color from HSV values, hue \\0..360\\, saturation/value \\0..1\\.
 
 ## Usage
 
