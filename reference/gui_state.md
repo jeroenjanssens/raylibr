@@ -1,6 +1,6 @@
 # Gui State
 
-Enum values for gui_state.
+Enum values for `gui_state`.
 
 ## Usage
 
@@ -11,3 +11,13 @@ gui_state
 ## Format
 
 An object of class `list` of length 4.
+
+## Details
+
+|            |       |
+|------------|-------|
+| Name       | Value |
+| `normal`   | 0     |
+| `focused`  | 1     |
+| `pressed`  | 2     |
+| `disabled` | 3     |

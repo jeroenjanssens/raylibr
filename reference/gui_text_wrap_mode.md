@@ -1,6 +1,6 @@
 # Gui Text Wrap Mode
 
-Enum values for gui_text_wrap_mode.
+Enum values for `gui_text_wrap_mode`.
 
 ## Usage
 
@@ -11,3 +11,12 @@ gui_text_wrap_mode
 ## Format
 
 An object of class `list` of length 3.
+
+## Details
+
+|        |       |
+|--------|-------|
+| Name   | Value |
+| `none` | 0     |
+| `char` | 1     |
+| `word` | 2     |

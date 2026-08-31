@@ -1,6 +1,6 @@
 # Gui Combo Box Property
 
-Enum values for gui_combo_box_property.
+Enum values for `gui_combo_box_property`.
 
 ## Usage
 
@@ -11,3 +11,11 @@ gui_combo_box_property
 ## Format
 
 An object of class `list` of length 2.
+
+## Details
+
+|                        |       |
+|------------------------|-------|
+| Name                   | Value |
+| `combo_button_width`   | 16    |
+| `combo_button_spacing` | 17    |

@@ -1,6 +1,6 @@
 # Gui Result
 
-Enum values for gui_result.
+Enum values for `gui_result`.
 
 ## Usage
 
@@ -11,3 +11,13 @@ gui_result
 ## Format
 
 An object of class `list` of length 4.
+
+## Details
+
+|             |       |
+|-------------|-------|
+| Name        | Value |
+| `none`      | 0     |
+| `pressed`   | 1     |
+| `changed`   | 2     |
+| `tab_close` | 4     |

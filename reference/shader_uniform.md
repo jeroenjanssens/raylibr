@@ -1,6 +1,6 @@
 # Shader Uniform
 
-Enum values for shader_uniform.
+Enum values for `shader_uniform`.
 
 ## Usage
 
@@ -11,3 +11,22 @@ shader_uniform
 ## Format
 
 An object of class `list` of length 13.
+
+## Details
+
+|             |       |
+|-------------|-------|
+| Name        | Value |
+| `float`     | 0     |
+| `vec2`      | 1     |
+| `vec3`      | 2     |
+| `vec4`      | 3     |
+| `int`       | 4     |
+| `ivec2`     | 5     |
+| `ivec3`     | 6     |
+| `ivec4`     | 7     |
+| `uint`      | 8     |
+| `uivec2`    | 9     |
+| `uivec3`    | 10    |
+| `uivec4`    | 11    |
+| `sampler2d` | 12    |

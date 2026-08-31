@@ -1,6 +1,6 @@
 # Gui Text Box Property
 
-Enum values for gui_text_box_property.
+Enum values for `gui_text_box_property`.
 
 ## Usage
 
@@ -11,3 +11,10 @@ gui_text_box_property
 ## Format
 
 An object of class `list` of length 1.
+
+## Details
+
+|                 |       |
+|-----------------|-------|
+| Name            | Value |
+| `text_readonly` | 16    |
