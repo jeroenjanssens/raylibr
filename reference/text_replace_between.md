@@ -41,3 +41,11 @@ definition:
 
 Other between functions:
 [`get_text_between()`](https://jeroenjanssens.github.io/raylibr/reference/get_text_between.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+text_replace_between("Hello", "text", "text", "text")
+} # }
+```

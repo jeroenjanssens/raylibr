@@ -21,3 +21,13 @@ An object of class `list` of length 4.
 | `focused`  | 1     |
 | `pressed`  | 2     |
 | `disabled` | 3     |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gui_state$normal
+gui_state$focused
+gui_state$disabled
+} # }
+```

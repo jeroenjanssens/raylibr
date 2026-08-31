@@ -34,3 +34,11 @@ definition:
 Other index functions:
 [`get_glyph_index()`](https://jeroenjanssens.github.io/raylibr/reference/get_glyph_index.md),
 [`text_find_index()`](https://jeroenjanssens.github.io/raylibr/reference/text_find_index.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+file_text_find_index("file.png", "text")
+} # }
+```

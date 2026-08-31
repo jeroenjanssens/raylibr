@@ -36,3 +36,13 @@ definition:
         Color color;        // Material map color
         float value;        // Material map value
     } MaterialMap;
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+mat <- material_map(load_texture("file.png"), "red", 0.0)
+mat$texture
+mat$color
+} # }
+```

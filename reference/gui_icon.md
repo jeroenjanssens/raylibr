@@ -274,3 +274,13 @@ An object of class `list` of length 257.
 | `filetype_code_python`    | 254   |
 | `filetype_code_js`        | 255   |
 | `filetype_icon`           | 256   |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gui_icon$none
+gui_icon$cross_small
+gui_icon$filetype_icon
+} # }
+```

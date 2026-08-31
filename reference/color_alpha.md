@@ -28,3 +28,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     Color ColorAlpha(Color color, float alpha);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+color_alpha("red", 0.0)
+} # }
+```

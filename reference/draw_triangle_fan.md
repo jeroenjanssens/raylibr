@@ -112,3 +112,12 @@ Other draw functions:
 [`draw_triangle_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_lines.md),
 [`draw_triangle_strip()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_strip.md),
 [`draw_triangle_strip_3d()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_strip_3d.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+pts <- matrix(c(200, 250, 150, 250, 150, 200, 300, 300), ncol = 2)
+draw_triangle_fan(pts, "blue")
+} # }
+```

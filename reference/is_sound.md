@@ -17,3 +17,12 @@ is_sound(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+s <- load_sound("sound.wav")
+is_sound(s)
+} # }
+```

@@ -29,3 +29,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     Color ColorContrast(Color color, float contrast);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+color_contrast("red", 0.0)
+} # }
+```

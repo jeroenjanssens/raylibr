@@ -50,3 +50,11 @@ Other check functions:
 [`check_collision_point_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_point_triangle.md),
 [`check_collision_recs()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_recs.md),
 [`check_collision_spheres()`](https://jeroenjanssens.github.io/raylibr/reference/check_collision_spheres.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+check_collision_point_rec(c(100, 100), rectangle(10, 10, 200, 100))
+} # }
+```

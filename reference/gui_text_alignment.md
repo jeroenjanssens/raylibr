@@ -20,3 +20,13 @@ An object of class `list` of length 3.
 | `left`   | 0     |
 | `center` | 1     |
 | `right`  | 2     |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gui_text_alignment$left
+gui_text_alignment$center
+gui_text_alignment$right
+} # }
+```

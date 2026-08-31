@@ -38,3 +38,11 @@ Other quaternion functions:
 [`quaternion_to_euler()`](https://jeroenjanssens.github.io/raylibr/reference/quaternion_to_euler.md),
 [`quaternion_to_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/quaternion_to_matrix.md),
 [`quaternion_transform()`](https://jeroenjanssens.github.io/raylibr/reference/quaternion_transform.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+quaternion_identity()
+} # }
+```

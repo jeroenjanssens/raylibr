@@ -44,3 +44,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     Image GenImageChecked(int width, int height, int checksX, int checksY, Color col1, Color col2);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gen_image_checked(800L, 450L, 0L, 0L, "red", "red")
+} # }
+```

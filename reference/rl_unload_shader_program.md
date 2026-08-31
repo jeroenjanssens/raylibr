@@ -149,3 +149,11 @@ Other rlgl functions:
 [`rl_vertex2i()`](https://jeroenjanssens.github.io/raylibr/reference/rl_vertex2i.md),
 [`rl_vertex3f()`](https://jeroenjanssens.github.io/raylibr/reference/rl_vertex3f.md),
 [`rl_viewport()`](https://jeroenjanssens.github.io/raylibr/reference/rl_viewport.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+rl_unload_shader_program(0L)
+} # }
+```

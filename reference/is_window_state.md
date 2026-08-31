@@ -77,3 +77,11 @@ Other is functions:
 [`is_window_minimized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_minimized.md),
 [`is_window_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_ready.md),
 [`is_window_resized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_resized.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+is_window_state(0L)
+} # }
+```

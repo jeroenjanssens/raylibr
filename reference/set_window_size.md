@@ -73,3 +73,11 @@ Other set functions:
 [`set_window_position()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_position.md),
 [`set_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_state.md),
 [`set_window_title()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_title.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+set_window_size(800L, 450L)
+} # }
+```

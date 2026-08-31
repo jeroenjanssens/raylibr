@@ -38,3 +38,11 @@ Other begin functions:
 [`begin_shader_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_shader_mode.md),
 [`begin_texture_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_texture_mode.md),
 [`begin_vr_stereo_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_vr_stereo_mode.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+begin_mode_3d(camera_3d(c(0, 10, 10)))
+} # }
+```

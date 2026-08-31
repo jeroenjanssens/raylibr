@@ -29,3 +29,11 @@ definition:
 
 Other exists functions:
 [`file_exists()`](https://jeroenjanssens.github.io/raylibr/reference/file_exists.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+directory_exists("file.png")
+} # }
+```

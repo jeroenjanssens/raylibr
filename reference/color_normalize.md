@@ -24,3 +24,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     Vector4 ColorNormalize(Color color);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+color_normalize("red")
+} # }
+```

@@ -55,3 +55,11 @@ Other vector2 functions:
 [`vector2_subtract()`](https://jeroenjanssens.github.io/raylibr/reference/vector2_subtract.md),
 [`vector2_subtract_value()`](https://jeroenjanssens.github.io/raylibr/reference/vector2_subtract_value.md),
 [`vector2_zero()`](https://jeroenjanssens.github.io/raylibr/reference/vector2_zero.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+vector2_transform(c(100, 100), diag(4))
+} # }
+```

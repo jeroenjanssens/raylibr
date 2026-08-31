@@ -55,3 +55,13 @@ definition:
         float fovy;        // Camera field-of-view aperture in Y (degrees) in perspective, used as near plane height in world units in orthographic
         int projection;        // Camera projection: CAMERA_PERSPECTIVE or CAMERA_ORTHOGRAPHIC
     } Camera3D;
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+cam <- camera_3d(c(0, 5, 0))
+cam$position
+cam$target
+} # }
+```

@@ -34,3 +34,11 @@ definition:
 Other copy functions:
 [`image_copy()`](https://jeroenjanssens.github.io/raylibr/reference/image_copy.md),
 [`wave_copy()`](https://jeroenjanssens.github.io/raylibr/reference/wave_copy.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+file_copy("file.png", "file.png")
+} # }
+```

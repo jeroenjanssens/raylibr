@@ -36,3 +36,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     Mesh GenMeshKnot(float radius, float size, int radSeg, int sides);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gen_mesh_knot(50.0, 1.0, 0L, 0L)
+} # }
+```

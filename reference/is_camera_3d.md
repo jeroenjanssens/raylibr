@@ -17,3 +17,11 @@ is_camera_3d(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+is_camera_3d("not a camera_3d")
+} # }
+```

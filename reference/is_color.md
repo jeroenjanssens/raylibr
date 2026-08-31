@@ -17,3 +17,11 @@ is_color(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+is_color("not a color")
+} # }
+```

@@ -22,3 +22,11 @@ Other cursor functions:
 [`hide_cursor()`](https://jeroenjanssens.github.io/raylibr/reference/hide_cursor.md),
 [`set_mouse_cursor()`](https://jeroenjanssens.github.io/raylibr/reference/set_mouse_cursor.md),
 [`show_cursor()`](https://jeroenjanssens.github.io/raylibr/reference/show_cursor.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+enable_cursor()
+} # }
+```

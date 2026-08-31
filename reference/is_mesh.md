@@ -17,3 +17,12 @@ is_mesh(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+m <- gen_mesh_cube(1.0, 1.0, 1.0)
+is_mesh(m)
+} # }
+```

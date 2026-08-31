@@ -40,3 +40,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     Image GenImageGradientRadial(int width, int height, float density, Color inner, Color outer);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gen_image_gradient_radial(800L, 450L, 0.0, "red", "red")
+} # }
+```

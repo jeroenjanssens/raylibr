@@ -32,3 +32,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     char * TextInsert(const char * text, const char * insert, int position);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+text_insert("Hello", "text", 0L)
+} # }
+```

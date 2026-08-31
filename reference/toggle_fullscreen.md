@@ -20,3 +20,11 @@ definition:
 
 Other fullscreen functions:
 [`is_window_fullscreen()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_fullscreen.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+toggle_fullscreen()
+} # }
+```

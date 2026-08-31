@@ -47,3 +47,13 @@ definition:
 Other rectangle functions:
 [`draw_rectangle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle.md),
 [`get_shapes_texture_rectangle()`](https://jeroenjanssens.github.io/raylibr/reference/get_shapes_texture_rectangle.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+rec <- rectangle(0.0, 0.0, 200.0, 100.0)
+rec$x
+rec$y
+} # }
+```

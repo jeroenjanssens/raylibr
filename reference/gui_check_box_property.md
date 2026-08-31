@@ -18,3 +18,11 @@ An object of class `list` of length 1.
 |-----------------|-------|
 | Name            | Value |
 | `check_padding` | 16    |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gui_check_box_property$check_padding
+} # }
+```

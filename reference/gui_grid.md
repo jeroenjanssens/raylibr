@@ -91,3 +91,11 @@ Other gui functions:
 [`gui_value_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_value_box.md),
 [`gui_value_box_float()`](https://jeroenjanssens.github.io/raylibr/reference/gui_value_box_float.md),
 [`gui_window_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_window_box.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gui_grid(rectangle(10, 10, 200, 100), "Hello", 1.0, 0L, c(100, 100))
+} # }
+```

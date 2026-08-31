@@ -41,3 +41,11 @@ definition:
 
 Other plane functions:
 [`draw_plane()`](https://jeroenjanssens.github.io/raylibr/reference/draw_plane.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gen_mesh_plane(200.0, 100.0, 0L, 0L)
+} # }
+```

@@ -40,3 +40,11 @@ Other sphere functions:
 [`draw_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/draw_sphere.md),
 [`gen_mesh_hemi_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/gen_mesh_hemi_sphere.md),
 [`get_ray_collision_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_sphere.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gen_mesh_sphere(50.0, 8L, 16L)
+} # }
+```

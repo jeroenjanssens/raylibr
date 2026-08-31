@@ -17,3 +17,11 @@ eval_js(script)
 ## Value
 
 Character string result.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+eval_js("document.title")
+} # }
+```

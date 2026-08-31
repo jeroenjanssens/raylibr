@@ -27,3 +27,20 @@ run_game_loop(update_fn, init_fn = NULL, cleanup_fn = NULL)
 
   Optional function called after the loop ends (e.g., to call
   [`close_window()`](https://jeroenjanssens.github.io/raylibr/reference/close_window.md)).
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+run_game_loop(
+  update_fn = function() {
+    begin_drawing()
+    clear_background("white")
+    draw_text("Hello!", 100L, 100L, 20L, "black")
+    end_drawing()
+  },
+  init_fn = function() init_window(800L, 450L, "Game"),
+  cleanup_fn = function() close_window()
+)
+} # }
+```

@@ -62,3 +62,13 @@ Other vector3 functions:
 [`vector3_transform()`](https://jeroenjanssens.github.io/raylibr/reference/vector3_transform.md),
 [`vector3_unproject()`](https://jeroenjanssens.github.io/raylibr/reference/vector3_unproject.md),
 [`vector3_zero()`](https://jeroenjanssens.github.io/raylibr/reference/vector3_zero.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+result <- vector3_ortho_normalize(c(1, 0, 0), c(0, 1, 0))
+result$v1
+result$v2
+} # }
+```

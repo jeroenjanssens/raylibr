@@ -36,3 +36,11 @@ Other vector4 functions:
 [`vector4_scale()`](https://jeroenjanssens.github.io/raylibr/reference/vector4_scale.md),
 [`vector4_subtract()`](https://jeroenjanssens.github.io/raylibr/reference/vector4_subtract.md),
 [`vector4_subtract_value()`](https://jeroenjanssens.github.io/raylibr/reference/vector4_subtract_value.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+vector4_zero()
+} # }
+```

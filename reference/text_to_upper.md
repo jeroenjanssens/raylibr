@@ -24,3 +24,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     char * TextToUpper(const char * text);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+text_to_upper("Hello")
+} # }
+```

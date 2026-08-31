@@ -37,3 +37,11 @@ definition:
 
 Other cylinder functions:
 [`draw_cylinder()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cylinder.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gen_mesh_cylinder(50.0, 100.0, 16L)
+} # }
+```

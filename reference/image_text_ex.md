@@ -61,3 +61,11 @@ Other ex functions:
 [`get_world_to_screen_ex()`](https://jeroenjanssens.github.io/raylibr/reference/get_world_to_screen_ex.md),
 [`measure_text_ex()`](https://jeroenjanssens.github.io/raylibr/reference/measure_text_ex.md),
 [`update_model_animation_ex()`](https://jeroenjanssens.github.io/raylibr/reference/update_model_animation_ex.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+image_text_ex(get_font_default(), "Hello", 1.0, 1.0, "red")
+} # }
+```

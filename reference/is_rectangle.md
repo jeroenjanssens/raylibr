@@ -17,3 +17,11 @@ is_rectangle(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+is_rectangle("not a rectangle")
+} # }
+```

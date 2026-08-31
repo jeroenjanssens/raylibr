@@ -41,3 +41,11 @@ Other stream functions:
 Other update functions:
 [`update_model_animation()`](https://jeroenjanssens.github.io/raylibr/reference/update_model_animation.md),
 [`update_model_animation_ex()`](https://jeroenjanssens.github.io/raylibr/reference/update_model_animation_ex.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+update_music_stream(load_music_stream("music.mp3"))
+} # }
+```

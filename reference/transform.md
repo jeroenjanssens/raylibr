@@ -36,3 +36,13 @@ definition:
         Quaternion rotation;        // Rotation
         Vector3 scale;        // Scale
     } Transform;
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+tra <- transform(c(0, 0, 0), c(0, 0, 0, 1), c(1, 1, 1))
+tra$translation
+tra$rotation
+} # }
+```

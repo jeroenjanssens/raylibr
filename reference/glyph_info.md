@@ -46,3 +46,13 @@ definition:
         int advanceX;        // Character advance position X
         Image image;        // Character image data
     } GlyphInfo;
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gly <- glyph_info(0L, 0L, 0L, 0L, gen_image_color(100, 100, "blue"))
+gly$value
+gly$offset_x
+} # }
+```

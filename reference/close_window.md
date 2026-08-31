@@ -26,3 +26,11 @@ Other window functions:
 Other close functions:
 [`close_audio_device()`](https://jeroenjanssens.github.io/raylibr/reference/close_audio_device.md),
 [`window_should_close()`](https://jeroenjanssens.github.io/raylibr/reference/window_should_close.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+close_window()
+} # }
+```

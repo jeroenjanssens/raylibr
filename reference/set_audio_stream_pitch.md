@@ -72,3 +72,11 @@ Other set functions:
 [`set_window_size()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_size.md),
 [`set_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_state.md),
 [`set_window_title()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_title.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+set_audio_stream_pitch(load_audio_stream(44100L, 16L, 1L), 1.0)
+} # }
+```

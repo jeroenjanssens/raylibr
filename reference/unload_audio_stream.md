@@ -52,3 +52,11 @@ Other unload functions:
 [`unload_texture()`](https://jeroenjanssens.github.io/raylibr/reference/unload_texture.md),
 [`unload_vr_stereo_config()`](https://jeroenjanssens.github.io/raylibr/reference/unload_vr_stereo_config.md),
 [`unload_wave()`](https://jeroenjanssens.github.io/raylibr/reference/unload_wave.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+unload_audio_stream(load_audio_stream(44100L, 16L, 1L))
+} # }
+```

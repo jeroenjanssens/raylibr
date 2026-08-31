@@ -48,3 +48,11 @@ Other unload functions:
 [`unload_sound_alias()`](https://jeroenjanssens.github.io/raylibr/reference/unload_sound_alias.md),
 [`unload_vr_stereo_config()`](https://jeroenjanssens.github.io/raylibr/reference/unload_vr_stereo_config.md),
 [`unload_wave()`](https://jeroenjanssens.github.io/raylibr/reference/unload_wave.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+unload_texture(load_texture("file.png"))
+} # }
+```

@@ -30,3 +30,11 @@ definition:
 Other copy functions:
 [`file_copy()`](https://jeroenjanssens.github.io/raylibr/reference/file_copy.md),
 [`wave_copy()`](https://jeroenjanssens.github.io/raylibr/reference/wave_copy.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+image_copy(gen_image_color(100, 100, "blue"))
+} # }
+```

@@ -17,3 +17,11 @@ is_material_map(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+is_material_map("not a material_map")
+} # }
+```

@@ -17,3 +17,12 @@ is_wave(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+w <- load_wave("sound.wav")
+is_wave(w)
+} # }
+```

@@ -17,3 +17,12 @@ is_shader(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+s <- load_shader("", "shader.fs")
+is_shader(s)
+} # }
+```

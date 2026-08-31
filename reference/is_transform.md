@@ -17,3 +17,11 @@ is_transform(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+is_transform("not a transform")
+} # }
+```

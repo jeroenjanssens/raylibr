@@ -23,3 +23,13 @@ An object of class `list` of length 6.
 | `scroll_slider_size`    | 19    |
 | `scroll_padding`        | 20    |
 | `scroll_speed`          | 21    |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gui_scroll_bar_property$arrows_size
+gui_scroll_bar_property$scroll_slider_padding
+gui_scroll_bar_property$scroll_speed
+} # }
+```

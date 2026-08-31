@@ -25,3 +25,11 @@ definition:
 Other close functions:
 [`close_audio_device()`](https://jeroenjanssens.github.io/raylibr/reference/close_audio_device.md),
 [`close_window()`](https://jeroenjanssens.github.io/raylibr/reference/close_window.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+window_should_close()
+} # }
+```

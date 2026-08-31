@@ -17,3 +17,11 @@ is_model_animation(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+is_model_animation(x)
+} # }
+```

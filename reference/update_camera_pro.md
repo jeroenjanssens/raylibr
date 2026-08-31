@@ -42,3 +42,12 @@ Other camera functions:
 [`get_camera_up()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_up.md),
 [`get_camera_view_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/get_camera_view_matrix.md),
 [`update_camera()`](https://jeroenjanssens.github.io/raylibr/reference/update_camera.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+cam <- camera_3d(c(0, 10, 10))
+update_camera_pro(cam, c(0, 0, 0), c(0, 0, 0), 1.0)
+} # }
+```

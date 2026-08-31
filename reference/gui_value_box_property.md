@@ -19,3 +19,12 @@ An object of class `list` of length 2.
 | Name                     | Value |
 | `spinner_button_width`   | 16    |
 | `spinner_button_spacing` | 17    |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gui_value_box_property$spinner_button_width
+gui_value_box_property$spinner_button_spacing
+} # }
+```

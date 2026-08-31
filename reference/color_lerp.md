@@ -32,3 +32,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     Color ColorLerp(Color color1, Color color2, float factor);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+color_lerp("red", "red", 0.0)
+} # }
+```

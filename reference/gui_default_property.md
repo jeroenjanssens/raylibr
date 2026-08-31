@@ -25,3 +25,13 @@ An object of class `list` of length 8.
 | `text_alignment_vertical` | 21    |
 | `text_wrap_mode`          | 22    |
 | `extprop08`               | 23    |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gui_default_property$text_size
+gui_default_property$background_color
+gui_default_property$extprop08
+} # }
+```

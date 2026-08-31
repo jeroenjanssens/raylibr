@@ -34,3 +34,12 @@ Other wave functions:
 [`load_wave()`](https://jeroenjanssens.github.io/raylibr/reference/load_wave.md),
 [`unload_wave()`](https://jeroenjanssens.github.io/raylibr/reference/unload_wave.md),
 [`wave_crop()`](https://jeroenjanssens.github.io/raylibr/reference/wave_crop.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+w <- load_wave("sound.wav")
+wave_format(w, 44100L, 16L, 1L)
+} # }
+```

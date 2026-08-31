@@ -22,3 +22,11 @@ Other device functions:
 
 Other init functions:
 [`init_window()`](https://jeroenjanssens.github.io/raylibr/reference/init_window.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+init_audio_device()
+} # }
+```

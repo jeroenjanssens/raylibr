@@ -153,3 +153,11 @@ Other rlgl functions:
 [`rl_vertex2f()`](https://jeroenjanssens.github.io/raylibr/reference/rl_vertex2f.md),
 [`rl_vertex3f()`](https://jeroenjanssens.github.io/raylibr/reference/rl_vertex3f.md),
 [`rl_viewport()`](https://jeroenjanssens.github.io/raylibr/reference/rl_viewport.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+rl_vertex2i(100L, 100L)
+} # }
+```

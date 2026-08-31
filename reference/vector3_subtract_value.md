@@ -62,3 +62,11 @@ Other vector3 functions:
 [`vector3_transform()`](https://jeroenjanssens.github.io/raylibr/reference/vector3_transform.md),
 [`vector3_unproject()`](https://jeroenjanssens.github.io/raylibr/reference/vector3_unproject.md),
 [`vector3_zero()`](https://jeroenjanssens.github.io/raylibr/reference/vector3_zero.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+vector3_subtract_value(c(0, 0, 0), 0.0)
+} # }
+```

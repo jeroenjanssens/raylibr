@@ -29,3 +29,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     Color ColorBrightness(Color color, float factor);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+color_brightness("red", 0.0)
+} # }
+```

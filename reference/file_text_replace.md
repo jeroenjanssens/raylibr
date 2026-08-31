@@ -37,3 +37,11 @@ definition:
 
 Other replace functions:
 [`text_replace()`](https://jeroenjanssens.github.io/raylibr/reference/text_replace.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+file_text_replace("file.png", "text", "text")
+} # }
+```

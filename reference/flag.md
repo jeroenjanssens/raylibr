@@ -33,3 +33,13 @@ An object of class `list` of length 16.
 | `borderless_windowed_mode` | 32768 |
 | `msaa_4x_hint`             | 32    |
 | `interlaced_hint`          | 65536 |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+flag$vsync_hint
+flag$window_unfocused
+flag$interlaced_hint
+} # }
+```

@@ -28,3 +28,13 @@ An object of class `list` of length 11.
 | `resize_nesw`   | 8     |
 | `resize_all`    | 9     |
 | `not_allowed`   | 10    |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+mouse_cursor$default
+mouse_cursor$resize_ew
+mouse_cursor$not_allowed
+} # }
+```

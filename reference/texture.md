@@ -59,3 +59,13 @@ Other texture functions:
 [`set_shapes_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_shapes_texture.md),
 [`unload_render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/unload_render_texture.md),
 [`unload_texture()`](https://jeroenjanssens.github.io/raylibr/reference/unload_texture.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+tex <- texture(0L, 800L, 450L, 0L, 0L)
+tex$id
+tex$width
+} # }
+```

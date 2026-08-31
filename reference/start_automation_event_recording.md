@@ -19,3 +19,11 @@ definition:
 
 Other recording functions:
 [`stop_automation_event_recording()`](https://jeroenjanssens.github.io/raylibr/reference/stop_automation_event_recording.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+start_automation_event_recording()
+} # }
+```

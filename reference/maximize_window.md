@@ -22,3 +22,11 @@ Other window functions:
 [`init_window()`](https://jeroenjanssens.github.io/raylibr/reference/init_window.md),
 [`minimize_window()`](https://jeroenjanssens.github.io/raylibr/reference/minimize_window.md),
 [`restore_window()`](https://jeroenjanssens.github.io/raylibr/reference/restore_window.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+maximize_window()
+} # }
+```

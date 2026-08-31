@@ -40,3 +40,11 @@ Other unload functions:
 [`unload_sound_alias()`](https://jeroenjanssens.github.io/raylibr/reference/unload_sound_alias.md),
 [`unload_texture()`](https://jeroenjanssens.github.io/raylibr/reference/unload_texture.md),
 [`unload_wave()`](https://jeroenjanssens.github.io/raylibr/reference/unload_wave.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+unload_vr_stereo_config(config)
+} # }
+```

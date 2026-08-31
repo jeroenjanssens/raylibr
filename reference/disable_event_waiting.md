@@ -19,3 +19,11 @@ definition:
 
 Other waiting functions:
 [`enable_event_waiting()`](https://jeroenjanssens.github.io/raylibr/reference/enable_event_waiting.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+disable_event_waiting()
+} # }
+```

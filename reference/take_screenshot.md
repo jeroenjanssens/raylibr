@@ -21,3 +21,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     void TakeScreenshot(const char * fileName);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+take_screenshot("file.png")
+} # }
+```

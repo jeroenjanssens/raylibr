@@ -40,3 +40,11 @@ Other image functions:
 [`load_image()`](https://jeroenjanssens.github.io/raylibr/reference/load_image.md),
 [`load_texture_from_image()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture_from_image.md),
 [`unload_image()`](https://jeroenjanssens.github.io/raylibr/reference/unload_image.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+image_from_image(gen_image_color(100, 100, "blue"), rectangle(10, 10, 200, 100))
+} # }
+```

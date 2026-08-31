@@ -28,3 +28,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     Color ColorTint(Color color, Color tint);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+color_tint("red", "red")
+} # }
+```

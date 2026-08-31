@@ -32,3 +32,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     Mesh GenMeshCone(float radius, float height, int slices);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gen_mesh_cone(50.0, 100.0, 16L)
+} # }
+```

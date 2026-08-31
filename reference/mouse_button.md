@@ -24,3 +24,13 @@ An object of class `list` of length 7.
 | `extra`   | 4     |
 | `forward` | 5     |
 | `back`    | 6     |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+mouse_button$left
+mouse_button$side
+mouse_button$back
+} # }
+```

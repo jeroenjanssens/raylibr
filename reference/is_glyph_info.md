@@ -17,3 +17,11 @@ is_glyph_info(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+is_glyph_info("not a glyph_info")
+} # }
+```

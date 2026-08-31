@@ -33,3 +33,13 @@ An object of class `list` of length 16.
 | `colorpicker` | 13    |
 | `scrollbar`   | 14    |
 | `statusbar`   | 15    |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gui_control$default
+gui_control$combobox
+gui_control$statusbar
+} # }
+```

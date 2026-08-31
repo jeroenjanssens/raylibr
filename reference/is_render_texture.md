@@ -17,3 +17,11 @@ is_render_texture(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+is_render_texture("not a render_texture")
+} # }
+```

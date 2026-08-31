@@ -25,3 +25,13 @@ An object of class `list` of length 8.
 | `error`   | 5     |
 | `fatal`   | 6     |
 | `none`    | 7     |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+log$all
+log$info
+log$none
+} # }
+```

@@ -48,3 +48,13 @@ Other color functions:
 [`gen_image_color()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_color.md),
 [`get_color()`](https://jeroenjanssens.github.io/raylibr/reference/get_color.md),
 [`get_image_color()`](https://jeroenjanssens.github.io/raylibr/reference/get_image_color.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+col <- color(255L, 255L, 255L)
+col$r
+col$g
+} # }
+```

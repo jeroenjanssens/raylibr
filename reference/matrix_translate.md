@@ -53,3 +53,11 @@ Other matrix functions:
 [`matrix_trace()`](https://jeroenjanssens.github.io/raylibr/reference/matrix_trace.md),
 [`matrix_transpose()`](https://jeroenjanssens.github.io/raylibr/reference/matrix_transpose.md),
 [`set_shader_value_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/set_shader_value_matrix.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+matrix_translate(0.0, 0.0, 0.0)
+} # }
+```

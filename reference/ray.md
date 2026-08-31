@@ -37,3 +37,13 @@ definition:
 Other ray functions:
 [`draw_ray()`](https://jeroenjanssens.github.io/raylibr/reference/draw_ray.md),
 [`get_screen_to_world_ray()`](https://jeroenjanssens.github.io/raylibr/reference/get_screen_to_world_ray.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+ray <- ray(c(0, 5, 0), c(0, 0, 0))
+ray$position
+ray$direction
+} # }
+```

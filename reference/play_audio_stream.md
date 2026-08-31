@@ -41,3 +41,11 @@ Other stream functions:
 Other play functions:
 [`play_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/play_music_stream.md),
 [`play_sound()`](https://jeroenjanssens.github.io/raylibr/reference/play_sound.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+play_audio_stream(load_audio_stream(44100L, 16L, 1L))
+} # }
+```

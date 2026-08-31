@@ -31,3 +31,13 @@ definition:
         Vector3 min;        // Minimum vertex box-corner
         Vector3 max;        // Maximum vertex box-corner
     } BoundingBox;
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+bou <- bounding_box(c(0, 0, 0), c(0, 0, 0))
+bou$min
+bou$max
+} # }
+```

@@ -17,3 +17,11 @@ is_texture(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+is_texture("not a texture")
+} # }
+```

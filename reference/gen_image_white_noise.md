@@ -37,3 +37,11 @@ definition:
 
 Other noise functions:
 [`gen_image_perlin_noise()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_perlin_noise.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gen_image_white_noise(800L, 450L, 0.0)
+} # }
+```

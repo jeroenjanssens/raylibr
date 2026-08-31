@@ -21,3 +21,13 @@ An object of class `list` of length 4.
 | `dropdown_items_spacing` | 17    |
 | `dropdown_arrow_hidden`  | 18    |
 | `dropdown_roll_up`       | 19    |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gui_dropdown_box_property$arrow_padding
+gui_dropdown_box_property$dropdown_items_spacing
+gui_dropdown_box_property$dropdown_roll_up
+} # }
+```

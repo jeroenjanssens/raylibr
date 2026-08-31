@@ -30,3 +30,13 @@ An object of class `list` of length 13.
 | `uivec3`    | 10    |
 | `uivec4`    | 11    |
 | `sampler2d` | 12    |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+shader_uniform$float
+shader_uniform$ivec3
+shader_uniform$sampler2d
+} # }
+```

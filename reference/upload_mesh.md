@@ -27,3 +27,12 @@ Other mesh functions:
 [`get_ray_collision_mesh()`](https://jeroenjanssens.github.io/raylibr/reference/get_ray_collision_mesh.md),
 [`load_model_from_mesh()`](https://jeroenjanssens.github.io/raylibr/reference/load_model_from_mesh.md),
 [`unload_mesh()`](https://jeroenjanssens.github.io/raylibr/reference/unload_mesh.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+mesh <- gen_mesh_cube(1.0, 1.0, 1.0)
+upload_mesh(mesh, FALSE)
+} # }
+```

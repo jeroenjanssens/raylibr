@@ -131,3 +131,11 @@ Other get functions:
 [`get_working_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_working_directory.md),
 [`get_world_to_screen()`](https://jeroenjanssens.github.io/raylibr/reference/get_world_to_screen.md),
 [`get_world_to_screen_ex()`](https://jeroenjanssens.github.io/raylibr/reference/get_world_to_screen_ex.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+get_world_to_screen_2d(c(100, 100), camera_2d(c(400, 300), c(0, 0)))
+} # }
+```

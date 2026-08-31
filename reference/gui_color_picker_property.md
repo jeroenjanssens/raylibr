@@ -22,3 +22,13 @@ An object of class `list` of length 5.
 | `huebar_padding`           | 18    |
 | `huebar_selector_height`   | 19    |
 | `huebar_selector_overflow` | 20    |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gui_color_picker_property$color_selector_size
+gui_color_picker_property$huebar_padding
+gui_color_picker_property$huebar_selector_overflow
+} # }
+```

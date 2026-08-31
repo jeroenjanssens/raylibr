@@ -34,3 +34,11 @@ definition:
 Other update functions:
 [`update_model_animation_ex()`](https://jeroenjanssens.github.io/raylibr/reference/update_model_animation_ex.md),
 [`update_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/update_music_stream.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+update_model_animation(load_model("model.obj"), anim, 0.0)
+} # }
+```

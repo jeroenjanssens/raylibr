@@ -33,3 +33,11 @@ Other sound functions:
 Other pause functions:
 [`pause_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/pause_audio_stream.md),
 [`pause_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/pause_music_stream.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+pause_sound(load_sound("sound.wav"))
+} # }
+```

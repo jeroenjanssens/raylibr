@@ -41,3 +41,11 @@ Other stream functions:
 [`unload_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/unload_audio_stream.md),
 [`unload_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/unload_music_stream.md),
 [`update_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/update_music_stream.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+seek_music_stream(load_music_stream("music.mp3"), 0.0)
+} # }
+```

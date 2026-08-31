@@ -17,3 +17,12 @@ is_raylib_matrix(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+is_raylib_matrix(diag(4))
+is_raylib_matrix(matrix(1:9, 3, 3))
+} # }
+```

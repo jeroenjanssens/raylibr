@@ -32,3 +32,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     Image GenImageCellular(int width, int height, int tileSize);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gen_image_cellular(800L, 450L, 32L)
+} # }
+```

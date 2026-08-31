@@ -34,3 +34,11 @@ definition:
 
 Other move functions:
 [`get_mouse_wheel_move()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_wheel_move.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+file_move("file.png", "file.png")
+} # }
+```

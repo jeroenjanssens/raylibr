@@ -43,3 +43,11 @@ Other text functions:
 [`measure_text()`](https://jeroenjanssens.github.io/raylibr/reference/measure_text.md),
 [`save_file_text()`](https://jeroenjanssens.github.io/raylibr/reference/save_file_text.md),
 [`set_clipboard_text()`](https://jeroenjanssens.github.io/raylibr/reference/set_clipboard_text.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+image_text("Hello", 20L, "red")
+} # }
+```

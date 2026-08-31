@@ -45,3 +45,11 @@ Other matrix functions:
 [`matrix_trace()`](https://jeroenjanssens.github.io/raylibr/reference/matrix_trace.md),
 [`matrix_translate()`](https://jeroenjanssens.github.io/raylibr/reference/matrix_translate.md),
 [`set_shader_value_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/set_shader_value_matrix.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+matrix_transpose(diag(4))
+} # }
+```

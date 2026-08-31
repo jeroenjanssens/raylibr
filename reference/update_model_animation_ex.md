@@ -65,3 +65,11 @@ Other ex functions:
 Other update functions:
 [`update_model_animation()`](https://jeroenjanssens.github.io/raylibr/reference/update_model_animation.md),
 [`update_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/update_music_stream.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+update_model_animation_ex(load_model("model.obj"), anim, 0.0, anim, 0.0, 0.0)
+} # }
+```

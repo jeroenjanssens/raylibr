@@ -44,3 +44,11 @@ Other export functions:
 [`export_mesh()`](https://jeroenjanssens.github.io/raylibr/reference/export_mesh.md),
 [`export_wave()`](https://jeroenjanssens.github.io/raylibr/reference/export_wave.md),
 [`export_wave_as_code()`](https://jeroenjanssens.github.io/raylibr/reference/export_wave_as_code.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+export_mesh_as_code(gen_mesh_cube(1.0, 1.0, 1.0), "file.png")
+} # }
+```

@@ -112,3 +112,14 @@ Other gui functions:
 [`gui_value_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_value_box.md),
 [`gui_value_box_float()`](https://jeroenjanssens.github.io/raylibr/reference/gui_value_box_float.md),
 [`gui_window_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_window_box.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gui_text_input_box(
+  rectangle(100, 100, 400, 200), "Title", "Enter text:",
+  "", 256L, "Ok;Cancel", 0L, FALSE
+)
+} # }
+```

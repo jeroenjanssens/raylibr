@@ -33,3 +33,11 @@ Other sound functions:
 Other play functions:
 [`play_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/play_audio_stream.md),
 [`play_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/play_music_stream.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+play_sound(load_sound("sound.wav"))
+} # }
+```

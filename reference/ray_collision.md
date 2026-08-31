@@ -41,3 +41,13 @@ definition:
         Vector3 point;        // Point of the nearest hit
         Vector3 normal;        // Surface normal of hit
     } RayCollision;
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+ray <- ray_collision(TRUE, 1.0, c(0, 0, 0), c(0, 0, 0))
+ray$hit
+ray$distance
+} # }
+```

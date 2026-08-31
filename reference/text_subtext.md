@@ -32,3 +32,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     const char * TextSubtext(const char * text, int position, int length);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+text_subtext("Hello", 0L, 0L)
+} # }
+```

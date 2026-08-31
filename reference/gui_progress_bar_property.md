@@ -19,3 +19,12 @@ An object of class `list` of length 2.
 | Name               | Value |
 | `progress_padding` | 16    |
 | `progress_side`    | 17    |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gui_progress_bar_property$progress_padding
+gui_progress_bar_property$progress_side
+} # }
+```

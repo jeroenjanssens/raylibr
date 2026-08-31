@@ -126,3 +126,13 @@ An object of class `list` of length 109.
 | `menu`          | 5     |
 | `volume_up`     | 24    |
 | `volume_down`   | 25    |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+key$apostrophe
+key$right
+key$volume_down
+} # }
+```

@@ -33,3 +33,11 @@ Other sound functions:
 Other resume functions:
 [`resume_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/resume_audio_stream.md),
 [`resume_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/resume_music_stream.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+resume_sound(load_sound("sound.wav"))
+} # }
+```

@@ -87,3 +87,11 @@ Other is functions:
 [`is_window_ready()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_ready.md),
 [`is_window_resized()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_resized.md),
 [`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+is_image_valid(gen_image_color(100, 100, "blue"))
+} # }
+```

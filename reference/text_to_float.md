@@ -34,3 +34,11 @@ Other float functions:
 [`float_normalize()`](https://jeroenjanssens.github.io/raylibr/reference/float_normalize.md),
 [`float_remap()`](https://jeroenjanssens.github.io/raylibr/reference/float_remap.md),
 [`float_wrap()`](https://jeroenjanssens.github.io/raylibr/reference/float_wrap.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+text_to_float("Hello")
+} # }
+```

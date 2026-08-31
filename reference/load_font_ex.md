@@ -34,3 +34,11 @@ definition:
 Other font functions:
 [`load_font()`](https://jeroenjanssens.github.io/raylibr/reference/load_font.md),
 [`unload_font()`](https://jeroenjanssens.github.io/raylibr/reference/unload_font.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+font <- load_font_ex("myfont.ttf", 32L)
+} # }
+```

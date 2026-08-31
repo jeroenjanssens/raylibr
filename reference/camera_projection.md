@@ -19,3 +19,12 @@ An object of class `list` of length 2.
 | Name           | Value |
 | `perspective`  | 0     |
 | `orthographic` | 1     |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+camera_projection$perspective
+camera_projection$orthographic
+} # }
+```

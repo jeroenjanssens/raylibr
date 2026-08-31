@@ -152,3 +152,11 @@ Other get functions:
 [`get_working_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_working_directory.md),
 [`get_world_to_screen()`](https://jeroenjanssens.github.io/raylibr/reference/get_world_to_screen.md),
 [`get_world_to_screen_2d()`](https://jeroenjanssens.github.io/raylibr/reference/get_world_to_screen_2d.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+get_world_to_screen_ex(c(0, 5, 0), camera_3d(c(0, 10, 10)), 800L, 450L)
+} # }
+```

@@ -17,3 +17,12 @@ is_music(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+m <- load_music_stream("music.mp3")
+is_music(m)
+} # }
+```

@@ -83,3 +83,11 @@ Other set functions:
 [`set_window_size()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_size.md),
 [`set_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_state.md),
 [`set_window_title()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_title.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+set_shader_value_texture(load_shader("", "shader.fs"), 0L, load_texture("file.png"))
+} # }
+```

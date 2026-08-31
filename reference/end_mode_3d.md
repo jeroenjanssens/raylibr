@@ -32,3 +32,11 @@ Other end functions:
 [`end_shader_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_shader_mode.md),
 [`end_texture_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_texture_mode.md),
 [`end_vr_stereo_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_vr_stereo_mode.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+end_mode_3d()
+} # }
+```

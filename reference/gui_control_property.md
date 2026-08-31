@@ -33,3 +33,13 @@ An object of class `list` of length 16.
 | `text_padding`          | 13    |
 | `text_alignment`        | 14    |
 | `baseprop16`            | 15    |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gui_control_property$border_color_normal
+gui_control_property$base_color_pressed
+gui_control_property$baseprop16
+} # }
+```

@@ -67,3 +67,11 @@ Other load functions:
 [`load_texture_from_image()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture_from_image.md),
 [`load_vr_stereo_config()`](https://jeroenjanssens.github.io/raylibr/reference/load_vr_stereo_config.md),
 [`load_wave()`](https://jeroenjanssens.github.io/raylibr/reference/load_wave.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+load_font_from_image(gen_image_color(100, 100, "blue"), "red", 0L)
+} # }
+```

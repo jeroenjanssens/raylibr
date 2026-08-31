@@ -17,3 +17,11 @@ is_vr_stereo_config(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+is_vr_stereo_config(x)
+} # }
+```

@@ -28,3 +28,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     Mesh GenMeshCubicmap(Image cubicmap, Vector3 cubeSize);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gen_mesh_cubicmap(gen_image_color(100, 100, "blue"), c(1, 1, 1))
+} # }
+```

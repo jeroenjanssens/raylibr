@@ -42,3 +42,11 @@ Other begin functions:
 [`begin_scissor_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_scissor_mode.md),
 [`begin_texture_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_texture_mode.md),
 [`begin_vr_stereo_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_vr_stereo_mode.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+begin_shader_mode(load_shader("", "shader.fs"))
+} # }
+```

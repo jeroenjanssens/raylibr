@@ -34,3 +34,11 @@ Other stop functions:
 [`stop_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/stop_audio_stream.md),
 [`stop_automation_event_recording()`](https://jeroenjanssens.github.io/raylibr/reference/stop_automation_event_recording.md),
 [`stop_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/stop_music_stream.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+stop_sound(load_sound("sound.wav"))
+} # }
+```

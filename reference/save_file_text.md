@@ -40,3 +40,11 @@ Other text functions:
 [`load_file_text()`](https://jeroenjanssens.github.io/raylibr/reference/load_file_text.md),
 [`measure_text()`](https://jeroenjanssens.github.io/raylibr/reference/measure_text.md),
 [`set_clipboard_text()`](https://jeroenjanssens.github.io/raylibr/reference/set_clipboard_text.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+save_file_text("file.png", "Hello")
+} # }
+```

@@ -17,3 +17,12 @@ is_model(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+m <- load_model("model.obj")
+is_model(m)
+} # }
+```

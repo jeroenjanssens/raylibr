@@ -22,3 +22,13 @@ An object of class `list` of length 5.
 | `orbital`      | 2     |
 | `first_person` | 3     |
 | `third_person` | 4     |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+camera_mode$custom
+camera_mode$orbital
+camera_mode$third_person
+} # }
+```

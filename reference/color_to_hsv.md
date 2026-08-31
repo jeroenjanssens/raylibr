@@ -29,3 +29,11 @@ definition:
 
 Other hsv functions:
 [`color_from_hsv()`](https://jeroenjanssens.github.io/raylibr/reference/color_from_hsv.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+color_to_hsv("red")
+} # }
+```

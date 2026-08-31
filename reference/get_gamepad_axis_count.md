@@ -127,3 +127,11 @@ Other get functions:
 [`get_world_to_screen()`](https://jeroenjanssens.github.io/raylibr/reference/get_world_to_screen.md),
 [`get_world_to_screen_2d()`](https://jeroenjanssens.github.io/raylibr/reference/get_world_to_screen_2d.md),
 [`get_world_to_screen_ex()`](https://jeroenjanssens.github.io/raylibr/reference/get_world_to_screen_ex.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+get_gamepad_axis_count(0L)
+} # }
+```

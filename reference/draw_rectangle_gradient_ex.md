@@ -150,3 +150,11 @@ Other draw functions:
 [`draw_triangle_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_lines.md),
 [`draw_triangle_strip()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_strip.md),
 [`draw_triangle_strip_3d()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_strip_3d.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+draw_rectangle_gradient_ex(rectangle(10, 10, 200, 100), "red", "red", "red", "red")
+} # }
+```

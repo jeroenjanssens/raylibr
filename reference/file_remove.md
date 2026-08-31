@@ -24,3 +24,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     int FileRemove(const char * fileName);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+file_remove("file.png")
+} # }
+```

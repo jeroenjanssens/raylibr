@@ -18,3 +18,11 @@ raylibr_resource(name)
 ## Value
 
 Full path to the resource file.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+raylibr_resource("texture.png")
+} # }
+```

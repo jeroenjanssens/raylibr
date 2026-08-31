@@ -30,3 +30,11 @@ definition:
 Other copy functions:
 [`file_copy()`](https://jeroenjanssens.github.io/raylibr/reference/file_copy.md),
 [`image_copy()`](https://jeroenjanssens.github.io/raylibr/reference/image_copy.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+wave_copy(load_wave("sound.wav"))
+} # }
+```

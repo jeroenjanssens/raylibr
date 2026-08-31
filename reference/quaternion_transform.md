@@ -48,3 +48,11 @@ Other quaternion functions:
 [`quaternion_to_axis_angle()`](https://jeroenjanssens.github.io/raylibr/reference/quaternion_to_axis_angle.md),
 [`quaternion_to_euler()`](https://jeroenjanssens.github.io/raylibr/reference/quaternion_to_euler.md),
 [`quaternion_to_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/quaternion_to_matrix.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+quaternion_transform(c(0, 0, 0, 1), diag(4))
+} # }
+```

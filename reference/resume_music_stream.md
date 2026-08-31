@@ -41,3 +41,11 @@ Other stream functions:
 Other resume functions:
 [`resume_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/resume_audio_stream.md),
 [`resume_sound()`](https://jeroenjanssens.github.io/raylibr/reference/resume_sound.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+resume_music_stream(load_music_stream("music.mp3"))
+} # }
+```

@@ -17,3 +17,11 @@ is_bounding_box(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+is_bounding_box("not a bounding_box")
+} # }
+```

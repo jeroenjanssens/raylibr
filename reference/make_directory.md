@@ -32,3 +32,11 @@ Other directory functions:
 [`change_directory()`](https://jeroenjanssens.github.io/raylibr/reference/change_directory.md),
 [`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
 [`get_working_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_working_directory.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+make_directory("file.png")
+} # }
+```

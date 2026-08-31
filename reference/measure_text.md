@@ -39,3 +39,11 @@ Other text functions:
 [`load_file_text()`](https://jeroenjanssens.github.io/raylibr/reference/load_file_text.md),
 [`save_file_text()`](https://jeroenjanssens.github.io/raylibr/reference/save_file_text.md),
 [`set_clipboard_text()`](https://jeroenjanssens.github.io/raylibr/reference/set_clipboard_text.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+measure_text("Hello", 20L)
+} # }
+```

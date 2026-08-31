@@ -64,3 +64,11 @@ Other set functions:
 [`set_window_size()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_size.md),
 [`set_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_state.md),
 [`set_window_title()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_title.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+set_window_icon(gen_image_color(100, 100, "blue"))
+} # }
+```

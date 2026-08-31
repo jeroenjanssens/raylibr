@@ -30,3 +30,12 @@ Other wave functions:
 [`load_wave()`](https://jeroenjanssens.github.io/raylibr/reference/load_wave.md),
 [`unload_wave()`](https://jeroenjanssens.github.io/raylibr/reference/unload_wave.md),
 [`wave_format()`](https://jeroenjanssens.github.io/raylibr/reference/wave_format.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+w <- load_wave("sound.wav")
+wave_crop(w, 0L, 44100L)
+} # }
+```

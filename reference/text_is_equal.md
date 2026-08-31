@@ -33,3 +33,11 @@ definition:
 
 Other equal functions:
 [`color_is_equal()`](https://jeroenjanssens.github.io/raylibr/reference/color_is_equal.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+text_is_equal("Hello", "Hello")
+} # }
+```

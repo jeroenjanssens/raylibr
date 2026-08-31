@@ -39,3 +39,11 @@ Other window functions:
 
 Other init functions:
 [`init_audio_device()`](https://jeroenjanssens.github.io/raylibr/reference/init_audio_device.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+init_window(800L, 450L, "My Window")
+} # }
+```

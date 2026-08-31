@@ -47,3 +47,11 @@ definition:
 Other linear functions:
 [`draw_spline_segment_linear()`](https://jeroenjanssens.github.io/raylibr/reference/draw_spline_segment_linear.md),
 [`get_spline_point_linear()`](https://jeroenjanssens.github.io/raylibr/reference/get_spline_point_linear.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gen_image_gradient_linear(800L, 450L, 0L, "red", "red")
+} # }
+```

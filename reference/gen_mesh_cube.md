@@ -37,3 +37,11 @@ definition:
 
 Other cube functions:
 [`draw_cube()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cube.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gen_mesh_cube(200.0, 100.0, 100.0)
+} # }
+```

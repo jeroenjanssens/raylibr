@@ -45,3 +45,11 @@ Other matrix functions:
 [`matrix_translate()`](https://jeroenjanssens.github.io/raylibr/reference/matrix_translate.md),
 [`matrix_transpose()`](https://jeroenjanssens.github.io/raylibr/reference/matrix_transpose.md),
 [`set_shader_value_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/set_shader_value_matrix.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+matrix_rotate_x(0.0)
+} # }
+```

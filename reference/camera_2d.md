@@ -44,3 +44,13 @@ definition:
         float rotation;        // Camera rotation in degrees (pivots around target)
         float zoom;        // Camera zoom (scaling around target), must not be set to 0, set to 1.0f for no scale
     } Camera2D;
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+cam <- camera_2d(c(100, 100), c(100, 100))
+cam$offset
+cam$target
+} # }
+```

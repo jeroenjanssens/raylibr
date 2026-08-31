@@ -116,3 +116,12 @@ Other draw functions:
 [`draw_triangle_lines()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_lines.md),
 [`draw_triangle_strip()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_strip.md),
 [`draw_triangle_strip_3d()`](https://jeroenjanssens.github.io/raylibr/reference/draw_triangle_strip_3d.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+pts <- matrix(c(100, 200, 300, 100, 200, 100), ncol = 2)
+draw_spline_linear(pts, 2.0, "red")
+} # }
+```

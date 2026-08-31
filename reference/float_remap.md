@@ -43,3 +43,11 @@ Other float functions:
 [`float_normalize()`](https://jeroenjanssens.github.io/raylibr/reference/float_normalize.md),
 [`float_wrap()`](https://jeroenjanssens.github.io/raylibr/reference/float_wrap.md),
 [`text_to_float()`](https://jeroenjanssens.github.io/raylibr/reference/text_to_float.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+float_remap(0.0, 0.0, 0.0, 0.0, 0.0)
+} # }
+```

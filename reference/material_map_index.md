@@ -28,3 +28,13 @@ An object of class `list` of length 11.
 | `irradiance` | 8     |
 | `prefilter`  | 9     |
 | `brdf`       | 10    |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+material_map_index$albedo
+material_map_index$emission
+material_map_index$brdf
+} # }
+```

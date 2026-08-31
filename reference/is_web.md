@@ -11,3 +11,11 @@ is_web()
 ## Value
 
 Logical
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+is_web()
+} # }
+```

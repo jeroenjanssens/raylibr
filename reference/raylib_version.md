@@ -11,3 +11,11 @@ raylib_version()
 ## Value
 
 A string
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+raylib_version()
+} # }
+```

@@ -18,3 +18,11 @@ An object of class `list` of length 1.
 |-----------------|-------|
 | Name            | Value |
 | `text_readonly` | 16    |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gui_text_box_property$text_readonly
+} # }
+```

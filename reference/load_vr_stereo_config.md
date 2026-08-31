@@ -52,3 +52,11 @@ Other load functions:
 [`load_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture.md),
 [`load_texture_from_image()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture_from_image.md),
 [`load_wave()`](https://jeroenjanssens.github.io/raylibr/reference/load_wave.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+load_vr_stereo_config(device)
+} # }
+```

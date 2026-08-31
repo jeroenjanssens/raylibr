@@ -36,3 +36,13 @@ definition:
         Texture texture;        // Color buffer attachment texture
         Texture depth;        // Depth buffer attachment texture
     } RenderTexture;
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+ren <- render_texture(0L, load_texture("file.png"), load_texture("file.png"))
+ren$id
+ren$texture
+} # }
+```

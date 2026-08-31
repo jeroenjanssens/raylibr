@@ -17,3 +17,12 @@ is_image(x)
 ## Value
 
 A logical.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+i <- gen_image_color(100, 100, "blue")
+is_image(i)
+} # }
+```

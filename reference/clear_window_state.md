@@ -26,3 +26,11 @@ definition:
 Other state functions:
 [`is_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_state.md),
 [`set_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_state.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+clear_window_state(0L)
+} # }
+```

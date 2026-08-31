@@ -29,3 +29,12 @@ Other model functions:
 [`load_model()`](https://jeroenjanssens.github.io/raylibr/reference/load_model.md),
 [`set_model_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_model_texture.md),
 [`unload_model()`](https://jeroenjanssens.github.io/raylibr/reference/unload_model.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+model <- load_model("model.obj")
+set_model_mesh_material(model, 0L, 0L)
+} # }
+```

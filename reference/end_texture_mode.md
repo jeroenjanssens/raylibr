@@ -36,3 +36,11 @@ Other end functions:
 [`end_scissor_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_scissor_mode.md),
 [`end_shader_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_shader_mode.md),
 [`end_vr_stereo_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_vr_stereo_mode.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+end_texture_mode()
+} # }
+```

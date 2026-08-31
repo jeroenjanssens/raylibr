@@ -20,3 +20,13 @@ An object of class `list` of length 3.
 | `tab_items_width`  | 16    |
 | `tab_close_button` | 17    |
 | `tab_line_side`    | 18    |
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gui_tab_bar_property$tab_items_width
+gui_tab_bar_property$tab_close_button
+gui_tab_bar_property$tab_line_side
+} # }
+```

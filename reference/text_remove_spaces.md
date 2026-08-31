@@ -24,3 +24,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     const char * TextRemoveSpaces(const char * text);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+text_remove_spaces("Hello")
+} # }
+```

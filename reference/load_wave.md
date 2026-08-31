@@ -56,3 +56,11 @@ Other load functions:
 [`load_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture.md),
 [`load_texture_from_image()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture_from_image.md),
 [`load_vr_stereo_config()`](https://jeroenjanssens.github.io/raylibr/reference/load_vr_stereo_config.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+load_wave("file.png")
+} # }
+```

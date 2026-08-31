@@ -14,3 +14,11 @@ This function has been auto-generated from the following Raylib function
 definition:
 
     void PollInputEvents(void);
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+poll_input_events()
+} # }
+```

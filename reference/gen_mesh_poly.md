@@ -33,3 +33,11 @@ definition:
 
 Other poly functions:
 [`draw_poly()`](https://jeroenjanssens.github.io/raylibr/reference/draw_poly.md)
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+gen_mesh_poly(0L, 50.0)
+} # }
+```
