@@ -4,5 +4,5 @@ Imports: Rcpp, utils
 LinkingTo: Rcpp
 Suggests: knitr, rlang, testthat (>= 3.0.0)
 License: MIT + file LICENSE
-MD5sum: 0edd23808b9bd259e210eb89a0fe3507
+MD5sum: d85c1c5fd11ea4e093cd8b054e30e959
 File: raylibr_6.0.0.9001.tgz
