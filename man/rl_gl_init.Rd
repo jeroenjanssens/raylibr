@@ -15,10 +15,9 @@ rl_gl_init(width, height)
 Rl Gl Init
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_gl_init(800L, 450L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

@@ -17,10 +17,9 @@ rl_draw_vertex_array_instanced(offset, count, instances)
 Rl Draw Vertex Array Instanced
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_draw_vertex_array_instanced(0L, 10L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

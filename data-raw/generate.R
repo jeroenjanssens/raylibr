@@ -204,6 +204,117 @@ get_example_value <- function(type, param_name = "") {
   "value"
 }
 
+# Determine whether a function's example can run without GPU/window/audio
+is_safe_example <- function(func_name) {
+  safe_patterns <- c(
+    "^CheckCollision", "^GetCollisionRec$", "^GetRayCollision",
+    "^ColorNormalize$", "^ColorFromNormalized$", "^ColorToHSV$",
+    "^ColorFromHSV$", "^ColorTint$", "^ColorBrightness$",
+    "^ColorContrast$", "^ColorAlpha$", "^ColorAlphaBlend$",
+    "^ColorLerp$", "^ColorToInt$", "^GetColor$", "^Fade$",
+    "^GetPixelDataSize$", "^GetRandomValue$", "^SetRandomSeed$"
+  )
+  any(sapply(safe_patterns, function(p) grepl(p, func_name)))
+}
+
+# Classify Draw* functions for visual screenshot examples
+classify_draw_example <- function(func_name, param_types) {
+  if (!grepl("^Draw", func_name)) return("none")
+  resource_types <- c("Texture2D", "Texture", "Font", "Model", "Mesh",
+                      "Material", "Camera3D", "Camera", "Camera2D",
+                      "NPatchInfo", "Ray", "BoundingBox")
+  if (any(param_types %in% resource_types)) return("none")
+  if ("Vector3" %in% param_types || func_name == "DrawGrid") return("3d")
+  "2d"
+}
+
+# Example values tuned for a 400x300 screenshot viewport (2D)
+get_screenshot_example_value <- function(type, param_name = "") {
+  pn <- tolower(param_name)
+  if (type %in% c("int", "unsigned int")) {
+    if (grepl("center_x", pn)) return("200L")
+    if (grepl("center_y", pn)) return("150L")
+    if (pn %in% c("pos_x", "x")) return("100L")
+    if (pn %in% c("pos_y", "y")) return("100L")
+    if (pn == "start_pos_x") return("50L")
+    if (pn == "start_pos_y") return("250L")
+    if (pn == "end_pos_x") return("350L")
+    if (pn == "end_pos_y") return("50L")
+    if (grepl("width", pn)) return("200L")
+    if (grepl("height", pn)) return("100L")
+    if (grepl("font_size", pn)) return("30L")
+    if (grepl("segments", pn)) return("36L")
+    if (grepl("sides", pn)) return("6L")
+    if (grepl("slices", pn)) return("10L")
+    return("0L")
+  }
+  if (type == "unsigned char") return("255L")
+  if (type %in% c("float", "double")) {
+    if (grepl("radius|outer_radius", pn)) return("80.0")
+    if (grepl("inner_radius", pn)) return("40.0")
+    if (grepl("thick|line_thick", pn)) return("3.0")
+    if (grepl("start_angle", pn)) return("0.0")
+    if (grepl("end_angle", pn)) return("270.0")
+    if (grepl("rotation|angle", pn)) return("0.0")
+    if (grepl("roundness", pn)) return("0.3")
+    if (grepl("scale|zoom", pn)) return("1.0")
+    if (grepl("spacing", pn)) return("1.0")
+    if (grepl("width", pn)) return("200.0")
+    if (grepl("height", pn)) return("100.0")
+    if (grepl("length", pn)) return("100.0")
+    return("0.0")
+  }
+  if (type == "bool") return("TRUE")
+  if (type %in% c("const char *", "char *")) {
+    if (grepl("text|message|label", pn)) return('"Hello"')
+    return('"text"')
+  }
+  if (type == "Color") return('"red"')
+  if (type == "Vector2") {
+    if (grepl("center|position|pos$", pn)) return("c(200, 150)")
+    if (grepl("start", pn)) return("c(50, 250)")
+    if (grepl("end", pn)) return("c(350, 50)")
+    if (grepl("size", pn)) return("c(200, 150)")
+    if (grepl("origin", pn)) return("c(0, 0)")
+    if (grepl("v1|p1", pn)) return("c(200, 50)")
+    if (grepl("v2|p2", pn)) return("c(100, 250)")
+    if (grepl("v3|p3", pn)) return("c(300, 250)")
+    if (grepl("v4|p4", pn)) return("c(350, 100)")
+    return("c(200, 150)")
+  }
+  if (type == "Rectangle") return("rectangle(100, 75, 200, 150)")
+  get_example_value(type, param_name)
+}
+
+# Example values for 3D screenshot (objects at origin, camera at (4,4,4))
+get_screenshot_example_value_3d <- function(type, param_name = "") {
+  pn <- tolower(param_name)
+  if (type %in% c("int", "unsigned int")) {
+    if (grepl("slices", pn)) return("16L")
+    if (grepl("rings", pn)) return("16L")
+    if (grepl("segments|sides", pn)) return("16L")
+    return("0L")
+  }
+  if (type %in% c("float", "double")) {
+    if (grepl("radius|top_radius|bottom_radius", pn)) return("1.0")
+    if (grepl("width|height|length|size", pn)) return("2.0")
+    if (grepl("spacing", pn)) return("1.0")
+    if (grepl("rotation|angle", pn)) return("0.0")
+    return("0.0")
+  }
+  if (type == "Color") return('"red"')
+  if (type == "Vector2") return("c(4, 4)")
+  if (type == "Vector3") {
+    if (grepl("start|p1|v1", pn)) return("c(-1, 0, 0)")
+    if (grepl("end|p2|v2", pn)) return("c(1, 0, 0)")
+    if (grepl("p3|v3", pn)) return("c(0, 1, 0)")
+    if (grepl("size|scale", pn)) return("c(2, 2, 2)")
+    if (grepl("axis", pn)) return("c(0, 1, 0)")
+    return("c(0, 0, 0)")
+  }
+  get_example_value(type, param_name)
+}
+
 # Per-function parameter defaults (PascalCase C name -> list of snake_case param = "R expression"))
 function_defaults <- list(
   InitWindow       = list(width = "640L", height = "480L", title = '"raylibr"'),
@@ -486,6 +597,9 @@ get_families <- function(func_name, params, return_type) {
   if (length(parts) >= 2) {
     families <- c(families, paste(parts[length(parts)], "functions"))
   }
+  if (length(parts) >= 3) {
+    families <- c(families, paste(parts[2], "functions"))
+  }
   if (length(parts) >= 1) {
     action <- parts[1]
     if (action %in% c("draw", "load", "unload", "init", "close", "begin",
@@ -721,17 +835,55 @@ generate_function_r <- function(func_row) {
   lines <- c(lines, "#'")
 
   # Examples
-  lines <- c(lines, "#' @examples")
-  lines <- c(lines, "#' \\dontrun{")
-  if (is.null(params) || nrow(params) == 0) {
-    lines <- c(lines, paste0("#' ", snake, "()"))
+  example_file <- file.path("man", "examples", paste0(snake, ".R"))
+  param_types <- if (!is.null(params) && nrow(params) > 0) params$type else character(0)
+  draw_cat <- classify_draw_example(name, param_types)
+
+  if (file.exists(example_file)) {
+    lines <- c(lines, paste0("#' @example ", example_file))
+  } else if (is_safe_example(name)) {
+    lines <- c(lines, "#' @examples")
+    if (is.null(params) || nrow(params) == 0) {
+      lines <- c(lines, paste0("#' ", snake, "()"))
+    } else {
+      example_args <- sapply(seq_len(nrow(params)), function(i) {
+        get_example_value(params$type[i], field_to_snake(params$name[i]))
+      })
+      lines <- c(lines, paste0("#' ", snake, "(", paste(example_args, collapse = ", "), ")"))
+    }
+  } else if (draw_cat == "2d") {
+    lines <- c(lines, "#' @examples")
+    if (is.null(params) || nrow(params) == 0) {
+      lines <- c(lines, paste0("#' raylibr_screenshot(function() ", snake, "())"))
+    } else {
+      example_args <- sapply(seq_len(nrow(params)), function(i) {
+        get_screenshot_example_value(params$type[i], field_to_snake(params$name[i]))
+      })
+      call_str <- paste0(snake, "(", paste(example_args, collapse = ", "), ")")
+      lines <- c(lines, paste0("#' raylibr_screenshot(function() ", call_str, ")"))
+    }
+  } else if (draw_cat == "3d") {
+    lines <- c(lines, "#' @examples")
+    if (is.null(params) || nrow(params) == 0) {
+      lines <- c(lines, paste0("#' raylibr_screenshot_3d(function() ", snake, "())"))
+    } else {
+      example_args <- sapply(seq_len(nrow(params)), function(i) {
+        get_screenshot_example_value_3d(params$type[i], field_to_snake(params$name[i]))
+      })
+      call_str <- paste0(snake, "(", paste(example_args, collapse = ", "), ")")
+      lines <- c(lines, paste0("#' raylibr_screenshot_3d(function() ", call_str, ")"))
+    }
   } else {
-    example_args <- sapply(seq_len(nrow(params)), function(i) {
-      get_example_value(params$type[i], field_to_snake(params$name[i]))
-    })
-    lines <- c(lines, paste0("#' ", snake, "(", paste(example_args, collapse = ", "), ")"))
+    lines <- c(lines, "#' @examplesIf FALSE")
+    if (is.null(params) || nrow(params) == 0) {
+      lines <- c(lines, paste0("#' ", snake, "()"))
+    } else {
+      example_args <- sapply(seq_len(nrow(params)), function(i) {
+        get_example_value(params$type[i], field_to_snake(params$name[i]))
+      })
+      lines <- c(lines, paste0("#' ", snake, "(", paste(example_args, collapse = ", "), ")"))
+    }
   }
-  lines <- c(lines, "#' }")
   lines <- c(lines, "#'")
   lines <- c(lines, "#' @export")
 
@@ -813,25 +965,10 @@ generate_struct_r <- function(struct_row) {
   )
 
   if (name %in% opaque_structs) {
-    example_lines <- character(0)
-    create_expr <- opaque_create[[name]]
-    if (!is.null(create_expr)) {
-      abbr <- substr(snake, 1, 1)
-      example_lines <- c(
-        "#' @examples",
-        "#' \\dontrun{",
-        paste0("#' ", abbr, " <- ", create_expr),
-        paste0("#' is_", snake, "(", abbr, ")"),
-        "#' }"
-      )
-    } else {
-      example_lines <- c(
-        "#' @examples",
-        "#' \\dontrun{",
-        paste0("#' is_", snake, "(x)"),
-        "#' }"
-      )
-    }
+    example_lines <- c(
+      "#' @examples",
+      paste0("#' is_", snake, '("not a ', snake, '")')
+    )
 
     lines <- c(
       paste0("#' Test if object is a ", snake),
@@ -866,9 +1003,7 @@ generate_struct_r <- function(struct_row) {
   lines <- c(lines, "#' @return A logical.")
   lines <- c(lines, "#'")
   lines <- c(lines, "#' @examples")
-  lines <- c(lines, "#' \\dontrun{")
   lines <- c(lines, paste0("#' is_", snake, '("not a ', snake, '")'))
-  lines <- c(lines, "#' }")
   lines <- c(lines, "#'")
   lines <- c(lines, "#' @export")
   lines <- c(lines, paste0("is_", snake, " <- function(x) {"))
@@ -933,12 +1068,10 @@ generate_struct_r <- function(struct_row) {
   show_fields <- field_snakes[c(1, min(2, length(field_snakes)))]
   show_fields <- unique(show_fields)
   lines <- c(lines, "#' @examples")
-  lines <- c(lines, "#' \\dontrun{")
   lines <- c(lines, paste0("#' ", var_name, " <- ", ctor_call))
   for (sf in show_fields) {
     lines <- c(lines, paste0("#' ", var_name, "$", sf))
   }
-  lines <- c(lines, "#' }")
   lines <- c(lines, "#'")
   lines <- c(lines, "#' @export")
 
@@ -1131,11 +1264,9 @@ generate_enums_r <- function(enums) {
     ex_idx <- unique(c(1, ceiling(n_vals / 2), n_vals))
     if (n_vals <= 2) ex_idx <- seq_len(n_vals)
     all_lines <- c(all_lines, "#' @examples")
-    all_lines <- c(all_lines, "#' \\dontrun{")
     for (idx in ex_idx) {
       all_lines <- c(all_lines, paste0("#' ", r_name, "$", short_names[idx]))
     }
-    all_lines <- c(all_lines, "#' }")
     all_lines <- c(all_lines, "#'")
     all_lines <- c(all_lines, "#' @export")
     all_lines <- c(all_lines, paste0(r_name, " <- list("))
@@ -1443,8 +1574,7 @@ if (file.exists(rlgl_api_file)) {
     lines <- c(lines, "#'")
 
     # Examples
-    lines <- c(lines, "#' @examples")
-    lines <- c(lines, "#' \\dontrun{")
+    lines <- c(lines, "#' @examplesIf FALSE")
     if (is.null(params) || (is.data.frame(params) && nrow(params) == 0)) {
       lines <- c(lines, paste0("#' ", snake, "()"))
     } else {
@@ -1456,7 +1586,6 @@ if (file.exists(rlgl_api_file)) {
       })
       lines <- c(lines, paste0("#' ", snake, "(", paste(rlgl_example_args, collapse = ", "), ")"))
     }
-    lines <- c(lines, "#' }")
     lines <- c(lines, "#'")
     lines <- c(lines, "#' @export")
 
@@ -1606,7 +1735,6 @@ if (file.exists(raymath_api_file)) {
 
     # Examples
     lines <- c(lines, "#' @examples")
-    lines <- c(lines, "#' \\dontrun{")
     if (is.null(params) || (is.data.frame(params) && nrow(params) == 0)) {
       lines <- c(lines, paste0("#' ", snake, "()"))
     } else {
@@ -1616,7 +1744,6 @@ if (file.exists(raymath_api_file)) {
       })
       lines <- c(lines, paste0("#' ", snake, "(", paste(rm_example_args, collapse = ", "), ")"))
     }
-    lines <- c(lines, "#' }")
     lines <- c(lines, "#'")
     lines <- c(lines, "#' @export")
 
@@ -1896,8 +2023,7 @@ if (file.exists(raygui_api_file)) {
     lines <- c(lines, "#'")
 
     # Examples
-    lines <- c(lines, "#' @examples")
-    lines <- c(lines, "#' \\dontrun{")
+    lines <- c(lines, "#' @examplesIf FALSE")
     if (is.null(params) || (is.data.frame(params) && nrow(params) == 0)) {
       lines <- c(lines, paste0("#' ", snake, "()"))
     } else {
@@ -1909,7 +2035,6 @@ if (file.exists(raygui_api_file)) {
       })
       lines <- c(lines, paste0("#' ", snake, "(", paste(gui_example_args, collapse = ", "), ")"))
     }
-    lines <- c(lines, "#' }")
     lines <- c(lines, "#'")
     lines <- c(lines, "#' @export")
 
@@ -2017,11 +2142,9 @@ if (file.exists(raygui_api_file)) {
       ex_idx <- unique(c(1, ceiling(n_vals / 2), n_vals))
       if (n_vals <= 2) ex_idx <- seq_len(n_vals)
       enum_lines <- c(enum_lines, "#' @examples")
-      enum_lines <- c(enum_lines, "#' \\dontrun{")
       for (idx in ex_idx) {
         enum_lines <- c(enum_lines, paste0("#' ", r_name, example_names[idx]))
       }
-      enum_lines <- c(enum_lines, "#' }")
       enum_lines <- c(enum_lines, "#'")
       enum_lines <- c(enum_lines, "#' @export")
       enum_lines <- c(enum_lines, paste0(r_name, " <- list("))

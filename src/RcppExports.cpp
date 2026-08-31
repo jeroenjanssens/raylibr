@@ -11869,6 +11869,39 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// image_get_width_
+int image_get_width_(Image img);
+RcppExport SEXP _raylibr_image_get_width_(SEXP imgSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Image >::type img(imgSEXP);
+    rcpp_result_gen = Rcpp::wrap(image_get_width_(img));
+    return rcpp_result_gen;
+END_RCPP
+}
+// image_get_height_
+int image_get_height_(Image img);
+RcppExport SEXP _raylibr_image_get_height_(SEXP imgSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Image >::type img(imgSEXP);
+    rcpp_result_gen = Rcpp::wrap(image_get_height_(img));
+    return rcpp_result_gen;
+END_RCPP
+}
+// image_to_raster_
+CharacterMatrix image_to_raster_(Image img);
+RcppExport SEXP _raylibr_image_to_raster_(SEXP imgSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Image >::type img(imgSEXP);
+    rcpp_result_gen = Rcpp::wrap(image_to_raster_(img));
+    return rcpp_result_gen;
+END_RCPP
+}
 // set_main_loop_callback
 void set_main_loop_callback(Rcpp::Function update_fn, SEXP cleanup_fn);
 RcppExport SEXP _raylibr_set_main_loop_callback(SEXP update_fnSEXP, SEXP cleanup_fnSEXP) {
@@ -12943,6 +12976,9 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_color_alpha_blend_", (DL_FUNC) &_raylibr_color_alpha_blend_, 3},
     {"_raylibr_color_lerp_", (DL_FUNC) &_raylibr_color_lerp_, 3},
     {"_raylibr_color_from_", (DL_FUNC) &_raylibr_color_from_, 1},
+    {"_raylibr_image_get_width_", (DL_FUNC) &_raylibr_image_get_width_, 1},
+    {"_raylibr_image_get_height_", (DL_FUNC) &_raylibr_image_get_height_, 1},
+    {"_raylibr_image_to_raster_", (DL_FUNC) &_raylibr_image_to_raster_, 1},
     {"_raylibr_set_main_loop_callback", (DL_FUNC) &_raylibr_set_main_loop_callback, 2},
     {"_raylibr_raylib_version_impl", (DL_FUNC) &_raylibr_raylib_version_impl, 0},
     {"_raylibr_is_web_impl", (DL_FUNC) &_raylibr_is_web_impl, 0},

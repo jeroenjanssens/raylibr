@@ -18,9 +18,7 @@ A number
 Vector2 Cross Product
 }
 \examples{
-\dontrun{
 vector2_cross_product(c(100, 100), c(100, 100))
-}
 
 }
 \seealso{

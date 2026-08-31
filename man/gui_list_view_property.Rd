@@ -25,11 +25,9 @@ Enum values for \code{gui_list_view_property}.
 }
 }
 \examples{
-\dontrun{
 gui_list_view_property$list_items_height
 gui_list_view_property$scrollbar_width
 gui_list_view_property$list_items_border_width
-}
 
 }
 \keyword{datasets}

@@ -19,10 +19,9 @@ rl_color_mask(r, g, b, a)
 Rl Color Mask
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_color_mask(TRUE, TRUE, TRUE, TRUE)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

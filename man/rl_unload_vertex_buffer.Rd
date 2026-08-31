@@ -13,10 +13,9 @@ rl_unload_vertex_buffer(vbo_id)
 Rl Unload Vertex Buffer
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_unload_vertex_buffer(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

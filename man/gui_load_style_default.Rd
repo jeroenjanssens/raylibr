@@ -10,10 +10,9 @@ gui_load_style_default()
 Load style default over global style.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_load_style_default()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

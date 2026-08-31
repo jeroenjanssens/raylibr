@@ -27,11 +27,9 @@ Enum values for \code{log}.
 }
 }
 \examples{
-\dontrun{
 log$all
 log$info
 log$none
-}
 
 }
 \keyword{datasets}

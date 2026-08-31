@@ -36,10 +36,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 draw_model_wires_ex(load_model("model.obj"), c(0, 5, 0), c(0, 0, 0), 0.0, c(1, 1, 1), "red")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other ex functions: 
@@ -59,6 +58,21 @@ Other ex functions:
 \code{\link{get_world_to_screen_ex}()},
 \code{\link{image_text_ex}()},
 \code{\link{measure_text_ex}()},
+\code{\link{update_model_animation_ex}()}
+
+Other model functions: 
+\code{\link{draw_model}()},
+\code{\link{draw_model_ex}()},
+\code{\link{draw_model_wires}()},
+\code{\link{get_model_bounding_box}()},
+\code{\link{is_model_animation_valid}()},
+\code{\link{is_model_valid}()},
+\code{\link{load_model}()},
+\code{\link{load_model_from_mesh}()},
+\code{\link{set_model_mesh_material}()},
+\code{\link{set_model_texture}()},
+\code{\link{unload_model}()},
+\code{\link{update_model_animation}()},
 \code{\link{update_model_animation_ex}()}
 
 Other draw functions: 
@@ -156,3 +170,4 @@ Other draw functions:
 }
 \concept{draw functions}
 \concept{ex functions}
+\concept{model functions}

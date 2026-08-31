@@ -10,10 +10,9 @@ rl_disable_vertex_buffer_element()
 Rl Disable Vertex Buffer Element
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_disable_vertex_buffer_element()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

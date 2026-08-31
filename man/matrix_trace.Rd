@@ -16,9 +16,7 @@ A number
 Matrix Trace
 }
 \examples{
-\dontrun{
 matrix_trace(diag(4))
-}
 
 }
 \seealso{

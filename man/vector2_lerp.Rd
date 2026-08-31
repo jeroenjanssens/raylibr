@@ -20,9 +20,7 @@ A numeric vector of length 2
 Vector2 Lerp
 }
 \examples{
-\dontrun{
 vector2_lerp(c(100, 100), c(100, 100), 0.0)
-}
 
 }
 \seealso{

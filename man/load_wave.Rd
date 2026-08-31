@@ -22,14 +22,15 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 load_wave("file.png")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other wave functions: 
 \code{\link{export_wave}()},
+\code{\link{export_wave_as_code}()},
+\code{\link{is_wave_valid}()},
 \code{\link{load_sound_from_wave}()},
 \code{\link{unload_wave}()},
 \code{\link{wave_crop}()},

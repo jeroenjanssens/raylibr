@@ -10,10 +10,9 @@ rl_enable_depth_mask()
 Rl Enable Depth Mask
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_enable_depth_mask()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

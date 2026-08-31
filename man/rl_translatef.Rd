@@ -17,10 +17,9 @@ rl_translatef(x, y, z)
 Rl Translatef
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_translatef(0.0, 0.0, 0.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

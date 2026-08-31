@@ -23,9 +23,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_rectangle_v(c(100, 100), c(100, 100), "red")
-}
+raylibr_screenshot(function() draw_rectangle_v(c(200, 150), c(200, 150), "red"))
 
 }
 \seealso{
@@ -41,6 +39,21 @@ Other v functions:
 \code{\link{draw_rectangle_gradient_v}()},
 \code{\link{draw_texture_v}()},
 \code{\link{get_mouse_wheel_move_v}()}
+
+Other rectangle functions: 
+\code{\link{draw_rectangle}()},
+\code{\link{draw_rectangle_gradient_ex}()},
+\code{\link{draw_rectangle_gradient_h}()},
+\code{\link{draw_rectangle_gradient_v}()},
+\code{\link{draw_rectangle_lines}()},
+\code{\link{draw_rectangle_lines_ex}()},
+\code{\link{draw_rectangle_pro}()},
+\code{\link{draw_rectangle_rec}()},
+\code{\link{draw_rectangle_rounded}()},
+\code{\link{draw_rectangle_rounded_lines}()},
+\code{\link{draw_rectangle_rounded_lines_ex}()},
+\code{\link{get_shapes_texture_rectangle}()},
+\code{\link{rectangle}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -136,4 +149,5 @@ Other draw functions:
 \code{\link{draw_triangle_strip_3d}()}
 }
 \concept{draw functions}
+\concept{rectangle functions}
 \concept{v functions}

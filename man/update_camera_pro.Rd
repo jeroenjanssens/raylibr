@@ -19,11 +19,10 @@ update_camera_pro(camera, movement, rotation, zoom)
 Update camera movement/rotation. Modifies the camera in place.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 cam <- camera_3d(c(0, 10, 10))
 update_camera_pro(cam, c(0, 0, 0), c(0, 0, 0), 1.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other camera functions: 
@@ -35,6 +34,8 @@ Other camera functions:
 \code{\link{camera_roll}()},
 \code{\link{camera_yaw}()},
 \code{\link{get_camera_forward}()},
+\code{\link{get_camera_matrix}()},
+\code{\link{get_camera_matrix_2d}()},
 \code{\link{get_camera_projection_matrix}()},
 \code{\link{get_camera_right}()},
 \code{\link{get_camera_up}()},

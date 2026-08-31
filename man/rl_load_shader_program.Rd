@@ -18,10 +18,9 @@ An integer
 Rl Load Shader Program
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_load_shader_program("text", "text")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

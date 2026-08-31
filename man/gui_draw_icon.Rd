@@ -21,10 +21,9 @@ gui_draw_icon(icon_id, pos_x, pos_y, pixel_size, color)
 Draw icon using pixel size at specified position.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_draw_icon(0L, 100L, 100L, 32L, "red")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

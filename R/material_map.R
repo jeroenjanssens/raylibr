@@ -7,9 +7,7 @@
 #' @return A logical.
 #'
 #' @examples
-#' \dontrun{
 #' is_material_map("not a material_map")
-#' }
 #'
 #' @export
 is_material_map <- function(x) {
@@ -42,11 +40,9 @@ is_material_map <- function(x) {
 #' @family material_map functions
 #'
 #' @examples
-#' \dontrun{
 #' mat <- material_map(load_texture("file.png"), "red", 0.0)
 #' mat$texture
 #' mat$color
-#' }
 #'
 #' @export
 material_map <- function(texture, color, value) {

@@ -24,9 +24,15 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 image_from_channel(gen_image_color(100, 100, "blue"), 0L)
+\dontshow{\}) # examplesIf}
 }
-
+\seealso{
+Other from functions: 
+\code{\link{color_from_hsv}()},
+\code{\link{color_from_normalized}()},
+\code{\link{image_from_image}()}
 }
 \concept{channel functions}
+\concept{from functions}

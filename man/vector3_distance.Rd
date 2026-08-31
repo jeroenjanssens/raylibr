@@ -18,9 +18,7 @@ A number
 Vector3 Distance
 }
 \examples{
-\dontrun{
 vector3_distance(c(0, 0, 0), c(0, 0, 0))
-}
 
 }
 \seealso{

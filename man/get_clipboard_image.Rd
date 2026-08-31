@@ -19,21 +19,40 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_clipboard_image()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other image functions: 
 \code{\link{export_image}()},
+\code{\link{export_image_as_code}()},
+\code{\link{gen_image_cellular}()},
+\code{\link{gen_image_checked}()},
+\code{\link{gen_image_color}()},
+\code{\link{gen_image_gradient_linear}()},
+\code{\link{gen_image_gradient_radial}()},
+\code{\link{gen_image_gradient_square}()},
+\code{\link{gen_image_perlin_noise}()},
+\code{\link{gen_image_text}()},
+\code{\link{gen_image_white_noise}()},
+\code{\link{get_image_alpha_border}()},
+\code{\link{get_image_color}()},
 \code{\link{image_draw_line_ex}()},
 \code{\link{image_draw_triangle}()},
 \code{\link{image_from_image}()},
+\code{\link{is_image_valid}()},
 \code{\link{load_font_from_image}()},
 \code{\link{load_image}()},
+\code{\link{load_image_from_screen}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_image_raw}()},
 \code{\link{load_texture_from_image}()},
 \code{\link{unload_image}()}
+
+Other clipboard functions: 
+\code{\link{get_clipboard_text}()},
+\code{\link{set_clipboard_text}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -130,5 +149,6 @@ Other get functions:
 \code{\link{get_world_to_screen_2d}()},
 \code{\link{get_world_to_screen_ex}()}
 }
+\concept{clipboard functions}
 \concept{get functions}
 \concept{image functions}

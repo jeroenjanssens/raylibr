@@ -16,9 +16,6 @@ A logical.
 Test if object is a shader
 }
 \examples{
-\dontrun{
-s <- load_shader("", "shader.fs")
-is_shader(s)
-}
+is_shader("not a shader")
 
 }

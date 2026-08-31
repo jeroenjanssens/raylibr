@@ -13,10 +13,9 @@ rl_enable_shader(id)
 Rl Enable Shader
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_enable_shader(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

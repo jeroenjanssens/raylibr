@@ -16,9 +16,7 @@ A number
 Quaternion Length
 }
 \examples{
-\dontrun{
 quaternion_length(c(0, 0, 0, 1))
-}
 
 }
 \seealso{

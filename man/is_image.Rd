@@ -16,9 +16,6 @@ A logical.
 Test if object is a image
 }
 \examples{
-\dontrun{
-i <- gen_image_color(100, 100, "blue")
-is_image(i)
-}
+is_image("not a image")
 
 }

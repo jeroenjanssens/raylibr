@@ -39,11 +39,9 @@ This class has been auto-generated from the following Raylib struct definition:
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 n_p <- n_patch_info(rectangle(10, 10, 200, 100), 0L, 0L, 0L, 0L, 0L)
 n_p$source
 n_p$left
-}
 
 }
 \concept{n_patch_info functions}

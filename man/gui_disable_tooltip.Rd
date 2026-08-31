@@ -10,10 +10,9 @@ gui_disable_tooltip()
 Disable gui tooltips (global state).
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_disable_tooltip()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

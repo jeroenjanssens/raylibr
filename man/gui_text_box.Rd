@@ -22,10 +22,9 @@ A list with \code{result} (integer) and \code{text} (string).
 Text box control, updates text string.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_text_box(rectangle(10, 10, 200, 30), "Hello", 64L, FALSE)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

@@ -20,9 +20,7 @@ A 4x4 numeric matrix
 Matrix Scale
 }
 \examples{
-\dontrun{
 matrix_scale(0.0, 0.0, 0.0)
-}
 
 }
 \seealso{

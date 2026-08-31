@@ -19,10 +19,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_master_volume()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other volume functions: 
@@ -30,6 +29,9 @@ Other volume functions:
 \code{\link{set_master_volume}()},
 \code{\link{set_music_volume}()},
 \code{\link{set_sound_volume}()}
+
+Other master functions: 
+\code{\link{set_master_volume}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -127,4 +129,5 @@ Other get functions:
 \code{\link{get_world_to_screen_ex}()}
 }
 \concept{get functions}
+\concept{master functions}
 \concept{volume functions}

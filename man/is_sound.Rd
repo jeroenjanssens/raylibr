@@ -16,9 +16,6 @@ A logical.
 Test if object is a sound
 }
 \examples{
-\dontrun{
-s <- load_sound("sound.wav")
-is_sound(s)
-}
+is_sound("not a sound")
 
 }

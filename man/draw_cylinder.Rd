@@ -29,13 +29,14 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_cylinder(c(0, 5, 0), 50.0, 50.0, 100.0, 16L, "red")
-}
+raylibr_screenshot_3d(function() draw_cylinder(c(0, 0, 0), 1.0, 1.0, 2.0, 16L, "red"))
 
 }
 \seealso{
 Other cylinder functions: 
+\code{\link{draw_cylinder_ex}()},
+\code{\link{draw_cylinder_wires}()},
+\code{\link{draw_cylinder_wires_ex}()},
 \code{\link{gen_mesh_cylinder}()}
 
 Other draw functions: 

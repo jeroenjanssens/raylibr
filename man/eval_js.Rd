@@ -16,8 +16,7 @@ Character string result.
 Evaluate JavaScript
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 eval_js("document.title")
-}
-
+\dontshow{\}) # examplesIf}
 }

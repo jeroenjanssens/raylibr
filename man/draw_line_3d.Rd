@@ -23,9 +23,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_line_3d(c(0, 5, 0), c(0, 5, 0), "red")
-}
+raylibr_screenshot_3d(function() draw_line_3d(c(-1, 0, 0), c(1, 0, 0), "red"))
 
 }
 \seealso{
@@ -35,6 +33,15 @@ Other 3d functions:
 \code{\link{draw_point_3d}()},
 \code{\link{draw_triangle_3d}()},
 \code{\link{end_mode_3d}()}
+
+Other line functions: 
+\code{\link{check_collision_circle_line}()},
+\code{\link{check_collision_point_line}()},
+\code{\link{draw_line}()},
+\code{\link{draw_line_bezier}()},
+\code{\link{draw_line_dashed}()},
+\code{\link{draw_line_ex}()},
+\code{\link{draw_line_v}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -131,3 +138,4 @@ Other draw functions:
 }
 \concept{3d functions}
 \concept{draw functions}
+\concept{line functions}

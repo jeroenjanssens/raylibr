@@ -18,9 +18,7 @@ A number
 Vector3 Dot Product
 }
 \examples{
-\dontrun{
 vector3_dot_product(c(0, 0, 0), c(0, 0, 0))
-}
 
 }
 \seealso{

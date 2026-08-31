@@ -16,9 +16,6 @@ A logical.
 Test if object is a wave
 }
 \examples{
-\dontrun{
-w <- load_wave("sound.wav")
-is_wave(w)
-}
+is_wave("not a wave")
 
 }

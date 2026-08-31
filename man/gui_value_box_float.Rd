@@ -25,10 +25,9 @@ and \code{value} (number).
 Value box control for float values.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_value_box_float(rectangle(10, 10, 100, 30), "Value:", "0.0", 0.0, FALSE)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

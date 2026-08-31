@@ -7,9 +7,7 @@
 #' @return A logical.
 #'
 #' @examples
-#' \dontrun{
 #' is_rectangle("not a rectangle")
-#' }
 #'
 #' @export
 is_rectangle <- function(x) {
@@ -44,11 +42,9 @@ is_rectangle <- function(x) {
 #' @family rectangle functions
 #'
 #' @examples
-#' \dontrun{
 #' rec <- rectangle(0.0, 0.0, 200.0, 100.0)
 #' rec$x
 #' rec$y
-#' }
 #'
 #' @export
 rectangle <- function(x, y, width, height) {

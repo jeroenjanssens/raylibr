@@ -16,8 +16,6 @@ A logical.
 Test if object is a bone_info
 }
 \examples{
-\dontrun{
-is_bone_info(x)
-}
+is_bone_info("not a bone_info")
 
 }

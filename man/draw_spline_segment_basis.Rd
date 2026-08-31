@@ -29,14 +29,23 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_spline_segment_basis(c(100, 100), c(100, 100), c(100, 100), c(100, 100), 2.0, "red")
-}
+raylibr_screenshot(function() draw_spline_segment_basis(c(200, 50), c(100, 250), c(300, 250), c(350, 100), 3.0, "red"))
 
 }
 \seealso{
 Other basis functions: 
 \code{\link{get_spline_point_basis}()}
+
+Other spline functions: 
+\code{\link{draw_spline_segment_bezier_cubic}()},
+\code{\link{draw_spline_segment_bezier_quadratic}()},
+\code{\link{draw_spline_segment_catmull_rom}()},
+\code{\link{draw_spline_segment_linear}()},
+\code{\link{get_spline_point_basis}()},
+\code{\link{get_spline_point_bezier_cubic}()},
+\code{\link{get_spline_point_bezier_quad}()},
+\code{\link{get_spline_point_catmull_rom}()},
+\code{\link{get_spline_point_linear}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -133,3 +142,4 @@ Other draw functions:
 }
 \concept{basis functions}
 \concept{draw functions}
+\concept{spline functions}

@@ -19,22 +19,38 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 unload_render_texture(load_render_texture(800, 450))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other texture functions: 
+\code{\link{begin_texture_mode}()},
 \code{\link{draw_texture}()},
+\code{\link{draw_texture_ex}()},
+\code{\link{draw_texture_n_patch}()},
+\code{\link{draw_texture_pro}()},
+\code{\link{draw_texture_rec}()},
+\code{\link{draw_texture_v}()},
+\code{\link{end_texture_mode}()},
 \code{\link{get_shapes_texture}()},
+\code{\link{is_texture_valid}()},
 \code{\link{load_image_from_texture}()},
 \code{\link{load_render_texture}()},
 \code{\link{load_texture}()},
+\code{\link{load_texture_from_image}()},
 \code{\link{set_shader_value_texture}()},
 \code{\link{set_shapes_texture}()},
+\code{\link{set_texture_filter}()},
+\code{\link{set_texture_wrap}()},
 \code{\link{texture}()},
 \code{\link{unload_texture}()}
+
+Other render functions: 
+\code{\link{get_render_height}()},
+\code{\link{get_render_width}()},
+\code{\link{is_render_texture_valid}()},
+\code{\link{load_render_texture}()}
 
 Other unload functions: 
 \code{\link{unload_audio_stream}()},
@@ -51,5 +67,6 @@ Other unload functions:
 \code{\link{unload_vr_stereo_config}()},
 \code{\link{unload_wave}()}
 }
+\concept{render functions}
 \concept{texture functions}
 \concept{unload functions}

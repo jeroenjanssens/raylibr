@@ -7,9 +7,7 @@
 #' @return A logical.
 #'
 #' @examples
-#' \dontrun{
 #' is_render_texture("not a render_texture")
-#' }
 #'
 #' @export
 is_render_texture <- function(x) {
@@ -42,11 +40,9 @@ is_render_texture <- function(x) {
 #' @family render_texture functions
 #'
 #' @examples
-#' \dontrun{
 #' ren <- render_texture(0L, load_texture("file.png"), load_texture("file.png"))
 #' ren$id
 #' ren$texture
-#' }
 #'
 #' @export
 render_texture <- function(id, texture, depth) {

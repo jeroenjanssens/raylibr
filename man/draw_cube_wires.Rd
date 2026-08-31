@@ -27,9 +27,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_cube_wires(c(0, 5, 0), 200.0, 100.0, 100.0, "red")
-}
+raylibr_screenshot_3d(function() draw_cube_wires(c(0, 0, 0), 2.0, 2.0, 2.0, "red"))
 
 }
 \seealso{
@@ -38,6 +36,12 @@ Other wires functions:
 \code{\link{draw_cylinder_wires}()},
 \code{\link{draw_model_wires}()},
 \code{\link{draw_sphere_wires}()}
+
+Other cube functions: 
+\code{\link{draw_cube}()},
+\code{\link{draw_cube_v}()},
+\code{\link{draw_cube_wires_v}()},
+\code{\link{gen_mesh_cube}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -132,5 +136,6 @@ Other draw functions:
 \code{\link{draw_triangle_strip}()},
 \code{\link{draw_triangle_strip_3d}()}
 }
+\concept{cube functions}
 \concept{draw functions}
 \concept{wires functions}

@@ -7,9 +7,7 @@
 #' @return A logical.
 #'
 #' @examples
-#' \dontrun{
 #' is_texture("not a texture")
-#' }
 #'
 #' @export
 is_texture <- function(x) {
@@ -46,11 +44,9 @@ is_texture <- function(x) {
 #' @family texture functions
 #'
 #' @examples
-#' \dontrun{
 #' tex <- texture(0L, 800L, 450L, 0L, 0L)
 #' tex$id
 #' tex$width
-#' }
 #'
 #' @export
 texture <- function(id, width, height, mipmaps, format) {

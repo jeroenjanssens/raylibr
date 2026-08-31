@@ -16,9 +16,7 @@ A numeric vector of length 4
 Vector4 Normalize
 }
 \examples{
-\dontrun{
 vector4_normalize(c(0, 0, 0, 1))
-}
 
 }
 \seealso{

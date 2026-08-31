@@ -17,10 +17,9 @@ rl_scalef(x, y, z)
 Rl Scalef
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_scalef(0.0, 0.0, 0.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

@@ -17,17 +17,24 @@ set_shader_value(shader, loc_index, value)
 Set shader uniform value.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 shader <- load_shader("", "shader.fs")
 loc <- get_shader_location(shader, "myUniform")
 set_shader_value(shader, loc, 1.0)
 set_shader_value(shader, loc, c(1.0, 0.0))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other shader functions: 
+\code{\link{begin_shader_mode}()},
+\code{\link{end_shader_mode}()},
+\code{\link{get_shader_location}()},
+\code{\link{get_shader_location_attrib}()},
+\code{\link{is_shader_valid}()},
 \code{\link{load_shader}()},
+\code{\link{load_shader_from_memory}()},
+\code{\link{set_shader_value_matrix}()},
+\code{\link{set_shader_value_texture}()},
 \code{\link{unload_shader}()}
 }
 \concept{shader functions}

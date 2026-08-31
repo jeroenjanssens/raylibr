@@ -16,8 +16,6 @@ A logical.
 Test if object is a transform
 }
 \examples{
-\dontrun{
 is_transform("not a transform")
-}
 
 }

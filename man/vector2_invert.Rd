@@ -16,9 +16,7 @@ A numeric vector of length 2
 Vector2 Invert
 }
 \examples{
-\dontrun{
 vector2_invert(c(100, 100))
-}
 
 }
 \seealso{

@@ -5,9 +5,7 @@
 #' @return A logical.
 #'
 #' @examples
-#' \dontrun{
-#' is_vr_device_info(x)
-#' }
+#' is_vr_device_info("not a vr_device_info")
 #'
 #' @export
 is_vr_device_info <- function(x) {

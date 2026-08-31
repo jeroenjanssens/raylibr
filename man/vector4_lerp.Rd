@@ -20,9 +20,7 @@ A numeric vector of length 4
 Vector4 Lerp
 }
 \examples{
-\dontrun{
 vector4_lerp(c(0, 0, 0, 1), c(0, 0, 0, 1), 0.0)
-}
 
 }
 \seealso{

@@ -29,12 +29,20 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_circle_sector(c(100, 100), 50.0, 0.0, 0.0, 16L, "red")
-}
+raylibr_screenshot(function() draw_circle_sector(c(200, 150), 80.0, 0.0, 270.0, 36L, "red"))
 
 }
 \seealso{
+Other circle functions: 
+\code{\link{check_collision_point_circle}()},
+\code{\link{draw_circle}()},
+\code{\link{draw_circle_3d}()},
+\code{\link{draw_circle_gradient}()},
+\code{\link{draw_circle_lines}()},
+\code{\link{draw_circle_lines_v}()},
+\code{\link{draw_circle_sector_lines}()},
+\code{\link{draw_circle_v}()}
+
 Other draw functions: 
 \code{\link{draw_billboard}()},
 \code{\link{draw_billboard_pro}()},
@@ -128,5 +136,6 @@ Other draw functions:
 \code{\link{draw_triangle_strip}()},
 \code{\link{draw_triangle_strip_3d}()}
 }
+\concept{circle functions}
 \concept{draw functions}
 \concept{sector functions}

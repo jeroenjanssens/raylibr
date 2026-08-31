@@ -21,9 +21,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_rectangle_rec(rectangle(10, 10, 200, 100), "red")
-}
+raylibr_screenshot(function() draw_rectangle_rec(rectangle(100, 75, 200, 150), "red"))
 
 }
 \seealso{
@@ -34,6 +32,21 @@ Other rec functions:
 \code{\link{draw_texture_rec}()},
 \code{\link{get_collision_rec}()},
 \code{\link{get_glyph_atlas_rec}()}
+
+Other rectangle functions: 
+\code{\link{draw_rectangle}()},
+\code{\link{draw_rectangle_gradient_ex}()},
+\code{\link{draw_rectangle_gradient_h}()},
+\code{\link{draw_rectangle_gradient_v}()},
+\code{\link{draw_rectangle_lines}()},
+\code{\link{draw_rectangle_lines_ex}()},
+\code{\link{draw_rectangle_pro}()},
+\code{\link{draw_rectangle_rounded}()},
+\code{\link{draw_rectangle_rounded_lines}()},
+\code{\link{draw_rectangle_rounded_lines_ex}()},
+\code{\link{draw_rectangle_v}()},
+\code{\link{get_shapes_texture_rectangle}()},
+\code{\link{rectangle}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -130,3 +143,4 @@ Other draw functions:
 }
 \concept{draw functions}
 \concept{rec functions}
+\concept{rectangle functions}

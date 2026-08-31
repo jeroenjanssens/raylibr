@@ -42,11 +42,9 @@ This class has been auto-generated from the following Raylib struct definition:
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 cam <- camera_3d(c(0, 5, 0))
 cam$position
 cam$target
-}
 
 }
 \concept{camera_3d functions}

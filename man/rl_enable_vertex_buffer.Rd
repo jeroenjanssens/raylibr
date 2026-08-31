@@ -13,10 +13,9 @@ rl_enable_vertex_buffer(id)
 Rl Enable Vertex Buffer
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_enable_vertex_buffer(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

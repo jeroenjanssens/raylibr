@@ -18,9 +18,7 @@ An integer
 Vector3 Equals
 }
 \examples{
-\dontrun{
 vector3_equals(c(0, 0, 0), c(0, 0, 0))
-}
 
 }
 \seealso{

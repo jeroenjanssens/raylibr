@@ -15,10 +15,9 @@ rl_vertex2i(x, y)
 Rl Vertex2i
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_vertex2i(100L, 100L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

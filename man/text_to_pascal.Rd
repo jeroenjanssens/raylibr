@@ -22,9 +22,20 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 text_to_pascal("Hello")
+\dontshow{\}) # examplesIf}
 }
-
+\seealso{
+Other to functions: 
+\code{\link{color_to_hsv}()},
+\code{\link{color_to_int}()},
+\code{\link{text_to_camel}()},
+\code{\link{text_to_float}()},
+\code{\link{text_to_integer}()},
+\code{\link{text_to_lower}()},
+\code{\link{text_to_snake}()},
+\code{\link{text_to_upper}()}
 }
 \concept{pascal functions}
+\concept{to functions}

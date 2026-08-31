@@ -21,15 +21,29 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 set_sound_pan(load_sound("sound.wav"), 0.5)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other pan functions: 
 \code{\link{set_audio_stream_pan}()},
 \code{\link{set_music_pan}()}
+
+Other sound functions: 
+\code{\link{is_sound_playing}()},
+\code{\link{is_sound_valid}()},
+\code{\link{load_sound}()},
+\code{\link{load_sound_alias}()},
+\code{\link{load_sound_from_wave}()},
+\code{\link{pause_sound}()},
+\code{\link{play_sound}()},
+\code{\link{resume_sound}()},
+\code{\link{set_sound_pitch}()},
+\code{\link{set_sound_volume}()},
+\code{\link{stop_sound}()},
+\code{\link{unload_sound}()},
+\code{\link{unload_sound_alias}()}
 
 Other set functions: 
 \code{\link{set_audio_stream_buffer_size_default}()},
@@ -75,3 +89,4 @@ Other set functions:
 }
 \concept{pan functions}
 \concept{set functions}
+\concept{sound functions}

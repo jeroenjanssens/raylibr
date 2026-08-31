@@ -39,9 +39,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_ring_lines(c(100, 100), 50.0, 50.0, 0.0, 0.0, 16L, "red")
-}
+raylibr_screenshot(function() draw_ring_lines(c(200, 150), 80.0, 80.0, 0.0, 270.0, 36L, "red"))
 
 }
 \seealso{
@@ -53,6 +51,9 @@ Other lines functions:
 \code{\link{draw_rectangle_lines}()},
 \code{\link{draw_rectangle_rounded_lines}()},
 \code{\link{draw_triangle_lines}()}
+
+Other ring functions: 
+\code{\link{draw_ring}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -149,3 +150,4 @@ Other draw functions:
 }
 \concept{draw functions}
 \concept{lines functions}
+\concept{ring functions}

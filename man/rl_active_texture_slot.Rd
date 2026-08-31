@@ -13,10 +13,9 @@ rl_active_texture_slot(slot)
 Rl Active Texture Slot
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_active_texture_slot(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

@@ -21,10 +21,8 @@ Enum values for \code{gui_toggle_property}.
 }
 }
 \examples{
-\dontrun{
 gui_toggle_property$group_padding
 gui_toggle_property$group_width_full
-}
 
 }
 \keyword{datasets}

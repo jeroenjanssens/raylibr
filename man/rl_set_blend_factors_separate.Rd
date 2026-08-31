@@ -30,10 +30,9 @@ rl_set_blend_factors_separate(
 Rl Set Blend Factors Separate
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_set_blend_factors_separate(0L, 0L, 0L, 0L, 0L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

@@ -10,10 +10,9 @@ rl_disable_vertex_array()
 Rl Disable Vertex Array
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_disable_vertex_array()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

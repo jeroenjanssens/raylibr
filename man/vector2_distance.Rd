@@ -18,9 +18,7 @@ A number
 Vector2 Distance
 }
 \examples{
-\dontrun{
 vector2_distance(c(100, 100), c(100, 100))
-}
 
 }
 \seealso{

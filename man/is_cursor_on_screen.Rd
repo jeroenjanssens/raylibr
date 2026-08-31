@@ -19,17 +19,31 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 is_cursor_on_screen()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other screen functions: 
+\code{\link{get_screen_height}()},
+\code{\link{get_screen_to_world_2d}()},
+\code{\link{get_screen_to_world_ray}()},
+\code{\link{get_screen_to_world_ray_ex}()},
+\code{\link{get_screen_width}()},
 \code{\link{get_world_to_screen}()},
-\code{\link{load_image_from_screen}()}
+\code{\link{load_image_from_screen}()},
+\code{\link{swap_screen_buffer}()}
+
+Other cursor functions: 
+\code{\link{disable_cursor}()},
+\code{\link{enable_cursor}()},
+\code{\link{hide_cursor}()},
+\code{\link{is_cursor_hidden}()},
+\code{\link{set_mouse_cursor}()},
+\code{\link{show_cursor}()}
 
 Other is functions: 
+\code{\link{color_is_equal}()},
 \code{\link{is_audio_device_ready}()},
 \code{\link{is_audio_stream_playing}()},
 \code{\link{is_audio_stream_processed}()},
@@ -74,7 +88,9 @@ Other is functions:
 \code{\link{is_window_minimized}()},
 \code{\link{is_window_ready}()},
 \code{\link{is_window_resized}()},
-\code{\link{is_window_state}()}
+\code{\link{is_window_state}()},
+\code{\link{text_is_equal}()}
 }
+\concept{cursor functions}
 \concept{is functions}
 \concept{screen functions}

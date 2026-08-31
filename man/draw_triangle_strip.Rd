@@ -15,10 +15,8 @@ draw_triangle_strip(points, color)
 Draw a triangle strip defined by points.
 }
 \examples{
-\dontrun{
-pts <- matrix(c(100, 150, 200, 250, 100, 200, 100, 200), ncol = 2)
-draw_triangle_strip(pts, "green")
-}
+pts <- matrix(c(50, 150, 250, 350, 80, 220, 80, 220), ncol = 2)
+raylibr_screenshot(function() draw_triangle_strip(pts, "green"))
 
 }
 \seealso{

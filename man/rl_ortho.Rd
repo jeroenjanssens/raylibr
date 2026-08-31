@@ -23,10 +23,9 @@ rl_ortho(left, right, bottom, top, znear, zfar)
 Rl Ortho
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_ortho(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

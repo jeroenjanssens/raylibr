@@ -16,8 +16,6 @@ A logical.
 Test if object is a camera_3d
 }
 \examples{
-\dontrun{
 is_camera_3d("not a camera_3d")
-}
 
 }

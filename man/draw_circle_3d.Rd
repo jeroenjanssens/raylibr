@@ -27,9 +27,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_circle_3d(c(0, 0, 0), 50.0, c(0, 0, 0), 0.0, "red")
-}
+raylibr_screenshot_3d(function() draw_circle_3d(c(0, 0, 0), 1.0, c(0, 1, 0), 0.0, "red"))
 
 }
 \seealso{
@@ -39,6 +37,16 @@ Other 3d functions:
 \code{\link{draw_point_3d}()},
 \code{\link{draw_triangle_3d}()},
 \code{\link{end_mode_3d}()}
+
+Other circle functions: 
+\code{\link{check_collision_point_circle}()},
+\code{\link{draw_circle}()},
+\code{\link{draw_circle_gradient}()},
+\code{\link{draw_circle_lines}()},
+\code{\link{draw_circle_lines_v}()},
+\code{\link{draw_circle_sector}()},
+\code{\link{draw_circle_sector_lines}()},
+\code{\link{draw_circle_v}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -134,4 +142,5 @@ Other draw functions:
 \code{\link{draw_triangle_strip_3d}()}
 }
 \concept{3d functions}
+\concept{circle functions}
 \concept{draw functions}

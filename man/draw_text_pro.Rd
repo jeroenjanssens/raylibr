@@ -33,16 +33,33 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 draw_text_pro(get_font_default(), "Hello", c(100, 100), c(100, 100), 0.0, 1.0, 1.0, "red")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other pro functions: 
 \code{\link{draw_billboard_pro}()},
 \code{\link{draw_rectangle_pro}()},
 \code{\link{draw_texture_pro}()}
+
+Other text functions: 
+\code{\link{draw_text}()},
+\code{\link{draw_text_codepoint}()},
+\code{\link{draw_text_ex}()},
+\code{\link{file_text_find_index}()},
+\code{\link{file_text_replace}()},
+\code{\link{gen_image_text}()},
+\code{\link{get_clipboard_text}()},
+\code{\link{get_text_between}()},
+\code{\link{image_text}()},
+\code{\link{image_text_ex}()},
+\code{\link{load_file_text}()},
+\code{\link{measure_text}()},
+\code{\link{measure_text_ex}()},
+\code{\link{save_file_text}()},
+\code{\link{set_clipboard_text}()},
+\code{\link{set_text_line_spacing}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -139,3 +156,4 @@ Other draw functions:
 }
 \concept{draw functions}
 \concept{pro functions}
+\concept{text functions}

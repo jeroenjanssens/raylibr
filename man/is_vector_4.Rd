@@ -16,9 +16,7 @@ A logical.
 Test if object is a vector of length 4
 }
 \examples{
-\dontrun{
 is_vector_4(c(0, 0, 0, 1))
 is_vector_4(c(1, 2, 3))
-}
 
 }

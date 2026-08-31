@@ -13,10 +13,9 @@ A logical
 Check if gui is locked (global state).
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_is_locked()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

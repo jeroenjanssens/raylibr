@@ -18,9 +18,7 @@ A numeric vector of length 2
 Vector2 Scale
 }
 \examples{
-\dontrun{
 vector2_scale(c(100, 100), 1.0)
-}
 
 }
 \seealso{

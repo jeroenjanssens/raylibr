@@ -5,10 +5,7 @@
 #' @return A logical.
 #'
 #' @examples
-#' \dontrun{
-#' i <- gen_image_color(100, 100, "blue")
-#' is_image(i)
-#' }
+#' is_image("not a image")
 #'
 #' @export
 is_image <- function(x) {

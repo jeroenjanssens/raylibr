@@ -16,10 +16,9 @@ A 4x4 numeric matrix
 Rl Get Matrix View Offset Stereo
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_get_matrix_view_offset_stereo(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

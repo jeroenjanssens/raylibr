@@ -16,9 +16,7 @@ A numeric vector of length 3
 Vector3 Normalize
 }
 \examples{
-\dontrun{
 vector3_normalize(c(0, 0, 0))
-}
 
 }
 \seealso{

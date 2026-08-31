@@ -19,14 +19,21 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_gesture_drag_angle()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other angle functions: 
 \code{\link{get_gesture_pinch_angle}()}
+
+Other gesture functions: 
+\code{\link{get_gesture_detected}()},
+\code{\link{get_gesture_drag_vector}()},
+\code{\link{get_gesture_hold_duration}()},
+\code{\link{get_gesture_pinch_angle}()},
+\code{\link{get_gesture_pinch_vector}()},
+\code{\link{is_gesture_detected}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -124,4 +131,5 @@ Other get functions:
 \code{\link{get_world_to_screen_ex}()}
 }
 \concept{angle functions}
+\concept{gesture functions}
 \concept{get functions}

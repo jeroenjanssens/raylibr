@@ -16,9 +16,7 @@ A 4x4 numeric matrix
 Matrix Rotate Zyx
 }
 \examples{
-\dontrun{
 matrix_rotate_zyx(c(0, 0, 0))
-}
 
 }
 \seealso{

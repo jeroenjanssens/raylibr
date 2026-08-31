@@ -16,8 +16,6 @@ A logical.
 Test if object is a rectangle
 }
 \examples{
-\dontrun{
 is_rectangle("not a rectangle")
-}
 
 }

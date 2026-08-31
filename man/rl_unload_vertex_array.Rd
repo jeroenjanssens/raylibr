@@ -13,10 +13,9 @@ rl_unload_vertex_array(vao_id)
 Rl Unload Vertex Array
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_unload_vertex_array(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

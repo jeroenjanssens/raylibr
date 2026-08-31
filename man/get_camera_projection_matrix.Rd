@@ -18,10 +18,8 @@ A 4x4 numeric matrix.
 Get camera projection matrix
 }
 \examples{
-\dontrun{
 cam <- camera_3d(c(0, 10, 10))
 get_camera_projection_matrix(cam, 800 / 450)
-}
 
 }
 \seealso{
@@ -34,6 +32,8 @@ Other camera functions:
 \code{\link{camera_roll}()},
 \code{\link{camera_yaw}()},
 \code{\link{get_camera_forward}()},
+\code{\link{get_camera_matrix}()},
+\code{\link{get_camera_matrix_2d}()},
 \code{\link{get_camera_right}()},
 \code{\link{get_camera_up}()},
 \code{\link{get_camera_view_matrix}()},

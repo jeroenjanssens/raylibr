@@ -16,8 +16,6 @@ A logical.
 Test if object is a render_texture
 }
 \examples{
-\dontrun{
 is_render_texture("not a render_texture")
-}
 
 }

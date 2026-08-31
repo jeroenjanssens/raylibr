@@ -24,16 +24,23 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 export_font_as_code(get_font_default(), "file.png")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other code functions: 
 \code{\link{export_image_as_code}()},
 \code{\link{export_mesh_as_code}()},
 \code{\link{export_wave_as_code}()}
+
+Other font functions: 
+\code{\link{get_font_default}()},
+\code{\link{is_font_valid}()},
+\code{\link{load_font}()},
+\code{\link{load_font_ex}()},
+\code{\link{load_font_from_image}()},
+\code{\link{unload_font}()}
 
 Other export functions: 
 \code{\link{export_image}()},
@@ -45,3 +52,4 @@ Other export functions:
 }
 \concept{code functions}
 \concept{export functions}
+\concept{font functions}

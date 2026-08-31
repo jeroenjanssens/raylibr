@@ -32,11 +32,9 @@ Enum values for \code{shader_uniform}.
 }
 }
 \examples{
-\dontrun{
 shader_uniform$float
 shader_uniform$ivec3
 shader_uniform$sampler2d
-}
 
 }
 \keyword{datasets}

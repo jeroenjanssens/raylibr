@@ -10,10 +10,9 @@ rl_enable_smooth_lines()
 Rl Enable Smooth Lines
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_enable_smooth_lines()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

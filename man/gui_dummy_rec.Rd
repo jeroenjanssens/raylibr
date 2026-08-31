@@ -18,10 +18,9 @@ An integer
 Dummy control for placeholders.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_dummy_rec(rectangle(10, 10, 200, 100), "Hello")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

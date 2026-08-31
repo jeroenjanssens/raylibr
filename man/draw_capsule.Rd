@@ -29,12 +29,13 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_capsule(c(0, 5, 0), c(0, 5, 0), 50.0, 16L, 8L, "red")
-}
+raylibr_screenshot_3d(function() draw_capsule(c(-1, 0, 0), c(1, 0, 0), 1.0, 16L, 16L, "red"))
 
 }
 \seealso{
+Other capsule functions: 
+\code{\link{draw_capsule_wires}()}
+
 Other draw functions: 
 \code{\link{draw_billboard}()},
 \code{\link{draw_billboard_pro}()},

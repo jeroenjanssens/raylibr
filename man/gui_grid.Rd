@@ -24,10 +24,9 @@ A list with \code{result} (integer), \code{mouse_cell} (numeric vector of length
 Grid control.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_grid(rectangle(10, 10, 200, 100), "Hello", 1.0, 0L, c(100, 100))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

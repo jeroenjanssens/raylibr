@@ -16,8 +16,6 @@ A logical.
 Test if object is a vr_device_info
 }
 \examples{
-\dontrun{
-is_vr_device_info(x)
-}
+is_vr_device_info("not a vr_device_info")
 
 }

@@ -18,9 +18,7 @@ A number
 Vector4 Distance
 }
 \examples{
-\dontrun{
 vector4_distance(c(0, 0, 0, 1), c(0, 0, 0, 1))
-}
 
 }
 \seealso{

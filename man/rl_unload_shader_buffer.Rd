@@ -13,10 +13,9 @@ rl_unload_shader_buffer(ssbo_id)
 Rl Unload Shader Buffer
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_unload_shader_buffer(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

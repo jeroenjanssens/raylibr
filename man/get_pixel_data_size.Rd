@@ -26,9 +26,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 get_pixel_data_size(800L, 450L, 0L)
-}
 
 }
 \seealso{
@@ -36,6 +34,10 @@ Other size functions:
 \code{\link{set_window_max_size}()},
 \code{\link{set_window_min_size}()},
 \code{\link{set_window_size}()}
+
+Other pixel functions: 
+\code{\link{draw_pixel}()},
+\code{\link{draw_pixel_v}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -133,4 +135,5 @@ Other get functions:
 \code{\link{get_world_to_screen_ex}()}
 }
 \concept{get functions}
+\concept{pixel functions}
 \concept{size functions}

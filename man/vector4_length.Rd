@@ -16,9 +16,7 @@ A number
 Vector4 Length
 }
 \examples{
-\dontrun{
 vector4_length(c(0, 0, 0, 1))
-}
 
 }
 \seealso{

@@ -22,19 +22,46 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 load_model_from_mesh(gen_mesh_cube(1.0, 1.0, 1.0))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other mesh functions: 
 \code{\link{draw_mesh}()},
 \code{\link{export_mesh}()},
+\code{\link{export_mesh_as_code}()},
+\code{\link{gen_mesh_cone}()},
+\code{\link{gen_mesh_cube}()},
+\code{\link{gen_mesh_cubicmap}()},
+\code{\link{gen_mesh_cylinder}()},
+\code{\link{gen_mesh_heightmap}()},
+\code{\link{gen_mesh_hemi_sphere}()},
+\code{\link{gen_mesh_knot}()},
+\code{\link{gen_mesh_plane}()},
+\code{\link{gen_mesh_poly}()},
+\code{\link{gen_mesh_sphere}()},
 \code{\link{gen_mesh_tangents}()},
+\code{\link{gen_mesh_torus}()},
+\code{\link{get_mesh_bounding_box}()},
 \code{\link{get_ray_collision_mesh}()},
 \code{\link{unload_mesh}()},
 \code{\link{upload_mesh}()}
+
+Other model functions: 
+\code{\link{draw_model}()},
+\code{\link{draw_model_ex}()},
+\code{\link{draw_model_wires}()},
+\code{\link{draw_model_wires_ex}()},
+\code{\link{get_model_bounding_box}()},
+\code{\link{is_model_animation_valid}()},
+\code{\link{is_model_valid}()},
+\code{\link{load_model}()},
+\code{\link{set_model_mesh_material}()},
+\code{\link{set_model_texture}()},
+\code{\link{unload_model}()},
+\code{\link{update_model_animation}()},
+\code{\link{update_model_animation_ex}()}
 
 Other load functions: 
 \code{\link{load_audio_stream}()},
@@ -61,3 +88,4 @@ Other load functions:
 }
 \concept{load functions}
 \concept{mesh functions}
+\concept{model functions}

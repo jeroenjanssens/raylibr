@@ -30,11 +30,9 @@ This class has been auto-generated from the following Raylib struct definition:
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 mat <- material_map(load_texture("file.png"), "red", 0.0)
 mat$texture
 mat$color
-}
 
 }
 \concept{material_map functions}

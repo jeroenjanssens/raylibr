@@ -18,9 +18,7 @@ A numeric vector of length 4
 Vector4 Min
 }
 \examples{
-\dontrun{
 vector4_min(c(0, 0, 0, 1), c(0, 0, 0, 1))
-}
 
 }
 \seealso{

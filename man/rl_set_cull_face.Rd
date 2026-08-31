@@ -13,10 +13,9 @@ rl_set_cull_face(mode)
 Rl Set Cull Face
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_set_cull_face(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

@@ -20,10 +20,9 @@ A list with \code{result} (integer), \code{active} (logical).
 Toggle Button control.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_toggle(rectangle(10, 10, 200, 100), "Hello", TRUE)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

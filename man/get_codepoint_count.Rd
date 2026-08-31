@@ -22,10 +22,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_codepoint_count("Hello")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other count functions: 
@@ -33,6 +32,9 @@ Other count functions:
 \code{\link{get_gamepad_axis_count}()},
 \code{\link{get_monitor_count}()},
 \code{\link{get_touch_point_count}()}
+
+Other codepoint functions: 
+\code{\link{draw_text_codepoint}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -129,5 +131,6 @@ Other get functions:
 \code{\link{get_world_to_screen_2d}()},
 \code{\link{get_world_to_screen_ex}()}
 }
+\concept{codepoint functions}
 \concept{count functions}
 \concept{get functions}

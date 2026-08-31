@@ -29,10 +29,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 draw_billboard_rec(camera_3d(c(0, 10, 10)), load_texture("file.png"), rectangle(10, 10, 200, 100), c(0, 5, 0), c(100, 100), "red")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rec functions: 
@@ -42,6 +41,10 @@ Other rec functions:
 \code{\link{draw_texture_rec}()},
 \code{\link{get_collision_rec}()},
 \code{\link{get_glyph_atlas_rec}()}
+
+Other billboard functions: 
+\code{\link{draw_billboard}()},
+\code{\link{draw_billboard_pro}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -136,5 +139,6 @@ Other draw functions:
 \code{\link{draw_triangle_strip}()},
 \code{\link{draw_triangle_strip_3d}()}
 }
+\concept{billboard functions}
 \concept{draw functions}
 \concept{rec functions}

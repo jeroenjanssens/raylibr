@@ -26,9 +26,7 @@ A 4x4 numeric matrix
 Matrix Ortho
 }
 \examples{
-\dontrun{
 matrix_ortho(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
-}
 
 }
 \seealso{

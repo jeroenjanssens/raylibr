@@ -10,10 +10,9 @@ gui_enable()
 Enable gui controls (global state).
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_enable()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

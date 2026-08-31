@@ -22,16 +22,27 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_gamepad_name(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other name functions: 
 \code{\link{get_file_name}()},
 \code{\link{get_key_name}()},
 \code{\link{get_monitor_name}()}
+
+Other gamepad functions: 
+\code{\link{get_gamepad_axis_count}()},
+\code{\link{get_gamepad_axis_movement}()},
+\code{\link{get_gamepad_button_pressed}()},
+\code{\link{is_gamepad_available}()},
+\code{\link{is_gamepad_button_down}()},
+\code{\link{is_gamepad_button_pressed}()},
+\code{\link{is_gamepad_button_released}()},
+\code{\link{is_gamepad_button_up}()},
+\code{\link{set_gamepad_mappings}()},
+\code{\link{set_gamepad_vibration}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -128,5 +139,6 @@ Other get functions:
 \code{\link{get_world_to_screen_2d}()},
 \code{\link{get_world_to_screen_ex}()}
 }
+\concept{gamepad functions}
 \concept{get functions}
 \concept{name functions}

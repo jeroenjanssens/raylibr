@@ -10,10 +10,9 @@ rl_disable_texture_cubemap()
 Rl Disable Texture Cubemap
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_disable_texture_cubemap()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

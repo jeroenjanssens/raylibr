@@ -18,9 +18,7 @@ A numeric vector of length 4
 Vector4 Add Value
 }
 \examples{
-\dontrun{
 vector4_add_value(c(0, 0, 0, 1), 0.0)
-}
 
 }
 \seealso{

@@ -18,9 +18,7 @@ A 4x4 numeric matrix
 Matrix Subtract
 }
 \examples{
-\dontrun{
 matrix_subtract(diag(4), diag(4))
-}
 
 }
 \seealso{

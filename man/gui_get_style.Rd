@@ -18,10 +18,9 @@ An integer
 Get one style property.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_get_style(0L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

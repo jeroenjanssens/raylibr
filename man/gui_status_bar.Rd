@@ -18,10 +18,9 @@ An integer
 Status Bar control, shows info text.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_status_bar(rectangle(10, 10, 200, 100), "Hello")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

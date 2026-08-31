@@ -16,10 +16,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 end_mode_2d()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other 2d functions: 
@@ -27,6 +26,21 @@ Other 2d functions:
 \code{\link{get_camera_matrix_2d}()},
 \code{\link{get_screen_to_world_2d}()},
 \code{\link{get_world_to_screen_2d}()}
+
+Other mode functions: 
+\code{\link{begin_blend_mode}()},
+\code{\link{begin_mode_2d}()},
+\code{\link{begin_mode_3d}()},
+\code{\link{begin_scissor_mode}()},
+\code{\link{begin_shader_mode}()},
+\code{\link{begin_texture_mode}()},
+\code{\link{begin_vr_stereo_mode}()},
+\code{\link{end_blend_mode}()},
+\code{\link{end_mode_3d}()},
+\code{\link{end_scissor_mode}()},
+\code{\link{end_shader_mode}()},
+\code{\link{end_texture_mode}()},
+\code{\link{end_vr_stereo_mode}()}
 
 Other end functions: 
 \code{\link{end_blend_mode}()},
@@ -39,3 +53,4 @@ Other end functions:
 }
 \concept{2d functions}
 \concept{end functions}
+\concept{mode functions}

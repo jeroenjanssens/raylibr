@@ -22,12 +22,22 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_monitor_refresh_rate(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
+Other monitor functions: 
+\code{\link{get_current_monitor}()},
+\code{\link{get_monitor_count}()},
+\code{\link{get_monitor_height}()},
+\code{\link{get_monitor_name}()},
+\code{\link{get_monitor_physical_height}()},
+\code{\link{get_monitor_physical_width}()},
+\code{\link{get_monitor_position}()},
+\code{\link{get_monitor_width}()},
+\code{\link{set_window_monitor}()}
+
 Other get functions: 
 \code{\link{get_application_directory}()},
 \code{\link{get_camera_matrix}()},
@@ -124,4 +134,5 @@ Other get functions:
 \code{\link{get_world_to_screen_ex}()}
 }
 \concept{get functions}
+\concept{monitor functions}
 \concept{rate functions}

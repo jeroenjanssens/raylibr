@@ -128,11 +128,9 @@ Enum values for \code{key}.
 }
 }
 \examples{
-\dontrun{
 key$apostrophe
 key$right
 key$volume_down
-}
 
 }
 \keyword{datasets}

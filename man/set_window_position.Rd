@@ -21,10 +21,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 set_window_position(100L, 100L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other position functions: 
@@ -33,6 +32,33 @@ Other position functions:
 \code{\link{get_touch_position}()},
 \code{\link{get_window_position}()},
 \code{\link{set_mouse_position}()}
+
+Other window functions: 
+\code{\link{clear_window_state}()},
+\code{\link{close_window}()},
+\code{\link{get_window_position}()},
+\code{\link{get_window_scale_dpi}()},
+\code{\link{init_window}()},
+\code{\link{is_window_focused}()},
+\code{\link{is_window_fullscreen}()},
+\code{\link{is_window_hidden}()},
+\code{\link{is_window_maximized}()},
+\code{\link{is_window_minimized}()},
+\code{\link{is_window_ready}()},
+\code{\link{is_window_resized}()},
+\code{\link{is_window_state}()},
+\code{\link{maximize_window}()},
+\code{\link{minimize_window}()},
+\code{\link{restore_window}()},
+\code{\link{set_window_focused}()},
+\code{\link{set_window_icon}()},
+\code{\link{set_window_max_size}()},
+\code{\link{set_window_min_size}()},
+\code{\link{set_window_monitor}()},
+\code{\link{set_window_opacity}()},
+\code{\link{set_window_size}()},
+\code{\link{set_window_state}()},
+\code{\link{set_window_title}()}
 
 Other set functions: 
 \code{\link{set_audio_stream_buffer_size_default}()},
@@ -78,3 +104,4 @@ Other set functions:
 }
 \concept{position functions}
 \concept{set functions}
+\concept{window functions}

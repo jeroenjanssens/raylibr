@@ -21,10 +21,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 draw_bounding_box(bounding_box(c(-1, -1, -1), c(1, 1, 1)), "red")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other box functions: 
@@ -125,5 +124,6 @@ Other draw functions:
 \code{\link{draw_triangle_strip}()},
 \code{\link{draw_triangle_strip_3d}()}
 }
+\concept{bounding functions}
 \concept{box functions}
 \concept{draw functions}

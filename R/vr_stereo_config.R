@@ -5,9 +5,7 @@
 #' @return A logical.
 #'
 #' @examples
-#' \dontrun{
-#' is_vr_stereo_config(x)
-#' }
+#' is_vr_stereo_config("not a vr_stereo_config")
 #'
 #' @export
 is_vr_stereo_config <- function(x) {

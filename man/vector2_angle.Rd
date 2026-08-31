@@ -18,9 +18,7 @@ A number
 Vector2 Angle
 }
 \examples{
-\dontrun{
 vector2_angle(c(100, 100), c(100, 100))
-}
 
 }
 \seealso{

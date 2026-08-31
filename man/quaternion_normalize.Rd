@@ -16,9 +16,7 @@ A numeric vector of length 4
 Quaternion Normalize
 }
 \examples{
-\dontrun{
 quaternion_normalize(c(0, 0, 0, 1))
-}
 
 }
 \seealso{

@@ -27,11 +27,9 @@ Enum values for \code{gui_default_property}.
 }
 }
 \examples{
-\dontrun{
 gui_default_property$text_size
 gui_default_property$background_color
 gui_default_property$extprop08
-}
 
 }
 \keyword{datasets}

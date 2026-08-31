@@ -18,9 +18,7 @@ A numeric vector of length 4
 Quaternion Subtract Value
 }
 \examples{
-\dontrun{
 quaternion_subtract_value(c(0, 0, 0, 1), 0.0)
-}
 
 }
 \seealso{

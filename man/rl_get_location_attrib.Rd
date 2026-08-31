@@ -18,10 +18,9 @@ An integer
 Rl Get Location Attrib
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_get_location_attrib(0L, "text")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

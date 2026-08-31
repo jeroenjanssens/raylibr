@@ -18,9 +18,7 @@ A numeric vector of length 3
 Vector3 Min
 }
 \examples{
-\dontrun{
 vector3_min(c(0, 0, 0), c(0, 0, 0))
-}
 
 }
 \seealso{

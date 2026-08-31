@@ -13,10 +13,9 @@ gui_set_tooltip(tooltip)
 Set tooltip string.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_set_tooltip("text")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

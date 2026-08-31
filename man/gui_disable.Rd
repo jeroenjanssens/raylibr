@@ -10,10 +10,9 @@ gui_disable()
 Disable gui controls (global state).
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_disable()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

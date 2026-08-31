@@ -24,9 +24,11 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 color_alpha("red", 0.0)
-}
 
+}
+\seealso{
+Other alpha functions: 
+\code{\link{color_alpha_blend}()}
 }
 \concept{alpha functions}

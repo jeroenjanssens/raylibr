@@ -24,16 +24,36 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 export_mesh_as_code(gen_mesh_cube(1.0, 1.0, 1.0), "file.png")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other code functions: 
 \code{\link{export_font_as_code}()},
 \code{\link{export_image_as_code}()},
 \code{\link{export_wave_as_code}()}
+
+Other mesh functions: 
+\code{\link{draw_mesh}()},
+\code{\link{export_mesh}()},
+\code{\link{gen_mesh_cone}()},
+\code{\link{gen_mesh_cube}()},
+\code{\link{gen_mesh_cubicmap}()},
+\code{\link{gen_mesh_cylinder}()},
+\code{\link{gen_mesh_heightmap}()},
+\code{\link{gen_mesh_hemi_sphere}()},
+\code{\link{gen_mesh_knot}()},
+\code{\link{gen_mesh_plane}()},
+\code{\link{gen_mesh_poly}()},
+\code{\link{gen_mesh_sphere}()},
+\code{\link{gen_mesh_tangents}()},
+\code{\link{gen_mesh_torus}()},
+\code{\link{get_mesh_bounding_box}()},
+\code{\link{get_ray_collision_mesh}()},
+\code{\link{load_model_from_mesh}()},
+\code{\link{unload_mesh}()},
+\code{\link{upload_mesh}()}
 
 Other export functions: 
 \code{\link{export_font_as_code}()},
@@ -45,3 +65,4 @@ Other export functions:
 }
 \concept{code functions}
 \concept{export functions}
+\concept{mesh functions}

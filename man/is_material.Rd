@@ -16,9 +16,6 @@ A logical.
 Test if object is a material
 }
 \examples{
-\dontrun{
-m <- load_material_default()
-is_material(m)
-}
+is_material("not a material")
 
 }

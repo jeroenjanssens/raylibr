@@ -24,11 +24,9 @@ Enum values for \code{gui_color_picker_property}.
 }
 }
 \examples{
-\dontrun{
 gui_color_picker_property$color_selector_size
 gui_color_picker_property$huebar_padding
 gui_color_picker_property$huebar_selector_overflow
-}
 
 }
 \keyword{datasets}

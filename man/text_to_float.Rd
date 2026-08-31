@@ -22,10 +22,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 text_to_float("Hello")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other float functions: 
@@ -35,5 +34,16 @@ Other float functions:
 \code{\link{float_normalize}()},
 \code{\link{float_remap}()},
 \code{\link{float_wrap}()}
+
+Other to functions: 
+\code{\link{color_to_hsv}()},
+\code{\link{color_to_int}()},
+\code{\link{text_to_camel}()},
+\code{\link{text_to_integer}()},
+\code{\link{text_to_lower}()},
+\code{\link{text_to_pascal}()},
+\code{\link{text_to_snake}()},
+\code{\link{text_to_upper}()}
 }
 \concept{float functions}
+\concept{to functions}

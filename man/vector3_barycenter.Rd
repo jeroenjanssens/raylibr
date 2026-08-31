@@ -22,9 +22,7 @@ A numeric vector of length 3
 Vector3 Barycenter
 }
 \examples{
-\dontrun{
 vector3_barycenter(c(0, 0, 0), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0))
-}
 
 }
 \seealso{

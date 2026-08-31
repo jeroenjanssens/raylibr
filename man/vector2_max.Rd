@@ -18,9 +18,7 @@ A numeric vector of length 2
 Vector2 Max
 }
 \examples{
-\dontrun{
 vector2_max(c(100, 100), c(100, 100))
-}
 
 }
 \seealso{

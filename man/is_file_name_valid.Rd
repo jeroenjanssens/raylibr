@@ -22,10 +22,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 is_file_name_valid("file.png")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other valid functions: 
@@ -42,7 +41,20 @@ Other valid functions:
 \code{\link{is_texture_valid}()},
 \code{\link{is_wave_valid}()}
 
+Other file functions: 
+\code{\link{get_file_extension}()},
+\code{\link{get_file_length}()},
+\code{\link{get_file_mod_time}()},
+\code{\link{get_file_name}()},
+\code{\link{get_file_name_without_ext}()},
+\code{\link{is_file_dropped}()},
+\code{\link{is_file_extension}()},
+\code{\link{is_path_file}()},
+\code{\link{load_file_text}()},
+\code{\link{save_file_text}()}
+
 Other is functions: 
+\code{\link{color_is_equal}()},
 \code{\link{is_audio_device_ready}()},
 \code{\link{is_audio_stream_playing}()},
 \code{\link{is_audio_stream_processed}()},
@@ -87,7 +99,9 @@ Other is functions:
 \code{\link{is_window_minimized}()},
 \code{\link{is_window_ready}()},
 \code{\link{is_window_resized}()},
-\code{\link{is_window_state}()}
+\code{\link{is_window_state}()},
+\code{\link{text_is_equal}()}
 }
+\concept{file functions}
 \concept{is functions}
 \concept{valid functions}

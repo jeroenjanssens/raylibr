@@ -25,9 +25,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_ellipse_v(c(100, 100), 50.0, 50.0, "red")
-}
+raylibr_screenshot(function() draw_ellipse_v(c(200, 150), 80.0, 80.0, "red"))
 
 }
 \seealso{
@@ -43,6 +41,11 @@ Other v functions:
 \code{\link{draw_rectangle_v}()},
 \code{\link{draw_texture_v}()},
 \code{\link{get_mouse_wheel_move_v}()}
+
+Other ellipse functions: 
+\code{\link{draw_ellipse}()},
+\code{\link{draw_ellipse_lines}()},
+\code{\link{draw_ellipse_lines_v}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -138,4 +141,5 @@ Other draw functions:
 \code{\link{draw_triangle_strip_3d}()}
 }
 \concept{draw functions}
+\concept{ellipse functions}
 \concept{v functions}

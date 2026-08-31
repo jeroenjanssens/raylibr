@@ -16,22 +16,47 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 end_texture_mode()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other mode functions: 
 \code{\link{begin_blend_mode}()},
+\code{\link{begin_mode_2d}()},
+\code{\link{begin_mode_3d}()},
 \code{\link{begin_scissor_mode}()},
 \code{\link{begin_shader_mode}()},
 \code{\link{begin_texture_mode}()},
 \code{\link{begin_vr_stereo_mode}()},
 \code{\link{end_blend_mode}()},
+\code{\link{end_mode_2d}()},
+\code{\link{end_mode_3d}()},
 \code{\link{end_scissor_mode}()},
 \code{\link{end_shader_mode}()},
 \code{\link{end_vr_stereo_mode}()}
+
+Other texture functions: 
+\code{\link{begin_texture_mode}()},
+\code{\link{draw_texture}()},
+\code{\link{draw_texture_ex}()},
+\code{\link{draw_texture_n_patch}()},
+\code{\link{draw_texture_pro}()},
+\code{\link{draw_texture_rec}()},
+\code{\link{draw_texture_v}()},
+\code{\link{get_shapes_texture}()},
+\code{\link{is_texture_valid}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_render_texture}()},
+\code{\link{load_texture}()},
+\code{\link{load_texture_from_image}()},
+\code{\link{set_shader_value_texture}()},
+\code{\link{set_shapes_texture}()},
+\code{\link{set_texture_filter}()},
+\code{\link{set_texture_wrap}()},
+\code{\link{texture}()},
+\code{\link{unload_render_texture}()},
+\code{\link{unload_texture}()}
 
 Other end functions: 
 \code{\link{end_blend_mode}()},
@@ -44,3 +69,4 @@ Other end functions:
 }
 \concept{end functions}
 \concept{mode functions}
+\concept{texture functions}

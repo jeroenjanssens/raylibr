@@ -30,12 +30,37 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 load_image_raw("file.png", 800L, 450L, 0L, 32L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
+Other image functions: 
+\code{\link{export_image}()},
+\code{\link{export_image_as_code}()},
+\code{\link{gen_image_cellular}()},
+\code{\link{gen_image_checked}()},
+\code{\link{gen_image_color}()},
+\code{\link{gen_image_gradient_linear}()},
+\code{\link{gen_image_gradient_radial}()},
+\code{\link{gen_image_gradient_square}()},
+\code{\link{gen_image_perlin_noise}()},
+\code{\link{gen_image_text}()},
+\code{\link{gen_image_white_noise}()},
+\code{\link{get_clipboard_image}()},
+\code{\link{get_image_alpha_border}()},
+\code{\link{get_image_color}()},
+\code{\link{image_draw_line_ex}()},
+\code{\link{image_draw_triangle}()},
+\code{\link{image_from_image}()},
+\code{\link{is_image_valid}()},
+\code{\link{load_font_from_image}()},
+\code{\link{load_image}()},
+\code{\link{load_image_from_screen}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_texture_from_image}()},
+\code{\link{unload_image}()}
+
 Other load functions: 
 \code{\link{load_audio_stream}()},
 \code{\link{load_file_text}()},
@@ -59,5 +84,6 @@ Other load functions:
 \code{\link{load_vr_stereo_config}()},
 \code{\link{load_wave}()}
 }
+\concept{image functions}
 \concept{load functions}
 \concept{raw functions}

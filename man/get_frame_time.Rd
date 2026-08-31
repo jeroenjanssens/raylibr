@@ -19,16 +19,18 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_frame_time()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other time functions: 
 \code{\link{get_file_mod_time}()},
 \code{\link{get_time}()},
 \code{\link{wait_time}()}
+
+Other frame functions: 
+\code{\link{set_automation_event_base_frame}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -125,5 +127,6 @@ Other get functions:
 \code{\link{get_world_to_screen_2d}()},
 \code{\link{get_world_to_screen_ex}()}
 }
+\concept{frame functions}
 \concept{get functions}
 \concept{time functions}

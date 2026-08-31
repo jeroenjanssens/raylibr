@@ -21,10 +21,8 @@ Enum values for \code{gui_progress_bar_property}.
 }
 }
 \examples{
-\dontrun{
 gui_progress_bar_property$progress_padding
 gui_progress_bar_property$progress_side
-}
 
 }
 \keyword{datasets}

@@ -13,10 +13,9 @@ rl_enable_framebuffer(id)
 Rl Enable Framebuffer
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_enable_framebuffer(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

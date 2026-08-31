@@ -19,15 +19,29 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_shapes_texture_rectangle()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rectangle functions: 
 \code{\link{draw_rectangle}()},
+\code{\link{draw_rectangle_gradient_ex}()},
+\code{\link{draw_rectangle_gradient_h}()},
+\code{\link{draw_rectangle_gradient_v}()},
+\code{\link{draw_rectangle_lines}()},
+\code{\link{draw_rectangle_lines_ex}()},
+\code{\link{draw_rectangle_pro}()},
+\code{\link{draw_rectangle_rec}()},
+\code{\link{draw_rectangle_rounded}()},
+\code{\link{draw_rectangle_rounded_lines}()},
+\code{\link{draw_rectangle_rounded_lines_ex}()},
+\code{\link{draw_rectangle_v}()},
 \code{\link{rectangle}()}
+
+Other shapes functions: 
+\code{\link{get_shapes_texture}()},
+\code{\link{set_shapes_texture}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -126,3 +140,4 @@ Other get functions:
 }
 \concept{get functions}
 \concept{rectangle functions}
+\concept{shapes functions}

@@ -22,10 +22,9 @@ A list with \code{result} (integer), \code{hscroll} (integer), \code{active} (in
 Tab Bar control.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_tab_bar(rectangle(10, 10, 200, 100), "Hello", 0L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

@@ -20,10 +20,9 @@ A list with \code{result} (integer), \code{checked} (logical).
 Check Box control, returns true when active.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_check_box(rectangle(10, 10, 200, 100), "Hello", TRUE)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

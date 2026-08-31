@@ -16,8 +16,6 @@ A logical.
 Test if object is a color
 }
 \examples{
-\dontrun{
 is_color("not a color")
-}
 
 }

@@ -24,14 +24,17 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 font <- load_font_ex("myfont.ttf", 32L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other font functions: 
+\code{\link{export_font_as_code}()},
+\code{\link{get_font_default}()},
+\code{\link{is_font_valid}()},
 \code{\link{load_font}()},
+\code{\link{load_font_from_image}()},
 \code{\link{unload_font}()}
 }
 \concept{font functions}

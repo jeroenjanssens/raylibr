@@ -27,12 +27,15 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 draw_billboard(camera_3d(c(0, 10, 10)), load_texture("file.png"), c(0, 5, 0), 1.0, "red")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
+Other billboard functions: 
+\code{\link{draw_billboard_pro}()},
+\code{\link{draw_billboard_rec}()}
+
 Other draw functions: 
 \code{\link{draw_billboard_pro}()},
 \code{\link{draw_billboard_rec}()},

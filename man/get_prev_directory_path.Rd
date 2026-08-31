@@ -22,14 +22,14 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_prev_directory_path("file.png")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other path functions: 
-\code{\link{get_directory_path}()}
+\code{\link{get_directory_path}()},
+\code{\link{is_path_file}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -128,3 +128,4 @@ Other get functions:
 }
 \concept{get functions}
 \concept{path functions}
+\concept{prev functions}

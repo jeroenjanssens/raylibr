@@ -20,9 +20,7 @@ A number
 Float Normalize
 }
 \examples{
-\dontrun{
 float_normalize(0.0, 0.0, 0.0)
-}
 
 }
 \seealso{

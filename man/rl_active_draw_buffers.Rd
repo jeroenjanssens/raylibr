@@ -13,10 +13,9 @@ rl_active_draw_buffers(count)
 Rl Active Draw Buffers
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_active_draw_buffers(10L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

@@ -22,9 +22,7 @@ A 4x4 numeric matrix
 Matrix Perspective
 }
 \examples{
-\dontrun{
 matrix_perspective(70.0, 1.78, 0.0, 0.0)
-}
 
 }
 \seealso{

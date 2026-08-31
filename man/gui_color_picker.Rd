@@ -20,10 +20,9 @@ A list with \code{result} (integer), \code{color} (color).
 Color Picker control, includes Color bar controls.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_color_picker(rectangle(10, 10, 200, 100), "Hello", "red")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

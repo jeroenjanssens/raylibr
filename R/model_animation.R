@@ -5,9 +5,7 @@
 #' @return A logical.
 #'
 #' @examples
-#' \dontrun{
-#' is_model_animation(x)
-#' }
+#' is_model_animation("not a model_animation")
 #'
 #' @export
 is_model_animation <- function(x) {

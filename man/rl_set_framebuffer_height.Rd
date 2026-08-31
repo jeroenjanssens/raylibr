@@ -13,10 +13,9 @@ rl_set_framebuffer_height(height)
 Rl Set Framebuffer Height
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_set_framebuffer_height(450L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

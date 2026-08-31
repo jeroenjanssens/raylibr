@@ -16,9 +16,7 @@ A number
 Vector3 Length Sqr
 }
 \examples{
-\dontrun{
 vector3_length_sqr(c(0, 0, 0))
-}
 
 }
 \seealso{

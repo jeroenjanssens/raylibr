@@ -17,10 +17,9 @@ rl_normal3f(x, y, z)
 Rl Normal3f
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_normal3f(0.0, 0.0, 0.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

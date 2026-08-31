@@ -24,9 +24,7 @@ A number
 Float Remap
 }
 \examples{
-\dontrun{
 float_remap(0.0, 0.0, 0.0, 0.0, 0.0)
-}
 
 }
 \seealso{

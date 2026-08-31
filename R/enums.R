@@ -22,11 +22,9 @@
 #' | `interlaced_hint` | 65536 |
 #'
 #' @examples
-#' \dontrun{
 #' flag$vsync_hint
 #' flag$window_unfocused
 #' flag$interlaced_hint
-#' }
 #'
 #' @export
 flag <- list(
@@ -64,11 +62,9 @@ flag <- list(
 #' | `none` | 7 |
 #'
 #' @examples
-#' \dontrun{
 #' log$all
 #' log$info
 #' log$none
-#' }
 #'
 #' @export
 log <- list(
@@ -199,11 +195,9 @@ log <- list(
 #' | `volume_down` | 25 |
 #'
 #' @examples
-#' \dontrun{
 #' key$apostrophe
 #' key$right
 #' key$volume_down
-#' }
 #'
 #' @export
 key <- list(
@@ -333,11 +327,9 @@ key <- list(
 #' | `back` | 6 |
 #'
 #' @examples
-#' \dontrun{
 #' mouse_button$left
 #' mouse_button$side
 #' mouse_button$back
-#' }
 #'
 #' @export
 mouse_button <- list(
@@ -369,11 +361,9 @@ mouse_button <- list(
 #' | `not_allowed` | 10 |
 #'
 #' @examples
-#' \dontrun{
 #' mouse_cursor$default
 #' mouse_cursor$resize_ew
 #' mouse_cursor$not_allowed
-#' }
 #'
 #' @export
 mouse_cursor <- list(
@@ -409,11 +399,9 @@ mouse_cursor <- list(
 #' | `brdf` | 10 |
 #'
 #' @examples
-#' \dontrun{
 #' material_map_index$albedo
 #' material_map_index$emission
 #' material_map_index$brdf
-#' }
 #'
 #' @export
 material_map_index <- list(
@@ -451,11 +439,9 @@ material_map_index <- list(
 #' | `sampler2d` | 12 |
 #'
 #' @examples
-#' \dontrun{
 #' shader_uniform$float
 #' shader_uniform$ivec3
 #' shader_uniform$sampler2d
-#' }
 #'
 #' @export
 shader_uniform <- list(
@@ -487,11 +473,9 @@ shader_uniform <- list(
 #' | `third_person` | 4 |
 #'
 #' @examples
-#' \dontrun{
 #' camera_mode$custom
 #' camera_mode$orbital
 #' camera_mode$third_person
-#' }
 #'
 #' @export
 camera_mode <- list(
@@ -512,10 +496,8 @@ camera_mode <- list(
 #' | `orthographic` | 1 |
 #'
 #' @examples
-#' \dontrun{
 #' camera_projection$perspective
 #' camera_projection$orthographic
-#' }
 #'
 #' @export
 camera_projection <- list(

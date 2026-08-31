@@ -24,10 +24,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 is_model_animation_valid(load_model("model.obj"), anim)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other valid functions: 
@@ -44,7 +43,23 @@ Other valid functions:
 \code{\link{is_texture_valid}()},
 \code{\link{is_wave_valid}()}
 
+Other model functions: 
+\code{\link{draw_model}()},
+\code{\link{draw_model_ex}()},
+\code{\link{draw_model_wires}()},
+\code{\link{draw_model_wires_ex}()},
+\code{\link{get_model_bounding_box}()},
+\code{\link{is_model_valid}()},
+\code{\link{load_model}()},
+\code{\link{load_model_from_mesh}()},
+\code{\link{set_model_mesh_material}()},
+\code{\link{set_model_texture}()},
+\code{\link{unload_model}()},
+\code{\link{update_model_animation}()},
+\code{\link{update_model_animation_ex}()}
+
 Other is functions: 
+\code{\link{color_is_equal}()},
 \code{\link{is_audio_device_ready}()},
 \code{\link{is_audio_stream_playing}()},
 \code{\link{is_audio_stream_processed}()},
@@ -89,7 +104,9 @@ Other is functions:
 \code{\link{is_window_minimized}()},
 \code{\link{is_window_ready}()},
 \code{\link{is_window_resized}()},
-\code{\link{is_window_state}()}
+\code{\link{is_window_state}()},
+\code{\link{text_is_equal}()}
 }
 \concept{is functions}
+\concept{model functions}
 \concept{valid functions}

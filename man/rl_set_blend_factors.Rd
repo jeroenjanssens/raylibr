@@ -17,10 +17,9 @@ rl_set_blend_factors(gl_src_factor, gl_dst_factor, gl_equation)
 Rl Set Blend Factors
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_set_blend_factors(0L, 0L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

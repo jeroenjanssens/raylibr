@@ -22,10 +22,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_gamepad_axis_count(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other count functions: 
@@ -33,6 +32,18 @@ Other count functions:
 \code{\link{get_directory_file_count}()},
 \code{\link{get_monitor_count}()},
 \code{\link{get_touch_point_count}()}
+
+Other gamepad functions: 
+\code{\link{get_gamepad_axis_movement}()},
+\code{\link{get_gamepad_button_pressed}()},
+\code{\link{get_gamepad_name}()},
+\code{\link{is_gamepad_available}()},
+\code{\link{is_gamepad_button_down}()},
+\code{\link{is_gamepad_button_pressed}()},
+\code{\link{is_gamepad_button_released}()},
+\code{\link{is_gamepad_button_up}()},
+\code{\link{set_gamepad_mappings}()},
+\code{\link{set_gamepad_vibration}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -130,4 +141,5 @@ Other get functions:
 \code{\link{get_world_to_screen_ex}()}
 }
 \concept{count functions}
+\concept{gamepad functions}
 \concept{get functions}

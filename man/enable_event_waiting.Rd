@@ -16,13 +16,16 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 enable_event_waiting()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other waiting functions: 
 \code{\link{disable_event_waiting}()}
+
+Other event functions: 
+\code{\link{disable_event_waiting}()}
 }
+\concept{event functions}
 \concept{waiting functions}

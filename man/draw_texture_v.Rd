@@ -23,10 +23,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 draw_texture_v(load_texture("file.png"), c(100, 100), "red")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other v functions: 
@@ -41,6 +40,28 @@ Other v functions:
 \code{\link{draw_rectangle_gradient_v}()},
 \code{\link{draw_rectangle_v}()},
 \code{\link{get_mouse_wheel_move_v}()}
+
+Other texture functions: 
+\code{\link{begin_texture_mode}()},
+\code{\link{draw_texture}()},
+\code{\link{draw_texture_ex}()},
+\code{\link{draw_texture_n_patch}()},
+\code{\link{draw_texture_pro}()},
+\code{\link{draw_texture_rec}()},
+\code{\link{end_texture_mode}()},
+\code{\link{get_shapes_texture}()},
+\code{\link{is_texture_valid}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_render_texture}()},
+\code{\link{load_texture}()},
+\code{\link{load_texture_from_image}()},
+\code{\link{set_shader_value_texture}()},
+\code{\link{set_shapes_texture}()},
+\code{\link{set_texture_filter}()},
+\code{\link{set_texture_wrap}()},
+\code{\link{texture}()},
+\code{\link{unload_render_texture}()},
+\code{\link{unload_texture}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -136,4 +157,5 @@ Other draw functions:
 \code{\link{draw_triangle_strip_3d}()}
 }
 \concept{draw functions}
+\concept{texture functions}
 \concept{v functions}

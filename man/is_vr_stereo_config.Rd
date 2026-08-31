@@ -16,8 +16,6 @@ A logical.
 Test if object is a vr_stereo_config
 }
 \examples{
-\dontrun{
-is_vr_stereo_config(x)
-}
+is_vr_stereo_config("not a vr_stereo_config")
 
 }

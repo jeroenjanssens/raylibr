@@ -22,10 +22,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_camera_matrix(camera_3d(c(0, 10, 10)))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other matrix functions: 
@@ -53,6 +52,23 @@ Other matrix functions:
 \code{\link{matrix_translate}()},
 \code{\link{matrix_transpose}()},
 \code{\link{set_shader_value_matrix}()}
+
+Other camera functions: 
+\code{\link{camera_move_forward}()},
+\code{\link{camera_move_right}()},
+\code{\link{camera_move_to_target}()},
+\code{\link{camera_move_up}()},
+\code{\link{camera_pitch}()},
+\code{\link{camera_roll}()},
+\code{\link{camera_yaw}()},
+\code{\link{get_camera_forward}()},
+\code{\link{get_camera_matrix_2d}()},
+\code{\link{get_camera_projection_matrix}()},
+\code{\link{get_camera_right}()},
+\code{\link{get_camera_up}()},
+\code{\link{get_camera_view_matrix}()},
+\code{\link{update_camera}()},
+\code{\link{update_camera_pro}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -149,5 +165,6 @@ Other get functions:
 \code{\link{get_world_to_screen_2d}()},
 \code{\link{get_world_to_screen_ex}()}
 }
+\concept{camera functions}
 \concept{get functions}
 \concept{matrix functions}

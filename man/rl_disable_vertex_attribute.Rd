@@ -13,10 +13,9 @@ rl_disable_vertex_attribute(index)
 Rl Disable Vertex Attribute
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_disable_vertex_attribute(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

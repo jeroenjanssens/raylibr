@@ -16,9 +16,7 @@ A numeric vector of length 3
 Vector3 Negate
 }
 \examples{
-\dontrun{
 vector3_negate(c(0, 0, 0))
-}
 
 }
 \seealso{

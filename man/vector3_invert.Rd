@@ -16,9 +16,7 @@ A numeric vector of length 3
 Vector3 Invert
 }
 \examples{
-\dontrun{
 vector3_invert(c(0, 0, 0))
-}
 
 }
 \seealso{

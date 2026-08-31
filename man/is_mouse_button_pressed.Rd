@@ -22,10 +22,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 is_mouse_button_pressed(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other pressed functions: 
@@ -35,7 +34,23 @@ Other pressed functions:
 \code{\link{is_gamepad_button_pressed}()},
 \code{\link{is_key_pressed}()}
 
+Other mouse functions: 
+\code{\link{get_mouse_delta}()},
+\code{\link{get_mouse_position}()},
+\code{\link{get_mouse_wheel_move}()},
+\code{\link{get_mouse_wheel_move_v}()},
+\code{\link{get_mouse_x}()},
+\code{\link{get_mouse_y}()},
+\code{\link{is_mouse_button_down}()},
+\code{\link{is_mouse_button_released}()},
+\code{\link{is_mouse_button_up}()},
+\code{\link{set_mouse_cursor}()},
+\code{\link{set_mouse_offset}()},
+\code{\link{set_mouse_position}()},
+\code{\link{set_mouse_scale}()}
+
 Other is functions: 
+\code{\link{color_is_equal}()},
 \code{\link{is_audio_device_ready}()},
 \code{\link{is_audio_stream_playing}()},
 \code{\link{is_audio_stream_processed}()},
@@ -80,7 +95,9 @@ Other is functions:
 \code{\link{is_window_minimized}()},
 \code{\link{is_window_ready}()},
 \code{\link{is_window_resized}()},
-\code{\link{is_window_state}()}
+\code{\link{is_window_state}()},
+\code{\link{text_is_equal}()}
 }
 \concept{is functions}
+\concept{mouse functions}
 \concept{pressed functions}

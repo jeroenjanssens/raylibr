@@ -17,10 +17,8 @@ camera_yaw(camera, angle, rotate_around_target)
 Rotate camera around up axis (yaw)
 }
 \examples{
-\dontrun{
 cam <- camera_3d(c(0, 10, 10))
 camera_yaw(cam, 0.1, TRUE)
-}
 
 }
 \seealso{
@@ -32,6 +30,8 @@ Other camera functions:
 \code{\link{camera_pitch}()},
 \code{\link{camera_roll}()},
 \code{\link{get_camera_forward}()},
+\code{\link{get_camera_matrix}()},
+\code{\link{get_camera_matrix_2d}()},
 \code{\link{get_camera_projection_matrix}()},
 \code{\link{get_camera_right}()},
 \code{\link{get_camera_up}()},

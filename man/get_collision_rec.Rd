@@ -24,9 +24,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 get_collision_rec(rectangle(10, 10, 200, 100), rectangle(10, 10, 200, 100))
-}
 
 }
 \seealso{
@@ -37,6 +35,19 @@ Other rec functions:
 \code{\link{draw_rectangle_rec}()},
 \code{\link{draw_texture_rec}()},
 \code{\link{get_glyph_atlas_rec}()}
+
+Other collision functions: 
+\code{\link{check_collision_box_sphere}()},
+\code{\link{check_collision_boxes}()},
+\code{\link{check_collision_circle_line}()},
+\code{\link{check_collision_circle_rec}()},
+\code{\link{check_collision_circles}()},
+\code{\link{check_collision_point_circle}()},
+\code{\link{check_collision_point_line}()},
+\code{\link{check_collision_point_rec}()},
+\code{\link{check_collision_point_triangle}()},
+\code{\link{check_collision_recs}()},
+\code{\link{check_collision_spheres}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -133,5 +144,6 @@ Other get functions:
 \code{\link{get_world_to_screen_2d}()},
 \code{\link{get_world_to_screen_ex}()}
 }
+\concept{collision functions}
 \concept{get functions}
 \concept{rec functions}

@@ -24,10 +24,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 is_gamepad_button_pressed(0L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other pressed functions: 
@@ -37,7 +36,20 @@ Other pressed functions:
 \code{\link{is_key_pressed}()},
 \code{\link{is_mouse_button_pressed}()}
 
+Other gamepad functions: 
+\code{\link{get_gamepad_axis_count}()},
+\code{\link{get_gamepad_axis_movement}()},
+\code{\link{get_gamepad_button_pressed}()},
+\code{\link{get_gamepad_name}()},
+\code{\link{is_gamepad_available}()},
+\code{\link{is_gamepad_button_down}()},
+\code{\link{is_gamepad_button_released}()},
+\code{\link{is_gamepad_button_up}()},
+\code{\link{set_gamepad_mappings}()},
+\code{\link{set_gamepad_vibration}()}
+
 Other is functions: 
+\code{\link{color_is_equal}()},
 \code{\link{is_audio_device_ready}()},
 \code{\link{is_audio_stream_playing}()},
 \code{\link{is_audio_stream_processed}()},
@@ -82,7 +94,9 @@ Other is functions:
 \code{\link{is_window_minimized}()},
 \code{\link{is_window_ready}()},
 \code{\link{is_window_resized}()},
-\code{\link{is_window_state}()}
+\code{\link{is_window_state}()},
+\code{\link{text_is_equal}()}
 }
+\concept{gamepad functions}
 \concept{is functions}
 \concept{pressed functions}

@@ -16,9 +16,7 @@ A numeric vector of length 4
 Quaternion From Matrix
 }
 \examples{
-\dontrun{
 quaternion_from_matrix(diag(4))
-}
 
 }
 \seealso{

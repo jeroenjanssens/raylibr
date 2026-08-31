@@ -19,14 +19,19 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_touch_x()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other x functions: 
 \code{\link{get_mouse_x}()}
+
+Other touch functions: 
+\code{\link{get_touch_point_count}()},
+\code{\link{get_touch_point_id}()},
+\code{\link{get_touch_position}()},
+\code{\link{get_touch_y}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -124,4 +129,5 @@ Other get functions:
 \code{\link{get_world_to_screen_ex}()}
 }
 \concept{get functions}
+\concept{touch functions}
 \concept{x functions}

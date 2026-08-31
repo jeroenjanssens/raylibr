@@ -19,12 +19,15 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 set_config_flags(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
+Other config functions: 
+\code{\link{load_vr_stereo_config}()},
+\code{\link{unload_vr_stereo_config}()}
+
 Other set functions: 
 \code{\link{set_audio_stream_buffer_size_default}()},
 \code{\link{set_audio_stream_pan}()},
@@ -67,5 +70,6 @@ Other set functions:
 \code{\link{set_window_state}()},
 \code{\link{set_window_title}()}
 }
+\concept{config functions}
 \concept{flags functions}
 \concept{set functions}

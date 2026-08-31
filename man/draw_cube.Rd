@@ -27,13 +27,14 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_cube(c(0, 5, 0), 200.0, 100.0, 100.0, "red")
-}
+raylibr_screenshot_3d(function() draw_cube(c(0, 0, 0), 2.0, 2.0, 2.0, "red"))
 
 }
 \seealso{
 Other cube functions: 
+\code{\link{draw_cube_v}()},
+\code{\link{draw_cube_wires}()},
+\code{\link{draw_cube_wires_v}()},
 \code{\link{gen_mesh_cube}()}
 
 Other draw functions: 

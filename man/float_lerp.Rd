@@ -20,9 +20,7 @@ A number
 Float Lerp
 }
 \examples{
-\dontrun{
 float_lerp(0.0, 0.0, 0.0)
-}
 
 }
 \seealso{

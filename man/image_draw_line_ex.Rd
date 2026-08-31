@@ -21,20 +21,35 @@ image_draw_line_ex(dst, start, end, thick, color)
 Draw line within an image (Vector version). Modifies the image in place.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 img <- gen_image_color(100, 100, "white")
 image_draw_line_ex(img, c(0, 0), c(100, 100), 2L, "red")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other image functions: 
 \code{\link{export_image}()},
+\code{\link{export_image_as_code}()},
+\code{\link{gen_image_cellular}()},
+\code{\link{gen_image_checked}()},
+\code{\link{gen_image_color}()},
+\code{\link{gen_image_gradient_linear}()},
+\code{\link{gen_image_gradient_radial}()},
+\code{\link{gen_image_gradient_square}()},
+\code{\link{gen_image_perlin_noise}()},
+\code{\link{gen_image_text}()},
+\code{\link{gen_image_white_noise}()},
 \code{\link{get_clipboard_image}()},
+\code{\link{get_image_alpha_border}()},
+\code{\link{get_image_color}()},
 \code{\link{image_draw_triangle}()},
 \code{\link{image_from_image}()},
+\code{\link{is_image_valid}()},
 \code{\link{load_font_from_image}()},
 \code{\link{load_image}()},
+\code{\link{load_image_from_screen}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_image_raw}()},
 \code{\link{load_texture_from_image}()},
 \code{\link{unload_image}()}
 }

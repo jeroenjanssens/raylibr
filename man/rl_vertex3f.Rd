@@ -17,10 +17,9 @@ rl_vertex3f(x, y, z)
 Rl Vertex3f
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_vertex3f(0.0, 0.0, 0.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

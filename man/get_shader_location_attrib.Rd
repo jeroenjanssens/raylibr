@@ -24,12 +24,23 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_shader_location_attrib(load_shader("", "shader.fs"), "text")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
+Other shader functions: 
+\code{\link{begin_shader_mode}()},
+\code{\link{end_shader_mode}()},
+\code{\link{get_shader_location}()},
+\code{\link{is_shader_valid}()},
+\code{\link{load_shader}()},
+\code{\link{load_shader_from_memory}()},
+\code{\link{set_shader_value}()},
+\code{\link{set_shader_value_matrix}()},
+\code{\link{set_shader_value_texture}()},
+\code{\link{unload_shader}()}
+
 Other get functions: 
 \code{\link{get_application_directory}()},
 \code{\link{get_camera_matrix}()},
@@ -127,3 +138,4 @@ Other get functions:
 }
 \concept{attrib functions}
 \concept{get functions}
+\concept{shader functions}

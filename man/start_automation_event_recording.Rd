@@ -16,13 +16,17 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 start_automation_event_recording()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other recording functions: 
 \code{\link{stop_automation_event_recording}()}
+
+Other automation functions: 
+\code{\link{set_automation_event_base_frame}()},
+\code{\link{stop_automation_event_recording}()}
 }
+\concept{automation functions}
 \concept{recording functions}

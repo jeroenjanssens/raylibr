@@ -36,9 +36,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_cylinder_wires_ex(c(0, 5, 0), c(0, 5, 0), 50.0, 50.0, 0L, "red")
-}
+raylibr_screenshot_3d(function() draw_cylinder_wires_ex(c(-1, 0, 0), c(1, 0, 0), 1.0, 1.0, 16L, "red"))
 
 }
 \seealso{
@@ -60,6 +58,12 @@ Other ex functions:
 \code{\link{image_text_ex}()},
 \code{\link{measure_text_ex}()},
 \code{\link{update_model_animation_ex}()}
+
+Other cylinder functions: 
+\code{\link{draw_cylinder}()},
+\code{\link{draw_cylinder_ex}()},
+\code{\link{draw_cylinder_wires}()},
+\code{\link{gen_mesh_cylinder}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -154,5 +158,6 @@ Other draw functions:
 \code{\link{draw_triangle_strip}()},
 \code{\link{draw_triangle_strip_3d}()}
 }
+\concept{cylinder functions}
 \concept{draw functions}
 \concept{ex functions}

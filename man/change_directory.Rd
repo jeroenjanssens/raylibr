@@ -22,14 +22,16 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 change_directory("file.png")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other directory functions: 
 \code{\link{get_application_directory}()},
+\code{\link{get_directory_file_count}()},
+\code{\link{get_directory_file_count_ex}()},
+\code{\link{get_directory_path}()},
 \code{\link{get_working_directory}()},
 \code{\link{make_directory}()}
 }

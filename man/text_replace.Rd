@@ -26,13 +26,15 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 text_replace("Hello", "text", "text")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other replace functions: 
-\code{\link{file_text_replace}()}
+\code{\link{file_text_replace}()},
+\code{\link{text_replace_alloc}()},
+\code{\link{text_replace_between}()},
+\code{\link{text_replace_between_alloc}()}
 }
 \concept{replace functions}

@@ -18,10 +18,9 @@ An integer
 Line separator control, could contain text.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_line(rectangle(10, 10, 200, 100), "Hello")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

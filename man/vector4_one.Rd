@@ -13,9 +13,7 @@ A numeric vector of length 4
 Vector4 One
 }
 \examples{
-\dontrun{
 vector4_one()
-}
 
 }
 \seealso{

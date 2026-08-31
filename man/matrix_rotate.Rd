@@ -18,9 +18,7 @@ A 4x4 numeric matrix
 Matrix Rotate
 }
 \examples{
-\dontrun{
 matrix_rotate(c(0, 0, 0), 0.0)
-}
 
 }
 \seealso{

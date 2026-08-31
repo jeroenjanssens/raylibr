@@ -21,10 +21,8 @@ Enum values for \code{gui_combo_box_property}.
 }
 }
 \examples{
-\dontrun{
 gui_combo_box_property$combo_button_width
 gui_combo_box_property$combo_button_spacing
-}
 
 }
 \keyword{datasets}

@@ -20,9 +20,7 @@ A 4x4 numeric matrix
 Matrix Compose
 }
 \examples{
-\dontrun{
 matrix_compose(c(0, 0, 0), c(0, 0, 0, 1), c(1, 1, 1))
-}
 
 }
 \seealso{

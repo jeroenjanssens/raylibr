@@ -25,9 +25,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_circle_lines(100L, 100L, 50.0, "red")
-}
+raylibr_screenshot(function() draw_circle_lines(200L, 150L, 80.0, "red"))
 
 }
 \seealso{
@@ -39,6 +37,16 @@ Other lines functions:
 \code{\link{draw_rectangle_rounded_lines}()},
 \code{\link{draw_ring_lines}()},
 \code{\link{draw_triangle_lines}()}
+
+Other circle functions: 
+\code{\link{check_collision_point_circle}()},
+\code{\link{draw_circle}()},
+\code{\link{draw_circle_3d}()},
+\code{\link{draw_circle_gradient}()},
+\code{\link{draw_circle_lines_v}()},
+\code{\link{draw_circle_sector}()},
+\code{\link{draw_circle_sector_lines}()},
+\code{\link{draw_circle_v}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -133,5 +141,6 @@ Other draw functions:
 \code{\link{draw_triangle_strip}()},
 \code{\link{draw_triangle_strip_3d}()}
 }
+\concept{circle functions}
 \concept{draw functions}
 \concept{lines functions}

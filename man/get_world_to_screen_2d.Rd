@@ -24,10 +24,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_world_to_screen_2d(c(100, 100), camera_2d(c(400, 300), c(0, 0)))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other 2d functions: 
@@ -35,6 +34,10 @@ Other 2d functions:
 \code{\link{end_mode_2d}()},
 \code{\link{get_camera_matrix_2d}()},
 \code{\link{get_screen_to_world_2d}()}
+
+Other world functions: 
+\code{\link{get_world_to_screen}()},
+\code{\link{get_world_to_screen_ex}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -133,3 +136,4 @@ Other get functions:
 }
 \concept{2d functions}
 \concept{get functions}
+\concept{world functions}

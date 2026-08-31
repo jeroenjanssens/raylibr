@@ -5,10 +5,7 @@
 #' @return A logical.
 #'
 #' @examples
-#' \dontrun{
-#' a <- load_audio_stream(44100L, 16L, 1L)
-#' is_audio_stream(a)
-#' }
+#' is_audio_stream("not a audio_stream")
 #'
 #' @export
 is_audio_stream <- function(x) {

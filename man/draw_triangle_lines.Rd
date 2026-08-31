@@ -25,9 +25,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_triangle_lines(c(100, 100), c(100, 100), c(100, 100), "red")
-}
+raylibr_screenshot(function() draw_triangle_lines(c(200, 50), c(100, 250), c(300, 250), "red"))
 
 }
 \seealso{
@@ -39,6 +37,12 @@ Other lines functions:
 \code{\link{draw_rectangle_lines}()},
 \code{\link{draw_rectangle_rounded_lines}()},
 \code{\link{draw_ring_lines}()}
+
+Other triangle functions: 
+\code{\link{check_collision_point_triangle}()},
+\code{\link{draw_triangle}()},
+\code{\link{draw_triangle_3d}()},
+\code{\link{get_ray_collision_triangle}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -135,3 +139,4 @@ Other draw functions:
 }
 \concept{draw functions}
 \concept{lines functions}
+\concept{triangle functions}

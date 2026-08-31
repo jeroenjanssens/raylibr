@@ -4037,6 +4037,18 @@ color_from_ <- function(x) {
     .Call(`_raylibr_color_from_`, x)
 }
 
+image_get_width_ <- function(img) {
+    .Call(`_raylibr_image_get_width_`, img)
+}
+
+image_get_height_ <- function(img) {
+    .Call(`_raylibr_image_get_height_`, img)
+}
+
+image_to_raster_ <- function(img) {
+    .Call(`_raylibr_image_to_raster_`, img)
+}
+
 set_main_loop_callback_ <- function(update_fn, cleanup_fn) {
     invisible(.Call(`_raylibr_set_main_loop_callback`, update_fn, cleanup_fn))
 }

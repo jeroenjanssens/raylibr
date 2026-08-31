@@ -13,10 +13,9 @@ An integer
 Rl Get Framebuffer Height
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_get_framebuffer_height()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

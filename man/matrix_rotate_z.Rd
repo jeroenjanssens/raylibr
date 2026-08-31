@@ -16,9 +16,7 @@ A 4x4 numeric matrix
 Matrix Rotate Z
 }
 \examples{
-\dontrun{
 matrix_rotate_z(0.0)
-}
 
 }
 \seealso{

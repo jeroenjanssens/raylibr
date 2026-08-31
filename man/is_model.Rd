@@ -16,9 +16,6 @@ A logical.
 Test if object is a model
 }
 \examples{
-\dontrun{
-m <- load_model("model.obj")
-is_model(m)
-}
+is_model("not a model")
 
 }

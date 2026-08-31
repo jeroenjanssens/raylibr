@@ -22,16 +22,24 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_key_name(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other name functions: 
 \code{\link{get_file_name}()},
 \code{\link{get_gamepad_name}()},
 \code{\link{get_monitor_name}()}
+
+Other key functions: 
+\code{\link{get_key_pressed}()},
+\code{\link{is_key_down}()},
+\code{\link{is_key_pressed}()},
+\code{\link{is_key_pressed_repeat}()},
+\code{\link{is_key_released}()},
+\code{\link{is_key_up}()},
+\code{\link{set_exit_key}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -129,4 +137,5 @@ Other get functions:
 \code{\link{get_world_to_screen_ex}()}
 }
 \concept{get functions}
+\concept{key functions}
 \concept{name functions}

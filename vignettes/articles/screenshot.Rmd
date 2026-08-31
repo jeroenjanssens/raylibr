@@ -1,0 +1,19 @@
+---
+title: "Screenshot"
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+You can use `raylibr_screenshot()` to render a scene to an image.
+It creates a hidden 400x300 window, draws on a black background, and returns the result.
+The image auto-displays in knitr documents, just like ggplot2 plots.
+
+```{r screenshot, message=FALSE}
+library(raylibr)
+
+raylibr_screenshot(function() {
+  draw_circle(200L, 150L, 100.0, "yellow")
+})
+```

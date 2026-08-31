@@ -15,10 +15,9 @@ rl_set_uniform_sampler(loc_index, texture_id)
 Rl Set Uniform Sampler
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_set_uniform_sampler(0L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

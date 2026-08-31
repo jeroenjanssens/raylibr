@@ -17,10 +17,8 @@ draw_spline_linear(points, thick, color)
 Draw spline: linear, minimum 2 points.
 }
 \examples{
-\dontrun{
-pts <- matrix(c(100, 200, 300, 100, 200, 100), ncol = 2)
-draw_spline_linear(pts, 2.0, "red")
-}
+pts <- matrix(c(50, 200, 350, 50, 250, 100), ncol = 2)
+raylibr_screenshot(function() draw_spline_linear(pts, 3.0, "red"))
 
 }
 \seealso{

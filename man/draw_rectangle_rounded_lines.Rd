@@ -25,9 +25,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_rectangle_rounded_lines(rectangle(10, 10, 200, 100), 0.0, 16L, "red")
-}
+raylibr_screenshot(function() draw_rectangle_rounded_lines(rectangle(100, 75, 200, 150), 0.3, 36L, "red"))
 
 }
 \seealso{
@@ -39,6 +37,21 @@ Other lines functions:
 \code{\link{draw_rectangle_lines}()},
 \code{\link{draw_ring_lines}()},
 \code{\link{draw_triangle_lines}()}
+
+Other rectangle functions: 
+\code{\link{draw_rectangle}()},
+\code{\link{draw_rectangle_gradient_ex}()},
+\code{\link{draw_rectangle_gradient_h}()},
+\code{\link{draw_rectangle_gradient_v}()},
+\code{\link{draw_rectangle_lines}()},
+\code{\link{draw_rectangle_lines_ex}()},
+\code{\link{draw_rectangle_pro}()},
+\code{\link{draw_rectangle_rec}()},
+\code{\link{draw_rectangle_rounded}()},
+\code{\link{draw_rectangle_rounded_lines_ex}()},
+\code{\link{draw_rectangle_v}()},
+\code{\link{get_shapes_texture_rectangle}()},
+\code{\link{rectangle}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -135,3 +148,4 @@ Other draw functions:
 }
 \concept{draw functions}
 \concept{lines functions}
+\concept{rectangle functions}

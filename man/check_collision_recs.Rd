@@ -24,12 +24,23 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 check_collision_recs(rectangle(10, 10, 200, 100), rectangle(10, 10, 200, 100))
-}
 
 }
 \seealso{
+Other collision functions: 
+\code{\link{check_collision_box_sphere}()},
+\code{\link{check_collision_boxes}()},
+\code{\link{check_collision_circle_line}()},
+\code{\link{check_collision_circle_rec}()},
+\code{\link{check_collision_circles}()},
+\code{\link{check_collision_point_circle}()},
+\code{\link{check_collision_point_line}()},
+\code{\link{check_collision_point_rec}()},
+\code{\link{check_collision_point_triangle}()},
+\code{\link{check_collision_spheres}()},
+\code{\link{get_collision_rec}()}
+
 Other check functions: 
 \code{\link{check_collision_box_sphere}()},
 \code{\link{check_collision_boxes}()},
@@ -43,4 +54,5 @@ Other check functions:
 \code{\link{check_collision_spheres}()}
 }
 \concept{check functions}
+\concept{collision functions}
 \concept{recs functions}

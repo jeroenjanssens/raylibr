@@ -18,9 +18,7 @@ A numeric vector of length 2
 Vector2 Add
 }
 \examples{
-\dontrun{
 vector2_add(c(100, 100), c(100, 100))
-}
 
 }
 \seealso{

@@ -21,15 +21,31 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 set_audio_stream_pitch(load_audio_stream(44100L, 16L, 1L), 1.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other pitch functions: 
 \code{\link{set_music_pitch}()},
 \code{\link{set_sound_pitch}()}
+
+Other audio functions: 
+\code{\link{close_audio_device}()},
+\code{\link{init_audio_device}()},
+\code{\link{is_audio_device_ready}()},
+\code{\link{is_audio_stream_playing}()},
+\code{\link{is_audio_stream_processed}()},
+\code{\link{is_audio_stream_valid}()},
+\code{\link{load_audio_stream}()},
+\code{\link{pause_audio_stream}()},
+\code{\link{play_audio_stream}()},
+\code{\link{resume_audio_stream}()},
+\code{\link{set_audio_stream_buffer_size_default}()},
+\code{\link{set_audio_stream_pan}()},
+\code{\link{set_audio_stream_volume}()},
+\code{\link{stop_audio_stream}()},
+\code{\link{unload_audio_stream}()}
 
 Other set functions: 
 \code{\link{set_audio_stream_buffer_size_default}()},
@@ -73,5 +89,6 @@ Other set functions:
 \code{\link{set_window_state}()},
 \code{\link{set_window_title}()}
 }
+\concept{audio functions}
 \concept{pitch functions}
 \concept{set functions}

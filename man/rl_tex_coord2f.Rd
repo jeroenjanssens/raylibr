@@ -15,10 +15,9 @@ rl_tex_coord2f(x, y)
 Rl Tex Coord2f
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_tex_coord2f(0.0, 0.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

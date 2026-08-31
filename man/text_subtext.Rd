@@ -26,9 +26,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 text_subtext("Hello", 0L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \concept{subtext functions}

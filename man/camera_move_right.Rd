@@ -17,10 +17,8 @@ camera_move_right(camera, distance, move_in_world_plane)
 Move camera right
 }
 \examples{
-\dontrun{
 cam <- camera_3d(c(0, 10, 10))
 camera_move_right(cam, 1.0, TRUE)
-}
 
 }
 \seealso{
@@ -32,6 +30,8 @@ Other camera functions:
 \code{\link{camera_roll}()},
 \code{\link{camera_yaw}()},
 \code{\link{get_camera_forward}()},
+\code{\link{get_camera_matrix}()},
+\code{\link{get_camera_matrix_2d}()},
 \code{\link{get_camera_projection_matrix}()},
 \code{\link{get_camera_right}()},
 \code{\link{get_camera_up}()},

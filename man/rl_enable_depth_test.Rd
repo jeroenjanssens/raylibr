@@ -10,10 +10,9 @@ rl_enable_depth_test()
 Rl Enable Depth Test
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_enable_depth_test()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

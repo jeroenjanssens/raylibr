@@ -19,15 +19,22 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_font_default()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other default functions: 
 \code{\link{load_material_default}()},
 \code{\link{set_audio_stream_buffer_size_default}()}
+
+Other font functions: 
+\code{\link{export_font_as_code}()},
+\code{\link{is_font_valid}()},
+\code{\link{load_font}()},
+\code{\link{load_font_ex}()},
+\code{\link{load_font_from_image}()},
+\code{\link{unload_font}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -125,4 +132,5 @@ Other get functions:
 \code{\link{get_world_to_screen_ex}()}
 }
 \concept{default functions}
+\concept{font functions}
 \concept{get functions}

@@ -5,10 +5,7 @@
 #' @return A logical.
 #'
 #' @examples
-#' \dontrun{
-#' m <- load_model("model.obj")
-#' is_model(m)
-#' }
+#' is_model("not a model")
 #'
 #' @export
 is_model <- function(x) {

@@ -20,10 +20,9 @@ A list with \code{result} (integer), \code{alpha} (number).
 Color Bar Alpha control.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_color_bar_alpha(rectangle(10, 10, 200, 100), "Hello", 0.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

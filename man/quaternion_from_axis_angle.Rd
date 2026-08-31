@@ -18,9 +18,7 @@ A numeric vector of length 4
 Quaternion From Axis Angle
 }
 \examples{
-\dontrun{
 quaternion_from_axis_angle(c(0, 0, 0), 0.0)
-}
 
 }
 \seealso{

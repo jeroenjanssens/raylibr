@@ -21,10 +21,9 @@ rl_framebuffer_attach(id, tex_id, attach_type, tex_type, mip_level)
 Rl Framebuffer Attach
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_framebuffer_attach(0L, 0L, 0L, 0L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

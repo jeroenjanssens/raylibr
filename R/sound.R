@@ -5,10 +5,7 @@
 #' @return A logical.
 #'
 #' @examples
-#' \dontrun{
-#' s <- load_sound("sound.wav")
-#' is_sound(s)
-#' }
+#' is_sound("not a sound")
 #'
 #' @export
 is_sound <- function(x) {

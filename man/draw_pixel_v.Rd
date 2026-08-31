@@ -21,9 +21,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_pixel_v(c(100, 100), "red")
-}
+raylibr_screenshot(function() draw_pixel_v(c(200, 150), "red"))
 
 }
 \seealso{
@@ -39,6 +37,10 @@ Other v functions:
 \code{\link{draw_rectangle_v}()},
 \code{\link{draw_texture_v}()},
 \code{\link{get_mouse_wheel_move_v}()}
+
+Other pixel functions: 
+\code{\link{draw_pixel}()},
+\code{\link{get_pixel_data_size}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -134,4 +136,5 @@ Other draw functions:
 \code{\link{draw_triangle_strip_3d}()}
 }
 \concept{draw functions}
+\concept{pixel functions}
 \concept{v functions}

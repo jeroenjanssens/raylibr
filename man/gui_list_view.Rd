@@ -22,10 +22,9 @@ A list with \code{result} (integer), \code{scroll_index} (integer), \code{active
 List View control.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_list_view(rectangle(10, 10, 200, 100), "Hello", 0L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

@@ -19,12 +19,29 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 set_text_line_spacing(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
+Other text functions: 
+\code{\link{draw_text}()},
+\code{\link{draw_text_codepoint}()},
+\code{\link{draw_text_ex}()},
+\code{\link{draw_text_pro}()},
+\code{\link{file_text_find_index}()},
+\code{\link{file_text_replace}()},
+\code{\link{gen_image_text}()},
+\code{\link{get_clipboard_text}()},
+\code{\link{get_text_between}()},
+\code{\link{image_text}()},
+\code{\link{image_text_ex}()},
+\code{\link{load_file_text}()},
+\code{\link{measure_text}()},
+\code{\link{measure_text_ex}()},
+\code{\link{save_file_text}()},
+\code{\link{set_clipboard_text}()}
+
 Other set functions: 
 \code{\link{set_audio_stream_buffer_size_default}()},
 \code{\link{set_audio_stream_pan}()},
@@ -69,3 +86,4 @@ Other set functions:
 }
 \concept{set functions}
 \concept{spacing functions}
+\concept{text functions}

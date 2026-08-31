@@ -20,9 +20,7 @@ Enum values for \code{gui_check_box_property}.
 }
 }
 \examples{
-\dontrun{
 gui_check_box_property$check_padding
-}
 
 }
 \keyword{datasets}

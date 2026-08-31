@@ -27,9 +27,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_sphere_wires(c(0, 5, 0), 50.0, 8L, 16L, "red")
-}
+raylibr_screenshot_3d(function() draw_sphere_wires(c(0, 0, 0), 1.0, 16L, 16L, "red"))
 
 }
 \seealso{
@@ -38,6 +36,14 @@ Other wires functions:
 \code{\link{draw_cube_wires}()},
 \code{\link{draw_cylinder_wires}()},
 \code{\link{draw_model_wires}()}
+
+Other sphere functions: 
+\code{\link{check_collision_box_sphere}()},
+\code{\link{draw_sphere}()},
+\code{\link{draw_sphere_ex}()},
+\code{\link{gen_mesh_hemi_sphere}()},
+\code{\link{gen_mesh_sphere}()},
+\code{\link{get_ray_collision_sphere}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -133,4 +139,5 @@ Other draw functions:
 \code{\link{draw_triangle_strip_3d}()}
 }
 \concept{draw functions}
+\concept{sphere functions}
 \concept{wires functions}

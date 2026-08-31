@@ -19,10 +19,9 @@ rl_viewport(x, y, width, height)
 Rl Viewport
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_viewport(100L, 100L, 800L, 450L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

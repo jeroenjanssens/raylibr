@@ -45,16 +45,19 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 draw_billboard_pro(camera_3d(c(0, 10, 10)), load_texture("file.png"), rectangle(10, 10, 200, 100), c(0, 5, 0), c(0, 1, 0), c(100, 100), c(100, 100), 0.0, "red")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other pro functions: 
 \code{\link{draw_rectangle_pro}()},
 \code{\link{draw_text_pro}()},
 \code{\link{draw_texture_pro}()}
+
+Other billboard functions: 
+\code{\link{draw_billboard}()},
+\code{\link{draw_billboard_rec}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -149,5 +152,6 @@ Other draw functions:
 \code{\link{draw_triangle_strip}()},
 \code{\link{draw_triangle_strip_3d}()}
 }
+\concept{billboard functions}
 \concept{draw functions}
 \concept{pro functions}

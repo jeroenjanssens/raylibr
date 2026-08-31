@@ -19,14 +19,28 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 unload_sound_alias(load_sound("sound.wav"))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other alias functions: 
 \code{\link{load_sound_alias}()}
+
+Other sound functions: 
+\code{\link{is_sound_playing}()},
+\code{\link{is_sound_valid}()},
+\code{\link{load_sound}()},
+\code{\link{load_sound_alias}()},
+\code{\link{load_sound_from_wave}()},
+\code{\link{pause_sound}()},
+\code{\link{play_sound}()},
+\code{\link{resume_sound}()},
+\code{\link{set_sound_pan}()},
+\code{\link{set_sound_pitch}()},
+\code{\link{set_sound_volume}()},
+\code{\link{stop_sound}()},
+\code{\link{unload_sound}()}
 
 Other unload functions: 
 \code{\link{unload_audio_stream}()},
@@ -44,4 +58,5 @@ Other unload functions:
 \code{\link{unload_wave}()}
 }
 \concept{alias functions}
+\concept{sound functions}
 \concept{unload functions}

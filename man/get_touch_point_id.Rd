@@ -22,12 +22,17 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_touch_point_id(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
+Other touch functions: 
+\code{\link{get_touch_point_count}()},
+\code{\link{get_touch_position}()},
+\code{\link{get_touch_x}()},
+\code{\link{get_touch_y}()}
+
 Other get functions: 
 \code{\link{get_application_directory}()},
 \code{\link{get_camera_matrix}()},
@@ -125,3 +130,4 @@ Other get functions:
 }
 \concept{get functions}
 \concept{id functions}
+\concept{touch functions}

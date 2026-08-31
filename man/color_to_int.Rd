@@ -22,9 +22,19 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 color_to_int("red")
-}
 
 }
+\seealso{
+Other to functions: 
+\code{\link{color_to_hsv}()},
+\code{\link{text_to_camel}()},
+\code{\link{text_to_float}()},
+\code{\link{text_to_integer}()},
+\code{\link{text_to_lower}()},
+\code{\link{text_to_pascal}()},
+\code{\link{text_to_snake}()},
+\code{\link{text_to_upper}()}
+}
 \concept{int functions}
+\concept{to functions}

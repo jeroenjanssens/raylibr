@@ -35,11 +35,9 @@ Enum values for \code{flag}.
 }
 }
 \examples{
-\dontrun{
 flag$vsync_hint
 flag$window_unfocused
 flag$interlaced_hint
-}
 
 }
 \keyword{datasets}

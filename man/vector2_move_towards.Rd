@@ -20,9 +20,7 @@ A numeric vector of length 2
 Vector2 Move Towards
 }
 \examples{
-\dontrun{
 vector2_move_towards(c(100, 100), c(100, 100), 0.0)
-}
 
 }
 \seealso{

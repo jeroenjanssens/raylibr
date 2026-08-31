@@ -10,10 +10,9 @@ rl_disable_wire_mode()
 Rl Disable Wire Mode
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_disable_wire_mode()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

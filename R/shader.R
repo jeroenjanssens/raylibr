@@ -5,10 +5,7 @@
 #' @return A logical.
 #'
 #' @examples
-#' \dontrun{
-#' s <- load_shader("", "shader.fs")
-#' is_shader(s)
-#' }
+#' is_shader("not a shader")
 #'
 #' @export
 is_shader <- function(x) {

@@ -24,12 +24,13 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 get_random_value(0L, 0L)
-}
 
 }
 \seealso{
+Other random functions: 
+\code{\link{set_random_seed}()}
+
 Other get functions: 
 \code{\link{get_application_directory}()},
 \code{\link{get_camera_matrix}()},
@@ -126,4 +127,5 @@ Other get functions:
 \code{\link{get_world_to_screen_ex}()}
 }
 \concept{get functions}
+\concept{random functions}
 \concept{value functions}

@@ -24,10 +24,9 @@ A list with \code{result} (integer), \code{btn_active} (integer).
 Message Box control, displays a message.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_message_box(rectangle(10, 10, 200, 100), "My Window", "Hello", "Hello", 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

@@ -25,12 +25,19 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_line_bezier(c(100, 100), c(100, 100), 2.0, "red")
-}
+raylibr_screenshot(function() draw_line_bezier(c(200, 150), c(200, 150), 3.0, "red"))
 
 }
 \seealso{
+Other line functions: 
+\code{\link{check_collision_circle_line}()},
+\code{\link{check_collision_point_line}()},
+\code{\link{draw_line}()},
+\code{\link{draw_line_3d}()},
+\code{\link{draw_line_dashed}()},
+\code{\link{draw_line_ex}()},
+\code{\link{draw_line_v}()}
+
 Other draw functions: 
 \code{\link{draw_billboard}()},
 \code{\link{draw_billboard_pro}()},
@@ -126,3 +133,4 @@ Other draw functions:
 }
 \concept{bezier functions}
 \concept{draw functions}
+\concept{line functions}

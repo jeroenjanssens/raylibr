@@ -18,9 +18,7 @@ A numeric vector of length 3
 Vector3 Rotate By Quaternion
 }
 \examples{
-\dontrun{
 vector3_rotate_by_quaternion(c(0, 0, 0), c(0, 0, 0, 1))
-}
 
 }
 \seealso{

@@ -139,3 +139,33 @@ namespace Rcpp {
 Color color_from_(SEXP x) {
   return Rcpp::as<Color>(x);
 }
+
+// [[Rcpp::export(name = "image_get_width_")]]
+int image_get_width_(Image img) {
+  return img.width;
+}
+
+// [[Rcpp::export(name = "image_get_height_")]]
+int image_get_height_(Image img) {
+  return img.height;
+}
+
+// [[Rcpp::export(name = "image_to_raster_")]]
+CharacterMatrix image_to_raster_(Image img) {
+  Image copy = ImageCopy(img);
+  ImageFormat(&copy, PIXELFORMAT_UNCOMPRESSED_R8G8B8A8);
+  int w = copy.width;
+  int h = copy.height;
+  CharacterMatrix mat(h, w);
+  unsigned char* pixels = (unsigned char*)copy.data;
+  for (int y = 0; y < h; y++) {
+    for (int x = 0; x < w; x++) {
+      int idx = (y * w + x) * 4;
+      char hex[10];
+      snprintf(hex, sizeof(hex), "#%02X%02X%02X", pixels[idx], pixels[idx+1], pixels[idx+2]);
+      mat(y, x) = hex;
+    }
+  }
+  UnloadImage(copy);
+  return mat;
+}

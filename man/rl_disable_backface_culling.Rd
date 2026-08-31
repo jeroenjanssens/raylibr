@@ -10,10 +10,9 @@ rl_disable_backface_culling()
 Rl Disable Backface Culling
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_disable_backface_culling()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

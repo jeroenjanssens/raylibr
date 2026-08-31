@@ -22,16 +22,24 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 is_gesture_detected(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other detected functions: 
 \code{\link{get_gesture_detected}()}
 
+Other gesture functions: 
+\code{\link{get_gesture_detected}()},
+\code{\link{get_gesture_drag_angle}()},
+\code{\link{get_gesture_drag_vector}()},
+\code{\link{get_gesture_hold_duration}()},
+\code{\link{get_gesture_pinch_angle}()},
+\code{\link{get_gesture_pinch_vector}()}
+
 Other is functions: 
+\code{\link{color_is_equal}()},
 \code{\link{is_audio_device_ready}()},
 \code{\link{is_audio_stream_playing}()},
 \code{\link{is_audio_stream_processed}()},
@@ -76,7 +84,9 @@ Other is functions:
 \code{\link{is_window_minimized}()},
 \code{\link{is_window_ready}()},
 \code{\link{is_window_resized}()},
-\code{\link{is_window_state}()}
+\code{\link{is_window_state}()},
+\code{\link{text_is_equal}()}
 }
 \concept{detected functions}
+\concept{gesture functions}
 \concept{is functions}

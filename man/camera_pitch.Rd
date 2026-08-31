@@ -21,10 +21,8 @@ camera_pitch(camera, angle, lock_view, rotate_around_target, rotate_up)
 Rotate camera around right axis (pitch)
 }
 \examples{
-\dontrun{
 cam <- camera_3d(c(0, 10, 10))
 camera_pitch(cam, 0.1, TRUE, TRUE, FALSE)
-}
 
 }
 \seealso{
@@ -36,6 +34,8 @@ Other camera functions:
 \code{\link{camera_roll}()},
 \code{\link{camera_yaw}()},
 \code{\link{get_camera_forward}()},
+\code{\link{get_camera_matrix}()},
+\code{\link{get_camera_matrix_2d}()},
 \code{\link{get_camera_projection_matrix}()},
 \code{\link{get_camera_right}()},
 \code{\link{get_camera_up}()},

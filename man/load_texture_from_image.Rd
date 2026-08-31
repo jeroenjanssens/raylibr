@@ -22,21 +22,58 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 load_texture_from_image(gen_image_color(100, 100, "blue"))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other image functions: 
 \code{\link{export_image}()},
+\code{\link{export_image_as_code}()},
+\code{\link{gen_image_cellular}()},
+\code{\link{gen_image_checked}()},
+\code{\link{gen_image_color}()},
+\code{\link{gen_image_gradient_linear}()},
+\code{\link{gen_image_gradient_radial}()},
+\code{\link{gen_image_gradient_square}()},
+\code{\link{gen_image_perlin_noise}()},
+\code{\link{gen_image_text}()},
+\code{\link{gen_image_white_noise}()},
 \code{\link{get_clipboard_image}()},
+\code{\link{get_image_alpha_border}()},
+\code{\link{get_image_color}()},
 \code{\link{image_draw_line_ex}()},
 \code{\link{image_draw_triangle}()},
 \code{\link{image_from_image}()},
+\code{\link{is_image_valid}()},
 \code{\link{load_font_from_image}()},
 \code{\link{load_image}()},
+\code{\link{load_image_from_screen}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_image_raw}()},
 \code{\link{unload_image}()}
+
+Other texture functions: 
+\code{\link{begin_texture_mode}()},
+\code{\link{draw_texture}()},
+\code{\link{draw_texture_ex}()},
+\code{\link{draw_texture_n_patch}()},
+\code{\link{draw_texture_pro}()},
+\code{\link{draw_texture_rec}()},
+\code{\link{draw_texture_v}()},
+\code{\link{end_texture_mode}()},
+\code{\link{get_shapes_texture}()},
+\code{\link{is_texture_valid}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_render_texture}()},
+\code{\link{load_texture}()},
+\code{\link{set_shader_value_texture}()},
+\code{\link{set_shapes_texture}()},
+\code{\link{set_texture_filter}()},
+\code{\link{set_texture_wrap}()},
+\code{\link{texture}()},
+\code{\link{unload_render_texture}()},
+\code{\link{unload_texture}()}
 
 Other load functions: 
 \code{\link{load_audio_stream}()},
@@ -63,3 +100,4 @@ Other load functions:
 }
 \concept{image functions}
 \concept{load functions}
+\concept{texture functions}

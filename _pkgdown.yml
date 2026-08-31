@@ -4,10 +4,16 @@ template:
   includes:
     in_header: <script src="https://jeroenjanssens.github.io/raylibr/coi-serviceworker.js"></script>
 
+figures:
+  dpi: 100
+  fig.width: 4
+  fig.asp: 0.75
+
 articles:
   - title: Guides
     navbar: Guides
     contents:
+    - "articles/screenshot"
     - "articles/wasm"
   - title: Demos
     navbar: Demos
@@ -324,6 +330,8 @@ reference:
     - set_config_flags
     - set_exit_key
     - take_screenshot
+    - raylibr_screenshot
+    - raylibr_screenshot_3d
     - open_url
     - set_random_seed
     - get_random_value

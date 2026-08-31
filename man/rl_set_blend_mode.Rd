@@ -13,10 +13,9 @@ rl_set_blend_mode(mode)
 Rl Set Blend Mode
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_set_blend_mode(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

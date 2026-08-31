@@ -17,9 +17,7 @@ Convert a value to a color object. Accepts R color names (strings),
 hex integers, lists with r/g/b/a components, or existing color objects.
 }
 \examples{
-\dontrun{
 as_color("red")
 as_color(list(r = 255, g = 0, b = 0, a = 255))
-}
 
 }

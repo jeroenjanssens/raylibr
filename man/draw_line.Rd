@@ -27,15 +27,18 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_line(100L, 100L, 100L, 100L, "red")
-}
+raylibr_screenshot(function() draw_line(50L, 250L, 350L, 50L, "red"))
 
 }
 \seealso{
 Other line functions: 
 \code{\link{check_collision_circle_line}()},
-\code{\link{check_collision_point_line}()}
+\code{\link{check_collision_point_line}()},
+\code{\link{draw_line_3d}()},
+\code{\link{draw_line_bezier}()},
+\code{\link{draw_line_dashed}()},
+\code{\link{draw_line_ex}()},
+\code{\link{draw_line_v}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},

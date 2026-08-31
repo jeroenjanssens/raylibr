@@ -33,16 +33,25 @@ This class has been auto-generated from the following Raylib struct definition:
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 rec <- rectangle(0.0, 0.0, 200.0, 100.0)
 rec$x
 rec$y
-}
 
 }
 \seealso{
 Other rectangle functions: 
 \code{\link{draw_rectangle}()},
+\code{\link{draw_rectangle_gradient_ex}()},
+\code{\link{draw_rectangle_gradient_h}()},
+\code{\link{draw_rectangle_gradient_v}()},
+\code{\link{draw_rectangle_lines}()},
+\code{\link{draw_rectangle_lines_ex}()},
+\code{\link{draw_rectangle_pro}()},
+\code{\link{draw_rectangle_rec}()},
+\code{\link{draw_rectangle_rounded}()},
+\code{\link{draw_rectangle_rounded_lines}()},
+\code{\link{draw_rectangle_rounded_lines_ex}()},
+\code{\link{draw_rectangle_v}()},
 \code{\link{get_shapes_texture_rectangle}()}
 }
 \concept{rectangle functions}

@@ -10,10 +10,9 @@ rl_draw_render_batch_active()
 Rl Draw Render Batch Active
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_draw_render_batch_active()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

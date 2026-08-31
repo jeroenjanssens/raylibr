@@ -16,13 +16,16 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 stop_automation_event_recording()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other recording functions: 
+\code{\link{start_automation_event_recording}()}
+
+Other automation functions: 
+\code{\link{set_automation_event_base_frame}()},
 \code{\link{start_automation_event_recording}()}
 
 Other stop functions: 
@@ -30,5 +33,6 @@ Other stop functions:
 \code{\link{stop_music_stream}()},
 \code{\link{stop_sound}()}
 }
+\concept{automation functions}
 \concept{recording functions}
 \concept{stop functions}

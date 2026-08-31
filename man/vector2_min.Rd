@@ -18,9 +18,7 @@ A numeric vector of length 2
 Vector2 Min
 }
 \examples{
-\dontrun{
 vector2_min(c(100, 100), c(100, 100))
-}
 
 }
 \seealso{

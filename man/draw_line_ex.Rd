@@ -25,9 +25,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_line_ex(c(100, 100), c(100, 100), 2.0, "red")
-}
+raylibr_screenshot(function() draw_line_ex(c(200, 150), c(200, 150), 3.0, "red"))
 
 }
 \seealso{
@@ -49,6 +47,15 @@ Other ex functions:
 \code{\link{image_text_ex}()},
 \code{\link{measure_text_ex}()},
 \code{\link{update_model_animation_ex}()}
+
+Other line functions: 
+\code{\link{check_collision_circle_line}()},
+\code{\link{check_collision_point_line}()},
+\code{\link{draw_line}()},
+\code{\link{draw_line_3d}()},
+\code{\link{draw_line_bezier}()},
+\code{\link{draw_line_dashed}()},
+\code{\link{draw_line_v}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -145,3 +152,4 @@ Other draw functions:
 }
 \concept{draw functions}
 \concept{ex functions}
+\concept{line functions}

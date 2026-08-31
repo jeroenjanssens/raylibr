@@ -22,10 +22,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_touch_position(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other position functions: 
@@ -34,6 +33,12 @@ Other position functions:
 \code{\link{get_window_position}()},
 \code{\link{set_mouse_position}()},
 \code{\link{set_window_position}()}
+
+Other touch functions: 
+\code{\link{get_touch_point_count}()},
+\code{\link{get_touch_point_id}()},
+\code{\link{get_touch_x}()},
+\code{\link{get_touch_y}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -132,3 +137,4 @@ Other get functions:
 }
 \concept{get functions}
 \concept{position functions}
+\concept{touch functions}

@@ -10,10 +10,9 @@ gui_enable_tooltip()
 Enable gui tooltips (global state).
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_enable_tooltip()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

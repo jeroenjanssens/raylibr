@@ -26,10 +26,9 @@ A list with \code{result} (integer), \code{value} (number).
 Slider Bar control.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_slider_bar(rectangle(10, 10, 200, 100), "Hello", "Hello", 0.0, 0.0, 0.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

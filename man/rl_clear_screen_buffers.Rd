@@ -10,10 +10,9 @@ rl_clear_screen_buffers()
 Rl Clear Screen Buffers
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_clear_screen_buffers()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

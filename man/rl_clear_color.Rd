@@ -19,10 +19,9 @@ rl_clear_color(r, g, b, a)
 Rl Clear Color
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_clear_color(255L, 255L, 255L, 255L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

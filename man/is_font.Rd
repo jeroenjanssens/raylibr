@@ -16,9 +16,6 @@ A logical.
 Test if object is a font
 }
 \examples{
-\dontrun{
-f <- get_font_default()
-is_font(f)
-}
+is_font("not a font")
 
 }

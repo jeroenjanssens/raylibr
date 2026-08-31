@@ -21,10 +21,9 @@ rl_copy_shader_buffer(dest_id, src_id, dest_offset, src_offset, count)
 Rl Copy Shader Buffer
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_copy_shader_buffer(0L, 0L, 0L, 0L, 10L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

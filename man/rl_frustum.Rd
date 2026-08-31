@@ -23,10 +23,9 @@ rl_frustum(left, right, bottom, top, znear, zfar)
 Rl Frustum
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_frustum(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

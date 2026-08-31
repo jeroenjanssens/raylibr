@@ -16,9 +16,7 @@ A 4x4 numeric matrix
 Matrix Transpose
 }
 \examples{
-\dontrun{
 matrix_transpose(diag(4))
-}
 
 }
 \seealso{

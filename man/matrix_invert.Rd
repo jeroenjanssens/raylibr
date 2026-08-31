@@ -16,9 +16,7 @@ A 4x4 numeric matrix
 Matrix Invert
 }
 \examples{
-\dontrun{
 matrix_invert(diag(4))
-}
 
 }
 \seealso{

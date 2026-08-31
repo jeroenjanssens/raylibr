@@ -22,10 +22,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 is_wave_valid(load_wave("sound.wav"))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other valid functions: 
@@ -42,7 +41,17 @@ Other valid functions:
 \code{\link{is_sound_valid}()},
 \code{\link{is_texture_valid}()}
 
+Other wave functions: 
+\code{\link{export_wave}()},
+\code{\link{export_wave_as_code}()},
+\code{\link{load_sound_from_wave}()},
+\code{\link{load_wave}()},
+\code{\link{unload_wave}()},
+\code{\link{wave_crop}()},
+\code{\link{wave_format}()}
+
 Other is functions: 
+\code{\link{color_is_equal}()},
 \code{\link{is_audio_device_ready}()},
 \code{\link{is_audio_stream_playing}()},
 \code{\link{is_audio_stream_processed}()},
@@ -87,7 +96,9 @@ Other is functions:
 \code{\link{is_window_minimized}()},
 \code{\link{is_window_ready}()},
 \code{\link{is_window_resized}()},
-\code{\link{is_window_state}()}
+\code{\link{is_window_state}()},
+\code{\link{text_is_equal}()}
 }
 \concept{is functions}
 \concept{valid functions}
+\concept{wave functions}

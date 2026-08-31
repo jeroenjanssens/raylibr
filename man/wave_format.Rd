@@ -19,15 +19,16 @@ wave_format(wave, sample_rate, sample_size, channels)
 Convert wave data to desired format. Modifies the wave in place.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 w <- load_wave("sound.wav")
 wave_format(w, 44100L, 16L, 1L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other wave functions: 
 \code{\link{export_wave}()},
+\code{\link{export_wave_as_code}()},
+\code{\link{is_wave_valid}()},
 \code{\link{load_sound_from_wave}()},
 \code{\link{load_wave}()},
 \code{\link{unload_wave}()},

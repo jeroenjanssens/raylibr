@@ -27,16 +27,19 @@ This class has been auto-generated from the following Raylib struct definition:
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 ray <- ray(c(0, 5, 0), c(0, 0, 0))
 ray$position
 ray$direction
-}
 
 }
 \seealso{
 Other ray functions: 
 \code{\link{draw_ray}()},
+\code{\link{get_ray_collision_box}()},
+\code{\link{get_ray_collision_mesh}()},
+\code{\link{get_ray_collision_quad}()},
+\code{\link{get_ray_collision_sphere}()},
+\code{\link{get_ray_collision_triangle}()},
 \code{\link{get_screen_to_world_ray}()}
 }
 \concept{ray functions}

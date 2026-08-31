@@ -26,10 +26,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 load_audio_stream(0L, 32L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other stream functions: 
@@ -46,6 +45,23 @@ Other stream functions:
 \code{\link{unload_audio_stream}()},
 \code{\link{unload_music_stream}()},
 \code{\link{update_music_stream}()}
+
+Other audio functions: 
+\code{\link{close_audio_device}()},
+\code{\link{init_audio_device}()},
+\code{\link{is_audio_device_ready}()},
+\code{\link{is_audio_stream_playing}()},
+\code{\link{is_audio_stream_processed}()},
+\code{\link{is_audio_stream_valid}()},
+\code{\link{pause_audio_stream}()},
+\code{\link{play_audio_stream}()},
+\code{\link{resume_audio_stream}()},
+\code{\link{set_audio_stream_buffer_size_default}()},
+\code{\link{set_audio_stream_pan}()},
+\code{\link{set_audio_stream_pitch}()},
+\code{\link{set_audio_stream_volume}()},
+\code{\link{stop_audio_stream}()},
+\code{\link{unload_audio_stream}()}
 
 Other load functions: 
 \code{\link{load_file_text}()},
@@ -70,5 +86,6 @@ Other load functions:
 \code{\link{load_vr_stereo_config}()},
 \code{\link{load_wave}()}
 }
+\concept{audio functions}
 \concept{load functions}
 \concept{stream functions}

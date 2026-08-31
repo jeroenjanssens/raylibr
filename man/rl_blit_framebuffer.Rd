@@ -39,10 +39,9 @@ rl_blit_framebuffer(
 Rl Blit Framebuffer
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_blit_framebuffer(0L, 0L, 800L, 450L, 0L, 0L, 800L, 450L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

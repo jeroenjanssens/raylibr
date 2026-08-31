@@ -13,10 +13,9 @@ rl_unload_shader_program(id)
 Rl Unload Shader Program
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_unload_shader_program(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

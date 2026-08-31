@@ -22,10 +22,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 is_material_valid(load_material_default())
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other valid functions: 
@@ -42,7 +41,13 @@ Other valid functions:
 \code{\link{is_texture_valid}()},
 \code{\link{is_wave_valid}()}
 
+Other material functions: 
+\code{\link{load_material_default}()},
+\code{\link{set_material_texture}()},
+\code{\link{unload_material}()}
+
 Other is functions: 
+\code{\link{color_is_equal}()},
 \code{\link{is_audio_device_ready}()},
 \code{\link{is_audio_stream_playing}()},
 \code{\link{is_audio_stream_processed}()},
@@ -87,7 +92,9 @@ Other is functions:
 \code{\link{is_window_minimized}()},
 \code{\link{is_window_ready}()},
 \code{\link{is_window_resized}()},
-\code{\link{is_window_state}()}
+\code{\link{is_window_state}()},
+\code{\link{text_is_equal}()}
 }
 \concept{is functions}
+\concept{material functions}
 \concept{valid functions}

@@ -15,10 +15,9 @@ rl_bind_framebuffer(target, framebuffer)
 Rl Bind Framebuffer
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_bind_framebuffer(0L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

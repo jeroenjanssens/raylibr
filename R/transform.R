@@ -7,9 +7,7 @@
 #' @return A logical.
 #'
 #' @examples
-#' \dontrun{
 #' is_transform("not a transform")
-#' }
 #'
 #' @export
 is_transform <- function(x) {
@@ -42,11 +40,9 @@ is_transform <- function(x) {
 #' @family transform functions
 #'
 #' @examples
-#' \dontrun{
 #' tra <- transform(c(0, 0, 0), c(0, 0, 0, 1), c(1, 1, 1))
 #' tra$translation
 #' tra$rotation
-#' }
 #'
 #' @export
 transform <- function(translation, rotation, scale) {

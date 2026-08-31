@@ -16,22 +16,28 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 end_scissor_mode()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other mode functions: 
 \code{\link{begin_blend_mode}()},
+\code{\link{begin_mode_2d}()},
+\code{\link{begin_mode_3d}()},
 \code{\link{begin_scissor_mode}()},
 \code{\link{begin_shader_mode}()},
 \code{\link{begin_texture_mode}()},
 \code{\link{begin_vr_stereo_mode}()},
 \code{\link{end_blend_mode}()},
+\code{\link{end_mode_2d}()},
+\code{\link{end_mode_3d}()},
 \code{\link{end_shader_mode}()},
 \code{\link{end_texture_mode}()},
 \code{\link{end_vr_stereo_mode}()}
+
+Other scissor functions: 
+\code{\link{begin_scissor_mode}()}
 
 Other end functions: 
 \code{\link{end_blend_mode}()},
@@ -44,3 +50,4 @@ Other end functions:
 }
 \concept{end functions}
 \concept{mode functions}
+\concept{scissor functions}

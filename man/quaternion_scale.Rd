@@ -18,9 +18,7 @@ A numeric vector of length 4
 Quaternion Scale
 }
 \examples{
-\dontrun{
 quaternion_scale(c(0, 0, 0, 1), 0.0)
-}
 
 }
 \seealso{

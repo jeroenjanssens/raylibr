@@ -16,17 +16,34 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 init_audio_device()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other device functions: 
 \code{\link{close_audio_device}()}
 
+Other audio functions: 
+\code{\link{close_audio_device}()},
+\code{\link{is_audio_device_ready}()},
+\code{\link{is_audio_stream_playing}()},
+\code{\link{is_audio_stream_processed}()},
+\code{\link{is_audio_stream_valid}()},
+\code{\link{load_audio_stream}()},
+\code{\link{pause_audio_stream}()},
+\code{\link{play_audio_stream}()},
+\code{\link{resume_audio_stream}()},
+\code{\link{set_audio_stream_buffer_size_default}()},
+\code{\link{set_audio_stream_pan}()},
+\code{\link{set_audio_stream_pitch}()},
+\code{\link{set_audio_stream_volume}()},
+\code{\link{stop_audio_stream}()},
+\code{\link{unload_audio_stream}()}
+
 Other init functions: 
 \code{\link{init_window}()}
 }
+\concept{audio functions}
 \concept{device functions}
 \concept{init functions}

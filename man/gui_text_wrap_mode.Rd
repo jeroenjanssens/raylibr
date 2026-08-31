@@ -22,11 +22,9 @@ Enum values for \code{gui_text_wrap_mode}.
 }
 }
 \examples{
-\dontrun{
 gui_text_wrap_mode$none
 gui_text_wrap_mode$char
 gui_text_wrap_mode$word
-}
 
 }
 \keyword{datasets}

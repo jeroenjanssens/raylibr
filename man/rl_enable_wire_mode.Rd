@@ -10,10 +10,9 @@ rl_enable_wire_mode()
 Rl Enable Wire Mode
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_enable_wire_mode()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

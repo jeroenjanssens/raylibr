@@ -13,10 +13,9 @@ rl_set_matrix_modelview(view)
 Rl Set Matrix Modelview
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_set_matrix_modelview(diag(4))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

@@ -19,12 +19,20 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 set_exit_key(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
+Other key functions: 
+\code{\link{get_key_name}()},
+\code{\link{get_key_pressed}()},
+\code{\link{is_key_down}()},
+\code{\link{is_key_pressed}()},
+\code{\link{is_key_pressed_repeat}()},
+\code{\link{is_key_released}()},
+\code{\link{is_key_up}()}
+
 Other set functions: 
 \code{\link{set_audio_stream_buffer_size_default}()},
 \code{\link{set_audio_stream_pan}()},
@@ -67,5 +75,6 @@ Other set functions:
 \code{\link{set_window_state}()},
 \code{\link{set_window_title}()}
 }
+\concept{exit functions}
 \concept{key functions}
 \concept{set functions}

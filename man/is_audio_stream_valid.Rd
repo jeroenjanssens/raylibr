@@ -22,10 +22,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 is_audio_stream_valid(load_audio_stream(44100L, 16L, 1L))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other valid functions: 
@@ -42,7 +41,25 @@ Other valid functions:
 \code{\link{is_texture_valid}()},
 \code{\link{is_wave_valid}()}
 
+Other audio functions: 
+\code{\link{close_audio_device}()},
+\code{\link{init_audio_device}()},
+\code{\link{is_audio_device_ready}()},
+\code{\link{is_audio_stream_playing}()},
+\code{\link{is_audio_stream_processed}()},
+\code{\link{load_audio_stream}()},
+\code{\link{pause_audio_stream}()},
+\code{\link{play_audio_stream}()},
+\code{\link{resume_audio_stream}()},
+\code{\link{set_audio_stream_buffer_size_default}()},
+\code{\link{set_audio_stream_pan}()},
+\code{\link{set_audio_stream_pitch}()},
+\code{\link{set_audio_stream_volume}()},
+\code{\link{stop_audio_stream}()},
+\code{\link{unload_audio_stream}()}
+
 Other is functions: 
+\code{\link{color_is_equal}()},
 \code{\link{is_audio_device_ready}()},
 \code{\link{is_audio_stream_playing}()},
 \code{\link{is_audio_stream_processed}()},
@@ -87,7 +104,9 @@ Other is functions:
 \code{\link{is_window_minimized}()},
 \code{\link{is_window_ready}()},
 \code{\link{is_window_resized}()},
-\code{\link{is_window_state}()}
+\code{\link{is_window_state}()},
+\code{\link{text_is_equal}()}
 }
+\concept{audio functions}
 \concept{is functions}
 \concept{valid functions}

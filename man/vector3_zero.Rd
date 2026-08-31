@@ -13,9 +13,7 @@ A numeric vector of length 3
 Vector3 Zero
 }
 \examples{
-\dontrun{
 vector3_zero()
-}
 
 }
 \seealso{

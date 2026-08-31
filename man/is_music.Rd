@@ -16,9 +16,6 @@ A logical.
 Test if object is a music
 }
 \examples{
-\dontrun{
-m <- load_music_stream("music.mp3")
-is_music(m)
-}
+is_music("not a music")
 
 }

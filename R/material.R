@@ -5,10 +5,7 @@
 #' @return A logical.
 #'
 #' @examples
-#' \dontrun{
-#' m <- load_material_default()
-#' is_material(m)
-#' }
+#' is_material("not a material")
 #'
 #' @export
 is_material <- function(x) {

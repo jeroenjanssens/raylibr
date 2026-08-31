@@ -15,10 +15,8 @@ draw_line_strip(points, color)
 Draw lines sequence (using gl lines).
 }
 \examples{
-\dontrun{
-pts <- matrix(c(100, 200, 300, 100, 200, 300), ncol = 2)
-draw_line_strip(pts, "red")
-}
+pts <- matrix(c(50, 200, 350, 50, 150, 250), ncol = 2)
+raylibr_screenshot(function() draw_line_strip(pts, "red"))
 
 }
 \seealso{

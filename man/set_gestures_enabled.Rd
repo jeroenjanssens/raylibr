@@ -19,10 +19,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 set_gestures_enabled(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other set functions: 
@@ -68,4 +67,5 @@ Other set functions:
 \code{\link{set_window_title}()}
 }
 \concept{enabled functions}
+\concept{gestures functions}
 \concept{set functions}

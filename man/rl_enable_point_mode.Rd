@@ -10,10 +10,9 @@ rl_enable_point_mode()
 Rl Enable Point Mode
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_enable_point_mode()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

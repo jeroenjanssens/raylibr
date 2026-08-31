@@ -15,10 +15,9 @@ rl_set_uniform_matrix(loc_index, mat)
 Rl Set Uniform Matrix
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_set_uniform_matrix(0L, diag(4))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

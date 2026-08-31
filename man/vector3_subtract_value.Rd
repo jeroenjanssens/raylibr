@@ -18,9 +18,7 @@ A numeric vector of length 3
 Vector3 Subtract Value
 }
 \examples{
-\dontrun{
 vector3_subtract_value(c(0, 0, 0), 0.0)
-}
 
 }
 \seealso{

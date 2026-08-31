@@ -26,13 +26,17 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 color_from_hsv(0.0, 0.0, 0.0)
-}
 
 }
 \seealso{
 Other hsv functions: 
 \code{\link{color_to_hsv}()}
+
+Other from functions: 
+\code{\link{color_from_normalized}()},
+\code{\link{image_from_channel}()},
+\code{\link{image_from_image}()}
 }
+\concept{from functions}
 \concept{hsv functions}

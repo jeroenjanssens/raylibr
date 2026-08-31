@@ -22,15 +22,30 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_music_time_length(load_music_stream("music.mp3"))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other length functions: 
 \code{\link{get_file_length}()},
 \code{\link{text_length}()}
+
+Other music functions: 
+\code{\link{get_music_time_played}()},
+\code{\link{is_music_stream_playing}()},
+\code{\link{is_music_valid}()},
+\code{\link{load_music_stream}()},
+\code{\link{pause_music_stream}()},
+\code{\link{play_music_stream}()},
+\code{\link{resume_music_stream}()},
+\code{\link{seek_music_stream}()},
+\code{\link{set_music_pan}()},
+\code{\link{set_music_pitch}()},
+\code{\link{set_music_volume}()},
+\code{\link{stop_music_stream}()},
+\code{\link{unload_music_stream}()},
+\code{\link{update_music_stream}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -129,3 +144,4 @@ Other get functions:
 }
 \concept{get functions}
 \concept{length functions}
+\concept{music functions}

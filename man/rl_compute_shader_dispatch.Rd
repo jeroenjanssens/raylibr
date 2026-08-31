@@ -17,10 +17,9 @@ rl_compute_shader_dispatch(group_x, group_y, group_z)
 Rl Compute Shader Dispatch
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_compute_shader_dispatch(0L, 0L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

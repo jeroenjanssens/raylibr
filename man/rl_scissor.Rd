@@ -19,10 +19,9 @@ rl_scissor(x, y, width, height)
 Rl Scissor
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_scissor(100L, 100L, 800L, 450L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

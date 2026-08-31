@@ -7,9 +7,7 @@
 #' @return A logical.
 #'
 #' @examples
-#' \dontrun{
 #' is_glyph_info("not a glyph_info")
-#' }
 #'
 #' @export
 is_glyph_info <- function(x) {
@@ -46,11 +44,9 @@ is_glyph_info <- function(x) {
 #' @family glyph_info functions
 #'
 #' @examples
-#' \dontrun{
 #' gly <- glyph_info(0L, 0L, 0L, 0L, gen_image_color(100, 100, "blue"))
 #' gly$value
 #' gly$offset_x
-#' }
 #'
 #' @export
 glyph_info <- function(value, offset_x, offset_y, advance_x, image) {

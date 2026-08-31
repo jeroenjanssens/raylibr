@@ -26,19 +26,54 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gen_image_text(800L, 450L, "Hello")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other text functions: 
 \code{\link{draw_text}()},
+\code{\link{draw_text_codepoint}()},
+\code{\link{draw_text_ex}()},
+\code{\link{draw_text_pro}()},
+\code{\link{file_text_find_index}()},
+\code{\link{file_text_replace}()},
 \code{\link{get_clipboard_text}()},
+\code{\link{get_text_between}()},
 \code{\link{image_text}()},
+\code{\link{image_text_ex}()},
 \code{\link{load_file_text}()},
 \code{\link{measure_text}()},
+\code{\link{measure_text_ex}()},
 \code{\link{save_file_text}()},
-\code{\link{set_clipboard_text}()}
+\code{\link{set_clipboard_text}()},
+\code{\link{set_text_line_spacing}()}
+
+Other image functions: 
+\code{\link{export_image}()},
+\code{\link{export_image_as_code}()},
+\code{\link{gen_image_cellular}()},
+\code{\link{gen_image_checked}()},
+\code{\link{gen_image_color}()},
+\code{\link{gen_image_gradient_linear}()},
+\code{\link{gen_image_gradient_radial}()},
+\code{\link{gen_image_gradient_square}()},
+\code{\link{gen_image_perlin_noise}()},
+\code{\link{gen_image_white_noise}()},
+\code{\link{get_clipboard_image}()},
+\code{\link{get_image_alpha_border}()},
+\code{\link{get_image_color}()},
+\code{\link{image_draw_line_ex}()},
+\code{\link{image_draw_triangle}()},
+\code{\link{image_from_image}()},
+\code{\link{is_image_valid}()},
+\code{\link{load_font_from_image}()},
+\code{\link{load_image}()},
+\code{\link{load_image_from_screen}()},
+\code{\link{load_image_from_texture}()},
+\code{\link{load_image_raw}()},
+\code{\link{load_texture_from_image}()},
+\code{\link{unload_image}()}
 }
+\concept{image functions}
 \concept{text functions}

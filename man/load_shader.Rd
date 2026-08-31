@@ -24,14 +24,21 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 load_shader("file.png", "file.png")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other shader functions: 
+\code{\link{begin_shader_mode}()},
+\code{\link{end_shader_mode}()},
+\code{\link{get_shader_location}()},
+\code{\link{get_shader_location_attrib}()},
+\code{\link{is_shader_valid}()},
+\code{\link{load_shader_from_memory}()},
 \code{\link{set_shader_value}()},
+\code{\link{set_shader_value_matrix}()},
+\code{\link{set_shader_value_texture}()},
 \code{\link{unload_shader}()}
 
 Other load functions: 

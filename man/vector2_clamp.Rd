@@ -20,9 +20,7 @@ A numeric vector of length 2
 Vector2 Clamp
 }
 \examples{
-\dontrun{
 vector2_clamp(c(100, 100), c(100, 100), c(100, 100))
-}
 
 }
 \seealso{

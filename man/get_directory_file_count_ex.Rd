@@ -26,10 +26,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_directory_file_count_ex("file.png", "text", TRUE)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other ex functions: 
@@ -50,6 +49,14 @@ Other ex functions:
 \code{\link{image_text_ex}()},
 \code{\link{measure_text_ex}()},
 \code{\link{update_model_animation_ex}()}
+
+Other directory functions: 
+\code{\link{change_directory}()},
+\code{\link{get_application_directory}()},
+\code{\link{get_directory_file_count}()},
+\code{\link{get_directory_path}()},
+\code{\link{get_working_directory}()},
+\code{\link{make_directory}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -146,5 +153,6 @@ Other get functions:
 \code{\link{get_world_to_screen_2d}()},
 \code{\link{get_world_to_screen_ex}()}
 }
+\concept{directory functions}
 \concept{ex functions}
 \concept{get functions}

@@ -25,9 +25,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_rectangle_pro(rectangle(10, 10, 200, 100), c(100, 100), 0.0, "red")
-}
+raylibr_screenshot(function() draw_rectangle_pro(rectangle(100, 75, 200, 150), c(0, 0), 0.0, "red"))
 
 }
 \seealso{
@@ -35,6 +33,21 @@ Other pro functions:
 \code{\link{draw_billboard_pro}()},
 \code{\link{draw_text_pro}()},
 \code{\link{draw_texture_pro}()}
+
+Other rectangle functions: 
+\code{\link{draw_rectangle}()},
+\code{\link{draw_rectangle_gradient_ex}()},
+\code{\link{draw_rectangle_gradient_h}()},
+\code{\link{draw_rectangle_gradient_v}()},
+\code{\link{draw_rectangle_lines}()},
+\code{\link{draw_rectangle_lines_ex}()},
+\code{\link{draw_rectangle_rec}()},
+\code{\link{draw_rectangle_rounded}()},
+\code{\link{draw_rectangle_rounded_lines}()},
+\code{\link{draw_rectangle_rounded_lines_ex}()},
+\code{\link{draw_rectangle_v}()},
+\code{\link{get_shapes_texture_rectangle}()},
+\code{\link{rectangle}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -131,3 +144,4 @@ Other draw functions:
 }
 \concept{draw functions}
 \concept{pro functions}
+\concept{rectangle functions}

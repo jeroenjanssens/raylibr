@@ -26,9 +26,12 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 text_insert("Hello", "text", 0L)
+\dontshow{\}) # examplesIf}
 }
-
+\seealso{
+Other insert functions: 
+\code{\link{text_insert_alloc}()}
 }
 \concept{insert functions}

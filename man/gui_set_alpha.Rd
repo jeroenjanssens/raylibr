@@ -13,10 +13,9 @@ gui_set_alpha(alpha)
 Set gui controls alpha (global state), alpha goes from 0.0f to 1.0f.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_set_alpha(0.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

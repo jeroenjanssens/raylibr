@@ -35,11 +35,9 @@ Enum values for \code{gui_control_property}.
 }
 }
 \examples{
-\dontrun{
 gui_control_property$border_color_normal
 gui_control_property$base_color_pressed
 gui_control_property$baseprop16
-}
 
 }
 \keyword{datasets}

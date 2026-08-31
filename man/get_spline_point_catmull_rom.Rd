@@ -30,14 +30,24 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_spline_point_catmull_rom(c(100, 100), c(100, 100), c(100, 100), c(100, 100), 0.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rom functions: 
 \code{\link{draw_spline_segment_catmull_rom}()}
+
+Other spline functions: 
+\code{\link{draw_spline_segment_basis}()},
+\code{\link{draw_spline_segment_bezier_cubic}()},
+\code{\link{draw_spline_segment_bezier_quadratic}()},
+\code{\link{draw_spline_segment_catmull_rom}()},
+\code{\link{draw_spline_segment_linear}()},
+\code{\link{get_spline_point_basis}()},
+\code{\link{get_spline_point_bezier_cubic}()},
+\code{\link{get_spline_point_bezier_quad}()},
+\code{\link{get_spline_point_linear}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -136,3 +146,4 @@ Other get functions:
 }
 \concept{get functions}
 \concept{rom functions}
+\concept{spline functions}

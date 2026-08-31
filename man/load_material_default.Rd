@@ -19,15 +19,19 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 load_material_default()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other default functions: 
 \code{\link{get_font_default}()},
 \code{\link{set_audio_stream_buffer_size_default}()}
+
+Other material functions: 
+\code{\link{is_material_valid}()},
+\code{\link{set_material_texture}()},
+\code{\link{unload_material}()}
 
 Other load functions: 
 \code{\link{load_audio_stream}()},
@@ -54,3 +58,4 @@ Other load functions:
 }
 \concept{default functions}
 \concept{load functions}
+\concept{material functions}

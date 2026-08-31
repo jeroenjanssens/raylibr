@@ -18,9 +18,7 @@ A numeric vector of length 3
 Vector3 Divide
 }
 \examples{
-\dontrun{
 vector3_divide(c(0, 0, 0), c(0, 0, 0))
-}
 
 }
 \seealso{

@@ -15,10 +15,9 @@ rl_resize_framebuffer(width, height)
 Rl Resize Framebuffer
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_resize_framebuffer(800L, 450L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

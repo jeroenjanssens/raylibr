@@ -18,9 +18,7 @@ An integer
 Float Equals
 }
 \examples{
-\dontrun{
 float_equals(0.0, 0.0)
-}
 
 }
 \seealso{

@@ -21,15 +21,30 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 set_music_pitch(load_music_stream("music.mp3"), 1.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other pitch functions: 
 \code{\link{set_audio_stream_pitch}()},
 \code{\link{set_sound_pitch}()}
+
+Other music functions: 
+\code{\link{get_music_time_length}()},
+\code{\link{get_music_time_played}()},
+\code{\link{is_music_stream_playing}()},
+\code{\link{is_music_valid}()},
+\code{\link{load_music_stream}()},
+\code{\link{pause_music_stream}()},
+\code{\link{play_music_stream}()},
+\code{\link{resume_music_stream}()},
+\code{\link{seek_music_stream}()},
+\code{\link{set_music_pan}()},
+\code{\link{set_music_volume}()},
+\code{\link{stop_music_stream}()},
+\code{\link{unload_music_stream}()},
+\code{\link{update_music_stream}()}
 
 Other set functions: 
 \code{\link{set_audio_stream_buffer_size_default}()},
@@ -73,5 +88,6 @@ Other set functions:
 \code{\link{set_window_state}()},
 \code{\link{set_window_title}()}
 }
+\concept{music functions}
 \concept{pitch functions}
 \concept{set functions}

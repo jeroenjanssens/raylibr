@@ -16,10 +16,9 @@ An integer
 Get text width considering gui style and icon size (if required).
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_get_text_width("Hello")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

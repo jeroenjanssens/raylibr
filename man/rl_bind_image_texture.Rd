@@ -19,10 +19,9 @@ rl_bind_image_texture(id, index, format, readonly)
 Rl Bind Image Texture
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_bind_image_texture(0L, 0L, 0L, TRUE)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

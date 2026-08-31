@@ -24,12 +24,15 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_glyph_info(get_font_default(), 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
+Other glyph functions: 
+\code{\link{get_glyph_atlas_rec}()},
+\code{\link{get_glyph_index}()}
+
 Other get functions: 
 \code{\link{get_application_directory}()},
 \code{\link{get_camera_matrix}()},
@@ -126,4 +129,5 @@ Other get functions:
 \code{\link{get_world_to_screen_ex}()}
 }
 \concept{get functions}
+\concept{glyph functions}
 \concept{info functions}

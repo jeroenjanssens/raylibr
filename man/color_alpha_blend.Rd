@@ -26,9 +26,16 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 color_alpha_blend("red", "red", "red")
-}
 
 }
+\seealso{
+Other blend functions: 
+\code{\link{begin_blend_mode}()},
+\code{\link{end_blend_mode}()}
+
+Other alpha functions: 
+\code{\link{color_alpha}()}
+}
+\concept{alpha functions}
 \concept{blend functions}

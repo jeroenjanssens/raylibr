@@ -13,8 +13,6 @@ Logical
 Returns TRUE when running under Emscripten/webR, FALSE otherwise.
 }
 \examples{
-\dontrun{
 is_web()
-}
 
 }

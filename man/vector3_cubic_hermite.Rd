@@ -24,9 +24,7 @@ A numeric vector of length 3
 Vector3 Cubic Hermite
 }
 \examples{
-\dontrun{
 vector3_cubic_hermite(c(0, 0, 0), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0), 0.0)
-}
 
 }
 \seealso{

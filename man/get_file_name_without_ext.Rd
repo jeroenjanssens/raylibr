@@ -22,12 +22,23 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_file_name_without_ext("file.png")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
+Other file functions: 
+\code{\link{get_file_extension}()},
+\code{\link{get_file_length}()},
+\code{\link{get_file_mod_time}()},
+\code{\link{get_file_name}()},
+\code{\link{is_file_dropped}()},
+\code{\link{is_file_extension}()},
+\code{\link{is_file_name_valid}()},
+\code{\link{is_path_file}()},
+\code{\link{load_file_text}()},
+\code{\link{save_file_text}()}
+
 Other get functions: 
 \code{\link{get_application_directory}()},
 \code{\link{get_camera_matrix}()},
@@ -124,4 +135,5 @@ Other get functions:
 \code{\link{get_world_to_screen_ex}()}
 }
 \concept{ext functions}
+\concept{file functions}
 \concept{get functions}

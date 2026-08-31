@@ -21,10 +21,8 @@ Enum values for \code{gui_value_box_property}.
 }
 }
 \examples{
-\dontrun{
 gui_value_box_property$spinner_button_width
 gui_value_box_property$spinner_button_spacing
-}
 
 }
 \keyword{datasets}

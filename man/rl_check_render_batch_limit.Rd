@@ -16,10 +16,9 @@ A logical
 Rl Check Render Batch Limit
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_check_render_batch_limit(10L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

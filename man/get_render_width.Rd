@@ -19,16 +19,21 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_render_width()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other width functions: 
 \code{\link{get_monitor_physical_width}()},
 \code{\link{get_monitor_width}()},
 \code{\link{get_screen_width}()}
+
+Other render functions: 
+\code{\link{get_render_height}()},
+\code{\link{is_render_texture_valid}()},
+\code{\link{load_render_texture}()},
+\code{\link{unload_render_texture}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -126,4 +131,5 @@ Other get functions:
 \code{\link{get_world_to_screen_ex}()}
 }
 \concept{get functions}
+\concept{render functions}
 \concept{width functions}

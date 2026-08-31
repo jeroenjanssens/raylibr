@@ -13,9 +13,7 @@ A numeric vector of length 4
 Quaternion Identity
 }
 \examples{
-\dontrun{
 quaternion_identity()
-}
 
 }
 \seealso{

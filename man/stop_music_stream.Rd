@@ -19,10 +19,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 stop_music_stream(load_music_stream("music.mp3"))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other stream functions: 
@@ -40,10 +39,27 @@ Other stream functions:
 \code{\link{unload_music_stream}()},
 \code{\link{update_music_stream}()}
 
+Other music functions: 
+\code{\link{get_music_time_length}()},
+\code{\link{get_music_time_played}()},
+\code{\link{is_music_stream_playing}()},
+\code{\link{is_music_valid}()},
+\code{\link{load_music_stream}()},
+\code{\link{pause_music_stream}()},
+\code{\link{play_music_stream}()},
+\code{\link{resume_music_stream}()},
+\code{\link{seek_music_stream}()},
+\code{\link{set_music_pan}()},
+\code{\link{set_music_pitch}()},
+\code{\link{set_music_volume}()},
+\code{\link{unload_music_stream}()},
+\code{\link{update_music_stream}()}
+
 Other stop functions: 
 \code{\link{stop_audio_stream}()},
 \code{\link{stop_automation_event_recording}()},
 \code{\link{stop_sound}()}
 }
+\concept{music functions}
 \concept{stop functions}
 \concept{stream functions}

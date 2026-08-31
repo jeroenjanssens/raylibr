@@ -19,13 +19,14 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 unload_material(load_material_default())
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other material functions: 
+\code{\link{is_material_valid}()},
+\code{\link{load_material_default}()},
 \code{\link{set_material_texture}()}
 
 Other unload functions: 

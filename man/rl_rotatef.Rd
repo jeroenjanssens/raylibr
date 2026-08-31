@@ -19,10 +19,9 @@ rl_rotatef(angle, x, y, z)
 Rl Rotatef
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_rotatef(0.0, 0.0, 0.0, 0.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

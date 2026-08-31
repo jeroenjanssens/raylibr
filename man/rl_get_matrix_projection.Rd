@@ -13,10 +13,9 @@ A 4x4 numeric matrix
 Rl Get Matrix Projection
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_get_matrix_projection()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

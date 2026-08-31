@@ -13,10 +13,9 @@ rl_set_framebuffer_width(width)
 Rl Set Framebuffer Width
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_set_framebuffer_width(800L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

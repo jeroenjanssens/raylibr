@@ -13,10 +13,9 @@ rl_disable_state_pointer(vertex_attrib_type)
 Rl Disable State Pointer
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_disable_state_pointer(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

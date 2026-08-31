@@ -24,9 +24,7 @@ A numeric vector of length 4
 Quaternion Cubic Hermite Spline
 }
 \examples{
-\dontrun{
 quaternion_cubic_hermite_spline(c(0, 0, 0, 1), c(0, 0, 0, 1), c(0, 0, 0, 1), c(0, 0, 0, 1), 0.0)
-}
 
 }
 \seealso{

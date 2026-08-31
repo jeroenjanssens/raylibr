@@ -20,9 +20,7 @@ A numeric vector of length 3
 Vector3 Refract
 }
 \examples{
-\dontrun{
 vector3_refract(c(0, 0, 0), c(0, 0, 0), 0.0)
-}
 
 }
 \seealso{

@@ -19,13 +19,18 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 unload_vr_stereo_config(config)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other config functions: 
+\code{\link{load_vr_stereo_config}()},
+\code{\link{set_config_flags}()}
+
+Other vr functions: 
+\code{\link{begin_vr_stereo_mode}()},
+\code{\link{end_vr_stereo_mode}()},
 \code{\link{load_vr_stereo_config}()}
 
 Other unload functions: 
@@ -45,3 +50,4 @@ Other unload functions:
 }
 \concept{config functions}
 \concept{unload functions}
+\concept{vr functions}

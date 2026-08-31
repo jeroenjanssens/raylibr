@@ -19,10 +19,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 pause_audio_stream(load_audio_stream(44100L, 16L, 1L))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other stream functions: 
@@ -40,9 +39,27 @@ Other stream functions:
 \code{\link{unload_music_stream}()},
 \code{\link{update_music_stream}()}
 
+Other audio functions: 
+\code{\link{close_audio_device}()},
+\code{\link{init_audio_device}()},
+\code{\link{is_audio_device_ready}()},
+\code{\link{is_audio_stream_playing}()},
+\code{\link{is_audio_stream_processed}()},
+\code{\link{is_audio_stream_valid}()},
+\code{\link{load_audio_stream}()},
+\code{\link{play_audio_stream}()},
+\code{\link{resume_audio_stream}()},
+\code{\link{set_audio_stream_buffer_size_default}()},
+\code{\link{set_audio_stream_pan}()},
+\code{\link{set_audio_stream_pitch}()},
+\code{\link{set_audio_stream_volume}()},
+\code{\link{stop_audio_stream}()},
+\code{\link{unload_audio_stream}()}
+
 Other pause functions: 
 \code{\link{pause_music_stream}()},
 \code{\link{pause_sound}()}
 }
+\concept{audio functions}
 \concept{pause functions}
 \concept{stream functions}

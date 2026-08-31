@@ -27,12 +27,15 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_ellipse(100L, 100L, 50.0, 50.0, "red")
-}
+raylibr_screenshot(function() draw_ellipse(200L, 150L, 80.0, 80.0, "red"))
 
 }
 \seealso{
+Other ellipse functions: 
+\code{\link{draw_ellipse_lines}()},
+\code{\link{draw_ellipse_lines_v}()},
+\code{\link{draw_ellipse_v}()}
+
 Other draw functions: 
 \code{\link{draw_billboard}()},
 \code{\link{draw_billboard_pro}()},

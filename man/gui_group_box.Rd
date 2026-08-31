@@ -18,10 +18,9 @@ An integer
 Group Box control with text name.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_group_box(rectangle(10, 10, 200, 100), "Hello")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

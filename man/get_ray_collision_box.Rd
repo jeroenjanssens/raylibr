@@ -24,9 +24,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 get_ray_collision_box(ray(c(0, 0, 0), c(0, 0, 1)), bounding_box(c(-1, -1, -1), c(1, 1, 1)))
-}
 
 }
 \seealso{
@@ -34,6 +32,15 @@ Other box functions:
 \code{\link{draw_bounding_box}()},
 \code{\link{get_mesh_bounding_box}()},
 \code{\link{get_model_bounding_box}()}
+
+Other ray functions: 
+\code{\link{draw_ray}()},
+\code{\link{get_ray_collision_mesh}()},
+\code{\link{get_ray_collision_quad}()},
+\code{\link{get_ray_collision_sphere}()},
+\code{\link{get_ray_collision_triangle}()},
+\code{\link{get_screen_to_world_ray}()},
+\code{\link{ray}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -132,3 +139,4 @@ Other get functions:
 }
 \concept{box functions}
 \concept{get functions}
+\concept{ray functions}

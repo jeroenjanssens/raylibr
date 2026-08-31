@@ -6,10 +6,8 @@
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_enable()
-#' }
 #'
 #' @export
 gui_enable <- function() {
@@ -22,10 +20,8 @@ gui_enable <- function() {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_disable()
-#' }
 #'
 #' @export
 gui_disable <- function() {
@@ -38,10 +34,8 @@ gui_disable <- function() {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_lock()
-#' }
 #'
 #' @export
 gui_lock <- function() {
@@ -54,10 +48,8 @@ gui_lock <- function() {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_unlock()
-#' }
 #'
 #' @export
 gui_unlock <- function() {
@@ -72,10 +64,8 @@ gui_unlock <- function() {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_is_locked()
-#' }
 #'
 #' @export
 gui_is_locked <- function() {
@@ -90,10 +80,8 @@ gui_is_locked <- function() {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_set_alpha(0.0)
-#' }
 #'
 #' @export
 gui_set_alpha <- function(alpha) {
@@ -109,10 +97,8 @@ gui_set_alpha <- function(alpha) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_set_state(0L)
-#' }
 #'
 #' @export
 gui_set_state <- function(state) {
@@ -128,10 +114,8 @@ gui_set_state <- function(state) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_get_state()
-#' }
 #'
 #' @export
 gui_get_state <- function() {
@@ -146,10 +130,8 @@ gui_get_state <- function() {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_set_font(get_font_default())
-#' }
 #'
 #' @export
 gui_set_font <- function(font) {
@@ -165,10 +147,8 @@ gui_set_font <- function(font) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_get_font()
-#' }
 #'
 #' @export
 gui_get_font <- function() {
@@ -185,10 +165,8 @@ gui_get_font <- function() {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_set_style(0L, 0L, 0L)
-#' }
 #'
 #' @export
 gui_set_style <- function(control, property, value) {
@@ -209,10 +187,8 @@ gui_set_style <- function(control, property, value) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_get_style(0L, 0L)
-#' }
 #'
 #' @export
 gui_get_style <- function(control, property) {
@@ -229,10 +205,8 @@ gui_get_style <- function(control, property) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_load_style("file.png")
-#' }
 #'
 #' @export
 gui_load_style <- function(file_name) {
@@ -246,10 +220,8 @@ gui_load_style <- function(file_name) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_load_style_default()
-#' }
 #'
 #' @export
 gui_load_style_default <- function() {
@@ -262,10 +234,8 @@ gui_load_style_default <- function() {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_enable_tooltip()
-#' }
 #'
 #' @export
 gui_enable_tooltip <- function() {
@@ -278,10 +248,8 @@ gui_enable_tooltip <- function() {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_disable_tooltip()
-#' }
 #'
 #' @export
 gui_disable_tooltip <- function() {
@@ -296,10 +264,8 @@ gui_disable_tooltip <- function() {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_set_tooltip("text")
-#' }
 #'
 #' @export
 gui_set_tooltip <- function(tooltip) {
@@ -315,10 +281,8 @@ gui_set_tooltip <- function(tooltip) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_set_icon_scale(0L)
-#' }
 #'
 #' @export
 gui_set_icon_scale <- function(scale) {
@@ -338,10 +302,8 @@ gui_set_icon_scale <- function(scale) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_draw_icon(0L, 100L, 100L, 32L, "red")
-#' }
 #'
 #' @export
 gui_draw_icon <- function(icon_id, pos_x, pos_y, pixel_size, color) {
@@ -363,10 +325,8 @@ gui_draw_icon <- function(icon_id, pos_x, pos_y, pixel_size, color) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_get_text_width("Hello")
-#' }
 #'
 #' @export
 gui_get_text_width <- function(text) {
@@ -385,10 +345,8 @@ gui_get_text_width <- function(text) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_window_box(rectangle(10, 10, 200, 100), "My Window")
-#' }
 #'
 #' @export
 gui_window_box <- function(bounds, title) {
@@ -408,10 +366,8 @@ gui_window_box <- function(bounds, title) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_group_box(rectangle(10, 10, 200, 100), "Hello")
-#' }
 #'
 #' @export
 gui_group_box <- function(bounds, text) {
@@ -431,10 +387,8 @@ gui_group_box <- function(bounds, text) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_line(rectangle(10, 10, 200, 100), "Hello")
-#' }
 #'
 #' @export
 gui_line <- function(bounds, text) {
@@ -454,10 +408,8 @@ gui_line <- function(bounds, text) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_panel(rectangle(10, 10, 200, 100), "Hello")
-#' }
 #'
 #' @export
 gui_panel <- function(bounds, text) {
@@ -477,10 +429,8 @@ gui_panel <- function(bounds, text) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_label(rectangle(10, 10, 200, 100), "Hello")
-#' }
 #'
 #' @export
 gui_label <- function(bounds, text) {
@@ -500,10 +450,8 @@ gui_label <- function(bounds, text) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_button(rectangle(10, 10, 200, 100), "Hello")
-#' }
 #'
 #' @export
 gui_button <- function(bounds, text) {
@@ -523,10 +471,8 @@ gui_button <- function(bounds, text) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_label_button(rectangle(10, 10, 200, 100), "Hello")
-#' }
 #'
 #' @export
 gui_label_button <- function(bounds, text) {
@@ -547,10 +493,8 @@ gui_label_button <- function(bounds, text) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_toggle(rectangle(10, 10, 200, 100), "Hello", TRUE)
-#' }
 #'
 #' @export
 gui_toggle <- function(bounds, text, active) {
@@ -572,10 +516,8 @@ gui_toggle <- function(bounds, text, active) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_toggle_group(rectangle(10, 10, 200, 100), "Hello", 0L)
-#' }
 #'
 #' @export
 gui_toggle_group <- function(bounds, text, active) {
@@ -597,10 +539,8 @@ gui_toggle_group <- function(bounds, text, active) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_toggle_slider(rectangle(10, 10, 200, 100), "Hello", 0L)
-#' }
 #'
 #' @export
 gui_toggle_slider <- function(bounds, text, active) {
@@ -622,10 +562,8 @@ gui_toggle_slider <- function(bounds, text, active) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_check_box(rectangle(10, 10, 200, 100), "Hello", TRUE)
-#' }
 #'
 #' @export
 gui_check_box <- function(bounds, text, checked) {
@@ -647,10 +585,8 @@ gui_check_box <- function(bounds, text, checked) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_combo_box(rectangle(10, 10, 200, 100), "Hello", 0L)
-#' }
 #'
 #' @export
 gui_combo_box <- function(bounds, text, active) {
@@ -673,10 +609,8 @@ gui_combo_box <- function(bounds, text, active) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_dropdown_box(rectangle(10, 10, 200, 100), "Hello", 0L, TRUE)
-#' }
 #'
 #' @export
 gui_dropdown_box <- function(bounds, text, active, edit_mode) {
@@ -702,10 +636,8 @@ gui_dropdown_box <- function(bounds, text, active, edit_mode) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_spinner(rectangle(10, 10, 200, 100), "Hello", 0L, 0L, 0L, TRUE)
-#' }
 #'
 #' @export
 gui_spinner <- function(bounds, text, value, min_value, max_value, edit_mode) {
@@ -733,10 +665,8 @@ gui_spinner <- function(bounds, text, value, min_value, max_value, edit_mode) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_value_box(rectangle(10, 10, 200, 100), "Hello", 0L, 0L, 0L, TRUE)
-#' }
 #'
 #' @export
 gui_value_box <- function(bounds, text, value, min_value, max_value, edit_mode) {
@@ -764,10 +694,8 @@ gui_value_box <- function(bounds, text, value, min_value, max_value, edit_mode) 
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_slider(rectangle(10, 10, 200, 100), "Hello", "Hello", 0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 gui_slider <- function(bounds, text_left, text_right, value, min_value, max_value) {
@@ -795,10 +723,8 @@ gui_slider <- function(bounds, text_left, text_right, value, min_value, max_valu
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_slider_bar(rectangle(10, 10, 200, 100), "Hello", "Hello", 0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 gui_slider_bar <- function(bounds, text_left, text_right, value, min_value, max_value) {
@@ -826,10 +752,8 @@ gui_slider_bar <- function(bounds, text_left, text_right, value, min_value, max_
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_progress_bar(rectangle(10, 10, 200, 100), "Hello", "Hello", 0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 gui_progress_bar <- function(bounds, text_left, text_right, value, min_value, max_value) {
@@ -853,10 +777,8 @@ gui_progress_bar <- function(bounds, text_left, text_right, value, min_value, ma
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_status_bar(rectangle(10, 10, 200, 100), "Hello")
-#' }
 #'
 #' @export
 gui_status_bar <- function(bounds, text) {
@@ -876,10 +798,8 @@ gui_status_bar <- function(bounds, text) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_dummy_rec(rectangle(10, 10, 200, 100), "Hello")
-#' }
 #'
 #' @export
 gui_dummy_rec <- function(bounds, text) {
@@ -902,10 +822,8 @@ gui_dummy_rec <- function(bounds, text) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_grid(rectangle(10, 10, 200, 100), "Hello", 1.0, 0L, c(100, 100))
-#' }
 #'
 #' @export
 gui_grid <- function(bounds, text, spacing, subdivs, mouse_cell) {
@@ -930,10 +848,8 @@ gui_grid <- function(bounds, text, spacing, subdivs, mouse_cell) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_list_view(rectangle(10, 10, 200, 100), "Hello", 0L, 0L)
-#' }
 #'
 #' @export
 gui_list_view <- function(bounds, text, scroll_index, active) {
@@ -957,10 +873,8 @@ gui_list_view <- function(bounds, text, scroll_index, active) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_tab_bar(rectangle(10, 10, 200, 100), "Hello", 0L, 0L)
-#' }
 #'
 #' @export
 gui_tab_bar <- function(bounds, text, hscroll, active) {
@@ -985,10 +899,8 @@ gui_tab_bar <- function(bounds, text, hscroll, active) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_message_box(rectangle(10, 10, 200, 100), "My Window", "Hello", "Hello", 0L)
-#' }
 #'
 #' @export
 gui_message_box <- function(bounds, title, message, btn_text, btn_active) {
@@ -1012,10 +924,8 @@ gui_message_box <- function(bounds, title, message, btn_text, btn_active) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_color_picker(rectangle(10, 10, 200, 100), "Hello", "red")
-#' }
 #'
 #' @export
 gui_color_picker <- function(bounds, text, color) {
@@ -1037,10 +947,8 @@ gui_color_picker <- function(bounds, text, color) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_color_panel(rectangle(10, 10, 200, 100), "Hello", "red")
-#' }
 #'
 #' @export
 gui_color_panel <- function(bounds, text, color) {
@@ -1062,10 +970,8 @@ gui_color_panel <- function(bounds, text, color) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_color_bar_alpha(rectangle(10, 10, 200, 100), "Hello", 0.0)
-#' }
 #'
 #' @export
 gui_color_bar_alpha <- function(bounds, text, alpha) {
@@ -1087,10 +993,8 @@ gui_color_bar_alpha <- function(bounds, text, alpha) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_color_bar_hue(rectangle(10, 10, 200, 100), "Hello", 0.0)
-#' }
 #'
 #' @export
 gui_color_bar_hue <- function(bounds, text, value) {
@@ -1112,10 +1016,8 @@ gui_color_bar_hue <- function(bounds, text, value) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_color_picker_hsv(rectangle(10, 10, 200, 100), "Hello", c(0, 0, 0))
-#' }
 #'
 #' @export
 gui_color_picker_hsv <- function(bounds, text, color_hsv) {
@@ -1137,10 +1039,8 @@ gui_color_picker_hsv <- function(bounds, text, color_hsv) {
 #'
 #' @family gui functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' gui_color_panel_hsv(rectangle(10, 10, 200, 100), "Hello", c(0, 0, 0))
-#' }
 #'
 #' @export
 gui_color_panel_hsv <- function(bounds, text, color_hsv) {

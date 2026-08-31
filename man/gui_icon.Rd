@@ -276,11 +276,9 @@ Enum values for \code{gui_icon}.
 }
 }
 \examples{
-\dontrun{
 gui_icon$none
 gui_icon$cross_small
 gui_icon$filetype_icon
-}
 
 }
 \keyword{datasets}

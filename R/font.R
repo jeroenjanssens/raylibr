@@ -5,10 +5,7 @@
 #' @return A logical.
 #'
 #' @examples
-#' \dontrun{
-#' f <- get_font_default()
-#' is_font(f)
-#' }
+#' is_font("not a font")
 #'
 #' @export
 is_font <- function(x) {

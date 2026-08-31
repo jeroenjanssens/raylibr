@@ -20,10 +20,9 @@ An integer
 Rl Load Texture Depth
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_load_texture_depth(800L, 450L, TRUE)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

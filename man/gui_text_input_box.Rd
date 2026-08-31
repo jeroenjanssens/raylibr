@@ -40,13 +40,12 @@ A list with \code{result} (integer), \code{text} (string),
 Text input box control with title and buttons.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_text_input_box(
   rectangle(100, 100, 400, 200), "Title", "Enter text:",
   "", 256L, "Ok;Cancel", 0L, FALSE
 )
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

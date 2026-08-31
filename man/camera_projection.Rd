@@ -21,10 +21,8 @@ Enum values for \code{camera_projection}.
 }
 }
 \examples{
-\dontrun{
 camera_projection$perspective
 camera_projection$orthographic
-}
 
 }
 \keyword{datasets}

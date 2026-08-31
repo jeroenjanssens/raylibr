@@ -16,9 +16,7 @@ A numeric vector of length 3
 Vector3 Perpendicular
 }
 \examples{
-\dontrun{
 vector3_perpendicular(c(0, 0, 0))
-}
 
 }
 \seealso{

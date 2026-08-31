@@ -19,10 +19,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_gamepad_button_pressed()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other pressed functions: 
@@ -31,6 +30,18 @@ Other pressed functions:
 \code{\link{is_gamepad_button_pressed}()},
 \code{\link{is_key_pressed}()},
 \code{\link{is_mouse_button_pressed}()}
+
+Other gamepad functions: 
+\code{\link{get_gamepad_axis_count}()},
+\code{\link{get_gamepad_axis_movement}()},
+\code{\link{get_gamepad_name}()},
+\code{\link{is_gamepad_available}()},
+\code{\link{is_gamepad_button_down}()},
+\code{\link{is_gamepad_button_pressed}()},
+\code{\link{is_gamepad_button_released}()},
+\code{\link{is_gamepad_button_up}()},
+\code{\link{set_gamepad_mappings}()},
+\code{\link{set_gamepad_vibration}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -127,5 +138,6 @@ Other get functions:
 \code{\link{get_world_to_screen_2d}()},
 \code{\link{get_world_to_screen_ex}()}
 }
+\concept{gamepad functions}
 \concept{get functions}
 \concept{pressed functions}

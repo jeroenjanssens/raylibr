@@ -21,10 +21,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 set_audio_stream_volume(load_audio_stream(44100L, 16L, 1L), 0.5)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other volume functions: 
@@ -32,6 +31,23 @@ Other volume functions:
 \code{\link{set_master_volume}()},
 \code{\link{set_music_volume}()},
 \code{\link{set_sound_volume}()}
+
+Other audio functions: 
+\code{\link{close_audio_device}()},
+\code{\link{init_audio_device}()},
+\code{\link{is_audio_device_ready}()},
+\code{\link{is_audio_stream_playing}()},
+\code{\link{is_audio_stream_processed}()},
+\code{\link{is_audio_stream_valid}()},
+\code{\link{load_audio_stream}()},
+\code{\link{pause_audio_stream}()},
+\code{\link{play_audio_stream}()},
+\code{\link{resume_audio_stream}()},
+\code{\link{set_audio_stream_buffer_size_default}()},
+\code{\link{set_audio_stream_pan}()},
+\code{\link{set_audio_stream_pitch}()},
+\code{\link{stop_audio_stream}()},
+\code{\link{unload_audio_stream}()}
 
 Other set functions: 
 \code{\link{set_audio_stream_buffer_size_default}()},
@@ -75,5 +91,6 @@ Other set functions:
 \code{\link{set_window_state}()},
 \code{\link{set_window_title}()}
 }
+\concept{audio functions}
 \concept{set functions}
 \concept{volume functions}

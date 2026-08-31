@@ -21,7 +21,7 @@ On desktop, runs a standard while loop. On web, registers a callback with
 \code{emscripten_set_main_loop} so the browser event loop stays responsive.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 run_game_loop(
   update_fn = function() {
     begin_drawing()
@@ -32,6 +32,5 @@ run_game_loop(
   init_fn = function() init_window(800L, 450L, "Game"),
   cleanup_fn = function() close_window()
 )
-}
-
+\dontshow{\}) # examplesIf}
 }

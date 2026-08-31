@@ -17,17 +17,25 @@ set_model_mesh_material(model, mesh_id, material_id)
 Set material for a mesh in a model. Modifies the model in place.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 model <- load_model("model.obj")
 set_model_mesh_material(model, 0L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other model functions: 
 \code{\link{draw_model}()},
+\code{\link{draw_model_ex}()},
+\code{\link{draw_model_wires}()},
+\code{\link{draw_model_wires_ex}()},
+\code{\link{get_model_bounding_box}()},
+\code{\link{is_model_animation_valid}()},
+\code{\link{is_model_valid}()},
 \code{\link{load_model}()},
+\code{\link{load_model_from_mesh}()},
 \code{\link{set_model_texture}()},
-\code{\link{unload_model}()}
+\code{\link{unload_model}()},
+\code{\link{update_model_animation}()},
+\code{\link{update_model_animation_ex}()}
 }
 \concept{model functions}

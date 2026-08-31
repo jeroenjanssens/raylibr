@@ -17,13 +17,12 @@ draw_mesh_instanced(mesh, material, transforms)
 Draw multiple mesh instances with material and different transforms.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 mesh <- gen_mesh_cube(1.0, 1.0, 1.0)
 mat <- load_material_default()
 transforms <- list(diag(4), diag(4))
 draw_mesh_instanced(mesh, mat, transforms)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other draw functions: 

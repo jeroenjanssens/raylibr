@@ -18,9 +18,7 @@ A numeric vector of length 3
 Vector3 Transform
 }
 \examples{
-\dontrun{
 vector3_transform(c(0, 0, 0), diag(4))
-}
 
 }
 \seealso{

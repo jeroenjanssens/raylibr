@@ -19,10 +19,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 set_master_volume(0.5)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other volume functions: 
@@ -30,6 +29,9 @@ Other volume functions:
 \code{\link{set_audio_stream_volume}()},
 \code{\link{set_music_volume}()},
 \code{\link{set_sound_volume}()}
+
+Other master functions: 
+\code{\link{get_master_volume}()}
 
 Other set functions: 
 \code{\link{set_audio_stream_buffer_size_default}()},
@@ -73,5 +75,6 @@ Other set functions:
 \code{\link{set_window_state}()},
 \code{\link{set_window_title}()}
 }
+\concept{master functions}
 \concept{set functions}
 \concept{volume functions}

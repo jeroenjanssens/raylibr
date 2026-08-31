@@ -21,9 +21,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_grid(16L, 1.0)
-}
+raylibr_screenshot_3d(function() draw_grid(16L, 1.0))
 
 }
 \seealso{

@@ -11,9 +11,7 @@
 #' @family float functions
 #'
 #' @examples
-#' \dontrun{
 #' float_clamp(0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 float_clamp <- function(value, min, max) {
@@ -34,9 +32,7 @@ float_clamp <- function(value, min, max) {
 #' @family float functions
 #'
 #' @examples
-#' \dontrun{
 #' float_lerp(0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 float_lerp <- function(start, end, amount) {
@@ -57,9 +53,7 @@ float_lerp <- function(start, end, amount) {
 #' @family float functions
 #'
 #' @examples
-#' \dontrun{
 #' float_normalize(0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 float_normalize <- function(value, start, end) {
@@ -82,9 +76,7 @@ float_normalize <- function(value, start, end) {
 #' @family float functions
 #'
 #' @examples
-#' \dontrun{
 #' float_remap(0.0, 0.0, 0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 float_remap <- function(value, input_start, input_end, output_start, output_end) {
@@ -107,9 +99,7 @@ float_remap <- function(value, input_start, input_end, output_start, output_end)
 #' @family float functions
 #'
 #' @examples
-#' \dontrun{
 #' float_wrap(0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 float_wrap <- function(value, min, max) {
@@ -129,9 +119,7 @@ float_wrap <- function(value, min, max) {
 #' @family float functions
 #'
 #' @examples
-#' \dontrun{
 #' float_equals(0.0, 0.0)
-#' }
 #'
 #' @export
 float_equals <- function(x, y) {
@@ -147,9 +135,7 @@ float_equals <- function(x, y) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_zero()
-#' }
 #'
 #' @export
 vector2_zero <- function() {
@@ -163,9 +149,7 @@ vector2_zero <- function() {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_one()
-#' }
 #'
 #' @export
 vector2_one <- function() {
@@ -182,9 +166,7 @@ vector2_one <- function() {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_add(c(100, 100), c(100, 100))
-#' }
 #'
 #' @export
 vector2_add <- function(v1, v2) {
@@ -203,9 +185,7 @@ vector2_add <- function(v1, v2) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_add_value(c(100, 100), 0.0)
-#' }
 #'
 #' @export
 vector2_add_value <- function(v, add) {
@@ -224,9 +204,7 @@ vector2_add_value <- function(v, add) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_subtract(c(100, 100), c(100, 100))
-#' }
 #'
 #' @export
 vector2_subtract <- function(v1, v2) {
@@ -245,9 +223,7 @@ vector2_subtract <- function(v1, v2) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_subtract_value(c(100, 100), 0.0)
-#' }
 #'
 #' @export
 vector2_subtract_value <- function(v, sub) {
@@ -265,9 +241,7 @@ vector2_subtract_value <- function(v, sub) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_length(c(100, 100))
-#' }
 #'
 #' @export
 vector2_length <- function(v) {
@@ -284,9 +258,7 @@ vector2_length <- function(v) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_length_sqr(c(100, 100))
-#' }
 #'
 #' @export
 vector2_length_sqr <- function(v) {
@@ -304,9 +276,7 @@ vector2_length_sqr <- function(v) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_dot_product(c(100, 100), c(100, 100))
-#' }
 #'
 #' @export
 vector2_dot_product <- function(v1, v2) {
@@ -325,9 +295,7 @@ vector2_dot_product <- function(v1, v2) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_cross_product(c(100, 100), c(100, 100))
-#' }
 #'
 #' @export
 vector2_cross_product <- function(v1, v2) {
@@ -346,9 +314,7 @@ vector2_cross_product <- function(v1, v2) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_distance(c(100, 100), c(100, 100))
-#' }
 #'
 #' @export
 vector2_distance <- function(v1, v2) {
@@ -367,9 +333,7 @@ vector2_distance <- function(v1, v2) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_distance_sqr(c(100, 100), c(100, 100))
-#' }
 #'
 #' @export
 vector2_distance_sqr <- function(v1, v2) {
@@ -388,9 +352,7 @@ vector2_distance_sqr <- function(v1, v2) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_angle(c(100, 100), c(100, 100))
-#' }
 #'
 #' @export
 vector2_angle <- function(v1, v2) {
@@ -409,9 +371,7 @@ vector2_angle <- function(v1, v2) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_line_angle(c(100, 100), c(100, 100))
-#' }
 #'
 #' @export
 vector2_line_angle <- function(start, end) {
@@ -430,9 +390,7 @@ vector2_line_angle <- function(start, end) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_scale(c(100, 100), 1.0)
-#' }
 #'
 #' @export
 vector2_scale <- function(v, scale) {
@@ -451,9 +409,7 @@ vector2_scale <- function(v, scale) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_multiply(c(100, 100), c(100, 100))
-#' }
 #'
 #' @export
 vector2_multiply <- function(v1, v2) {
@@ -471,9 +427,7 @@ vector2_multiply <- function(v1, v2) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_negate(c(100, 100))
-#' }
 #'
 #' @export
 vector2_negate <- function(v) {
@@ -491,9 +445,7 @@ vector2_negate <- function(v) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_divide(c(100, 100), c(100, 100))
-#' }
 #'
 #' @export
 vector2_divide <- function(v1, v2) {
@@ -511,9 +463,7 @@ vector2_divide <- function(v1, v2) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_normalize(c(100, 100))
-#' }
 #'
 #' @export
 vector2_normalize <- function(v) {
@@ -531,9 +481,7 @@ vector2_normalize <- function(v) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_transform(c(100, 100), diag(4))
-#' }
 #'
 #' @export
 vector2_transform <- function(v, mat) {
@@ -553,9 +501,7 @@ vector2_transform <- function(v, mat) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_lerp(c(100, 100), c(100, 100), 0.0)
-#' }
 #'
 #' @export
 vector2_lerp <- function(v1, v2, amount) {
@@ -575,9 +521,7 @@ vector2_lerp <- function(v1, v2, amount) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_reflect(c(100, 100), c(100, 100))
-#' }
 #'
 #' @export
 vector2_reflect <- function(v, normal) {
@@ -596,9 +540,7 @@ vector2_reflect <- function(v, normal) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_min(c(100, 100), c(100, 100))
-#' }
 #'
 #' @export
 vector2_min <- function(v1, v2) {
@@ -617,9 +559,7 @@ vector2_min <- function(v1, v2) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_max(c(100, 100), c(100, 100))
-#' }
 #'
 #' @export
 vector2_max <- function(v1, v2) {
@@ -638,9 +578,7 @@ vector2_max <- function(v1, v2) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_rotate(c(100, 100), 0.0)
-#' }
 #'
 #' @export
 vector2_rotate <- function(v, angle) {
@@ -660,9 +598,7 @@ vector2_rotate <- function(v, angle) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_move_towards(c(100, 100), c(100, 100), 0.0)
-#' }
 #'
 #' @export
 vector2_move_towards <- function(v, target, max_distance) {
@@ -681,9 +617,7 @@ vector2_move_towards <- function(v, target, max_distance) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_invert(c(100, 100))
-#' }
 #'
 #' @export
 vector2_invert <- function(v) {
@@ -702,9 +636,7 @@ vector2_invert <- function(v) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_clamp(c(100, 100), c(100, 100), c(100, 100))
-#' }
 #'
 #' @export
 vector2_clamp <- function(v, min, max) {
@@ -725,9 +657,7 @@ vector2_clamp <- function(v, min, max) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_clamp_value(c(100, 100), 0.0, 0.0)
-#' }
 #'
 #' @export
 vector2_clamp_value <- function(v, min, max) {
@@ -747,9 +677,7 @@ vector2_clamp_value <- function(v, min, max) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_equals(c(100, 100), c(100, 100))
-#' }
 #'
 #' @export
 vector2_equals <- function(p, q) {
@@ -769,9 +697,7 @@ vector2_equals <- function(p, q) {
 #' @family vector2 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector2_refract(c(100, 100), c(100, 100), 0.0)
-#' }
 #'
 #' @export
 vector2_refract <- function(v, n, r) {
@@ -788,9 +714,7 @@ vector2_refract <- function(v, n, r) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_zero()
-#' }
 #'
 #' @export
 vector3_zero <- function() {
@@ -804,9 +728,7 @@ vector3_zero <- function() {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_one()
-#' }
 #'
 #' @export
 vector3_one <- function() {
@@ -823,9 +745,7 @@ vector3_one <- function() {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_add(c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_add <- function(v1, v2) {
@@ -844,9 +764,7 @@ vector3_add <- function(v1, v2) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_add_value(c(0, 0, 0), 0.0)
-#' }
 #'
 #' @export
 vector3_add_value <- function(v, add) {
@@ -865,9 +783,7 @@ vector3_add_value <- function(v, add) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_subtract(c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_subtract <- function(v1, v2) {
@@ -886,9 +802,7 @@ vector3_subtract <- function(v1, v2) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_subtract_value(c(0, 0, 0), 0.0)
-#' }
 #'
 #' @export
 vector3_subtract_value <- function(v, sub) {
@@ -907,9 +821,7 @@ vector3_subtract_value <- function(v, sub) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_scale(c(0, 0, 0), 0.0)
-#' }
 #'
 #' @export
 vector3_scale <- function(v, scalar) {
@@ -928,9 +840,7 @@ vector3_scale <- function(v, scalar) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_multiply(c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_multiply <- function(v1, v2) {
@@ -949,9 +859,7 @@ vector3_multiply <- function(v1, v2) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_cross_product(c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_cross_product <- function(v1, v2) {
@@ -969,9 +877,7 @@ vector3_cross_product <- function(v1, v2) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_perpendicular(c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_perpendicular <- function(v) {
@@ -988,9 +894,7 @@ vector3_perpendicular <- function(v) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_length(c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_length <- function(v) {
@@ -1007,9 +911,7 @@ vector3_length <- function(v) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_length_sqr(c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_length_sqr <- function(v) {
@@ -1027,9 +929,7 @@ vector3_length_sqr <- function(v) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_dot_product(c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_dot_product <- function(v1, v2) {
@@ -1048,9 +948,7 @@ vector3_dot_product <- function(v1, v2) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_distance(c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_distance <- function(v1, v2) {
@@ -1069,9 +967,7 @@ vector3_distance <- function(v1, v2) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_distance_sqr(c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_distance_sqr <- function(v1, v2) {
@@ -1090,9 +986,7 @@ vector3_distance_sqr <- function(v1, v2) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_angle(c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_angle <- function(v1, v2) {
@@ -1110,9 +1004,7 @@ vector3_angle <- function(v1, v2) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_negate(c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_negate <- function(v) {
@@ -1130,9 +1022,7 @@ vector3_negate <- function(v) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_divide(c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_divide <- function(v1, v2) {
@@ -1150,9 +1040,7 @@ vector3_divide <- function(v1, v2) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_normalize(c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_normalize <- function(v) {
@@ -1170,9 +1058,7 @@ vector3_normalize <- function(v) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_project(c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_project <- function(v1, v2) {
@@ -1191,9 +1077,7 @@ vector3_project <- function(v1, v2) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_reject(c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_reject <- function(v1, v2) {
@@ -1212,9 +1096,7 @@ vector3_reject <- function(v1, v2) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_transform(c(0, 0, 0), diag(4))
-#' }
 #'
 #' @export
 vector3_transform <- function(v, mat) {
@@ -1233,9 +1115,7 @@ vector3_transform <- function(v, mat) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_rotate_by_quaternion(c(0, 0, 0), c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 vector3_rotate_by_quaternion <- function(v, q) {
@@ -1255,9 +1135,7 @@ vector3_rotate_by_quaternion <- function(v, q) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_rotate_by_axis_angle(c(0, 0, 0), c(0, 0, 0), 0.0)
-#' }
 #'
 #' @export
 vector3_rotate_by_axis_angle <- function(v, axis, angle) {
@@ -1278,9 +1156,7 @@ vector3_rotate_by_axis_angle <- function(v, axis, angle) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_move_towards(c(0, 0, 0), c(0, 0, 0), 0.0)
-#' }
 #'
 #' @export
 vector3_move_towards <- function(v, target, max_distance) {
@@ -1301,9 +1177,7 @@ vector3_move_towards <- function(v, target, max_distance) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_lerp(c(0, 0, 0), c(0, 0, 0), 0.0)
-#' }
 #'
 #' @export
 vector3_lerp <- function(v1, v2, amount) {
@@ -1326,9 +1200,7 @@ vector3_lerp <- function(v1, v2, amount) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_cubic_hermite(c(0, 0, 0), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0), 0.0)
-#' }
 #'
 #' @export
 vector3_cubic_hermite <- function(v1, tangent1, v2, tangent2, amount) {
@@ -1350,9 +1222,7 @@ vector3_cubic_hermite <- function(v1, tangent1, v2, tangent2, amount) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_reflect(c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_reflect <- function(v, normal) {
@@ -1371,9 +1241,7 @@ vector3_reflect <- function(v, normal) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_min(c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_min <- function(v1, v2) {
@@ -1392,9 +1260,7 @@ vector3_min <- function(v1, v2) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_max(c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_max <- function(v1, v2) {
@@ -1415,9 +1281,7 @@ vector3_max <- function(v1, v2) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_barycenter(c(0, 0, 0), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_barycenter <- function(p, a, b, c) {
@@ -1439,9 +1303,7 @@ vector3_barycenter <- function(p, a, b, c) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_unproject(c(0, 0, 0), diag(4), diag(4))
-#' }
 #'
 #' @export
 vector3_unproject <- function(source, projection, view) {
@@ -1460,9 +1322,7 @@ vector3_unproject <- function(source, projection, view) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_invert(c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_invert <- function(v) {
@@ -1481,9 +1341,7 @@ vector3_invert <- function(v) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_clamp(c(0, 0, 0), c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_clamp <- function(v, min, max) {
@@ -1504,9 +1362,7 @@ vector3_clamp <- function(v, min, max) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_clamp_value(c(0, 0, 0), 0.0, 0.0)
-#' }
 #'
 #' @export
 vector3_clamp_value <- function(v, min, max) {
@@ -1526,9 +1382,7 @@ vector3_clamp_value <- function(v, min, max) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_equals(c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 vector3_equals <- function(p, q) {
@@ -1548,9 +1402,7 @@ vector3_equals <- function(p, q) {
 #' @family vector3 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector3_refract(c(0, 0, 0), c(0, 0, 0), 0.0)
-#' }
 #'
 #' @export
 vector3_refract <- function(v, n, r) {
@@ -1567,9 +1419,7 @@ vector3_refract <- function(v, n, r) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_zero()
-#' }
 #'
 #' @export
 vector4_zero <- function() {
@@ -1583,9 +1433,7 @@ vector4_zero <- function() {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_one()
-#' }
 #'
 #' @export
 vector4_one <- function() {
@@ -1602,9 +1450,7 @@ vector4_one <- function() {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_add(c(0, 0, 0, 1), c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 vector4_add <- function(v1, v2) {
@@ -1623,9 +1469,7 @@ vector4_add <- function(v1, v2) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_add_value(c(0, 0, 0, 1), 0.0)
-#' }
 #'
 #' @export
 vector4_add_value <- function(v, add) {
@@ -1644,9 +1488,7 @@ vector4_add_value <- function(v, add) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_subtract(c(0, 0, 0, 1), c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 vector4_subtract <- function(v1, v2) {
@@ -1665,9 +1507,7 @@ vector4_subtract <- function(v1, v2) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_subtract_value(c(0, 0, 0, 1), 0.0)
-#' }
 #'
 #' @export
 vector4_subtract_value <- function(v, add) {
@@ -1685,9 +1525,7 @@ vector4_subtract_value <- function(v, add) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_length(c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 vector4_length <- function(v) {
@@ -1704,9 +1542,7 @@ vector4_length <- function(v) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_length_sqr(c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 vector4_length_sqr <- function(v) {
@@ -1724,9 +1560,7 @@ vector4_length_sqr <- function(v) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_dot_product(c(0, 0, 0, 1), c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 vector4_dot_product <- function(v1, v2) {
@@ -1745,9 +1579,7 @@ vector4_dot_product <- function(v1, v2) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_distance(c(0, 0, 0, 1), c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 vector4_distance <- function(v1, v2) {
@@ -1766,9 +1598,7 @@ vector4_distance <- function(v1, v2) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_distance_sqr(c(0, 0, 0, 1), c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 vector4_distance_sqr <- function(v1, v2) {
@@ -1787,9 +1617,7 @@ vector4_distance_sqr <- function(v1, v2) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_scale(c(0, 0, 0, 1), 1.0)
-#' }
 #'
 #' @export
 vector4_scale <- function(v, scale) {
@@ -1808,9 +1636,7 @@ vector4_scale <- function(v, scale) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_multiply(c(0, 0, 0, 1), c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 vector4_multiply <- function(v1, v2) {
@@ -1828,9 +1654,7 @@ vector4_multiply <- function(v1, v2) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_negate(c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 vector4_negate <- function(v) {
@@ -1848,9 +1672,7 @@ vector4_negate <- function(v) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_divide(c(0, 0, 0, 1), c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 vector4_divide <- function(v1, v2) {
@@ -1868,9 +1690,7 @@ vector4_divide <- function(v1, v2) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_normalize(c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 vector4_normalize <- function(v) {
@@ -1888,9 +1708,7 @@ vector4_normalize <- function(v) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_min(c(0, 0, 0, 1), c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 vector4_min <- function(v1, v2) {
@@ -1909,9 +1727,7 @@ vector4_min <- function(v1, v2) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_max(c(0, 0, 0, 1), c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 vector4_max <- function(v1, v2) {
@@ -1931,9 +1747,7 @@ vector4_max <- function(v1, v2) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_lerp(c(0, 0, 0, 1), c(0, 0, 0, 1), 0.0)
-#' }
 #'
 #' @export
 vector4_lerp <- function(v1, v2, amount) {
@@ -1954,9 +1768,7 @@ vector4_lerp <- function(v1, v2, amount) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_move_towards(c(0, 0, 0, 1), c(0, 0, 0, 1), 0.0)
-#' }
 #'
 #' @export
 vector4_move_towards <- function(v, target, max_distance) {
@@ -1975,9 +1787,7 @@ vector4_move_towards <- function(v, target, max_distance) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_invert(c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 vector4_invert <- function(v) {
@@ -1995,9 +1805,7 @@ vector4_invert <- function(v) {
 #' @family vector4 functions
 #'
 #' @examples
-#' \dontrun{
 #' vector4_equals(c(0, 0, 0, 1), c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 vector4_equals <- function(p, q) {
@@ -2015,9 +1823,7 @@ vector4_equals <- function(p, q) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_determinant(diag(4))
-#' }
 #'
 #' @export
 matrix_determinant <- function(mat) {
@@ -2034,9 +1840,7 @@ matrix_determinant <- function(mat) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_trace(diag(4))
-#' }
 #'
 #' @export
 matrix_trace <- function(mat) {
@@ -2053,9 +1857,7 @@ matrix_trace <- function(mat) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_transpose(diag(4))
-#' }
 #'
 #' @export
 matrix_transpose <- function(mat) {
@@ -2072,9 +1874,7 @@ matrix_transpose <- function(mat) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_invert(diag(4))
-#' }
 #'
 #' @export
 matrix_invert <- function(mat) {
@@ -2089,9 +1889,7 @@ matrix_invert <- function(mat) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_identity()
-#' }
 #'
 #' @export
 matrix_identity <- function() {
@@ -2108,9 +1906,7 @@ matrix_identity <- function() {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_add(diag(4), diag(4))
-#' }
 #'
 #' @export
 matrix_add <- function(left, right) {
@@ -2129,9 +1925,7 @@ matrix_add <- function(left, right) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_subtract(diag(4), diag(4))
-#' }
 #'
 #' @export
 matrix_subtract <- function(left, right) {
@@ -2150,9 +1944,7 @@ matrix_subtract <- function(left, right) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_multiply(diag(4), diag(4))
-#' }
 #'
 #' @export
 matrix_multiply <- function(left, right) {
@@ -2171,9 +1963,7 @@ matrix_multiply <- function(left, right) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_multiply_value(diag(4), 0.0)
-#' }
 #'
 #' @export
 matrix_multiply_value <- function(left, value) {
@@ -2193,9 +1983,7 @@ matrix_multiply_value <- function(left, value) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_translate(0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 matrix_translate <- function(x, y, z) {
@@ -2215,9 +2003,7 @@ matrix_translate <- function(x, y, z) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_rotate(c(0, 0, 0), 0.0)
-#' }
 #'
 #' @export
 matrix_rotate <- function(axis, angle) {
@@ -2235,9 +2021,7 @@ matrix_rotate <- function(axis, angle) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_rotate_x(0.0)
-#' }
 #'
 #' @export
 matrix_rotate_x <- function(angle) {
@@ -2254,9 +2038,7 @@ matrix_rotate_x <- function(angle) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_rotate_y(0.0)
-#' }
 #'
 #' @export
 matrix_rotate_y <- function(angle) {
@@ -2273,9 +2055,7 @@ matrix_rotate_y <- function(angle) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_rotate_z(0.0)
-#' }
 #'
 #' @export
 matrix_rotate_z <- function(angle) {
@@ -2292,9 +2072,7 @@ matrix_rotate_z <- function(angle) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_rotate_xyz(c(0, 0, 0))
-#' }
 #'
 #' @export
 matrix_rotate_xyz <- function(angle) {
@@ -2311,9 +2089,7 @@ matrix_rotate_xyz <- function(angle) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_rotate_zyx(c(0, 0, 0))
-#' }
 #'
 #' @export
 matrix_rotate_zyx <- function(angle) {
@@ -2332,9 +2108,7 @@ matrix_rotate_zyx <- function(angle) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_scale(0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 matrix_scale <- function(x, y, z) {
@@ -2358,9 +2132,7 @@ matrix_scale <- function(x, y, z) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_frustum(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 matrix_frustum <- function(left, right, bottom, top, near_plane, far_plane) {
@@ -2385,9 +2157,7 @@ matrix_frustum <- function(left, right, bottom, top, near_plane, far_plane) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_perspective(70.0, 1.78, 0.0, 0.0)
-#' }
 #'
 #' @export
 matrix_perspective <- function(fov_y, aspect, near_plane, far_plane) {
@@ -2412,9 +2182,7 @@ matrix_perspective <- function(fov_y, aspect, near_plane, far_plane) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_ortho(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 matrix_ortho <- function(left, right, bottom, top, near_plane, far_plane) {
@@ -2438,9 +2206,7 @@ matrix_ortho <- function(left, right, bottom, top, near_plane, far_plane) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_look_at(c(0, 0, 0), c(0, 0, 0), c(0, 1, 0))
-#' }
 #'
 #' @export
 matrix_look_at <- function(eye, target, up) {
@@ -2460,9 +2226,7 @@ matrix_look_at <- function(eye, target, up) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_add(c(0, 0, 0, 1), c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 quaternion_add <- function(q1, q2) {
@@ -2481,9 +2245,7 @@ quaternion_add <- function(q1, q2) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_add_value(c(0, 0, 0, 1), 0.0)
-#' }
 #'
 #' @export
 quaternion_add_value <- function(q, add) {
@@ -2502,9 +2264,7 @@ quaternion_add_value <- function(q, add) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_subtract(c(0, 0, 0, 1), c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 quaternion_subtract <- function(q1, q2) {
@@ -2523,9 +2283,7 @@ quaternion_subtract <- function(q1, q2) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_subtract_value(c(0, 0, 0, 1), 0.0)
-#' }
 #'
 #' @export
 quaternion_subtract_value <- function(q, sub) {
@@ -2541,9 +2299,7 @@ quaternion_subtract_value <- function(q, sub) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_identity()
-#' }
 #'
 #' @export
 quaternion_identity <- function() {
@@ -2559,9 +2315,7 @@ quaternion_identity <- function() {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_length(c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 quaternion_length <- function(q) {
@@ -2578,9 +2332,7 @@ quaternion_length <- function(q) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_normalize(c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 quaternion_normalize <- function(q) {
@@ -2597,9 +2349,7 @@ quaternion_normalize <- function(q) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_invert(c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 quaternion_invert <- function(q) {
@@ -2617,9 +2367,7 @@ quaternion_invert <- function(q) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_multiply(c(0, 0, 0, 1), c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 quaternion_multiply <- function(q1, q2) {
@@ -2638,9 +2386,7 @@ quaternion_multiply <- function(q1, q2) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_scale(c(0, 0, 0, 1), 0.0)
-#' }
 #'
 #' @export
 quaternion_scale <- function(q, mul) {
@@ -2659,9 +2405,7 @@ quaternion_scale <- function(q, mul) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_divide(c(0, 0, 0, 1), c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 quaternion_divide <- function(q1, q2) {
@@ -2681,9 +2425,7 @@ quaternion_divide <- function(q1, q2) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_lerp(c(0, 0, 0, 1), c(0, 0, 0, 1), 0.0)
-#' }
 #'
 #' @export
 quaternion_lerp <- function(q1, q2, amount) {
@@ -2704,9 +2446,7 @@ quaternion_lerp <- function(q1, q2, amount) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_nlerp(c(0, 0, 0, 1), c(0, 0, 0, 1), 0.0)
-#' }
 #'
 #' @export
 quaternion_nlerp <- function(q1, q2, amount) {
@@ -2727,9 +2467,7 @@ quaternion_nlerp <- function(q1, q2, amount) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_slerp(c(0, 0, 0, 1), c(0, 0, 0, 1), 0.0)
-#' }
 #'
 #' @export
 quaternion_slerp <- function(q1, q2, amount) {
@@ -2752,9 +2490,7 @@ quaternion_slerp <- function(q1, q2, amount) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_cubic_hermite_spline(c(0, 0, 0, 1), c(0, 0, 0, 1), c(0, 0, 0, 1), c(0, 0, 0, 1), 0.0)
-#' }
 #'
 #' @export
 quaternion_cubic_hermite_spline <- function(q1, out_tangent1, q2, in_tangent2, t) {
@@ -2776,9 +2512,7 @@ quaternion_cubic_hermite_spline <- function(q1, out_tangent1, q2, in_tangent2, t
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_from_vector3_to_vector3(c(0, 0, 0), c(0, 0, 0))
-#' }
 #'
 #' @export
 quaternion_from_vector3_to_vector3 <- function(from, to) {
@@ -2796,9 +2530,7 @@ quaternion_from_vector3_to_vector3 <- function(from, to) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_from_matrix(diag(4))
-#' }
 #'
 #' @export
 quaternion_from_matrix <- function(mat) {
@@ -2815,9 +2547,7 @@ quaternion_from_matrix <- function(mat) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_to_matrix(c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 quaternion_to_matrix <- function(q) {
@@ -2835,9 +2565,7 @@ quaternion_to_matrix <- function(q) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_from_axis_angle(c(0, 0, 0), 0.0)
-#' }
 #'
 #' @export
 quaternion_from_axis_angle <- function(axis, angle) {
@@ -2857,9 +2585,7 @@ quaternion_from_axis_angle <- function(axis, angle) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_from_euler(1.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 quaternion_from_euler <- function(pitch, yaw, roll) {
@@ -2878,9 +2604,7 @@ quaternion_from_euler <- function(pitch, yaw, roll) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_to_euler(c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 quaternion_to_euler <- function(q) {
@@ -2898,9 +2622,7 @@ quaternion_to_euler <- function(q) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_transform(c(0, 0, 0, 1), diag(4))
-#' }
 #'
 #' @export
 quaternion_transform <- function(q, mat) {
@@ -2919,9 +2641,7 @@ quaternion_transform <- function(q, mat) {
 #' @family quaternion functions
 #'
 #' @examples
-#' \dontrun{
 #' quaternion_equals(c(0, 0, 0, 1), c(0, 0, 0, 1))
-#' }
 #'
 #' @export
 quaternion_equals <- function(p, q) {
@@ -2941,9 +2661,7 @@ quaternion_equals <- function(p, q) {
 #' @family matrix functions
 #'
 #' @examples
-#' \dontrun{
 #' matrix_compose(c(0, 0, 0), c(0, 0, 0, 1), c(1, 1, 1))
-#' }
 #'
 #' @export
 matrix_compose <- function(translation, rotation, scale) {

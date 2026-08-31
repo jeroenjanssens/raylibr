@@ -30,11 +30,9 @@ This class has been auto-generated from the following Raylib struct definition:
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 tra <- transform(c(0, 0, 0), c(0, 0, 0, 1), c(1, 1, 1))
 tra$translation
 tra$rotation
-}
 
 }
 \concept{transform functions}

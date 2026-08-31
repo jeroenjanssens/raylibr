@@ -17,15 +17,16 @@ set_material_texture(material, map_type, texture)
 Set texture for a material map type. Modifies the material in place.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 mat <- load_material_default()
 tex <- load_texture("texture.png")
 set_material_texture(mat, material_map_index$albedo, tex)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other material functions: 
+\code{\link{is_material_valid}()},
+\code{\link{load_material_default}()},
 \code{\link{unload_material}()}
 }
 \concept{material functions}

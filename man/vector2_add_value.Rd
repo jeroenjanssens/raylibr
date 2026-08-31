@@ -18,9 +18,7 @@ A numeric vector of length 2
 Vector2 Add Value
 }
 \examples{
-\dontrun{
 vector2_add_value(c(100, 100), 0.0)
-}
 
 }
 \seealso{

@@ -18,10 +18,9 @@ An integer
 Panel control, useful to group controls.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_panel(rectangle(10, 10, 200, 100), "Hello")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

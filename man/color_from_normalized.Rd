@@ -22,9 +22,14 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 color_from_normalized(c(0, 0, 0, 1))
-}
 
 }
+\seealso{
+Other from functions: 
+\code{\link{color_from_hsv}()},
+\code{\link{image_from_channel}()},
+\code{\link{image_from_image}()}
+}
+\concept{from functions}
 \concept{normalized functions}

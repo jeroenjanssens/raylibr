@@ -16,9 +16,7 @@ A number
 Matrix Determinant
 }
 \examples{
-\dontrun{
 matrix_determinant(diag(4))
-}
 
 }
 \seealso{

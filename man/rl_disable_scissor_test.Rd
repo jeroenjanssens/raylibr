@@ -10,10 +10,9 @@ rl_disable_scissor_test()
 Rl Disable Scissor Test
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_disable_scissor_test()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

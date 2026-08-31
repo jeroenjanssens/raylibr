@@ -24,15 +24,29 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_screen_to_world_ray(c(100, 100), camera_3d(c(0, 10, 10)))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other ray functions: 
 \code{\link{draw_ray}()},
+\code{\link{get_ray_collision_box}()},
+\code{\link{get_ray_collision_mesh}()},
+\code{\link{get_ray_collision_quad}()},
+\code{\link{get_ray_collision_sphere}()},
+\code{\link{get_ray_collision_triangle}()},
 \code{\link{ray}()}
+
+Other screen functions: 
+\code{\link{get_screen_height}()},
+\code{\link{get_screen_to_world_2d}()},
+\code{\link{get_screen_to_world_ray_ex}()},
+\code{\link{get_screen_width}()},
+\code{\link{get_world_to_screen}()},
+\code{\link{is_cursor_on_screen}()},
+\code{\link{load_image_from_screen}()},
+\code{\link{swap_screen_buffer}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -131,3 +145,4 @@ Other get functions:
 }
 \concept{get functions}
 \concept{ray functions}
+\concept{screen functions}

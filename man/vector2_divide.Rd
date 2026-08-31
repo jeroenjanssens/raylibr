@@ -18,9 +18,7 @@ A numeric vector of length 2
 Vector2 Divide
 }
 \examples{
-\dontrun{
 vector2_divide(c(100, 100), c(100, 100))
-}
 
 }
 \seealso{

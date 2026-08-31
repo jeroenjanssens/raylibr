@@ -30,11 +30,9 @@ Enum values for \code{mouse_cursor}.
 }
 }
 \examples{
-\dontrun{
 mouse_cursor$default
 mouse_cursor$resize_ew
 mouse_cursor$not_allowed
-}
 
 }
 \keyword{datasets}

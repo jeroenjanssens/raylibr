@@ -10,10 +10,9 @@ rl_pop_matrix()
 Rl Pop Matrix
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_pop_matrix()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

@@ -21,9 +21,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_point_3d(c(0, 5, 0), "red")
-}
+raylibr_screenshot_3d(function() draw_point_3d(c(0, 0, 0), "red"))
 
 }
 \seealso{
@@ -129,3 +127,4 @@ Other draw functions:
 }
 \concept{3d functions}
 \concept{draw functions}
+\concept{point functions}

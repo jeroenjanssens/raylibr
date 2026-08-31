@@ -20,9 +20,7 @@ A numeric vector of length 4
 Quaternion From Euler
 }
 \examples{
-\dontrun{
 quaternion_from_euler(1.0, 0.0, 0.0)
-}
 
 }
 \seealso{

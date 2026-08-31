@@ -22,11 +22,9 @@ Enum values for \code{gui_text_alignment_vertical}.
 }
 }
 \examples{
-\dontrun{
 gui_text_alignment_vertical$top
 gui_text_alignment_vertical$middle
 gui_text_alignment_vertical$bottom
-}
 
 }
 \keyword{datasets}

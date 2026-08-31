@@ -13,10 +13,9 @@ rl_enable_vertex_attribute(index)
 Rl Enable Vertex Attribute
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_enable_vertex_attribute(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

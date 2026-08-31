@@ -24,11 +24,9 @@ Enum values for \code{camera_mode}.
 }
 }
 \examples{
-\dontrun{
 camera_mode$custom
 camera_mode$orbital
 camera_mode$third_person
-}
 
 }
 \keyword{datasets}

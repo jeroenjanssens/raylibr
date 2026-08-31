@@ -26,9 +26,7 @@ A 4x4 numeric matrix
 Matrix Frustum
 }
 \examples{
-\dontrun{
 matrix_frustum(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
-}
 
 }
 \seealso{

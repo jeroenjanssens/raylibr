@@ -10,10 +10,9 @@ rl_load_draw_quad()
 Rl Load Draw Quad
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_load_draw_quad()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

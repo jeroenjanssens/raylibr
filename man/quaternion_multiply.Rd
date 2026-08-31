@@ -18,9 +18,7 @@ A numeric vector of length 4
 Quaternion Multiply
 }
 \examples{
-\dontrun{
 quaternion_multiply(c(0, 0, 0, 1), c(0, 0, 0, 1))
-}
 
 }
 \seealso{

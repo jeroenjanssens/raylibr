@@ -5,10 +5,7 @@
 #' @return A logical.
 #'
 #' @examples
-#' \dontrun{
-#' m <- gen_mesh_cube(1.0, 1.0, 1.0)
-#' is_mesh(m)
-#' }
+#' is_mesh("not a mesh")
 #'
 #' @export
 is_mesh <- function(x) {

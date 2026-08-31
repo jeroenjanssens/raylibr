@@ -19,17 +19,33 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 set_mouse_cursor(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other cursor functions: 
 \code{\link{disable_cursor}()},
 \code{\link{enable_cursor}()},
 \code{\link{hide_cursor}()},
+\code{\link{is_cursor_hidden}()},
+\code{\link{is_cursor_on_screen}()},
 \code{\link{show_cursor}()}
+
+Other mouse functions: 
+\code{\link{get_mouse_delta}()},
+\code{\link{get_mouse_position}()},
+\code{\link{get_mouse_wheel_move}()},
+\code{\link{get_mouse_wheel_move_v}()},
+\code{\link{get_mouse_x}()},
+\code{\link{get_mouse_y}()},
+\code{\link{is_mouse_button_down}()},
+\code{\link{is_mouse_button_pressed}()},
+\code{\link{is_mouse_button_released}()},
+\code{\link{is_mouse_button_up}()},
+\code{\link{set_mouse_offset}()},
+\code{\link{set_mouse_position}()},
+\code{\link{set_mouse_scale}()}
 
 Other set functions: 
 \code{\link{set_audio_stream_buffer_size_default}()},
@@ -74,4 +90,5 @@ Other set functions:
 \code{\link{set_window_title}()}
 }
 \concept{cursor functions}
+\concept{mouse functions}
 \concept{set functions}

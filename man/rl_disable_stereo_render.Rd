@@ -10,10 +10,9 @@ rl_disable_stereo_render()
 Rl Disable Stereo Render
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_disable_stereo_render()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

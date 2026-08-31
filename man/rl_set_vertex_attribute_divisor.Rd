@@ -15,10 +15,9 @@ rl_set_vertex_attribute_divisor(index, divisor)
 Rl Set Vertex Attribute Divisor
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_set_vertex_attribute_divisor(0L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

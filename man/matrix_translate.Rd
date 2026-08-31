@@ -20,9 +20,7 @@ A 4x4 numeric matrix
 Matrix Translate
 }
 \examples{
-\dontrun{
 matrix_translate(0.0, 0.0, 0.0)
-}
 
 }
 \seealso{

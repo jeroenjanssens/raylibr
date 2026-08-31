@@ -16,15 +16,16 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 disable_cursor()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other cursor functions: 
 \code{\link{enable_cursor}()},
 \code{\link{hide_cursor}()},
+\code{\link{is_cursor_hidden}()},
+\code{\link{is_cursor_on_screen}()},
 \code{\link{set_mouse_cursor}()},
 \code{\link{show_cursor}()}
 }

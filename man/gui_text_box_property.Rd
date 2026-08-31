@@ -20,9 +20,7 @@ Enum values for \code{gui_text_box_property}.
 }
 }
 \examples{
-\dontrun{
 gui_text_box_property$text_readonly
-}
 
 }
 \keyword{datasets}

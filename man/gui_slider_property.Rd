@@ -21,10 +21,8 @@ Enum values for \code{gui_slider_property}.
 }
 }
 \examples{
-\dontrun{
 gui_slider_property$slider_width
 gui_slider_property$slider_padding
-}
 
 }
 \keyword{datasets}

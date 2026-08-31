@@ -16,9 +16,7 @@ A numeric vector of length 2
 Vector2 Normalize
 }
 \examples{
-\dontrun{
 vector2_normalize(c(100, 100))
-}
 
 }
 \seealso{

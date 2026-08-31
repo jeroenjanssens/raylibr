@@ -18,9 +18,7 @@ A numeric vector of length 4
 Quaternion Transform
 }
 \examples{
-\dontrun{
 quaternion_transform(c(0, 0, 0, 1), diag(4))
-}
 
 }
 \seealso{

@@ -19,10 +19,9 @@ rl_color4ub(r, g, b, a)
 Rl Color4ub
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_color4ub(255L, 255L, 255L, 255L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

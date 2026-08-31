@@ -15,10 +15,9 @@ rl_draw_vertex_array(offset, count)
 Rl Draw Vertex Array
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_draw_vertex_array(0L, 10L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

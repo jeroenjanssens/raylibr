@@ -13,9 +13,7 @@ A 4x4 numeric matrix
 Matrix Identity
 }
 \examples{
-\dontrun{
 matrix_identity()
-}
 
 }
 \seealso{

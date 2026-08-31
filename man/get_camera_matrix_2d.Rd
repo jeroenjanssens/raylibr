@@ -22,10 +22,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_camera_matrix_2d(camera_2d(c(400, 300), c(0, 0)))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other 2d functions: 
@@ -33,6 +32,23 @@ Other 2d functions:
 \code{\link{end_mode_2d}()},
 \code{\link{get_screen_to_world_2d}()},
 \code{\link{get_world_to_screen_2d}()}
+
+Other camera functions: 
+\code{\link{camera_move_forward}()},
+\code{\link{camera_move_right}()},
+\code{\link{camera_move_to_target}()},
+\code{\link{camera_move_up}()},
+\code{\link{camera_pitch}()},
+\code{\link{camera_roll}()},
+\code{\link{camera_yaw}()},
+\code{\link{get_camera_forward}()},
+\code{\link{get_camera_matrix}()},
+\code{\link{get_camera_projection_matrix}()},
+\code{\link{get_camera_right}()},
+\code{\link{get_camera_up}()},
+\code{\link{get_camera_view_matrix}()},
+\code{\link{update_camera}()},
+\code{\link{update_camera_pro}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -130,4 +146,5 @@ Other get functions:
 \code{\link{get_world_to_screen_ex}()}
 }
 \concept{2d functions}
+\concept{camera functions}
 \concept{get functions}

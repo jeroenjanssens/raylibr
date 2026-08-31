@@ -16,9 +16,7 @@ A numeric vector of length 3
 Quaternion To Euler
 }
 \examples{
-\dontrun{
 quaternion_to_euler(c(0, 0, 0, 1))
-}
 
 }
 \seealso{

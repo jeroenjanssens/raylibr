@@ -16,8 +16,6 @@ A logical.
 Test if object is a ray_collision
 }
 \examples{
-\dontrun{
 is_ray_collision("not a ray_collision")
-}
 
 }

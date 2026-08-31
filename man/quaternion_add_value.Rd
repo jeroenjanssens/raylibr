@@ -18,9 +18,7 @@ A numeric vector of length 4
 Quaternion Add Value
 }
 \examples{
-\dontrun{
 quaternion_add_value(c(0, 0, 0, 1), 0.0)
-}
 
 }
 \seealso{

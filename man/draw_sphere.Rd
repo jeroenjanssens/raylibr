@@ -23,14 +23,14 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_sphere(c(0, 5, 0), 50.0, "red")
-}
+raylibr_screenshot_3d(function() draw_sphere(c(0, 0, 0), 1.0, "red"))
 
 }
 \seealso{
 Other sphere functions: 
 \code{\link{check_collision_box_sphere}()},
+\code{\link{draw_sphere_ex}()},
+\code{\link{draw_sphere_wires}()},
 \code{\link{gen_mesh_hemi_sphere}()},
 \code{\link{gen_mesh_sphere}()},
 \code{\link{get_ray_collision_sphere}()}

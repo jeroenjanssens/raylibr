@@ -20,9 +20,7 @@ A numeric vector of length 4
 Quaternion Nlerp
 }
 \examples{
-\dontrun{
 quaternion_nlerp(c(0, 0, 0, 1), c(0, 0, 0, 1), 0.0)
-}
 
 }
 \seealso{

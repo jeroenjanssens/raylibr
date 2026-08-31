@@ -18,9 +18,7 @@ A 4x4 numeric matrix
 Matrix Multiply
 }
 \examples{
-\dontrun{
 matrix_multiply(diag(4), diag(4))
-}
 
 }
 \seealso{

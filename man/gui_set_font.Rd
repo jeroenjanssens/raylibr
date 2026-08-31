@@ -13,10 +13,9 @@ gui_set_font(font)
 Set gui custom font (global state).
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_set_font(get_font_default())
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

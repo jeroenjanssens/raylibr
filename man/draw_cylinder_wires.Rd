@@ -29,9 +29,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_cylinder_wires(c(0, 5, 0), 50.0, 50.0, 100.0, 16L, "red")
-}
+raylibr_screenshot_3d(function() draw_cylinder_wires(c(0, 0, 0), 1.0, 1.0, 2.0, 16L, "red"))
 
 }
 \seealso{
@@ -40,6 +38,12 @@ Other wires functions:
 \code{\link{draw_cube_wires}()},
 \code{\link{draw_model_wires}()},
 \code{\link{draw_sphere_wires}()}
+
+Other cylinder functions: 
+\code{\link{draw_cylinder}()},
+\code{\link{draw_cylinder_ex}()},
+\code{\link{draw_cylinder_wires_ex}()},
+\code{\link{gen_mesh_cylinder}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -134,5 +138,6 @@ Other draw functions:
 \code{\link{draw_triangle_strip}()},
 \code{\link{draw_triangle_strip_3d}()}
 }
+\concept{cylinder functions}
 \concept{draw functions}
 \concept{wires functions}

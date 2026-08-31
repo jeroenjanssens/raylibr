@@ -15,10 +15,8 @@ draw_triangle_fan(points, color)
 Draw a triangle fan defined by points (first vertex is the center).
 }
 \examples{
-\dontrun{
-pts <- matrix(c(200, 250, 150, 250, 150, 200, 300, 300), ncol = 2)
-draw_triangle_fan(pts, "blue")
-}
+pts <- matrix(c(200, 300, 100, 300, 100, 50, 250, 250), ncol = 2)
+raylibr_screenshot(function() draw_triangle_fan(pts, "blue"))
 
 }
 \seealso{

@@ -22,12 +22,27 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_music_time_played(load_music_stream("music.mp3"))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
+Other music functions: 
+\code{\link{get_music_time_length}()},
+\code{\link{is_music_stream_playing}()},
+\code{\link{is_music_valid}()},
+\code{\link{load_music_stream}()},
+\code{\link{pause_music_stream}()},
+\code{\link{play_music_stream}()},
+\code{\link{resume_music_stream}()},
+\code{\link{seek_music_stream}()},
+\code{\link{set_music_pan}()},
+\code{\link{set_music_pitch}()},
+\code{\link{set_music_volume}()},
+\code{\link{stop_music_stream}()},
+\code{\link{unload_music_stream}()},
+\code{\link{update_music_stream}()}
+
 Other get functions: 
 \code{\link{get_application_directory}()},
 \code{\link{get_camera_matrix}()},
@@ -124,4 +139,5 @@ Other get functions:
 \code{\link{get_world_to_screen_ex}()}
 }
 \concept{get functions}
+\concept{music functions}
 \concept{played functions}

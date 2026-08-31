@@ -23,11 +23,9 @@ Enum values for \code{gui_dropdown_box_property}.
 }
 }
 \examples{
-\dontrun{
 gui_dropdown_box_property$arrow_padding
 gui_dropdown_box_property$dropdown_items_spacing
 gui_dropdown_box_property$dropdown_roll_up
-}
 
 }
 \keyword{datasets}

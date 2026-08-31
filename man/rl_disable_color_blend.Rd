@@ -10,10 +10,9 @@ rl_disable_color_blend()
 Rl Disable Color Blend
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_disable_color_blend()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

@@ -15,10 +15,9 @@ rl_set_matrix_view_offset_stereo(right, left)
 Rl Set Matrix View Offset Stereo
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_set_matrix_view_offset_stereo(diag(4), diag(4))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

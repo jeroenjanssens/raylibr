@@ -22,9 +22,12 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 file_remove("file.png")
+\dontshow{\}) # examplesIf}
 }
-
+\seealso{
+Other remove functions: 
+\code{\link{text_remove_spaces}()}
 }
 \concept{remove functions}

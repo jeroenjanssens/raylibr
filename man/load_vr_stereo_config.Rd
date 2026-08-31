@@ -22,13 +22,18 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 load_vr_stereo_config(device)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other config functions: 
+\code{\link{set_config_flags}()},
+\code{\link{unload_vr_stereo_config}()}
+
+Other vr functions: 
+\code{\link{begin_vr_stereo_mode}()},
+\code{\link{end_vr_stereo_mode}()},
 \code{\link{unload_vr_stereo_config}()}
 
 Other load functions: 
@@ -56,3 +61,4 @@ Other load functions:
 }
 \concept{config functions}
 \concept{load functions}
+\concept{vr functions}

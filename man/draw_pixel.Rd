@@ -23,12 +23,14 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_pixel(100L, 100L, "red")
-}
+raylibr_screenshot(function() draw_pixel(100L, 100L, "red"))
 
 }
 \seealso{
+Other pixel functions: 
+\code{\link{draw_pixel_v}()},
+\code{\link{get_pixel_data_size}()}
+
 Other draw functions: 
 \code{\link{draw_billboard}()},
 \code{\link{draw_billboard_pro}()},

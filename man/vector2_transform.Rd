@@ -18,9 +18,7 @@ A numeric vector of length 2
 Vector2 Transform
 }
 \examples{
-\dontrun{
 vector2_transform(c(100, 100), diag(4))
-}
 
 }
 \seealso{

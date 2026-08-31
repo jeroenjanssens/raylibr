@@ -20,9 +20,7 @@ A 4x4 numeric matrix
 Matrix Look At
 }
 \examples{
-\dontrun{
 matrix_look_at(c(0, 0, 0), c(0, 0, 0), c(0, 1, 0))
-}
 
 }
 \seealso{

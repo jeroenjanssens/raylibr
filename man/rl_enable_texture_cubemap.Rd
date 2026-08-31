@@ -13,10 +13,9 @@ rl_enable_texture_cubemap(id)
 Rl Enable Texture Cubemap
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_enable_texture_cubemap(0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

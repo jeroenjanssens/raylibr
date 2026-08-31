@@ -15,10 +15,9 @@ rl_set_matrix_projection_stereo(right, left)
 Rl Set Matrix Projection Stereo
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_set_matrix_projection_stereo(diag(4), diag(4))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

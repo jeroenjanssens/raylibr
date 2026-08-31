@@ -22,11 +22,9 @@ Enum values for \code{gui_tab_bar_property}.
 }
 }
 \examples{
-\dontrun{
 gui_tab_bar_property$tab_items_width
 gui_tab_bar_property$tab_close_button
 gui_tab_bar_property$tab_line_side
-}
 
 }
 \keyword{datasets}

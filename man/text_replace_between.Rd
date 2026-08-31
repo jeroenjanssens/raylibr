@@ -28,13 +28,19 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 text_replace_between("Hello", "text", "text", "text")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other between functions: 
 \code{\link{get_text_between}()}
+
+Other replace functions: 
+\code{\link{file_text_replace}()},
+\code{\link{text_replace}()},
+\code{\link{text_replace_alloc}()},
+\code{\link{text_replace_between_alloc}()}
 }
 \concept{between functions}
+\concept{replace functions}

@@ -23,10 +23,9 @@ rl_set_vertex_attribute(index, comp_size, type, normalized, stride, offset)
 Rl Set Vertex Attribute
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_set_vertex_attribute(0L, 32L, 0L, TRUE, 0L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

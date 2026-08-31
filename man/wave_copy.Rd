@@ -22,10 +22,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 wave_copy(load_wave("sound.wav"))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other copy functions: 

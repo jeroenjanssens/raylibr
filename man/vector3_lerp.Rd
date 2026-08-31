@@ -20,9 +20,7 @@ A numeric vector of length 3
 Vector3 Lerp
 }
 \examples{
-\dontrun{
 vector3_lerp(c(0, 0, 0), c(0, 0, 0), 0.0)
-}
 
 }
 \seealso{

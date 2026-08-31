@@ -16,8 +16,6 @@ A logical.
 Test if object is a bounding_box
 }
 \examples{
-\dontrun{
 is_bounding_box("not a bounding_box")
-}
 
 }

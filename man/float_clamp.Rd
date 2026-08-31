@@ -20,9 +20,7 @@ A number
 Float Clamp
 }
 \examples{
-\dontrun{
 float_clamp(0.0, 0.0, 0.0)
-}
 
 }
 \seealso{

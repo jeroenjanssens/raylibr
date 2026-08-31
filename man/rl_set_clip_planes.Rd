@@ -15,10 +15,9 @@ rl_set_clip_planes(near_plane, far_plane)
 Rl Set Clip Planes
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_set_clip_planes(0.0, 0.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

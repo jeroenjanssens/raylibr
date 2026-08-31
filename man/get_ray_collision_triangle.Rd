@@ -28,15 +28,24 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 get_ray_collision_triangle(ray(c(0, 0, 0), c(0, 0, 1)), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0))
-}
 
 }
 \seealso{
 Other triangle functions: 
 \code{\link{check_collision_point_triangle}()},
-\code{\link{draw_triangle}()}
+\code{\link{draw_triangle}()},
+\code{\link{draw_triangle_3d}()},
+\code{\link{draw_triangle_lines}()}
+
+Other ray functions: 
+\code{\link{draw_ray}()},
+\code{\link{get_ray_collision_box}()},
+\code{\link{get_ray_collision_mesh}()},
+\code{\link{get_ray_collision_quad}()},
+\code{\link{get_ray_collision_sphere}()},
+\code{\link{get_screen_to_world_ray}()},
+\code{\link{ray}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -134,4 +143,5 @@ Other get functions:
 \code{\link{get_world_to_screen_ex}()}
 }
 \concept{get functions}
+\concept{ray functions}
 \concept{triangle functions}

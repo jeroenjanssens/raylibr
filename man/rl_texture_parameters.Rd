@@ -17,10 +17,9 @@ rl_texture_parameters(id, param, value)
 Rl Texture Parameters
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_texture_parameters(0L, 0L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

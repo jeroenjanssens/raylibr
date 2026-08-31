@@ -22,12 +22,23 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 set_gamepad_mappings("text")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
+Other gamepad functions: 
+\code{\link{get_gamepad_axis_count}()},
+\code{\link{get_gamepad_axis_movement}()},
+\code{\link{get_gamepad_button_pressed}()},
+\code{\link{get_gamepad_name}()},
+\code{\link{is_gamepad_available}()},
+\code{\link{is_gamepad_button_down}()},
+\code{\link{is_gamepad_button_pressed}()},
+\code{\link{is_gamepad_button_released}()},
+\code{\link{is_gamepad_button_up}()},
+\code{\link{set_gamepad_vibration}()}
+
 Other set functions: 
 \code{\link{set_audio_stream_buffer_size_default}()},
 \code{\link{set_audio_stream_pan}()},
@@ -70,5 +81,6 @@ Other set functions:
 \code{\link{set_window_state}()},
 \code{\link{set_window_title}()}
 }
+\concept{gamepad functions}
 \concept{mappings functions}
 \concept{set functions}

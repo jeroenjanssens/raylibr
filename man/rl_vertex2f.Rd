@@ -15,10 +15,9 @@ rl_vertex2f(x, y)
 Rl Vertex2f
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_vertex2f(0.0, 0.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

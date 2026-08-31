@@ -19,12 +19,13 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 set_random_seed(42L)
-}
 
 }
 \seealso{
+Other random functions: 
+\code{\link{get_random_value}()}
+
 Other set functions: 
 \code{\link{set_audio_stream_buffer_size_default}()},
 \code{\link{set_audio_stream_pan}()},
@@ -67,5 +68,6 @@ Other set functions:
 \code{\link{set_window_state}()},
 \code{\link{set_window_title}()}
 }
+\concept{random functions}
 \concept{seed functions}
 \concept{set functions}

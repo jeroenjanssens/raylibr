@@ -27,13 +27,13 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_poly(c(100, 100), 0L, 50.0, 0.0, "red")
-}
+raylibr_screenshot(function() draw_poly(c(200, 150), 6L, 80.0, 0.0, "red"))
 
 }
 \seealso{
 Other poly functions: 
+\code{\link{draw_poly_lines}()},
+\code{\link{draw_poly_lines_ex}()},
 \code{\link{gen_mesh_poly}()}
 
 Other draw functions: 

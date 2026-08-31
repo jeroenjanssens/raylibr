@@ -13,10 +13,9 @@ gui_load_style(file_name)
 Load style file over global style variable (.rgs).
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_load_style("file.png")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

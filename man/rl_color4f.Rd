@@ -19,10 +19,9 @@ rl_color4f(x, y, z, w)
 Rl Color4f
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_color4f(0.0, 0.0, 0.0, 0.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

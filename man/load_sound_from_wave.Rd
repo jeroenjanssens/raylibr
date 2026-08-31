@@ -22,18 +22,34 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 load_sound_from_wave(load_wave("sound.wav"))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other wave functions: 
 \code{\link{export_wave}()},
+\code{\link{export_wave_as_code}()},
+\code{\link{is_wave_valid}()},
 \code{\link{load_wave}()},
 \code{\link{unload_wave}()},
 \code{\link{wave_crop}()},
 \code{\link{wave_format}()}
+
+Other sound functions: 
+\code{\link{is_sound_playing}()},
+\code{\link{is_sound_valid}()},
+\code{\link{load_sound}()},
+\code{\link{load_sound_alias}()},
+\code{\link{pause_sound}()},
+\code{\link{play_sound}()},
+\code{\link{resume_sound}()},
+\code{\link{set_sound_pan}()},
+\code{\link{set_sound_pitch}()},
+\code{\link{set_sound_volume}()},
+\code{\link{stop_sound}()},
+\code{\link{unload_sound}()},
+\code{\link{unload_sound_alias}()}
 
 Other load functions: 
 \code{\link{load_audio_stream}()},
@@ -59,4 +75,5 @@ Other load functions:
 \code{\link{load_wave}()}
 }
 \concept{load functions}
+\concept{sound functions}
 \concept{wave functions}

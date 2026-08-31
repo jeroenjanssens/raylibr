@@ -19,15 +19,17 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_working_directory()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other directory functions: 
 \code{\link{change_directory}()},
 \code{\link{get_application_directory}()},
+\code{\link{get_directory_file_count}()},
+\code{\link{get_directory_file_count_ex}()},
+\code{\link{get_directory_path}()},
 \code{\link{make_directory}()}
 
 Other get functions: 
@@ -127,3 +129,4 @@ Other get functions:
 }
 \concept{directory functions}
 \concept{get functions}
+\concept{working functions}

@@ -25,11 +25,9 @@ Enum values for \code{gui_scroll_bar_property}.
 }
 }
 \examples{
-\dontrun{
 gui_scroll_bar_property$arrows_size
 gui_scroll_bar_property$scroll_slider_padding
 gui_scroll_bar_property$scroll_speed
-}
 
 }
 \keyword{datasets}

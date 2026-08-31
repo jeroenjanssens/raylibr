@@ -16,9 +16,7 @@ A logical.
 Test if object is a vector of length 2
 }
 \examples{
-\dontrun{
 is_vector_2(c(100, 200))
 is_vector_2(42)
-}
 
 }

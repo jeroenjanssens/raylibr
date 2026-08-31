@@ -18,9 +18,7 @@ An integer
 Vector4 Equals
 }
 \examples{
-\dontrun{
 vector4_equals(c(0, 0, 0, 1), c(0, 0, 0, 1))
-}
 
 }
 \seealso{

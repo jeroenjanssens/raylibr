@@ -22,10 +22,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 is_music_valid(load_music_stream("music.mp3"))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other valid functions: 
@@ -42,7 +41,24 @@ Other valid functions:
 \code{\link{is_texture_valid}()},
 \code{\link{is_wave_valid}()}
 
+Other music functions: 
+\code{\link{get_music_time_length}()},
+\code{\link{get_music_time_played}()},
+\code{\link{is_music_stream_playing}()},
+\code{\link{load_music_stream}()},
+\code{\link{pause_music_stream}()},
+\code{\link{play_music_stream}()},
+\code{\link{resume_music_stream}()},
+\code{\link{seek_music_stream}()},
+\code{\link{set_music_pan}()},
+\code{\link{set_music_pitch}()},
+\code{\link{set_music_volume}()},
+\code{\link{stop_music_stream}()},
+\code{\link{unload_music_stream}()},
+\code{\link{update_music_stream}()}
+
 Other is functions: 
+\code{\link{color_is_equal}()},
 \code{\link{is_audio_device_ready}()},
 \code{\link{is_audio_stream_playing}()},
 \code{\link{is_audio_stream_processed}()},
@@ -87,7 +103,9 @@ Other is functions:
 \code{\link{is_window_minimized}()},
 \code{\link{is_window_ready}()},
 \code{\link{is_window_resized}()},
-\code{\link{is_window_state}()}
+\code{\link{is_window_state}()},
+\code{\link{text_is_equal}()}
 }
 \concept{is functions}
+\concept{music functions}
 \concept{valid functions}

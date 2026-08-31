@@ -13,10 +13,9 @@ rl_set_matrix_projection(proj)
 Rl Set Matrix Projection
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_set_matrix_projection(diag(4))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

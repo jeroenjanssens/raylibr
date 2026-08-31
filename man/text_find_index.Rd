@@ -24,14 +24,14 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 text_find_index("Hello", "text")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other index functions: 
 \code{\link{file_text_find_index}()},
 \code{\link{get_glyph_index}()}
 }
+\concept{find functions}
 \concept{index functions}

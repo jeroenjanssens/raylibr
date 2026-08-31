@@ -28,10 +28,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 measure_text_ex(get_font_default(), "Hello", 1.0, 1.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other ex functions: 
@@ -52,5 +51,24 @@ Other ex functions:
 \code{\link{get_world_to_screen_ex}()},
 \code{\link{image_text_ex}()},
 \code{\link{update_model_animation_ex}()}
+
+Other text functions: 
+\code{\link{draw_text}()},
+\code{\link{draw_text_codepoint}()},
+\code{\link{draw_text_ex}()},
+\code{\link{draw_text_pro}()},
+\code{\link{file_text_find_index}()},
+\code{\link{file_text_replace}()},
+\code{\link{gen_image_text}()},
+\code{\link{get_clipboard_text}()},
+\code{\link{get_text_between}()},
+\code{\link{image_text}()},
+\code{\link{image_text_ex}()},
+\code{\link{load_file_text}()},
+\code{\link{measure_text}()},
+\code{\link{save_file_text}()},
+\code{\link{set_clipboard_text}()},
+\code{\link{set_text_line_spacing}()}
 }
 \concept{ex functions}
+\concept{text functions}

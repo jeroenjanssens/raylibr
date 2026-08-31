@@ -16,9 +16,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 poll_input_events()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \concept{events functions}
+\concept{input functions}

@@ -23,11 +23,9 @@ Enum values for \code{gui_result}.
 }
 }
 \examples{
-\dontrun{
 gui_result$none
 gui_result$pressed
 gui_result$tab_close
-}
 
 }
 \keyword{datasets}

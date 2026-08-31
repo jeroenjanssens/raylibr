@@ -16,9 +16,7 @@ A numeric vector of length 4
 Quaternion Invert
 }
 \examples{
-\dontrun{
 quaternion_invert(c(0, 0, 0, 1))
-}
 
 }
 \seealso{

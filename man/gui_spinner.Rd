@@ -26,10 +26,9 @@ A list with \code{result} (integer), \code{value} (integer).
 Spinner control.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_spinner(rectangle(10, 10, 200, 100), "Hello", 0L, 0L, 0L, TRUE)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

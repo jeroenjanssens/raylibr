@@ -13,10 +13,9 @@ A logical
 Rl Is Stereo Render Enabled
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_is_stereo_render_enabled()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

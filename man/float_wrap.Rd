@@ -20,9 +20,7 @@ A number
 Float Wrap
 }
 \examples{
-\dontrun{
 float_wrap(0.0, 0.0, 0.0)
-}
 
 }
 \seealso{

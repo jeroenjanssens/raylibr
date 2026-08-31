@@ -24,10 +24,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_glyph_atlas_rec(get_font_default(), 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rec functions: 
@@ -37,6 +36,10 @@ Other rec functions:
 \code{\link{draw_rectangle_rec}()},
 \code{\link{draw_texture_rec}()},
 \code{\link{get_collision_rec}()}
+
+Other glyph functions: 
+\code{\link{get_glyph_index}()},
+\code{\link{get_glyph_info}()}
 
 Other get functions: 
 \code{\link{get_application_directory}()},
@@ -134,4 +137,5 @@ Other get functions:
 \code{\link{get_world_to_screen_ex}()}
 }
 \concept{get functions}
+\concept{glyph functions}
 \concept{rec functions}

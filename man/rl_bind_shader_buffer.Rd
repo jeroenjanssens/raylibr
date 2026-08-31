@@ -15,10 +15,9 @@ rl_bind_shader_buffer(id, index)
 Rl Bind Shader Buffer
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_bind_shader_buffer(0L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

@@ -27,9 +27,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
-draw_ellipse_lines(100L, 100L, 50.0, 50.0, "red")
-}
+raylibr_screenshot(function() draw_ellipse_lines(200L, 150L, 80.0, 80.0, "red"))
 
 }
 \seealso{
@@ -41,6 +39,11 @@ Other lines functions:
 \code{\link{draw_rectangle_rounded_lines}()},
 \code{\link{draw_ring_lines}()},
 \code{\link{draw_triangle_lines}()}
+
+Other ellipse functions: 
+\code{\link{draw_ellipse}()},
+\code{\link{draw_ellipse_lines_v}()},
+\code{\link{draw_ellipse_v}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -136,4 +139,5 @@ Other draw functions:
 \code{\link{draw_triangle_strip_3d}()}
 }
 \concept{draw functions}
+\concept{ellipse functions}
 \concept{lines functions}

@@ -20,10 +20,9 @@ A list with \code{result} (integer), \code{active} (integer).
 Toggle Group control.
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_toggle_group(rectangle(10, 10, 200, 100), "Hello", 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other gui functions: 

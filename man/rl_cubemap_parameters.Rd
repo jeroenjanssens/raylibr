@@ -17,10 +17,9 @@ rl_cubemap_parameters(id, param, value)
 Rl Cubemap Parameters
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_cubemap_parameters(0L, 0L, 0L)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 

@@ -16,9 +16,7 @@ A number
 Vector3 Length
 }
 \examples{
-\dontrun{
 vector3_length(c(0, 0, 0))
-}
 
 }
 \seealso{

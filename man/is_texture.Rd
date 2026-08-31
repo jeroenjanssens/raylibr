@@ -16,8 +16,6 @@ A logical.
 Test if object is a texture
 }
 \examples{
-\dontrun{
 is_texture("not a texture")
-}
 
 }

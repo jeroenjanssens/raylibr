@@ -29,10 +29,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 update_model_animation_ex(load_model("model.obj"), anim, 0.0, anim, 0.0, 0.0)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other ex functions: 
@@ -54,9 +53,25 @@ Other ex functions:
 \code{\link{image_text_ex}()},
 \code{\link{measure_text_ex}()}
 
+Other model functions: 
+\code{\link{draw_model}()},
+\code{\link{draw_model_ex}()},
+\code{\link{draw_model_wires}()},
+\code{\link{draw_model_wires_ex}()},
+\code{\link{get_model_bounding_box}()},
+\code{\link{is_model_animation_valid}()},
+\code{\link{is_model_valid}()},
+\code{\link{load_model}()},
+\code{\link{load_model_from_mesh}()},
+\code{\link{set_model_mesh_material}()},
+\code{\link{set_model_texture}()},
+\code{\link{unload_model}()},
+\code{\link{update_model_animation}()}
+
 Other update functions: 
 \code{\link{update_model_animation}()},
 \code{\link{update_music_stream}()}
 }
 \concept{ex functions}
+\concept{model functions}
 \concept{update functions}

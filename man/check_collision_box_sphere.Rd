@@ -26,17 +26,30 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
 check_collision_box_sphere(bounding_box(c(-1, -1, -1), c(1, 1, 1)), c(0, 0, 0), 50.0)
-}
 
 }
 \seealso{
 Other sphere functions: 
 \code{\link{draw_sphere}()},
+\code{\link{draw_sphere_ex}()},
+\code{\link{draw_sphere_wires}()},
 \code{\link{gen_mesh_hemi_sphere}()},
 \code{\link{gen_mesh_sphere}()},
 \code{\link{get_ray_collision_sphere}()}
+
+Other collision functions: 
+\code{\link{check_collision_boxes}()},
+\code{\link{check_collision_circle_line}()},
+\code{\link{check_collision_circle_rec}()},
+\code{\link{check_collision_circles}()},
+\code{\link{check_collision_point_circle}()},
+\code{\link{check_collision_point_line}()},
+\code{\link{check_collision_point_rec}()},
+\code{\link{check_collision_point_triangle}()},
+\code{\link{check_collision_recs}()},
+\code{\link{check_collision_spheres}()},
+\code{\link{get_collision_rec}()}
 
 Other check functions: 
 \code{\link{check_collision_boxes}()},
@@ -51,4 +64,5 @@ Other check functions:
 \code{\link{check_collision_spheres}()}
 }
 \concept{check functions}
+\concept{collision functions}
 \concept{sphere functions}

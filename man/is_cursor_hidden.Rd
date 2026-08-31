@@ -19,16 +19,24 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 is_cursor_hidden()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other hidden functions: 
 \code{\link{is_window_hidden}()}
 
+Other cursor functions: 
+\code{\link{disable_cursor}()},
+\code{\link{enable_cursor}()},
+\code{\link{hide_cursor}()},
+\code{\link{is_cursor_on_screen}()},
+\code{\link{set_mouse_cursor}()},
+\code{\link{show_cursor}()}
+
 Other is functions: 
+\code{\link{color_is_equal}()},
 \code{\link{is_audio_device_ready}()},
 \code{\link{is_audio_stream_playing}()},
 \code{\link{is_audio_stream_processed}()},
@@ -73,7 +81,9 @@ Other is functions:
 \code{\link{is_window_minimized}()},
 \code{\link{is_window_ready}()},
 \code{\link{is_window_resized}()},
-\code{\link{is_window_state}()}
+\code{\link{is_window_state}()},
+\code{\link{text_is_equal}()}
 }
+\concept{cursor functions}
 \concept{hidden functions}
 \concept{is functions}

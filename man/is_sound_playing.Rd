@@ -22,17 +22,32 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 is_sound_playing(load_sound("sound.wav"))
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other playing functions: 
 \code{\link{is_audio_stream_playing}()},
 \code{\link{is_music_stream_playing}()}
 
+Other sound functions: 
+\code{\link{is_sound_valid}()},
+\code{\link{load_sound}()},
+\code{\link{load_sound_alias}()},
+\code{\link{load_sound_from_wave}()},
+\code{\link{pause_sound}()},
+\code{\link{play_sound}()},
+\code{\link{resume_sound}()},
+\code{\link{set_sound_pan}()},
+\code{\link{set_sound_pitch}()},
+\code{\link{set_sound_volume}()},
+\code{\link{stop_sound}()},
+\code{\link{unload_sound}()},
+\code{\link{unload_sound_alias}()}
+
 Other is functions: 
+\code{\link{color_is_equal}()},
 \code{\link{is_audio_device_ready}()},
 \code{\link{is_audio_stream_playing}()},
 \code{\link{is_audio_stream_processed}()},
@@ -77,7 +92,9 @@ Other is functions:
 \code{\link{is_window_minimized}()},
 \code{\link{is_window_ready}()},
 \code{\link{is_window_resized}()},
-\code{\link{is_window_state}()}
+\code{\link{is_window_state}()},
+\code{\link{text_is_equal}()}
 }
 \concept{is functions}
 \concept{playing functions}
+\concept{sound functions}

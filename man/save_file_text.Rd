@@ -24,19 +24,40 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 save_file_text("file.png", "Hello")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other text functions: 
 \code{\link{draw_text}()},
+\code{\link{draw_text_codepoint}()},
+\code{\link{draw_text_ex}()},
+\code{\link{draw_text_pro}()},
+\code{\link{file_text_find_index}()},
+\code{\link{file_text_replace}()},
 \code{\link{gen_image_text}()},
 \code{\link{get_clipboard_text}()},
+\code{\link{get_text_between}()},
 \code{\link{image_text}()},
+\code{\link{image_text_ex}()},
 \code{\link{load_file_text}()},
 \code{\link{measure_text}()},
-\code{\link{set_clipboard_text}()}
+\code{\link{measure_text_ex}()},
+\code{\link{set_clipboard_text}()},
+\code{\link{set_text_line_spacing}()}
+
+Other file functions: 
+\code{\link{get_file_extension}()},
+\code{\link{get_file_length}()},
+\code{\link{get_file_mod_time}()},
+\code{\link{get_file_name}()},
+\code{\link{get_file_name_without_ext}()},
+\code{\link{is_file_dropped}()},
+\code{\link{is_file_extension}()},
+\code{\link{is_file_name_valid}()},
+\code{\link{is_path_file}()},
+\code{\link{load_file_text}()}
 }
+\concept{file functions}
 \concept{text functions}

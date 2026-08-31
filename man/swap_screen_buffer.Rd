@@ -16,9 +16,20 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 swap_screen_buffer()
+\dontshow{\}) # examplesIf}
 }
-
+\seealso{
+Other screen functions: 
+\code{\link{get_screen_height}()},
+\code{\link{get_screen_to_world_2d}()},
+\code{\link{get_screen_to_world_ray}()},
+\code{\link{get_screen_to_world_ray_ex}()},
+\code{\link{get_screen_width}()},
+\code{\link{get_world_to_screen}()},
+\code{\link{is_cursor_on_screen}()},
+\code{\link{load_image_from_screen}()}
 }
 \concept{buffer functions}
+\concept{screen functions}

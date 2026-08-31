@@ -16,9 +16,7 @@ A number
 Vector2 Length
 }
 \examples{
-\dontrun{
 vector2_length(c(100, 100))
-}
 
 }
 \seealso{

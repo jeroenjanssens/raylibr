@@ -20,9 +20,7 @@ A numeric vector of length 3
 Vector3 Clamp Value
 }
 \examples{
-\dontrun{
 vector3_clamp_value(c(0, 0, 0), 0.0, 0.0)
-}
 
 }
 \seealso{

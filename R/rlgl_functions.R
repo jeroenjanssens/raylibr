@@ -7,10 +7,8 @@
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_matrix_mode(0L)
-#' }
 #'
 #' @export
 rl_matrix_mode <- function(mode) {
@@ -23,10 +21,8 @@ rl_matrix_mode <- function(mode) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_push_matrix()
-#' }
 #'
 #' @export
 rl_push_matrix <- function() {
@@ -38,10 +34,8 @@ rl_push_matrix <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_pop_matrix()
-#' }
 #'
 #' @export
 rl_pop_matrix <- function() {
@@ -53,10 +47,8 @@ rl_pop_matrix <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_load_identity()
-#' }
 #'
 #' @export
 rl_load_identity <- function() {
@@ -72,10 +64,8 @@ rl_load_identity <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_translatef(0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 rl_translatef <- function(x, y, z) {
@@ -95,10 +85,8 @@ rl_translatef <- function(x, y, z) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_rotatef(0.0, 0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 rl_rotatef <- function(angle, x, y, z) {
@@ -118,10 +106,8 @@ rl_rotatef <- function(angle, x, y, z) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_scalef(0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 rl_scalef <- function(x, y, z) {
@@ -143,10 +129,8 @@ rl_scalef <- function(x, y, z) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_frustum(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 rl_frustum <- function(left, right, bottom, top, znear, zfar) {
@@ -171,10 +155,8 @@ rl_frustum <- function(left, right, bottom, top, znear, zfar) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_ortho(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 rl_ortho <- function(left, right, bottom, top, znear, zfar) {
@@ -197,10 +179,8 @@ rl_ortho <- function(left, right, bottom, top, znear, zfar) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_viewport(100L, 100L, 800L, 450L)
-#' }
 #'
 #' @export
 rl_viewport <- function(x, y, width, height) {
@@ -219,10 +199,8 @@ rl_viewport <- function(x, y, width, height) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_clip_planes(0.0, 0.0)
-#' }
 #'
 #' @export
 rl_set_clip_planes <- function(near_plane, far_plane) {
@@ -238,10 +216,8 @@ rl_set_clip_planes <- function(near_plane, far_plane) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_cull_distance_near()
-#' }
 #'
 #' @export
 rl_get_cull_distance_near <- function() {
@@ -255,10 +231,8 @@ rl_get_cull_distance_near <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_cull_distance_far()
-#' }
 #'
 #' @export
 rl_get_cull_distance_far <- function() {
@@ -272,10 +246,8 @@ rl_get_cull_distance_far <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_begin(0L)
-#' }
 #'
 #' @export
 rl_begin <- function(mode) {
@@ -288,10 +260,8 @@ rl_begin <- function(mode) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_end()
-#' }
 #'
 #' @export
 rl_end <- function() {
@@ -306,10 +276,8 @@ rl_end <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_vertex2i(100L, 100L)
-#' }
 #'
 #' @export
 rl_vertex2i <- function(x, y) {
@@ -326,10 +294,8 @@ rl_vertex2i <- function(x, y) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_vertex2f(0.0, 0.0)
-#' }
 #'
 #' @export
 rl_vertex2f <- function(x, y) {
@@ -347,10 +313,8 @@ rl_vertex2f <- function(x, y) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_vertex3f(0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 rl_vertex3f <- function(x, y, z) {
@@ -368,10 +332,8 @@ rl_vertex3f <- function(x, y, z) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_tex_coord2f(0.0, 0.0)
-#' }
 #'
 #' @export
 rl_tex_coord2f <- function(x, y) {
@@ -389,10 +351,8 @@ rl_tex_coord2f <- function(x, y) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_normal3f(0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 rl_normal3f <- function(x, y, z) {
@@ -412,10 +372,8 @@ rl_normal3f <- function(x, y, z) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_color4ub(255L, 255L, 255L, 255L)
-#' }
 #'
 #' @export
 rl_color4ub <- function(r, g, b, a) {
@@ -435,10 +393,8 @@ rl_color4ub <- function(r, g, b, a) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_color3f(0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 rl_color3f <- function(x, y, z) {
@@ -458,10 +414,8 @@ rl_color3f <- function(x, y, z) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_color4f(0.0, 0.0, 0.0, 0.0)
-#' }
 #'
 #' @export
 rl_color4f <- function(x, y, z, w) {
@@ -481,10 +435,8 @@ rl_color4f <- function(x, y, z, w) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_enable_vertex_array(0L)
-#' }
 #'
 #' @export
 rl_enable_vertex_array <- function(vao_id) {
@@ -497,10 +449,8 @@ rl_enable_vertex_array <- function(vao_id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_vertex_array()
-#' }
 #'
 #' @export
 rl_disable_vertex_array <- function() {
@@ -514,10 +464,8 @@ rl_disable_vertex_array <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_enable_vertex_buffer(0L)
-#' }
 #'
 #' @export
 rl_enable_vertex_buffer <- function(id) {
@@ -530,10 +478,8 @@ rl_enable_vertex_buffer <- function(id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_vertex_buffer()
-#' }
 #'
 #' @export
 rl_disable_vertex_buffer <- function() {
@@ -547,10 +493,8 @@ rl_disable_vertex_buffer <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_enable_vertex_buffer_element(0L)
-#' }
 #'
 #' @export
 rl_enable_vertex_buffer_element <- function(id) {
@@ -563,10 +507,8 @@ rl_enable_vertex_buffer_element <- function(id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_vertex_buffer_element()
-#' }
 #'
 #' @export
 rl_disable_vertex_buffer_element <- function() {
@@ -580,10 +522,8 @@ rl_disable_vertex_buffer_element <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_enable_vertex_attribute(0L)
-#' }
 #'
 #' @export
 rl_enable_vertex_attribute <- function(index) {
@@ -598,10 +538,8 @@ rl_enable_vertex_attribute <- function(index) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_vertex_attribute(0L)
-#' }
 #'
 #' @export
 rl_disable_vertex_attribute <- function(index) {
@@ -616,10 +554,8 @@ rl_disable_vertex_attribute <- function(index) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_state_pointer(0L)
-#' }
 #'
 #' @export
 rl_disable_state_pointer <- function(vertex_attrib_type) {
@@ -634,10 +570,8 @@ rl_disable_state_pointer <- function(vertex_attrib_type) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_active_texture_slot(0L)
-#' }
 #'
 #' @export
 rl_active_texture_slot <- function(slot) {
@@ -652,10 +586,8 @@ rl_active_texture_slot <- function(slot) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_enable_texture(0L)
-#' }
 #'
 #' @export
 rl_enable_texture <- function(id) {
@@ -668,10 +600,8 @@ rl_enable_texture <- function(id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_texture()
-#' }
 #'
 #' @export
 rl_disable_texture <- function() {
@@ -685,10 +615,8 @@ rl_disable_texture <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_enable_texture_cubemap(0L)
-#' }
 #'
 #' @export
 rl_enable_texture_cubemap <- function(id) {
@@ -701,10 +629,8 @@ rl_enable_texture_cubemap <- function(id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_texture_cubemap()
-#' }
 #'
 #' @export
 rl_disable_texture_cubemap <- function() {
@@ -720,10 +646,8 @@ rl_disable_texture_cubemap <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_texture_parameters(0L, 0L, 0L)
-#' }
 #'
 #' @export
 rl_texture_parameters <- function(id, param, value) {
@@ -742,10 +666,8 @@ rl_texture_parameters <- function(id, param, value) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_cubemap_parameters(0L, 0L, 0L)
-#' }
 #'
 #' @export
 rl_cubemap_parameters <- function(id, param, value) {
@@ -762,10 +684,8 @@ rl_cubemap_parameters <- function(id, param, value) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_enable_shader(0L)
-#' }
 #'
 #' @export
 rl_enable_shader <- function(id) {
@@ -778,10 +698,8 @@ rl_enable_shader <- function(id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_shader()
-#' }
 #'
 #' @export
 rl_disable_shader <- function() {
@@ -795,10 +713,8 @@ rl_disable_shader <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_enable_framebuffer(0L)
-#' }
 #'
 #' @export
 rl_enable_framebuffer <- function(id) {
@@ -811,10 +727,8 @@ rl_enable_framebuffer <- function(id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_framebuffer()
-#' }
 #'
 #' @export
 rl_disable_framebuffer <- function() {
@@ -828,10 +742,8 @@ rl_disable_framebuffer <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_active_framebuffer()
-#' }
 #'
 #' @export
 rl_get_active_framebuffer <- function() {
@@ -845,10 +757,8 @@ rl_get_active_framebuffer <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_active_draw_buffers(10L)
-#' }
 #'
 #' @export
 rl_active_draw_buffers <- function(count) {
@@ -871,10 +781,8 @@ rl_active_draw_buffers <- function(count) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_blit_framebuffer(0L, 0L, 800L, 450L, 0L, 0L, 800L, 450L, 0L)
-#' }
 #'
 #' @export
 rl_blit_framebuffer <- function(src_x, src_y, src_width, src_height, dst_x, dst_y, dst_width, dst_height, buffer_mask) {
@@ -898,10 +806,8 @@ rl_blit_framebuffer <- function(src_x, src_y, src_width, src_height, dst_x, dst_
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_bind_framebuffer(0L, 0L)
-#' }
 #'
 #' @export
 rl_bind_framebuffer <- function(target, framebuffer) {
@@ -915,10 +821,8 @@ rl_bind_framebuffer <- function(target, framebuffer) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_enable_color_blend()
-#' }
 #'
 #' @export
 rl_enable_color_blend <- function() {
@@ -930,10 +834,8 @@ rl_enable_color_blend <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_color_blend()
-#' }
 #'
 #' @export
 rl_disable_color_blend <- function() {
@@ -945,10 +847,8 @@ rl_disable_color_blend <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_enable_depth_test()
-#' }
 #'
 #' @export
 rl_enable_depth_test <- function() {
@@ -960,10 +860,8 @@ rl_enable_depth_test <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_depth_test()
-#' }
 #'
 #' @export
 rl_disable_depth_test <- function() {
@@ -975,10 +873,8 @@ rl_disable_depth_test <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_enable_depth_mask()
-#' }
 #'
 #' @export
 rl_enable_depth_mask <- function() {
@@ -990,10 +886,8 @@ rl_enable_depth_mask <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_depth_mask()
-#' }
 #'
 #' @export
 rl_disable_depth_mask <- function() {
@@ -1005,10 +899,8 @@ rl_disable_depth_mask <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_enable_backface_culling()
-#' }
 #'
 #' @export
 rl_enable_backface_culling <- function() {
@@ -1020,10 +912,8 @@ rl_enable_backface_culling <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_backface_culling()
-#' }
 #'
 #' @export
 rl_disable_backface_culling <- function() {
@@ -1040,10 +930,8 @@ rl_disable_backface_culling <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_color_mask(TRUE, TRUE, TRUE, TRUE)
-#' }
 #'
 #' @export
 rl_color_mask <- function(r, g, b, a) {
@@ -1061,10 +949,8 @@ rl_color_mask <- function(r, g, b, a) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_cull_face(0L)
-#' }
 #'
 #' @export
 rl_set_cull_face <- function(mode) {
@@ -1077,10 +963,8 @@ rl_set_cull_face <- function(mode) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_enable_scissor_test()
-#' }
 #'
 #' @export
 rl_enable_scissor_test <- function() {
@@ -1092,10 +976,8 @@ rl_enable_scissor_test <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_scissor_test()
-#' }
 #'
 #' @export
 rl_disable_scissor_test <- function() {
@@ -1112,10 +994,8 @@ rl_disable_scissor_test <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_scissor(100L, 100L, 800L, 450L)
-#' }
 #'
 #' @export
 rl_scissor <- function(x, y, width, height) {
@@ -1131,10 +1011,8 @@ rl_scissor <- function(x, y, width, height) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_enable_point_mode()
-#' }
 #'
 #' @export
 rl_enable_point_mode <- function() {
@@ -1146,10 +1024,8 @@ rl_enable_point_mode <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_point_mode()
-#' }
 #'
 #' @export
 rl_disable_point_mode <- function() {
@@ -1163,10 +1039,8 @@ rl_disable_point_mode <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_point_size(1.0)
-#' }
 #'
 #' @export
 rl_set_point_size <- function(size) {
@@ -1181,10 +1055,8 @@ rl_set_point_size <- function(size) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_point_size()
-#' }
 #'
 #' @export
 rl_get_point_size <- function() {
@@ -1196,10 +1068,8 @@ rl_get_point_size <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_enable_wire_mode()
-#' }
 #'
 #' @export
 rl_enable_wire_mode <- function() {
@@ -1211,10 +1081,8 @@ rl_enable_wire_mode <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_wire_mode()
-#' }
 #'
 #' @export
 rl_disable_wire_mode <- function() {
@@ -1228,10 +1096,8 @@ rl_disable_wire_mode <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_line_width(200.0)
-#' }
 #'
 #' @export
 rl_set_line_width <- function(width) {
@@ -1246,10 +1112,8 @@ rl_set_line_width <- function(width) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_line_width()
-#' }
 #'
 #' @export
 rl_get_line_width <- function() {
@@ -1261,10 +1125,8 @@ rl_get_line_width <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_enable_smooth_lines()
-#' }
 #'
 #' @export
 rl_enable_smooth_lines <- function() {
@@ -1276,10 +1138,8 @@ rl_enable_smooth_lines <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_smooth_lines()
-#' }
 #'
 #' @export
 rl_disable_smooth_lines <- function() {
@@ -1291,10 +1151,8 @@ rl_disable_smooth_lines <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_enable_stereo_render()
-#' }
 #'
 #' @export
 rl_enable_stereo_render <- function() {
@@ -1306,10 +1164,8 @@ rl_enable_stereo_render <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_disable_stereo_render()
-#' }
 #'
 #' @export
 rl_disable_stereo_render <- function() {
@@ -1323,10 +1179,8 @@ rl_disable_stereo_render <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_is_stereo_render_enabled()
-#' }
 #'
 #' @export
 rl_is_stereo_render_enabled <- function() {
@@ -1343,10 +1197,8 @@ rl_is_stereo_render_enabled <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_clear_color(255L, 255L, 255L, 255L)
-#' }
 #'
 #' @export
 rl_clear_color <- function(r, g, b, a) {
@@ -1362,10 +1214,8 @@ rl_clear_color <- function(r, g, b, a) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_clear_screen_buffers()
-#' }
 #'
 #' @export
 rl_clear_screen_buffers <- function() {
@@ -1377,10 +1227,8 @@ rl_clear_screen_buffers <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_check_errors()
-#' }
 #'
 #' @export
 rl_check_errors <- function() {
@@ -1394,10 +1242,8 @@ rl_check_errors <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_blend_mode(0L)
-#' }
 #'
 #' @export
 rl_set_blend_mode <- function(mode) {
@@ -1414,10 +1260,8 @@ rl_set_blend_mode <- function(mode) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_blend_factors(0L, 0L, 0L)
-#' }
 #'
 #' @export
 rl_set_blend_factors <- function(gl_src_factor, gl_dst_factor, gl_equation) {
@@ -1439,10 +1283,8 @@ rl_set_blend_factors <- function(gl_src_factor, gl_dst_factor, gl_equation) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_blend_factors_separate(0L, 0L, 0L, 0L, 0L, 0L)
-#' }
 #'
 #' @export
 rl_set_blend_factors_separate <- function(gl_src_rgb, gl_dst_rgb, gl_src_alpha, gl_dst_alpha, gl_eq_rgb, gl_eq_alpha) {
@@ -1463,10 +1305,8 @@ rl_set_blend_factors_separate <- function(gl_src_rgb, gl_dst_rgb, gl_src_alpha, 
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_gl_init(800L, 450L)
-#' }
 #'
 #' @export
 rl_gl_init <- function(width, height) {
@@ -1480,10 +1320,8 @@ rl_gl_init <- function(width, height) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_gl_close()
-#' }
 #'
 #' @export
 rl_gl_close <- function() {
@@ -1497,10 +1335,8 @@ rl_gl_close <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_version()
-#' }
 #'
 #' @export
 rl_get_version <- function() {
@@ -1514,10 +1350,8 @@ rl_get_version <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_framebuffer_width(800L)
-#' }
 #'
 #' @export
 rl_set_framebuffer_width <- function(width) {
@@ -1532,10 +1366,8 @@ rl_set_framebuffer_width <- function(width) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_framebuffer_width()
-#' }
 #'
 #' @export
 rl_get_framebuffer_width <- function() {
@@ -1549,10 +1381,8 @@ rl_get_framebuffer_width <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_framebuffer_height(450L)
-#' }
 #'
 #' @export
 rl_set_framebuffer_height <- function(height) {
@@ -1567,10 +1397,8 @@ rl_set_framebuffer_height <- function(height) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_framebuffer_height()
-#' }
 #'
 #' @export
 rl_get_framebuffer_height <- function() {
@@ -1584,10 +1412,8 @@ rl_get_framebuffer_height <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_texture_id_default()
-#' }
 #'
 #' @export
 rl_get_texture_id_default <- function() {
@@ -1601,10 +1427,8 @@ rl_get_texture_id_default <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_shader_id_default()
-#' }
 #'
 #' @export
 rl_get_shader_id_default <- function() {
@@ -1616,10 +1440,8 @@ rl_get_shader_id_default <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_draw_render_batch_active()
-#' }
 #'
 #' @export
 rl_draw_render_batch_active <- function() {
@@ -1635,10 +1457,8 @@ rl_draw_render_batch_active <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_check_render_batch_limit(10L)
-#' }
 #'
 #' @export
 rl_check_render_batch_limit <- function(v_count) {
@@ -1653,10 +1473,8 @@ rl_check_render_batch_limit <- function(v_count) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_texture(0L)
-#' }
 #'
 #' @export
 rl_set_texture <- function(id) {
@@ -1671,10 +1489,8 @@ rl_set_texture <- function(id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_load_vertex_array()
-#' }
 #'
 #' @export
 rl_load_vertex_array <- function() {
@@ -1688,10 +1504,8 @@ rl_load_vertex_array <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_unload_vertex_array(0L)
-#' }
 #'
 #' @export
 rl_unload_vertex_array <- function(vao_id) {
@@ -1706,10 +1520,8 @@ rl_unload_vertex_array <- function(vao_id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_unload_vertex_buffer(0L)
-#' }
 #'
 #' @export
 rl_unload_vertex_buffer <- function(vbo_id) {
@@ -1729,10 +1541,8 @@ rl_unload_vertex_buffer <- function(vbo_id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_vertex_attribute(0L, 32L, 0L, TRUE, 0L, 0L)
-#' }
 #'
 #' @export
 rl_set_vertex_attribute <- function(index, comp_size, type, normalized, stride, offset) {
@@ -1753,10 +1563,8 @@ rl_set_vertex_attribute <- function(index, comp_size, type, normalized, stride, 
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_vertex_attribute_divisor(0L, 0L)
-#' }
 #'
 #' @export
 rl_set_vertex_attribute_divisor <- function(index, divisor) {
@@ -1773,10 +1581,8 @@ rl_set_vertex_attribute_divisor <- function(index, divisor) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_draw_vertex_array(0L, 10L)
-#' }
 #'
 #' @export
 rl_draw_vertex_array <- function(offset, count) {
@@ -1794,10 +1600,8 @@ rl_draw_vertex_array <- function(offset, count) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_draw_vertex_array_instanced(0L, 10L, 0L)
-#' }
 #'
 #' @export
 rl_draw_vertex_array_instanced <- function(offset, count, instances) {
@@ -1818,10 +1622,8 @@ rl_draw_vertex_array_instanced <- function(offset, count, instances) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_load_texture_depth(800L, 450L, TRUE)
-#' }
 #'
 #' @export
 rl_load_texture_depth <- function(width, height, use_render_buffer) {
@@ -1840,10 +1642,8 @@ rl_load_texture_depth <- function(width, height, use_render_buffer) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_pixel_format_name(0L)
-#' }
 #'
 #' @export
 rl_get_pixel_format_name <- function(format) {
@@ -1858,10 +1658,8 @@ rl_get_pixel_format_name <- function(format) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_unload_texture(0L)
-#' }
 #'
 #' @export
 rl_unload_texture <- function(id) {
@@ -1876,10 +1674,8 @@ rl_unload_texture <- function(id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_load_framebuffer()
-#' }
 #'
 #' @export
 rl_load_framebuffer <- function() {
@@ -1897,10 +1693,8 @@ rl_load_framebuffer <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_framebuffer_attach(0L, 0L, 0L, 0L, 0L)
-#' }
 #'
 #' @export
 rl_framebuffer_attach <- function(id, tex_id, attach_type, tex_type, mip_level) {
@@ -1921,10 +1715,8 @@ rl_framebuffer_attach <- function(id, tex_id, attach_type, tex_type, mip_level) 
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_framebuffer_complete(0L)
-#' }
 #'
 #' @export
 rl_framebuffer_complete <- function(id) {
@@ -1939,10 +1731,8 @@ rl_framebuffer_complete <- function(id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_unload_framebuffer(0L)
-#' }
 #'
 #' @export
 rl_unload_framebuffer <- function(id) {
@@ -1958,10 +1748,8 @@ rl_unload_framebuffer <- function(id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_resize_framebuffer(800L, 450L)
-#' }
 #'
 #' @export
 rl_resize_framebuffer <- function(width, height) {
@@ -1980,10 +1768,8 @@ rl_resize_framebuffer <- function(width, height) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_load_shader("text", 0L)
-#' }
 #'
 #' @export
 rl_load_shader <- function(code, type) {
@@ -2002,10 +1788,8 @@ rl_load_shader <- function(code, type) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_load_shader_program("text", "text")
-#' }
 #'
 #' @export
 rl_load_shader_program <- function(vs_code, fs_code) {
@@ -2024,10 +1808,8 @@ rl_load_shader_program <- function(vs_code, fs_code) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_load_shader_program_ex(0L, 0L)
-#' }
 #'
 #' @export
 rl_load_shader_program_ex <- function(vs_id, fs_id) {
@@ -2045,10 +1827,8 @@ rl_load_shader_program_ex <- function(vs_id, fs_id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_load_shader_program_compute(0L)
-#' }
 #'
 #' @export
 rl_load_shader_program_compute <- function(cs_id) {
@@ -2063,10 +1843,8 @@ rl_load_shader_program_compute <- function(cs_id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_unload_shader(0L)
-#' }
 #'
 #' @export
 rl_unload_shader <- function(id) {
@@ -2081,10 +1859,8 @@ rl_unload_shader <- function(id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_unload_shader_program(0L)
-#' }
 #'
 #' @export
 rl_unload_shader_program <- function(id) {
@@ -2102,10 +1878,8 @@ rl_unload_shader_program <- function(id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_location_uniform(0L, "text")
-#' }
 #'
 #' @export
 rl_get_location_uniform <- function(id, uniform_name) {
@@ -2124,10 +1898,8 @@ rl_get_location_uniform <- function(id, uniform_name) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_location_attrib(0L, "text")
-#' }
 #'
 #' @export
 rl_get_location_attrib <- function(id, attrib_name) {
@@ -2144,10 +1916,8 @@ rl_get_location_attrib <- function(id, attrib_name) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_uniform_matrix(0L, diag(4))
-#' }
 #'
 #' @export
 rl_set_uniform_matrix <- function(loc_index, mat) {
@@ -2164,10 +1934,8 @@ rl_set_uniform_matrix <- function(loc_index, mat) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_uniform_sampler(0L, 0L)
-#' }
 #'
 #' @export
 rl_set_uniform_sampler <- function(loc_index, texture_id) {
@@ -2185,10 +1953,8 @@ rl_set_uniform_sampler <- function(loc_index, texture_id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_compute_shader_dispatch(0L, 0L, 0L)
-#' }
 #'
 #' @export
 rl_compute_shader_dispatch <- function(group_x, group_y, group_z) {
@@ -2205,10 +1971,8 @@ rl_compute_shader_dispatch <- function(group_x, group_y, group_z) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_unload_shader_buffer(0L)
-#' }
 #'
 #' @export
 rl_unload_shader_buffer <- function(ssbo_id) {
@@ -2224,10 +1988,8 @@ rl_unload_shader_buffer <- function(ssbo_id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_bind_shader_buffer(0L, 0L)
-#' }
 #'
 #' @export
 rl_bind_shader_buffer <- function(id, index) {
@@ -2247,10 +2009,8 @@ rl_bind_shader_buffer <- function(id, index) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_copy_shader_buffer(0L, 0L, 0L, 0L, 10L)
-#' }
 #'
 #' @export
 rl_copy_shader_buffer <- function(dest_id, src_id, dest_offset, src_offset, count) {
@@ -2271,10 +2031,8 @@ rl_copy_shader_buffer <- function(dest_id, src_id, dest_offset, src_offset, coun
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_shader_buffer_size(0L)
-#' }
 #'
 #' @export
 rl_get_shader_buffer_size <- function(id) {
@@ -2292,10 +2050,8 @@ rl_get_shader_buffer_size <- function(id) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_bind_image_texture(0L, 0L, 0L, TRUE)
-#' }
 #'
 #' @export
 rl_bind_image_texture <- function(id, index, format, readonly) {
@@ -2313,10 +2069,8 @@ rl_bind_image_texture <- function(id, index, format, readonly) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_matrix_modelview()
-#' }
 #'
 #' @export
 rl_get_matrix_modelview <- function() {
@@ -2330,10 +2084,8 @@ rl_get_matrix_modelview <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_matrix_projection()
-#' }
 #'
 #' @export
 rl_get_matrix_projection <- function() {
@@ -2347,10 +2099,8 @@ rl_get_matrix_projection <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_matrix_transform()
-#' }
 #'
 #' @export
 rl_get_matrix_transform <- function() {
@@ -2366,10 +2116,8 @@ rl_get_matrix_transform <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_matrix_projection_stereo(0L)
-#' }
 #'
 #' @export
 rl_get_matrix_projection_stereo <- function(eye) {
@@ -2386,10 +2134,8 @@ rl_get_matrix_projection_stereo <- function(eye) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_get_matrix_view_offset_stereo(0L)
-#' }
 #'
 #' @export
 rl_get_matrix_view_offset_stereo <- function(eye) {
@@ -2404,10 +2150,8 @@ rl_get_matrix_view_offset_stereo <- function(eye) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_matrix_projection(diag(4))
-#' }
 #'
 #' @export
 rl_set_matrix_projection <- function(proj) {
@@ -2422,10 +2166,8 @@ rl_set_matrix_projection <- function(proj) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_matrix_modelview(diag(4))
-#' }
 #'
 #' @export
 rl_set_matrix_modelview <- function(view) {
@@ -2441,10 +2183,8 @@ rl_set_matrix_modelview <- function(view) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_matrix_projection_stereo(diag(4), diag(4))
-#' }
 #'
 #' @export
 rl_set_matrix_projection_stereo <- function(right, left) {
@@ -2461,10 +2201,8 @@ rl_set_matrix_projection_stereo <- function(right, left) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_set_matrix_view_offset_stereo(diag(4), diag(4))
-#' }
 #'
 #' @export
 rl_set_matrix_view_offset_stereo <- function(right, left) {
@@ -2478,10 +2216,8 @@ rl_set_matrix_view_offset_stereo <- function(right, left) {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_load_draw_cube()
-#' }
 #'
 #' @export
 rl_load_draw_cube <- function() {
@@ -2493,10 +2229,8 @@ rl_load_draw_cube <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf FALSE
 #' rl_load_draw_quad()
-#' }
 #'
 #' @export
 rl_load_draw_quad <- function() {

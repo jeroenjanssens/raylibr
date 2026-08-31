@@ -25,10 +25,9 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 draw_model_wires(load_model("model.obj"), c(0, 5, 0), 1.0, "red")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other wires functions: 
@@ -36,6 +35,21 @@ Other wires functions:
 \code{\link{draw_cube_wires}()},
 \code{\link{draw_cylinder_wires}()},
 \code{\link{draw_sphere_wires}()}
+
+Other model functions: 
+\code{\link{draw_model}()},
+\code{\link{draw_model_ex}()},
+\code{\link{draw_model_wires_ex}()},
+\code{\link{get_model_bounding_box}()},
+\code{\link{is_model_animation_valid}()},
+\code{\link{is_model_valid}()},
+\code{\link{load_model}()},
+\code{\link{load_model_from_mesh}()},
+\code{\link{set_model_mesh_material}()},
+\code{\link{set_model_texture}()},
+\code{\link{unload_model}()},
+\code{\link{update_model_animation}()},
+\code{\link{update_model_animation_ex}()}
 
 Other draw functions: 
 \code{\link{draw_billboard}()},
@@ -131,4 +145,5 @@ Other draw functions:
 \code{\link{draw_triangle_strip_3d}()}
 }
 \concept{draw functions}
+\concept{model functions}
 \concept{wires functions}

@@ -10,10 +10,9 @@ rl_load_draw_cube()
 Rl Load Draw Cube
 }
 \examples{
-\dontrun{
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_load_draw_cube()
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other rlgl functions: 
