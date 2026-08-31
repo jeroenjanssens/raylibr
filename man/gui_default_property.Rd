@@ -11,6 +11,19 @@ An object of class \code{list} of length 8.
 gui_default_property
 }
 \description{
-Enum values for gui_default_property.
+Enum values for \code{gui_default_property}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{text_size} \tab 16 \cr
+   \code{text_spacing} \tab 17 \cr
+   \code{line_color} \tab 18 \cr
+   \code{background_color} \tab 19 \cr
+   \code{text_line_spacing} \tab 20 \cr
+   \code{text_alignment_vertical} \tab 21 \cr
+   \code{text_wrap_mode} \tab 22 \cr
+   \code{extprop08} \tab 23 \cr
+}
 }
 \keyword{datasets}

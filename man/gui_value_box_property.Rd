@@ -11,6 +11,13 @@ An object of class \code{list} of length 2.
 gui_value_box_property
 }
 \description{
-Enum values for gui_value_box_property.
+Enum values for \code{gui_value_box_property}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{spinner_button_width} \tab 16 \cr
+   \code{spinner_button_spacing} \tab 17 \cr
+}
 }
 \keyword{datasets}

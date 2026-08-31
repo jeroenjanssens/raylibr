@@ -11,6 +11,16 @@ An object of class \code{list} of length 5.
 gui_color_picker_property
 }
 \description{
-Enum values for gui_color_picker_property.
+Enum values for \code{gui_color_picker_property}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{color_selector_size} \tab 16 \cr
+   \code{huebar_width} \tab 17 \cr
+   \code{huebar_padding} \tab 18 \cr
+   \code{huebar_selector_height} \tab 19 \cr
+   \code{huebar_selector_overflow} \tab 20 \cr
+}
 }
 \keyword{datasets}

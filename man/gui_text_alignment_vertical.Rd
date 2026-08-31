@@ -11,6 +11,14 @@ An object of class \code{list} of length 3.
 gui_text_alignment_vertical
 }
 \description{
-Enum values for gui_text_alignment_vertical.
+Enum values for \code{gui_text_alignment_vertical}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{top} \tab 0 \cr
+   \code{middle} \tab 1 \cr
+   \code{bottom} \tab 2 \cr
+}
 }
 \keyword{datasets}

@@ -11,6 +11,13 @@ An object of class \code{list} of length 2.
 camera_projection
 }
 \description{
-Enum values for camera_projection.
+Enum values for \code{camera_projection}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{perspective} \tab 0 \cr
+   \code{orthographic} \tab 1 \cr
+}
 }
 \keyword{datasets}

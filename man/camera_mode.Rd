@@ -11,6 +11,16 @@ An object of class \code{list} of length 5.
 camera_mode
 }
 \description{
-Enum values for camera_mode.
+Enum values for \code{camera_mode}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{custom} \tab 0 \cr
+   \code{free} \tab 1 \cr
+   \code{orbital} \tab 2 \cr
+   \code{first_person} \tab 3 \cr
+   \code{third_person} \tab 4 \cr
+}
 }
 \keyword{datasets}

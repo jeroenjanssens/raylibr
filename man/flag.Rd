@@ -11,6 +11,27 @@ An object of class \code{list} of length 16.
 flag
 }
 \description{
-Enum values for flag.
+Enum values for \code{flag}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{vsync_hint} \tab 64 \cr
+   \code{fullscreen_mode} \tab 2 \cr
+   \code{window_resizable} \tab 4 \cr
+   \code{window_undecorated} \tab 8 \cr
+   \code{window_hidden} \tab 128 \cr
+   \code{window_minimized} \tab 512 \cr
+   \code{window_maximized} \tab 1024 \cr
+   \code{window_unfocused} \tab 2048 \cr
+   \code{window_topmost} \tab 4096 \cr
+   \code{window_always_run} \tab 256 \cr
+   \code{window_transparent} \tab 16 \cr
+   \code{window_highdpi} \tab 8192 \cr
+   \code{window_mouse_passthrough} \tab 16384 \cr
+   \code{borderless_windowed_mode} \tab 32768 \cr
+   \code{msaa_4x_hint} \tab 32 \cr
+   \code{interlaced_hint} \tab 65536 \cr
+}
 }
 \keyword{datasets}

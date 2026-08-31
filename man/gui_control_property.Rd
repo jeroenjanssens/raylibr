@@ -11,6 +11,27 @@ An object of class \code{list} of length 16.
 gui_control_property
 }
 \description{
-Enum values for gui_control_property.
+Enum values for \code{gui_control_property}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{border_color_normal} \tab 0 \cr
+   \code{base_color_normal} \tab 1 \cr
+   \code{text_color_normal} \tab 2 \cr
+   \code{border_color_focused} \tab 3 \cr
+   \code{base_color_focused} \tab 4 \cr
+   \code{text_color_focused} \tab 5 \cr
+   \code{border_color_pressed} \tab 6 \cr
+   \code{base_color_pressed} \tab 7 \cr
+   \code{text_color_pressed} \tab 8 \cr
+   \code{border_color_disabled} \tab 9 \cr
+   \code{base_color_disabled} \tab 10 \cr
+   \code{text_color_disabled} \tab 11 \cr
+   \code{border_width} \tab 12 \cr
+   \code{text_padding} \tab 13 \cr
+   \code{text_alignment} \tab 14 \cr
+   \code{baseprop16} \tab 15 \cr
+}
 }
 \keyword{datasets}

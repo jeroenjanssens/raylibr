@@ -11,6 +11,19 @@ An object of class \code{list} of length 8.
 log
 }
 \description{
-Enum values for log.
+Enum values for \code{log}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{all} \tab 0 \cr
+   \code{trace} \tab 1 \cr
+   \code{debug} \tab 2 \cr
+   \code{info} \tab 3 \cr
+   \code{warning} \tab 4 \cr
+   \code{error} \tab 5 \cr
+   \code{fatal} \tab 6 \cr
+   \code{none} \tab 7 \cr
+}
 }
 \keyword{datasets}

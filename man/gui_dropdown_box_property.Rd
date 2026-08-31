@@ -11,6 +11,15 @@ An object of class \code{list} of length 4.
 gui_dropdown_box_property
 }
 \description{
-Enum values for gui_dropdown_box_property.
+Enum values for \code{gui_dropdown_box_property}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{arrow_padding} \tab 16 \cr
+   \code{dropdown_items_spacing} \tab 17 \cr
+   \code{dropdown_arrow_hidden} \tab 18 \cr
+   \code{dropdown_roll_up} \tab 19 \cr
+}
 }
 \keyword{datasets}

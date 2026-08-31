@@ -11,6 +11,15 @@ An object of class \code{list} of length 4.
 gui_state
 }
 \description{
-Enum values for gui_state.
+Enum values for \code{gui_state}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{normal} \tab 0 \cr
+   \code{focused} \tab 1 \cr
+   \code{pressed} \tab 2 \cr
+   \code{disabled} \tab 3 \cr
+}
 }
 \keyword{datasets}

@@ -11,6 +11,13 @@ An object of class \code{list} of length 2.
 gui_slider_property
 }
 \description{
-Enum values for gui_slider_property.
+Enum values for \code{gui_slider_property}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{slider_width} \tab 16 \cr
+   \code{slider_padding} \tab 17 \cr
+}
 }
 \keyword{datasets}

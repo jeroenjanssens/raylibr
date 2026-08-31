@@ -922,11 +922,11 @@ generate_enums_r <- function(enums) {
 
     all_lines <- c(all_lines, paste0("#' ", gsub("_", " ", r_name) |> tools::toTitleCase()))
     all_lines <- c(all_lines, "#'")
-    all_lines <- c(all_lines, paste0("#' Enum values for ", r_name, "."))
+    all_lines <- c(all_lines, paste0("#' Enum values for `", r_name, "`."))
     all_lines <- c(all_lines, "#'")
-    all_lines <- c(all_lines, "#' @export")
-    all_lines <- c(all_lines, paste0(r_name, " <- list("))
 
+    # Build table rows and list entries together
+    table_rows <- character(0)
     entries <- character(0)
     for (j in seq_len(nrow(values))) {
       val_name <- values$name[j]
@@ -939,8 +939,17 @@ generate_enums_r <- function(enums) {
       # Skip null/none entries that are just 0 placeholders in some enums
       if (short_name == "null" && enum_name == "KeyboardKey") next
 
+      table_rows <- c(table_rows, paste0("#' | `", short_name, "` | ", val_value, " |"))
       entries <- c(entries, paste0("  ", short_name, " = ", val_value))
     }
+
+    # Add markdown table to roxygen
+    all_lines <- c(all_lines, "#' | Name | Value |")
+    all_lines <- c(all_lines, "#' | --- | ---: |")
+    all_lines <- c(all_lines, table_rows)
+    all_lines <- c(all_lines, "#'")
+    all_lines <- c(all_lines, "#' @export")
+    all_lines <- c(all_lines, paste0(r_name, " <- list("))
 
     all_lines <- c(all_lines, paste(entries, collapse = ",\n"))
     all_lines <- c(all_lines, ")")
@@ -1733,14 +1742,13 @@ if (file.exists(raygui_api_file)) {
 
       enum_lines <- c(enum_lines, paste0("#' ", gsub("_", " ", r_name) |> tools::toTitleCase()))
       enum_lines <- c(enum_lines, "#'")
-      enum_lines <- c(enum_lines, paste0("#' Enum values for ", r_name, "."))
+      enum_lines <- c(enum_lines, paste0("#' Enum values for `", r_name, "`."))
       enum_lines <- c(enum_lines, "#'")
-      enum_lines <- c(enum_lines, "#' @export")
-      enum_lines <- c(enum_lines, paste0(r_name, " <- list("))
 
       r_reserved <- c("if", "else", "repeat", "while", "function", "for", "in",
                        "next", "break", "TRUE", "FALSE", "NULL", "Inf", "NaN",
                        "NA", "NA_integer_", "NA_real_", "NA_complex_", "NA_character_")
+      table_rows <- character(0)
       entries <- character(0)
       for (j in seq_len(nrow(values))) {
         val_name <- values$name[j]
@@ -1748,10 +1756,21 @@ if (file.exists(raygui_api_file)) {
         short_name <- if (nzchar(prefix)) sub(paste0("^", prefix), "", val_name) else val_name
         short_name <- tolower(short_name)
         if (short_name %in% r_reserved || grepl("^[0-9]", short_name)) {
+          table_rows <- c(table_rows, paste0("#' | `", short_name, "` | ", val_value, " |"))
           short_name <- paste0("`", short_name, "`")
+        } else {
+          table_rows <- c(table_rows, paste0("#' | `", short_name, "` | ", val_value, " |"))
         }
         entries <- c(entries, paste0("  ", short_name, " = ", val_value, "L"))
       }
+
+      # Add markdown table to roxygen
+      enum_lines <- c(enum_lines, "#' | Name | Value |")
+      enum_lines <- c(enum_lines, "#' | --- | ---: |")
+      enum_lines <- c(enum_lines, table_rows)
+      enum_lines <- c(enum_lines, "#'")
+      enum_lines <- c(enum_lines, "#' @export")
+      enum_lines <- c(enum_lines, paste0(r_name, " <- list("))
 
       enum_lines <- c(enum_lines, paste(entries, collapse = ",\n"))
       enum_lines <- c(enum_lines, ")")

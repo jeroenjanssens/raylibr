@@ -11,6 +11,120 @@ An object of class \code{list} of length 109.
 key
 }
 \description{
-Enum values for key.
+Enum values for \code{key}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{apostrophe} \tab 39 \cr
+   \code{comma} \tab 44 \cr
+   \code{minus} \tab 45 \cr
+   \code{period} \tab 46 \cr
+   \code{slash} \tab 47 \cr
+   \code{zero} \tab 48 \cr
+   \code{one} \tab 49 \cr
+   \code{two} \tab 50 \cr
+   \code{three} \tab 51 \cr
+   \code{four} \tab 52 \cr
+   \code{five} \tab 53 \cr
+   \code{six} \tab 54 \cr
+   \code{seven} \tab 55 \cr
+   \code{eight} \tab 56 \cr
+   \code{nine} \tab 57 \cr
+   \code{semicolon} \tab 59 \cr
+   \code{equal} \tab 61 \cr
+   \code{a} \tab 65 \cr
+   \code{b} \tab 66 \cr
+   \code{c} \tab 67 \cr
+   \code{d} \tab 68 \cr
+   \code{e} \tab 69 \cr
+   \code{f} \tab 70 \cr
+   \code{g} \tab 71 \cr
+   \code{h} \tab 72 \cr
+   \code{i} \tab 73 \cr
+   \code{j} \tab 74 \cr
+   \code{k} \tab 75 \cr
+   \code{l} \tab 76 \cr
+   \code{m} \tab 77 \cr
+   \code{n} \tab 78 \cr
+   \code{o} \tab 79 \cr
+   \code{p} \tab 80 \cr
+   \code{q} \tab 81 \cr
+   \code{r} \tab 82 \cr
+   \code{s} \tab 83 \cr
+   \code{t} \tab 84 \cr
+   \code{u} \tab 85 \cr
+   \code{v} \tab 86 \cr
+   \code{w} \tab 87 \cr
+   \code{x} \tab 88 \cr
+   \code{y} \tab 89 \cr
+   \code{z} \tab 90 \cr
+   \code{left_bracket} \tab 91 \cr
+   \code{backslash} \tab 92 \cr
+   \code{right_bracket} \tab 93 \cr
+   \code{grave} \tab 96 \cr
+   \code{space} \tab 32 \cr
+   \code{escape} \tab 256 \cr
+   \code{enter} \tab 257 \cr
+   \code{tab} \tab 258 \cr
+   \code{backspace} \tab 259 \cr
+   \code{insert} \tab 260 \cr
+   \code{delete} \tab 261 \cr
+   \code{right} \tab 262 \cr
+   \code{left} \tab 263 \cr
+   \code{down} \tab 264 \cr
+   \code{up} \tab 265 \cr
+   \code{page_up} \tab 266 \cr
+   \code{page_down} \tab 267 \cr
+   \code{home} \tab 268 \cr
+   \code{end} \tab 269 \cr
+   \code{caps_lock} \tab 280 \cr
+   \code{scroll_lock} \tab 281 \cr
+   \code{num_lock} \tab 282 \cr
+   \code{print_screen} \tab 283 \cr
+   \code{pause} \tab 284 \cr
+   \code{f1} \tab 290 \cr
+   \code{f2} \tab 291 \cr
+   \code{f3} \tab 292 \cr
+   \code{f4} \tab 293 \cr
+   \code{f5} \tab 294 \cr
+   \code{f6} \tab 295 \cr
+   \code{f7} \tab 296 \cr
+   \code{f8} \tab 297 \cr
+   \code{f9} \tab 298 \cr
+   \code{f10} \tab 299 \cr
+   \code{f11} \tab 300 \cr
+   \code{f12} \tab 301 \cr
+   \code{left_shift} \tab 340 \cr
+   \code{left_control} \tab 341 \cr
+   \code{left_alt} \tab 342 \cr
+   \code{left_super} \tab 343 \cr
+   \code{right_shift} \tab 344 \cr
+   \code{right_control} \tab 345 \cr
+   \code{right_alt} \tab 346 \cr
+   \code{right_super} \tab 347 \cr
+   \code{kb_menu} \tab 348 \cr
+   \code{kp_0} \tab 320 \cr
+   \code{kp_1} \tab 321 \cr
+   \code{kp_2} \tab 322 \cr
+   \code{kp_3} \tab 323 \cr
+   \code{kp_4} \tab 324 \cr
+   \code{kp_5} \tab 325 \cr
+   \code{kp_6} \tab 326 \cr
+   \code{kp_7} \tab 327 \cr
+   \code{kp_8} \tab 328 \cr
+   \code{kp_9} \tab 329 \cr
+   \code{kp_decimal} \tab 330 \cr
+   \code{kp_divide} \tab 331 \cr
+   \code{kp_multiply} \tab 332 \cr
+   \code{kp_subtract} \tab 333 \cr
+   \code{kp_add} \tab 334 \cr
+   \code{kp_enter} \tab 335 \cr
+   \code{kp_equal} \tab 336 \cr
+   \code{back} \tab 4 \cr
+   \code{menu} \tab 5 \cr
+   \code{volume_up} \tab 24 \cr
+   \code{volume_down} \tab 25 \cr
+}
 }
 \keyword{datasets}

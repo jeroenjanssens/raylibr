@@ -11,6 +11,14 @@ An object of class \code{list} of length 3.
 gui_text_wrap_mode
 }
 \description{
-Enum values for gui_text_wrap_mode.
+Enum values for \code{gui_text_wrap_mode}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{none} \tab 0 \cr
+   \code{char} \tab 1 \cr
+   \code{word} \tab 2 \cr
+}
 }
 \keyword{datasets}

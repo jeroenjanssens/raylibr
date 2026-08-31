@@ -11,6 +11,24 @@ An object of class \code{list} of length 13.
 shader_uniform
 }
 \description{
-Enum values for shader_uniform.
+Enum values for \code{shader_uniform}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{float} \tab 0 \cr
+   \code{vec2} \tab 1 \cr
+   \code{vec3} \tab 2 \cr
+   \code{vec4} \tab 3 \cr
+   \code{int} \tab 4 \cr
+   \code{ivec2} \tab 5 \cr
+   \code{ivec3} \tab 6 \cr
+   \code{ivec4} \tab 7 \cr
+   \code{uint} \tab 8 \cr
+   \code{uivec2} \tab 9 \cr
+   \code{uivec3} \tab 10 \cr
+   \code{uivec4} \tab 11 \cr
+   \code{sampler2d} \tab 12 \cr
+}
 }
 \keyword{datasets}

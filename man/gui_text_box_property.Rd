@@ -11,6 +11,12 @@ An object of class \code{list} of length 1.
 gui_text_box_property
 }
 \description{
-Enum values for gui_text_box_property.
+Enum values for \code{gui_text_box_property}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{text_readonly} \tab 16 \cr
+}
 }
 \keyword{datasets}

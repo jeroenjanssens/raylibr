@@ -11,6 +11,14 @@ An object of class \code{list} of length 3.
 gui_tab_bar_property
 }
 \description{
-Enum values for gui_tab_bar_property.
+Enum values for \code{gui_tab_bar_property}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{tab_items_width} \tab 16 \cr
+   \code{tab_close_button} \tab 17 \cr
+   \code{tab_line_side} \tab 18 \cr
+}
 }
 \keyword{datasets}

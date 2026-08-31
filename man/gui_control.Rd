@@ -11,6 +11,27 @@ An object of class \code{list} of length 16.
 gui_control
 }
 \description{
-Enum values for gui_control.
+Enum values for \code{gui_control}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{default} \tab 0 \cr
+   \code{label} \tab 1 \cr
+   \code{button} \tab 2 \cr
+   \code{toggle} \tab 3 \cr
+   \code{slider} \tab 4 \cr
+   \code{progressbar} \tab 5 \cr
+   \code{checkbox} \tab 6 \cr
+   \code{combobox} \tab 7 \cr
+   \code{dropdownbox} \tab 8 \cr
+   \code{textbox} \tab 9 \cr
+   \code{valuebox} \tab 10 \cr
+   \code{tabbar} \tab 11 \cr
+   \code{listview} \tab 12 \cr
+   \code{colorpicker} \tab 13 \cr
+   \code{scrollbar} \tab 14 \cr
+   \code{statusbar} \tab 15 \cr
+}
 }
 \keyword{datasets}

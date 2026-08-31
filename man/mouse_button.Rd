@@ -11,6 +11,18 @@ An object of class \code{list} of length 7.
 mouse_button
 }
 \description{
-Enum values for mouse_button.
+Enum values for \code{mouse_button}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{left} \tab 0 \cr
+   \code{right} \tab 1 \cr
+   \code{middle} \tab 2 \cr
+   \code{side} \tab 3 \cr
+   \code{extra} \tab 4 \cr
+   \code{forward} \tab 5 \cr
+   \code{back} \tab 6 \cr
+}
 }
 \keyword{datasets}

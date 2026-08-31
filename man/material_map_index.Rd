@@ -11,6 +11,22 @@ An object of class \code{list} of length 11.
 material_map_index
 }
 \description{
-Enum values for material_map_index.
+Enum values for \code{material_map_index}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{albedo} \tab 0 \cr
+   \code{metalness} \tab 1 \cr
+   \code{normal} \tab 2 \cr
+   \code{roughness} \tab 3 \cr
+   \code{occlusion} \tab 4 \cr
+   \code{emission} \tab 5 \cr
+   \code{height} \tab 6 \cr
+   \code{cubemap} \tab 7 \cr
+   \code{irradiance} \tab 8 \cr
+   \code{prefilter} \tab 9 \cr
+   \code{brdf} \tab 10 \cr
+}
 }
 \keyword{datasets}

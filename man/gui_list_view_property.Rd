@@ -11,6 +11,17 @@ An object of class \code{list} of length 6.
 gui_list_view_property
 }
 \description{
-Enum values for gui_list_view_property.
+Enum values for \code{gui_list_view_property}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{list_items_height} \tab 16 \cr
+   \code{list_items_spacing} \tab 17 \cr
+   \code{scrollbar_width} \tab 18 \cr
+   \code{scrollbar_side} \tab 19 \cr
+   \code{list_items_border_normal} \tab 20 \cr
+   \code{list_items_border_width} \tab 21 \cr
+}
 }
 \keyword{datasets}

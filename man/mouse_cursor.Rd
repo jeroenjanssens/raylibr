@@ -11,6 +11,22 @@ An object of class \code{list} of length 11.
 mouse_cursor
 }
 \description{
-Enum values for mouse_cursor.
+Enum values for \code{mouse_cursor}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{default} \tab 0 \cr
+   \code{arrow} \tab 1 \cr
+   \code{ibeam} \tab 2 \cr
+   \code{crosshair} \tab 3 \cr
+   \code{pointing_hand} \tab 4 \cr
+   \code{resize_ew} \tab 5 \cr
+   \code{resize_ns} \tab 6 \cr
+   \code{resize_nwse} \tab 7 \cr
+   \code{resize_nesw} \tab 8 \cr
+   \code{resize_all} \tab 9 \cr
+   \code{not_allowed} \tab 10 \cr
+}
 }
 \keyword{datasets}

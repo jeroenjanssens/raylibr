@@ -11,6 +11,17 @@ An object of class \code{list} of length 6.
 gui_scroll_bar_property
 }
 \description{
-Enum values for gui_scroll_bar_property.
+Enum values for \code{gui_scroll_bar_property}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{arrows_size} \tab 16 \cr
+   \code{arrows_visible} \tab 17 \cr
+   \code{scroll_slider_padding} \tab 18 \cr
+   \code{scroll_slider_size} \tab 19 \cr
+   \code{scroll_padding} \tab 20 \cr
+   \code{scroll_speed} \tab 21 \cr
+}
 }
 \keyword{datasets}

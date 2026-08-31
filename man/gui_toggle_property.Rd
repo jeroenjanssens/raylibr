@@ -11,6 +11,13 @@ An object of class \code{list} of length 2.
 gui_toggle_property
 }
 \description{
-Enum values for gui_toggle_property.
+Enum values for \code{gui_toggle_property}.
+}
+\details{
+\tabular{lr}{
+   Name \tab Value \cr
+   \code{group_padding} \tab 16 \cr
+   \code{group_width_full} \tab 17 \cr
+}
 }
 \keyword{datasets}
