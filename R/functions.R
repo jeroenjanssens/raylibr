@@ -11701,7 +11701,7 @@ get_ray_collision_box <- function(ray, box) {
 #' @family ray functions
 #' @family get functions
 #'
-#' @examples
+#' @examplesIf FALSE
 #' get_ray_collision_mesh(ray(c(0, 0, 0), c(0, 0, 1)), gen_mesh_cube(1.0, 1.0, 1.0), diag(4))
 #'
 #' @export

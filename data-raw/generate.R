@@ -207,7 +207,9 @@ get_example_value <- function(type, param_name = "") {
 # Determine whether a function's example can run without GPU/window/audio
 is_safe_example <- function(func_name) {
   safe_patterns <- c(
-    "^CheckCollision", "^GetCollisionRec$", "^GetRayCollision",
+    "^CheckCollision", "^GetCollisionRec$",
+    "^GetRayCollisionBox$", "^GetRayCollisionSphere$",
+    "^GetRayCollisionTriangle$", "^GetRayCollisionQuad$",
     "^ColorNormalize$", "^ColorFromNormalized$", "^ColorToHSV$",
     "^ColorFromHSV$", "^ColorTint$", "^ColorBrightness$",
     "^ColorContrast$", "^ColorAlpha$", "^ColorAlphaBlend$",
