@@ -19,7 +19,7 @@ check_collision_point_line(point, p1, p2, threshold)
 A logical
 }
 \description{
-Check if point belongs to line created between two points \link{p1} and \link{p2} with defined margin in pixels \link{threshold}.
+Check if point belongs to line created between two points \[p1\] and \[p2\] with defined margin in pixels \[threshold\].
 }
 \note{
 This function has been auto-generated from the following Raylib function definition:

@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' Test if object is a ray_collision
+#'
+#' @param x An object to test.
+#'
+#' @return A logical.
+#'
 #' @export
 is_ray_collision <- function(x) {
   inherits(x, "ray_collision")

@@ -1,5 +1,9 @@
 # Do not edit by hand.
 
+#' Gui Result
+#'
+#' Enum values for gui_result.
+#'
 #' @export
 gui_result <- list(
   none = 0L,
@@ -8,6 +12,10 @@ gui_result <- list(
   tab_close = 4L
 )
 
+#' Gui State
+#'
+#' Enum values for gui_state.
+#'
 #' @export
 gui_state <- list(
   normal = 0L,
@@ -16,6 +24,10 @@ gui_state <- list(
   disabled = 3L
 )
 
+#' Gui Text Alignment
+#'
+#' Enum values for gui_text_alignment.
+#'
 #' @export
 gui_text_alignment <- list(
   left = 0L,
@@ -23,6 +35,10 @@ gui_text_alignment <- list(
   right = 2L
 )
 
+#' Gui Text Alignment Vertical
+#'
+#' Enum values for gui_text_alignment_vertical.
+#'
 #' @export
 gui_text_alignment_vertical <- list(
   top = 0L,
@@ -30,6 +46,10 @@ gui_text_alignment_vertical <- list(
   bottom = 2L
 )
 
+#' Gui Text Wrap Mode
+#'
+#' Enum values for gui_text_wrap_mode.
+#'
 #' @export
 gui_text_wrap_mode <- list(
   none = 0L,
@@ -37,6 +57,10 @@ gui_text_wrap_mode <- list(
   word = 2L
 )
 
+#' Gui Control
+#'
+#' Enum values for gui_control.
+#'
 #' @export
 gui_control <- list(
   default = 0L,
@@ -57,6 +81,10 @@ gui_control <- list(
   statusbar = 15L
 )
 
+#' Gui Control Property
+#'
+#' Enum values for gui_control_property.
+#'
 #' @export
 gui_control_property <- list(
   border_color_normal = 0L,
@@ -77,6 +105,10 @@ gui_control_property <- list(
   baseprop16 = 15L
 )
 
+#' Gui Default Property
+#'
+#' Enum values for gui_default_property.
+#'
 #' @export
 gui_default_property <- list(
   text_size = 16L,
@@ -89,24 +121,40 @@ gui_default_property <- list(
   extprop08 = 23L
 )
 
+#' Gui Toggle Property
+#'
+#' Enum values for gui_toggle_property.
+#'
 #' @export
 gui_toggle_property <- list(
   group_padding = 16L,
   group_width_full = 17L
 )
 
+#' Gui Slider Property
+#'
+#' Enum values for gui_slider_property.
+#'
 #' @export
 gui_slider_property <- list(
   slider_width = 16L,
   slider_padding = 17L
 )
 
+#' Gui Progress Bar Property
+#'
+#' Enum values for gui_progress_bar_property.
+#'
 #' @export
 gui_progress_bar_property <- list(
   progress_padding = 16L,
   progress_side = 17L
 )
 
+#' Gui Scroll Bar Property
+#'
+#' Enum values for gui_scroll_bar_property.
+#'
 #' @export
 gui_scroll_bar_property <- list(
   arrows_size = 16L,
@@ -117,17 +165,29 @@ gui_scroll_bar_property <- list(
   scroll_speed = 21L
 )
 
+#' Gui Check Box Property
+#'
+#' Enum values for gui_check_box_property.
+#'
 #' @export
 gui_check_box_property <- list(
   check_padding = 16L
 )
 
+#' Gui Combo Box Property
+#'
+#' Enum values for gui_combo_box_property.
+#'
 #' @export
 gui_combo_box_property <- list(
   combo_button_width = 16L,
   combo_button_spacing = 17L
 )
 
+#' Gui Dropdown Box Property
+#'
+#' Enum values for gui_dropdown_box_property.
+#'
 #' @export
 gui_dropdown_box_property <- list(
   arrow_padding = 16L,
@@ -136,17 +196,29 @@ gui_dropdown_box_property <- list(
   dropdown_roll_up = 19L
 )
 
+#' Gui Text Box Property
+#'
+#' Enum values for gui_text_box_property.
+#'
 #' @export
 gui_text_box_property <- list(
   text_readonly = 16L
 )
 
+#' Gui Value Box Property
+#'
+#' Enum values for gui_value_box_property.
+#'
 #' @export
 gui_value_box_property <- list(
   spinner_button_width = 16L,
   spinner_button_spacing = 17L
 )
 
+#' Gui Tab Bar Property
+#'
+#' Enum values for gui_tab_bar_property.
+#'
 #' @export
 gui_tab_bar_property <- list(
   tab_items_width = 16L,
@@ -154,6 +226,10 @@ gui_tab_bar_property <- list(
   tab_line_side = 18L
 )
 
+#' Gui List View Property
+#'
+#' Enum values for gui_list_view_property.
+#'
 #' @export
 gui_list_view_property <- list(
   list_items_height = 16L,
@@ -164,6 +240,10 @@ gui_list_view_property <- list(
   list_items_border_width = 21L
 )
 
+#' Gui Color Picker Property
+#'
+#' Enum values for gui_color_picker_property.
+#'
 #' @export
 gui_color_picker_property <- list(
   color_selector_size = 16L,
@@ -173,6 +253,10 @@ gui_color_picker_property <- list(
   huebar_selector_overflow = 20L
 )
 
+#' Gui Icon
+#'
+#' Enum values for gui_icon.
+#'
 #' @export
 gui_icon <- list(
   none = 0L,

@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' Test if object is a glyph_info
+#'
+#' @param x An object to test.
+#'
+#' @return A logical.
+#'
 #' @export
 is_glyph_info <- function(x) {
   inherits(x, "glyph_info")

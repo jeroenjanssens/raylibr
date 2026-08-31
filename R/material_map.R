@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' Test if object is a material_map
+#'
+#' @param x An object to test.
+#'
+#' @return A logical.
+#'
 #' @export
 is_material_map <- function(x) {
   inherits(x, "material_map")

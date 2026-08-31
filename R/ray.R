@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' Test if object is a ray
+#'
+#' @param x An object to test.
+#'
+#' @return A logical.
+#'
 #' @export
 is_ray <- function(x) {
   inherits(x, "ray")

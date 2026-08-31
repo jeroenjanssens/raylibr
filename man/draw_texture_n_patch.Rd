@@ -9,7 +9,7 @@ draw_texture_n_patch(texture, n_patch_info, dest, origin, rotation, tint)
 \arguments{
 \item{texture}{A texture.}
 
-\item{n_patch_info}{An npatch_info.}
+\item{n_patch_info}{An n_patch_info.}
 
 \item{dest}{A rectangle.}
 

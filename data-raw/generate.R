@@ -9,6 +9,11 @@ library(jsonlite)
 
 api <- fromJSON("data-raw/raylib_api.json")
 
+escape_rd <- function(x) {
+  x <- gsub("[", "\\\\[", x, fixed = TRUE)
+  gsub("]", "\\\\]", x, fixed = TRUE)
+}
+
 # --- Configuration -----------------------------------------------------------
 
 # Type mappings: Raylib C type -> list(cpp, r_check, r_label, r_param_doc)
@@ -52,7 +57,7 @@ type_map <- list(
   "Sound"          = list(cpp = "Sound",         check = "is_sound",             label = "A sound"),
   "Music"          = list(cpp = "Music",         check = "is_music",             label = "A music"),
   "AudioStream"    = list(cpp = "AudioStream",   check = "is_audio_stream",      label = "An audio_stream"),
-  "NPatchInfo"     = list(cpp = "NPatchInfo",    check = "is_npatch_info",       label = "An npatch_info"),
+  "NPatchInfo"     = list(cpp = "NPatchInfo",    check = "is_n_patch_info",      label = "An n_patch_info"),
   "GlyphInfo"      = list(cpp = "GlyphInfo",     check = "is_glyph_info",        label = "A glyph_info"),
   "VrDeviceInfo"   = list(cpp = "VrDeviceInfo",  check = "is_vr_device_info",    label = "A vr_device_info"),
   "VrStereoConfig" = list(cpp = "VrStereoConfig", check = "is_vr_stereo_config", label = "A vr_stereo_config")
@@ -96,7 +101,7 @@ return_map <- list(
   "Sound"          = list(r_doc = "A sound"),
   "Music"          = list(r_doc = "A music"),
   "AudioStream"    = list(r_doc = "An audio_stream"),
-  "NPatchInfo"     = list(r_doc = "An npatch_info"),
+  "NPatchInfo"     = list(r_doc = "An n_patch_info"),
   "GlyphInfo"      = list(r_doc = "A glyph_info"),
   "Matrix"         = list(r_doc = "A 4x4 numeric matrix"),
   "Quaternion"     = list(r_doc = "A numeric vector of length 4"),
@@ -583,7 +588,7 @@ generate_function_r <- function(func_row) {
 
   lines <- c(lines, paste0("#' ", title))
   lines <- c(lines, "#'")
-  lines <- c(lines, paste0("#' ", desc, "."))
+  lines <- c(lines, paste0("#' ", escape_rd(desc), "."))
   lines <- c(lines, "#'")
 
   # Params
@@ -690,6 +695,12 @@ generate_struct_r <- function(struct_row) {
   if (name %in% opaque_structs) {
     # Opaque structs: just is_* function and minimal class
     lines <- c(
+      paste0("#' Test if object is a ", snake),
+      "#'",
+      paste0("#' @param x An object to test."),
+      "#'",
+      paste0("#' @return A logical."),
+      "#'",
       paste0("#' @export"),
       paste0("is_", snake, " <- function(x) {"),
       paste0('  inherits(x, "', snake, '")'),
@@ -707,6 +718,12 @@ generate_struct_r <- function(struct_row) {
   # is_* type predicate
   lines <- c(lines, "# Do not edit by hand.")
   lines <- c(lines, "")
+  lines <- c(lines, paste0("#' Test if object is a ", snake))
+  lines <- c(lines, "#'")
+  lines <- c(lines, "#' @param x An object to test.")
+  lines <- c(lines, "#'")
+  lines <- c(lines, "#' @return A logical.")
+  lines <- c(lines, "#'")
   lines <- c(lines, "#' @export")
   lines <- c(lines, paste0("is_", snake, " <- function(x) {"))
   lines <- c(lines, paste0('  inherits(x, "', snake, '")'))
@@ -725,7 +742,7 @@ generate_struct_r <- function(struct_row) {
     fname <- field_snakes[i]
     fdesc <- wrappable_fields$description[i]
     label <- if (ftype %in% names(type_map)) type_map[[ftype]]$label else "A value"
-    lines <- c(lines, paste0("#' @param ", fname, " ", label, ". ", fdesc, "."))
+    lines <- c(lines, paste0("#' @param ", fname, " ", label, ". ", escape_rd(fdesc), "."))
   }
 
   lines <- c(lines, "#'")
@@ -903,6 +920,10 @@ generate_enums_r <- function(enums) {
     prefix <- prefix_map[[enum_name]]
     values <- enums$values[[i]]
 
+    all_lines <- c(all_lines, paste0("#' ", gsub("_", " ", r_name) |> tools::toTitleCase()))
+    all_lines <- c(all_lines, "#'")
+    all_lines <- c(all_lines, paste0("#' Enum values for ", r_name, "."))
+    all_lines <- c(all_lines, "#'")
     all_lines <- c(all_lines, "#' @export")
     all_lines <- c(all_lines, paste0(r_name, " <- list("))
 
@@ -1201,7 +1222,7 @@ if (file.exists(rlgl_api_file)) {
 
     lines <- c(lines, paste0("#' ", title))
     lines <- c(lines, "#'")
-    if (nzchar(desc)) lines <- c(lines, paste0("#' ", desc, "."))
+    if (nzchar(desc)) lines <- c(lines, paste0("#' ", escape_rd(desc), "."))
     lines <- c(lines, "#'")
 
     if (!is.null(params) && is.data.frame(params) && nrow(params) > 0) {
@@ -1602,7 +1623,7 @@ if (file.exists(raygui_api_file)) {
 
     lines <- c(lines, paste0("#' ", title))
     lines <- c(lines, "#'")
-    if (!is.null(desc) && nzchar(desc)) lines <- c(lines, paste0("#' ", desc, "."))
+    if (!is.null(desc) && nzchar(desc)) lines <- c(lines, paste0("#' ", escape_rd(desc), "."))
     if (!is.null(desc) && nzchar(desc)) lines <- c(lines, "#'")
 
     if (!is.null(params) && is.data.frame(params) && nrow(params) > 0) {
@@ -1710,6 +1731,10 @@ if (file.exists(raygui_api_file)) {
       prefix <- cfg$prefix
       values <- raygui_enums$values[[i]]
 
+      enum_lines <- c(enum_lines, paste0("#' ", gsub("_", " ", r_name) |> tools::toTitleCase()))
+      enum_lines <- c(enum_lines, "#'")
+      enum_lines <- c(enum_lines, paste0("#' Enum values for ", r_name, "."))
+      enum_lines <- c(enum_lines, "#'")
       enum_lines <- c(enum_lines, "#' @export")
       enum_lines <- c(enum_lines, paste0(r_name, " <- list("))
 

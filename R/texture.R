@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' Test if object is a texture
+#'
+#' @param x An object to test.
+#'
+#' @return A logical.
+#'
 #' @export
 is_texture <- function(x) {
   inherits(x, "texture")

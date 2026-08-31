@@ -14,7 +14,7 @@ draw_pixel(pos_x, pos_y, color)
 \item{color}{A color.}
 }
 \description{
-Draw a pixel using geometry \link{Can be slow, use with care}.
+Draw a pixel using geometry \[Can be slow, use with care\].
 }
 \note{
 This function has been auto-generated from the following Raylib function definition:

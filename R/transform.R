@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' Test if object is a transform
+#'
+#' @param x An object to test.
+#'
+#' @return A logical.
+#'
 #' @export
 is_transform <- function(x) {
   inherits(x, "transform")

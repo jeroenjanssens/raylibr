@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' Test if object is a color
+#'
+#' @param x An object to test.
+#'
+#' @return A logical.
+#'
 #' @export
 is_color <- function(x) {
   inherits(x, "color")

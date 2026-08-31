@@ -1,6 +1,7 @@
 library(raylibr)
 
 test_that("mesh generation functions return mesh objects", {
+  skip_on_ci()
   init_window(100, 100, "test")
   on.exit(close_window())
 
@@ -33,6 +34,7 @@ test_that("mesh generation functions return mesh objects", {
 })
 
 test_that("get_mesh_bounding_box returns a bounding_box", {
+  skip_on_ci()
   init_window(100, 100, "test")
   on.exit(close_window())
 

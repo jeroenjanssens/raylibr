@@ -10,7 +10,7 @@ set_window_opacity(opacity)
 \item{opacity}{A number.}
 }
 \description{
-Set window opacity \link{0.0f..1.0f}.
+Set window opacity \[0.0f..1.0f\].
 }
 \note{
 This function has been auto-generated from the following Raylib function definition:

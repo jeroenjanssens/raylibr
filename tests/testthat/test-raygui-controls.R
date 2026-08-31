@@ -1,5 +1,7 @@
 library(raylibr)
 
+skip_on_ci()
+
 test_that("gui_button returns integer", {
   init_window(100, 100, "test")
   on.exit(close_window())

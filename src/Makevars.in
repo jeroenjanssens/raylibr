@@ -16,7 +16,7 @@ $(OBJECTS): raylib_built
 
 raylib_built:
 	(cd ../inst; tar -xf $(RAYLIB_SRC).tar.gz)
-	(cd ../inst/$(RAYLIB_SRC)/src; $(MAKE) PLATFORM=PLATFORM_DESKTOP)
+	(cd ../inst/$(RAYLIB_SRC)/src; $(MAKE) PLATFORM=PLATFORM_DESKTOP CUSTOM_CFLAGS="-Wno-tautological-compare")
 	mkdir -p ../inst/include
 	cp ../inst/$(RAYLIB_SRC)/src/raylib.h ../inst/include
 	cp ../inst/$(RAYLIB_SRC)/src/raymath.h ../inst/include

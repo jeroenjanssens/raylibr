@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' Test if object is a n_patch_info
+#'
+#' @param x An object to test.
+#'
+#' @return A logical.
+#'
 #' @export
 is_n_patch_info <- function(x) {
   inherits(x, "n_patch_info")

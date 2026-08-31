@@ -13,7 +13,7 @@ color_normalize(color)
 A numeric vector of length 4
 }
 \description{
-Get Color normalized as float \link{0..1}.
+Get Color normalized as float \[0..1\].
 }
 \note{
 This function has been auto-generated from the following Raylib function definition:

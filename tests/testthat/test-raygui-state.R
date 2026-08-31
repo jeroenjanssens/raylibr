@@ -1,5 +1,7 @@
 library(raylibr)
 
+skip_on_ci()
+
 test_that("gui_enable and gui_disable work", {
   init_window(100, 100, "test")
   on.exit(close_window())

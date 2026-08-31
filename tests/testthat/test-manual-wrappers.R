@@ -1,6 +1,7 @@
 library(raylibr)
 
 test_that("update_camera does not error", {
+  skip_on_ci()
   init_window(100, 100, "test")
   on.exit(close_window())
 
@@ -17,6 +18,7 @@ test_that("update_camera does not error", {
 })
 
 test_that("draw_line_strip / draw_triangle_fan / draw_triangle_strip accept matrix input", {
+  skip_on_ci()
   init_window(100, 100, "test")
   on.exit(close_window())
 
@@ -35,6 +37,7 @@ test_that("draw_line_strip / draw_triangle_fan / draw_triangle_strip accept matr
 })
 
 test_that("spline drawing functions accept matrix input", {
+  skip_on_ci()
   init_window(100, 100, "test")
   on.exit(close_window())
 
@@ -55,6 +58,7 @@ test_that("spline drawing functions accept matrix input", {
 })
 
 test_that("draw_triangle_strip_3d accepts 3-column matrix", {
+  skip_on_ci()
   init_window(100, 100, "test")
   on.exit(close_window())
 

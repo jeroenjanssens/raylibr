@@ -17,7 +17,7 @@ color_lerp(color1, color2, factor)
 A color
 }
 \description{
-Get color lerp interpolation between two colors, factor \link{0.0f..1.0f}.
+Get color lerp interpolation between two colors, factor \[0.0f..1.0f\].
 }
 \note{
 This function has been auto-generated from the following Raylib function definition:

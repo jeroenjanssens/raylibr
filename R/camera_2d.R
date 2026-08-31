@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' Test if object is a camera_2d
+#'
+#' @param x An object to test.
+#'
+#' @return A logical.
+#'
 #' @export
 is_camera_2d <- function(x) {
   inherits(x, "camera_2d")

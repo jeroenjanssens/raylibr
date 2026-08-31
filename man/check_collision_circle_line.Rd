@@ -19,7 +19,7 @@ check_collision_circle_line(center, radius, p1, p2)
 A logical
 }
 \description{
-Check if circle collides with a line created betweeen two points \link{p1} and \link{p2}.
+Check if circle collides with a line created betweeen two points \[p1\] and \[p2\].
 }
 \note{
 This function has been auto-generated from the following Raylib function definition:

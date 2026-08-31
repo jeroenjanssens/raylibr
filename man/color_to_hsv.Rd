@@ -13,7 +13,7 @@ color_to_hsv(color)
 A numeric vector of length 3
 }
 \description{
-Get HSV values for a Color, hue \link{0..360}, saturation/value \link{0..1}.
+Get HSV values for a Color, hue \[0..360\], saturation/value \[0..1\].
 }
 \note{
 This function has been auto-generated from the following Raylib function definition:

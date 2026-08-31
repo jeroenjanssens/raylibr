@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' Test if object is a bounding_box
+#'
+#' @param x An object to test.
+#'
+#' @return A logical.
+#'
 #' @export
 is_bounding_box <- function(x) {
   inherits(x, "bounding_box")

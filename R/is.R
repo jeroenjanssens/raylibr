@@ -14,21 +14,45 @@ is_unsigned_int <- function(x) {
   is_int(x) && x >= 0
 }
 
+#' Test if object is a vector of length 2
+#'
+#' @param x An object to test.
+#'
+#' @return A logical.
+#'
 #' @export
 is_vector_2 <- function(x) {
   is.numeric(x) && length(x) == 2
 }
 
+#' Test if object is a vector of length 3
+#'
+#' @param x An object to test.
+#'
+#' @return A logical.
+#'
 #' @export
 is_vector_3 <- function(x) {
   is.numeric(x) && length(x) == 3
 }
 
+#' Test if object is a vector of length 4
+#'
+#' @param x An object to test.
+#'
+#' @return A logical.
+#'
 #' @export
 is_vector_4 <- function(x) {
   is.numeric(x) && length(x) == 4
 }
 
+#' Test if object is a raylib matrix
+#'
+#' @param x An object to test.
+#'
+#' @return A logical.
+#'
 #' @export
 is_raylib_matrix <- function(x) {
   is.numeric(x) && is.matrix(x) && nrow(x) == 4 && ncol(x) == 4

@@ -571,7 +571,7 @@ set_window_size <- function(width, height) {
 
 #' Set Window Opacity
 #'
-#' Set window opacity [0.0f..1.0f].
+#' Set window opacity \\[0.0f..1.0f\\].
 #'
 #' @param opacity A number.
 #'
@@ -4163,7 +4163,7 @@ get_shapes_texture_rectangle <- function() {
 
 #' Draw Pixel
 #'
-#' Draw a pixel using geometry [Can be slow, use with care].
+#' Draw a pixel using geometry \\[Can be slow, use with care\\].
 #'
 #' @param pos_x An integer.
 #' @param pos_y An integer.
@@ -4197,7 +4197,7 @@ draw_pixel <- function(pos_x, pos_y, color) {
 
 #' Draw Pixel V
 #'
-#' Draw a pixel using geometry (Vector version) [Can be slow, use with care].
+#' Draw a pixel using geometry (Vector version) \\[Can be slow, use with care\\].
 #'
 #' @param position A numeric vector of length 2.
 #' @param color A color.
@@ -6024,7 +6024,7 @@ check_collision_circle_rec <- function(center, radius, rec) {
 
 #' Check Collision Circle Line
 #'
-#' Check if circle collides with a line created betweeen two points [p1] and [p2].
+#' Check if circle collides with a line created betweeen two points \\[p1\\] and \\[p2\\].
 #'
 #' @param center A numeric vector of length 2.
 #' @param radius A number.
@@ -6138,7 +6138,7 @@ check_collision_point_triangle <- function(point, p1, p2, p3) {
 
 #' Check Collision Point Line
 #'
-#' Check if point belongs to line created between two points [p1] and [p2] with defined margin in pixels [threshold].
+#' Check if point belongs to line created between two points \\[p1\\] and \\[p2\\] with defined margin in pixels \\[threshold\\].
 #'
 #' @param point A numeric vector of length 2.
 #' @param p1 A numeric vector of length 2.
@@ -6421,7 +6421,7 @@ gen_image_color <- function(width, height, color) {
 
 #' Gen Image Gradient Linear
 #'
-#' Generate image: linear gradient, direction in degrees [0..360], 0=Vertical gradient.
+#' Generate image: linear gradient, direction in degrees \\[0..360\\], 0=Vertical gradient.
 #'
 #' @param width An integer.
 #' @param height An integer.
@@ -7252,7 +7252,7 @@ draw_texture_pro <- function(texture, source, dest, origin, rotation, tint) {
 #' Draws a texture (or part of it) that stretches or shrinks nicely.
 #'
 #' @param texture A texture.
-#' @param n_patch_info An npatch_info.
+#' @param n_patch_info An n_patch_info.
 #' @param dest A rectangle.
 #' @param origin A numeric vector of length 2.
 #' @param rotation A number.
@@ -7282,7 +7282,7 @@ draw_texture_n_patch <- function(texture, n_patch_info, dest, origin, rotation, 
     return(draw_texture_n_patch_vectorized_(texture, n_patch_info, dest, origin, rotation, tint))
   }
   if (!is_texture(texture)) abort(paste0('`texture` must be a texture, not ', friendly_typeof(texture), '.'), call = NULL)
-  if (!is_npatch_info(n_patch_info)) abort(paste0('`n_patch_info` must be an npatch_info, not ', friendly_typeof(n_patch_info), '.'), call = NULL)
+  if (!is_n_patch_info(n_patch_info)) abort(paste0('`n_patch_info` must be an n_patch_info, not ', friendly_typeof(n_patch_info), '.'), call = NULL)
   if (!is_rectangle(dest)) abort(paste0('`dest` must be a rectangle, not ', friendly_typeof(dest), '.'), call = NULL)
   if (!is_vector_2(origin)) abort(paste0('`origin` must be a numeric vector of length 2, not ', friendly_typeof(origin), '.'), call = NULL)
   if (!is_float(rotation)) abort(paste0('`rotation` must be a number, not ', friendly_typeof(rotation), '.'), call = NULL)
@@ -7364,7 +7364,7 @@ color_to_int <- function(color) {
 
 #' Color Normalize
 #'
-#' Get Color normalized as float [0..1].
+#' Get Color normalized as float \\[0..1\\].
 #'
 #' @param color A color.
 #'
@@ -7387,7 +7387,7 @@ color_normalize <- function(color) {
 
 #' Color From Normalized
 #'
-#' Get Color from normalized values [0..1].
+#' Get Color from normalized values \\[0..1\\].
 #'
 #' @param normalized A numeric vector of length 4.
 #'
@@ -7410,7 +7410,7 @@ color_from_normalized <- function(normalized) {
 
 #' Color To Hsv
 #'
-#' Get HSV values for a Color, hue [0..360], saturation/value [0..1].
+#' Get HSV values for a Color, hue \\[0..360\\], saturation/value \\[0..1\\].
 #'
 #' @param color A color.
 #'
@@ -7433,7 +7433,7 @@ color_to_hsv <- function(color) {
 
 #' Color From Hsv
 #'
-#' Get a Color from HSV values, hue [0..360], saturation/value [0..1].
+#' Get a Color from HSV values, hue \\[0..360\\], saturation/value \\[0..1\\].
 #'
 #' @param hue A number.
 #' @param saturation A number.
@@ -7587,7 +7587,7 @@ color_alpha_blend <- function(dst, src, tint) {
 
 #' Color Lerp
 #'
-#' Get color lerp interpolation between two colors, factor [0.0f..1.0f].
+#' Get color lerp interpolation between two colors, factor \\[0.0f..1.0f\\].
 #'
 #' @param color1 A color.
 #' @param color2 A color.

@@ -1,3 +1,7 @@
+#' Flag
+#'
+#' Enum values for flag.
+#'
 #' @export
 flag <- list(
   vsync_hint = 64,
@@ -18,6 +22,10 @@ flag <- list(
   interlaced_hint = 65536
 )
 
+#' log
+#'
+#' Enum values for log.
+#'
 #' @export
 log <- list(
   all = 0,
@@ -30,6 +38,10 @@ log <- list(
   none = 7
 )
 
+#' Key
+#'
+#' Enum values for key.
+#'
 #' @export
 key <- list(
   apostrophe = 39,
@@ -143,6 +155,10 @@ key <- list(
   volume_down = 25
 )
 
+#' Mouse Button
+#'
+#' Enum values for mouse_button.
+#'
 #' @export
 mouse_button <- list(
   left = 0,
@@ -154,6 +170,10 @@ mouse_button <- list(
   back = 6
 )
 
+#' Mouse Cursor
+#'
+#' Enum values for mouse_cursor.
+#'
 #' @export
 mouse_cursor <- list(
   default = 0,
@@ -169,6 +189,10 @@ mouse_cursor <- list(
   not_allowed = 10
 )
 
+#' Material Map Index
+#'
+#' Enum values for material_map_index.
+#'
 #' @export
 material_map_index <- list(
   albedo = 0,
@@ -184,6 +208,10 @@ material_map_index <- list(
   brdf = 10
 )
 
+#' Shader Uniform
+#'
+#' Enum values for shader_uniform.
+#'
 #' @export
 shader_uniform <- list(
   float = 0,
@@ -201,6 +229,10 @@ shader_uniform <- list(
   sampler2d = 12
 )
 
+#' Camera Mode
+#'
+#' Enum values for camera_mode.
+#'
 #' @export
 camera_mode <- list(
   custom = 0,
@@ -210,6 +242,10 @@ camera_mode <- list(
   third_person = 4
 )
 
+#' Camera Projection
+#'
+#' Enum values for camera_projection.
+#'
 #' @export
 camera_projection <- list(
   perspective = 0,

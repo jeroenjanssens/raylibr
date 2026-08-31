@@ -1,5 +1,11 @@
 # Do not edit by hand.
 
+#' Test if object is a rectangle
+#'
+#' @param x An object to test.
+#'
+#' @return A logical.
+#'
 #' @export
 is_rectangle <- function(x) {
   inherits(x, "rectangle")

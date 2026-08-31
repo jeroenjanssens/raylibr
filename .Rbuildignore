@@ -6,3 +6,6 @@
 ^docs$
 ^pkgdown$
 ^\.github$
+^vignettes$
+^data-raw$
+^src/raylib_built$

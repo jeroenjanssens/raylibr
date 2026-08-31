@@ -21,7 +21,7 @@ gen_image_gradient_linear(width, height, direction, start, end)
 An image
 }
 \description{
-Generate image: linear gradient, direction in degrees \link{0..360}, 0=Vertical gradient.
+Generate image: linear gradient, direction in degrees \[0..360\], 0=Vertical gradient.
 }
 \note{
 This function has been auto-generated from the following Raylib function definition:
