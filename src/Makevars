@@ -3,7 +3,6 @@
 RAYLIB_SRC = raylib-6.0-minimal
 
 PKG_CPPFLAGS = -I../inst/include
-PKG_CXXFLAGS = $(CXX_VISIBILITY) -Wno-unknown-warning-option
 PKG_LIBS = -L../inst/$(RAYLIB_SRC)/src -lraylib -framework OpenGL -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreGraphics
 
 OBJECTS = audio.o core.o manual_wrappers.o models.o raygui_impl.o raygui_funcs.o raymath_funcs.o rcolors.o RcppExports.o rlgl.o shapes.o structs.o text.o textures.o types.o web.o
