@@ -49,6 +49,7 @@ jobs:
             libxext-dev \
             libwayland-dev \
             libxkbcommon-dev \
+            libgl1-mesa-dri \
             xvfb
 
       - uses: r-lib/actions/setup-r-dependencies@v2
