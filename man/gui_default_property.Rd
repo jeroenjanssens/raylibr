@@ -26,4 +26,12 @@ Enum values for \code{gui_default_property}.
    \code{extprop08} \tab 23 \cr
 }
 }
+\examples{
+\dontrun{
+gui_default_property$text_size
+gui_default_property$background_color
+gui_default_property$extprop08
+}
+
+}
 \keyword{datasets}

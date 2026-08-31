@@ -23,4 +23,10 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Image ImageFromChannel(Image image, int selectedChannel);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+image_from_channel(gen_image_color(100, 100, "blue"), 0L)
+}
+
+}
 \concept{channel functions}

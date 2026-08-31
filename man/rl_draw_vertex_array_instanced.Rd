@@ -16,6 +16,12 @@ rl_draw_vertex_array_instanced(offset, count, instances)
 \description{
 Rl Draw Vertex Array Instanced
 }
+\examples{
+\dontrun{
+rl_draw_vertex_array_instanced(0L, 10L, 0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

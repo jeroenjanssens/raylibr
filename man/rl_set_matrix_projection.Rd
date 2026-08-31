@@ -12,6 +12,12 @@ rl_set_matrix_projection(proj)
 \description{
 Rl Set Matrix Projection
 }
+\examples{
+\dontrun{
+rl_set_matrix_projection(diag(4))
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -9,6 +9,12 @@ rl_load_draw_quad()
 \description{
 Rl Load Draw Quad
 }
+\examples{
+\dontrun{
+rl_load_draw_quad()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

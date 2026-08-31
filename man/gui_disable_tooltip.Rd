@@ -9,6 +9,12 @@ gui_disable_tooltip()
 \description{
 Disable gui tooltips (global state).
 }
+\examples{
+\dontrun{
+gui_disable_tooltip()
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

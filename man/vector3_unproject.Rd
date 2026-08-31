@@ -19,6 +19,12 @@ A numeric vector of length 3
 \description{
 Vector3 Unproject
 }
+\examples{
+\dontrun{
+vector3_unproject(c(0, 0, 0), diag(4), diag(4))
+}
+
+}
 \seealso{
 Other vector3 functions: 
 \code{\link{vector3_add}()},

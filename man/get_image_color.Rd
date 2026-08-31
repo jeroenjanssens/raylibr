@@ -25,6 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Color GetImageColor(Image image, int x, int y);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_image_color(gen_image_color(100, 100, "blue"), 100L, 100L)
+}
+
+}
 \seealso{
 Other color functions: 
 \code{\link{color}()},

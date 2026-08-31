@@ -12,6 +12,12 @@ A number
 \description{
 Rl Get Point Size
 }
+\examples{
+\dontrun{
+rl_get_point_size()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -9,6 +9,12 @@ rl_disable_texture()
 \description{
 Rl Disable Texture
 }
+\examples{
+\dontrun{
+rl_disable_texture()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

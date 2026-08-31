@@ -21,6 +21,12 @@ A list with \code{result} (integer), \code{scroll_index} (integer), \code{active
 \description{
 List View control.
 }
+\examples{
+\dontrun{
+gui_list_view(rectangle(10, 10, 200, 100), "Hello", 0L, 0L)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

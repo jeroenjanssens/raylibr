@@ -17,6 +17,12 @@ A 4x4 numeric matrix
 \description{
 Matrix Add
 }
+\examples{
+\dontrun{
+matrix_add(diag(4), diag(4))
+}
+
+}
 \seealso{
 Other matrix functions: 
 \code{\link{get_camera_matrix}()},

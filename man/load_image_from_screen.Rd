@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Image LoadImageFromScreen(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+load_image_from_screen()
+}
+
+}
 \seealso{
 Other screen functions: 
 \code{\link{get_world_to_screen}()},

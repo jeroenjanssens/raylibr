@@ -19,6 +19,12 @@ A list with \code{result} (integer), \code{color_hsv} (numeric vector of length 
 \description{
 Color Panel control, using Hue-Saturation-Value color data.
 }
+\examples{
+\dontrun{
+gui_color_panel_hsv(rectangle(10, 10, 200, 100), "Hello", c(0, 0, 0))
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

@@ -17,6 +17,12 @@ An integer
 \description{
 Label button control, returns true when clicked.
 }
+\examples{
+\dontrun{
+gui_label_button(rectangle(10, 10, 200, 100), "Hello")
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

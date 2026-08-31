@@ -20,6 +20,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawRay(Ray ray, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_ray(ray(c(0, 0, 0), c(0, 0, 1)), "red")
+}
+
+}
 \seealso{
 Other ray functions: 
 \code{\link{get_screen_to_world_ray}()},

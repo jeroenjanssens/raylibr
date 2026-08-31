@@ -14,6 +14,12 @@ rl_resize_framebuffer(width, height)
 \description{
 Rl Resize Framebuffer
 }
+\examples{
+\dontrun{
+rl_resize_framebuffer(800L, 450L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

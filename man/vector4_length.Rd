@@ -15,6 +15,12 @@ A number
 \description{
 Vector4 Length
 }
+\examples{
+\dontrun{
+vector4_length(c(0, 0, 0, 1))
+}
+
+}
 \seealso{
 Other vector4 functions: 
 \code{\link{vector4_add}()},

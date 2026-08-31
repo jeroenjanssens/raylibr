@@ -29,6 +29,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Image LoadImageRaw(const char * fileName, int width, int height, int format, int headerSize);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+load_image_raw("file.png", 800L, 450L, 0L, 32L)
+}
+
+}
 \seealso{
 Other load functions: 
 \code{\link{load_audio_stream}()},

@@ -9,6 +9,12 @@ gui_enable()
 \description{
 Enable gui controls (global state).
 }
+\examples{
+\dontrun{
+gui_enable()
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

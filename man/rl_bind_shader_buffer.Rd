@@ -14,6 +14,12 @@ rl_bind_shader_buffer(id, index)
 \description{
 Rl Bind Shader Buffer
 }
+\examples{
+\dontrun{
+rl_bind_shader_buffer(0L, 0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

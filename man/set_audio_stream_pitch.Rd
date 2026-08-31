@@ -20,6 +20,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void SetAudioStreamPitch(AudioStream stream, float pitch);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+set_audio_stream_pitch(load_audio_stream(44100L, 16L, 1L), 1.0)
+}
+
+}
 \seealso{
 Other pitch functions: 
 \code{\link{set_music_pitch}()},

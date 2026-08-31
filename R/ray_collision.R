@@ -6,6 +6,11 @@
 #'
 #' @return A logical.
 #'
+#' @examples
+#' \dontrun{
+#' is_ray_collision("not a ray_collision")
+#' }
+#'
 #' @export
 is_ray_collision <- function(x) {
   inherits(x, "ray_collision")
@@ -38,6 +43,12 @@ is_ray_collision <- function(x) {
 #'
 #' @family ray_collision functions
 #'
+#' @examples
+#' \dontrun{
+#' ray <- ray_collision(TRUE, 1.0, c(0, 0, 0), c(0, 0, 0))
+#' ray$hit
+#' ray$distance
+#' }
 #'
 #' @export
 ray_collision <- function(hit, distance, point, normal) {

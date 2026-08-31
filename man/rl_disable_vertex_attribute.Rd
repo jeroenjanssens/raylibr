@@ -12,6 +12,12 @@ rl_disable_vertex_attribute(index)
 \description{
 Rl Disable Vertex Attribute
 }
+\examples{
+\dontrun{
+rl_disable_vertex_attribute(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

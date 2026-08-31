@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{GlyphInfo GetGlyphInfo(Font font, int codepoint);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_glyph_info(get_font_default(), 0L)
+}
+
+}
 \seealso{
 Other get functions: 
 \code{\link{get_application_directory}()},

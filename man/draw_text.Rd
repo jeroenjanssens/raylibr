@@ -26,6 +26,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawText(const char * text, int posX, int posY, int fontSize, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_text("Hello", 100L, 100L, 20L, "red")
+}
+
+}
 \seealso{
 Other text functions: 
 \code{\link{gen_image_text}()},

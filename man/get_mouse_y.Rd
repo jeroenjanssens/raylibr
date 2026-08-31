@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{int GetMouseY(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_mouse_y()
+}
+
+}
 \seealso{
 Other y functions: 
 \code{\link{get_touch_y}()}

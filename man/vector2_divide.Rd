@@ -17,6 +17,12 @@ A numeric vector of length 2
 \description{
 Vector2 Divide
 }
+\examples{
+\dontrun{
+vector2_divide(c(100, 100), c(100, 100))
+}
+
+}
 \seealso{
 Other vector2 functions: 
 \code{\link{vector2_add}()},

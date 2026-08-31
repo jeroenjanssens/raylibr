@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Font GetFontDefault(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_font_default()
+}
+
+}
 \seealso{
 Other default functions: 
 \code{\link{load_material_default}()},

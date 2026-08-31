@@ -275,4 +275,12 @@ Enum values for \code{gui_icon}.
    \code{filetype_icon} \tab 256 \cr
 }
 }
+\examples{
+\dontrun{
+gui_icon$none
+gui_icon$cross_small
+gui_icon$filetype_icon
+}
+
+}
 \keyword{datasets}

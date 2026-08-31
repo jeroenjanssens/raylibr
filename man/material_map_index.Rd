@@ -29,4 +29,12 @@ Enum values for \code{material_map_index}.
    \code{brdf} \tab 10 \cr
 }
 }
+\examples{
+\dontrun{
+material_map_index$albedo
+material_map_index$emission
+material_map_index$brdf
+}
+
+}
 \keyword{datasets}

@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsGestureDetected(unsigned int gesture);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_gesture_detected(0L)
+}
+
+}
 \seealso{
 Other detected functions: 
 \code{\link{get_gesture_detected}()}

@@ -38,6 +38,12 @@ rl_blit_framebuffer(
 \description{
 Rl Blit Framebuffer
 }
+\examples{
+\dontrun{
+rl_blit_framebuffer(0L, 0L, 800L, 450L, 0L, 0L, 800L, 450L, 0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

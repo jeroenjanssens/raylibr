@@ -15,6 +15,12 @@ A number
 \description{
 Matrix Trace
 }
+\examples{
+\dontrun{
+matrix_trace(diag(4))
+}
+
+}
 \seealso{
 Other matrix functions: 
 \code{\link{get_camera_matrix}()},

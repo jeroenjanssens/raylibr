@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Rectangle GetImageAlphaBorder(Image image, float threshold);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_image_alpha_border(gen_image_color(100, 100, "blue"), 0.0)
+}
+
+}
 \seealso{
 Other get functions: 
 \code{\link{get_application_directory}()},

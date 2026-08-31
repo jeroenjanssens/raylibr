@@ -15,6 +15,12 @@ A number
 \description{
 Vector2 Length Sqr
 }
+\examples{
+\dontrun{
+vector2_length_sqr(c(100, 100))
+}
+
+}
 \seealso{
 Other vector2 functions: 
 \code{\link{vector2_add}()},

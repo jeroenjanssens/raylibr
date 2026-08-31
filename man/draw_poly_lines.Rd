@@ -26,6 +26,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawPolyLines(Vector2 center, int sides, float radius, float rotation, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_poly_lines(c(100, 100), 0L, 50.0, 0.0, "red")
+}
+
+}
 \seealso{
 Other lines functions: 
 \code{\link{draw_circle_lines}()},

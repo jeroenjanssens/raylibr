@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool DirectoryExists(const char * dirPath);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+directory_exists("file.png")
+}
+
+}
 \seealso{
 Other exists functions: 
 \code{\link{file_exists}()}

@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsMouseButtonDown(int button);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_mouse_button_down(0L)
+}
+
+}
 \seealso{
 Other down functions: 
 \code{\link{is_gamepad_button_down}()},

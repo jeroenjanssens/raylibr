@@ -25,6 +25,12 @@ A list with \code{result} (integer), \code{value} (number).
 \description{
 Slider Bar control.
 }
+\examples{
+\dontrun{
+gui_slider_bar(rectangle(10, 10, 200, 100), "Hello", "Hello", 0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

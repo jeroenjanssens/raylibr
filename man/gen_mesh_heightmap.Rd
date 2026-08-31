@@ -23,4 +23,10 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Mesh GenMeshHeightmap(Image heightmap, Vector3 size);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+gen_mesh_heightmap(gen_image_color(100, 100, "blue"), c(1, 1, 1))
+}
+
+}
 \concept{heightmap functions}

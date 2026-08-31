@@ -28,6 +28,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawRectangleGradientH(int posX, int posY, int width, int height, Color left, Color right);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_rectangle_gradient_h(100L, 100L, 800L, 450L, "red", "red")
+}
+
+}
 \seealso{
 Other draw functions: 
 \code{\link{draw_billboard}()},

@@ -17,6 +17,12 @@ An integer
 \description{
 Get one style property.
 }
+\examples{
+\dontrun{
+gui_get_style(0L, 0L)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

@@ -15,6 +15,12 @@ A number
 \description{
 Quaternion Length
 }
+\examples{
+\dontrun{
+quaternion_length(c(0, 0, 0, 1))
+}
+
+}
 \seealso{
 Other quaternion functions: 
 \code{\link{quaternion_add}()},

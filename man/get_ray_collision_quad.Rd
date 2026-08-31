@@ -29,6 +29,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{RayCollision GetRayCollisionQuad(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3, Vector3 p4);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_ray_collision_quad(ray(c(0, 0, 0), c(0, 0, 1)), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0))
+}
+
+}
 \seealso{
 Other quad functions: 
 \code{\link{get_spline_point_bezier_quad}()}

@@ -4,6 +4,12 @@
 #'
 #' @return A logical.
 #'
+#' @examples
+#' \dontrun{
+#' m <- load_material_default()
+#' is_material(m)
+#' }
+#'
 #' @export
 is_material <- function(x) {
   inherits(x, "material")

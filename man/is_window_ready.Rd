@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsWindowReady(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_window_ready()
+}
+
+}
 \seealso{
 Other ready functions: 
 \code{\link{is_audio_device_ready}()}

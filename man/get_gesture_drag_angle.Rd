@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{float GetGestureDragAngle(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_gesture_drag_angle()
+}
+
+}
 \seealso{
 Other angle functions: 
 \code{\link{get_gesture_pinch_angle}()}

@@ -12,6 +12,12 @@ gui_load_style(file_name)
 \description{
 Load style file over global style variable (.rgs).
 }
+\examples{
+\dontrun{
+gui_load_style("file.png")
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

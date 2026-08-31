@@ -19,6 +19,12 @@ A list with \code{result} (integer), \code{color} (color).
 \description{
 Color Panel control.
 }
+\examples{
+\dontrun{
+gui_color_panel(rectangle(10, 10, 200, 100), "Hello", "red")
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

@@ -14,6 +14,12 @@ rl_set_uniform_sampler(loc_index, texture_id)
 \description{
 Rl Set Uniform Sampler
 }
+\examples{
+\dontrun{
+rl_set_uniform_sampler(0L, 0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

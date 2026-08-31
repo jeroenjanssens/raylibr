@@ -25,6 +25,12 @@ A list with \code{result} (integer), \code{value} (integer).
 \description{
 Value Box control, updates input text with numbers.
 }
+\examples{
+\dontrun{
+gui_value_box(rectangle(10, 10, 200, 100), "Hello", 0L, 0L, 0L, TRUE)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

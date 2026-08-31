@@ -25,6 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Image GenImageText(int width, int height, const char * text);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+gen_image_text(800L, 450L, "Hello")
+}
+
+}
 \seealso{
 Other text functions: 
 \code{\link{draw_text}()},

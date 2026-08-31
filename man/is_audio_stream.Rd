@@ -15,3 +15,10 @@ A logical.
 \description{
 Test if object is a audio_stream
 }
+\examples{
+\dontrun{
+a <- load_audio_stream(44100L, 16L, 1L)
+is_audio_stream(a)
+}
+
+}

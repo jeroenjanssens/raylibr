@@ -14,6 +14,12 @@ rl_vertex2i(x, y)
 \description{
 Rl Vertex2i
 }
+\examples{
+\dontrun{
+rl_vertex2i(100L, 100L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -27,6 +27,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Mesh GenMeshPlane(float width, float length, int resX, int resZ);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+gen_mesh_plane(200.0, 100.0, 0L, 0L)
+}
+
+}
 \seealso{
 Other plane functions: 
 \code{\link{draw_plane}()}

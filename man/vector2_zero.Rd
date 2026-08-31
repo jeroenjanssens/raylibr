@@ -12,6 +12,12 @@ A numeric vector of length 2
 \description{
 Vector2 Zero
 }
+\examples{
+\dontrun{
+vector2_zero()
+}
+
+}
 \seealso{
 Other vector2 functions: 
 \code{\link{vector2_add}()},

@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{int GetGamepadAxisCount(int gamepad);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_gamepad_axis_count(0L)
+}
+
+}
 \seealso{
 Other count functions: 
 \code{\link{get_codepoint_count}()},

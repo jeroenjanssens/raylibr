@@ -24,6 +24,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawModel(Model model, Vector3 position, float scale, Color tint);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_model(load_model("model.obj"), c(0, 5, 0), 1.0, "red")
+}
+
+}
 \seealso{
 Other model functions: 
 \code{\link{load_model}()},

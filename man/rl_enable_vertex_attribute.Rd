@@ -12,6 +12,12 @@ rl_enable_vertex_attribute(index)
 \description{
 Rl Enable Vertex Attribute
 }
+\examples{
+\dontrun{
+rl_enable_vertex_attribute(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

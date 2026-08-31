@@ -26,6 +26,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawTextCodepoint(Font font, int codepoint, Vector2 position, float fontSize, Color tint);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_text_codepoint(get_font_default(), 0L, c(100, 100), 1.0, "red")
+}
+
+}
 \seealso{
 Other draw functions: 
 \code{\link{draw_billboard}()},

@@ -23,6 +23,12 @@ A number
 \description{
 Float Remap
 }
+\examples{
+\dontrun{
+float_remap(0.0, 0.0, 0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other float functions: 
 \code{\link{float_clamp}()},

@@ -9,6 +9,12 @@ rl_enable_depth_mask()
 \description{
 Rl Enable Depth Mask
 }
+\examples{
+\dontrun{
+rl_enable_depth_mask()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -19,6 +19,12 @@ A number
 \description{
 Float Wrap
 }
+\examples{
+\dontrun{
+float_wrap(0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other float functions: 
 \code{\link{float_clamp}()},

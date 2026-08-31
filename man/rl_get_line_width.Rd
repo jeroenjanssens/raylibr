@@ -12,6 +12,12 @@ A number
 \description{
 Rl Get Line Width
 }
+\examples{
+\dontrun{
+rl_get_line_width()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

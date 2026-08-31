@@ -12,6 +12,12 @@ A numeric vector of length 3
 \description{
 Vector3 One
 }
+\examples{
+\dontrun{
+vector3_one()
+}
+
+}
 \seealso{
 Other vector3 functions: 
 \code{\link{vector3_add}()},

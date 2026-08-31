@@ -15,6 +15,12 @@ A 4x4 numeric matrix
 \description{
 Rl Get Matrix View Offset Stereo
 }
+\examples{
+\dontrun{
+rl_get_matrix_view_offset_stereo(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

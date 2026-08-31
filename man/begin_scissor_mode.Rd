@@ -24,6 +24,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void BeginScissorMode(int x, int y, int width, int height);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+begin_scissor_mode(100L, 100L, 800L, 450L)
+}
+
+}
 \seealso{
 Other mode functions: 
 \code{\link{begin_blend_mode}()},

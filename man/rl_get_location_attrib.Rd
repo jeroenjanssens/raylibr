@@ -17,6 +17,12 @@ An integer
 \description{
 Rl Get Location Attrib
 }
+\examples{
+\dontrun{
+rl_get_location_attrib(0L, "text")
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

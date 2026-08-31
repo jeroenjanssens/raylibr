@@ -22,6 +22,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void InitWindow(int width, int height, const char * title);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+init_window(800L, 450L, "My Window")
+}
+
+}
 \seealso{
 Other window functions: 
 \code{\link{close_window}()},

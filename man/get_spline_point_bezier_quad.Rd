@@ -27,6 +27,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Vector2 GetSplinePointBezierQuad(Vector2 p1, Vector2 c2, Vector2 p3, float t);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_spline_point_bezier_quad(c(100, 100), c(100, 100), c(100, 100), 0.0)
+}
+
+}
 \seealso{
 Other quad functions: 
 \code{\link{get_ray_collision_quad}()}

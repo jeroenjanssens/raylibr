@@ -15,6 +15,12 @@ A numeric vector of length 2
 \description{
 Vector2 Invert
 }
+\examples{
+\dontrun{
+vector2_invert(c(100, 100))
+}
+
+}
 \seealso{
 Other vector2 functions: 
 \code{\link{vector2_add}()},

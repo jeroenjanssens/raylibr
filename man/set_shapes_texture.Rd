@@ -20,6 +20,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void SetShapesTexture(Texture2D texture, Rectangle source);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+set_shapes_texture(load_texture("file.png"), rectangle(10, 10, 200, 100))
+}
+
+}
 \seealso{
 Other texture functions: 
 \code{\link{draw_texture}()},

@@ -20,6 +20,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void SetAudioStreamVolume(AudioStream stream, float volume);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+set_audio_stream_volume(load_audio_stream(44100L, 16L, 1L), 0.5)
+}
+
+}
 \seealso{
 Other volume functions: 
 \code{\link{get_master_volume}()},

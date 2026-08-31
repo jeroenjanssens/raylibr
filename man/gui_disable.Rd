@@ -9,6 +9,12 @@ gui_disable()
 \description{
 Disable gui controls (global state).
 }
+\examples{
+\dontrun{
+gui_disable()
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

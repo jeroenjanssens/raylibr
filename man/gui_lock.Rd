@@ -9,6 +9,12 @@ gui_lock()
 \description{
 Lock gui controls (global state).
 }
+\examples{
+\dontrun{
+gui_lock()
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

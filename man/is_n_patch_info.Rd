@@ -15,3 +15,9 @@ A logical.
 \description{
 Test if object is a n_patch_info
 }
+\examples{
+\dontrun{
+is_n_patch_info("not a n_patch_info")
+}
+
+}

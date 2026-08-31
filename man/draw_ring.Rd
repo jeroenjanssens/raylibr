@@ -38,6 +38,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawRing(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_ring(c(100, 100), 50.0, 50.0, 0.0, 0.0, 16L, "red")
+}
+
+}
 \seealso{
 Other draw functions: 
 \code{\link{draw_billboard}()},

@@ -14,6 +14,12 @@ rl_draw_vertex_array(offset, count)
 \description{
 Rl Draw Vertex Array
 }
+\examples{
+\dontrun{
+rl_draw_vertex_array(0L, 10L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -27,6 +27,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Ray GetScreenToWorldRayEx(Vector2 position, Camera camera, int width, int height);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_screen_to_world_ray_ex(c(100, 100), camera_3d(c(0, 10, 10)), 800L, 450L)
+}
+
+}
 \seealso{
 Other ex functions: 
 \code{\link{draw_cylinder_ex}()},

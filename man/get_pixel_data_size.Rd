@@ -25,6 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{int GetPixelDataSize(int width, int height, int format);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_pixel_data_size(800L, 450L, 0L)
+}
+
+}
 \seealso{
 Other size functions: 
 \code{\link{set_window_max_size}()},

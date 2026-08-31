@@ -12,6 +12,12 @@ gui_set_tooltip(tooltip)
 \description{
 Set tooltip string.
 }
+\examples{
+\dontrun{
+gui_set_tooltip("text")
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{const char * GetDirectoryPath(const char * filePath);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_directory_path("file.png")
+}
+
+}
 \seealso{
 Other path functions: 
 \code{\link{get_prev_directory_path}()}

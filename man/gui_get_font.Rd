@@ -12,6 +12,12 @@ A font
 \description{
 Get gui custom font (global state).
 }
+\examples{
+\dontrun{
+gui_get_font()
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

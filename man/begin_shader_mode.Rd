@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void BeginShaderMode(Shader shader);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+begin_shader_mode(load_shader("", "shader.fs"))
+}
+
+}
 \seealso{
 Other mode functions: 
 \code{\link{begin_blend_mode}()},

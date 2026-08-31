@@ -32,4 +32,12 @@ This class has been auto-generated from the following Raylib struct definition:
 \} RayCollision;
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+ray <- ray_collision(TRUE, 1.0, c(0, 0, 0), c(0, 0, 0))
+ray$hit
+ray$distance
+}
+
+}
 \concept{ray_collision functions}

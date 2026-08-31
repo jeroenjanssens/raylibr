@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void PauseMusicStream(Music music);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+pause_music_stream(load_music_stream("music.mp3"))
+}
+
+}
 \seealso{
 Other stream functions: 
 \code{\link{load_audio_stream}()},

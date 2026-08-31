@@ -34,4 +34,12 @@ Enum values for \code{gui_control}.
    \code{statusbar} \tab 15 \cr
 }
 }
+\examples{
+\dontrun{
+gui_control$default
+gui_control$combobox
+gui_control$statusbar
+}
+
+}
 \keyword{datasets}

@@ -16,6 +16,12 @@ rl_set_blend_factors(gl_src_factor, gl_dst_factor, gl_equation)
 \description{
 Rl Set Blend Factors
 }
+\examples{
+\dontrun{
+rl_set_blend_factors(0L, 0L, 0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

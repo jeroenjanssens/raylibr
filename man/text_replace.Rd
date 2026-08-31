@@ -25,6 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{char * TextReplace(const char * text, const char * search, const char * replacement);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+text_replace("Hello", "text", "text")
+}
+
+}
 \seealso{
 Other replace functions: 
 \code{\link{file_text_replace}()}

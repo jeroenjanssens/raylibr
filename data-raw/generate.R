@@ -112,6 +112,98 @@ return_map <- list(
   "Camera"         = list(r_doc = "A camera_3d")
 )
 
+# Example value generation for @examples in documentation
+get_example_value <- function(type, param_name = "") {
+  pn <- tolower(param_name)
+  if (type %in% c("int", "unsigned int")) {
+    if (grepl("width", pn)) return("800L")
+    if (grepl("height", pn)) return("450L")
+    if (pn %in% c("pos_x", "start_pos_x", "center_x", "end_pos_x", "x")) return("100L")
+    if (pn %in% c("pos_y", "start_pos_y", "center_y", "end_pos_y", "y")) return("100L")
+    if (grepl("font_size", pn)) return("20L")
+    if (grepl("fps", pn)) return("60L")
+    if (grepl("slices|segments", pn)) return("16L")
+    if (grepl("rings", pn)) return("8L")
+    if (grepl("seed", pn)) return("42L")
+    if (pn %in% c("loc_index", "map_type", "mode", "layout", "index", "frame")) return("0L")
+    if (grepl("size", pn)) return("32L")
+    if (grepl("count", pn)) return("10L")
+    if (grepl("cols|columns", pn)) return("4L")
+    if (grepl("rows", pn)) return("4L")
+    return("0L")
+  }
+  if (type == "unsigned char") return("255L")
+  if (type %in% c("float", "double")) {
+    if (grepl("radius|outer_radius|inner_radius", pn)) return("50.0")
+    if (grepl("thick|line_thick", pn)) return("2.0")
+    if (grepl("rotation|angle|start_angle|end_angle", pn)) return("0.0")
+    if (grepl("scale|zoom", pn)) return("1.0")
+    if (grepl("speed", pn)) return("1.0")
+    if (grepl("width", pn)) return("200.0")
+    if (grepl("height", pn)) return("100.0")
+    if (grepl("length", pn)) return("100.0")
+    if (grepl("spacing", pn)) return("1.0")
+    if (grepl("fovy|fov", pn)) return("70.0")
+    if (grepl("volume", pn)) return("0.5")
+    if (grepl("pitch", pn)) return("1.0")
+    if (grepl("pan", pn)) return("0.5")
+    if (grepl("value|min|max", pn)) return("0.0")
+    if (grepl("aspect", pn)) return("1.78")
+    if (grepl("distance|delta|size", pn)) return("1.0")
+    return("0.0")
+  }
+  if (type == "bool") return("TRUE")
+  if (type %in% c("const char *", "char *")) {
+    if (grepl("file", pn) && grepl("font", pn)) return('"font.ttf"')
+    if (grepl("file_name|file_path|path", pn)) return('"file.png"')
+    if (grepl("title", pn)) return('"My Window"')
+    if (grepl("text|message|label", pn)) return('"Hello"')
+    if (grepl("url", pn)) return('"https://example.com"')
+    if (grepl("extension|ext", pn)) return('".png"')
+    if (grepl("vs_file_name", pn)) return('""')
+    if (grepl("fs_file_name", pn)) return('"shader.fs"')
+    return('"text"')
+  }
+  if (type == "Color") return('"red"')
+  if (type == "Vector2") return("c(100, 100)")
+  if (type == "Vector3") {
+    if (grepl("up", pn)) return("c(0, 1, 0)")
+    if (grepl("target", pn)) return("c(0, 0, 0)")
+    if (grepl("position|pos", pn)) return("c(0, 5, 0)")
+    if (grepl("size|scale", pn)) return("c(1, 1, 1)")
+    return("c(0, 0, 0)")
+  }
+  if (type %in% c("Vector4", "Quaternion")) return("c(0, 0, 0, 1)")
+  if (type == "Matrix") return("diag(4)")
+  if (type == "Rectangle") return("rectangle(10, 10, 200, 100)")
+  if (type == "Image") return('gen_image_color(100, 100, "blue")')
+  if (type %in% c("Texture2D", "Texture")) return('load_texture("file.png")')
+  if (type %in% c("RenderTexture2D", "RenderTexture")) return("load_render_texture(800, 450)")
+  if (type == "Font") return("get_font_default()")
+  if (type %in% c("Camera3D", "Camera")) return("camera_3d(c(0, 10, 10))")
+  if (type == "Camera2D") return("camera_2d(c(400, 300), c(0, 0))")
+  if (type == "Shader") return('load_shader("", "shader.fs")')
+  if (type == "Ray") return("ray(c(0, 0, 0), c(0, 0, 1))")
+  if (type == "RayCollision") return("ray_collision(TRUE, 1.0, c(0, 0, 5), c(0, 0, -1))")
+  if (type == "BoundingBox") return("bounding_box(c(-1, -1, -1), c(1, 1, 1))")
+  if (type == "Mesh") return("gen_mesh_cube(1.0, 1.0, 1.0)")
+  if (type == "Material") return("load_material_default()")
+  if (type == "MaterialMap") return('material_map(texture, "white", 1.0)')
+  if (type == "Model") return('load_model("model.obj")')
+  if (type == "ModelAnimation") return("anim")
+  if (type == "Transform") return("transform(c(0, 0, 0), c(0, 0, 0, 1), c(1, 1, 1))")
+  if (type == "Wave") return('load_wave("sound.wav")')
+  if (type == "Sound") return('load_sound("sound.wav")')
+  if (type == "Music") return('load_music_stream("music.mp3")')
+  if (type == "AudioStream") return("load_audio_stream(44100L, 16L, 1L)")
+  if (type == "NPatchInfo") return("n_patch_info(rectangle(0, 0, 64, 64), 16L, 16L, 16L, 16L, 0L)")
+  if (type == "GlyphInfo") return("glyph_info(65L, 0L, 0L, 16L)")
+  if (type == "BoneInfo") return("bone")
+  if (type == "VrDeviceInfo") return("device")
+  if (type == "VrStereoConfig") return("config")
+  "value"
+}
+
 # Per-function parameter defaults (PascalCase C name -> list of snake_case param = "R expression"))
 function_defaults <- list(
   InitWindow       = list(width = "640L", height = "480L", title = '"raylibr"'),
@@ -627,6 +719,19 @@ generate_function_r <- function(func_row) {
     lines <- c(lines, paste0("#' @family ", fam))
   }
   lines <- c(lines, "#'")
+
+  # Examples
+  lines <- c(lines, "#' @examples")
+  lines <- c(lines, "#' \\dontrun{")
+  if (is.null(params) || nrow(params) == 0) {
+    lines <- c(lines, paste0("#' ", snake, "()"))
+  } else {
+    example_args <- sapply(seq_len(nrow(params)), function(i) {
+      get_example_value(params$type[i], field_to_snake(params$name[i]))
+    })
+    lines <- c(lines, paste0("#' ", snake, "(", paste(example_args, collapse = ", "), ")"))
+  }
+  lines <- c(lines, "#' }")
   lines <- c(lines, "#'")
   lines <- c(lines, "#' @export")
 
@@ -692,14 +797,50 @@ generate_struct_r <- function(struct_row) {
   fields <- struct_row$fields[[1]]
   snake <- get_r_class_name(name)
 
+  opaque_create <- list(
+    Image = 'gen_image_color(100, 100, "blue")',
+    Font = "get_font_default()",
+    Mesh = "gen_mesh_cube(1.0, 1.0, 1.0)",
+    Shader = 'load_shader("", "shader.fs")',
+    Material = "load_material_default()",
+    Model = 'load_model("model.obj")',
+    ModelAnimation = NULL,
+    Wave = 'load_wave("sound.wav")',
+    AudioStream = "load_audio_stream(44100L, 16L, 1L)",
+    Sound = 'load_sound("sound.wav")',
+    Music = 'load_music_stream("music.mp3")',
+    VrDeviceInfo = NULL, VrStereoConfig = NULL, BoneInfo = NULL
+  )
+
   if (name %in% opaque_structs) {
-    # Opaque structs: just is_* function and minimal class
+    example_lines <- character(0)
+    create_expr <- opaque_create[[name]]
+    if (!is.null(create_expr)) {
+      abbr <- substr(snake, 1, 1)
+      example_lines <- c(
+        "#' @examples",
+        "#' \\dontrun{",
+        paste0("#' ", abbr, " <- ", create_expr),
+        paste0("#' is_", snake, "(", abbr, ")"),
+        "#' }"
+      )
+    } else {
+      example_lines <- c(
+        "#' @examples",
+        "#' \\dontrun{",
+        paste0("#' is_", snake, "(x)"),
+        "#' }"
+      )
+    }
+
     lines <- c(
       paste0("#' Test if object is a ", snake),
       "#'",
       paste0("#' @param x An object to test."),
       "#'",
       paste0("#' @return A logical."),
+      "#'",
+      example_lines,
       "#'",
       paste0("#' @export"),
       paste0("is_", snake, " <- function(x) {"),
@@ -723,6 +864,11 @@ generate_struct_r <- function(struct_row) {
   lines <- c(lines, "#' @param x An object to test.")
   lines <- c(lines, "#'")
   lines <- c(lines, "#' @return A logical.")
+  lines <- c(lines, "#'")
+  lines <- c(lines, "#' @examples")
+  lines <- c(lines, "#' \\dontrun{")
+  lines <- c(lines, paste0("#' is_", snake, '("not a ', snake, '")'))
+  lines <- c(lines, "#' }")
   lines <- c(lines, "#'")
   lines <- c(lines, "#' @export")
   lines <- c(lines, paste0("is_", snake, " <- function(x) {"))
@@ -764,10 +910,39 @@ generate_struct_r <- function(struct_row) {
   lines <- c(lines, "#'")
   lines <- c(lines, paste0("#' @family ", snake, " functions"))
   lines <- c(lines, "#'")
+
+  # Per-field defaults for specific structs (needed for examples too)
+  field_defaults <- list(
+    Color = list(a = "255"),
+    Camera3D = list(target = "c(0, 0, 0)", up = "c(0, 1, 0)", fovy = "70", projection = "0L"),
+    Camera2D = list(rotation = "0", zoom = "1")
+  )
+  defaults <- field_defaults[[name]]
+
+  # Generate constructor example
+  example_args <- character(0)
+  for (i in seq_len(nrow(wrappable_fields))) {
+    fname <- field_snakes[i]
+    ftype <- wrappable_fields$type[i]
+    if (!is.null(defaults) && !is.null(defaults[[fname]])) next
+    example_args <- c(example_args, get_example_value(ftype, fname))
+  }
+  var_name <- if (nchar(snake) <= 3) snake else substr(snake, 1, 3)
+  ctor_call <- paste0(snake, "(", paste(example_args, collapse = ", "), ")")
+  # Pick 1-2 fields to show access
+  show_fields <- field_snakes[c(1, min(2, length(field_snakes)))]
+  show_fields <- unique(show_fields)
+  lines <- c(lines, "#' @examples")
+  lines <- c(lines, "#' \\dontrun{")
+  lines <- c(lines, paste0("#' ", var_name, " <- ", ctor_call))
+  for (sf in show_fields) {
+    lines <- c(lines, paste0("#' ", var_name, "$", sf))
+  }
+  lines <- c(lines, "#' }")
   lines <- c(lines, "#'")
   lines <- c(lines, "#' @export")
 
-  # Per-field defaults for specific structs
+  # Per-field defaults for specific structs (reuse)
   field_defaults <- list(
     Color = list(a = "255"),
     Camera3D = list(target = "c(0, 0, 0)", up = "c(0, 1, 0)", fovy = "70", projection = "0L"),
@@ -928,6 +1103,7 @@ generate_enums_r <- function(enums) {
     # Build table rows and list entries together
     table_rows <- character(0)
     entries <- character(0)
+    short_names <- character(0)
     for (j in seq_len(nrow(values))) {
       val_name <- values$name[j]
       val_value <- values$value[j]
@@ -941,12 +1117,25 @@ generate_enums_r <- function(enums) {
 
       table_rows <- c(table_rows, paste0("#' | `", short_name, "` | ", val_value, " |"))
       entries <- c(entries, paste0("  ", short_name, " = ", val_value))
+      short_names <- c(short_names, short_name)
     }
 
     # Add markdown table to roxygen
     all_lines <- c(all_lines, "#' | Name | Value |")
     all_lines <- c(all_lines, "#' | --- | ---: |")
     all_lines <- c(all_lines, table_rows)
+    all_lines <- c(all_lines, "#'")
+
+    # Add examples
+    n_vals <- length(short_names)
+    ex_idx <- unique(c(1, ceiling(n_vals / 2), n_vals))
+    if (n_vals <= 2) ex_idx <- seq_len(n_vals)
+    all_lines <- c(all_lines, "#' @examples")
+    all_lines <- c(all_lines, "#' \\dontrun{")
+    for (idx in ex_idx) {
+      all_lines <- c(all_lines, paste0("#' ", r_name, "$", short_names[idx]))
+    }
+    all_lines <- c(all_lines, "#' }")
     all_lines <- c(all_lines, "#'")
     all_lines <- c(all_lines, "#' @export")
     all_lines <- c(all_lines, paste0(r_name, " <- list("))
@@ -1252,6 +1441,23 @@ if (file.exists(rlgl_api_file)) {
 
     lines <- c(lines, "#' @family rlgl functions")
     lines <- c(lines, "#'")
+
+    # Examples
+    lines <- c(lines, "#' @examples")
+    lines <- c(lines, "#' \\dontrun{")
+    if (is.null(params) || (is.data.frame(params) && nrow(params) == 0)) {
+      lines <- c(lines, paste0("#' ", snake, "()"))
+    } else {
+      param_names <- field_to_snake(params$name)
+      rlgl_example_args <- sapply(seq_len(nrow(params)), function(j) {
+        ptype <- params$type[j]
+        if (ptype == "unsigned short") ptype <- "unsigned int"
+        get_example_value(ptype, param_names[j])
+      })
+      lines <- c(lines, paste0("#' ", snake, "(", paste(rlgl_example_args, collapse = ", "), ")"))
+    }
+    lines <- c(lines, "#' }")
+    lines <- c(lines, "#'")
     lines <- c(lines, "#' @export")
 
     if (is.null(params) || (is.data.frame(params) && nrow(params) == 0)) {
@@ -1396,6 +1602,21 @@ if (file.exists(raymath_api_file)) {
     }
 
     lines <- c(lines, paste0("#' @family ", family))
+    lines <- c(lines, "#'")
+
+    # Examples
+    lines <- c(lines, "#' @examples")
+    lines <- c(lines, "#' \\dontrun{")
+    if (is.null(params) || (is.data.frame(params) && nrow(params) == 0)) {
+      lines <- c(lines, paste0("#' ", snake, "()"))
+    } else {
+      param_names <- field_to_snake(params$name)
+      rm_example_args <- sapply(seq_len(nrow(params)), function(j) {
+        get_example_value(params$type[j], param_names[j])
+      })
+      lines <- c(lines, paste0("#' ", snake, "(", paste(rm_example_args, collapse = ", "), ")"))
+    }
+    lines <- c(lines, "#' }")
     lines <- c(lines, "#'")
     lines <- c(lines, "#' @export")
 
@@ -1673,6 +1894,23 @@ if (file.exists(raygui_api_file)) {
 
     lines <- c(lines, "#' @family gui functions")
     lines <- c(lines, "#'")
+
+    # Examples
+    lines <- c(lines, "#' @examples")
+    lines <- c(lines, "#' \\dontrun{")
+    if (is.null(params) || (is.data.frame(params) && nrow(params) == 0)) {
+      lines <- c(lines, paste0("#' ", snake, "()"))
+    } else {
+      param_names <- field_to_snake(params$name)
+      gui_example_args <- sapply(seq_len(nrow(params)), function(j) {
+        ptype <- params$type[j]
+        if (is_output_ptr(ptype)) ptype <- ptr_base_type(ptype)
+        get_example_value(ptype, param_names[j])
+      })
+      lines <- c(lines, paste0("#' ", snake, "(", paste(gui_example_args, collapse = ", "), ")"))
+    }
+    lines <- c(lines, "#' }")
+    lines <- c(lines, "#'")
     lines <- c(lines, "#' @export")
 
     if (is.null(params) || (is.data.frame(params) && nrow(params) == 0)) {
@@ -1750,16 +1988,20 @@ if (file.exists(raygui_api_file)) {
                        "NA", "NA_integer_", "NA_real_", "NA_complex_", "NA_character_")
       table_rows <- character(0)
       entries <- character(0)
+      example_names <- character(0)
       for (j in seq_len(nrow(values))) {
         val_name <- values$name[j]
         val_value <- values$value[j]
         short_name <- if (nzchar(prefix)) sub(paste0("^", prefix), "", val_name) else val_name
         short_name <- tolower(short_name)
+        clean_name <- short_name
         if (short_name %in% r_reserved || grepl("^[0-9]", short_name)) {
           table_rows <- c(table_rows, paste0("#' | `", short_name, "` | ", val_value, " |"))
           short_name <- paste0("`", short_name, "`")
+          example_names <- c(example_names, paste0('[["', clean_name, '"]]'))
         } else {
           table_rows <- c(table_rows, paste0("#' | `", short_name, "` | ", val_value, " |"))
+          example_names <- c(example_names, paste0("$", clean_name))
         }
         entries <- c(entries, paste0("  ", short_name, " = ", val_value, "L"))
       }
@@ -1768,6 +2010,18 @@ if (file.exists(raygui_api_file)) {
       enum_lines <- c(enum_lines, "#' | Name | Value |")
       enum_lines <- c(enum_lines, "#' | --- | ---: |")
       enum_lines <- c(enum_lines, table_rows)
+      enum_lines <- c(enum_lines, "#'")
+
+      # Add examples
+      n_vals <- length(example_names)
+      ex_idx <- unique(c(1, ceiling(n_vals / 2), n_vals))
+      if (n_vals <= 2) ex_idx <- seq_len(n_vals)
+      enum_lines <- c(enum_lines, "#' @examples")
+      enum_lines <- c(enum_lines, "#' \\dontrun{")
+      for (idx in ex_idx) {
+        enum_lines <- c(enum_lines, paste0("#' ", r_name, example_names[idx]))
+      }
+      enum_lines <- c(enum_lines, "#' }")
       enum_lines <- c(enum_lines, "#'")
       enum_lines <- c(enum_lines, "#' @export")
       enum_lines <- c(enum_lines, paste0(r_name, " <- list("))

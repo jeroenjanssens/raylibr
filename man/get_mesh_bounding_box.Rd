@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{BoundingBox GetMeshBoundingBox(Mesh mesh);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_mesh_bounding_box(gen_mesh_cube(1.0, 1.0, 1.0))
+}
+
+}
 \seealso{
 Other box functions: 
 \code{\link{draw_bounding_box}()},

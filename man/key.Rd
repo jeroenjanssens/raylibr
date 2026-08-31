@@ -127,4 +127,12 @@ Enum values for \code{key}.
    \code{volume_down} \tab 25 \cr
 }
 }
+\examples{
+\dontrun{
+key$apostrophe
+key$right
+key$volume_down
+}
+
+}
 \keyword{datasets}

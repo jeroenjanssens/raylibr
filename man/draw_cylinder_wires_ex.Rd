@@ -35,6 +35,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawCylinderWiresEx(Vector3 startPos, Vector3 endPos, float startRadius, float endRadius, int sides, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_cylinder_wires_ex(c(0, 5, 0), c(0, 5, 0), 50.0, 50.0, 0L, "red")
+}
+
+}
 \seealso{
 Other ex functions: 
 \code{\link{draw_cylinder_ex}()},

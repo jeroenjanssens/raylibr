@@ -12,6 +12,12 @@ rl_set_point_size(size)
 \description{
 Rl Set Point Size
 }
+\examples{
+\dontrun{
+rl_set_point_size(1.0)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -17,6 +17,12 @@ A number
 \description{
 Vector3 Dot Product
 }
+\examples{
+\dontrun{
+vector3_dot_product(c(0, 0, 0), c(0, 0, 0))
+}
+
+}
 \seealso{
 Other vector3 functions: 
 \code{\link{vector3_add}()},

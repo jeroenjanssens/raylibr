@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsPathFile(const char * path);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_path_file("file.png")
+}
+
+}
 \seealso{
 Other is functions: 
 \code{\link{is_audio_device_ready}()},

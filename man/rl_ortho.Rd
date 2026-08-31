@@ -22,6 +22,12 @@ rl_ortho(left, right, bottom, top, znear, zfar)
 \description{
 Rl Ortho
 }
+\examples{
+\dontrun{
+rl_ortho(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

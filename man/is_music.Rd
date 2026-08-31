@@ -15,3 +15,10 @@ A logical.
 \description{
 Test if object is a music
 }
+\examples{
+\dontrun{
+m <- load_music_stream("music.mp3")
+is_music(m)
+}
+
+}

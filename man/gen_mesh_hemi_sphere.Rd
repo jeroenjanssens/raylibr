@@ -25,6 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Mesh GenMeshHemiSphere(float radius, int rings, int slices);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+gen_mesh_hemi_sphere(50.0, 8L, 16L)
+}
+
+}
 \seealso{
 Other sphere functions: 
 \code{\link{check_collision_box_sphere}()},

@@ -15,6 +15,12 @@ A string
 \description{
 Rl Get Pixel Format Name
 }
+\examples{
+\dontrun{
+rl_get_pixel_format_name(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

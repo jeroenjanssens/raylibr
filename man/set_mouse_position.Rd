@@ -20,6 +20,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void SetMousePosition(int x, int y);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+set_mouse_position(100L, 100L)
+}
+
+}
 \seealso{
 Other position functions: 
 \code{\link{get_monitor_position}()},

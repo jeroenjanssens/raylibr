@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Image ImageCopy(Image image);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+image_copy(gen_image_color(100, 100, "blue"))
+}
+
+}
 \seealso{
 Other copy functions: 
 \code{\link{file_copy}()},

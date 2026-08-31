@@ -12,6 +12,12 @@ An integer
 \description{
 Rl Load Vertex Array
 }
+\examples{
+\dontrun{
+rl_load_vertex_array()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

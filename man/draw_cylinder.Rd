@@ -28,6 +28,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawCylinder(Vector3 position, float radiusTop, float radiusBottom, float height, int slices, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_cylinder(c(0, 5, 0), 50.0, 50.0, 100.0, 16L, "red")
+}
+
+}
 \seealso{
 Other cylinder functions: 
 \code{\link{gen_mesh_cylinder}()}

@@ -18,6 +18,12 @@ rl_rotatef(angle, x, y, z)
 \description{
 Rl Rotatef
 }
+\examples{
+\dontrun{
+rl_rotatef(0.0, 0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

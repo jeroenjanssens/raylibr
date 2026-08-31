@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool TextIsEqual(const char * text1, const char * text2);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+text_is_equal("Hello", "Hello")
+}
+
+}
 \seealso{
 Other equal functions: 
 \code{\link{color_is_equal}()}

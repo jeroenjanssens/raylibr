@@ -12,6 +12,12 @@ rl_unload_texture(id)
 \description{
 Rl Unload Texture
 }
+\examples{
+\dontrun{
+rl_unload_texture(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

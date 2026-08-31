@@ -19,6 +19,12 @@ A list with \code{result} (integer), \code{active} (logical).
 \description{
 Toggle Button control.
 }
+\examples{
+\dontrun{
+gui_toggle(rectangle(10, 10, 200, 100), "Hello", TRUE)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

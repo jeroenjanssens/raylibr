@@ -25,6 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{char * GetTextBetween(const char * text, const char * begin, const char * end);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_text_between("Hello", "text", "text")
+}
+
+}
 \seealso{
 Other between functions: 
 \code{\link{text_replace_between}()}

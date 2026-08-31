@@ -17,6 +17,12 @@ A numeric vector of length 4
 \description{
 Quaternion From Vector3 To Vector3
 }
+\examples{
+\dontrun{
+quaternion_from_vector3_to_vector3(c(0, 0, 0), c(0, 0, 0))
+}
+
+}
 \seealso{
 Other quaternion functions: 
 \code{\link{quaternion_add}()},

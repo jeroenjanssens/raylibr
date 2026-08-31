@@ -12,6 +12,12 @@ rl_matrix_mode(mode)
 \description{
 Rl Matrix Mode
 }
+\examples{
+\dontrun{
+rl_matrix_mode(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

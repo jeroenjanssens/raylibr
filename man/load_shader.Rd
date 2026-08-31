@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Shader LoadShader(const char * vsFileName, const char * fsFileName);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+load_shader("file.png", "file.png")
+}
+
+}
 \seealso{
 Other shader functions: 
 \code{\link{set_shader_value}()},

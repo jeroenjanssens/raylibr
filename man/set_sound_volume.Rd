@@ -20,6 +20,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void SetSoundVolume(Sound sound, float volume);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+set_sound_volume(load_sound("sound.wav"), 0.5)
+}
+
+}
 \seealso{
 Other volume functions: 
 \code{\link{get_master_volume}()},

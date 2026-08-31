@@ -31,4 +31,10 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Image GenImageChecked(int width, int height, int checksX, int checksY, Color col1, Color col2);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+gen_image_checked(800L, 450L, 0L, 0L, "red", "red")
+}
+
+}
 \concept{checked functions}

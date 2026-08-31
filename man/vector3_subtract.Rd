@@ -17,6 +17,12 @@ A numeric vector of length 3
 \description{
 Vector3 Subtract
 }
+\examples{
+\dontrun{
+vector3_subtract(c(0, 0, 0), c(0, 0, 0))
+}
+
+}
 \seealso{
 Other vector3 functions: 
 \code{\link{vector3_add}()},

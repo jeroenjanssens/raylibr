@@ -9,6 +9,12 @@ rl_enable_stereo_render()
 \description{
 Rl Enable Stereo Render
 }
+\examples{
+\dontrun{
+rl_enable_stereo_render()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

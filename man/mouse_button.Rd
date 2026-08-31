@@ -25,4 +25,12 @@ Enum values for \code{mouse_button}.
    \code{back} \tab 6 \cr
 }
 }
+\examples{
+\dontrun{
+mouse_button$left
+mouse_button$side
+mouse_button$back
+}
+
+}
 \keyword{datasets}

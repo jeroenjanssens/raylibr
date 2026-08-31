@@ -6,6 +6,11 @@
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_enable()
+#' }
+#'
 #' @export
 gui_enable <- function() {
   gui_enable_()
@@ -16,6 +21,11 @@ gui_enable <- function() {
 #' Disable gui controls (global state).
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_disable()
+#' }
 #'
 #' @export
 gui_disable <- function() {
@@ -28,6 +38,11 @@ gui_disable <- function() {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_lock()
+#' }
+#'
 #' @export
 gui_lock <- function() {
   gui_lock_()
@@ -38,6 +53,11 @@ gui_lock <- function() {
 #' Unlock gui controls (global state).
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_unlock()
+#' }
 #'
 #' @export
 gui_unlock <- function() {
@@ -52,6 +72,11 @@ gui_unlock <- function() {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_is_locked()
+#' }
+#'
 #' @export
 gui_is_locked <- function() {
   gui_is_locked_()
@@ -64,6 +89,11 @@ gui_is_locked <- function() {
 #' @param alpha A number.
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_set_alpha(0.0)
+#' }
 #'
 #' @export
 gui_set_alpha <- function(alpha) {
@@ -79,6 +109,11 @@ gui_set_alpha <- function(alpha) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_set_state(0L)
+#' }
+#'
 #' @export
 gui_set_state <- function(state) {
   if (!is_int(state)) abort(paste0('`state` must be an integer, not ', friendly_typeof(state), '.'), call = NULL)
@@ -93,6 +128,11 @@ gui_set_state <- function(state) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_get_state()
+#' }
+#'
 #' @export
 gui_get_state <- function() {
   gui_get_state_()
@@ -105,6 +145,11 @@ gui_get_state <- function() {
 #' @param font A font.
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_set_font(get_font_default())
+#' }
 #'
 #' @export
 gui_set_font <- function(font) {
@@ -120,6 +165,11 @@ gui_set_font <- function(font) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_get_font()
+#' }
+#'
 #' @export
 gui_get_font <- function() {
   gui_get_font_()
@@ -134,6 +184,11 @@ gui_get_font <- function() {
 #' @param value An integer.
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_set_style(0L, 0L, 0L)
+#' }
 #'
 #' @export
 gui_set_style <- function(control, property, value) {
@@ -154,6 +209,11 @@ gui_set_style <- function(control, property, value) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_get_style(0L, 0L)
+#' }
+#'
 #' @export
 gui_get_style <- function(control, property) {
   if (!is_int(control)) abort(paste0('`control` must be an integer, not ', friendly_typeof(control), '.'), call = NULL)
@@ -169,6 +229,11 @@ gui_get_style <- function(control, property) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_load_style("file.png")
+#' }
+#'
 #' @export
 gui_load_style <- function(file_name) {
   if (!is_const_char_pointer(file_name)) abort(paste0('`file_name` must be a string, not ', friendly_typeof(file_name), '.'), call = NULL)
@@ -181,6 +246,11 @@ gui_load_style <- function(file_name) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_load_style_default()
+#' }
+#'
 #' @export
 gui_load_style_default <- function() {
   gui_load_style_default_()
@@ -192,6 +262,11 @@ gui_load_style_default <- function() {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_enable_tooltip()
+#' }
+#'
 #' @export
 gui_enable_tooltip <- function() {
   gui_enable_tooltip_()
@@ -202,6 +277,11 @@ gui_enable_tooltip <- function() {
 #' Disable gui tooltips (global state).
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_disable_tooltip()
+#' }
 #'
 #' @export
 gui_disable_tooltip <- function() {
@@ -216,6 +296,11 @@ gui_disable_tooltip <- function() {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_set_tooltip("text")
+#' }
+#'
 #' @export
 gui_set_tooltip <- function(tooltip) {
   if (!is_const_char_pointer(tooltip)) abort(paste0('`tooltip` must be a string, not ', friendly_typeof(tooltip), '.'), call = NULL)
@@ -229,6 +314,11 @@ gui_set_tooltip <- function(tooltip) {
 #' @param scale An integer.
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_set_icon_scale(0L)
+#' }
 #'
 #' @export
 gui_set_icon_scale <- function(scale) {
@@ -247,6 +337,11 @@ gui_set_icon_scale <- function(scale) {
 #' @param color A color.
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_draw_icon(0L, 100L, 100L, 32L, "red")
+#' }
 #'
 #' @export
 gui_draw_icon <- function(icon_id, pos_x, pos_y, pixel_size, color) {
@@ -268,6 +363,11 @@ gui_draw_icon <- function(icon_id, pos_x, pos_y, pixel_size, color) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_get_text_width("Hello")
+#' }
+#'
 #' @export
 gui_get_text_width <- function(text) {
   if (!is_const_char_pointer(text)) abort(paste0('`text` must be a string, not ', friendly_typeof(text), '.'), call = NULL)
@@ -284,6 +384,11 @@ gui_get_text_width <- function(text) {
 #' @return An integer
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_window_box(rectangle(10, 10, 200, 100), "My Window")
+#' }
 #'
 #' @export
 gui_window_box <- function(bounds, title) {
@@ -303,6 +408,11 @@ gui_window_box <- function(bounds, title) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_group_box(rectangle(10, 10, 200, 100), "Hello")
+#' }
+#'
 #' @export
 gui_group_box <- function(bounds, text) {
   if (!is_rectangle(bounds)) abort(paste0('`bounds` must be a rectangle, not ', friendly_typeof(bounds), '.'), call = NULL)
@@ -320,6 +430,11 @@ gui_group_box <- function(bounds, text) {
 #' @return An integer
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_line(rectangle(10, 10, 200, 100), "Hello")
+#' }
 #'
 #' @export
 gui_line <- function(bounds, text) {
@@ -339,6 +454,11 @@ gui_line <- function(bounds, text) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_panel(rectangle(10, 10, 200, 100), "Hello")
+#' }
+#'
 #' @export
 gui_panel <- function(bounds, text) {
   if (!is_rectangle(bounds)) abort(paste0('`bounds` must be a rectangle, not ', friendly_typeof(bounds), '.'), call = NULL)
@@ -356,6 +476,11 @@ gui_panel <- function(bounds, text) {
 #' @return An integer
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_label(rectangle(10, 10, 200, 100), "Hello")
+#' }
 #'
 #' @export
 gui_label <- function(bounds, text) {
@@ -375,6 +500,11 @@ gui_label <- function(bounds, text) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_button(rectangle(10, 10, 200, 100), "Hello")
+#' }
+#'
 #' @export
 gui_button <- function(bounds, text) {
   if (!is_rectangle(bounds)) abort(paste0('`bounds` must be a rectangle, not ', friendly_typeof(bounds), '.'), call = NULL)
@@ -392,6 +522,11 @@ gui_button <- function(bounds, text) {
 #' @return An integer
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_label_button(rectangle(10, 10, 200, 100), "Hello")
+#' }
 #'
 #' @export
 gui_label_button <- function(bounds, text) {
@@ -411,6 +546,11 @@ gui_label_button <- function(bounds, text) {
 #' @return A list with \code{result} (integer), \code{active} (logical).
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_toggle(rectangle(10, 10, 200, 100), "Hello", TRUE)
+#' }
 #'
 #' @export
 gui_toggle <- function(bounds, text, active) {
@@ -432,6 +572,11 @@ gui_toggle <- function(bounds, text, active) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_toggle_group(rectangle(10, 10, 200, 100), "Hello", 0L)
+#' }
+#'
 #' @export
 gui_toggle_group <- function(bounds, text, active) {
   if (!is_rectangle(bounds)) abort(paste0('`bounds` must be a rectangle, not ', friendly_typeof(bounds), '.'), call = NULL)
@@ -451,6 +596,11 @@ gui_toggle_group <- function(bounds, text, active) {
 #' @return A list with \code{result} (integer), \code{active} (integer).
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_toggle_slider(rectangle(10, 10, 200, 100), "Hello", 0L)
+#' }
 #'
 #' @export
 gui_toggle_slider <- function(bounds, text, active) {
@@ -472,6 +622,11 @@ gui_toggle_slider <- function(bounds, text, active) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_check_box(rectangle(10, 10, 200, 100), "Hello", TRUE)
+#' }
+#'
 #' @export
 gui_check_box <- function(bounds, text, checked) {
   if (!is_rectangle(bounds)) abort(paste0('`bounds` must be a rectangle, not ', friendly_typeof(bounds), '.'), call = NULL)
@@ -491,6 +646,11 @@ gui_check_box <- function(bounds, text, checked) {
 #' @return A list with \code{result} (integer), \code{active} (integer).
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_combo_box(rectangle(10, 10, 200, 100), "Hello", 0L)
+#' }
 #'
 #' @export
 gui_combo_box <- function(bounds, text, active) {
@@ -512,6 +672,11 @@ gui_combo_box <- function(bounds, text, active) {
 #' @return A list with \code{result} (integer), \code{active} (integer).
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_dropdown_box(rectangle(10, 10, 200, 100), "Hello", 0L, TRUE)
+#' }
 #'
 #' @export
 gui_dropdown_box <- function(bounds, text, active, edit_mode) {
@@ -536,6 +701,11 @@ gui_dropdown_box <- function(bounds, text, active, edit_mode) {
 #' @return A list with \code{result} (integer), \code{value} (integer).
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_spinner(rectangle(10, 10, 200, 100), "Hello", 0L, 0L, 0L, TRUE)
+#' }
 #'
 #' @export
 gui_spinner <- function(bounds, text, value, min_value, max_value, edit_mode) {
@@ -563,6 +733,11 @@ gui_spinner <- function(bounds, text, value, min_value, max_value, edit_mode) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_value_box(rectangle(10, 10, 200, 100), "Hello", 0L, 0L, 0L, TRUE)
+#' }
+#'
 #' @export
 gui_value_box <- function(bounds, text, value, min_value, max_value, edit_mode) {
   if (!is_rectangle(bounds)) abort(paste0('`bounds` must be a rectangle, not ', friendly_typeof(bounds), '.'), call = NULL)
@@ -588,6 +763,11 @@ gui_value_box <- function(bounds, text, value, min_value, max_value, edit_mode) 
 #' @return A list with \code{result} (integer), \code{value} (number).
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_slider(rectangle(10, 10, 200, 100), "Hello", "Hello", 0.0, 0.0, 0.0)
+#' }
 #'
 #' @export
 gui_slider <- function(bounds, text_left, text_right, value, min_value, max_value) {
@@ -615,6 +795,11 @@ gui_slider <- function(bounds, text_left, text_right, value, min_value, max_valu
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_slider_bar(rectangle(10, 10, 200, 100), "Hello", "Hello", 0.0, 0.0, 0.0)
+#' }
+#'
 #' @export
 gui_slider_bar <- function(bounds, text_left, text_right, value, min_value, max_value) {
   if (!is_rectangle(bounds)) abort(paste0('`bounds` must be a rectangle, not ', friendly_typeof(bounds), '.'), call = NULL)
@@ -641,6 +826,11 @@ gui_slider_bar <- function(bounds, text_left, text_right, value, min_value, max_
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_progress_bar(rectangle(10, 10, 200, 100), "Hello", "Hello", 0.0, 0.0, 0.0)
+#' }
+#'
 #' @export
 gui_progress_bar <- function(bounds, text_left, text_right, value, min_value, max_value) {
   if (!is_rectangle(bounds)) abort(paste0('`bounds` must be a rectangle, not ', friendly_typeof(bounds), '.'), call = NULL)
@@ -663,6 +853,11 @@ gui_progress_bar <- function(bounds, text_left, text_right, value, min_value, ma
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_status_bar(rectangle(10, 10, 200, 100), "Hello")
+#' }
+#'
 #' @export
 gui_status_bar <- function(bounds, text) {
   if (!is_rectangle(bounds)) abort(paste0('`bounds` must be a rectangle, not ', friendly_typeof(bounds), '.'), call = NULL)
@@ -680,6 +875,11 @@ gui_status_bar <- function(bounds, text) {
 #' @return An integer
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_dummy_rec(rectangle(10, 10, 200, 100), "Hello")
+#' }
 #'
 #' @export
 gui_dummy_rec <- function(bounds, text) {
@@ -701,6 +901,11 @@ gui_dummy_rec <- function(bounds, text) {
 #' @return A list with \code{result} (integer), \code{mouse_cell} (numeric vector of length 2).
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_grid(rectangle(10, 10, 200, 100), "Hello", 1.0, 0L, c(100, 100))
+#' }
 #'
 #' @export
 gui_grid <- function(bounds, text, spacing, subdivs, mouse_cell) {
@@ -725,6 +930,11 @@ gui_grid <- function(bounds, text, spacing, subdivs, mouse_cell) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_list_view(rectangle(10, 10, 200, 100), "Hello", 0L, 0L)
+#' }
+#'
 #' @export
 gui_list_view <- function(bounds, text, scroll_index, active) {
   if (!is_rectangle(bounds)) abort(paste0('`bounds` must be a rectangle, not ', friendly_typeof(bounds), '.'), call = NULL)
@@ -746,6 +956,11 @@ gui_list_view <- function(bounds, text, scroll_index, active) {
 #' @return A list with \code{result} (integer), \code{hscroll} (integer), \code{active} (integer).
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_tab_bar(rectangle(10, 10, 200, 100), "Hello", 0L, 0L)
+#' }
 #'
 #' @export
 gui_tab_bar <- function(bounds, text, hscroll, active) {
@@ -770,6 +985,11 @@ gui_tab_bar <- function(bounds, text, hscroll, active) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_message_box(rectangle(10, 10, 200, 100), "My Window", "Hello", "Hello", 0L)
+#' }
+#'
 #' @export
 gui_message_box <- function(bounds, title, message, btn_text, btn_active) {
   if (!is_rectangle(bounds)) abort(paste0('`bounds` must be a rectangle, not ', friendly_typeof(bounds), '.'), call = NULL)
@@ -792,6 +1012,11 @@ gui_message_box <- function(bounds, title, message, btn_text, btn_active) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_color_picker(rectangle(10, 10, 200, 100), "Hello", "red")
+#' }
+#'
 #' @export
 gui_color_picker <- function(bounds, text, color) {
   if (!is_rectangle(bounds)) abort(paste0('`bounds` must be a rectangle, not ', friendly_typeof(bounds), '.'), call = NULL)
@@ -811,6 +1036,11 @@ gui_color_picker <- function(bounds, text, color) {
 #' @return A list with \code{result} (integer), \code{color} (color).
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_color_panel(rectangle(10, 10, 200, 100), "Hello", "red")
+#' }
 #'
 #' @export
 gui_color_panel <- function(bounds, text, color) {
@@ -832,6 +1062,11 @@ gui_color_panel <- function(bounds, text, color) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_color_bar_alpha(rectangle(10, 10, 200, 100), "Hello", 0.0)
+#' }
+#'
 #' @export
 gui_color_bar_alpha <- function(bounds, text, alpha) {
   if (!is_rectangle(bounds)) abort(paste0('`bounds` must be a rectangle, not ', friendly_typeof(bounds), '.'), call = NULL)
@@ -851,6 +1086,11 @@ gui_color_bar_alpha <- function(bounds, text, alpha) {
 #' @return A list with \code{result} (integer), \code{value} (number).
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_color_bar_hue(rectangle(10, 10, 200, 100), "Hello", 0.0)
+#' }
 #'
 #' @export
 gui_color_bar_hue <- function(bounds, text, value) {
@@ -872,6 +1112,11 @@ gui_color_bar_hue <- function(bounds, text, value) {
 #'
 #' @family gui functions
 #'
+#' @examples
+#' \dontrun{
+#' gui_color_picker_hsv(rectangle(10, 10, 200, 100), "Hello", c(0, 0, 0))
+#' }
+#'
 #' @export
 gui_color_picker_hsv <- function(bounds, text, color_hsv) {
   if (!is_rectangle(bounds)) abort(paste0('`bounds` must be a rectangle, not ', friendly_typeof(bounds), '.'), call = NULL)
@@ -891,6 +1136,11 @@ gui_color_picker_hsv <- function(bounds, text, color_hsv) {
 #' @return A list with \code{result} (integer), \code{color_hsv} (numeric vector of length 3).
 #'
 #' @family gui functions
+#'
+#' @examples
+#' \dontrun{
+#' gui_color_panel_hsv(rectangle(10, 10, 200, 100), "Hello", c(0, 0, 0))
+#' }
 #'
 #' @export
 gui_color_panel_hsv <- function(bounds, text, color_hsv) {

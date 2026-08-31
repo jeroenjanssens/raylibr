@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool ColorIsEqual(Color col1, Color col2);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+color_is_equal("red", "red")
+}
+
+}
 \seealso{
 Other equal functions: 
 \code{\link{text_is_equal}()}

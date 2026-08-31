@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Vector3 ColorToHSV(Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+color_to_hsv("red")
+}
+
+}
 \seealso{
 Other hsv functions: 
 \code{\link{color_from_hsv}()}

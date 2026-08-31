@@ -26,6 +26,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawTextureEx(Texture2D texture, Vector2 position, float rotation, float scale, Color tint);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_texture_ex(load_texture("file.png"), c(100, 100), 0.0, 1.0, "red")
+}
+
+}
 \seealso{
 Other ex functions: 
 \code{\link{draw_cylinder_ex}()},

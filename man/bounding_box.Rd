@@ -26,4 +26,12 @@ This class has been auto-generated from the following Raylib struct definition:
 \} BoundingBox;
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+bou <- bounding_box(c(0, 0, 0), c(0, 0, 0))
+bou$min
+bou$max
+}
+
+}
 \concept{bounding_box functions}

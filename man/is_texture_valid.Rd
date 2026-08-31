@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsTextureValid(Texture2D texture);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_texture_valid(load_texture("file.png"))
+}
+
+}
 \seealso{
 Other valid functions: 
 \code{\link{is_audio_stream_valid}()},

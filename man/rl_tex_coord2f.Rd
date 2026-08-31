@@ -14,6 +14,12 @@ rl_tex_coord2f(x, y)
 \description{
 Rl Tex Coord2f
 }
+\examples{
+\dontrun{
+rl_tex_coord2f(0.0, 0.0)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

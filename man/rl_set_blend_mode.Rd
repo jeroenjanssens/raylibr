@@ -12,6 +12,12 @@ rl_set_blend_mode(mode)
 \description{
 Rl Set Blend Mode
 }
+\examples{
+\dontrun{
+rl_set_blend_mode(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

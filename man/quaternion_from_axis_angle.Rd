@@ -17,6 +17,12 @@ A numeric vector of length 4
 \description{
 Quaternion From Axis Angle
 }
+\examples{
+\dontrun{
+quaternion_from_axis_angle(c(0, 0, 0), 0.0)
+}
+
+}
 \seealso{
 Other quaternion functions: 
 \code{\link{quaternion_add}()},

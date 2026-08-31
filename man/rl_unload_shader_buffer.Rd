@@ -12,6 +12,12 @@ rl_unload_shader_buffer(ssbo_id)
 \description{
 Rl Unload Shader Buffer
 }
+\examples{
+\dontrun{
+rl_unload_shader_buffer(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

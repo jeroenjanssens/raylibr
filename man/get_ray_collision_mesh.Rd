@@ -25,6 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{RayCollision GetRayCollisionMesh(Ray ray, Mesh mesh, Matrix transform);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_ray_collision_mesh(ray(c(0, 0, 0), c(0, 0, 1)), gen_mesh_cube(1.0, 1.0, 1.0), diag(4))
+}
+
+}
 \seealso{
 Other mesh functions: 
 \code{\link{draw_mesh}()},

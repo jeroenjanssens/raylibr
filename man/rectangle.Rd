@@ -32,6 +32,14 @@ This class has been auto-generated from the following Raylib struct definition:
 \} Rectangle;
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+rec <- rectangle(0.0, 0.0, 200.0, 100.0)
+rec$x
+rec$y
+}
+
+}
 \seealso{
 Other rectangle functions: 
 \code{\link{draw_rectangle}()},

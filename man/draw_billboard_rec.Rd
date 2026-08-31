@@ -28,6 +28,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawBillboardRec(Camera camera, Texture2D texture, Rectangle source, Vector3 position, Vector2 size, Color tint);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_billboard_rec(camera_3d(c(0, 10, 10)), load_texture("file.png"), rectangle(10, 10, 200, 100), c(0, 5, 0), c(100, 100), "red")
+}
+
+}
 \seealso{
 Other rec functions: 
 \code{\link{check_collision_circle_rec}()},

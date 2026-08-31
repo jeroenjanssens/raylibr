@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{const char * GetKeyName(int key);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_key_name(0L)
+}
+
+}
 \seealso{
 Other name functions: 
 \code{\link{get_file_name}()},

@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{int FileCopy(const char * srcPath, const char * dstPath);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+file_copy("file.png", "file.png")
+}
+
+}
 \seealso{
 Other copy functions: 
 \code{\link{image_copy}()},

@@ -15,6 +15,12 @@ A 4x4 numeric matrix
 \description{
 Quaternion To Matrix
 }
+\examples{
+\dontrun{
+quaternion_to_matrix(c(0, 0, 0, 1))
+}
+
+}
 \seealso{
 Other quaternion functions: 
 \code{\link{quaternion_add}()},

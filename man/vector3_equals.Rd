@@ -17,6 +17,12 @@ An integer
 \description{
 Vector3 Equals
 }
+\examples{
+\dontrun{
+vector3_equals(c(0, 0, 0), c(0, 0, 0))
+}
+
+}
 \seealso{
 Other vector3 functions: 
 \code{\link{vector3_add}()},

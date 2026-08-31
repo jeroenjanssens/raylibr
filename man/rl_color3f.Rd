@@ -16,6 +16,12 @@ rl_color3f(x, y, z)
 \description{
 Rl Color3f
 }
+\examples{
+\dontrun{
+rl_color3f(0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

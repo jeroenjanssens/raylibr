@@ -17,6 +17,12 @@ An integer
 \description{
 Rl Get Location Uniform
 }
+\examples{
+\dontrun{
+rl_get_location_uniform(0L, "text")
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

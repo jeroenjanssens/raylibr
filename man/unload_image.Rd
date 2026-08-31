@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void UnloadImage(Image image);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+unload_image(gen_image_color(100, 100, "blue"))
+}
+
+}
 \seealso{
 Other image functions: 
 \code{\link{export_image}()},

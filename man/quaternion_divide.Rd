@@ -17,6 +17,12 @@ A numeric vector of length 4
 \description{
 Quaternion Divide
 }
+\examples{
+\dontrun{
+quaternion_divide(c(0, 0, 0, 1), c(0, 0, 0, 1))
+}
+
+}
 \seealso{
 Other quaternion functions: 
 \code{\link{quaternion_add}()},

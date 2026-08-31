@@ -21,6 +21,12 @@ A list with \code{result} (integer), \code{active} (integer).
 \description{
 Dropdown Box control.
 }
+\examples{
+\dontrun{
+gui_dropdown_box(rectangle(10, 10, 200, 100), "Hello", 0L, TRUE)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

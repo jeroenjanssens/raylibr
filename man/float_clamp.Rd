@@ -19,6 +19,12 @@ A number
 \description{
 Float Clamp
 }
+\examples{
+\dontrun{
+float_clamp(0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other float functions: 
 \code{\link{float_equals}()},

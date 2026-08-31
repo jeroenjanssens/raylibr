@@ -22,6 +22,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawTextureV(Texture2D texture, Vector2 position, Color tint);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_texture_v(load_texture("file.png"), c(100, 100), "red")
+}
+
+}
 \seealso{
 Other v functions: 
 \code{\link{draw_circle_lines_v}()},

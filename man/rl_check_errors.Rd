@@ -9,6 +9,12 @@ rl_check_errors()
 \description{
 Rl Check Errors
 }
+\examples{
+\dontrun{
+rl_check_errors()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

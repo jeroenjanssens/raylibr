@@ -4,6 +4,12 @@
 #'
 #' @return A logical.
 #'
+#' @examples
+#' \dontrun{
+#' f <- get_font_default()
+#' is_font(f)
+#' }
+#'
 #' @export
 is_font <- function(x) {
   inherits(x, "font")

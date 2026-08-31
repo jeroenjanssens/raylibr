@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{unsigned int GetDirectoryFileCount(const char * dirPath);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_directory_file_count("file.png")
+}
+
+}
 \seealso{
 Other count functions: 
 \code{\link{get_codepoint_count}()},

@@ -25,6 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{AudioStream LoadAudioStream(unsigned int sampleRate, unsigned int sampleSize, unsigned int channels);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+load_audio_stream(0L, 32L, 0L)
+}
+
+}
 \seealso{
 Other stream functions: 
 \code{\link{load_music_stream}()},

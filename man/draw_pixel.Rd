@@ -22,6 +22,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawPixel(int posX, int posY, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_pixel(100L, 100L, "red")
+}
+
+}
 \seealso{
 Other draw functions: 
 \code{\link{draw_billboard}()},

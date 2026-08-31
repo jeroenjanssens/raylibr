@@ -25,6 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Color ColorFromHSV(float hue, float saturation, float value);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+color_from_hsv(0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other hsv functions: 
 \code{\link{color_to_hsv}()}

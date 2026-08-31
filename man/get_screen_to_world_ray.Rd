@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Ray GetScreenToWorldRay(Vector2 position, Camera camera);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_screen_to_world_ray(c(100, 100), camera_3d(c(0, 10, 10)))
+}
+
+}
 \seealso{
 Other ray functions: 
 \code{\link{draw_ray}()},

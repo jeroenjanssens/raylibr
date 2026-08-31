@@ -27,6 +27,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool CheckCollisionCircles(Vector2 center1, float radius1, Vector2 center2, float radius2);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+check_collision_circles(c(100, 100), 50.0, c(100, 100), 50.0)
+}
+
+}
 \seealso{
 Other check functions: 
 \code{\link{check_collision_box_sphere}()},

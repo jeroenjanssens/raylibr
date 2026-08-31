@@ -15,6 +15,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void CloseWindow(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+close_window()
+}
+
+}
 \seealso{
 Other window functions: 
 \code{\link{init_window}()},

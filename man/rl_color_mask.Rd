@@ -18,6 +18,12 @@ rl_color_mask(r, g, b, a)
 \description{
 Rl Color Mask
 }
+\examples{
+\dontrun{
+rl_color_mask(TRUE, TRUE, TRUE, TRUE)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

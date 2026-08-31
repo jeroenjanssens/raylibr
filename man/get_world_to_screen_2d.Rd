@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Vector2 GetWorldToScreen2D(Vector2 position, Camera2D camera);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_world_to_screen_2d(c(100, 100), camera_2d(c(400, 300), c(0, 0)))
+}
+
+}
 \seealso{
 Other 2d functions: 
 \code{\link{begin_mode_2d}()},

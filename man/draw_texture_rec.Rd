@@ -24,6 +24,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawTextureRec(Texture2D texture, Rectangle source, Vector2 position, Color tint);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_texture_rec(load_texture("file.png"), rectangle(10, 10, 200, 100), c(100, 100), "red")
+}
+
+}
 \seealso{
 Other rec functions: 
 \code{\link{check_collision_circle_rec}()},

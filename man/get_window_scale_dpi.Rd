@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Vector2 GetWindowScaleDPI(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_window_scale_dpi()
+}
+
+}
 \seealso{
 Other get functions: 
 \code{\link{get_application_directory}()},

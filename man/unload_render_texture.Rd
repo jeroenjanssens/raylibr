@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void UnloadRenderTexture(RenderTexture2D target);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+unload_render_texture(load_render_texture(800, 450))
+}
+
+}
 \seealso{
 Other texture functions: 
 \code{\link{draw_texture}()},

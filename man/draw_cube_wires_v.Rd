@@ -22,6 +22,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawCubeWiresV(Vector3 position, Vector3 size, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_cube_wires_v(c(0, 5, 0), c(1, 1, 1), "red")
+}
+
+}
 \seealso{
 Other v functions: 
 \code{\link{draw_circle_lines_v}()},

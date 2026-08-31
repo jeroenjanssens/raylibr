@@ -20,4 +20,11 @@ Enum values for \code{gui_toggle_property}.
    \code{group_width_full} \tab 17 \cr
 }
 }
+\examples{
+\dontrun{
+gui_toggle_property$group_padding
+gui_toggle_property$group_width_full
+}
+
+}
 \keyword{datasets}

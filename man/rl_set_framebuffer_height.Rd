@@ -12,6 +12,12 @@ rl_set_framebuffer_height(height)
 \description{
 Rl Set Framebuffer Height
 }
+\examples{
+\dontrun{
+rl_set_framebuffer_height(450L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsMouseButtonUp(int button);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_mouse_button_up(0L)
+}
+
+}
 \seealso{
 Other up functions: 
 \code{\link{is_gamepad_button_up}()},

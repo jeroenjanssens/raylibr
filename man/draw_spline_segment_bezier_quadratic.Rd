@@ -26,6 +26,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawSplineSegmentBezierQuadratic(Vector2 p1, Vector2 c2, Vector2 p3, float thick, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_spline_segment_bezier_quadratic(c(100, 100), c(100, 100), c(100, 100), 2.0, "red")
+}
+
+}
 \seealso{
 Other draw functions: 
 \code{\link{draw_billboard}()},

@@ -15,6 +15,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void EndDrawing(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+end_drawing()
+}
+
+}
 \seealso{
 Other drawing functions: 
 \code{\link{begin_drawing}()}

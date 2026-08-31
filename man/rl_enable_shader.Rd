@@ -12,6 +12,12 @@ rl_enable_shader(id)
 \description{
 Rl Enable Shader
 }
+\examples{
+\dontrun{
+rl_enable_shader(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

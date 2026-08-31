@@ -17,6 +17,12 @@ A numeric vector of length 2
 \description{
 Vector2 Rotate
 }
+\examples{
+\dontrun{
+vector2_rotate(c(100, 100), 0.0)
+}
+
+}
 \seealso{
 Other vector2 functions: 
 \code{\link{vector2_add}()},

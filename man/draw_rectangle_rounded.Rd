@@ -24,6 +24,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawRectangleRounded(Rectangle rec, float roundness, int segments, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_rectangle_rounded(rectangle(10, 10, 200, 100), 0.0, 16L, "red")
+}
+
+}
 \seealso{
 Other draw functions: 
 \code{\link{draw_billboard}()},

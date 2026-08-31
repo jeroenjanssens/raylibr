@@ -24,6 +24,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawTexture(Texture2D texture, int posX, int posY, Color tint);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_texture(load_texture("file.png"), 100L, 100L, "red")
+}
+
+}
 \seealso{
 Other texture functions: 
 \code{\link{get_shapes_texture}()},

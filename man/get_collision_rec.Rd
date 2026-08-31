@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Rectangle GetCollisionRec(Rectangle rec1, Rectangle rec2);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_collision_rec(rectangle(10, 10, 200, 100), rectangle(10, 10, 200, 100))
+}
+
+}
 \seealso{
 Other rec functions: 
 \code{\link{check_collision_circle_rec}()},

@@ -17,6 +17,12 @@ An integer
 \description{
 Dummy control for placeholders.
 }
+\examples{
+\dontrun{
+gui_dummy_rec(rectangle(10, 10, 200, 100), "Hello")
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

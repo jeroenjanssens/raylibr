@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsMusicValid(Music music);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_music_valid(load_music_stream("music.mp3"))
+}
+
+}
 \seealso{
 Other valid functions: 
 \code{\link{is_audio_stream_valid}()},

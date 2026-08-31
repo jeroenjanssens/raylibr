@@ -12,6 +12,12 @@ rl_active_draw_buffers(count)
 \description{
 Rl Active Draw Buffers
 }
+\examples{
+\dontrun{
+rl_active_draw_buffers(10L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_texture_slot}()},

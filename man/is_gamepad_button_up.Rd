@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsGamepadButtonUp(int gamepad, int button);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_gamepad_button_up(0L, 0L)
+}
+
+}
 \seealso{
 Other up functions: 
 \code{\link{is_key_up}()},

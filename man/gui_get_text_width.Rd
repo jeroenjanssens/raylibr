@@ -15,6 +15,12 @@ An integer
 \description{
 Get text width considering gui style and icon size (if required).
 }
+\examples{
+\dontrun{
+gui_get_text_width("Hello")
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{BoundingBox GetModelBoundingBox(Model model);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_model_bounding_box(load_model("model.obj"))
+}
+
+}
 \seealso{
 Other box functions: 
 \code{\link{draw_bounding_box}()},

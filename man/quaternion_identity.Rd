@@ -12,6 +12,12 @@ A numeric vector of length 4
 \description{
 Quaternion Identity
 }
+\examples{
+\dontrun{
+quaternion_identity()
+}
+
+}
 \seealso{
 Other quaternion functions: 
 \code{\link{quaternion_add}()},

@@ -23,4 +23,10 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{int FileRename(const char * fileName, const char * fileRename);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+file_rename("file.png", "text")
+}
+
+}
 \concept{rename functions}

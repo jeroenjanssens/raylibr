@@ -18,6 +18,12 @@ rl_color4f(x, y, z, w)
 \description{
 Rl Color4f
 }
+\examples{
+\dontrun{
+rl_color4f(0.0, 0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsImageValid(Image image);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_image_valid(gen_image_color(100, 100, "blue"))
+}
+
+}
 \seealso{
 Other valid functions: 
 \code{\link{is_audio_stream_valid}()},

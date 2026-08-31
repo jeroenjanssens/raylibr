@@ -12,6 +12,12 @@ A 4x4 numeric matrix
 \description{
 Rl Get Matrix Modelview
 }
+\examples{
+\dontrun{
+rl_get_matrix_modelview()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

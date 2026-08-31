@@ -22,4 +22,12 @@ Enum values for \code{gui_state}.
    \code{disabled} \tab 3 \cr
 }
 }
+\examples{
+\dontrun{
+gui_state$normal
+gui_state$focused
+gui_state$disabled
+}
+
+}
 \keyword{datasets}

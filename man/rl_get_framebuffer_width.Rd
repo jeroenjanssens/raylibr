@@ -12,6 +12,12 @@ An integer
 \description{
 Rl Get Framebuffer Width
 }
+\examples{
+\dontrun{
+rl_get_framebuffer_width()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

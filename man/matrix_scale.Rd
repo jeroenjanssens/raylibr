@@ -19,6 +19,12 @@ A 4x4 numeric matrix
 \description{
 Matrix Scale
 }
+\examples{
+\dontrun{
+matrix_scale(0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other matrix functions: 
 \code{\link{get_camera_matrix}()},

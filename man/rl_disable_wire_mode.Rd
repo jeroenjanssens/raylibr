@@ -9,6 +9,12 @@ rl_disable_wire_mode()
 \description{
 Rl Disable Wire Mode
 }
+\examples{
+\dontrun{
+rl_disable_wire_mode()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

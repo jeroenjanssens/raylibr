@@ -20,6 +20,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawBoundingBox(BoundingBox box, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_bounding_box(bounding_box(c(-1, -1, -1), c(1, 1, 1)), "red")
+}
+
+}
 \seealso{
 Other box functions: 
 \code{\link{get_mesh_bounding_box}()},

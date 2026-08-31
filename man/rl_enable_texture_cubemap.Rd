@@ -12,6 +12,12 @@ rl_enable_texture_cubemap(id)
 \description{
 Rl Enable Texture Cubemap
 }
+\examples{
+\dontrun{
+rl_enable_texture_cubemap(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -35,6 +35,14 @@ This class has been auto-generated from the following Raylib struct definition:
 \} Texture;
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+tex <- texture(0L, 800L, 450L, 0L, 0L)
+tex$id
+tex$width
+}
+
+}
 \seealso{
 Other texture functions: 
 \code{\link{draw_texture}()},

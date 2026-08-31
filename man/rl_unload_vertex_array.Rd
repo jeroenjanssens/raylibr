@@ -12,6 +12,12 @@ rl_unload_vertex_array(vao_id)
 \description{
 Rl Unload Vertex Array
 }
+\examples{
+\dontrun{
+rl_unload_vertex_array(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

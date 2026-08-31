@@ -22,6 +22,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void SetShaderValueTexture(Shader shader, int locIndex, Texture2D texture);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+set_shader_value_texture(load_shader("", "shader.fs"), 0L, load_texture("file.png"))
+}
+
+}
 \seealso{
 Other texture functions: 
 \code{\link{draw_texture}()},

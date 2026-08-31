@@ -15,6 +15,12 @@ A numeric vector of length 4
 \description{
 Quaternion From Matrix
 }
+\examples{
+\dontrun{
+quaternion_from_matrix(diag(4))
+}
+
+}
 \seealso{
 Other quaternion functions: 
 \code{\link{quaternion_add}()},

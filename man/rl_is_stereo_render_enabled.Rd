@@ -12,6 +12,12 @@ A logical
 \description{
 Rl Is Stereo Render Enabled
 }
+\examples{
+\dontrun{
+rl_is_stereo_render_enabled()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

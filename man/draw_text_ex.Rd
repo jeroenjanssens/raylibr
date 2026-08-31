@@ -28,6 +28,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawTextEx(Font font, const char * text, Vector2 position, float fontSize, float spacing, Color tint);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_text_ex(get_font_default(), "Hello", c(100, 100), 1.0, 1.0, "red")
+}
+
+}
 \seealso{
 Other ex functions: 
 \code{\link{draw_cylinder_ex}()},

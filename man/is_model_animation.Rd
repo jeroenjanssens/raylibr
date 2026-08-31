@@ -15,3 +15,9 @@ A logical.
 \description{
 Test if object is a model_animation
 }
+\examples{
+\dontrun{
+is_model_animation(x)
+}
+
+}

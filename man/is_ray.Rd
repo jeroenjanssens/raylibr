@@ -15,3 +15,9 @@ A logical.
 \description{
 Test if object is a ray
 }
+\examples{
+\dontrun{
+is_ray("not a ray")
+}
+
+}

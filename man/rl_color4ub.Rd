@@ -18,6 +18,12 @@ rl_color4ub(r, g, b, a)
 \description{
 Rl Color4ub
 }
+\examples{
+\dontrun{
+rl_color4ub(255L, 255L, 255L, 255L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -19,6 +19,12 @@ A 4x4 numeric matrix
 \description{
 Matrix Translate
 }
+\examples{
+\dontrun{
+matrix_translate(0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other matrix functions: 
 \code{\link{get_camera_matrix}()},

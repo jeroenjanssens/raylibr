@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Mesh GenMeshPoly(int sides, float radius);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+gen_mesh_poly(0L, 50.0)
+}
+
+}
 \seealso{
 Other poly functions: 
 \code{\link{draw_poly}()}

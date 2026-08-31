@@ -12,6 +12,12 @@ rl_set_matrix_modelview(view)
 \description{
 Rl Set Matrix Modelview
 }
+\examples{
+\dontrun{
+rl_set_matrix_modelview(diag(4))
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

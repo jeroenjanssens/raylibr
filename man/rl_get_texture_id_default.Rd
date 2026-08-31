@@ -12,6 +12,12 @@ An integer
 \description{
 Rl Get Texture Id Default
 }
+\examples{
+\dontrun{
+rl_get_texture_id_default()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

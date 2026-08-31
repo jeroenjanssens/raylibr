@@ -19,4 +19,10 @@ Enum values for \code{gui_check_box_property}.
    \code{check_padding} \tab 16 \cr
 }
 }
+\examples{
+\dontrun{
+gui_check_box_property$check_padding
+}
+
+}
 \keyword{datasets}

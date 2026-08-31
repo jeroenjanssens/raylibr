@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{int FileTextFindIndex(const char * fileName, const char * search);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+file_text_find_index("file.png", "text")
+}
+
+}
 \seealso{
 Other index functions: 
 \code{\link{get_glyph_index}()},

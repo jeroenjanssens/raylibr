@@ -15,6 +15,12 @@ A 4x4 numeric matrix
 \description{
 Matrix Invert
 }
+\examples{
+\dontrun{
+matrix_invert(diag(4))
+}
+
+}
 \seealso{
 Other matrix functions: 
 \code{\link{get_camera_matrix}()},

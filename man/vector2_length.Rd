@@ -15,6 +15,12 @@ A number
 \description{
 Vector2 Length
 }
+\examples{
+\dontrun{
+vector2_length(c(100, 100))
+}
+
+}
 \seealso{
 Other vector2 functions: 
 \code{\link{vector2_add}()},

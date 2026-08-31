@@ -9,6 +9,12 @@ rl_enable_backface_culling()
 \description{
 Rl Enable Backface Culling
 }
+\examples{
+\dontrun{
+rl_enable_backface_culling()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

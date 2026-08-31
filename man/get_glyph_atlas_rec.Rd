@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Rectangle GetGlyphAtlasRec(Font font, int codepoint);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_glyph_atlas_rec(get_font_default(), 0L)
+}
+
+}
 \seealso{
 Other rec functions: 
 \code{\link{check_collision_circle_rec}()},

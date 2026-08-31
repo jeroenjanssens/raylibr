@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{int TextFindIndex(const char * text, const char * search);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+text_find_index("Hello", "text")
+}
+
+}
 \seealso{
 Other index functions: 
 \code{\link{file_text_find_index}()},

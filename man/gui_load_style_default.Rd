@@ -9,6 +9,12 @@ gui_load_style_default()
 \description{
 Load style default over global style.
 }
+\examples{
+\dontrun{
+gui_load_style_default()
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

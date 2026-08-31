@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsWindowFullscreen(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_window_fullscreen()
+}
+
+}
 \seealso{
 Other fullscreen functions: 
 \code{\link{toggle_fullscreen}()}

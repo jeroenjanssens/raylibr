@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void SetAudioStreamBufferSizeDefault(int size);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+set_audio_stream_buffer_size_default(32L)
+}
+
+}
 \seealso{
 Other default functions: 
 \code{\link{get_font_default}()},

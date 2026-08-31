@@ -15,6 +15,12 @@ A numeric vector of length 3
 \description{
 Vector3 Negate
 }
+\examples{
+\dontrun{
+vector3_negate(c(0, 0, 0))
+}
+
+}
 \seealso{
 Other vector3 functions: 
 \code{\link{vector3_add}()},

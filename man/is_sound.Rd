@@ -15,3 +15,10 @@ A logical.
 \description{
 Test if object is a sound
 }
+\examples{
+\dontrun{
+s <- load_sound("sound.wav")
+is_sound(s)
+}
+
+}

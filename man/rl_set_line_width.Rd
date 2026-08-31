@@ -12,6 +12,12 @@ rl_set_line_width(width)
 \description{
 Rl Set Line Width
 }
+\examples{
+\dontrun{
+rl_set_line_width(200.0)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool ExportImageAsCode(Image image, const char * fileName);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+export_image_as_code(gen_image_color(100, 100, "blue"), "file.png")
+}
+
+}
 \seealso{
 Other code functions: 
 \code{\link{export_font_as_code}()},

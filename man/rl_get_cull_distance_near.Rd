@@ -12,6 +12,12 @@ A number
 \description{
 Rl Get Cull Distance Near
 }
+\examples{
+\dontrun{
+rl_get_cull_distance_near()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

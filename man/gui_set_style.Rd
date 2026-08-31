@@ -16,6 +16,12 @@ gui_set_style(control, property, value)
 \description{
 Set one style property.
 }
+\examples{
+\dontrun{
+gui_set_style(0L, 0L, 0L)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

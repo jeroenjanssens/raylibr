@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Matrix GetCameraMatrix2D(Camera2D camera);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_camera_matrix_2d(camera_2d(c(400, 300), c(0, 0)))
+}
+
+}
 \seealso{
 Other 2d functions: 
 \code{\link{begin_mode_2d}()},

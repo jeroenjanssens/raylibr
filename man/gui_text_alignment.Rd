@@ -21,4 +21,12 @@ Enum values for \code{gui_text_alignment}.
    \code{right} \tab 2 \cr
 }
 }
+\examples{
+\dontrun{
+gui_text_alignment$left
+gui_text_alignment$center
+gui_text_alignment$right
+}
+
+}
 \keyword{datasets}

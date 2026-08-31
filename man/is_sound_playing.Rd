@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsSoundPlaying(Sound sound);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_sound_playing(load_sound("sound.wav"))
+}
+
+}
 \seealso{
 Other playing functions: 
 \code{\link{is_audio_stream_playing}()},

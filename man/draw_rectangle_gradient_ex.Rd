@@ -26,6 +26,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawRectangleGradientEx(Rectangle rec, Color topLeft, Color bottomLeft, Color bottomRight, Color topRight);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_rectangle_gradient_ex(rectangle(10, 10, 200, 100), "red", "red", "red", "red")
+}
+
+}
 \seealso{
 Other ex functions: 
 \code{\link{draw_cylinder_ex}()},

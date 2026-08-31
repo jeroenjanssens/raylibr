@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void SetTargetFPS(int fps);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+set_target_fps(60L)
+}
+
+}
 \seealso{
 Other fps functions: 
 \code{\link{draw_fps}()},

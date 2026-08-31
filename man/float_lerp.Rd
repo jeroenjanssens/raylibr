@@ -19,6 +19,12 @@ A number
 \description{
 Float Lerp
 }
+\examples{
+\dontrun{
+float_lerp(0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other float functions: 
 \code{\link{float_clamp}()},

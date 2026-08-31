@@ -26,6 +26,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawLine(int startPosX, int startPosY, int endPosX, int endPosY, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_line(100L, 100L, 100L, 100L, "red")
+}
+
+}
 \seealso{
 Other line functions: 
 \code{\link{check_collision_circle_line}()},

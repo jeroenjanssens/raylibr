@@ -29,6 +29,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Image GenImageGradientLinear(int width, int height, int direction, Color start, Color end);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+gen_image_gradient_linear(800L, 450L, 0L, "red", "red")
+}
+
+}
 \seealso{
 Other linear functions: 
 \code{\link{draw_spline_segment_linear}()},

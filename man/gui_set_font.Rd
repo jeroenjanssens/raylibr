@@ -12,6 +12,12 @@ gui_set_font(font)
 \description{
 Set gui custom font (global state).
 }
+\examples{
+\dontrun{
+gui_set_font(get_font_default())
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

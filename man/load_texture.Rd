@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Texture2D LoadTexture(const char * fileName);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+load_texture("file.png")
+}
+
+}
 \seealso{
 Other texture functions: 
 \code{\link{draw_texture}()},

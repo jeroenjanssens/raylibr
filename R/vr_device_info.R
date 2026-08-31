@@ -4,6 +4,11 @@
 #'
 #' @return A logical.
 #'
+#' @examples
+#' \dontrun{
+#' is_vr_device_info(x)
+#' }
+#'
 #' @export
 is_vr_device_info <- function(x) {
   inherits(x, "vr_device_info")

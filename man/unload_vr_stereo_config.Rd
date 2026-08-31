@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void UnloadVrStereoConfig(VrStereoConfig config);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+unload_vr_stereo_config(config)
+}
+
+}
 \seealso{
 Other config functions: 
 \code{\link{load_vr_stereo_config}()}

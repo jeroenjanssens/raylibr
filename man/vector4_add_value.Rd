@@ -17,6 +17,12 @@ A numeric vector of length 4
 \description{
 Vector4 Add Value
 }
+\examples{
+\dontrun{
+vector4_add_value(c(0, 0, 0, 1), 0.0)
+}
+
+}
 \seealso{
 Other vector4 functions: 
 \code{\link{vector4_add}()},

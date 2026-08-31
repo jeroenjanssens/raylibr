@@ -18,6 +18,12 @@ rl_clear_color(r, g, b, a)
 \description{
 Rl Clear Color
 }
+\examples{
+\dontrun{
+rl_clear_color(255L, 255L, 255L, 255L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -20,4 +20,11 @@ Enum values for \code{gui_progress_bar_property}.
    \code{progress_side} \tab 17 \cr
 }
 }
+\examples{
+\dontrun{
+gui_progress_bar_property$progress_padding
+gui_progress_bar_property$progress_side
+}
+
+}
 \keyword{datasets}

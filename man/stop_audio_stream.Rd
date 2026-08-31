@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void StopAudioStream(AudioStream stream);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+stop_audio_stream(load_audio_stream(44100L, 16L, 1L))
+}
+
+}
 \seealso{
 Other stream functions: 
 \code{\link{load_audio_stream}()},

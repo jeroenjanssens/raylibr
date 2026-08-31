@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Color GetColor(unsigned int hexValue);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_color(0L)
+}
+
+}
 \seealso{
 Other color functions: 
 \code{\link{color}()},

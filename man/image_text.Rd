@@ -25,6 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Image ImageText(const char * text, int fontSize, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+image_text("Hello", 20L, "red")
+}
+
+}
 \seealso{
 Other text functions: 
 \code{\link{draw_text}()},

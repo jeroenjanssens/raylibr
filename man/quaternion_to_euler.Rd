@@ -15,6 +15,12 @@ A numeric vector of length 3
 \description{
 Quaternion To Euler
 }
+\examples{
+\dontrun{
+quaternion_to_euler(c(0, 0, 0, 1))
+}
+
+}
 \seealso{
 Other quaternion functions: 
 \code{\link{quaternion_add}()},

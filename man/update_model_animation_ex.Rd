@@ -28,6 +28,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void UpdateModelAnimationEx(Model model, ModelAnimation animA, float frameA, ModelAnimation animB, float frameB, float blend);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+update_model_animation_ex(load_model("model.obj"), anim, 0.0, anim, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other ex functions: 
 \code{\link{draw_cylinder_ex}()},

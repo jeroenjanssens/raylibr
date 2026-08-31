@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void BeginTextureMode(RenderTexture2D target);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+begin_texture_mode(load_render_texture(800, 450))
+}
+
+}
 \seealso{
 Other mode functions: 
 \code{\link{begin_blend_mode}()},

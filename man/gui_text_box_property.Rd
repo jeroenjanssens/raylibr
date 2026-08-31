@@ -19,4 +19,10 @@ Enum values for \code{gui_text_box_property}.
    \code{text_readonly} \tab 16 \cr
 }
 }
+\examples{
+\dontrun{
+gui_text_box_property$text_readonly
+}
+
+}
 \keyword{datasets}

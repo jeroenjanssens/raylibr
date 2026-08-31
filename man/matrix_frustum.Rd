@@ -25,6 +25,12 @@ A 4x4 numeric matrix
 \description{
 Matrix Frustum
 }
+\examples{
+\dontrun{
+matrix_frustum(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other matrix functions: 
 \code{\link{get_camera_matrix}()},

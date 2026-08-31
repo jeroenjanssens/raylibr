@@ -14,6 +14,12 @@ rl_set_uniform_matrix(loc_index, mat)
 \description{
 Rl Set Uniform Matrix
 }
+\examples{
+\dontrun{
+rl_set_uniform_matrix(0L, diag(4))
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void BeginVrStereoMode(VrStereoConfig config);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+begin_vr_stereo_mode(config)
+}
+
+}
 \seealso{
 Other mode functions: 
 \code{\link{begin_blend_mode}()},

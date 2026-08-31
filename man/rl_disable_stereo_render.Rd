@@ -9,6 +9,12 @@ rl_disable_stereo_render()
 \description{
 Rl Disable Stereo Render
 }
+\examples{
+\dontrun{
+rl_disable_stereo_render()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

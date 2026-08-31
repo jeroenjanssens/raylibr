@@ -25,6 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Mesh GenMeshCube(float width, float height, float length);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+gen_mesh_cube(200.0, 100.0, 100.0)
+}
+
+}
 \seealso{
 Other cube functions: 
 \code{\link{draw_cube}()}

@@ -21,4 +21,12 @@ Enum values for \code{gui_text_alignment_vertical}.
    \code{bottom} \tab 2 \cr
 }
 }
+\examples{
+\dontrun{
+gui_text_alignment_vertical$top
+gui_text_alignment_vertical$middle
+gui_text_alignment_vertical$bottom
+}
+
+}
 \keyword{datasets}

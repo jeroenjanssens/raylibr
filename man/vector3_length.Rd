@@ -15,6 +15,12 @@ A number
 \description{
 Vector3 Length
 }
+\examples{
+\dontrun{
+vector3_length(c(0, 0, 0))
+}
+
+}
 \seealso{
 Other vector3 functions: 
 \code{\link{vector3_add}()},

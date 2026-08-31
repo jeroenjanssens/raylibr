@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Sound LoadSoundFromWave(Wave wave);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+load_sound_from_wave(load_wave("sound.wav"))
+}
+
+}
 \seealso{
 Other wave functions: 
 \code{\link{export_wave}()},

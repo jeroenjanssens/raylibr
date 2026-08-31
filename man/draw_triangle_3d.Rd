@@ -24,6 +24,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawTriangle3D(Vector3 v1, Vector3 v2, Vector3 v3, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_triangle_3d(c(0, 0, 0), c(0, 0, 0), c(0, 0, 0), "red")
+}
+
+}
 \seealso{
 Other 3d functions: 
 \code{\link{begin_mode_3d}()},

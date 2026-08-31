@@ -9,6 +9,12 @@ rl_disable_vertex_buffer_element()
 \description{
 Rl Disable Vertex Buffer Element
 }
+\examples{
+\dontrun{
+rl_disable_vertex_buffer_element()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

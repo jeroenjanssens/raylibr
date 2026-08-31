@@ -19,6 +19,12 @@ A 4x4 numeric matrix
 \description{
 Matrix Look At
 }
+\examples{
+\dontrun{
+matrix_look_at(c(0, 0, 0), c(0, 0, 0), c(0, 1, 0))
+}
+
+}
 \seealso{
 Other matrix functions: 
 \code{\link{get_camera_matrix}()},

@@ -12,6 +12,12 @@ rl_enable_texture(id)
 \description{
 Rl Enable Texture
 }
+\examples{
+\dontrun{
+rl_enable_texture(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

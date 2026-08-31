@@ -20,4 +20,11 @@ Enum values for \code{gui_value_box_property}.
    \code{spinner_button_spacing} \tab 17 \cr
 }
 }
+\examples{
+\dontrun{
+gui_value_box_property$spinner_button_width
+gui_value_box_property$spinner_button_spacing
+}
+
+}
 \keyword{datasets}

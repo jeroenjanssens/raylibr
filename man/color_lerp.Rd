@@ -25,4 +25,10 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Color ColorLerp(Color color1, Color color2, float factor);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+color_lerp("red", "red", 0.0)
+}
+
+}
 \concept{lerp functions}

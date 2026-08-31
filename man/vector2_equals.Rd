@@ -17,6 +17,12 @@ An integer
 \description{
 Vector2 Equals
 }
+\examples{
+\dontrun{
+vector2_equals(c(100, 100), c(100, 100))
+}
+
+}
 \seealso{
 Other vector2 functions: 
 \code{\link{vector2_add}()},

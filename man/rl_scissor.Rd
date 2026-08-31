@@ -18,6 +18,12 @@ rl_scissor(x, y, width, height)
 \description{
 Rl Scissor
 }
+\examples{
+\dontrun{
+rl_scissor(100L, 100L, 800L, 450L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

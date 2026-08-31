@@ -4,6 +4,12 @@
 #'
 #' @return A logical.
 #'
+#' @examples
+#' \dontrun{
+#' m <- load_model("model.obj")
+#' is_model(m)
+#' }
+#'
 #' @export
 is_model <- function(x) {
   inherits(x, "model")

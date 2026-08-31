@@ -9,6 +9,12 @@ rl_load_identity()
 \description{
 Rl Load Identity
 }
+\examples{
+\dontrun{
+rl_load_identity()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

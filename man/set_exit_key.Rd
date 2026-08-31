@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void SetExitKey(int key);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+set_exit_key(0L)
+}
+
+}
 \seealso{
 Other set functions: 
 \code{\link{set_audio_stream_buffer_size_default}()},

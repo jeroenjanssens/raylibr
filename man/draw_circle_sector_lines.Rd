@@ -35,6 +35,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawCircleSectorLines(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_circle_sector_lines(c(100, 100), 50.0, 0.0, 0.0, 16L, "red")
+}
+
+}
 \seealso{
 Other lines functions: 
 \code{\link{draw_circle_lines}()},

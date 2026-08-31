@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Texture2D LoadTextureFromImage(Image image);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+load_texture_from_image(gen_image_color(100, 100, "blue"))
+}
+
+}
 \seealso{
 Other image functions: 
 \code{\link{export_image}()},

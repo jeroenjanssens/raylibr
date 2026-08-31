@@ -9,6 +9,12 @@ rl_disable_point_mode()
 \description{
 Rl Disable Point Mode
 }
+\examples{
+\dontrun{
+rl_disable_point_mode()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

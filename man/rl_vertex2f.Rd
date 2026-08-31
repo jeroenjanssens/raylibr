@@ -14,6 +14,12 @@ rl_vertex2f(x, y)
 \description{
 Rl Vertex2f
 }
+\examples{
+\dontrun{
+rl_vertex2f(0.0, 0.0)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

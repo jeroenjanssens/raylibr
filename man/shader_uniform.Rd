@@ -31,4 +31,12 @@ Enum values for \code{shader_uniform}.
    \code{sampler2d} \tab 12 \cr
 }
 }
+\examples{
+\dontrun{
+shader_uniform$float
+shader_uniform$ivec3
+shader_uniform$sampler2d
+}
+
+}
 \keyword{datasets}

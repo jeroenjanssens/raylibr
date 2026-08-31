@@ -25,4 +25,10 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{char * TextInsert(const char * text, const char * insert, int position);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+text_insert("Hello", "text", 0L)
+}
+
+}
 \concept{insert functions}

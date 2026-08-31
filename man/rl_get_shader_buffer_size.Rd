@@ -15,6 +15,12 @@ An integer
 \description{
 Rl Get Shader Buffer Size
 }
+\examples{
+\dontrun{
+rl_get_shader_buffer_size(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

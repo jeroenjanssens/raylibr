@@ -9,6 +9,12 @@ rl_push_matrix()
 \description{
 Rl Push Matrix
 }
+\examples{
+\dontrun{
+rl_push_matrix()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

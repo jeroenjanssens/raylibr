@@ -9,6 +9,12 @@ rl_disable_shader()
 \description{
 Rl Disable Shader
 }
+\examples{
+\dontrun{
+rl_disable_shader()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

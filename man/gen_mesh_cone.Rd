@@ -25,4 +25,10 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Mesh GenMeshCone(float radius, float height, int slices);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+gen_mesh_cone(50.0, 100.0, 16L)
+}
+
+}
 \concept{cone functions}

@@ -19,6 +19,12 @@ A numeric vector of length 2
 \description{
 Vector2 Clamp
 }
+\examples{
+\dontrun{
+vector2_clamp(c(100, 100), c(100, 100), c(100, 100))
+}
+
+}
 \seealso{
 Other vector2 functions: 
 \code{\link{vector2_add}()},

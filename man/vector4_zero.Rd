@@ -12,6 +12,12 @@ A numeric vector of length 4
 \description{
 Vector4 Zero
 }
+\examples{
+\dontrun{
+vector4_zero()
+}
+
+}
 \seealso{
 Other vector4 functions: 
 \code{\link{vector4_add}()},

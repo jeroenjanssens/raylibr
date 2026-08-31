@@ -12,6 +12,12 @@ rl_enable_vertex_buffer(id)
 \description{
 Rl Enable Vertex Buffer
 }
+\examples{
+\dontrun{
+rl_enable_vertex_buffer(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

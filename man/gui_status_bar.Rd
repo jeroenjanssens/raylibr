@@ -17,6 +17,12 @@ An integer
 \description{
 Status Bar control, shows info text.
 }
+\examples{
+\dontrun{
+gui_status_bar(rectangle(10, 10, 200, 100), "Hello")
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

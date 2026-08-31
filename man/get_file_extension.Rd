@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{const char * GetFileExtension(const char * fileName);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_file_extension("file.png")
+}
+
+}
 \seealso{
 Other extension functions: 
 \code{\link{is_file_extension}()}

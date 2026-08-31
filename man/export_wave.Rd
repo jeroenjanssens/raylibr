@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool ExportWave(Wave wave, const char * fileName);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+export_wave(load_wave("sound.wav"), "file.png")
+}
+
+}
 \seealso{
 Other wave functions: 
 \code{\link{load_sound_from_wave}()},

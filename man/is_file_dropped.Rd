@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsFileDropped(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_file_dropped()
+}
+
+}
 \seealso{
 Other is functions: 
 \code{\link{is_audio_device_ready}()},

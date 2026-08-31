@@ -17,6 +17,12 @@ A numeric vector of length 4
 \description{
 Quaternion Transform
 }
+\examples{
+\dontrun{
+quaternion_transform(c(0, 0, 0, 1), diag(4))
+}
+
+}
 \seealso{
 Other quaternion functions: 
 \code{\link{quaternion_add}()},

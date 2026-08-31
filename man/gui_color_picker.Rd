@@ -19,6 +19,12 @@ A list with \code{result} (integer), \code{color} (color).
 \description{
 Color Picker control, includes Color bar controls.
 }
+\examples{
+\dontrun{
+gui_color_picker(rectangle(10, 10, 200, 100), "Hello", "red")
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

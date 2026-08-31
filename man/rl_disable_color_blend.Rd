@@ -9,6 +9,12 @@ rl_disable_color_blend()
 \description{
 Rl Disable Color Blend
 }
+\examples{
+\dontrun{
+rl_disable_color_blend()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

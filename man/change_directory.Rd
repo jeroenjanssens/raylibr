@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool ChangeDirectory(const char * dirPath);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+change_directory("file.png")
+}
+
+}
 \seealso{
 Other directory functions: 
 \code{\link{get_application_directory}()},

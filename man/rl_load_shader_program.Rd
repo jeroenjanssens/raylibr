@@ -17,6 +17,12 @@ An integer
 \description{
 Rl Load Shader Program
 }
+\examples{
+\dontrun{
+rl_load_shader_program("text", "text")
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

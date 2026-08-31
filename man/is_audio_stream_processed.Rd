@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsAudioStreamProcessed(AudioStream stream);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_audio_stream_processed(load_audio_stream(44100L, 16L, 1L))
+}
+
+}
 \seealso{
 Other is functions: 
 \code{\link{is_audio_device_ready}()},

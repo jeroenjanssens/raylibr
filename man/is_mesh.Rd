@@ -15,3 +15,10 @@ A logical.
 \description{
 Test if object is a mesh
 }
+\examples{
+\dontrun{
+m <- gen_mesh_cube(1.0, 1.0, 1.0)
+is_mesh(m)
+}
+
+}

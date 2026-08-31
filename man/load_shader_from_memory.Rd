@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Shader LoadShaderFromMemory(const char * vsCode, const char * fsCode);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+load_shader_from_memory("text", "text")
+}
+
+}
 \seealso{
 Other load functions: 
 \code{\link{load_audio_stream}()},

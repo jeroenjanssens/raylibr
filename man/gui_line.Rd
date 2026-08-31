@@ -17,6 +17,12 @@ An integer
 \description{
 Line separator control, could contain text.
 }
+\examples{
+\dontrun{
+gui_line(rectangle(10, 10, 200, 100), "Hello")
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

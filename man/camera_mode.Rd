@@ -23,4 +23,12 @@ Enum values for \code{camera_mode}.
    \code{third_person} \tab 4 \cr
 }
 }
+\examples{
+\dontrun{
+camera_mode$custom
+camera_mode$orbital
+camera_mode$third_person
+}
+
+}
 \keyword{datasets}

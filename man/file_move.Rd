@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{int FileMove(const char * srcPath, const char * dstPath);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+file_move("file.png", "file.png")
+}
+
+}
 \seealso{
 Other move functions: 
 \code{\link{get_mouse_wheel_move}()}

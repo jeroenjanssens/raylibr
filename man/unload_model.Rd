@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void UnloadModel(Model model);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+unload_model(load_model("model.obj"))
+}
+
+}
 \seealso{
 Other model functions: 
 \code{\link{draw_model}()},

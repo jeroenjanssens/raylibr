@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{RayCollision GetRayCollisionBox(Ray ray, BoundingBox box);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_ray_collision_box(ray(c(0, 0, 0), c(0, 0, 1)), bounding_box(c(-1, -1, -1), c(1, 1, 1)))
+}
+
+}
 \seealso{
 Other box functions: 
 \code{\link{draw_bounding_box}()},

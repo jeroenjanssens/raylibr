@@ -19,6 +19,12 @@ A list with \code{result} (integer), \code{value} (number).
 \description{
 Color Bar Hue control.
 }
+\examples{
+\dontrun{
+gui_color_bar_hue(rectangle(10, 10, 200, 100), "Hello", 0.0)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

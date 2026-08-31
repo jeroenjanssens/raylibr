@@ -20,6 +20,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawPoint3D(Vector3 position, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_point_3d(c(0, 5, 0), "red")
+}
+
+}
 \seealso{
 Other 3d functions: 
 \code{\link{begin_mode_3d}()},

@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Image LoadImage(const char * fileName);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+load_image("file.png")
+}
+
+}
 \seealso{
 Other image functions: 
 \code{\link{export_image}()},

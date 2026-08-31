@@ -19,6 +19,12 @@ A list with \code{result} (integer), \code{checked} (logical).
 \description{
 Check Box control, returns true when active.
 }
+\examples{
+\dontrun{
+gui_check_box(rectangle(10, 10, 200, 100), "Hello", TRUE)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

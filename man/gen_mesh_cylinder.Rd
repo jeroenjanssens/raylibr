@@ -25,6 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Mesh GenMeshCylinder(float radius, float height, int slices);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+gen_mesh_cylinder(50.0, 100.0, 16L)
+}
+
+}
 \seealso{
 Other cylinder functions: 
 \code{\link{draw_cylinder}()}

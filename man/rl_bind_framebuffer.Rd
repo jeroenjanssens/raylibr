@@ -14,6 +14,12 @@ rl_bind_framebuffer(target, framebuffer)
 \description{
 Rl Bind Framebuffer
 }
+\examples{
+\dontrun{
+rl_bind_framebuffer(0L, 0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

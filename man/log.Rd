@@ -26,4 +26,12 @@ Enum values for \code{log}.
    \code{none} \tab 7 \cr
 }
 }
+\examples{
+\dontrun{
+log$all
+log$info
+log$none
+}
+
+}
 \keyword{datasets}

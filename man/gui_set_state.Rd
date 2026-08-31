@@ -12,6 +12,12 @@ gui_set_state(state)
 \description{
 Set gui state (global state).
 }
+\examples{
+\dontrun{
+gui_set_state(0L)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

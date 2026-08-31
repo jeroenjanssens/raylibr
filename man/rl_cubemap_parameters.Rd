@@ -16,6 +16,12 @@ rl_cubemap_parameters(id, param, value)
 \description{
 Rl Cubemap Parameters
 }
+\examples{
+\dontrun{
+rl_cubemap_parameters(0L, 0L, 0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

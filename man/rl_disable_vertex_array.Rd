@@ -9,6 +9,12 @@ rl_disable_vertex_array()
 \description{
 Rl Disable Vertex Array
 }
+\examples{
+\dontrun{
+rl_disable_vertex_array()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

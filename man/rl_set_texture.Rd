@@ -12,6 +12,12 @@ rl_set_texture(id)
 \description{
 Rl Set Texture
 }
+\examples{
+\dontrun{
+rl_set_texture(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

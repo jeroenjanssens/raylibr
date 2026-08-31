@@ -6,6 +6,11 @@
 #'
 #' @return A logical.
 #'
+#' @examples
+#' \dontrun{
+#' is_n_patch_info("not a n_patch_info")
+#' }
+#'
 #' @export
 is_n_patch_info <- function(x) {
   inherits(x, "n_patch_info")
@@ -42,6 +47,12 @@ is_n_patch_info <- function(x) {
 #'
 #' @family n_patch_info functions
 #'
+#' @examples
+#' \dontrun{
+#' n_p <- n_patch_info(rectangle(10, 10, 200, 100), 0L, 0L, 0L, 0L, 0L)
+#' n_p$source
+#' n_p$left
+#' }
 #'
 #' @export
 n_patch_info <- function(source, left, top, right, bottom, layout) {

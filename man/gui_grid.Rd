@@ -23,6 +23,12 @@ A list with \code{result} (integer), \code{mouse_cell} (numeric vector of length
 \description{
 Grid control.
 }
+\examples{
+\dontrun{
+gui_grid(rectangle(10, 10, 200, 100), "Hello", 1.0, 0L, c(100, 100))
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

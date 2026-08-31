@@ -23,6 +23,12 @@ A list with \code{result} (integer), \code{btn_active} (integer).
 \description{
 Message Box control, displays a message.
 }
+\examples{
+\dontrun{
+gui_message_box(rectangle(10, 10, 200, 100), "My Window", "Hello", "Hello", 0L)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

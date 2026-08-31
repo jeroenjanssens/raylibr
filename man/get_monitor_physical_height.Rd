@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{int GetMonitorPhysicalHeight(int monitor);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_monitor_physical_height(0L)
+}
+
+}
 \seealso{
 Other height functions: 
 \code{\link{get_monitor_height}()},

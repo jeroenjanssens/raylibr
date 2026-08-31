@@ -9,6 +9,12 @@ rl_draw_render_batch_active()
 \description{
 Rl Draw Render Batch Active
 }
+\examples{
+\dontrun{
+rl_draw_render_batch_active()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

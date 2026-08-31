@@ -15,6 +15,12 @@ A logical
 \description{
 Rl Framebuffer Complete
 }
+\examples{
+\dontrun{
+rl_framebuffer_complete(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

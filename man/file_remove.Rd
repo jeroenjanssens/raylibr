@@ -21,4 +21,10 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{int FileRemove(const char * fileName);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+file_remove("file.png")
+}
+
+}
 \concept{remove functions}

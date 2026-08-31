@@ -25,6 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{unsigned int GetDirectoryFileCountEx(const char * basePath, const char * filter, bool scanSubdirs);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_directory_file_count_ex("file.png", "text", TRUE)
+}
+
+}
 \seealso{
 Other ex functions: 
 \code{\link{draw_cylinder_ex}()},

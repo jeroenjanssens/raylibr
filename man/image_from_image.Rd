@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Image ImageFromImage(Image image, Rectangle rec);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+image_from_image(gen_image_color(100, 100, "blue"), rectangle(10, 10, 200, 100))
+}
+
+}
 \seealso{
 Other image functions: 
 \code{\link{export_image}()},

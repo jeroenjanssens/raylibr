@@ -17,6 +17,12 @@ A numeric vector of length 3
 \description{
 Vector3 Scale
 }
+\examples{
+\dontrun{
+vector3_scale(c(0, 0, 0), 0.0)
+}
+
+}
 \seealso{
 Other vector3 functions: 
 \code{\link{vector3_add}()},

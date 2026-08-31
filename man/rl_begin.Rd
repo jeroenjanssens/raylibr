@@ -12,6 +12,12 @@ rl_begin(mode)
 \description{
 Rl Begin
 }
+\examples{
+\dontrun{
+rl_begin(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

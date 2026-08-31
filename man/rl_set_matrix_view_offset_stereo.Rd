@@ -14,6 +14,12 @@ rl_set_matrix_view_offset_stereo(right, left)
 \description{
 Rl Set Matrix View Offset Stereo
 }
+\examples{
+\dontrun{
+rl_set_matrix_view_offset_stereo(diag(4), diag(4))
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

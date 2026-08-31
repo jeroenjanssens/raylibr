@@ -15,3 +15,9 @@ A logical.
 \description{
 Test if object is a camera_2d
 }
+\examples{
+\dontrun{
+is_camera_2d("not a camera_2d")
+}
+
+}

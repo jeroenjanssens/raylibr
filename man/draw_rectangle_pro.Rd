@@ -24,6 +24,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawRectanglePro(Rectangle rec, Vector2 origin, float rotation, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_rectangle_pro(rectangle(10, 10, 200, 100), c(100, 100), 0.0, "red")
+}
+
+}
 \seealso{
 Other pro functions: 
 \code{\link{draw_billboard_pro}()},

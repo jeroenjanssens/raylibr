@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Vector2 GetGestureDragVector(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_gesture_drag_vector()
+}
+
+}
 \seealso{
 Other vector functions: 
 \code{\link{get_gesture_pinch_vector}()}

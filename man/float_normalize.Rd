@@ -19,6 +19,12 @@ A number
 \description{
 Float Normalize
 }
+\examples{
+\dontrun{
+float_normalize(0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other float functions: 
 \code{\link{float_clamp}()},

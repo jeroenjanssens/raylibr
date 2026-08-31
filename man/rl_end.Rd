@@ -9,6 +9,12 @@ rl_end()
 \description{
 Rl End
 }
+\examples{
+\dontrun{
+rl_end()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

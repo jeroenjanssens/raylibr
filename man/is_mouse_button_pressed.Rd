@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsMouseButtonPressed(int button);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_mouse_button_pressed(0L)
+}
+
+}
 \seealso{
 Other pressed functions: 
 \code{\link{get_char_pressed}()},

@@ -24,6 +24,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawRectangleRoundedLines(Rectangle rec, float roundness, int segments, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_rectangle_rounded_lines(rectangle(10, 10, 200, 100), 0.0, 16L, "red")
+}
+
+}
 \seealso{
 Other lines functions: 
 \code{\link{draw_circle_lines}()},

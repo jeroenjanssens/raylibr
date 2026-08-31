@@ -22,6 +22,12 @@ rl_set_vertex_attribute(index, comp_size, type, normalized, stride, offset)
 \description{
 Rl Set Vertex Attribute
 }
+\examples{
+\dontrun{
+rl_set_vertex_attribute(0L, 32L, 0L, TRUE, 0L, 0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

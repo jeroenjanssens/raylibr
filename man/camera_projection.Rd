@@ -20,4 +20,11 @@ Enum values for \code{camera_projection}.
    \code{orthographic} \tab 1 \cr
 }
 }
+\examples{
+\dontrun{
+camera_projection$perspective
+camera_projection$orthographic
+}
+
+}
 \keyword{datasets}

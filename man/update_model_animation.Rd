@@ -22,6 +22,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void UpdateModelAnimation(Model model, ModelAnimation anim, float frame);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+update_model_animation(load_model("model.obj"), anim, 0.0)
+}
+
+}
 \seealso{
 Other update functions: 
 \code{\link{update_model_animation_ex}()},

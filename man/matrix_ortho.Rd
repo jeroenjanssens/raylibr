@@ -25,6 +25,12 @@ A 4x4 numeric matrix
 \description{
 Matrix Ortho
 }
+\examples{
+\dontrun{
+matrix_ortho(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other matrix functions: 
 \code{\link{get_camera_matrix}()},

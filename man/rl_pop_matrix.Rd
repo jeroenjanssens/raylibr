@@ -9,6 +9,12 @@ rl_pop_matrix()
 \description{
 Rl Pop Matrix
 }
+\examples{
+\dontrun{
+rl_pop_matrix()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

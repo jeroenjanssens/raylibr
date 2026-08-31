@@ -22,6 +22,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawPlane(Vector3 centerPos, Vector2 size, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_plane(c(0, 5, 0), c(100, 100), "red")
+}
+
+}
 \seealso{
 Other plane functions: 
 \code{\link{gen_mesh_plane}()}

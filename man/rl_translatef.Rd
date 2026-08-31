@@ -16,6 +16,12 @@ rl_translatef(x, y, z)
 \description{
 Rl Translatef
 }
+\examples{
+\dontrun{
+rl_translatef(0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

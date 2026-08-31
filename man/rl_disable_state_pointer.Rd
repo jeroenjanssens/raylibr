@@ -12,6 +12,12 @@ rl_disable_state_pointer(vertex_attrib_type)
 \description{
 Rl Disable State Pointer
 }
+\examples{
+\dontrun{
+rl_disable_state_pointer(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

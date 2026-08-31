@@ -21,4 +21,12 @@ Enum values for \code{gui_text_wrap_mode}.
    \code{word} \tab 2 \cr
 }
 }
+\examples{
+\dontrun{
+gui_text_wrap_mode$none
+gui_text_wrap_mode$char
+gui_text_wrap_mode$word
+}
+
+}
 \keyword{datasets}

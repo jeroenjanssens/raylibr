@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsWindowFocused(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_window_focused()
+}
+
+}
 \seealso{
 Other focused functions: 
 \code{\link{set_window_focused}()}

@@ -22,6 +22,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawLine3D(Vector3 startPos, Vector3 endPos, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_line_3d(c(0, 5, 0), c(0, 5, 0), "red")
+}
+
+}
 \seealso{
 Other 3d functions: 
 \code{\link{begin_mode_3d}()},

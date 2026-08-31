@@ -15,6 +15,12 @@ A number
 \description{
 Matrix Determinant
 }
+\examples{
+\dontrun{
+matrix_determinant(diag(4))
+}
+
+}
 \seealso{
 Other matrix functions: 
 \code{\link{get_camera_matrix}()},

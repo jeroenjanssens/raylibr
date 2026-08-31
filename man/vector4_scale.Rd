@@ -17,6 +17,12 @@ A numeric vector of length 4
 \description{
 Vector4 Scale
 }
+\examples{
+\dontrun{
+vector4_scale(c(0, 0, 0, 1), 1.0)
+}
+
+}
 \seealso{
 Other vector4 functions: 
 \code{\link{vector4_add}()},

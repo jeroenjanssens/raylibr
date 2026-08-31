@@ -29,6 +29,12 @@ rl_set_blend_factors_separate(
 \description{
 Rl Set Blend Factors Separate
 }
+\examples{
+\dontrun{
+rl_set_blend_factors_separate(0L, 0L, 0L, 0L, 0L, 0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

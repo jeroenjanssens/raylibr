@@ -12,6 +12,12 @@ rl_unload_shader(id)
 \description{
 Rl Unload Shader
 }
+\examples{
+\dontrun{
+rl_unload_shader(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

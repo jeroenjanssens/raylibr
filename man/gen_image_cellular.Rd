@@ -25,4 +25,10 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Image GenImageCellular(int width, int height, int tileSize);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+gen_image_cellular(800L, 450L, 32L)
+}
+
+}
 \concept{cellular functions}

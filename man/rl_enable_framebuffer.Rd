@@ -12,6 +12,12 @@ rl_enable_framebuffer(id)
 \description{
 Rl Enable Framebuffer
 }
+\examples{
+\dontrun{
+rl_enable_framebuffer(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

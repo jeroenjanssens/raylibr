@@ -15,6 +15,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void EndMode3D(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+end_mode_3d()
+}
+
+}
 \seealso{
 Other 3d functions: 
 \code{\link{begin_mode_3d}()},

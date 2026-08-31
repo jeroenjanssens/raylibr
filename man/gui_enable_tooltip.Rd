@@ -9,6 +9,12 @@ gui_enable_tooltip()
 \description{
 Enable gui tooltips (global state).
 }
+\examples{
+\dontrun{
+gui_enable_tooltip()
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

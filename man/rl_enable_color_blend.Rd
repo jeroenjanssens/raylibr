@@ -9,6 +9,12 @@ rl_enable_color_blend()
 \description{
 Rl Enable Color Blend
 }
+\examples{
+\dontrun{
+rl_enable_color_blend()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

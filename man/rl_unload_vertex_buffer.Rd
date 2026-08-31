@@ -12,6 +12,12 @@ rl_unload_vertex_buffer(vbo_id)
 \description{
 Rl Unload Vertex Buffer
 }
+\examples{
+\dontrun{
+rl_unload_vertex_buffer(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -17,6 +17,12 @@ An integer
 \description{
 Quaternion Equals
 }
+\examples{
+\dontrun{
+quaternion_equals(c(0, 0, 0, 1), c(0, 0, 0, 1))
+}
+
+}
 \seealso{
 Other quaternion functions: 
 \code{\link{quaternion_add}()},

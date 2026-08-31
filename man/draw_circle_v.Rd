@@ -22,6 +22,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawCircleV(Vector2 center, float radius, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_circle_v(c(100, 100), 50.0, "red")
+}
+
+}
 \seealso{
 Other v functions: 
 \code{\link{draw_circle_lines_v}()},

@@ -19,6 +19,12 @@ An integer
 \description{
 Rl Load Texture Depth
 }
+\examples{
+\dontrun{
+rl_load_texture_depth(800L, 450L, TRUE)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

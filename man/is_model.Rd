@@ -15,3 +15,10 @@ A logical.
 \description{
 Test if object is a model
 }
+\examples{
+\dontrun{
+m <- load_model("model.obj")
+is_model(m)
+}
+
+}

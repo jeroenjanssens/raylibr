@@ -15,6 +15,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void EnableEventWaiting(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+enable_event_waiting()
+}
+
+}
 \seealso{
 Other waiting functions: 
 \code{\link{disable_event_waiting}()}

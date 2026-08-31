@@ -28,6 +28,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawSplineSegmentCatmullRom(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, float thick, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_spline_segment_catmull_rom(c(100, 100), c(100, 100), c(100, 100), c(100, 100), 2.0, "red")
+}
+
+}
 \seealso{
 Other rom functions: 
 \code{\link{get_spline_point_catmull_rom}()}

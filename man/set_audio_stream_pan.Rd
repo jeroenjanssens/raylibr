@@ -20,6 +20,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void SetAudioStreamPan(AudioStream stream, float pan);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+set_audio_stream_pan(load_audio_stream(44100L, 16L, 1L), 0.5)
+}
+
+}
 \seealso{
 Other pan functions: 
 \code{\link{set_music_pan}()},

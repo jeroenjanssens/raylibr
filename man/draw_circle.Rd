@@ -24,6 +24,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawCircle(int centerX, int centerY, float radius, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_circle(100L, 100L, 50.0, "red")
+}
+
+}
 \seealso{
 Other circle functions: 
 \code{\link{check_collision_point_circle}()}

@@ -22,6 +22,12 @@ rl_frustum(left, right, bottom, top, znear, zfar)
 \description{
 Rl Frustum
 }
+\examples{
+\dontrun{
+rl_frustum(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

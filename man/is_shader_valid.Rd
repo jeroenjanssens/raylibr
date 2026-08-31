@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsShaderValid(Shader shader);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_shader_valid(load_shader("", "shader.fs"))
+}
+
+}
 \seealso{
 Other valid functions: 
 \code{\link{is_audio_stream_valid}()},

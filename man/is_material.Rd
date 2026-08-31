@@ -15,3 +15,10 @@ A logical.
 \description{
 Test if object is a material
 }
+\examples{
+\dontrun{
+m <- load_material_default()
+is_material(m)
+}
+
+}

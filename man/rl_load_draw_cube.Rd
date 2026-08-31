@@ -9,6 +9,12 @@ rl_load_draw_cube()
 \description{
 Rl Load Draw Cube
 }
+\examples{
+\dontrun{
+rl_load_draw_cube()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

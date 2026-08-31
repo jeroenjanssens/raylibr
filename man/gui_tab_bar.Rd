@@ -21,6 +21,12 @@ A list with \code{result} (integer), \code{hscroll} (integer), \code{active} (in
 \description{
 Tab Bar control.
 }
+\examples{
+\dontrun{
+gui_tab_bar(rectangle(10, 10, 200, 100), "Hello", 0L, 0L)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

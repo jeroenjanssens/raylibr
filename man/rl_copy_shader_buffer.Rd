@@ -20,6 +20,12 @@ rl_copy_shader_buffer(dest_id, src_id, dest_offset, src_offset, count)
 \description{
 Rl Copy Shader Buffer
 }
+\examples{
+\dontrun{
+rl_copy_shader_buffer(0L, 0L, 0L, 0L, 10L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

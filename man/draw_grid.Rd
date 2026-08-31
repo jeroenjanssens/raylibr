@@ -20,6 +20,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawGrid(int slices, float spacing);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_grid(16L, 1.0)
+}
+
+}
 \seealso{
 Other draw functions: 
 \code{\link{draw_billboard}()},

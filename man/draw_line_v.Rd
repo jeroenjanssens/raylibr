@@ -22,6 +22,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawLineV(Vector2 startPos, Vector2 endPos, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_line_v(c(100, 100), c(100, 100), "red")
+}
+
+}
 \seealso{
 Other v functions: 
 \code{\link{draw_circle_lines_v}()},

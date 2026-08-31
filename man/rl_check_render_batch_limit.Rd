@@ -15,6 +15,12 @@ A logical
 \description{
 Rl Check Render Batch Limit
 }
+\examples{
+\dontrun{
+rl_check_render_batch_limit(10L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

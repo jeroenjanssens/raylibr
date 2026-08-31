@@ -17,6 +17,12 @@ A numeric vector of length 4
 \description{
 Vector4 Subtract
 }
+\examples{
+\dontrun{
+vector4_subtract(c(0, 0, 0, 1), c(0, 0, 0, 1))
+}
+
+}
 \seealso{
 Other vector4 functions: 
 \code{\link{vector4_add}()},

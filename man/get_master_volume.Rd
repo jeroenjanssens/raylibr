@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{float GetMasterVolume(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_master_volume()
+}
+
+}
 \seealso{
 Other volume functions: 
 \code{\link{set_audio_stream_volume}()},

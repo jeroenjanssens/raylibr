@@ -29,6 +29,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Image GenImagePerlinNoise(int width, int height, int offsetX, int offsetY, float scale);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+gen_image_perlin_noise(800L, 450L, 0L, 0L, 1.0)
+}
+
+}
 \seealso{
 Other noise functions: 
 \code{\link{gen_image_white_noise}()}

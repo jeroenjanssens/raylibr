@@ -21,4 +21,10 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{int TextToInteger(const char * text);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+text_to_integer("Hello")
+}
+
+}
 \concept{integer functions}

@@ -9,6 +9,12 @@ rl_clear_screen_buffers()
 \description{
 Rl Clear Screen Buffers
 }
+\examples{
+\dontrun{
+rl_clear_screen_buffers()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

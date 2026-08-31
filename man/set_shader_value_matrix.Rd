@@ -22,6 +22,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void SetShaderValueMatrix(Shader shader, int locIndex, Matrix mat);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+set_shader_value_matrix(load_shader("", "shader.fs"), 0L, diag(4))
+}
+
+}
 \seealso{
 Other matrix functions: 
 \code{\link{get_camera_matrix}()},

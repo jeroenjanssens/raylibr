@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Model LoadModelFromMesh(Mesh mesh);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+load_model_from_mesh(gen_mesh_cube(1.0, 1.0, 1.0))
+}
+
+}
 \seealso{
 Other mesh functions: 
 \code{\link{draw_mesh}()},

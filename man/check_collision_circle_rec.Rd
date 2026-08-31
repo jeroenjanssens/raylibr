@@ -25,6 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool CheckCollisionCircleRec(Vector2 center, float radius, Rectangle rec);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+check_collision_circle_rec(c(100, 100), 50.0, rectangle(10, 10, 200, 100))
+}
+
+}
 \seealso{
 Other rec functions: 
 \code{\link{check_collision_point_rec}()},

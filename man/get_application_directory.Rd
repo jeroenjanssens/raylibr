@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{const char * GetApplicationDirectory(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_application_directory()
+}
+
+}
 \seealso{
 Other directory functions: 
 \code{\link{change_directory}()},

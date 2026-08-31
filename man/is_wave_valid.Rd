@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsWaveValid(Wave wave);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_wave_valid(load_wave("sound.wav"))
+}
+
+}
 \seealso{
 Other valid functions: 
 \code{\link{is_audio_stream_valid}()},

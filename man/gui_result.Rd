@@ -22,4 +22,12 @@ Enum values for \code{gui_result}.
    \code{tab_close} \tab 4 \cr
 }
 }
+\examples{
+\dontrun{
+gui_result$none
+gui_result$pressed
+gui_result$tab_close
+}
+
+}
 \keyword{datasets}

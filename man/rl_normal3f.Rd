@@ -16,6 +16,12 @@ rl_normal3f(x, y, z)
 \description{
 Rl Normal3f
 }
+\examples{
+\dontrun{
+rl_normal3f(0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -18,4 +18,10 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void OpenURL(const char * url);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+open_url("https://example.com")
+}
+
+}
 \concept{url functions}

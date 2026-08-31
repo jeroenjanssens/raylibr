@@ -26,6 +26,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawBillboard(Camera camera, Texture2D texture, Vector3 position, float scale, Color tint);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_billboard(camera_3d(c(0, 10, 10)), load_texture("file.png"), c(0, 5, 0), 1.0, "red")
+}
+
+}
 \seealso{
 Other draw functions: 
 \code{\link{draw_billboard_pro}()},

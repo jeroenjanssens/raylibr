@@ -12,6 +12,12 @@ A logical
 \description{
 Check if gui is locked (global state).
 }
+\examples{
+\dontrun{
+gui_is_locked()
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

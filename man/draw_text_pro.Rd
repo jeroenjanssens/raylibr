@@ -32,6 +32,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawTextPro(Font font, const char * text, Vector2 position, Vector2 origin, float rotation, float fontSize, float spacing, Color tint);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_text_pro(get_font_default(), "Hello", c(100, 100), c(100, 100), 0.0, 1.0, 1.0, "red")
+}
+
+}
 \seealso{
 Other pro functions: 
 \code{\link{draw_billboard_pro}()},

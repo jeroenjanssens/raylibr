@@ -9,6 +9,12 @@ rl_disable_texture_cubemap()
 \description{
 Rl Disable Texture Cubemap
 }
+\examples{
+\dontrun{
+rl_disable_texture_cubemap()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

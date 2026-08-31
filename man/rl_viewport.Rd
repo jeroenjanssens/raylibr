@@ -18,6 +18,12 @@ rl_viewport(x, y, width, height)
 \description{
 Rl Viewport
 }
+\examples{
+\dontrun{
+rl_viewport(100L, 100L, 800L, 450L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

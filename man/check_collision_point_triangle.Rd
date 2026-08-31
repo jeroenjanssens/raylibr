@@ -27,6 +27,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool CheckCollisionPointTriangle(Vector2 point, Vector2 p1, Vector2 p2, Vector2 p3);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+check_collision_point_triangle(c(100, 100), c(100, 100), c(100, 100), c(100, 100))
+}
+
+}
 \seealso{
 Other triangle functions: 
 \code{\link{draw_triangle}()},

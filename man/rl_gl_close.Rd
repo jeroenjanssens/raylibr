@@ -9,6 +9,12 @@ rl_gl_close()
 \description{
 Rl Gl Close
 }
+\examples{
+\dontrun{
+rl_gl_close()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -6,6 +6,11 @@
 #'
 #' @return A logical.
 #'
+#' @examples
+#' \dontrun{
+#' is_color("not a color")
+#' }
+#'
 #' @export
 is_color <- function(x) {
   inherits(x, "color")
@@ -38,6 +43,12 @@ is_color <- function(x) {
 #'
 #' @family color functions
 #'
+#' @examples
+#' \dontrun{
+#' col <- color(255L, 255L, 255L)
+#' col$r
+#' col$g
+#' }
 #'
 #' @export
 color <- function(r, g, b, a = 255) {

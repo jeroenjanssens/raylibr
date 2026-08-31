@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsKeyReleased(int key);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_key_released(0L)
+}
+
+}
 \seealso{
 Other released functions: 
 \code{\link{is_gamepad_button_released}()},

@@ -12,6 +12,12 @@ rl_set_cull_face(mode)
 \description{
 Rl Set Cull Face
 }
+\examples{
+\dontrun{
+rl_set_cull_face(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

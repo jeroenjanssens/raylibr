@@ -22,6 +22,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawSphere(Vector3 centerPos, float radius, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_sphere(c(0, 5, 0), 50.0, "red")
+}
+
+}
 \seealso{
 Other sphere functions: 
 \code{\link{check_collision_box_sphere}()},

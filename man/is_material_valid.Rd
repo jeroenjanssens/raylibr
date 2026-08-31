@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsMaterialValid(Material material);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_material_valid(load_material_default())
+}
+
+}
 \seealso{
 Other valid functions: 
 \code{\link{is_audio_stream_valid}()},

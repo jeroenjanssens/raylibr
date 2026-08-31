@@ -21,6 +21,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Wave WaveCopy(Wave wave);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+wave_copy(load_wave("sound.wav"))
+}
+
+}
 \seealso{
 Other copy functions: 
 \code{\link{file_copy}()},

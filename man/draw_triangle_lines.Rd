@@ -24,6 +24,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawTriangleLines(Vector2 v1, Vector2 v2, Vector2 v3, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_triangle_lines(c(100, 100), c(100, 100), c(100, 100), "red")
+}
+
+}
 \seealso{
 Other lines functions: 
 \code{\link{draw_circle_lines}()},

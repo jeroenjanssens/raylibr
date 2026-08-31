@@ -11,6 +11,13 @@
 #' | `changed` | 2 |
 #' | `tab_close` | 4 |
 #'
+#' @examples
+#' \dontrun{
+#' gui_result$none
+#' gui_result$pressed
+#' gui_result$tab_close
+#' }
+#'
 #' @export
 gui_result <- list(
   none = 0L,
@@ -30,6 +37,13 @@ gui_result <- list(
 #' | `pressed` | 2 |
 #' | `disabled` | 3 |
 #'
+#' @examples
+#' \dontrun{
+#' gui_state$normal
+#' gui_state$focused
+#' gui_state$disabled
+#' }
+#'
 #' @export
 gui_state <- list(
   normal = 0L,
@@ -48,6 +62,13 @@ gui_state <- list(
 #' | `center` | 1 |
 #' | `right` | 2 |
 #'
+#' @examples
+#' \dontrun{
+#' gui_text_alignment$left
+#' gui_text_alignment$center
+#' gui_text_alignment$right
+#' }
+#'
 #' @export
 gui_text_alignment <- list(
   left = 0L,
@@ -65,6 +86,13 @@ gui_text_alignment <- list(
 #' | `middle` | 1 |
 #' | `bottom` | 2 |
 #'
+#' @examples
+#' \dontrun{
+#' gui_text_alignment_vertical$top
+#' gui_text_alignment_vertical$middle
+#' gui_text_alignment_vertical$bottom
+#' }
+#'
 #' @export
 gui_text_alignment_vertical <- list(
   top = 0L,
@@ -81,6 +109,13 @@ gui_text_alignment_vertical <- list(
 #' | `none` | 0 |
 #' | `char` | 1 |
 #' | `word` | 2 |
+#'
+#' @examples
+#' \dontrun{
+#' gui_text_wrap_mode$none
+#' gui_text_wrap_mode$char
+#' gui_text_wrap_mode$word
+#' }
 #'
 #' @export
 gui_text_wrap_mode <- list(
@@ -111,6 +146,13 @@ gui_text_wrap_mode <- list(
 #' | `colorpicker` | 13 |
 #' | `scrollbar` | 14 |
 #' | `statusbar` | 15 |
+#'
+#' @examples
+#' \dontrun{
+#' gui_control$default
+#' gui_control$combobox
+#' gui_control$statusbar
+#' }
 #'
 #' @export
 gui_control <- list(
@@ -155,6 +197,13 @@ gui_control <- list(
 #' | `text_alignment` | 14 |
 #' | `baseprop16` | 15 |
 #'
+#' @examples
+#' \dontrun{
+#' gui_control_property$border_color_normal
+#' gui_control_property$base_color_pressed
+#' gui_control_property$baseprop16
+#' }
+#'
 #' @export
 gui_control_property <- list(
   border_color_normal = 0L,
@@ -190,6 +239,13 @@ gui_control_property <- list(
 #' | `text_wrap_mode` | 22 |
 #' | `extprop08` | 23 |
 #'
+#' @examples
+#' \dontrun{
+#' gui_default_property$text_size
+#' gui_default_property$background_color
+#' gui_default_property$extprop08
+#' }
+#'
 #' @export
 gui_default_property <- list(
   text_size = 16L,
@@ -211,6 +267,12 @@ gui_default_property <- list(
 #' | `group_padding` | 16 |
 #' | `group_width_full` | 17 |
 #'
+#' @examples
+#' \dontrun{
+#' gui_toggle_property$group_padding
+#' gui_toggle_property$group_width_full
+#' }
+#'
 #' @export
 gui_toggle_property <- list(
   group_padding = 16L,
@@ -226,6 +288,12 @@ gui_toggle_property <- list(
 #' | `slider_width` | 16 |
 #' | `slider_padding` | 17 |
 #'
+#' @examples
+#' \dontrun{
+#' gui_slider_property$slider_width
+#' gui_slider_property$slider_padding
+#' }
+#'
 #' @export
 gui_slider_property <- list(
   slider_width = 16L,
@@ -240,6 +308,12 @@ gui_slider_property <- list(
 #' | --- | ---: |
 #' | `progress_padding` | 16 |
 #' | `progress_side` | 17 |
+#'
+#' @examples
+#' \dontrun{
+#' gui_progress_bar_property$progress_padding
+#' gui_progress_bar_property$progress_side
+#' }
 #'
 #' @export
 gui_progress_bar_property <- list(
@@ -260,6 +334,13 @@ gui_progress_bar_property <- list(
 #' | `scroll_padding` | 20 |
 #' | `scroll_speed` | 21 |
 #'
+#' @examples
+#' \dontrun{
+#' gui_scroll_bar_property$arrows_size
+#' gui_scroll_bar_property$scroll_slider_padding
+#' gui_scroll_bar_property$scroll_speed
+#' }
+#'
 #' @export
 gui_scroll_bar_property <- list(
   arrows_size = 16L,
@@ -278,6 +359,11 @@ gui_scroll_bar_property <- list(
 #' | --- | ---: |
 #' | `check_padding` | 16 |
 #'
+#' @examples
+#' \dontrun{
+#' gui_check_box_property$check_padding
+#' }
+#'
 #' @export
 gui_check_box_property <- list(
   check_padding = 16L
@@ -291,6 +377,12 @@ gui_check_box_property <- list(
 #' | --- | ---: |
 #' | `combo_button_width` | 16 |
 #' | `combo_button_spacing` | 17 |
+#'
+#' @examples
+#' \dontrun{
+#' gui_combo_box_property$combo_button_width
+#' gui_combo_box_property$combo_button_spacing
+#' }
 #'
 #' @export
 gui_combo_box_property <- list(
@@ -309,6 +401,13 @@ gui_combo_box_property <- list(
 #' | `dropdown_arrow_hidden` | 18 |
 #' | `dropdown_roll_up` | 19 |
 #'
+#' @examples
+#' \dontrun{
+#' gui_dropdown_box_property$arrow_padding
+#' gui_dropdown_box_property$dropdown_items_spacing
+#' gui_dropdown_box_property$dropdown_roll_up
+#' }
+#'
 #' @export
 gui_dropdown_box_property <- list(
   arrow_padding = 16L,
@@ -325,6 +424,11 @@ gui_dropdown_box_property <- list(
 #' | --- | ---: |
 #' | `text_readonly` | 16 |
 #'
+#' @examples
+#' \dontrun{
+#' gui_text_box_property$text_readonly
+#' }
+#'
 #' @export
 gui_text_box_property <- list(
   text_readonly = 16L
@@ -338,6 +442,12 @@ gui_text_box_property <- list(
 #' | --- | ---: |
 #' | `spinner_button_width` | 16 |
 #' | `spinner_button_spacing` | 17 |
+#'
+#' @examples
+#' \dontrun{
+#' gui_value_box_property$spinner_button_width
+#' gui_value_box_property$spinner_button_spacing
+#' }
 #'
 #' @export
 gui_value_box_property <- list(
@@ -354,6 +464,13 @@ gui_value_box_property <- list(
 #' | `tab_items_width` | 16 |
 #' | `tab_close_button` | 17 |
 #' | `tab_line_side` | 18 |
+#'
+#' @examples
+#' \dontrun{
+#' gui_tab_bar_property$tab_items_width
+#' gui_tab_bar_property$tab_close_button
+#' gui_tab_bar_property$tab_line_side
+#' }
 #'
 #' @export
 gui_tab_bar_property <- list(
@@ -374,6 +491,13 @@ gui_tab_bar_property <- list(
 #' | `scrollbar_side` | 19 |
 #' | `list_items_border_normal` | 20 |
 #' | `list_items_border_width` | 21 |
+#'
+#' @examples
+#' \dontrun{
+#' gui_list_view_property$list_items_height
+#' gui_list_view_property$scrollbar_width
+#' gui_list_view_property$list_items_border_width
+#' }
 #'
 #' @export
 gui_list_view_property <- list(
@@ -396,6 +520,13 @@ gui_list_view_property <- list(
 #' | `huebar_padding` | 18 |
 #' | `huebar_selector_height` | 19 |
 #' | `huebar_selector_overflow` | 20 |
+#'
+#' @examples
+#' \dontrun{
+#' gui_color_picker_property$color_selector_size
+#' gui_color_picker_property$huebar_padding
+#' gui_color_picker_property$huebar_selector_overflow
+#' }
 #'
 #' @export
 gui_color_picker_property <- list(
@@ -669,6 +800,13 @@ gui_color_picker_property <- list(
 #' | `filetype_code_python` | 254 |
 #' | `filetype_code_js` | 255 |
 #' | `filetype_icon` | 256 |
+#'
+#' @examples
+#' \dontrun{
+#' gui_icon$none
+#' gui_icon$cross_small
+#' gui_icon$filetype_icon
+#' }
 #'
 #' @export
 gui_icon <- list(

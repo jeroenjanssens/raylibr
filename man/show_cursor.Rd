@@ -15,6 +15,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void ShowCursor(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+show_cursor()
+}
+
+}
 \seealso{
 Other cursor functions: 
 \code{\link{disable_cursor}()},

@@ -17,6 +17,12 @@ An integer
 \description{
 Panel control, useful to group controls.
 }
+\examples{
+\dontrun{
+gui_panel(rectangle(10, 10, 200, 100), "Hello")
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

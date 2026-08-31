@@ -26,6 +26,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawEllipse(int centerX, int centerY, float radiusH, float radiusV, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_ellipse(100L, 100L, 50.0, 50.0, "red")
+}
+
+}
 \seealso{
 Other draw functions: 
 \code{\link{draw_billboard}()},

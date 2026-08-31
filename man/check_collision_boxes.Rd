@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool CheckCollisionBoxes(BoundingBox box1, BoundingBox box2);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+check_collision_boxes(bounding_box(c(-1, -1, -1), c(1, 1, 1)), bounding_box(c(-1, -1, -1), c(1, 1, 1)))
+}
+
+}
 \seealso{
 Other check functions: 
 \code{\link{check_collision_box_sphere}()},

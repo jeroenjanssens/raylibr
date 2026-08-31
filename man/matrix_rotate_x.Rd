@@ -15,6 +15,12 @@ A 4x4 numeric matrix
 \description{
 Matrix Rotate X
 }
+\examples{
+\dontrun{
+matrix_rotate_x(0.0)
+}
+
+}
 \seealso{
 Other matrix functions: 
 \code{\link{get_camera_matrix}()},

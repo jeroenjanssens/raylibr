@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void UnloadFont(Font font);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+unload_font(get_font_default())
+}
+
+}
 \seealso{
 Other font functions: 
 \code{\link{load_font}()},

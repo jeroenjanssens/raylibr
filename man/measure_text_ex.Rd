@@ -27,6 +27,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Vector2 MeasureTextEx(Font font, const char * text, float fontSize, float spacing);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+measure_text_ex(get_font_default(), "Hello", 1.0, 1.0)
+}
+
+}
 \seealso{
 Other ex functions: 
 \code{\link{draw_cylinder_ex}()},

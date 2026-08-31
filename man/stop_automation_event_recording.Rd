@@ -15,6 +15,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void StopAutomationEventRecording(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+stop_automation_event_recording()
+}
+
+}
 \seealso{
 Other recording functions: 
 \code{\link{start_automation_event_recording}()}

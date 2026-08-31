@@ -34,4 +34,12 @@ Enum values for \code{flag}.
    \code{interlaced_hint} \tab 65536 \cr
 }
 }
+\examples{
+\dontrun{
+flag$vsync_hint
+flag$window_unfocused
+flag$interlaced_hint
+}
+
+}
 \keyword{datasets}

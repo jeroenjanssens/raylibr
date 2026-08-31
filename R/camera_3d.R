@@ -6,6 +6,11 @@
 #'
 #' @return A logical.
 #'
+#' @examples
+#' \dontrun{
+#' is_camera_3d("not a camera_3d")
+#' }
+#'
 #' @export
 is_camera_3d <- function(x) {
   inherits(x, "camera_3d")
@@ -40,6 +45,12 @@ is_camera_3d <- function(x) {
 #'
 #' @family camera_3d functions
 #'
+#' @examples
+#' \dontrun{
+#' cam <- camera_3d(c(0, 5, 0))
+#' cam$position
+#' cam$target
+#' }
 #'
 #' @export
 camera_3d <- function(position, target = c(0, 0, 0), up = c(0, 1, 0), fovy = 70, projection = 0L) {

@@ -23,4 +23,10 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Mesh GenMeshCubicmap(Image cubicmap, Vector3 cubeSize);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+gen_mesh_cubicmap(gen_image_color(100, 100, "blue"), c(1, 1, 1))
+}
+
+}
 \concept{cubicmap functions}

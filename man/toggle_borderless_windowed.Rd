@@ -15,4 +15,10 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void ToggleBorderlessWindowed(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+toggle_borderless_windowed()
+}
+
+}
 \concept{windowed functions}

@@ -15,3 +15,9 @@ A logical.
 \description{
 Test if object is a glyph_info
 }
+\examples{
+\dontrun{
+is_glyph_info("not a glyph_info")
+}
+
+}

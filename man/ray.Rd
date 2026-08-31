@@ -26,6 +26,14 @@ This class has been auto-generated from the following Raylib struct definition:
 \} Ray;
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+ray <- ray(c(0, 5, 0), c(0, 0, 0))
+ray$position
+ray$direction
+}
+
+}
 \seealso{
 Other ray functions: 
 \code{\link{draw_ray}()},

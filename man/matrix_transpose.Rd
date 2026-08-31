@@ -15,6 +15,12 @@ A 4x4 numeric matrix
 \description{
 Matrix Transpose
 }
+\examples{
+\dontrun{
+matrix_transpose(diag(4))
+}
+
+}
 \seealso{
 Other matrix functions: 
 \code{\link{get_camera_matrix}()},

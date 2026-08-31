@@ -6,6 +6,11 @@
 #'
 #' @return A logical.
 #'
+#' @examples
+#' \dontrun{
+#' is_bounding_box("not a bounding_box")
+#' }
+#'
 #' @export
 is_bounding_box <- function(x) {
   inherits(x, "bounding_box")
@@ -34,6 +39,12 @@ is_bounding_box <- function(x) {
 #'
 #' @family bounding_box functions
 #'
+#' @examples
+#' \dontrun{
+#' bou <- bounding_box(c(0, 0, 0), c(0, 0, 0))
+#' bou$min
+#' bou$max
+#' }
 #'
 #' @export
 bounding_box <- function(min, max) {

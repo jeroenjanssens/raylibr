@@ -17,6 +17,12 @@ A 4x4 numeric matrix
 \description{
 Matrix Multiply
 }
+\examples{
+\dontrun{
+matrix_multiply(diag(4), diag(4))
+}
+
+}
 \seealso{
 Other matrix functions: 
 \code{\link{get_camera_matrix}()},

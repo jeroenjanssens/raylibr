@@ -35,4 +35,12 @@ This class has been auto-generated from the following Raylib struct definition:
 \} GlyphInfo;
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+gly <- glyph_info(0L, 0L, 0L, 0L, gen_image_color(100, 100, "blue"))
+gly$value
+gly$offset_x
+}
+
+}
 \concept{glyph_info functions}

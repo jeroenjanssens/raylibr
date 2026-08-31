@@ -14,6 +14,12 @@ rl_set_clip_planes(near_plane, far_plane)
 \description{
 Rl Set Clip Planes
 }
+\examples{
+\dontrun{
+rl_set_clip_planes(0.0, 0.0)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void BeginMode3D(Camera3D camera);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+begin_mode_3d(camera_3d(c(0, 10, 10)))
+}
+
+}
 \seealso{
 Other 3d functions: 
 \code{\link{draw_circle_3d}()},

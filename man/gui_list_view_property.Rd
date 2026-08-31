@@ -24,4 +24,12 @@ Enum values for \code{gui_list_view_property}.
    \code{list_items_border_width} \tab 21 \cr
 }
 }
+\examples{
+\dontrun{
+gui_list_view_property$list_items_height
+gui_list_view_property$scrollbar_width
+gui_list_view_property$list_items_border_width
+}
+
+}
 \keyword{datasets}

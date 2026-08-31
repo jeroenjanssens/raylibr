@@ -12,6 +12,12 @@ rl_active_texture_slot(slot)
 \description{
 Rl Active Texture Slot
 }
+\examples{
+\dontrun{
+rl_active_texture_slot(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

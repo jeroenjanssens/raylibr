@@ -24,6 +24,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawSplineSegmentLinear(Vector2 p1, Vector2 p2, float thick, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_spline_segment_linear(c(100, 100), c(100, 100), 2.0, "red")
+}
+
+}
 \seealso{
 Other linear functions: 
 \code{\link{gen_image_gradient_linear}()},

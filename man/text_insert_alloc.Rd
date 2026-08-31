@@ -25,6 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{char * TextInsertAlloc(const char * text, const char * insert, int position);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+text_insert_alloc("Hello", "text", 0L)
+}
+
+}
 \seealso{
 Other alloc functions: 
 \code{\link{text_replace_alloc}()},

@@ -14,6 +14,12 @@ rl_set_vertex_attribute_divisor(index, divisor)
 \description{
 Rl Set Vertex Attribute Divisor
 }
+\examples{
+\dontrun{
+rl_set_vertex_attribute_divisor(0L, 0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -12,6 +12,12 @@ An integer
 \description{
 Get gui state (global state).
 }
+\examples{
+\dontrun{
+gui_get_state()
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

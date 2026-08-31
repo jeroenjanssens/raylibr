@@ -28,6 +28,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawPolyLinesEx(Vector2 center, int sides, float radius, float rotation, float lineThick, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_poly_lines_ex(c(100, 100), 0L, 50.0, 0.0, 2.0, "red")
+}
+
+}
 \seealso{
 Other ex functions: 
 \code{\link{draw_cylinder_ex}()},

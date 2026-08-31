@@ -15,3 +15,9 @@ A logical.
 \description{
 Test if object is a bone_info
 }
+\examples{
+\dontrun{
+is_bone_info(x)
+}
+
+}

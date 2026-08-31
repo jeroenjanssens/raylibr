@@ -15,6 +15,12 @@ A numeric vector of length 4
 \description{
 Quaternion Normalize
 }
+\examples{
+\dontrun{
+quaternion_normalize(c(0, 0, 0, 1))
+}
+
+}
 \seealso{
 Other quaternion functions: 
 \code{\link{quaternion_add}()},

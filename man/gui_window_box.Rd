@@ -17,6 +17,12 @@ An integer
 \description{
 Window Box control, shows a window that can be closed.
 }
+\examples{
+\dontrun{
+gui_window_box(rectangle(10, 10, 200, 100), "My Window")
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

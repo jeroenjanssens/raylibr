@@ -25,6 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Vector2 GetSplinePointLinear(Vector2 startPos, Vector2 endPos, float t);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_spline_point_linear(c(100, 100), c(100, 100), 0.0)
+}
+
+}
 \seealso{
 Other linear functions: 
 \code{\link{draw_spline_segment_linear}()},

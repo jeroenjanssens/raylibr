@@ -32,4 +32,12 @@ This class has been auto-generated from the following Raylib struct definition:
 \} Camera2D;
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+cam <- camera_2d(c(100, 100), c(100, 100))
+cam$offset
+cam$target
+}
+
+}
 \concept{camera_2d functions}

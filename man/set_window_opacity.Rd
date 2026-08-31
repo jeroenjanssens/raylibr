@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void SetWindowOpacity(float opacity);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+set_window_opacity(0.0)
+}
+
+}
 \seealso{
 Other set functions: 
 \code{\link{set_audio_stream_buffer_size_default}()},

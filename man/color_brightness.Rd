@@ -23,4 +23,10 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Color ColorBrightness(Color color, float factor);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+color_brightness("red", 0.0)
+}
+
+}
 \concept{brightness functions}

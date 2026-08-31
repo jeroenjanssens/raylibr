@@ -17,6 +17,12 @@ A number
 \description{
 Vector2 Line Angle
 }
+\examples{
+\dontrun{
+vector2_line_angle(c(100, 100), c(100, 100))
+}
+
+}
 \seealso{
 Other vector2 functions: 
 \code{\link{vector2_add}()},

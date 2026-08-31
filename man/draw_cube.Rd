@@ -26,6 +26,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawCube(Vector3 position, float width, float height, float length, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_cube(c(0, 5, 0), 200.0, 100.0, 100.0, "red")
+}
+
+}
 \seealso{
 Other cube functions: 
 \code{\link{gen_mesh_cube}()}

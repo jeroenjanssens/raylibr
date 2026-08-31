@@ -20,4 +20,11 @@ Enum values for \code{gui_slider_property}.
    \code{slider_padding} \tab 17 \cr
 }
 }
+\examples{
+\dontrun{
+gui_slider_property$slider_width
+gui_slider_property$slider_padding
+}
+
+}
 \keyword{datasets}

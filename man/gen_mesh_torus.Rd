@@ -27,4 +27,10 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Mesh GenMeshTorus(float radius, float size, int radSeg, int sides);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+gen_mesh_torus(50.0, 1.0, 0L, 0L)
+}
+
+}
 \concept{torus functions}

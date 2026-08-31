@@ -15,3 +15,9 @@ A logical.
 \description{
 Test if object is a material_map
 }
+\examples{
+\dontrun{
+is_material_map("not a material_map")
+}
+
+}

@@ -17,6 +17,12 @@ A 4x4 numeric matrix
 \description{
 Matrix Rotate
 }
+\examples{
+\dontrun{
+matrix_rotate(c(0, 0, 0), 0.0)
+}
+
+}
 \seealso{
 Other matrix functions: 
 \code{\link{get_camera_matrix}()},

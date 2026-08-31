@@ -16,6 +16,12 @@ rl_scalef(x, y, z)
 \description{
 Rl Scalef
 }
+\examples{
+\dontrun{
+rl_scalef(0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Vector2 GetWorldToScreen(Vector3 position, Camera camera);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_world_to_screen(c(0, 5, 0), camera_3d(c(0, 10, 10)))
+}
+
+}
 \seealso{
 Other screen functions: 
 \code{\link{is_cursor_on_screen}()},

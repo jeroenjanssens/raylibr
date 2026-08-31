@@ -16,6 +16,12 @@ rl_vertex3f(x, y, z)
 \description{
 Rl Vertex3f
 }
+\examples{
+\dontrun{
+rl_vertex3f(0.0, 0.0, 0.0)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -20,6 +20,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void SetWindowMaxSize(int width, int height);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+set_window_max_size(800L, 450L)
+}
+
+}
 \seealso{
 Other size functions: 
 \code{\link{get_pixel_data_size}()},

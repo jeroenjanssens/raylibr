@@ -12,6 +12,12 @@ rl_set_framebuffer_width(width)
 \description{
 Rl Set Framebuffer Width
 }
+\examples{
+\dontrun{
+rl_set_framebuffer_width(800L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

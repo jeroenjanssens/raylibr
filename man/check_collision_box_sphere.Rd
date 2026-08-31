@@ -25,6 +25,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool CheckCollisionBoxSphere(BoundingBox box, Vector3 center, float radius);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+check_collision_box_sphere(bounding_box(c(-1, -1, -1), c(1, 1, 1)), c(0, 0, 0), 50.0)
+}
+
+}
 \seealso{
 Other sphere functions: 
 \code{\link{draw_sphere}()},

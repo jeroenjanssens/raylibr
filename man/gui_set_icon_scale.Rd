@@ -12,6 +12,12 @@ gui_set_icon_scale(scale)
 \description{
 Set default icon drawing size.
 }
+\examples{
+\dontrun{
+gui_set_icon_scale(0L)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

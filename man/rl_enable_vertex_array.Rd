@@ -15,6 +15,12 @@ A logical
 \description{
 Rl Enable Vertex Array
 }
+\examples{
+\dontrun{
+rl_enable_vertex_array(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

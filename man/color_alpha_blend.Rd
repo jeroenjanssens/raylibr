@@ -25,4 +25,10 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Color ColorAlphaBlend(Color dst, Color src, Color tint);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+color_alpha_blend("red", "red", "red")
+}
+
+}
 \concept{blend functions}

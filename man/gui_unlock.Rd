@@ -9,6 +9,12 @@ gui_unlock()
 \description{
 Unlock gui controls (global state).
 }
+\examples{
+\dontrun{
+gui_unlock()
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

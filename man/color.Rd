@@ -32,6 +32,14 @@ This class has been auto-generated from the following Raylib struct definition:
 \} Color;
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+col <- color(255L, 255L, 255L)
+col$r
+col$g
+}
+
+}
 \seealso{
 Other color functions: 
 \code{\link{gen_image_color}()},

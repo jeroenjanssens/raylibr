@@ -26,6 +26,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawCubeWires(Vector3 position, float width, float height, float length, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_cube_wires(c(0, 5, 0), 200.0, 100.0, 100.0, "red")
+}
+
+}
 \seealso{
 Other wires functions: 
 \code{\link{draw_capsule_wires}()},

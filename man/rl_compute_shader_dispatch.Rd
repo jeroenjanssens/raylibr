@@ -16,6 +16,12 @@ rl_compute_shader_dispatch(group_x, group_y, group_z)
 \description{
 Rl Compute Shader Dispatch
 }
+\examples{
+\dontrun{
+rl_compute_shader_dispatch(0L, 0L, 0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

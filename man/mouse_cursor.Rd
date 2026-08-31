@@ -29,4 +29,12 @@ Enum values for \code{mouse_cursor}.
    \code{not_allowed} \tab 10 \cr
 }
 }
+\examples{
+\dontrun{
+mouse_cursor$default
+mouse_cursor$resize_ew
+mouse_cursor$not_allowed
+}
+
+}
 \keyword{datasets}

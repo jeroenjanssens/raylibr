@@ -18,6 +18,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void BeginBlendMode(int mode);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+begin_blend_mode(0L)
+}
+
+}
 \seealso{
 Other mode functions: 
 \code{\link{begin_scissor_mode}()},

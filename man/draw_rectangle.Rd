@@ -26,6 +26,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void DrawRectangle(int posX, int posY, int width, int height, Color color);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+draw_rectangle(100L, 100L, 800L, 450L, "red")
+}
+
+}
 \seealso{
 Other rectangle functions: 
 \code{\link{get_shapes_texture_rectangle}()},

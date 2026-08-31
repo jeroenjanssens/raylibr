@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{bool IsModelAnimationValid(Model model, ModelAnimation anim);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+is_model_animation_valid(load_model("model.obj"), anim)
+}
+
+}
 \seealso{
 Other valid functions: 
 \code{\link{is_audio_stream_valid}()},

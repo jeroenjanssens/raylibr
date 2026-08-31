@@ -29,6 +29,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{Image ImageTextEx(Font font, const char * text, float fontSize, float spacing, Color tint);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+image_text_ex(get_font_default(), "Hello", 1.0, 1.0, "red")
+}
+
+}
 \seealso{
 Other ex functions: 
 \code{\link{draw_cylinder_ex}()},

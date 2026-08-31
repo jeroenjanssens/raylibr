@@ -17,6 +17,12 @@ An integer
 \description{
 Float Equals
 }
+\examples{
+\dontrun{
+float_equals(0.0, 0.0)
+}
+
+}
 \seealso{
 Other float functions: 
 \code{\link{float_clamp}()},

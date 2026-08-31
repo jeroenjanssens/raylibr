@@ -6,6 +6,11 @@
 #'
 #' @return A logical.
 #'
+#' @examples
+#' \dontrun{
+#' is_ray("not a ray")
+#' }
+#'
 #' @export
 is_ray <- function(x) {
   inherits(x, "ray")
@@ -34,6 +39,12 @@ is_ray <- function(x) {
 #'
 #' @family ray functions
 #'
+#' @examples
+#' \dontrun{
+#' ray <- ray(c(0, 5, 0), c(0, 0, 0))
+#' ray$position
+#' ray$direction
+#' }
 #'
 #' @export
 ray <- function(position, direction) {

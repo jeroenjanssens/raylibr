@@ -18,6 +18,12 @@ rl_bind_image_texture(id, index, format, readonly)
 \description{
 Rl Bind Image Texture
 }
+\examples{
+\dontrun{
+rl_bind_image_texture(0L, 0L, 0L, TRUE)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

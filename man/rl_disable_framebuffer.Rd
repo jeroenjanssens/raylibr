@@ -9,6 +9,12 @@ rl_disable_framebuffer()
 \description{
 Rl Disable Framebuffer
 }
+\examples{
+\dontrun{
+rl_disable_framebuffer()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

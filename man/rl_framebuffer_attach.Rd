@@ -20,6 +20,12 @@ rl_framebuffer_attach(id, tex_id, attach_type, tex_type, mip_level)
 \description{
 Rl Framebuffer Attach
 }
+\examples{
+\dontrun{
+rl_framebuffer_attach(0L, 0L, 0L, 0L, 0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

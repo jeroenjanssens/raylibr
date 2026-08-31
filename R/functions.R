@@ -41,6 +41,10 @@
 #' @family window functions
 #' @family init functions
 #'
+#' @examples
+#' \dontrun{
+#' init_window(800L, 450L, "My Window")
+#' }
 #'
 #' @export
 init_window <- function(width = 640L, height = 480L, title = "raylibr") {
@@ -64,6 +68,10 @@ init_window <- function(width = 640L, height = 480L, title = "raylibr") {
 #' @family window functions
 #' @family close functions
 #'
+#' @examples
+#' \dontrun{
+#' close_window()
+#' }
 #'
 #' @export
 close_window <- function() {
@@ -85,6 +93,10 @@ close_window <- function() {
 #'
 #' @family close functions
 #'
+#' @examples
+#' \dontrun{
+#' window_should_close()
+#' }
 #'
 #' @export
 window_should_close <- function() {
@@ -107,6 +119,10 @@ window_should_close <- function() {
 #' @family ready functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_window_ready()
+#' }
 #'
 #' @export
 is_window_ready <- function() {
@@ -129,6 +145,10 @@ is_window_ready <- function() {
 #' @family fullscreen functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_window_fullscreen()
+#' }
 #'
 #' @export
 is_window_fullscreen <- function() {
@@ -151,6 +171,10 @@ is_window_fullscreen <- function() {
 #' @family hidden functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_window_hidden()
+#' }
 #'
 #' @export
 is_window_hidden <- function() {
@@ -173,6 +197,10 @@ is_window_hidden <- function() {
 #' @family minimized functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_window_minimized()
+#' }
 #'
 #' @export
 is_window_minimized <- function() {
@@ -195,6 +223,10 @@ is_window_minimized <- function() {
 #' @family maximized functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_window_maximized()
+#' }
 #'
 #' @export
 is_window_maximized <- function() {
@@ -217,6 +249,10 @@ is_window_maximized <- function() {
 #' @family focused functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_window_focused()
+#' }
 #'
 #' @export
 is_window_focused <- function() {
@@ -239,6 +275,10 @@ is_window_focused <- function() {
 #' @family resized functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_window_resized()
+#' }
 #'
 #' @export
 is_window_resized <- function() {
@@ -262,6 +302,10 @@ is_window_resized <- function() {
 #' @family state functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_window_state(0L)
+#' }
 #'
 #' @export
 is_window_state <- function(flag) {
@@ -284,6 +328,10 @@ is_window_state <- function(flag) {
 #' @family state functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_window_state(0L)
+#' }
 #'
 #' @export
 set_window_state <- function(flags) {
@@ -305,6 +353,10 @@ set_window_state <- function(flags) {
 #'
 #' @family state functions
 #'
+#' @examples
+#' \dontrun{
+#' clear_window_state(0L)
+#' }
 #'
 #' @export
 clear_window_state <- function(flags) {
@@ -325,6 +377,10 @@ clear_window_state <- function(flags) {
 #'
 #' @family fullscreen functions
 #'
+#' @examples
+#' \dontrun{
+#' toggle_fullscreen()
+#' }
 #'
 #' @export
 toggle_fullscreen <- function() {
@@ -344,6 +400,10 @@ toggle_fullscreen <- function() {
 #'
 #' @family windowed functions
 #'
+#' @examples
+#' \dontrun{
+#' toggle_borderless_windowed()
+#' }
 #'
 #' @export
 toggle_borderless_windowed <- function() {
@@ -363,6 +423,10 @@ toggle_borderless_windowed <- function() {
 #'
 #' @family window functions
 #'
+#' @examples
+#' \dontrun{
+#' maximize_window()
+#' }
 #'
 #' @export
 maximize_window <- function() {
@@ -382,6 +446,10 @@ maximize_window <- function() {
 #'
 #' @family window functions
 #'
+#' @examples
+#' \dontrun{
+#' minimize_window()
+#' }
 #'
 #' @export
 minimize_window <- function() {
@@ -401,6 +469,10 @@ minimize_window <- function() {
 #'
 #' @family window functions
 #'
+#' @examples
+#' \dontrun{
+#' restore_window()
+#' }
 #'
 #' @export
 restore_window <- function() {
@@ -422,6 +494,10 @@ restore_window <- function() {
 #' @family icon functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_window_icon(gen_image_color(100, 100, "blue"))
+#' }
 #'
 #' @export
 set_window_icon <- function(image) {
@@ -444,6 +520,10 @@ set_window_icon <- function(image) {
 #' @family title functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_window_title("My Window")
+#' }
 #'
 #' @export
 set_window_title <- function(title) {
@@ -467,6 +547,10 @@ set_window_title <- function(title) {
 #' @family position functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_window_position(100L, 100L)
+#' }
 #'
 #' @export
 set_window_position <- function(x, y) {
@@ -490,6 +574,10 @@ set_window_position <- function(x, y) {
 #' @family monitor functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_window_monitor(0L)
+#' }
 #'
 #' @export
 set_window_monitor <- function(monitor) {
@@ -513,6 +601,10 @@ set_window_monitor <- function(monitor) {
 #' @family size functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_window_min_size(800L, 450L)
+#' }
 #'
 #' @export
 set_window_min_size <- function(width, height) {
@@ -537,6 +629,10 @@ set_window_min_size <- function(width, height) {
 #' @family size functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_window_max_size(800L, 450L)
+#' }
 #'
 #' @export
 set_window_max_size <- function(width, height) {
@@ -561,6 +657,10 @@ set_window_max_size <- function(width, height) {
 #' @family size functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_window_size(800L, 450L)
+#' }
 #'
 #' @export
 set_window_size <- function(width, height) {
@@ -584,6 +684,10 @@ set_window_size <- function(width, height) {
 #' @family opacity functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_window_opacity(0.0)
+#' }
 #'
 #' @export
 set_window_opacity <- function(opacity) {
@@ -605,6 +709,10 @@ set_window_opacity <- function(opacity) {
 #' @family focused functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_window_focused()
+#' }
 #'
 #' @export
 set_window_focused <- function() {
@@ -627,6 +735,10 @@ set_window_focused <- function() {
 #' @family width functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_screen_width()
+#' }
 #'
 #' @export
 get_screen_width <- function() {
@@ -649,6 +761,10 @@ get_screen_width <- function() {
 #' @family height functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_screen_height()
+#' }
 #'
 #' @export
 get_screen_height <- function() {
@@ -671,6 +787,10 @@ get_screen_height <- function() {
 #' @family width functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_render_width()
+#' }
 #'
 #' @export
 get_render_width <- function() {
@@ -693,6 +813,10 @@ get_render_width <- function() {
 #' @family height functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_render_height()
+#' }
 #'
 #' @export
 get_render_height <- function() {
@@ -715,6 +839,10 @@ get_render_height <- function() {
 #' @family count functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_monitor_count()
+#' }
 #'
 #' @export
 get_monitor_count <- function() {
@@ -737,6 +865,10 @@ get_monitor_count <- function() {
 #' @family monitor functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_current_monitor()
+#' }
 #'
 #' @export
 get_current_monitor <- function() {
@@ -760,6 +892,10 @@ get_current_monitor <- function() {
 #' @family position functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_monitor_position(0L)
+#' }
 #'
 #' @export
 get_monitor_position <- function(monitor) {
@@ -784,6 +920,10 @@ get_monitor_position <- function(monitor) {
 #' @family width functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_monitor_width(0L)
+#' }
 #'
 #' @export
 get_monitor_width <- function(monitor) {
@@ -808,6 +948,10 @@ get_monitor_width <- function(monitor) {
 #' @family height functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_monitor_height(0L)
+#' }
 #'
 #' @export
 get_monitor_height <- function(monitor) {
@@ -832,6 +976,10 @@ get_monitor_height <- function(monitor) {
 #' @family width functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_monitor_physical_width(0L)
+#' }
 #'
 #' @export
 get_monitor_physical_width <- function(monitor) {
@@ -856,6 +1004,10 @@ get_monitor_physical_width <- function(monitor) {
 #' @family height functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_monitor_physical_height(0L)
+#' }
 #'
 #' @export
 get_monitor_physical_height <- function(monitor) {
@@ -880,6 +1032,10 @@ get_monitor_physical_height <- function(monitor) {
 #' @family rate functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_monitor_refresh_rate(0L)
+#' }
 #'
 #' @export
 get_monitor_refresh_rate <- function(monitor) {
@@ -903,6 +1059,10 @@ get_monitor_refresh_rate <- function(monitor) {
 #' @family position functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_window_position()
+#' }
 #'
 #' @export
 get_window_position <- function() {
@@ -925,6 +1085,10 @@ get_window_position <- function() {
 #' @family dpi functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_window_scale_dpi()
+#' }
 #'
 #' @export
 get_window_scale_dpi <- function() {
@@ -948,6 +1112,10 @@ get_window_scale_dpi <- function() {
 #' @family name functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_monitor_name(0L)
+#' }
 #'
 #' @export
 get_monitor_name <- function(monitor) {
@@ -970,6 +1138,10 @@ get_monitor_name <- function(monitor) {
 #' @family text functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_clipboard_text("Hello")
+#' }
 #'
 #' @export
 set_clipboard_text <- function(text) {
@@ -993,6 +1165,10 @@ set_clipboard_text <- function(text) {
 #' @family text functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_clipboard_text()
+#' }
 #'
 #' @export
 get_clipboard_text <- function() {
@@ -1015,6 +1191,10 @@ get_clipboard_text <- function() {
 #' @family image functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_clipboard_image()
+#' }
 #'
 #' @export
 get_clipboard_image <- function() {
@@ -1034,6 +1214,10 @@ get_clipboard_image <- function() {
 #'
 #' @family waiting functions
 #'
+#' @examples
+#' \dontrun{
+#' enable_event_waiting()
+#' }
 #'
 #' @export
 enable_event_waiting <- function() {
@@ -1053,6 +1237,10 @@ enable_event_waiting <- function() {
 #'
 #' @family waiting functions
 #'
+#' @examples
+#' \dontrun{
+#' disable_event_waiting()
+#' }
 #'
 #' @export
 disable_event_waiting <- function() {
@@ -1072,6 +1260,10 @@ disable_event_waiting <- function() {
 #'
 #' @family cursor functions
 #'
+#' @examples
+#' \dontrun{
+#' show_cursor()
+#' }
 #'
 #' @export
 show_cursor <- function() {
@@ -1091,6 +1283,10 @@ show_cursor <- function() {
 #'
 #' @family cursor functions
 #'
+#' @examples
+#' \dontrun{
+#' hide_cursor()
+#' }
 #'
 #' @export
 hide_cursor <- function() {
@@ -1113,6 +1309,10 @@ hide_cursor <- function() {
 #' @family hidden functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_cursor_hidden()
+#' }
 #'
 #' @export
 is_cursor_hidden <- function() {
@@ -1132,6 +1332,10 @@ is_cursor_hidden <- function() {
 #'
 #' @family cursor functions
 #'
+#' @examples
+#' \dontrun{
+#' enable_cursor()
+#' }
 #'
 #' @export
 enable_cursor <- function() {
@@ -1151,6 +1355,10 @@ enable_cursor <- function() {
 #'
 #' @family cursor functions
 #'
+#' @examples
+#' \dontrun{
+#' disable_cursor()
+#' }
 #'
 #' @export
 disable_cursor <- function() {
@@ -1173,6 +1381,10 @@ disable_cursor <- function() {
 #' @family screen functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_cursor_on_screen()
+#' }
 #'
 #' @export
 is_cursor_on_screen <- function() {
@@ -1193,6 +1405,10 @@ is_cursor_on_screen <- function() {
 #'
 #' @family background functions
 #'
+#' @examples
+#' \dontrun{
+#' clear_background("red")
+#' }
 #'
 #' @export
 clear_background <- function(color = "white") {
@@ -1214,6 +1430,10 @@ clear_background <- function(color = "white") {
 #' @family drawing functions
 #' @family begin functions
 #'
+#' @examples
+#' \dontrun{
+#' begin_drawing()
+#' }
 #'
 #' @export
 begin_drawing <- function() {
@@ -1234,6 +1454,10 @@ begin_drawing <- function() {
 #' @family drawing functions
 #' @family end functions
 #'
+#' @examples
+#' \dontrun{
+#' end_drawing()
+#' }
 #'
 #' @export
 end_drawing <- function() {
@@ -1255,6 +1479,10 @@ end_drawing <- function() {
 #' @family 2d functions
 #' @family begin functions
 #'
+#' @examples
+#' \dontrun{
+#' begin_mode_2d(camera_2d(c(400, 300), c(0, 0)))
+#' }
 #'
 #' @export
 begin_mode_2d <- function(camera) {
@@ -1276,6 +1504,10 @@ begin_mode_2d <- function(camera) {
 #' @family 2d functions
 #' @family end functions
 #'
+#' @examples
+#' \dontrun{
+#' end_mode_2d()
+#' }
 #'
 #' @export
 end_mode_2d <- function() {
@@ -1297,6 +1529,10 @@ end_mode_2d <- function() {
 #' @family 3d functions
 #' @family begin functions
 #'
+#' @examples
+#' \dontrun{
+#' begin_mode_3d(camera_3d(c(0, 10, 10)))
+#' }
 #'
 #' @export
 begin_mode_3d <- function(camera) {
@@ -1318,6 +1554,10 @@ begin_mode_3d <- function(camera) {
 #' @family 3d functions
 #' @family end functions
 #'
+#' @examples
+#' \dontrun{
+#' end_mode_3d()
+#' }
 #'
 #' @export
 end_mode_3d <- function() {
@@ -1339,6 +1579,10 @@ end_mode_3d <- function() {
 #' @family mode functions
 #' @family begin functions
 #'
+#' @examples
+#' \dontrun{
+#' begin_texture_mode(load_render_texture(800, 450))
+#' }
 #'
 #' @export
 begin_texture_mode <- function(target) {
@@ -1360,6 +1604,10 @@ begin_texture_mode <- function(target) {
 #' @family mode functions
 #' @family end functions
 #'
+#' @examples
+#' \dontrun{
+#' end_texture_mode()
+#' }
 #'
 #' @export
 end_texture_mode <- function() {
@@ -1381,6 +1629,10 @@ end_texture_mode <- function() {
 #' @family mode functions
 #' @family begin functions
 #'
+#' @examples
+#' \dontrun{
+#' begin_shader_mode(load_shader("", "shader.fs"))
+#' }
 #'
 #' @export
 begin_shader_mode <- function(shader) {
@@ -1402,6 +1654,10 @@ begin_shader_mode <- function(shader) {
 #' @family mode functions
 #' @family end functions
 #'
+#' @examples
+#' \dontrun{
+#' end_shader_mode()
+#' }
 #'
 #' @export
 end_shader_mode <- function() {
@@ -1423,6 +1679,10 @@ end_shader_mode <- function() {
 #' @family mode functions
 #' @family begin functions
 #'
+#' @examples
+#' \dontrun{
+#' begin_blend_mode(0L)
+#' }
 #'
 #' @export
 begin_blend_mode <- function(mode) {
@@ -1444,6 +1704,10 @@ begin_blend_mode <- function(mode) {
 #' @family mode functions
 #' @family end functions
 #'
+#' @examples
+#' \dontrun{
+#' end_blend_mode()
+#' }
 #'
 #' @export
 end_blend_mode <- function() {
@@ -1468,6 +1732,10 @@ end_blend_mode <- function() {
 #' @family mode functions
 #' @family begin functions
 #'
+#' @examples
+#' \dontrun{
+#' begin_scissor_mode(100L, 100L, 800L, 450L)
+#' }
 #'
 #' @export
 begin_scissor_mode <- function(x, y, width, height) {
@@ -1492,6 +1760,10 @@ begin_scissor_mode <- function(x, y, width, height) {
 #' @family mode functions
 #' @family end functions
 #'
+#' @examples
+#' \dontrun{
+#' end_scissor_mode()
+#' }
 #'
 #' @export
 end_scissor_mode <- function() {
@@ -1513,6 +1785,10 @@ end_scissor_mode <- function() {
 #' @family mode functions
 #' @family begin functions
 #'
+#' @examples
+#' \dontrun{
+#' begin_vr_stereo_mode(config)
+#' }
 #'
 #' @export
 begin_vr_stereo_mode <- function(config) {
@@ -1534,6 +1810,10 @@ begin_vr_stereo_mode <- function(config) {
 #' @family mode functions
 #' @family end functions
 #'
+#' @examples
+#' \dontrun{
+#' end_vr_stereo_mode()
+#' }
 #'
 #' @export
 end_vr_stereo_mode <- function() {
@@ -1557,6 +1837,10 @@ end_vr_stereo_mode <- function() {
 #' @family config functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_vr_stereo_config(device)
+#' }
 #'
 #' @export
 load_vr_stereo_config <- function(device) {
@@ -1579,6 +1863,10 @@ load_vr_stereo_config <- function(device) {
 #' @family config functions
 #' @family unload functions
 #'
+#' @examples
+#' \dontrun{
+#' unload_vr_stereo_config(config)
+#' }
 #'
 #' @export
 unload_vr_stereo_config <- function(config) {
@@ -1604,6 +1892,10 @@ unload_vr_stereo_config <- function(config) {
 #' @family shader functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_shader("file.png", "file.png")
+#' }
 #'
 #' @export
 load_shader <- function(vs_file_name = "", fs_file_name) {
@@ -1630,6 +1922,10 @@ load_shader <- function(vs_file_name = "", fs_file_name) {
 #' @family memory functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_shader_from_memory("text", "text")
+#' }
 #'
 #' @export
 load_shader_from_memory <- function(vs_code, fs_code) {
@@ -1655,6 +1951,10 @@ load_shader_from_memory <- function(vs_code, fs_code) {
 #' @family valid functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_shader_valid(load_shader("", "shader.fs"))
+#' }
 #'
 #' @export
 is_shader_valid <- function(shader) {
@@ -1680,6 +1980,10 @@ is_shader_valid <- function(shader) {
 #' @family location functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_shader_location(load_shader("", "shader.fs"), "text")
+#' }
 #'
 #' @export
 get_shader_location <- function(shader, uniform_name) {
@@ -1706,6 +2010,10 @@ get_shader_location <- function(shader, uniform_name) {
 #' @family attrib functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_shader_location_attrib(load_shader("", "shader.fs"), "text")
+#' }
 #'
 #' @export
 get_shader_location_attrib <- function(shader, attrib_name) {
@@ -1731,6 +2039,10 @@ get_shader_location_attrib <- function(shader, attrib_name) {
 #' @family matrix functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_shader_value_matrix(load_shader("", "shader.fs"), 0L, diag(4))
+#' }
 #'
 #' @export
 set_shader_value_matrix <- function(shader, loc_index, mat) {
@@ -1757,6 +2069,10 @@ set_shader_value_matrix <- function(shader, loc_index, mat) {
 #' @family texture functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_shader_value_texture(load_shader("", "shader.fs"), 0L, load_texture("file.png"))
+#' }
 #'
 #' @export
 set_shader_value_texture <- function(shader, loc_index, texture) {
@@ -1781,6 +2097,10 @@ set_shader_value_texture <- function(shader, loc_index, texture) {
 #' @family shader functions
 #' @family unload functions
 #'
+#' @examples
+#' \dontrun{
+#' unload_shader(load_shader("", "shader.fs"))
+#' }
 #'
 #' @export
 unload_shader <- function(shader) {
@@ -1806,6 +2126,10 @@ unload_shader <- function(shader) {
 #' @family ray functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_screen_to_world_ray(c(100, 100), camera_3d(c(0, 10, 10)))
+#' }
 #'
 #' @export
 get_screen_to_world_ray <- function(position, camera) {
@@ -1834,6 +2158,10 @@ get_screen_to_world_ray <- function(position, camera) {
 #' @family ex functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_screen_to_world_ray_ex(c(100, 100), camera_3d(c(0, 10, 10)), 800L, 450L)
+#' }
 #'
 #' @export
 get_screen_to_world_ray_ex <- function(position, camera, width, height) {
@@ -1862,6 +2190,10 @@ get_screen_to_world_ray_ex <- function(position, camera, width, height) {
 #' @family screen functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_world_to_screen(c(0, 5, 0), camera_3d(c(0, 10, 10)))
+#' }
 #'
 #' @export
 get_world_to_screen <- function(position, camera) {
@@ -1890,6 +2222,10 @@ get_world_to_screen <- function(position, camera) {
 #' @family ex functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_world_to_screen_ex(c(0, 5, 0), camera_3d(c(0, 10, 10)), 800L, 450L)
+#' }
 #'
 #' @export
 get_world_to_screen_ex <- function(position, camera, width, height) {
@@ -1918,6 +2254,10 @@ get_world_to_screen_ex <- function(position, camera, width, height) {
 #' @family 2d functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_world_to_screen_2d(c(100, 100), camera_2d(c(400, 300), c(0, 0)))
+#' }
 #'
 #' @export
 get_world_to_screen_2d <- function(position, camera) {
@@ -1944,6 +2284,10 @@ get_world_to_screen_2d <- function(position, camera) {
 #' @family 2d functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_screen_to_world_2d(c(100, 100), camera_2d(c(400, 300), c(0, 0)))
+#' }
 #'
 #' @export
 get_screen_to_world_2d <- function(position, camera) {
@@ -1969,6 +2313,10 @@ get_screen_to_world_2d <- function(position, camera) {
 #' @family matrix functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_camera_matrix(camera_3d(c(0, 10, 10)))
+#' }
 #'
 #' @export
 get_camera_matrix <- function(camera) {
@@ -1993,6 +2341,10 @@ get_camera_matrix <- function(camera) {
 #' @family 2d functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_camera_matrix_2d(camera_2d(c(400, 300), c(0, 0)))
+#' }
 #'
 #' @export
 get_camera_matrix_2d <- function(camera) {
@@ -2015,6 +2367,10 @@ get_camera_matrix_2d <- function(camera) {
 #' @family fps functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_target_fps(60L)
+#' }
 #'
 #' @export
 set_target_fps <- function(fps = 60L) {
@@ -2038,6 +2394,10 @@ set_target_fps <- function(fps = 60L) {
 #' @family time functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_frame_time()
+#' }
 #'
 #' @export
 get_frame_time <- function() {
@@ -2060,6 +2420,10 @@ get_frame_time <- function() {
 #' @family time functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_time()
+#' }
 #'
 #' @export
 get_time <- function() {
@@ -2082,6 +2446,10 @@ get_time <- function() {
 #' @family fps functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_fps()
+#' }
 #'
 #' @export
 get_fps <- function() {
@@ -2101,6 +2469,10 @@ get_fps <- function() {
 #'
 #' @family buffer functions
 #'
+#' @examples
+#' \dontrun{
+#' swap_screen_buffer()
+#' }
 #'
 #' @export
 swap_screen_buffer <- function() {
@@ -2120,6 +2492,10 @@ swap_screen_buffer <- function() {
 #'
 #' @family events functions
 #'
+#' @examples
+#' \dontrun{
+#' poll_input_events()
+#' }
 #'
 #' @export
 poll_input_events <- function() {
@@ -2140,6 +2516,10 @@ poll_input_events <- function() {
 #'
 #' @family time functions
 #'
+#' @examples
+#' \dontrun{
+#' wait_time(0.0)
+#' }
 #'
 #' @export
 wait_time <- function(seconds) {
@@ -2162,6 +2542,10 @@ wait_time <- function(seconds) {
 #' @family seed functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_random_seed(42L)
+#' }
 #'
 #' @export
 set_random_seed <- function(seed) {
@@ -2187,6 +2571,10 @@ set_random_seed <- function(seed) {
 #' @family value functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_random_value(0L, 0L)
+#' }
 #'
 #' @export
 get_random_value <- function(min, max) {
@@ -2209,6 +2597,10 @@ get_random_value <- function(min, max) {
 #'
 #' @family screenshot functions
 #'
+#' @examples
+#' \dontrun{
+#' take_screenshot("file.png")
+#' }
 #'
 #' @export
 take_screenshot <- function(file_name) {
@@ -2231,6 +2623,10 @@ take_screenshot <- function(file_name) {
 #' @family flags functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_config_flags(0L)
+#' }
 #'
 #' @export
 set_config_flags <- function(flags) {
@@ -2252,6 +2648,10 @@ set_config_flags <- function(flags) {
 #'
 #' @family url functions
 #'
+#' @examples
+#' \dontrun{
+#' open_url("https://example.com")
+#' }
 #'
 #' @export
 open_url <- function(url) {
@@ -2274,6 +2674,10 @@ open_url <- function(url) {
 #' @family level functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_trace_log_level(0L)
+#' }
 #'
 #' @export
 set_trace_log_level <- function(log_level) {
@@ -2298,6 +2702,10 @@ set_trace_log_level <- function(log_level) {
 #' @family text functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_file_text("file.png")
+#' }
 #'
 #' @export
 load_file_text <- function(file_name) {
@@ -2322,6 +2730,10 @@ load_file_text <- function(file_name) {
 #'
 #' @family text functions
 #'
+#' @examples
+#' \dontrun{
+#' save_file_text("file.png", "Hello")
+#' }
 #'
 #' @export
 save_file_text <- function(file_name, text) {
@@ -2347,6 +2759,10 @@ save_file_text <- function(file_name, text) {
 #'
 #' @family rename functions
 #'
+#' @examples
+#' \dontrun{
+#' file_rename("file.png", "text")
+#' }
 #'
 #' @export
 file_rename <- function(file_name, file_rename) {
@@ -2371,6 +2787,10 @@ file_rename <- function(file_name, file_rename) {
 #'
 #' @family remove functions
 #'
+#' @examples
+#' \dontrun{
+#' file_remove("file.png")
+#' }
 #'
 #' @export
 file_remove <- function(file_name) {
@@ -2395,6 +2815,10 @@ file_remove <- function(file_name) {
 #'
 #' @family copy functions
 #'
+#' @examples
+#' \dontrun{
+#' file_copy("file.png", "file.png")
+#' }
 #'
 #' @export
 file_copy <- function(src_path, dst_path) {
@@ -2420,6 +2844,10 @@ file_copy <- function(src_path, dst_path) {
 #'
 #' @family move functions
 #'
+#' @examples
+#' \dontrun{
+#' file_move("file.png", "file.png")
+#' }
 #'
 #' @export
 file_move <- function(src_path, dst_path) {
@@ -2446,6 +2874,10 @@ file_move <- function(src_path, dst_path) {
 #'
 #' @family replace functions
 #'
+#' @examples
+#' \dontrun{
+#' file_text_replace("file.png", "text", "text")
+#' }
 #'
 #' @export
 file_text_replace <- function(file_name, search, replacement) {
@@ -2472,6 +2904,10 @@ file_text_replace <- function(file_name, search, replacement) {
 #'
 #' @family index functions
 #'
+#' @examples
+#' \dontrun{
+#' file_text_find_index("file.png", "text")
+#' }
 #'
 #' @export
 file_text_find_index <- function(file_name, search) {
@@ -2496,6 +2932,10 @@ file_text_find_index <- function(file_name, search) {
 #'
 #' @family exists functions
 #'
+#' @examples
+#' \dontrun{
+#' file_exists("file.png")
+#' }
 #'
 #' @export
 file_exists <- function(file_name) {
@@ -2519,6 +2959,10 @@ file_exists <- function(file_name) {
 #'
 #' @family exists functions
 #'
+#' @examples
+#' \dontrun{
+#' directory_exists("file.png")
+#' }
 #'
 #' @export
 directory_exists <- function(dir_path) {
@@ -2544,6 +2988,10 @@ directory_exists <- function(dir_path) {
 #' @family extension functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_file_extension("file.png", ".png")
+#' }
 #'
 #' @export
 is_file_extension <- function(file_name, ext) {
@@ -2569,6 +3017,10 @@ is_file_extension <- function(file_name, ext) {
 #' @family length functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_file_length("file.png")
+#' }
 #'
 #' @export
 get_file_length <- function(file_name) {
@@ -2593,6 +3045,10 @@ get_file_length <- function(file_name) {
 #' @family time functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_file_mod_time("file.png")
+#' }
 #'
 #' @export
 get_file_mod_time <- function(file_name) {
@@ -2617,6 +3073,10 @@ get_file_mod_time <- function(file_name) {
 #' @family extension functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_file_extension("file.png")
+#' }
 #'
 #' @export
 get_file_extension <- function(file_name) {
@@ -2641,6 +3101,10 @@ get_file_extension <- function(file_name) {
 #' @family name functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_file_name("file.png")
+#' }
 #'
 #' @export
 get_file_name <- function(file_path) {
@@ -2665,6 +3129,10 @@ get_file_name <- function(file_path) {
 #' @family ext functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_file_name_without_ext("file.png")
+#' }
 #'
 #' @export
 get_file_name_without_ext <- function(file_path) {
@@ -2689,6 +3157,10 @@ get_file_name_without_ext <- function(file_path) {
 #' @family path functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_directory_path("file.png")
+#' }
 #'
 #' @export
 get_directory_path <- function(file_path) {
@@ -2713,6 +3185,10 @@ get_directory_path <- function(file_path) {
 #' @family path functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_prev_directory_path("file.png")
+#' }
 #'
 #' @export
 get_prev_directory_path <- function(dir_path) {
@@ -2736,6 +3212,10 @@ get_prev_directory_path <- function(dir_path) {
 #' @family directory functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_working_directory()
+#' }
 #'
 #' @export
 get_working_directory <- function() {
@@ -2758,6 +3238,10 @@ get_working_directory <- function() {
 #' @family directory functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_application_directory()
+#' }
 #'
 #' @export
 get_application_directory <- function() {
@@ -2780,6 +3264,10 @@ get_application_directory <- function() {
 #'
 #' @family directory functions
 #'
+#' @examples
+#' \dontrun{
+#' make_directory("file.png")
+#' }
 #'
 #' @export
 make_directory <- function(dir_path) {
@@ -2803,6 +3291,10 @@ make_directory <- function(dir_path) {
 #'
 #' @family directory functions
 #'
+#' @examples
+#' \dontrun{
+#' change_directory("file.png")
+#' }
 #'
 #' @export
 change_directory <- function(dir_path) {
@@ -2827,6 +3319,10 @@ change_directory <- function(dir_path) {
 #' @family file functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_path_file("file.png")
+#' }
 #'
 #' @export
 is_path_file <- function(path) {
@@ -2851,6 +3347,10 @@ is_path_file <- function(path) {
 #' @family valid functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_file_name_valid("file.png")
+#' }
 #'
 #' @export
 is_file_name_valid <- function(file_name) {
@@ -2874,6 +3374,10 @@ is_file_name_valid <- function(file_name) {
 #' @family dropped functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_file_dropped()
+#' }
 #'
 #' @export
 is_file_dropped <- function() {
@@ -2897,6 +3401,10 @@ is_file_dropped <- function() {
 #' @family count functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_directory_file_count("file.png")
+#' }
 #'
 #' @export
 get_directory_file_count <- function(dir_path) {
@@ -2923,6 +3431,10 @@ get_directory_file_count <- function(dir_path) {
 #' @family ex functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_directory_file_count_ex("file.png", "text", TRUE)
+#' }
 #'
 #' @export
 get_directory_file_count_ex <- function(base_path, filter, scan_subdirs) {
@@ -2947,6 +3459,10 @@ get_directory_file_count_ex <- function(base_path, filter, scan_subdirs) {
 #' @family frame functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_automation_event_base_frame(0L)
+#' }
 #'
 #' @export
 set_automation_event_base_frame <- function(frame) {
@@ -2967,6 +3483,10 @@ set_automation_event_base_frame <- function(frame) {
 #'
 #' @family recording functions
 #'
+#' @examples
+#' \dontrun{
+#' start_automation_event_recording()
+#' }
 #'
 #' @export
 start_automation_event_recording <- function() {
@@ -2987,6 +3507,10 @@ start_automation_event_recording <- function() {
 #' @family recording functions
 #' @family stop functions
 #'
+#' @examples
+#' \dontrun{
+#' stop_automation_event_recording()
+#' }
 #'
 #' @export
 stop_automation_event_recording <- function() {
@@ -3010,6 +3534,10 @@ stop_automation_event_recording <- function() {
 #' @family pressed functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_key_pressed(0L)
+#' }
 #'
 #' @export
 is_key_pressed <- function(key) {
@@ -3034,6 +3562,10 @@ is_key_pressed <- function(key) {
 #' @family repeat functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_key_pressed_repeat(0L)
+#' }
 #'
 #' @export
 is_key_pressed_repeat <- function(key) {
@@ -3058,6 +3590,10 @@ is_key_pressed_repeat <- function(key) {
 #' @family down functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_key_down(0L)
+#' }
 #'
 #' @export
 is_key_down <- function(key) {
@@ -3082,6 +3618,10 @@ is_key_down <- function(key) {
 #' @family released functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_key_released(0L)
+#' }
 #'
 #' @export
 is_key_released <- function(key) {
@@ -3106,6 +3646,10 @@ is_key_released <- function(key) {
 #' @family up functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_key_up(0L)
+#' }
 #'
 #' @export
 is_key_up <- function(key) {
@@ -3129,6 +3673,10 @@ is_key_up <- function(key) {
 #' @family pressed functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_key_pressed()
+#' }
 #'
 #' @export
 get_key_pressed <- function() {
@@ -3151,6 +3699,10 @@ get_key_pressed <- function() {
 #' @family pressed functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_char_pressed()
+#' }
 #'
 #' @export
 get_char_pressed <- function() {
@@ -3174,6 +3726,10 @@ get_char_pressed <- function() {
 #' @family name functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_key_name(0L)
+#' }
 #'
 #' @export
 get_key_name <- function(key) {
@@ -3196,6 +3752,10 @@ get_key_name <- function(key) {
 #' @family key functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_exit_key(0L)
+#' }
 #'
 #' @export
 set_exit_key <- function(key) {
@@ -3220,6 +3780,10 @@ set_exit_key <- function(key) {
 #' @family available functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_gamepad_available(0L)
+#' }
 #'
 #' @export
 is_gamepad_available <- function(gamepad) {
@@ -3244,6 +3808,10 @@ is_gamepad_available <- function(gamepad) {
 #' @family name functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_gamepad_name(0L)
+#' }
 #'
 #' @export
 get_gamepad_name <- function(gamepad) {
@@ -3269,6 +3837,10 @@ get_gamepad_name <- function(gamepad) {
 #' @family pressed functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_gamepad_button_pressed(0L, 0L)
+#' }
 #'
 #' @export
 is_gamepad_button_pressed <- function(gamepad, button) {
@@ -3295,6 +3867,10 @@ is_gamepad_button_pressed <- function(gamepad, button) {
 #' @family down functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_gamepad_button_down(0L, 0L)
+#' }
 #'
 #' @export
 is_gamepad_button_down <- function(gamepad, button) {
@@ -3321,6 +3897,10 @@ is_gamepad_button_down <- function(gamepad, button) {
 #' @family released functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_gamepad_button_released(0L, 0L)
+#' }
 #'
 #' @export
 is_gamepad_button_released <- function(gamepad, button) {
@@ -3347,6 +3927,10 @@ is_gamepad_button_released <- function(gamepad, button) {
 #' @family up functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_gamepad_button_up(0L, 0L)
+#' }
 #'
 #' @export
 is_gamepad_button_up <- function(gamepad, button) {
@@ -3371,6 +3955,10 @@ is_gamepad_button_up <- function(gamepad, button) {
 #' @family pressed functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_gamepad_button_pressed()
+#' }
 #'
 #' @export
 get_gamepad_button_pressed <- function() {
@@ -3394,6 +3982,10 @@ get_gamepad_button_pressed <- function() {
 #' @family count functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_gamepad_axis_count(0L)
+#' }
 #'
 #' @export
 get_gamepad_axis_count <- function(gamepad) {
@@ -3419,6 +4011,10 @@ get_gamepad_axis_count <- function(gamepad) {
 #' @family movement functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_gamepad_axis_movement(0L, 0L)
+#' }
 #'
 #' @export
 get_gamepad_axis_movement <- function(gamepad, axis) {
@@ -3444,6 +4040,10 @@ get_gamepad_axis_movement <- function(gamepad, axis) {
 #' @family mappings functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_gamepad_mappings("text")
+#' }
 #'
 #' @export
 set_gamepad_mappings <- function(mappings) {
@@ -3469,6 +4069,10 @@ set_gamepad_mappings <- function(mappings) {
 #' @family vibration functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_gamepad_vibration(0L, 0.0, 0.0, 0.0)
+#' }
 #'
 #' @export
 set_gamepad_vibration <- function(gamepad, left_motor, right_motor, duration) {
@@ -3496,6 +4100,10 @@ set_gamepad_vibration <- function(gamepad, left_motor, right_motor, duration) {
 #' @family pressed functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_mouse_button_pressed(0L)
+#' }
 #'
 #' @export
 is_mouse_button_pressed <- function(button) {
@@ -3520,6 +4128,10 @@ is_mouse_button_pressed <- function(button) {
 #' @family down functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_mouse_button_down(0L)
+#' }
 #'
 #' @export
 is_mouse_button_down <- function(button) {
@@ -3544,6 +4156,10 @@ is_mouse_button_down <- function(button) {
 #' @family released functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_mouse_button_released(0L)
+#' }
 #'
 #' @export
 is_mouse_button_released <- function(button) {
@@ -3568,6 +4184,10 @@ is_mouse_button_released <- function(button) {
 #' @family up functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_mouse_button_up(0L)
+#' }
 #'
 #' @export
 is_mouse_button_up <- function(button) {
@@ -3591,6 +4211,10 @@ is_mouse_button_up <- function(button) {
 #' @family x functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_mouse_x()
+#' }
 #'
 #' @export
 get_mouse_x <- function() {
@@ -3613,6 +4237,10 @@ get_mouse_x <- function() {
 #' @family y functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_mouse_y()
+#' }
 #'
 #' @export
 get_mouse_y <- function() {
@@ -3635,6 +4263,10 @@ get_mouse_y <- function() {
 #' @family position functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_mouse_position()
+#' }
 #'
 #' @export
 get_mouse_position <- function() {
@@ -3657,6 +4289,10 @@ get_mouse_position <- function() {
 #' @family delta functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_mouse_delta()
+#' }
 #'
 #' @export
 get_mouse_delta <- function() {
@@ -3679,6 +4315,10 @@ get_mouse_delta <- function() {
 #' @family position functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_mouse_position(100L, 100L)
+#' }
 #'
 #' @export
 set_mouse_position <- function(x, y) {
@@ -3703,6 +4343,10 @@ set_mouse_position <- function(x, y) {
 #' @family offset functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_mouse_offset(0L, 0L)
+#' }
 #'
 #' @export
 set_mouse_offset <- function(offset_x, offset_y) {
@@ -3727,6 +4371,10 @@ set_mouse_offset <- function(offset_x, offset_y) {
 #' @family scale functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_mouse_scale(1.0, 1.0)
+#' }
 #'
 #' @export
 set_mouse_scale <- function(scale_x, scale_y) {
@@ -3751,6 +4399,10 @@ set_mouse_scale <- function(scale_x, scale_y) {
 #' @family move functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_mouse_wheel_move()
+#' }
 #'
 #' @export
 get_mouse_wheel_move <- function() {
@@ -3773,6 +4425,10 @@ get_mouse_wheel_move <- function() {
 #' @family v functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_mouse_wheel_move_v()
+#' }
 #'
 #' @export
 get_mouse_wheel_move_v <- function() {
@@ -3794,6 +4450,10 @@ get_mouse_wheel_move_v <- function() {
 #' @family cursor functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_mouse_cursor(0L)
+#' }
 #'
 #' @export
 set_mouse_cursor <- function(cursor) {
@@ -3817,6 +4477,10 @@ set_mouse_cursor <- function(cursor) {
 #' @family x functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_touch_x()
+#' }
 #'
 #' @export
 get_touch_x <- function() {
@@ -3839,6 +4503,10 @@ get_touch_x <- function() {
 #' @family y functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_touch_y()
+#' }
 #'
 #' @export
 get_touch_y <- function() {
@@ -3862,6 +4530,10 @@ get_touch_y <- function() {
 #' @family position functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_touch_position(0L)
+#' }
 #'
 #' @export
 get_touch_position <- function(index) {
@@ -3886,6 +4558,10 @@ get_touch_position <- function(index) {
 #' @family id functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_touch_point_id(0L)
+#' }
 #'
 #' @export
 get_touch_point_id <- function(index) {
@@ -3909,6 +4585,10 @@ get_touch_point_id <- function(index) {
 #' @family count functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_touch_point_count()
+#' }
 #'
 #' @export
 get_touch_point_count <- function() {
@@ -3930,6 +4610,10 @@ get_touch_point_count <- function() {
 #' @family enabled functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_gestures_enabled(0L)
+#' }
 #'
 #' @export
 set_gestures_enabled <- function(flags) {
@@ -3954,6 +4638,10 @@ set_gestures_enabled <- function(flags) {
 #' @family detected functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_gesture_detected(0L)
+#' }
 #'
 #' @export
 is_gesture_detected <- function(gesture) {
@@ -3977,6 +4665,10 @@ is_gesture_detected <- function(gesture) {
 #' @family detected functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_gesture_detected()
+#' }
 #'
 #' @export
 get_gesture_detected <- function() {
@@ -3999,6 +4691,10 @@ get_gesture_detected <- function() {
 #' @family duration functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_gesture_hold_duration()
+#' }
 #'
 #' @export
 get_gesture_hold_duration <- function() {
@@ -4021,6 +4717,10 @@ get_gesture_hold_duration <- function() {
 #' @family vector functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_gesture_drag_vector()
+#' }
 #'
 #' @export
 get_gesture_drag_vector <- function() {
@@ -4043,6 +4743,10 @@ get_gesture_drag_vector <- function() {
 #' @family angle functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_gesture_drag_angle()
+#' }
 #'
 #' @export
 get_gesture_drag_angle <- function() {
@@ -4065,6 +4769,10 @@ get_gesture_drag_angle <- function() {
 #' @family vector functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_gesture_pinch_vector()
+#' }
 #'
 #' @export
 get_gesture_pinch_vector <- function() {
@@ -4087,6 +4795,10 @@ get_gesture_pinch_vector <- function() {
 #' @family angle functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_gesture_pinch_angle()
+#' }
 #'
 #' @export
 get_gesture_pinch_angle <- function() {
@@ -4109,6 +4821,10 @@ get_gesture_pinch_angle <- function() {
 #' @family texture functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_shapes_texture(load_texture("file.png"), rectangle(10, 10, 200, 100))
+#' }
 #'
 #' @export
 set_shapes_texture <- function(texture, source) {
@@ -4133,6 +4849,10 @@ set_shapes_texture <- function(texture, source) {
 #' @family texture functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_shapes_texture()
+#' }
 #'
 #' @export
 get_shapes_texture <- function() {
@@ -4155,6 +4875,10 @@ get_shapes_texture <- function() {
 #' @family rectangle functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_shapes_texture_rectangle()
+#' }
 #'
 #' @export
 get_shapes_texture_rectangle <- function() {
@@ -4178,6 +4902,10 @@ get_shapes_texture_rectangle <- function() {
 #' @family pixel functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_pixel(100L, 100L, "red")
+#' }
 #'
 #' @export
 draw_pixel <- function(pos_x, pos_y, color) {
@@ -4211,6 +4939,10 @@ draw_pixel <- function(pos_x, pos_y, color) {
 #' @family v functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_pixel_v(c(100, 100), "red")
+#' }
 #'
 #' @export
 draw_pixel_v <- function(position, color) {
@@ -4245,6 +4977,10 @@ draw_pixel_v <- function(position, color) {
 #' @family line functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_line(100L, 100L, 100L, 100L, "red")
+#' }
 #'
 #' @export
 draw_line <- function(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color) {
@@ -4283,6 +5019,10 @@ draw_line <- function(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color) {
 #' @family v functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_line_v(c(100, 100), c(100, 100), "red")
+#' }
 #'
 #' @export
 draw_line_v <- function(start_pos, end_pos, color) {
@@ -4318,6 +5058,10 @@ draw_line_v <- function(start_pos, end_pos, color) {
 #' @family ex functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_line_ex(c(100, 100), c(100, 100), 2.0, "red")
+#' }
 #'
 #' @export
 draw_line_ex <- function(start_pos, end_pos, thick, color) {
@@ -4355,6 +5099,10 @@ draw_line_ex <- function(start_pos, end_pos, thick, color) {
 #' @family bezier functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_line_bezier(c(100, 100), c(100, 100), 2.0, "red")
+#' }
 #'
 #' @export
 draw_line_bezier <- function(start_pos, end_pos, thick, color) {
@@ -4393,6 +5141,10 @@ draw_line_bezier <- function(start_pos, end_pos, thick, color) {
 #' @family dashed functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_line_dashed(c(100, 100), c(100, 100), 32L, 32L, "red")
+#' }
 #'
 #' @export
 draw_line_dashed <- function(start_pos, end_pos, dash_size, space_size, color) {
@@ -4432,6 +5184,10 @@ draw_line_dashed <- function(start_pos, end_pos, dash_size, space_size, color) {
 #' @family circle functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_circle(100L, 100L, 50.0, "red")
+#' }
 #'
 #' @export
 draw_circle <- function(center_x, center_y, radius, color) {
@@ -4468,6 +5224,10 @@ draw_circle <- function(center_x, center_y, radius, color) {
 #' @family v functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_circle_v(c(100, 100), 50.0, "red")
+#' }
 #'
 #' @export
 draw_circle_v <- function(center, radius, color) {
@@ -4503,6 +5263,10 @@ draw_circle_v <- function(center, radius, color) {
 #' @family gradient functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_circle_gradient(c(100, 100), 50.0, "red", "red")
+#' }
 #'
 #' @export
 draw_circle_gradient <- function(center, radius, inner, outer) {
@@ -4542,6 +5306,10 @@ draw_circle_gradient <- function(center, radius, inner, outer) {
 #' @family sector functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_circle_sector(c(100, 100), 50.0, 0.0, 0.0, 16L, "red")
+#' }
 #'
 #' @export
 draw_circle_sector <- function(center, radius, start_angle, end_angle, segments, color) {
@@ -4585,6 +5353,10 @@ draw_circle_sector <- function(center, radius, start_angle, end_angle, segments,
 #' @family lines functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_circle_sector_lines(c(100, 100), 50.0, 0.0, 0.0, 16L, "red")
+#' }
 #'
 #' @export
 draw_circle_sector_lines <- function(center, radius, start_angle, end_angle, segments, color) {
@@ -4626,6 +5398,10 @@ draw_circle_sector_lines <- function(center, radius, start_angle, end_angle, seg
 #' @family lines functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_circle_lines(100L, 100L, 50.0, "red")
+#' }
 #'
 #' @export
 draw_circle_lines <- function(center_x, center_y, radius, color) {
@@ -4662,6 +5438,10 @@ draw_circle_lines <- function(center_x, center_y, radius, color) {
 #' @family v functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_circle_lines_v(c(100, 100), 50.0, "red")
+#' }
 #'
 #' @export
 draw_circle_lines_v <- function(center, radius, color) {
@@ -4698,6 +5478,10 @@ draw_circle_lines_v <- function(center, radius, color) {
 #' @family ellipse functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_ellipse(100L, 100L, 50.0, 50.0, "red")
+#' }
 #'
 #' @export
 draw_ellipse <- function(center_x, center_y, radius_h, radius_v, color) {
@@ -4737,6 +5521,10 @@ draw_ellipse <- function(center_x, center_y, radius_h, radius_v, color) {
 #' @family v functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_ellipse_v(c(100, 100), 50.0, 50.0, "red")
+#' }
 #'
 #' @export
 draw_ellipse_v <- function(center, radius_h, radius_v, color) {
@@ -4775,6 +5563,10 @@ draw_ellipse_v <- function(center, radius_h, radius_v, color) {
 #' @family lines functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_ellipse_lines(100L, 100L, 50.0, 50.0, "red")
+#' }
 #'
 #' @export
 draw_ellipse_lines <- function(center_x, center_y, radius_h, radius_v, color) {
@@ -4814,6 +5606,10 @@ draw_ellipse_lines <- function(center_x, center_y, radius_h, radius_v, color) {
 #' @family v functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_ellipse_lines_v(c(100, 100), 50.0, 50.0, "red")
+#' }
 #'
 #' @export
 draw_ellipse_lines_v <- function(center, radius_h, radius_v, color) {
@@ -4854,6 +5650,10 @@ draw_ellipse_lines_v <- function(center, radius_h, radius_v, color) {
 #' @family ring functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_ring(c(100, 100), 50.0, 50.0, 0.0, 0.0, 16L, "red")
+#' }
 #'
 #' @export
 draw_ring <- function(center, inner_radius, outer_radius, start_angle, end_angle, segments, color) {
@@ -4900,6 +5700,10 @@ draw_ring <- function(center, inner_radius, outer_radius, start_angle, end_angle
 #' @family lines functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_ring_lines(c(100, 100), 50.0, 50.0, 0.0, 0.0, 16L, "red")
+#' }
 #'
 #' @export
 draw_ring_lines <- function(center, inner_radius, outer_radius, start_angle, end_angle, segments, color) {
@@ -4944,6 +5748,10 @@ draw_ring_lines <- function(center, inner_radius, outer_radius, start_angle, end
 #' @family rectangle functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_rectangle(100L, 100L, 800L, 450L, "red")
+#' }
 #'
 #' @export
 draw_rectangle <- function(pos_x, pos_y, width, height, color) {
@@ -4982,6 +5790,10 @@ draw_rectangle <- function(pos_x, pos_y, width, height, color) {
 #' @family v functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_rectangle_v(c(100, 100), c(100, 100), "red")
+#' }
 #'
 #' @export
 draw_rectangle_v <- function(position, size, color) {
@@ -5015,6 +5827,10 @@ draw_rectangle_v <- function(position, size, color) {
 #' @family rec functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_rectangle_rec(rectangle(10, 10, 200, 100), "red")
+#' }
 #'
 #' @export
 draw_rectangle_rec <- function(rec, color) {
@@ -5048,6 +5864,10 @@ draw_rectangle_rec <- function(rec, color) {
 #' @family pro functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_rectangle_pro(rectangle(10, 10, 200, 100), c(100, 100), 0.0, "red")
+#' }
 #'
 #' @export
 draw_rectangle_pro <- function(rec, origin, rotation, color) {
@@ -5087,6 +5907,10 @@ draw_rectangle_pro <- function(rec, origin, rotation, color) {
 #' @family v functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_rectangle_gradient_v(100L, 100L, 800L, 450L, "red", "red")
+#' }
 #'
 #' @export
 draw_rectangle_gradient_v <- function(pos_x, pos_y, width, height, top, bottom) {
@@ -5130,6 +5954,10 @@ draw_rectangle_gradient_v <- function(pos_x, pos_y, width, height, top, bottom) 
 #' @family h functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_rectangle_gradient_h(100L, 100L, 800L, 450L, "red", "red")
+#' }
 #'
 #' @export
 draw_rectangle_gradient_h <- function(pos_x, pos_y, width, height, left, right) {
@@ -5172,6 +6000,10 @@ draw_rectangle_gradient_h <- function(pos_x, pos_y, width, height, left, right) 
 #' @family ex functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_rectangle_gradient_ex(rectangle(10, 10, 200, 100), "red", "red", "red", "red")
+#' }
 #'
 #' @export
 draw_rectangle_gradient_ex <- function(rec, top_left, bottom_left, bottom_right, top_right) {
@@ -5212,6 +6044,10 @@ draw_rectangle_gradient_ex <- function(rec, top_left, bottom_left, bottom_right,
 #' @family lines functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_rectangle_lines(100L, 100L, 800L, 450L, "red")
+#' }
 #'
 #' @export
 draw_rectangle_lines <- function(pos_x, pos_y, width, height, color) {
@@ -5250,6 +6086,10 @@ draw_rectangle_lines <- function(pos_x, pos_y, width, height, color) {
 #' @family ex functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_rectangle_lines_ex(rectangle(10, 10, 200, 100), 2.0, "red")
+#' }
 #'
 #' @export
 draw_rectangle_lines_ex <- function(rec, line_thick, color) {
@@ -5285,6 +6125,10 @@ draw_rectangle_lines_ex <- function(rec, line_thick, color) {
 #' @family rounded functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_rectangle_rounded(rectangle(10, 10, 200, 100), 0.0, 16L, "red")
+#' }
 #'
 #' @export
 draw_rectangle_rounded <- function(rec, roundness, segments, color) {
@@ -5322,6 +6166,10 @@ draw_rectangle_rounded <- function(rec, roundness, segments, color) {
 #' @family lines functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_rectangle_rounded_lines(rectangle(10, 10, 200, 100), 0.0, 16L, "red")
+#' }
 #'
 #' @export
 draw_rectangle_rounded_lines <- function(rec, roundness, segments, color) {
@@ -5360,6 +6208,10 @@ draw_rectangle_rounded_lines <- function(rec, roundness, segments, color) {
 #' @family ex functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_rectangle_rounded_lines_ex(rectangle(10, 10, 200, 100), 0.0, 16L, 2.0, "red")
+#' }
 #'
 #' @export
 draw_rectangle_rounded_lines_ex <- function(rec, roundness, segments, line_thick, color) {
@@ -5399,6 +6251,10 @@ draw_rectangle_rounded_lines_ex <- function(rec, roundness, segments, line_thick
 #' @family triangle functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_triangle(c(100, 100), c(100, 100), c(100, 100), "red")
+#' }
 #'
 #' @export
 draw_triangle <- function(v1, v2, v3, color) {
@@ -5436,6 +6292,10 @@ draw_triangle <- function(v1, v2, v3, color) {
 #' @family lines functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_triangle_lines(c(100, 100), c(100, 100), c(100, 100), "red")
+#' }
 #'
 #' @export
 draw_triangle_lines <- function(v1, v2, v3, color) {
@@ -5474,6 +6334,10 @@ draw_triangle_lines <- function(v1, v2, v3, color) {
 #' @family poly functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_poly(c(100, 100), 0L, 50.0, 0.0, "red")
+#' }
 #'
 #' @export
 draw_poly <- function(center, sides, radius, rotation, color) {
@@ -5514,6 +6378,10 @@ draw_poly <- function(center, sides, radius, rotation, color) {
 #' @family lines functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_poly_lines(c(100, 100), 0L, 50.0, 0.0, "red")
+#' }
 #'
 #' @export
 draw_poly_lines <- function(center, sides, radius, rotation, color) {
@@ -5555,6 +6423,10 @@ draw_poly_lines <- function(center, sides, radius, rotation, color) {
 #' @family ex functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_poly_lines_ex(c(100, 100), 0L, 50.0, 0.0, 2.0, "red")
+#' }
 #'
 #' @export
 draw_poly_lines_ex <- function(center, sides, radius, rotation, line_thick, color) {
@@ -5596,6 +6468,10 @@ draw_poly_lines_ex <- function(center, sides, radius, rotation, line_thick, colo
 #' @family linear functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_spline_segment_linear(c(100, 100), c(100, 100), 2.0, "red")
+#' }
 #'
 #' @export
 draw_spline_segment_linear <- function(p1, p2, thick, color) {
@@ -5635,6 +6511,10 @@ draw_spline_segment_linear <- function(p1, p2, thick, color) {
 #' @family basis functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_spline_segment_basis(c(100, 100), c(100, 100), c(100, 100), c(100, 100), 2.0, "red")
+#' }
 #'
 #' @export
 draw_spline_segment_basis <- function(p1, p2, p3, p4, thick, color) {
@@ -5678,6 +6558,10 @@ draw_spline_segment_basis <- function(p1, p2, p3, p4, thick, color) {
 #' @family rom functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_spline_segment_catmull_rom(c(100, 100), c(100, 100), c(100, 100), c(100, 100), 2.0, "red")
+#' }
 #'
 #' @export
 draw_spline_segment_catmull_rom <- function(p1, p2, p3, p4, thick, color) {
@@ -5720,6 +6604,10 @@ draw_spline_segment_catmull_rom <- function(p1, p2, p3, p4, thick, color) {
 #' @family quadratic functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_spline_segment_bezier_quadratic(c(100, 100), c(100, 100), c(100, 100), 2.0, "red")
+#' }
 #'
 #' @export
 draw_spline_segment_bezier_quadratic <- function(p1, c2, p3, thick, color) {
@@ -5761,6 +6649,10 @@ draw_spline_segment_bezier_quadratic <- function(p1, c2, p3, thick, color) {
 #' @family cubic functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_spline_segment_bezier_cubic(c(100, 100), c(100, 100), c(100, 100), c(100, 100), 2.0, "red")
+#' }
 #'
 #' @export
 draw_spline_segment_bezier_cubic <- function(p1, c2, c3, p4, thick, color) {
@@ -5803,6 +6695,10 @@ draw_spline_segment_bezier_cubic <- function(p1, c2, c3, p4, thick, color) {
 #' @family linear functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_spline_point_linear(c(100, 100), c(100, 100), 0.0)
+#' }
 #'
 #' @export
 get_spline_point_linear <- function(start_pos, end_pos, t) {
@@ -5833,6 +6729,10 @@ get_spline_point_linear <- function(start_pos, end_pos, t) {
 #' @family basis functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_spline_point_basis(c(100, 100), c(100, 100), c(100, 100), c(100, 100), 0.0)
+#' }
 #'
 #' @export
 get_spline_point_basis <- function(p1, p2, p3, p4, t) {
@@ -5865,6 +6765,10 @@ get_spline_point_basis <- function(p1, p2, p3, p4, t) {
 #' @family rom functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_spline_point_catmull_rom(c(100, 100), c(100, 100), c(100, 100), c(100, 100), 0.0)
+#' }
 #'
 #' @export
 get_spline_point_catmull_rom <- function(p1, p2, p3, p4, t) {
@@ -5896,6 +6800,10 @@ get_spline_point_catmull_rom <- function(p1, p2, p3, p4, t) {
 #' @family quad functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_spline_point_bezier_quad(c(100, 100), c(100, 100), c(100, 100), 0.0)
+#' }
 #'
 #' @export
 get_spline_point_bezier_quad <- function(p1, c2, p3, t) {
@@ -5927,6 +6835,10 @@ get_spline_point_bezier_quad <- function(p1, c2, p3, t) {
 #' @family cubic functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_spline_point_bezier_cubic(c(100, 100), c(100, 100), c(100, 100), c(100, 100), 0.0)
+#' }
 #'
 #' @export
 get_spline_point_bezier_cubic <- function(p1, c2, c3, p4, t) {
@@ -5956,6 +6868,10 @@ get_spline_point_bezier_cubic <- function(p1, c2, c3, p4, t) {
 #' @family recs functions
 #' @family check functions
 #'
+#' @examples
+#' \dontrun{
+#' check_collision_recs(rectangle(10, 10, 200, 100), rectangle(10, 10, 200, 100))
+#' }
 #'
 #' @export
 check_collision_recs <- function(rec1, rec2) {
@@ -5984,6 +6900,10 @@ check_collision_recs <- function(rec1, rec2) {
 #' @family circles functions
 #' @family check functions
 #'
+#' @examples
+#' \dontrun{
+#' check_collision_circles(c(100, 100), 50.0, c(100, 100), 50.0)
+#' }
 #'
 #' @export
 check_collision_circles <- function(center1, radius1, center2, radius2) {
@@ -6013,6 +6933,10 @@ check_collision_circles <- function(center1, radius1, center2, radius2) {
 #' @family rec functions
 #' @family check functions
 #'
+#' @examples
+#' \dontrun{
+#' check_collision_circle_rec(c(100, 100), 50.0, rectangle(10, 10, 200, 100))
+#' }
 #'
 #' @export
 check_collision_circle_rec <- function(center, radius, rec) {
@@ -6042,6 +6966,10 @@ check_collision_circle_rec <- function(center, radius, rec) {
 #' @family line functions
 #' @family check functions
 #'
+#' @examples
+#' \dontrun{
+#' check_collision_circle_line(c(100, 100), 50.0, c(100, 100), c(100, 100))
+#' }
 #'
 #' @export
 check_collision_circle_line <- function(center, radius, p1, p2) {
@@ -6070,6 +6998,10 @@ check_collision_circle_line <- function(center, radius, p1, p2) {
 #' @family rec functions
 #' @family check functions
 #'
+#' @examples
+#' \dontrun{
+#' check_collision_point_rec(c(100, 100), rectangle(10, 10, 200, 100))
+#' }
 #'
 #' @export
 check_collision_point_rec <- function(point, rec) {
@@ -6097,6 +7029,10 @@ check_collision_point_rec <- function(point, rec) {
 #' @family circle functions
 #' @family check functions
 #'
+#' @examples
+#' \dontrun{
+#' check_collision_point_circle(c(100, 100), c(100, 100), 50.0)
+#' }
 #'
 #' @export
 check_collision_point_circle <- function(point, center, radius) {
@@ -6126,6 +7062,10 @@ check_collision_point_circle <- function(point, center, radius) {
 #' @family triangle functions
 #' @family check functions
 #'
+#' @examples
+#' \dontrun{
+#' check_collision_point_triangle(c(100, 100), c(100, 100), c(100, 100), c(100, 100))
+#' }
 #'
 #' @export
 check_collision_point_triangle <- function(point, p1, p2, p3) {
@@ -6156,6 +7096,10 @@ check_collision_point_triangle <- function(point, p1, p2, p3) {
 #' @family line functions
 #' @family check functions
 #'
+#' @examples
+#' \dontrun{
+#' check_collision_point_line(c(100, 100), c(100, 100), c(100, 100), 0L)
+#' }
 #'
 #' @export
 check_collision_point_line <- function(point, p1, p2, threshold) {
@@ -6184,6 +7128,10 @@ check_collision_point_line <- function(point, p1, p2, threshold) {
 #' @family rec functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_collision_rec(rectangle(10, 10, 200, 100), rectangle(10, 10, 200, 100))
+#' }
 #'
 #' @export
 get_collision_rec <- function(rec1, rec2) {
@@ -6209,6 +7157,10 @@ get_collision_rec <- function(rec1, rec2) {
 #' @family image functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_image("file.png")
+#' }
 #'
 #' @export
 load_image <- function(file_name) {
@@ -6237,6 +7189,10 @@ load_image <- function(file_name) {
 #' @family raw functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_image_raw("file.png", 800L, 450L, 0L, 32L)
+#' }
 #'
 #' @export
 load_image_raw <- function(file_name, width, height, format, header_size) {
@@ -6265,6 +7221,10 @@ load_image_raw <- function(file_name, width, height, format, header_size) {
 #' @family texture functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_image_from_texture(load_texture("file.png"))
+#' }
 #'
 #' @export
 load_image_from_texture <- function(texture) {
@@ -6288,6 +7248,10 @@ load_image_from_texture <- function(texture) {
 #' @family screen functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_image_from_screen()
+#' }
 #'
 #' @export
 load_image_from_screen <- function() {
@@ -6311,6 +7275,10 @@ load_image_from_screen <- function() {
 #' @family valid functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_image_valid(gen_image_color(100, 100, "blue"))
+#' }
 #'
 #' @export
 is_image_valid <- function(image) {
@@ -6333,6 +7301,10 @@ is_image_valid <- function(image) {
 #' @family image functions
 #' @family unload functions
 #'
+#' @examples
+#' \dontrun{
+#' unload_image(gen_image_color(100, 100, "blue"))
+#' }
 #'
 #' @export
 unload_image <- function(image) {
@@ -6358,6 +7330,10 @@ unload_image <- function(image) {
 #' @family image functions
 #' @family export functions
 #'
+#' @examples
+#' \dontrun{
+#' export_image(gen_image_color(100, 100, "blue"), "file.png")
+#' }
 #'
 #' @export
 export_image <- function(image, file_name) {
@@ -6384,6 +7360,10 @@ export_image <- function(image, file_name) {
 #' @family code functions
 #' @family export functions
 #'
+#' @examples
+#' \dontrun{
+#' export_image_as_code(gen_image_color(100, 100, "blue"), "file.png")
+#' }
 #'
 #' @export
 export_image_as_code <- function(image, file_name) {
@@ -6410,6 +7390,10 @@ export_image_as_code <- function(image, file_name) {
 #'
 #' @family color functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_image_color(800L, 450L, "red")
+#' }
 #'
 #' @export
 gen_image_color <- function(width, height, color) {
@@ -6439,6 +7423,10 @@ gen_image_color <- function(width, height, color) {
 #'
 #' @family linear functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_image_gradient_linear(800L, 450L, 0L, "red", "red")
+#' }
 #'
 #' @export
 gen_image_gradient_linear <- function(width, height, direction, start, end) {
@@ -6470,6 +7458,10 @@ gen_image_gradient_linear <- function(width, height, direction, start, end) {
 #'
 #' @family radial functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_image_gradient_radial(800L, 450L, 0.0, "red", "red")
+#' }
 #'
 #' @export
 gen_image_gradient_radial <- function(width, height, density, inner, outer) {
@@ -6501,6 +7493,10 @@ gen_image_gradient_radial <- function(width, height, density, inner, outer) {
 #'
 #' @family square functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_image_gradient_square(800L, 450L, 0.0, "red", "red")
+#' }
 #'
 #' @export
 gen_image_gradient_square <- function(width, height, density, inner, outer) {
@@ -6533,6 +7529,10 @@ gen_image_gradient_square <- function(width, height, density, inner, outer) {
 #'
 #' @family checked functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_image_checked(800L, 450L, 0L, 0L, "red", "red")
+#' }
 #'
 #' @export
 gen_image_checked <- function(width, height, checks_x, checks_y, col1, col2) {
@@ -6563,6 +7563,10 @@ gen_image_checked <- function(width, height, checks_x, checks_y, col1, col2) {
 #'
 #' @family noise functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_image_white_noise(800L, 450L, 0.0)
+#' }
 #'
 #' @export
 gen_image_white_noise <- function(width, height, factor) {
@@ -6592,6 +7596,10 @@ gen_image_white_noise <- function(width, height, factor) {
 #'
 #' @family noise functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_image_perlin_noise(800L, 450L, 0L, 0L, 1.0)
+#' }
 #'
 #' @export
 gen_image_perlin_noise <- function(width, height, offset_x, offset_y, scale) {
@@ -6621,6 +7629,10 @@ gen_image_perlin_noise <- function(width, height, offset_x, offset_y, scale) {
 #'
 #' @family cellular functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_image_cellular(800L, 450L, 32L)
+#' }
 #'
 #' @export
 gen_image_cellular <- function(width, height, tile_size) {
@@ -6648,6 +7660,10 @@ gen_image_cellular <- function(width, height, tile_size) {
 #'
 #' @family text functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_image_text(800L, 450L, "Hello")
+#' }
 #'
 #' @export
 gen_image_text <- function(width, height, text) {
@@ -6673,6 +7689,10 @@ gen_image_text <- function(width, height, text) {
 #'
 #' @family copy functions
 #'
+#' @examples
+#' \dontrun{
+#' image_copy(gen_image_color(100, 100, "blue"))
+#' }
 #'
 #' @export
 image_copy <- function(image) {
@@ -6697,6 +7717,10 @@ image_copy <- function(image) {
 #'
 #' @family image functions
 #'
+#' @examples
+#' \dontrun{
+#' image_from_image(gen_image_color(100, 100, "blue"), rectangle(10, 10, 200, 100))
+#' }
 #'
 #' @export
 image_from_image <- function(image, rec) {
@@ -6722,6 +7746,10 @@ image_from_image <- function(image, rec) {
 #'
 #' @family channel functions
 #'
+#' @examples
+#' \dontrun{
+#' image_from_channel(gen_image_color(100, 100, "blue"), 0L)
+#' }
 #'
 #' @export
 image_from_channel <- function(image, selected_channel) {
@@ -6748,6 +7776,10 @@ image_from_channel <- function(image, selected_channel) {
 #'
 #' @family text functions
 #'
+#' @examples
+#' \dontrun{
+#' image_text("Hello", 20L, "red")
+#' }
 #'
 #' @export
 image_text <- function(text, font_size, color) {
@@ -6777,6 +7809,10 @@ image_text <- function(text, font_size, color) {
 #'
 #' @family ex functions
 #'
+#' @examples
+#' \dontrun{
+#' image_text_ex(get_font_default(), "Hello", 1.0, 1.0, "red")
+#' }
 #'
 #' @export
 image_text_ex <- function(font, text, font_size, spacing, tint) {
@@ -6806,6 +7842,10 @@ image_text_ex <- function(font, text, font_size, spacing, tint) {
 #' @family border functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_image_alpha_border(gen_image_color(100, 100, "blue"), 0.0)
+#' }
 #'
 #' @export
 get_image_alpha_border <- function(image, threshold) {
@@ -6833,6 +7873,10 @@ get_image_alpha_border <- function(image, threshold) {
 #' @family color functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_image_color(gen_image_color(100, 100, "blue"), 100L, 100L)
+#' }
 #'
 #' @export
 get_image_color <- function(image, x, y) {
@@ -6859,6 +7903,10 @@ get_image_color <- function(image, x, y) {
 #' @family texture functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_texture("file.png")
+#' }
 #'
 #' @export
 load_texture <- function(file_name) {
@@ -6883,6 +7931,10 @@ load_texture <- function(file_name) {
 #' @family image functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_texture_from_image(gen_image_color(100, 100, "blue"))
+#' }
 #'
 #' @export
 load_texture_from_image <- function(image) {
@@ -6908,6 +7960,10 @@ load_texture_from_image <- function(image) {
 #' @family texture functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_render_texture(800L, 450L)
+#' }
 #'
 #' @export
 load_render_texture <- function(width, height) {
@@ -6933,6 +7989,10 @@ load_render_texture <- function(width, height) {
 #' @family valid functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_texture_valid(load_texture("file.png"))
+#' }
 #'
 #' @export
 is_texture_valid <- function(texture) {
@@ -6955,6 +8015,10 @@ is_texture_valid <- function(texture) {
 #' @family texture functions
 #' @family unload functions
 #'
+#' @examples
+#' \dontrun{
+#' unload_texture(load_texture("file.png"))
+#' }
 #'
 #' @export
 unload_texture <- function(texture) {
@@ -6979,6 +8043,10 @@ unload_texture <- function(texture) {
 #' @family valid functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_render_texture_valid(load_render_texture(800, 450))
+#' }
 #'
 #' @export
 is_render_texture_valid <- function(target) {
@@ -7001,6 +8069,10 @@ is_render_texture_valid <- function(target) {
 #' @family texture functions
 #' @family unload functions
 #'
+#' @examples
+#' \dontrun{
+#' unload_render_texture(load_render_texture(800, 450))
+#' }
 #'
 #' @export
 unload_render_texture <- function(target) {
@@ -7024,6 +8096,10 @@ unload_render_texture <- function(target) {
 #' @family filter functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_texture_filter(load_texture("file.png"), 0L)
+#' }
 #'
 #' @export
 set_texture_filter <- function(texture, filter) {
@@ -7048,6 +8124,10 @@ set_texture_filter <- function(texture, filter) {
 #' @family wrap functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_texture_wrap(load_texture("file.png"), 0L)
+#' }
 #'
 #' @export
 set_texture_wrap <- function(texture, wrap) {
@@ -7074,6 +8154,10 @@ set_texture_wrap <- function(texture, wrap) {
 #' @family texture functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_texture(load_texture("file.png"), 100L, 100L, "red")
+#' }
 #'
 #' @export
 draw_texture <- function(texture, pos_x, pos_y, tint) {
@@ -7110,6 +8194,10 @@ draw_texture <- function(texture, pos_x, pos_y, tint) {
 #' @family v functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_texture_v(load_texture("file.png"), c(100, 100), "red")
+#' }
 #'
 #' @export
 draw_texture_v <- function(texture, position, tint) {
@@ -7146,6 +8234,10 @@ draw_texture_v <- function(texture, position, tint) {
 #' @family ex functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_texture_ex(load_texture("file.png"), c(100, 100), 0.0, 1.0, "red")
+#' }
 #'
 #' @export
 draw_texture_ex <- function(texture, position, rotation, scale, tint) {
@@ -7185,6 +8277,10 @@ draw_texture_ex <- function(texture, position, rotation, scale, tint) {
 #' @family rec functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_texture_rec(load_texture("file.png"), rectangle(10, 10, 200, 100), c(100, 100), "red")
+#' }
 #'
 #' @export
 draw_texture_rec <- function(texture, source, position, tint) {
@@ -7224,6 +8320,10 @@ draw_texture_rec <- function(texture, source, position, tint) {
 #' @family pro functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_texture_pro(load_texture("file.png"), rectangle(10, 10, 200, 100), rectangle(10, 10, 200, 100), c(100, 100), 0.0, "red")
+#' }
 #'
 #' @export
 draw_texture_pro <- function(texture, source, dest, origin, rotation, tint) {
@@ -7267,6 +8367,10 @@ draw_texture_pro <- function(texture, source, dest, origin, rotation, tint) {
 #' @family patch functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_texture_n_patch(load_texture("file.png"), n_patch_info(rectangle(0, 0, 64, 64), 16L, 16L, 16L, 16L, 0L), rectangle(10, 10, 200, 100), c(100, 100), 0.0, "red")
+#' }
 #'
 #' @export
 draw_texture_n_patch <- function(texture, n_patch_info, dest, origin, rotation, tint) {
@@ -7307,6 +8411,10 @@ draw_texture_n_patch <- function(texture, n_patch_info, dest, origin, rotation, 
 #'
 #' @family equal functions
 #'
+#' @examples
+#' \dontrun{
+#' color_is_equal("red", "red")
+#' }
 #'
 #' @export
 color_is_equal <- function(col1, col2) {
@@ -7331,6 +8439,10 @@ color_is_equal <- function(col1, col2) {
 #' ```
 #'
 #'
+#' @examples
+#' \dontrun{
+#' fade("red", 0.0)
+#' }
 #'
 #' @export
 fade <- function(color, alpha) {
@@ -7355,6 +8467,10 @@ fade <- function(color, alpha) {
 #'
 #' @family int functions
 #'
+#' @examples
+#' \dontrun{
+#' color_to_int("red")
+#' }
 #'
 #' @export
 color_to_int <- function(color) {
@@ -7378,6 +8494,10 @@ color_to_int <- function(color) {
 #'
 #' @family normalize functions
 #'
+#' @examples
+#' \dontrun{
+#' color_normalize("red")
+#' }
 #'
 #' @export
 color_normalize <- function(color) {
@@ -7401,6 +8521,10 @@ color_normalize <- function(color) {
 #'
 #' @family normalized functions
 #'
+#' @examples
+#' \dontrun{
+#' color_from_normalized(c(0, 0, 0, 1))
+#' }
 #'
 #' @export
 color_from_normalized <- function(normalized) {
@@ -7424,6 +8548,10 @@ color_from_normalized <- function(normalized) {
 #'
 #' @family hsv functions
 #'
+#' @examples
+#' \dontrun{
+#' color_to_hsv("red")
+#' }
 #'
 #' @export
 color_to_hsv <- function(color) {
@@ -7449,6 +8577,10 @@ color_to_hsv <- function(color) {
 #'
 #' @family hsv functions
 #'
+#' @examples
+#' \dontrun{
+#' color_from_hsv(0.0, 0.0, 0.0)
+#' }
 #'
 #' @export
 color_from_hsv <- function(hue, saturation, value) {
@@ -7475,6 +8607,10 @@ color_from_hsv <- function(hue, saturation, value) {
 #'
 #' @family tint functions
 #'
+#' @examples
+#' \dontrun{
+#' color_tint("red", "red")
+#' }
 #'
 #' @export
 color_tint <- function(color, tint) {
@@ -7500,6 +8636,10 @@ color_tint <- function(color, tint) {
 #'
 #' @family brightness functions
 #'
+#' @examples
+#' \dontrun{
+#' color_brightness("red", 0.0)
+#' }
 #'
 #' @export
 color_brightness <- function(color, factor) {
@@ -7525,6 +8665,10 @@ color_brightness <- function(color, factor) {
 #'
 #' @family contrast functions
 #'
+#' @examples
+#' \dontrun{
+#' color_contrast("red", 0.0)
+#' }
 #'
 #' @export
 color_contrast <- function(color, contrast) {
@@ -7550,6 +8694,10 @@ color_contrast <- function(color, contrast) {
 #'
 #' @family alpha functions
 #'
+#' @examples
+#' \dontrun{
+#' color_alpha("red", 0.0)
+#' }
 #'
 #' @export
 color_alpha <- function(color, alpha) {
@@ -7576,6 +8724,10 @@ color_alpha <- function(color, alpha) {
 #'
 #' @family blend functions
 #'
+#' @examples
+#' \dontrun{
+#' color_alpha_blend("red", "red", "red")
+#' }
 #'
 #' @export
 color_alpha_blend <- function(dst, src, tint) {
@@ -7603,6 +8755,10 @@ color_alpha_blend <- function(dst, src, tint) {
 #'
 #' @family lerp functions
 #'
+#' @examples
+#' \dontrun{
+#' color_lerp("red", "red", 0.0)
+#' }
 #'
 #' @export
 color_lerp <- function(color1, color2, factor) {
@@ -7629,6 +8785,10 @@ color_lerp <- function(color1, color2, factor) {
 #' @family color functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_color(0L)
+#' }
 #'
 #' @export
 get_color <- function(hex_value) {
@@ -7655,6 +8815,10 @@ get_color <- function(hex_value) {
 #' @family size functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_pixel_data_size(800L, 450L, 0L)
+#' }
 #'
 #' @export
 get_pixel_data_size <- function(width, height, format) {
@@ -7680,6 +8844,10 @@ get_pixel_data_size <- function(width, height, format) {
 #' @family default functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_font_default()
+#' }
 #'
 #' @export
 get_font_default <- function() {
@@ -7703,6 +8871,10 @@ get_font_default <- function() {
 #' @family font functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_font("file.png")
+#' }
 #'
 #' @export
 load_font <- function(file_name) {
@@ -7729,6 +8901,10 @@ load_font <- function(file_name) {
 #' @family image functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_font_from_image(gen_image_color(100, 100, "blue"), "red", 0L)
+#' }
 #'
 #' @export
 load_font_from_image <- function(image, key, first_char) {
@@ -7755,6 +8931,10 @@ load_font_from_image <- function(image, key, first_char) {
 #' @family valid functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_font_valid(get_font_default())
+#' }
 #'
 #' @export
 is_font_valid <- function(font) {
@@ -7777,6 +8957,10 @@ is_font_valid <- function(font) {
 #' @family font functions
 #' @family unload functions
 #'
+#' @examples
+#' \dontrun{
+#' unload_font(get_font_default())
+#' }
 #'
 #' @export
 unload_font <- function(font) {
@@ -7802,6 +8986,10 @@ unload_font <- function(font) {
 #' @family code functions
 #' @family export functions
 #'
+#' @examples
+#' \dontrun{
+#' export_font_as_code(get_font_default(), "file.png")
+#' }
 #'
 #' @export
 export_font_as_code <- function(font, file_name) {
@@ -7826,6 +9014,10 @@ export_font_as_code <- function(font, file_name) {
 #' @family fps functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_fps(100L, 100L)
+#' }
 #'
 #' @export
 draw_fps <- function(pos_x = 10L, pos_y = 10L) {
@@ -7860,6 +9052,10 @@ draw_fps <- function(pos_x = 10L, pos_y = 10L) {
 #' @family text functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_text("Hello", 100L, 100L, 20L, "red")
+#' }
 #'
 #' @export
 draw_text <- function(text, pos_x, pos_y, font_size, color = "black") {
@@ -7901,6 +9097,10 @@ draw_text <- function(text, pos_x, pos_y, font_size, color = "black") {
 #' @family ex functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_text_ex(get_font_default(), "Hello", c(100, 100), 1.0, 1.0, "red")
+#' }
 #'
 #' @export
 draw_text_ex <- function(font, text, position, font_size, spacing, tint) {
@@ -7946,6 +9146,10 @@ draw_text_ex <- function(font, text, position, font_size, spacing, tint) {
 #' @family pro functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_text_pro(get_font_default(), "Hello", c(100, 100), c(100, 100), 0.0, 1.0, 1.0, "red")
+#' }
 #'
 #' @export
 draw_text_pro <- function(font, text, position, origin, rotation, font_size, spacing, tint) {
@@ -7992,6 +9196,10 @@ draw_text_pro <- function(font, text, position, origin, rotation, font_size, spa
 #' @family codepoint functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_text_codepoint(get_font_default(), 0L, c(100, 100), 1.0, "red")
+#' }
 #'
 #' @export
 draw_text_codepoint <- function(font, codepoint, position, font_size, tint) {
@@ -8028,6 +9236,10 @@ draw_text_codepoint <- function(font, codepoint, position, font_size, tint) {
 #' @family spacing functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_text_line_spacing(0L)
+#' }
 #'
 #' @export
 set_text_line_spacing <- function(spacing) {
@@ -8052,6 +9264,10 @@ set_text_line_spacing <- function(spacing) {
 #'
 #' @family text functions
 #'
+#' @examples
+#' \dontrun{
+#' measure_text("Hello", 20L)
+#' }
 #'
 #' @export
 measure_text <- function(text, font_size) {
@@ -8079,6 +9295,10 @@ measure_text <- function(text, font_size) {
 #'
 #' @family ex functions
 #'
+#' @examples
+#' \dontrun{
+#' measure_text_ex(get_font_default(), "Hello", 1.0, 1.0)
+#' }
 #'
 #' @export
 measure_text_ex <- function(font, text, font_size, spacing) {
@@ -8107,6 +9327,10 @@ measure_text_ex <- function(font, text, font_size, spacing) {
 #' @family index functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_glyph_index(get_font_default(), 0L)
+#' }
 #'
 #' @export
 get_glyph_index <- function(font, codepoint) {
@@ -8133,6 +9357,10 @@ get_glyph_index <- function(font, codepoint) {
 #' @family info functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_glyph_info(get_font_default(), 0L)
+#' }
 #'
 #' @export
 get_glyph_info <- function(font, codepoint) {
@@ -8159,6 +9387,10 @@ get_glyph_info <- function(font, codepoint) {
 #' @family rec functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_glyph_atlas_rec(get_font_default(), 0L)
+#' }
 #'
 #' @export
 get_glyph_atlas_rec <- function(font, codepoint) {
@@ -8184,6 +9416,10 @@ get_glyph_atlas_rec <- function(font, codepoint) {
 #' @family count functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_codepoint_count("Hello")
+#' }
 #'
 #' @export
 get_codepoint_count <- function(text) {
@@ -8208,6 +9444,10 @@ get_codepoint_count <- function(text) {
 #'
 #' @family equal functions
 #'
+#' @examples
+#' \dontrun{
+#' text_is_equal("Hello", "Hello")
+#' }
 #'
 #' @export
 text_is_equal <- function(text1, text2) {
@@ -8232,6 +9472,10 @@ text_is_equal <- function(text1, text2) {
 #'
 #' @family length functions
 #'
+#' @examples
+#' \dontrun{
+#' text_length("Hello")
+#' }
 #'
 #' @export
 text_length <- function(text) {
@@ -8257,6 +9501,10 @@ text_length <- function(text) {
 #'
 #' @family subtext functions
 #'
+#' @examples
+#' \dontrun{
+#' text_subtext("Hello", 0L, 0L)
+#' }
 #'
 #' @export
 text_subtext <- function(text, position, length) {
@@ -8282,6 +9530,10 @@ text_subtext <- function(text, position, length) {
 #'
 #' @family spaces functions
 #'
+#' @examples
+#' \dontrun{
+#' text_remove_spaces("Hello")
+#' }
 #'
 #' @export
 text_remove_spaces <- function(text) {
@@ -8308,6 +9560,10 @@ text_remove_spaces <- function(text) {
 #' @family between functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_text_between("Hello", "text", "text")
+#' }
 #'
 #' @export
 get_text_between <- function(text, begin, end) {
@@ -8335,6 +9591,10 @@ get_text_between <- function(text, begin, end) {
 #'
 #' @family replace functions
 #'
+#' @examples
+#' \dontrun{
+#' text_replace("Hello", "text", "text")
+#' }
 #'
 #' @export
 text_replace <- function(text, search, replacement) {
@@ -8362,6 +9622,10 @@ text_replace <- function(text, search, replacement) {
 #'
 #' @family alloc functions
 #'
+#' @examples
+#' \dontrun{
+#' text_replace_alloc("Hello", "text", "text")
+#' }
 #'
 #' @export
 text_replace_alloc <- function(text, search, replacement) {
@@ -8390,6 +9654,10 @@ text_replace_alloc <- function(text, search, replacement) {
 #'
 #' @family between functions
 #'
+#' @examples
+#' \dontrun{
+#' text_replace_between("Hello", "text", "text", "text")
+#' }
 #'
 #' @export
 text_replace_between <- function(text, begin, end, replacement) {
@@ -8419,6 +9687,10 @@ text_replace_between <- function(text, begin, end, replacement) {
 #'
 #' @family alloc functions
 #'
+#' @examples
+#' \dontrun{
+#' text_replace_between_alloc("Hello", "text", "text", "text")
+#' }
 #'
 #' @export
 text_replace_between_alloc <- function(text, begin, end, replacement) {
@@ -8447,6 +9719,10 @@ text_replace_between_alloc <- function(text, begin, end, replacement) {
 #'
 #' @family insert functions
 #'
+#' @examples
+#' \dontrun{
+#' text_insert("Hello", "text", 0L)
+#' }
 #'
 #' @export
 text_insert <- function(text, insert, position) {
@@ -8474,6 +9750,10 @@ text_insert <- function(text, insert, position) {
 #'
 #' @family alloc functions
 #'
+#' @examples
+#' \dontrun{
+#' text_insert_alloc("Hello", "text", 0L)
+#' }
 #'
 #' @export
 text_insert_alloc <- function(text, insert, position) {
@@ -8500,6 +9780,10 @@ text_insert_alloc <- function(text, insert, position) {
 #'
 #' @family index functions
 #'
+#' @examples
+#' \dontrun{
+#' text_find_index("Hello", "text")
+#' }
 #'
 #' @export
 text_find_index <- function(text, search) {
@@ -8524,6 +9808,10 @@ text_find_index <- function(text, search) {
 #'
 #' @family upper functions
 #'
+#' @examples
+#' \dontrun{
+#' text_to_upper("Hello")
+#' }
 #'
 #' @export
 text_to_upper <- function(text) {
@@ -8547,6 +9835,10 @@ text_to_upper <- function(text) {
 #'
 #' @family lower functions
 #'
+#' @examples
+#' \dontrun{
+#' text_to_lower("Hello")
+#' }
 #'
 #' @export
 text_to_lower <- function(text) {
@@ -8570,6 +9862,10 @@ text_to_lower <- function(text) {
 #'
 #' @family pascal functions
 #'
+#' @examples
+#' \dontrun{
+#' text_to_pascal("Hello")
+#' }
 #'
 #' @export
 text_to_pascal <- function(text) {
@@ -8593,6 +9889,10 @@ text_to_pascal <- function(text) {
 #'
 #' @family snake functions
 #'
+#' @examples
+#' \dontrun{
+#' text_to_snake("Hello")
+#' }
 #'
 #' @export
 text_to_snake <- function(text) {
@@ -8616,6 +9916,10 @@ text_to_snake <- function(text) {
 #'
 #' @family camel functions
 #'
+#' @examples
+#' \dontrun{
+#' text_to_camel("Hello")
+#' }
 #'
 #' @export
 text_to_camel <- function(text) {
@@ -8639,6 +9943,10 @@ text_to_camel <- function(text) {
 #'
 #' @family integer functions
 #'
+#' @examples
+#' \dontrun{
+#' text_to_integer("Hello")
+#' }
 #'
 #' @export
 text_to_integer <- function(text) {
@@ -8662,6 +9970,10 @@ text_to_integer <- function(text) {
 #'
 #' @family float functions
 #'
+#' @examples
+#' \dontrun{
+#' text_to_float("Hello")
+#' }
 #'
 #' @export
 text_to_float <- function(text) {
@@ -8686,6 +9998,10 @@ text_to_float <- function(text) {
 #' @family 3d functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_line_3d(c(0, 5, 0), c(0, 5, 0), "red")
+#' }
 #'
 #' @export
 draw_line_3d <- function(start_pos, end_pos, color) {
@@ -8719,6 +10035,10 @@ draw_line_3d <- function(start_pos, end_pos, color) {
 #' @family 3d functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_point_3d(c(0, 5, 0), "red")
+#' }
 #'
 #' @export
 draw_point_3d <- function(position, color) {
@@ -8753,6 +10073,10 @@ draw_point_3d <- function(position, color) {
 #' @family 3d functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_circle_3d(c(0, 0, 0), 50.0, c(0, 0, 0), 0.0, "red")
+#' }
 #'
 #' @export
 draw_circle_3d <- function(center, radius, rotation_axis, rotation_angle, color) {
@@ -8792,6 +10116,10 @@ draw_circle_3d <- function(center, radius, rotation_axis, rotation_angle, color)
 #' @family 3d functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_triangle_3d(c(0, 0, 0), c(0, 0, 0), c(0, 0, 0), "red")
+#' }
 #'
 #' @export
 draw_triangle_3d <- function(v1, v2, v3, color) {
@@ -8830,6 +10158,10 @@ draw_triangle_3d <- function(v1, v2, v3, color) {
 #' @family cube functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_cube(c(0, 5, 0), 200.0, 100.0, 100.0, "red")
+#' }
 #'
 #' @export
 draw_cube <- function(position, width, height, length, color) {
@@ -8868,6 +10200,10 @@ draw_cube <- function(position, width, height, length, color) {
 #' @family v functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_cube_v(c(0, 5, 0), c(1, 1, 1), "red")
+#' }
 #'
 #' @export
 draw_cube_v <- function(position, size, color) {
@@ -8904,6 +10240,10 @@ draw_cube_v <- function(position, size, color) {
 #' @family wires functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_cube_wires(c(0, 5, 0), 200.0, 100.0, 100.0, "red")
+#' }
 #'
 #' @export
 draw_cube_wires <- function(position, width, height, length, color) {
@@ -8942,6 +10282,10 @@ draw_cube_wires <- function(position, width, height, length, color) {
 #' @family v functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_cube_wires_v(c(0, 5, 0), c(1, 1, 1), "red")
+#' }
 #'
 #' @export
 draw_cube_wires_v <- function(position, size, color) {
@@ -8976,6 +10320,10 @@ draw_cube_wires_v <- function(position, size, color) {
 #' @family sphere functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_sphere(c(0, 5, 0), 50.0, "red")
+#' }
 #'
 #' @export
 draw_sphere <- function(center_pos, radius, color) {
@@ -9012,6 +10360,10 @@ draw_sphere <- function(center_pos, radius, color) {
 #' @family ex functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_sphere_ex(c(0, 5, 0), 50.0, 8L, 16L, "red")
+#' }
 #'
 #' @export
 draw_sphere_ex <- function(center_pos, radius, rings, slices, color) {
@@ -9052,6 +10404,10 @@ draw_sphere_ex <- function(center_pos, radius, rings, slices, color) {
 #' @family wires functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_sphere_wires(c(0, 5, 0), 50.0, 8L, 16L, "red")
+#' }
 #'
 #' @export
 draw_sphere_wires <- function(center_pos, radius, rings, slices, color) {
@@ -9093,6 +10449,10 @@ draw_sphere_wires <- function(center_pos, radius, rings, slices, color) {
 #' @family cylinder functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_cylinder(c(0, 5, 0), 50.0, 50.0, 100.0, 16L, "red")
+#' }
 #'
 #' @export
 draw_cylinder <- function(position, radius_top, radius_bottom, height, slices, color) {
@@ -9136,6 +10496,10 @@ draw_cylinder <- function(position, radius_top, radius_bottom, height, slices, c
 #' @family ex functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_cylinder_ex(c(0, 5, 0), c(0, 5, 0), 50.0, 50.0, 0L, "red")
+#' }
 #'
 #' @export
 draw_cylinder_ex <- function(start_pos, end_pos, start_radius, end_radius, sides, color) {
@@ -9179,6 +10543,10 @@ draw_cylinder_ex <- function(start_pos, end_pos, start_radius, end_radius, sides
 #' @family wires functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_cylinder_wires(c(0, 5, 0), 50.0, 50.0, 100.0, 16L, "red")
+#' }
 #'
 #' @export
 draw_cylinder_wires <- function(position, radius_top, radius_bottom, height, slices, color) {
@@ -9222,6 +10590,10 @@ draw_cylinder_wires <- function(position, radius_top, radius_bottom, height, sli
 #' @family ex functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_cylinder_wires_ex(c(0, 5, 0), c(0, 5, 0), 50.0, 50.0, 0L, "red")
+#' }
 #'
 #' @export
 draw_cylinder_wires_ex <- function(start_pos, end_pos, start_radius, end_radius, sides, color) {
@@ -9265,6 +10637,10 @@ draw_cylinder_wires_ex <- function(start_pos, end_pos, start_radius, end_radius,
 #' @family capsule functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_capsule(c(0, 5, 0), c(0, 5, 0), 50.0, 16L, 8L, "red")
+#' }
 #'
 #' @export
 draw_capsule <- function(start_pos, end_pos, radius, slices, rings, color) {
@@ -9308,6 +10684,10 @@ draw_capsule <- function(start_pos, end_pos, radius, slices, rings, color) {
 #' @family wires functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_capsule_wires(c(0, 5, 0), c(0, 5, 0), 50.0, 16L, 8L, "red")
+#' }
 #'
 #' @export
 draw_capsule_wires <- function(start_pos, end_pos, radius, slices, rings, color) {
@@ -9348,6 +10728,10 @@ draw_capsule_wires <- function(start_pos, end_pos, radius, slices, rings, color)
 #' @family plane functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_plane(c(0, 5, 0), c(100, 100), "red")
+#' }
 #'
 #' @export
 draw_plane <- function(center_pos, size, color) {
@@ -9381,6 +10765,10 @@ draw_plane <- function(center_pos, size, color) {
 #' @family ray functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_ray(ray(c(0, 0, 0), c(0, 0, 1)), "red")
+#' }
 #'
 #' @export
 draw_ray <- function(ray, color) {
@@ -9412,6 +10800,10 @@ draw_ray <- function(ray, color) {
 #' @family grid functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_grid(16L, 1.0)
+#' }
 #'
 #' @export
 draw_grid <- function(slices = 10L, spacing = 1) {
@@ -9444,6 +10836,10 @@ draw_grid <- function(slices = 10L, spacing = 1) {
 #' @family model functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_model("file.png")
+#' }
 #'
 #' @export
 load_model <- function(file_name) {
@@ -9468,6 +10864,10 @@ load_model <- function(file_name) {
 #' @family mesh functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_model_from_mesh(gen_mesh_cube(1.0, 1.0, 1.0))
+#' }
 #'
 #' @export
 load_model_from_mesh <- function(mesh) {
@@ -9492,6 +10892,10 @@ load_model_from_mesh <- function(mesh) {
 #' @family valid functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_model_valid(load_model("model.obj"))
+#' }
 #'
 #' @export
 is_model_valid <- function(model) {
@@ -9514,6 +10918,10 @@ is_model_valid <- function(model) {
 #' @family model functions
 #' @family unload functions
 #'
+#' @examples
+#' \dontrun{
+#' unload_model(load_model("model.obj"))
+#' }
 #'
 #' @export
 unload_model <- function(model) {
@@ -9538,6 +10946,10 @@ unload_model <- function(model) {
 #' @family box functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_model_bounding_box(load_model("model.obj"))
+#' }
 #'
 #' @export
 get_model_bounding_box <- function(model) {
@@ -9563,6 +10975,10 @@ get_model_bounding_box <- function(model) {
 #' @family model functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_model(load_model("model.obj"), c(0, 5, 0), 1.0, "red")
+#' }
 #'
 #' @export
 draw_model <- function(model, position, scale, tint) {
@@ -9602,6 +11018,10 @@ draw_model <- function(model, position, scale, tint) {
 #' @family ex functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_model_ex(load_model("model.obj"), c(0, 5, 0), c(0, 0, 0), 0.0, c(1, 1, 1), "red")
+#' }
 #'
 #' @export
 draw_model_ex <- function(model, position, rotation_axis, rotation_angle, scale, tint) {
@@ -9643,6 +11063,10 @@ draw_model_ex <- function(model, position, rotation_axis, rotation_angle, scale,
 #' @family wires functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_model_wires(load_model("model.obj"), c(0, 5, 0), 1.0, "red")
+#' }
 #'
 #' @export
 draw_model_wires <- function(model, position, scale, tint) {
@@ -9682,6 +11106,10 @@ draw_model_wires <- function(model, position, scale, tint) {
 #' @family ex functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_model_wires_ex(load_model("model.obj"), c(0, 5, 0), c(0, 0, 0), 0.0, c(1, 1, 1), "red")
+#' }
 #'
 #' @export
 draw_model_wires_ex <- function(model, position, rotation_axis, rotation_angle, scale, tint) {
@@ -9721,6 +11149,10 @@ draw_model_wires_ex <- function(model, position, rotation_axis, rotation_angle, 
 #' @family box functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_bounding_box(bounding_box(c(-1, -1, -1), c(1, 1, 1)), "red")
+#' }
 #'
 #' @export
 draw_bounding_box <- function(box, color) {
@@ -9755,6 +11187,10 @@ draw_bounding_box <- function(box, color) {
 #' @family billboard functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_billboard(camera_3d(c(0, 10, 10)), load_texture("file.png"), c(0, 5, 0), 1.0, "red")
+#' }
 #'
 #' @export
 draw_billboard <- function(camera, texture, position, scale, tint) {
@@ -9796,6 +11232,10 @@ draw_billboard <- function(camera, texture, position, scale, tint) {
 #' @family rec functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_billboard_rec(camera_3d(c(0, 10, 10)), load_texture("file.png"), rectangle(10, 10, 200, 100), c(0, 5, 0), c(100, 100), "red")
+#' }
 #'
 #' @export
 draw_billboard_rec <- function(camera, texture, source, position, size, tint) {
@@ -9842,6 +11282,10 @@ draw_billboard_rec <- function(camera, texture, source, position, size, tint) {
 #' @family pro functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_billboard_pro(camera_3d(c(0, 10, 10)), load_texture("file.png"), rectangle(10, 10, 200, 100), c(0, 5, 0), c(0, 1, 0), c(100, 100), c(100, 100), 0.0, "red")
+#' }
 #'
 #' @export
 draw_billboard_pro <- function(camera, texture, source, position, up, size, origin, rotation, tint) {
@@ -9886,6 +11330,10 @@ draw_billboard_pro <- function(camera, texture, source, position, up, size, orig
 #' @family mesh functions
 #' @family unload functions
 #'
+#' @examples
+#' \dontrun{
+#' unload_mesh(gen_mesh_cube(1.0, 1.0, 1.0))
+#' }
 #'
 #' @export
 unload_mesh <- function(mesh) {
@@ -9910,6 +11358,10 @@ unload_mesh <- function(mesh) {
 #' @family mesh functions
 #' @family draw functions
 #'
+#' @examples
+#' \dontrun{
+#' draw_mesh(gen_mesh_cube(1.0, 1.0, 1.0), load_material_default(), diag(4))
+#' }
 #'
 #' @export
 draw_mesh <- function(mesh, material, transform) {
@@ -9944,6 +11396,10 @@ draw_mesh <- function(mesh, material, transform) {
 #' @family box functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_mesh_bounding_box(gen_mesh_cube(1.0, 1.0, 1.0))
+#' }
 #'
 #' @export
 get_mesh_bounding_box <- function(mesh) {
@@ -9969,6 +11425,10 @@ get_mesh_bounding_box <- function(mesh) {
 #' @family mesh functions
 #' @family export functions
 #'
+#' @examples
+#' \dontrun{
+#' export_mesh(gen_mesh_cube(1.0, 1.0, 1.0), "file.png")
+#' }
 #'
 #' @export
 export_mesh <- function(mesh, file_name) {
@@ -9995,6 +11455,10 @@ export_mesh <- function(mesh, file_name) {
 #' @family code functions
 #' @family export functions
 #'
+#' @examples
+#' \dontrun{
+#' export_mesh_as_code(gen_mesh_cube(1.0, 1.0, 1.0), "file.png")
+#' }
 #'
 #' @export
 export_mesh_as_code <- function(mesh, file_name) {
@@ -10020,6 +11484,10 @@ export_mesh_as_code <- function(mesh, file_name) {
 #'
 #' @family poly functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_mesh_poly(0L, 50.0)
+#' }
 #'
 #' @export
 gen_mesh_poly <- function(sides, radius) {
@@ -10047,6 +11515,10 @@ gen_mesh_poly <- function(sides, radius) {
 #'
 #' @family plane functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_mesh_plane(200.0, 100.0, 0L, 0L)
+#' }
 #'
 #' @export
 gen_mesh_plane <- function(width, length, res_x, res_z) {
@@ -10075,6 +11547,10 @@ gen_mesh_plane <- function(width, length, res_x, res_z) {
 #'
 #' @family cube functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_mesh_cube(200.0, 100.0, 100.0)
+#' }
 #'
 #' @export
 gen_mesh_cube <- function(width, height, length) {
@@ -10102,6 +11578,10 @@ gen_mesh_cube <- function(width, height, length) {
 #'
 #' @family sphere functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_mesh_sphere(50.0, 8L, 16L)
+#' }
 #'
 #' @export
 gen_mesh_sphere <- function(radius, rings, slices) {
@@ -10129,6 +11609,10 @@ gen_mesh_sphere <- function(radius, rings, slices) {
 #'
 #' @family sphere functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_mesh_hemi_sphere(50.0, 8L, 16L)
+#' }
 #'
 #' @export
 gen_mesh_hemi_sphere <- function(radius, rings, slices) {
@@ -10156,6 +11640,10 @@ gen_mesh_hemi_sphere <- function(radius, rings, slices) {
 #'
 #' @family cylinder functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_mesh_cylinder(50.0, 100.0, 16L)
+#' }
 #'
 #' @export
 gen_mesh_cylinder <- function(radius, height, slices) {
@@ -10183,6 +11671,10 @@ gen_mesh_cylinder <- function(radius, height, slices) {
 #'
 #' @family cone functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_mesh_cone(50.0, 100.0, 16L)
+#' }
 #'
 #' @export
 gen_mesh_cone <- function(radius, height, slices) {
@@ -10211,6 +11703,10 @@ gen_mesh_cone <- function(radius, height, slices) {
 #'
 #' @family torus functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_mesh_torus(50.0, 1.0, 0L, 0L)
+#' }
 #'
 #' @export
 gen_mesh_torus <- function(radius, size, rad_seg, sides) {
@@ -10240,6 +11736,10 @@ gen_mesh_torus <- function(radius, size, rad_seg, sides) {
 #'
 #' @family knot functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_mesh_knot(50.0, 1.0, 0L, 0L)
+#' }
 #'
 #' @export
 gen_mesh_knot <- function(radius, size, rad_seg, sides) {
@@ -10267,6 +11767,10 @@ gen_mesh_knot <- function(radius, size, rad_seg, sides) {
 #'
 #' @family heightmap functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_mesh_heightmap(gen_image_color(100, 100, "blue"), c(1, 1, 1))
+#' }
 #'
 #' @export
 gen_mesh_heightmap <- function(heightmap, size) {
@@ -10292,6 +11796,10 @@ gen_mesh_heightmap <- function(heightmap, size) {
 #'
 #' @family cubicmap functions
 #'
+#' @examples
+#' \dontrun{
+#' gen_mesh_cubicmap(gen_image_color(100, 100, "blue"), c(1, 1, 1))
+#' }
 #'
 #' @export
 gen_mesh_cubicmap <- function(cubicmap, cube_size) {
@@ -10316,6 +11824,10 @@ gen_mesh_cubicmap <- function(cubicmap, cube_size) {
 #' @family default functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_material_default()
+#' }
 #'
 #' @export
 load_material_default <- function() {
@@ -10339,6 +11851,10 @@ load_material_default <- function() {
 #' @family valid functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_material_valid(load_material_default())
+#' }
 #'
 #' @export
 is_material_valid <- function(material) {
@@ -10361,6 +11877,10 @@ is_material_valid <- function(material) {
 #' @family material functions
 #' @family unload functions
 #'
+#' @examples
+#' \dontrun{
+#' unload_material(load_material_default())
+#' }
 #'
 #' @export
 unload_material <- function(material) {
@@ -10385,6 +11905,10 @@ unload_material <- function(material) {
 #' @family animation functions
 #' @family update functions
 #'
+#' @examples
+#' \dontrun{
+#' update_model_animation(load_model("model.obj"), anim, 0.0)
+#' }
 #'
 #' @export
 update_model_animation <- function(model, anim, frame) {
@@ -10414,6 +11938,10 @@ update_model_animation <- function(model, anim, frame) {
 #' @family ex functions
 #' @family update functions
 #'
+#' @examples
+#' \dontrun{
+#' update_model_animation_ex(load_model("model.obj"), anim, 0.0, anim, 0.0, 0.0)
+#' }
 #'
 #' @export
 update_model_animation_ex <- function(model, anim_a, frame_a, anim_b, frame_b, blend) {
@@ -10444,6 +11972,10 @@ update_model_animation_ex <- function(model, anim_a, frame_a, anim_b, frame_b, b
 #' @family valid functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_model_animation_valid(load_model("model.obj"), anim)
+#' }
 #'
 #' @export
 is_model_animation_valid <- function(model, anim) {
@@ -10472,6 +12004,10 @@ is_model_animation_valid <- function(model, anim) {
 #' @family spheres functions
 #' @family check functions
 #'
+#' @examples
+#' \dontrun{
+#' check_collision_spheres(c(0, 0, 0), 50.0, c(0, 0, 0), 50.0)
+#' }
 #'
 #' @export
 check_collision_spheres <- function(center1, radius1, center2, radius2) {
@@ -10500,6 +12036,10 @@ check_collision_spheres <- function(center1, radius1, center2, radius2) {
 #' @family boxes functions
 #' @family check functions
 #'
+#' @examples
+#' \dontrun{
+#' check_collision_boxes(bounding_box(c(-1, -1, -1), c(1, 1, 1)), bounding_box(c(-1, -1, -1), c(1, 1, 1)))
+#' }
 #'
 #' @export
 check_collision_boxes <- function(box1, box2) {
@@ -10527,6 +12067,10 @@ check_collision_boxes <- function(box1, box2) {
 #' @family sphere functions
 #' @family check functions
 #'
+#' @examples
+#' \dontrun{
+#' check_collision_box_sphere(bounding_box(c(-1, -1, -1), c(1, 1, 1)), c(0, 0, 0), 50.0)
+#' }
 #'
 #' @export
 check_collision_box_sphere <- function(box, center, radius) {
@@ -10555,6 +12099,10 @@ check_collision_box_sphere <- function(box, center, radius) {
 #' @family sphere functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_ray_collision_sphere(ray(c(0, 0, 0), c(0, 0, 1)), c(0, 0, 0), 50.0)
+#' }
 #'
 #' @export
 get_ray_collision_sphere <- function(ray, center, radius) {
@@ -10582,6 +12130,10 @@ get_ray_collision_sphere <- function(ray, center, radius) {
 #' @family box functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_ray_collision_box(ray(c(0, 0, 0), c(0, 0, 1)), bounding_box(c(-1, -1, -1), c(1, 1, 1)))
+#' }
 #'
 #' @export
 get_ray_collision_box <- function(ray, box) {
@@ -10609,6 +12161,10 @@ get_ray_collision_box <- function(ray, box) {
 #' @family mesh functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_ray_collision_mesh(ray(c(0, 0, 0), c(0, 0, 1)), gen_mesh_cube(1.0, 1.0, 1.0), diag(4))
+#' }
 #'
 #' @export
 get_ray_collision_mesh <- function(ray, mesh, transform) {
@@ -10638,6 +12194,10 @@ get_ray_collision_mesh <- function(ray, mesh, transform) {
 #' @family triangle functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_ray_collision_triangle(ray(c(0, 0, 0), c(0, 0, 1)), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0))
+#' }
 #'
 #' @export
 get_ray_collision_triangle <- function(ray, p1, p2, p3) {
@@ -10669,6 +12229,10 @@ get_ray_collision_triangle <- function(ray, p1, p2, p3) {
 #' @family quad functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_ray_collision_quad(ray(c(0, 0, 0), c(0, 0, 1)), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0))
+#' }
 #'
 #' @export
 get_ray_collision_quad <- function(ray, p1, p2, p3, p4) {
@@ -10694,6 +12258,10 @@ get_ray_collision_quad <- function(ray, p1, p2, p3, p4) {
 #' @family device functions
 #' @family init functions
 #'
+#' @examples
+#' \dontrun{
+#' init_audio_device()
+#' }
 #'
 #' @export
 init_audio_device <- function() {
@@ -10714,6 +12282,10 @@ init_audio_device <- function() {
 #' @family device functions
 #' @family close functions
 #'
+#' @examples
+#' \dontrun{
+#' close_audio_device()
+#' }
 #'
 #' @export
 close_audio_device <- function() {
@@ -10736,6 +12308,10 @@ close_audio_device <- function() {
 #' @family ready functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_audio_device_ready()
+#' }
 #'
 #' @export
 is_audio_device_ready <- function() {
@@ -10757,6 +12333,10 @@ is_audio_device_ready <- function() {
 #' @family volume functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_master_volume(0.5)
+#' }
 #'
 #' @export
 set_master_volume <- function(volume) {
@@ -10780,6 +12360,10 @@ set_master_volume <- function(volume) {
 #' @family volume functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_master_volume()
+#' }
 #'
 #' @export
 get_master_volume <- function() {
@@ -10803,6 +12387,10 @@ get_master_volume <- function() {
 #' @family wave functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_wave("file.png")
+#' }
 #'
 #' @export
 load_wave <- function(file_name) {
@@ -10827,6 +12415,10 @@ load_wave <- function(file_name) {
 #' @family valid functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_wave_valid(load_wave("sound.wav"))
+#' }
 #'
 #' @export
 is_wave_valid <- function(wave) {
@@ -10851,6 +12443,10 @@ is_wave_valid <- function(wave) {
 #' @family sound functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_sound("file.png")
+#' }
 #'
 #' @export
 load_sound <- function(file_name) {
@@ -10875,6 +12471,10 @@ load_sound <- function(file_name) {
 #' @family wave functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_sound_from_wave(load_wave("sound.wav"))
+#' }
 #'
 #' @export
 load_sound_from_wave <- function(wave) {
@@ -10899,6 +12499,10 @@ load_sound_from_wave <- function(wave) {
 #' @family alias functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_sound_alias(load_sound("sound.wav"))
+#' }
 #'
 #' @export
 load_sound_alias <- function(source) {
@@ -10923,6 +12527,10 @@ load_sound_alias <- function(source) {
 #' @family valid functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_sound_valid(load_sound("sound.wav"))
+#' }
 #'
 #' @export
 is_sound_valid <- function(sound) {
@@ -10945,6 +12553,10 @@ is_sound_valid <- function(sound) {
 #' @family wave functions
 #' @family unload functions
 #'
+#' @examples
+#' \dontrun{
+#' unload_wave(load_wave("sound.wav"))
+#' }
 #'
 #' @export
 unload_wave <- function(wave) {
@@ -10967,6 +12579,10 @@ unload_wave <- function(wave) {
 #' @family sound functions
 #' @family unload functions
 #'
+#' @examples
+#' \dontrun{
+#' unload_sound(load_sound("sound.wav"))
+#' }
 #'
 #' @export
 unload_sound <- function(sound) {
@@ -10989,6 +12605,10 @@ unload_sound <- function(sound) {
 #' @family alias functions
 #' @family unload functions
 #'
+#' @examples
+#' \dontrun{
+#' unload_sound_alias(load_sound("sound.wav"))
+#' }
 #'
 #' @export
 unload_sound_alias <- function(alias) {
@@ -11014,6 +12634,10 @@ unload_sound_alias <- function(alias) {
 #' @family wave functions
 #' @family export functions
 #'
+#' @examples
+#' \dontrun{
+#' export_wave(load_wave("sound.wav"), "file.png")
+#' }
 #'
 #' @export
 export_wave <- function(wave, file_name) {
@@ -11040,6 +12664,10 @@ export_wave <- function(wave, file_name) {
 #' @family code functions
 #' @family export functions
 #'
+#' @examples
+#' \dontrun{
+#' export_wave_as_code(load_wave("sound.wav"), "file.png")
+#' }
 #'
 #' @export
 export_wave_as_code <- function(wave, file_name) {
@@ -11063,6 +12691,10 @@ export_wave_as_code <- function(wave, file_name) {
 #' @family sound functions
 #' @family play functions
 #'
+#' @examples
+#' \dontrun{
+#' play_sound(load_sound("sound.wav"))
+#' }
 #'
 #' @export
 play_sound <- function(sound) {
@@ -11085,6 +12717,10 @@ play_sound <- function(sound) {
 #' @family sound functions
 #' @family stop functions
 #'
+#' @examples
+#' \dontrun{
+#' stop_sound(load_sound("sound.wav"))
+#' }
 #'
 #' @export
 stop_sound <- function(sound) {
@@ -11107,6 +12743,10 @@ stop_sound <- function(sound) {
 #' @family sound functions
 #' @family pause functions
 #'
+#' @examples
+#' \dontrun{
+#' pause_sound(load_sound("sound.wav"))
+#' }
 #'
 #' @export
 pause_sound <- function(sound) {
@@ -11129,6 +12769,10 @@ pause_sound <- function(sound) {
 #' @family sound functions
 #' @family resume functions
 #'
+#' @examples
+#' \dontrun{
+#' resume_sound(load_sound("sound.wav"))
+#' }
 #'
 #' @export
 resume_sound <- function(sound) {
@@ -11153,6 +12797,10 @@ resume_sound <- function(sound) {
 #' @family playing functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_sound_playing(load_sound("sound.wav"))
+#' }
 #'
 #' @export
 is_sound_playing <- function(sound) {
@@ -11176,6 +12824,10 @@ is_sound_playing <- function(sound) {
 #' @family volume functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_sound_volume(load_sound("sound.wav"), 0.5)
+#' }
 #'
 #' @export
 set_sound_volume <- function(sound, volume) {
@@ -11200,6 +12852,10 @@ set_sound_volume <- function(sound, volume) {
 #' @family pitch functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_sound_pitch(load_sound("sound.wav"), 1.0)
+#' }
 #'
 #' @export
 set_sound_pitch <- function(sound, pitch) {
@@ -11224,6 +12880,10 @@ set_sound_pitch <- function(sound, pitch) {
 #' @family pan functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_sound_pan(load_sound("sound.wav"), 0.5)
+#' }
 #'
 #' @export
 set_sound_pan <- function(sound, pan) {
@@ -11248,6 +12908,10 @@ set_sound_pan <- function(sound, pan) {
 #'
 #' @family copy functions
 #'
+#' @examples
+#' \dontrun{
+#' wave_copy(load_wave("sound.wav"))
+#' }
 #'
 #' @export
 wave_copy <- function(wave) {
@@ -11272,6 +12936,10 @@ wave_copy <- function(wave) {
 #' @family stream functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_music_stream("file.png")
+#' }
 #'
 #' @export
 load_music_stream <- function(file_name) {
@@ -11296,6 +12964,10 @@ load_music_stream <- function(file_name) {
 #' @family valid functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_music_valid(load_music_stream("music.mp3"))
+#' }
 #'
 #' @export
 is_music_valid <- function(music) {
@@ -11318,6 +12990,10 @@ is_music_valid <- function(music) {
 #' @family stream functions
 #' @family unload functions
 #'
+#' @examples
+#' \dontrun{
+#' unload_music_stream(load_music_stream("music.mp3"))
+#' }
 #'
 #' @export
 unload_music_stream <- function(music) {
@@ -11340,6 +13016,10 @@ unload_music_stream <- function(music) {
 #' @family stream functions
 #' @family play functions
 #'
+#' @examples
+#' \dontrun{
+#' play_music_stream(load_music_stream("music.mp3"))
+#' }
 #'
 #' @export
 play_music_stream <- function(music) {
@@ -11364,6 +13044,10 @@ play_music_stream <- function(music) {
 #' @family playing functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_music_stream_playing(load_music_stream("music.mp3"))
+#' }
 #'
 #' @export
 is_music_stream_playing <- function(music) {
@@ -11386,6 +13070,10 @@ is_music_stream_playing <- function(music) {
 #' @family stream functions
 #' @family update functions
 #'
+#' @examples
+#' \dontrun{
+#' update_music_stream(load_music_stream("music.mp3"))
+#' }
 #'
 #' @export
 update_music_stream <- function(music) {
@@ -11408,6 +13096,10 @@ update_music_stream <- function(music) {
 #' @family stream functions
 #' @family stop functions
 #'
+#' @examples
+#' \dontrun{
+#' stop_music_stream(load_music_stream("music.mp3"))
+#' }
 #'
 #' @export
 stop_music_stream <- function(music) {
@@ -11430,6 +13122,10 @@ stop_music_stream <- function(music) {
 #' @family stream functions
 #' @family pause functions
 #'
+#' @examples
+#' \dontrun{
+#' pause_music_stream(load_music_stream("music.mp3"))
+#' }
 #'
 #' @export
 pause_music_stream <- function(music) {
@@ -11452,6 +13148,10 @@ pause_music_stream <- function(music) {
 #' @family stream functions
 #' @family resume functions
 #'
+#' @examples
+#' \dontrun{
+#' resume_music_stream(load_music_stream("music.mp3"))
+#' }
 #'
 #' @export
 resume_music_stream <- function(music) {
@@ -11474,6 +13174,10 @@ resume_music_stream <- function(music) {
 #'
 #' @family stream functions
 #'
+#' @examples
+#' \dontrun{
+#' seek_music_stream(load_music_stream("music.mp3"), 0.0)
+#' }
 #'
 #' @export
 seek_music_stream <- function(music, position) {
@@ -11498,6 +13202,10 @@ seek_music_stream <- function(music, position) {
 #' @family volume functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_music_volume(load_music_stream("music.mp3"), 0.5)
+#' }
 #'
 #' @export
 set_music_volume <- function(music, volume) {
@@ -11522,6 +13230,10 @@ set_music_volume <- function(music, volume) {
 #' @family pitch functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_music_pitch(load_music_stream("music.mp3"), 1.0)
+#' }
 #'
 #' @export
 set_music_pitch <- function(music, pitch) {
@@ -11546,6 +13258,10 @@ set_music_pitch <- function(music, pitch) {
 #' @family pan functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_music_pan(load_music_stream("music.mp3"), 0.5)
+#' }
 #'
 #' @export
 set_music_pan <- function(music, pan) {
@@ -11571,6 +13287,10 @@ set_music_pan <- function(music, pan) {
 #' @family length functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_music_time_length(load_music_stream("music.mp3"))
+#' }
 #'
 #' @export
 get_music_time_length <- function(music) {
@@ -11595,6 +13315,10 @@ get_music_time_length <- function(music) {
 #' @family played functions
 #' @family get functions
 #'
+#' @examples
+#' \dontrun{
+#' get_music_time_played(load_music_stream("music.mp3"))
+#' }
 #'
 #' @export
 get_music_time_played <- function(music) {
@@ -11621,6 +13345,10 @@ get_music_time_played <- function(music) {
 #' @family stream functions
 #' @family load functions
 #'
+#' @examples
+#' \dontrun{
+#' load_audio_stream(0L, 32L, 0L)
+#' }
 #'
 #' @export
 load_audio_stream <- function(sample_rate, sample_size, channels) {
@@ -11647,6 +13375,10 @@ load_audio_stream <- function(sample_rate, sample_size, channels) {
 #' @family valid functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_audio_stream_valid(load_audio_stream(44100L, 16L, 1L))
+#' }
 #'
 #' @export
 is_audio_stream_valid <- function(stream) {
@@ -11669,6 +13401,10 @@ is_audio_stream_valid <- function(stream) {
 #' @family stream functions
 #' @family unload functions
 #'
+#' @examples
+#' \dontrun{
+#' unload_audio_stream(load_audio_stream(44100L, 16L, 1L))
+#' }
 #'
 #' @export
 unload_audio_stream <- function(stream) {
@@ -11693,6 +13429,10 @@ unload_audio_stream <- function(stream) {
 #' @family processed functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_audio_stream_processed(load_audio_stream(44100L, 16L, 1L))
+#' }
 #'
 #' @export
 is_audio_stream_processed <- function(stream) {
@@ -11715,6 +13455,10 @@ is_audio_stream_processed <- function(stream) {
 #' @family stream functions
 #' @family play functions
 #'
+#' @examples
+#' \dontrun{
+#' play_audio_stream(load_audio_stream(44100L, 16L, 1L))
+#' }
 #'
 #' @export
 play_audio_stream <- function(stream) {
@@ -11737,6 +13481,10 @@ play_audio_stream <- function(stream) {
 #' @family stream functions
 #' @family pause functions
 #'
+#' @examples
+#' \dontrun{
+#' pause_audio_stream(load_audio_stream(44100L, 16L, 1L))
+#' }
 #'
 #' @export
 pause_audio_stream <- function(stream) {
@@ -11759,6 +13507,10 @@ pause_audio_stream <- function(stream) {
 #' @family stream functions
 #' @family resume functions
 #'
+#' @examples
+#' \dontrun{
+#' resume_audio_stream(load_audio_stream(44100L, 16L, 1L))
+#' }
 #'
 #' @export
 resume_audio_stream <- function(stream) {
@@ -11783,6 +13535,10 @@ resume_audio_stream <- function(stream) {
 #' @family playing functions
 #' @family is functions
 #'
+#' @examples
+#' \dontrun{
+#' is_audio_stream_playing(load_audio_stream(44100L, 16L, 1L))
+#' }
 #'
 #' @export
 is_audio_stream_playing <- function(stream) {
@@ -11805,6 +13561,10 @@ is_audio_stream_playing <- function(stream) {
 #' @family stream functions
 #' @family stop functions
 #'
+#' @examples
+#' \dontrun{
+#' stop_audio_stream(load_audio_stream(44100L, 16L, 1L))
+#' }
 #'
 #' @export
 stop_audio_stream <- function(stream) {
@@ -11828,6 +13588,10 @@ stop_audio_stream <- function(stream) {
 #' @family volume functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_audio_stream_volume(load_audio_stream(44100L, 16L, 1L), 0.5)
+#' }
 #'
 #' @export
 set_audio_stream_volume <- function(stream, volume) {
@@ -11852,6 +13616,10 @@ set_audio_stream_volume <- function(stream, volume) {
 #' @family pitch functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_audio_stream_pitch(load_audio_stream(44100L, 16L, 1L), 1.0)
+#' }
 #'
 #' @export
 set_audio_stream_pitch <- function(stream, pitch) {
@@ -11876,6 +13644,10 @@ set_audio_stream_pitch <- function(stream, pitch) {
 #' @family pan functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_audio_stream_pan(load_audio_stream(44100L, 16L, 1L), 0.5)
+#' }
 #'
 #' @export
 set_audio_stream_pan <- function(stream, pan) {
@@ -11899,6 +13671,10 @@ set_audio_stream_pan <- function(stream, pan) {
 #' @family default functions
 #' @family set functions
 #'
+#' @examples
+#' \dontrun{
+#' set_audio_stream_buffer_size_default(32L)
+#' }
 #'
 #' @export
 set_audio_stream_buffer_size_default <- function(size) {

@@ -17,6 +17,12 @@ An integer
 \description{
 Button control, returns true when clicked.
 }
+\examples{
+\dontrun{
+gui_button(rectangle(10, 10, 200, 100), "Hello")
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_check_box}()},

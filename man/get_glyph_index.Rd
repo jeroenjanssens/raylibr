@@ -23,6 +23,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{int GetGlyphIndex(Font font, int codepoint);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+get_glyph_index(get_font_default(), 0L)
+}
+
+}
 \seealso{
 Other index functions: 
 \code{\link{file_text_find_index}()},

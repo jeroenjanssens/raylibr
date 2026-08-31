@@ -9,6 +9,12 @@ rl_enable_smooth_lines()
 \description{
 Rl Enable Smooth Lines
 }
+\examples{
+\dontrun{
+rl_enable_smooth_lines()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

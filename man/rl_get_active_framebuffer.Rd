@@ -12,6 +12,12 @@ An integer
 \description{
 Rl Get Active Framebuffer
 }
+\examples{
+\dontrun{
+rl_get_active_framebuffer()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

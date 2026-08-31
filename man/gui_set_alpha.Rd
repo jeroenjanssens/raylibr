@@ -12,6 +12,12 @@ gui_set_alpha(alpha)
 \description{
 Set gui controls alpha (global state), alpha goes from 0.0f to 1.0f.
 }
+\examples{
+\dontrun{
+gui_set_alpha(0.0)
+}
+
+}
 \seealso{
 Other gui functions: 
 \code{\link{gui_button}()},

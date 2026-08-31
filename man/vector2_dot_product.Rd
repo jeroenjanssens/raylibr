@@ -17,6 +17,12 @@ A number
 \description{
 Vector2 Dot Product
 }
+\examples{
+\dontrun{
+vector2_dot_product(c(100, 100), c(100, 100))
+}
+
+}
 \seealso{
 Other vector2 functions: 
 \code{\link{vector2_add}()},

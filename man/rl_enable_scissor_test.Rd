@@ -9,6 +9,12 @@ rl_enable_scissor_test()
 \description{
 Rl Enable Scissor Test
 }
+\examples{
+\dontrun{
+rl_enable_scissor_test()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

@@ -14,6 +14,12 @@ rl_gl_init(width, height)
 \description{
 Rl Gl Init
 }
+\examples{
+\dontrun{
+rl_gl_init(800L, 450L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

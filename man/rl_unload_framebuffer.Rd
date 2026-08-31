@@ -12,6 +12,12 @@ rl_unload_framebuffer(id)
 \description{
 Rl Unload Framebuffer
 }
+\examples{
+\dontrun{
+rl_unload_framebuffer(0L)
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},

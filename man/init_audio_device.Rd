@@ -15,6 +15,12 @@ This function has been auto-generated from the following Raylib function definit
 \if{html}{\out{<div class="sourceCode">}}\preformatted{void InitAudioDevice(void);
 }\if{html}{\out{</div>}}
 }
+\examples{
+\dontrun{
+init_audio_device()
+}
+
+}
 \seealso{
 Other device functions: 
 \code{\link{close_audio_device}()}

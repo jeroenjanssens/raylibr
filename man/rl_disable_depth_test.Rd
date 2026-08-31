@@ -9,6 +9,12 @@ rl_disable_depth_test()
 \description{
 Rl Disable Depth Test
 }
+\examples{
+\dontrun{
+rl_disable_depth_test()
+}
+
+}
 \seealso{
 Other rlgl functions: 
 \code{\link{rl_active_draw_buffers}()},
