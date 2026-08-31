@@ -9,14 +9,86 @@ figures:
   fig.width: 4
   fig.asp: 0.75
 
+navbar:
+  structure:
+    left: [intro, guide, demos, reference, news]
+  components:
+    guide:
+      text: Guide
+      menu:
+        - text: Getting Started
+          href: articles/guide-getting-started.html
+        - text: Drawing 2D Shapes
+          href: articles/guide-drawing-2d.html
+        - text: Drawing 3D
+          href: articles/guide-drawing-3d.html
+        - text: Colors
+          href: articles/guide-colors.html
+        - text: Text & Fonts
+          href: articles/guide-text.html
+        - text: Images & Textures
+          href: articles/guide-images.html
+        - text: Input
+          href: articles/guide-input.html
+        - text: Audio
+          href: articles/guide-audio.html
+        - text: Camera
+          href: articles/guide-camera.html
+        - text: Shaders
+          href: articles/guide-shaders.html
+        - text: raygui
+          href: articles/guide-raygui.html
+        - text: raymath
+          href: articles/guide-raymath.html
+        - text: webR
+          href: articles/guide-webr.html
+    demos:
+      text: Demos
+      menu:
+        - text: Hello, World!
+          href: articles/demo-helloworld.html
+        - text: Mouse Test
+          href: articles/demo-mouse.html
+        - text: Bouncing Balls
+          href: articles/demo-balls.html
+        - text: Snake
+          href: articles/demo-snake.html
+        - text: Stroop Test
+          href: articles/demo-stroop.html
+        - text: Waving Cubes
+          href: articles/demo-cubes.html
+        - text: Beatbox
+          href: articles/demo-beatbox.html
+        - text: Shader Stars
+          href: articles/demo-shader.html
+        - text: Julia Sets
+          href: articles/demo-julia.html
+        - text: GUI Controls
+          href: articles/demo-gui.html
+        - text: 3D Model
+          href: articles/demo-model.html
+        - text: Raycaster
+          href: articles/demo-raycaster.html
+
 articles:
-  - title: Guides
-    navbar: Guides
+  - title: Guide
+    navbar: ~
     contents:
-    - "articles/screenshot"
-    - "articles/wasm"
+    - "articles/guide-getting-started"
+    - "articles/guide-drawing-2d"
+    - "articles/guide-drawing-3d"
+    - "articles/guide-colors"
+    - "articles/guide-text"
+    - "articles/guide-images"
+    - "articles/guide-input"
+    - "articles/guide-audio"
+    - "articles/guide-camera"
+    - "articles/guide-shaders"
+    - "articles/guide-raygui"
+    - "articles/guide-raymath"
+    - "articles/guide-webr"
   - title: Demos
-    navbar: Demos
+    navbar: ~
     contents:
     - "articles/demo-helloworld"
     - "articles/demo-mouse"

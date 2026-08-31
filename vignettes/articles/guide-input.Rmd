@@ -1,0 +1,133 @@
+---
+title: "Input"
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+raylibr provides functions for keyboard, mouse, gamepad, and touch input. Input state is updated each frame, so these functions are meant to be called inside a game loop.
+
+## Keyboard
+
+Four functions check key state, each answering a different question:
+
+| Function | True when... |
+|----------|-------------|
+| `is_key_pressed(key)` | Key went down **this frame** (fires once) |
+| `is_key_down(key)` | Key is held down (fires every frame) |
+| `is_key_released(key)` | Key went up **this frame** (fires once) |
+| `is_key_up(key)` | Key is not held down (fires every frame) |
+
+Use the `key$` enum for key codes:
+
+```{r eval=FALSE}
+library(raylibr)
+
+run_game_loop(
+  init_fn = function() {
+    init_window(800L, 600L, "Keyboard Demo")
+    set_target_fps(60L)
+  },
+  update_fn = function() {
+    if (is_key_pressed(key$space)) message("Space pressed!")
+    if (is_key_down(key$w)) message("W held down")
+
+    begin_drawing()
+    clear_background("black")
+    draw_text("Press Space or hold W", 20L, 20L, 20L, "white")
+    end_drawing()
+  },
+  cleanup_fn = close_window
+)
+```
+
+For text input, use `get_key_pressed()` to consume queued key events or `get_char_pressed()` for Unicode characters:
+
+```{r eval=FALSE}
+char_code <- get_char_pressed()
+while (char_code > 0L) {
+  letter <- intToUtf8(char_code)
+  char_code <- get_char_pressed()
+}
+```
+
+By default, pressing Escape closes the window. Change or disable this with `set_exit_key()`:
+
+```{r eval=FALSE}
+set_exit_key(key$f12)  # close on F12 instead
+set_exit_key(0L)       # disable exit key entirely
+```
+
+Common key codes: `key$space`, `key$enter`, `key$escape`, `key$up`, `key$down`, `key$left`, `key$right`, `key$a` through `key$z`.
+
+## Mouse
+
+```{r eval=FALSE}
+pos <- get_mouse_position()  # Vector2: c(x, y)
+x <- get_mouse_x()
+y <- get_mouse_y()
+delta <- get_mouse_delta()   # movement since last frame
+
+if (is_mouse_button_pressed(mouse_button$left)) {
+  message("Clicked at ", pos[1], ", ", pos[2])
+}
+
+wheel <- get_mouse_wheel_move()  # scroll amount (float)
+```
+
+Position and set the mouse cursor:
+
+```{r eval=FALSE}
+set_mouse_position(400L, 300L)
+set_mouse_cursor(mouse_cursor$crosshair)
+```
+
+Available cursors: `mouse_cursor$default`, `mouse_cursor$arrow`, `mouse_cursor$ibeam`, `mouse_cursor$crosshair`, `mouse_cursor$pointing_hand`, `mouse_cursor$resize_ew`, `mouse_cursor$resize_ns`, `mouse_cursor$resize_all`, `mouse_cursor$not_allowed`.
+
+## Cursor visibility
+
+```{r eval=FALSE}
+hide_cursor()
+show_cursor()
+disable_cursor()  # hides cursor and locks it for FPS-style controls
+enable_cursor()
+is_cursor_hidden()
+is_cursor_on_screen()
+```
+
+## Gamepad
+
+Check for connected gamepads and read their state:
+
+```{r eval=FALSE}
+if (is_gamepad_available(0L)) {
+  name <- get_gamepad_name(0L)
+
+  if (is_gamepad_button_down(0L, 7L)) {
+    message("Right trigger pressed")
+  }
+
+  left_x <- get_gamepad_axis_movement(0L, 0L)
+  left_y <- get_gamepad_axis_movement(0L, 1L)
+}
+```
+
+The first argument is the gamepad index (0-based).
+
+## Touch and gestures
+
+For touch-enabled devices:
+
+```{r eval=FALSE}
+count <- get_touch_point_count()
+pos <- get_touch_position(0L)  # first touch point
+
+if (is_gesture_detected(4L)) {
+  drag <- get_gesture_drag_vector()
+}
+```
+
+## See also
+
+For complete interactive input examples, see the [Mouse Test](demo-mouse.html) and [Snake](demo-snake.html) demos.

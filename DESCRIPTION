@@ -16,8 +16,10 @@ Imports:
     utils
 Suggests:
     knitr,
+    rmarkdown,
     rlang,
     testthat (>= 3.0.0)
+VignetteBuilder: knitr
 Config/testthat/edition: 3
 URL: https://github.com/jeroenjanssens/raylibr, https://jeroenjanssens.github.io/raylibr/
 BugReports: https://github.com/jeroenjanssens/raylibr/issues

@@ -12,5 +12,8 @@ docs
 *.dll
 src/raylib_built
 
+# temp PNGs from knit_print.image
+vignettes/articles/file*.png
+
 # webR WASM build output (rebuilt by CI)
 pkgdown/assets/wasm/repo/
