@@ -9,5 +9,7 @@
 ^vignettes$
 ^data-raw$
 ^src/raylib_built$
+^CLAUDE\.md$
+^bin$
 ^README\.html$
 ^man/figures/.*\.gif$
