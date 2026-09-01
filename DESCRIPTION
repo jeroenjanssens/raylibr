@@ -11,7 +11,10 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 LinkingTo: 
     Rcpp
+SystemRequirements: OpenGL, X11 (on Linux)
 Imports:
+    grDevices,
+    grid,
     Rcpp,
     utils
 Suggests:

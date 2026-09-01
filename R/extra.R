@@ -247,6 +247,7 @@ raylibr_screenshot_3d <- function(draw, width = 400L, height = 300L) {
   load_image_from_screen()
 }
 
+#' @importFrom grDevices as.raster
 #' @export
 print.image <- function(x, ...) {
   grid::grid.newpage()

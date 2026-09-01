@@ -74,6 +74,7 @@ is_raylib_matrix <- function(x) {
   is.numeric(x) && is.matrix(x) && nrow(x) == 4 && ncol(x) == 4
 }
 
+#' @importFrom grDevices colors
 #' @export
 is_color <- function(x) {
   class(x) == "color" ||
