@@ -10,6 +10,16 @@
 
 This package wraps Raylib, a simple and easy-to-use library to enjoy videogames programming.
 }
+\section{Resource management}{
+
+Raylib resources such as textures, models, sounds, fonts, and shaders
+allocate GPU or audio memory that R's garbage collector cannot
+automatically release. Always call the corresponding \verb{unload_*()}
+function (e.g., \code{\link[=unload_texture]{unload_texture()}}, \code{\link[=unload_model]{unload_model()}}) before
+calling \code{\link[=close_window]{close_window()}}. Letting resource objects go out of scope
+without unloading them will leak GPU/audio memory.
+}
+
 \seealso{
 Useful links:
 \itemize{

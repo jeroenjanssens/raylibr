@@ -1,0 +1,27 @@
+This package includes the following third-party software:
+
+raylib 6.0
+  License: zlib/libpng
+  Copyright (c) 2013-2024 Ramon Santamaria (@raysan5)
+  Source: https://github.com/raysan5/raylib
+  Included as: inst/raylib-6.0-minimal.tar.gz (compiled during install)
+
+raygui 4.0
+  License: zlib/libpng
+  Copyright (c) 2014-2024 Ramon Santamaria (@raysan5)
+  Source: https://github.com/raysan5/raygui
+  Included as: inst/raygui.h
+  Note: RAYGUI_LOG macro patched with #ifndef guard to suppress printf
+        output (see src/raygui_impl.cpp)
+
+Demo resources (inst/demo_resources/):
+  church.obj, church_diffuse.png
+    Raylib example assets, zlib/libpng license
+  ShareTechMono-Regular.ttf
+    SIL Open Font License 1.1
+  source-sans-pro-v14-latin-regular.ttf
+    SIL Open Font License 1.1
+  Fragment shaders (.fs files)
+    Raylib example shaders, zlib/libpng license
+  Beatbox audio samples (.wav files)
+    Created for raylibr demos, MIT license
