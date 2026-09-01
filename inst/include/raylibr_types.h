@@ -10,7 +10,6 @@ typedef Matrix RaylibMatrix;
 #ifndef __RAYLIB_TYPES__
 #define __RAYLIB_TYPES__
 
-using namespace Rcpp;
 
 namespace Rcpp {
 

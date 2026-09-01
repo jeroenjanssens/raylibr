@@ -1415,7 +1415,7 @@ types_header <- c(
   "#ifndef __RAYLIB_TYPES__",
   "#define __RAYLIB_TYPES__",
   "",
-  "using namespace Rcpp;",
+
   "",
   "namespace Rcpp {",
   "",
