@@ -469,6 +469,20 @@ module_map <- list(
 )
 
 
+format_roxygen_call <- function(func_name, args, prefix = "", suffix = "") {
+  single <- paste0(prefix, func_name, "(", paste(args, collapse = ", "), ")", suffix)
+  if (nchar(paste0("#' ", single)) <= 100) {
+    return(paste0("#' ", single))
+  }
+  indent <- paste0(strrep(" ", nchar(prefix) + 2))
+  out <- paste0("#' ", prefix, func_name, "(")
+  for (i in seq_along(args)) {
+    sep <- if (i < length(args)) "," else ""
+    out <- c(out, paste0("#'   ", indent, args[i], sep))
+  }
+  c(out, paste0("#' ", indent, ")", suffix))
+}
+
 # --- Helper functions --------------------------------------------------------
 
 pascal_to_snake <- function(x) {
@@ -853,7 +867,7 @@ generate_function_r <- function(func_row) {
       example_args <- sapply(seq_len(nrow(params)), function(i) {
         get_example_value(params$type[i], field_to_snake(params$name[i]))
       })
-      lines <- c(lines, paste0("#' ", snake, "(", paste(example_args, collapse = ", "), ")"))
+      lines <- c(lines, format_roxygen_call(snake, example_args))
     }
   } else if (draw_cat == "2d") {
     lines <- c(lines, "#' @examplesIf raylibr:::has_display()")
@@ -863,8 +877,7 @@ generate_function_r <- function(func_row) {
       example_args <- sapply(seq_len(nrow(params)), function(i) {
         get_screenshot_example_value(params$type[i], field_to_snake(params$name[i]))
       })
-      call_str <- paste0(snake, "(", paste(example_args, collapse = ", "), ")")
-      lines <- c(lines, paste0("#' raylibr_screenshot(function() ", call_str, ")"))
+      lines <- c(lines, format_roxygen_call(snake, example_args, prefix = "raylibr_screenshot(function() ", suffix = ")"))
     }
   } else if (draw_cat == "3d") {
     lines <- c(lines, "#' @examplesIf raylibr:::has_display()")
@@ -874,8 +887,7 @@ generate_function_r <- function(func_row) {
       example_args <- sapply(seq_len(nrow(params)), function(i) {
         get_screenshot_example_value_3d(params$type[i], field_to_snake(params$name[i]))
       })
-      call_str <- paste0(snake, "(", paste(example_args, collapse = ", "), ")")
-      lines <- c(lines, paste0("#' raylibr_screenshot_3d(function() ", call_str, ")"))
+      lines <- c(lines, format_roxygen_call(snake, example_args, prefix = "raylibr_screenshot_3d(function() ", suffix = ")"))
     }
   } else {
     lines <- c(lines, "#' @examplesIf FALSE")
@@ -885,7 +897,7 @@ generate_function_r <- function(func_row) {
       example_args <- sapply(seq_len(nrow(params)), function(i) {
         get_example_value(params$type[i], field_to_snake(params$name[i]))
       })
-      lines <- c(lines, paste0("#' ", snake, "(", paste(example_args, collapse = ", "), ")"))
+      lines <- c(lines, format_roxygen_call(snake, example_args))
     }
   }
   lines <- c(lines, "#'")
@@ -1199,7 +1211,7 @@ generate_struct_r <- function(struct_row) {
 generate_enums_r <- function(enums) {
   enum_map <- list(
     "ConfigFlags"     = "flag",
-    "TraceLogLevel"   = "log",
+    "TraceLogLevel"   = "log_level",
     "KeyboardKey"     = "key",
     "MouseButton"     = "mouse_button",
     "MouseCursor"     = "mouse_cursor",

@@ -48,14 +48,14 @@ test_that("flags have correct values", {
 })
 
 test_that("log levels are correct", {
-  expect_equal(log$all, 0)
-  expect_equal(log$trace, 1)
-  expect_equal(log$debug, 2)
-  expect_equal(log$info, 3)
-  expect_equal(log$warning, 4)
-  expect_equal(log$error, 5)
-  expect_equal(log$fatal, 6)
-  expect_equal(log$none, 7)
+  expect_equal(log_level$all, 0)
+  expect_equal(log_level$trace, 1)
+  expect_equal(log_level$debug, 2)
+  expect_equal(log_level$info, 3)
+  expect_equal(log_level$warning, 4)
+  expect_equal(log_level$error, 5)
+  expect_equal(log_level$fatal, 6)
+  expect_equal(log_level$none, 7)
 })
 
 test_that("shader uniform types are correct", {
@@ -86,7 +86,7 @@ test_that("all enum lists are named lists", {
   expect_type(camera_mode, "list")
   expect_type(camera_projection, "list")
   expect_type(flag, "list")
-  expect_type(log, "list")
+  expect_type(log_level, "list")
   expect_type(shader_uniform, "list")
   expect_type(material_map_index, "list")
   expect_type(mouse_cursor, "list")

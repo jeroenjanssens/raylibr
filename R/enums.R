@@ -46,9 +46,9 @@ flag <- list(
   interlaced_hint = 65536
 )
 
-#' log
+#' log Level
 #'
-#' Enum values for `log`.
+#' Enum values for `log_level`.
 #'
 #' | Name | Value |
 #' | --- | ---: |
@@ -62,12 +62,12 @@ flag <- list(
 #' | `none` | 7 |
 #'
 #' @examples
-#' log$all
-#' log$info
-#' log$none
+#' log_level$all
+#' log_level$info
+#' log_level$none
 #'
 #' @export
-log <- list(
+log_level <- list(
   all = 0,
   trace = 1,
   debug = 2,

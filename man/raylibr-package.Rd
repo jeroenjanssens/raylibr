@@ -8,7 +8,7 @@
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-This package wraps Raylib, a simple and easy-to-use library to enjoy videogames programming.
+Wraps 'Raylib' (\url{https://www.raylib.com/}), a simple and easy-to-use C library for videogames programming. Provides R functions for 2D/3D rendering, audio, input handling, and GUI via 'raygui'.
 }
 \section{Resource management}{
 

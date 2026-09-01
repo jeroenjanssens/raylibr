@@ -5135,7 +5135,14 @@ draw_circle_sector <- function(center, radius, start_angle, end_angle, segments,
 #' @family draw functions
 #'
 #' @examplesIf raylibr:::has_display()
-#' raylibr_screenshot(function() draw_circle_sector_lines(c(200, 150), 80.0, 0.0, 270.0, 36L, "red"))
+#' raylibr_screenshot(function() draw_circle_sector_lines(
+#'                                   c(200, 150),
+#'                                   80.0,
+#'                                   0.0,
+#'                                   270.0,
+#'                                   36L,
+#'                                   "red"
+#'                                 ))
 #'
 #' @export
 draw_circle_sector_lines <- function(center, radius, start_angle, end_angle, segments, color) {
@@ -5631,7 +5638,12 @@ draw_rectangle_rec <- function(rec, color) {
 #' @family draw functions
 #'
 #' @examplesIf raylibr:::has_display()
-#' raylibr_screenshot(function() draw_rectangle_pro(rectangle(100, 75, 200, 150), c(0, 0), 0.0, "red"))
+#' raylibr_screenshot(function() draw_rectangle_pro(
+#'                                   rectangle(100, 75, 200, 150),
+#'                                   c(0, 0),
+#'                                   0.0,
+#'                                   "red"
+#'                                 ))
 #'
 #' @export
 draw_rectangle_pro <- function(rec, origin, rotation, color) {
@@ -5764,7 +5776,13 @@ draw_rectangle_gradient_h <- function(pos_x, pos_y, width, height, left, right) 
 #' @family draw functions
 #'
 #' @examplesIf raylibr:::has_display()
-#' raylibr_screenshot(function() draw_rectangle_gradient_ex(rectangle(100, 75, 200, 150), "red", "red", "red", "red"))
+#' raylibr_screenshot(function() draw_rectangle_gradient_ex(
+#'                                   rectangle(100, 75, 200, 150),
+#'                                   "red",
+#'                                   "red",
+#'                                   "red",
+#'                                   "red"
+#'                                 ))
 #'
 #' @export
 draw_rectangle_gradient_ex <- function(rec, top_left, bottom_left, bottom_right, top_right) {
@@ -5886,7 +5904,12 @@ draw_rectangle_lines_ex <- function(rec, line_thick, color) {
 #' @family draw functions
 #'
 #' @examplesIf raylibr:::has_display()
-#' raylibr_screenshot(function() draw_rectangle_rounded(rectangle(100, 75, 200, 150), 0.3, 36L, "red"))
+#' raylibr_screenshot(function() draw_rectangle_rounded(
+#'                                   rectangle(100, 75, 200, 150),
+#'                                   0.3,
+#'                                   36L,
+#'                                   "red"
+#'                                 ))
 #'
 #' @export
 draw_rectangle_rounded <- function(rec, roundness, segments, color) {
@@ -5926,7 +5949,12 @@ draw_rectangle_rounded <- function(rec, roundness, segments, color) {
 #' @family draw functions
 #'
 #' @examplesIf raylibr:::has_display()
-#' raylibr_screenshot(function() draw_rectangle_rounded_lines(rectangle(100, 75, 200, 150), 0.3, 36L, "red"))
+#' raylibr_screenshot(function() draw_rectangle_rounded_lines(
+#'                                   rectangle(100, 75, 200, 150),
+#'                                   0.3,
+#'                                   36L,
+#'                                   "red"
+#'                                 ))
 #'
 #' @export
 draw_rectangle_rounded_lines <- function(rec, roundness, segments, color) {
@@ -5967,7 +5995,13 @@ draw_rectangle_rounded_lines <- function(rec, roundness, segments, color) {
 #' @family draw functions
 #'
 #' @examplesIf raylibr:::has_display()
-#' raylibr_screenshot(function() draw_rectangle_rounded_lines_ex(rectangle(100, 75, 200, 150), 0.3, 36L, 3.0, "red"))
+#' raylibr_screenshot(function() draw_rectangle_rounded_lines_ex(
+#'                                   rectangle(100, 75, 200, 150),
+#'                                   0.3,
+#'                                   36L,
+#'                                   3.0,
+#'                                   "red"
+#'                                 ))
 #'
 #' @export
 draw_rectangle_rounded_lines_ex <- function(rec, roundness, segments, line_thick, color) {
@@ -6261,7 +6295,14 @@ draw_spline_segment_linear <- function(p1, p2, thick, color) {
 #' @family draw functions
 #'
 #' @examplesIf raylibr:::has_display()
-#' raylibr_screenshot(function() draw_spline_segment_basis(c(200, 50), c(100, 250), c(300, 250), c(350, 100), 3.0, "red"))
+#' raylibr_screenshot(function() draw_spline_segment_basis(
+#'                                   c(200, 50),
+#'                                   c(100, 250),
+#'                                   c(300, 250),
+#'                                   c(350, 100),
+#'                                   3.0,
+#'                                   "red"
+#'                                 ))
 #'
 #' @export
 draw_spline_segment_basis <- function(p1, p2, p3, p4, thick, color) {
@@ -6307,7 +6348,14 @@ draw_spline_segment_basis <- function(p1, p2, p3, p4, thick, color) {
 #' @family draw functions
 #'
 #' @examplesIf raylibr:::has_display()
-#' raylibr_screenshot(function() draw_spline_segment_catmull_rom(c(200, 50), c(100, 250), c(300, 250), c(350, 100), 3.0, "red"))
+#' raylibr_screenshot(function() draw_spline_segment_catmull_rom(
+#'                                   c(200, 50),
+#'                                   c(100, 250),
+#'                                   c(300, 250),
+#'                                   c(350, 100),
+#'                                   3.0,
+#'                                   "red"
+#'                                 ))
 #'
 #' @export
 draw_spline_segment_catmull_rom <- function(p1, p2, p3, p4, thick, color) {
@@ -6352,7 +6400,13 @@ draw_spline_segment_catmull_rom <- function(p1, p2, p3, p4, thick, color) {
 #' @family draw functions
 #'
 #' @examplesIf raylibr:::has_display()
-#' raylibr_screenshot(function() draw_spline_segment_bezier_quadratic(c(200, 50), c(200, 150), c(300, 250), 3.0, "red"))
+#' raylibr_screenshot(function() draw_spline_segment_bezier_quadratic(
+#'                                   c(200, 50),
+#'                                   c(200, 150),
+#'                                   c(300, 250),
+#'                                   3.0,
+#'                                   "red"
+#'                                 ))
 #'
 #' @export
 draw_spline_segment_bezier_quadratic <- function(p1, c2, p3, thick, color) {
@@ -6396,7 +6450,14 @@ draw_spline_segment_bezier_quadratic <- function(p1, c2, p3, thick, color) {
 #' @family draw functions
 #'
 #' @examplesIf raylibr:::has_display()
-#' raylibr_screenshot(function() draw_spline_segment_bezier_cubic(c(200, 50), c(200, 150), c(200, 150), c(350, 100), 3.0, "red"))
+#' raylibr_screenshot(function() draw_spline_segment_bezier_cubic(
+#'                                   c(200, 50),
+#'                                   c(200, 150),
+#'                                   c(200, 150),
+#'                                   c(350, 100),
+#'                                   3.0,
+#'                                   "red"
+#'                                 ))
 #'
 #' @export
 draw_spline_segment_bezier_cubic <- function(p1, c2, c3, p4, thick, color) {
@@ -8007,7 +8068,14 @@ draw_texture_rec <- function(texture, source, position, tint) {
 #' @family draw functions
 #'
 #' @examplesIf FALSE
-#' draw_texture_pro(load_texture("file.png"), rectangle(10, 10, 200, 100), rectangle(10, 10, 200, 100), c(100, 100), 0.0, "red")
+#' draw_texture_pro(
+#'     load_texture("file.png"),
+#'     rectangle(10, 10, 200, 100),
+#'     rectangle(10, 10, 200, 100),
+#'     c(100, 100),
+#'     0.0,
+#'     "red"
+#'   )
 #'
 #' @export
 draw_texture_pro <- function(texture, source, dest, origin, rotation, tint) {
@@ -8053,7 +8121,14 @@ draw_texture_pro <- function(texture, source, dest, origin, rotation, tint) {
 #' @family draw functions
 #'
 #' @examplesIf FALSE
-#' draw_texture_n_patch(load_texture("file.png"), n_patch_info(rectangle(0, 0, 64, 64), 16L, 16L, 16L, 16L, 0L), rectangle(10, 10, 200, 100), c(100, 100), 0.0, "red")
+#' draw_texture_n_patch(
+#'     load_texture("file.png"),
+#'     n_patch_info(rectangle(0, 0, 64, 64), 16L, 16L, 16L, 16L, 0L),
+#'     rectangle(10, 10, 200, 100),
+#'     c(100, 100),
+#'     0.0,
+#'     "red"
+#'   )
 #'
 #' @export
 draw_texture_n_patch <- function(texture, n_patch_info, dest, origin, rotation, tint) {
@@ -10189,7 +10264,14 @@ draw_cylinder_wires <- function(position, radius_top, radius_bottom, height, sli
 #' @family draw functions
 #'
 #' @examplesIf raylibr:::has_display()
-#' raylibr_screenshot_3d(function() draw_cylinder_wires_ex(c(-1, 0, 0), c(1, 0, 0), 1.0, 1.0, 16L, "red"))
+#' raylibr_screenshot_3d(function() draw_cylinder_wires_ex(
+#'                                      c(-1, 0, 0),
+#'                                      c(1, 0, 0),
+#'                                      1.0,
+#'                                      1.0,
+#'                                      16L,
+#'                                      "red"
+#'                                    ))
 #'
 #' @export
 draw_cylinder_wires_ex <- function(start_pos, end_pos, start_radius, end_radius, sides, color) {
@@ -10280,7 +10362,14 @@ draw_capsule <- function(start_pos, end_pos, radius, slices, rings, color) {
 #' @family draw functions
 #'
 #' @examplesIf raylibr:::has_display()
-#' raylibr_screenshot_3d(function() draw_capsule_wires(c(-1, 0, 0), c(1, 0, 0), 1.0, 16L, 16L, "red"))
+#' raylibr_screenshot_3d(function() draw_capsule_wires(
+#'                                      c(-1, 0, 0),
+#'                                      c(1, 0, 0),
+#'                                      1.0,
+#'                                      16L,
+#'                                      16L,
+#'                                      "red"
+#'                                    ))
 #'
 #' @export
 draw_capsule_wires <- function(start_pos, end_pos, radius, slices, rings, color) {
@@ -10806,7 +10895,14 @@ draw_billboard <- function(camera, texture, position, scale, tint) {
 #' @family draw functions
 #'
 #' @examplesIf FALSE
-#' draw_billboard_rec(camera_3d(c(0, 10, 10)), load_texture("file.png"), rectangle(10, 10, 200, 100), c(0, 5, 0), c(100, 100), "red")
+#' draw_billboard_rec(
+#'     camera_3d(c(0, 10, 10)),
+#'     load_texture("file.png"),
+#'     rectangle(10, 10, 200, 100),
+#'     c(0, 5, 0),
+#'     c(100, 100),
+#'     "red"
+#'   )
 #'
 #' @export
 draw_billboard_rec <- function(camera, texture, source, position, size, tint) {
@@ -10855,7 +10951,17 @@ draw_billboard_rec <- function(camera, texture, source, position, size, tint) {
 #' @family draw functions
 #'
 #' @examplesIf FALSE
-#' draw_billboard_pro(camera_3d(c(0, 10, 10)), load_texture("file.png"), rectangle(10, 10, 200, 100), c(0, 5, 0), c(0, 1, 0), c(100, 100), c(100, 100), 0.0, "red")
+#' draw_billboard_pro(
+#'     camera_3d(c(0, 10, 10)),
+#'     load_texture("file.png"),
+#'     rectangle(10, 10, 200, 100),
+#'     c(0, 5, 0),
+#'     c(0, 1, 0),
+#'     c(100, 100),
+#'     c(100, 100),
+#'     0.0,
+#'     "red"
+#'   )
 #'
 #' @export
 draw_billboard_pro <- function(camera, texture, source, position, up, size, origin, rotation, tint) {
@@ -11581,7 +11687,10 @@ check_collision_spheres <- function(center1, radius1, center2, radius2) {
 #' @family check functions
 #'
 #' @examples
-#' check_collision_boxes(bounding_box(c(-1, -1, -1), c(1, 1, 1)), bounding_box(c(-1, -1, -1), c(1, 1, 1)))
+#' check_collision_boxes(
+#'     bounding_box(c(-1, -1, -1), c(1, 1, 1)),
+#'     bounding_box(c(-1, -1, -1), c(1, 1, 1))
+#'   )
 #'
 #' @export
 check_collision_boxes <- function(box1, box2) {
@@ -11768,7 +11877,13 @@ get_ray_collision_triangle <- function(ray, p1, p2, p3) {
 #' @family get functions
 #'
 #' @examples
-#' get_ray_collision_quad(ray(c(0, 0, 0), c(0, 0, 1)), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0))
+#' get_ray_collision_quad(
+#'     ray(c(0, 0, 0), c(0, 0, 1)),
+#'     c(0, 0, 0),
+#'     c(0, 0, 0),
+#'     c(0, 0, 0),
+#'     c(0, 0, 0)
+#'   )
 #'
 #' @export
 get_ray_collision_quad <- function(ray, p1, p2, p3, p4) {
