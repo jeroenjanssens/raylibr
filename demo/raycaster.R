@@ -1,5 +1,5 @@
 library(raylibr)
-set_trace_log_level(log$none)
+set_trace_log_level(log_level$none)
 
 # custom functions -------------------------------------------------------------
 
