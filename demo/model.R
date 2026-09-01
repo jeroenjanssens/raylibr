@@ -10,7 +10,7 @@ screen_height <- 450
 
 init_window(screen_width, screen_height, "R & Raylib: 3D Model and Post-Processing Shaders")
 
-church_model <- load_model(file.path(system.file(package = "raylibr"), "demo_resources", "model", "church.obj"))
+church_model <- load_model(file.path(system.file(package = "raylibr"), "demo_resources", "model", "church.obj3d"))
 church_texture <- load_texture(file.path(system.file(package = "raylibr"), "demo_resources", "model", "church_diffuse.png"))
 set_model_texture(church_model, 0, material_map_index$albedo, church_texture)
 church_position <- c(0, 0, 0)
