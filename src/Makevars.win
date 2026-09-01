@@ -1,6 +1,5 @@
 .PHONY: all cleanray
 
-CXX_STD = CXX11
 RAYLIB_SRC = raylib-6.0-minimal
 
 PKG_LIBS = -L../inst/$(RAYLIB_SRC)/src -lraylib -lopengl32 -lgdi32 -lwinmm
