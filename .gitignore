@@ -11,6 +11,7 @@ docs
 *.so
 *.dll
 src/raylib_built
+src/Makevars
 
 # temp PNGs from knit_print.image
 vignettes/articles/file*.png
