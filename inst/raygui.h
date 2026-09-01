@@ -390,9 +390,13 @@
 // NOTE: Avoiding those calls, also avoids const strings memory usage
 #define RAYGUI_SUPPORT_LOG_INFO
 #if defined(RAYGUI_SUPPORT_LOG_INFO)
+    #ifndef RAYGUI_LOG
     #define RAYGUI_LOG(...)     printf(__VA_ARGS__)
+    #endif
 #else
+    #ifndef RAYGUI_LOG
     #define RAYGUI_LOG(...)
+    #endif
 #endif
 
 #if !defined(RAYGUI_STANDALONE)
