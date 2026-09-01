@@ -26,7 +26,12 @@ This function has been auto-generated from the following Raylib function definit
 }
 \examples{
 \dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
-raylibr_screenshot(function() draw_rectangle_pro(rectangle(100, 75, 200, 150), c(0, 0), 0.0, "red"))
+raylibr_screenshot(function() draw_rectangle_pro(
+                                  rectangle(100, 75, 200, 150),
+                                  c(0, 0),
+                                  0.0,
+                                  "red"
+                                ))
 \dontshow{\}) # examplesIf}
 }
 \seealso{

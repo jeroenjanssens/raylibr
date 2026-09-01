@@ -30,7 +30,13 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-get_ray_collision_quad(ray(c(0, 0, 0), c(0, 0, 1)), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0))
+get_ray_collision_quad(
+    ray(c(0, 0, 0), c(0, 0, 1)),
+    c(0, 0, 0),
+    c(0, 0, 0),
+    c(0, 0, 0),
+    c(0, 0, 0)
+  )
 
 }
 \seealso{

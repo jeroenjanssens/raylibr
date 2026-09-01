@@ -30,7 +30,14 @@ This function has been auto-generated from the following Raylib function definit
 }
 \examples{
 \dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
-raylibr_screenshot_3d(function() draw_capsule_wires(c(-1, 0, 0), c(1, 0, 0), 1.0, 16L, 16L, "red"))
+raylibr_screenshot_3d(function() draw_capsule_wires(
+                                     c(-1, 0, 0),
+                                     c(1, 0, 0),
+                                     1.0,
+                                     16L,
+                                     16L,
+                                     "red"
+                                   ))
 \dontshow{\}) # examplesIf}
 }
 \seealso{

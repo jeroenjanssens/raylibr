@@ -26,7 +26,12 @@ This function has been auto-generated from the following Raylib function definit
 }
 \examples{
 \dontshow{if (raylibr:::has_display()) withAutoprint(\{ # examplesIf}
-raylibr_screenshot(function() draw_rectangle_rounded(rectangle(100, 75, 200, 150), 0.3, 36L, "red"))
+raylibr_screenshot(function() draw_rectangle_rounded(
+                                  rectangle(100, 75, 200, 150),
+                                  0.3,
+                                  36L,
+                                  "red"
+                                ))
 \dontshow{\}) # examplesIf}
 }
 \seealso{

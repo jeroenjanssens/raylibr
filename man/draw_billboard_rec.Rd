@@ -30,7 +30,14 @@ This function has been auto-generated from the following Raylib function definit
 }
 \examples{
 \dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
-draw_billboard_rec(camera_3d(c(0, 10, 10)), load_texture("file.png"), rectangle(10, 10, 200, 100), c(0, 5, 0), c(100, 100), "red")
+draw_billboard_rec(
+    camera_3d(c(0, 10, 10)),
+    load_texture("file.png"),
+    rectangle(10, 10, 200, 100),
+    c(0, 5, 0),
+    c(100, 100),
+    "red"
+  )
 \dontshow{\}) # examplesIf}
 }
 \seealso{
