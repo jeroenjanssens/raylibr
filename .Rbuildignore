@@ -13,3 +13,4 @@
 ^bin$
 ^README\.html$
 ^man/figures/.*\.gif$
+^inst/wasm$

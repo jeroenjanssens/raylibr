@@ -14,14 +14,17 @@ import re
 import sys
 
 SQ = "'"
+_patch_failures = 0
 
 
 def replace_function_body(source, func_sig, new_body):
     """Replace the body of a C function identified by its signature."""
+    global _patch_failures
     pat = re.compile(re.escape(func_sig) + r'\s*\{.*?\n\}', re.DOTALL)
     repl = func_sig + '\n{\n' + new_body + '\n}'
     result, n = pat.subn(repl, source, count=1)
     if n == 0:
+        _patch_failures += 1
         print(f"WARNING: Could not find function: {func_sig}", file=sys.stderr)
     return result
 
@@ -72,17 +75,21 @@ def patch_rcore():
 
 
 def patch_platform():
+    global _patch_failures
     with open("platforms/rcore_web_emscripten.c") as f:
         p = f.read()
 
     # Add a worker-detection flag at the top of the file (after includes)
     worker_flag = (
         '\n// Worker mode detection for webR integration\n'
+        '// NOTE: emscripten_run_script_int is not reliably imported in SIDE_MODULE builds,\n'
+        '// so we use emscripten_run_script_string and parse the result.\n'
         'static int _raylibr_worker = -1;\n'
         'static int IsWorkerMode(void) {\n'
-        '    if (_raylibr_worker < 0)\n'
-        '        _raylibr_worker = emscripten_run_script_int(\n'
-        f'            "typeof document==={SQ}undefined{SQ}?1:0");\n'
+        '    if (_raylibr_worker < 0) {\n'
+        f'        const char *_r = emscripten_run_script_string("typeof document==={SQ}undefined{SQ}?{SQ}1{SQ}:{SQ}0{SQ}");\n'
+        '        _raylibr_worker = (_r && _r[0] == \'1\') ? 1 : 0;\n'
+        '    }\n'
         '    return _raylibr_worker;\n'
         '}\n'
     )
@@ -211,6 +218,7 @@ def patch_platform():
         p = p.replace(old_callbacks, new_callbacks, 1)
         print("DOM event callbacks wrapped in worker check")
     else:
+        _patch_failures += 1
         print("WARNING: Could not find callback registration block", file=sys.stderr)
 
     # 7. Patch cursor functions: replace EM_ASM with emscripten_run_script
@@ -267,7 +275,29 @@ def patch_platform():
         p = p.replace(old_hide, new_hide, 1)
         print("HideCursor patched")
 
-    # 8. Patch PollInputEvents: read input from SAB
+    # 8. Patch ToggleFullscreen: proxy to main thread in worker mode
+    # DOM fullscreen API is unavailable in Web Workers, so we post a message
+    # to the host which handles requestFullscreen/exitFullscreen.
+    old_toggle = '    bool enterFullscreen = false;\n\n    const bool wasFullscreen = EM_ASM_INT'
+    new_toggle = (
+        '    if (IsWorkerMode()) {\n'
+        f'        emscripten_run_script("self.postMessage({{type:{SQ}__raylibr_fullscreen{SQ}}})");\n'
+        '        if (FLAG_IS_SET(CORE.Window.flags, FLAG_FULLSCREEN_MODE))\n'
+        '            FLAG_CLEAR(CORE.Window.flags, FLAG_FULLSCREEN_MODE);\n'
+        '        else\n'
+        '            FLAG_SET(CORE.Window.flags, FLAG_FULLSCREEN_MODE);\n'
+        '        return;\n'
+        '    }\n'
+        '    bool enterFullscreen = false;\n\n    const bool wasFullscreen = EM_ASM_INT'
+    )
+    if old_toggle in p:
+        p = p.replace(old_toggle, new_toggle, 1)
+        print("ToggleFullscreen patched (worker proxy)")
+    else:
+        _patch_failures += 1
+        print("WARNING: ToggleFullscreen patch target not found", file=sys.stderr)
+
+    # 9. Patch PollInputEvents: read input from SAB
     # SAB layout (8 x Int32 = 32 bytes):
     #  [0] mouse X,  [1] mouse Y,  [2] cursor on screen,
     #  [3] key pressed (consumed),  [4] left button,  [5] right button,
@@ -330,6 +360,7 @@ def patch_platform():
         p = p[:idx] + sab_input + p[idx:]
         print("PollInputEvents patched")
     else:
+        _patch_failures += 1
         print("WARNING: PollInputEvents patch target not found", file=sys.stderr)
 
     # 8. Patch GetTime: fix wrong calculation (should be /1000, not *1000)
@@ -355,6 +386,7 @@ def patch_miniaudio():
     AudioContext is not available in workers.  We use SharedArrayBuffer
     ring buffers for PCM data transfer and Atomics for synchronization.
     """
+    global _patch_failures
     path = "external/miniaudio.h"
     with open(path) as f:
         m = f.read()
@@ -611,6 +643,7 @@ def patch_miniaudio():
         n_ok += 1
         print("miniaudio [1/10]: capture_supported")
     else:
+        _patch_failures += 1
         print("WARNING: block 1 (capture_supported) not found", file=sys.stderr)
 
     # ---- Block 2: sample rate detection in get_device_info ----
@@ -638,6 +671,7 @@ def patch_miniaudio():
         n_ok += 1
         print("miniaudio [2/10]: sample_rate_detect")
     else:
+        _patch_failures += 1
         print("WARNING: block 2 (sample_rate_detect) not found", file=sys.stderr)
 
     # ---- Block 3: device uninit (ScriptProcessorNode path) ----
@@ -653,6 +687,8 @@ def patch_miniaudio():
         m, count=1, flags=re.DOTALL
     )
     n_ok += n
+    if n == 0:
+        _patch_failures += 1
     print(f"miniaudio [3/10]: device_uninit {'OK' if n else 'NOT FOUND'}")
 
     # ---- Block 4: untrack device ----
@@ -673,6 +709,7 @@ def patch_miniaudio():
         n_ok += 1
         print("miniaudio [4/10]: untrack_device")
     else:
+        _patch_failures += 1
         print("WARNING: block 4 (untrack_device) not found", file=sys.stderr)
 
     # ---- Block 5: device init ScriptProcessorNode (THE BIG ONE) ----
@@ -694,6 +731,8 @@ def patch_miniaudio():
         m, count=1, flags=re.DOTALL
     )
     n_ok += n
+    if n == 0:
+        _patch_failures += 1
     print(f"miniaudio [5/10]: device_init {'OK' if n else 'NOT FOUND'}")
 
     # ---- Block 6: get sample rate after device init ----
@@ -713,6 +752,7 @@ def patch_miniaudio():
         n_ok += 1
         print("miniaudio [6/10]: get_sample_rate")
     else:
+        _patch_failures += 1
         print("WARNING: block 6 (get_sample_rate) not found", file=sys.stderr)
 
     # ---- Block 7: device start ----
@@ -735,6 +775,7 @@ def patch_miniaudio():
         n_ok += 1
         print("miniaudio [7/10]: device_start")
     else:
+        _patch_failures += 1
         print("WARNING: block 7 (device_start) not found", file=sys.stderr)
 
     # ---- Block 8: device stop ----
@@ -757,6 +798,7 @@ def patch_miniaudio():
         n_ok += 1
         print("miniaudio [8/10]: device_stop")
     else:
+        _patch_failures += 1
         print("WARNING: block 8 (device_stop) not found", file=sys.stderr)
 
     # ---- Block 9: context uninit ----
@@ -767,6 +809,8 @@ def patch_miniaudio():
         m, count=1, flags=re.DOTALL
     )
     n_ok += n
+    if n == 0:
+        _patch_failures += 1
     print(f"miniaudio [9/10]: context_uninit {'OK' if n else 'NOT FOUND'}")
 
     # ---- Block 10: context init (THE OTHER BIG ONE) ----
@@ -788,6 +832,8 @@ def patch_miniaudio():
         m, count=1, flags=re.DOTALL
     )
     n_ok += n
+    if n == 0:
+        _patch_failures += 1
     print(f"miniaudio [10/10]: context_init {'OK' if n else 'NOT FOUND'}")
 
     with open(path, "w") as f:
@@ -798,3 +844,8 @@ def patch_miniaudio():
 patch_rcore()
 patch_platform()
 patch_miniaudio()
+
+if _patch_failures > 0:
+    print(f"\nFATAL: {_patch_failures} patch(es) failed to apply. "
+          "The upstream Raylib source may have changed.", file=sys.stderr)
+    sys.exit(1)

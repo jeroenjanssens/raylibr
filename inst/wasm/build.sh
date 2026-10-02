@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# Build WASM demos for the pkgdown site.
+# Build standalone WASM demos (C executables) for the pkgdown site.
+# These are NOT the webR R package build -- see build-webr.sh for that.
+#
 # Prerequisites: emsdk installed and activated (source ~/emsdk/emsdk_env.sh)
 #
 # Usage: bash inst/wasm/build.sh

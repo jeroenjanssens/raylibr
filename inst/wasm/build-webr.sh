@@ -6,10 +6,13 @@ set -euo pipefail
 RAYLIBR_DIR="$(cd "$(dirname "$0")/../.."; pwd)"
 BUILD_DIR="${BUILD_DIR:-/tmp/webr-local-build}"
 REPO_DIR="$RAYLIBR_DIR/pkgdown/assets/wasm/repo/bin/emscripten/contrib/4.6"
+PKG_VERSION=$(grep '^Version:' "$RAYLIBR_DIR/DESCRIPTION" | sed 's/Version: //')
 
 if [ -f ~/emsdk/emsdk_env.sh ]; then
   source ~/emsdk/emsdk_env.sh 2>/dev/null
 fi
+
+JOBS=${JOBS:-$(sysctl -n hw.ncpu 2>/dev/null || nproc 2>/dev/null || echo 4)}
 
 R_INCLUDE="$(R RHOME)/include"
 RCPP_INCLUDE="$(Rscript -e 'cat(system.file("include", package="Rcpp"))')"
@@ -26,18 +29,18 @@ cd raylib-6.0-minimal/src
 sed -i.bak 's/^CFLAGS = -Wall/CFLAGS = -Wall -fPIC/' Makefile
 
 # Patch Raylib sources for webR worker support (SharedArrayBuffer input, BroadcastChannel frames)
-python3 "$RAYLIBR_DIR/inst/wasm/patch_raylib.py"
+Rscript "$RAYLIBR_DIR/inst/wasm/patch_raylib.R"
 
-# Compile Raylib
+# Compile Raylib (parallel)
 for src in rcore rshapes rtextures rtext rmodels; do
     emcc -Wall -fPIC -D_GNU_SOURCE -DPLATFORM_WEB_EMSCRIPTEN -DGRAPHICS_API_OPENGL_ES2 \
-        -Wno-missing-braces -std=gnu99 -Os -I. -c ${src}.c -o ${src}.o
+        -Wno-missing-braces -std=gnu99 -Os -I. -c ${src}.c -o ${src}.o &
 done
 emcc -Wall -fPIC -D_GNU_SOURCE -DPLATFORM_WEB_EMSCRIPTEN -DGRAPHICS_API_OPENGL_ES2 \
-    -Wno-missing-braces -std=gnu99 -Os -I. -c raudio.c -o raudio.o
-
+    -Wno-missing-braces -Wno-tautological-compare -std=gnu99 -Os -I. -c raudio.c -o raudio.o &
 emcc -Wall -fPIC -fno-builtin -D_GNU_SOURCE -DPLATFORM_WEB_EMSCRIPTEN \
-    -std=gnu99 -Os -I. -c "$RAYLIBR_DIR/inst/wasm/wasm_compat.c" -o wasm_compat.o
+    -std=gnu99 -Os -I. -c "$RAYLIBR_DIR/inst/wasm/wasm_compat.c" -o wasm_compat.o &
+wait
 
 emar rcs "$BUILD_DIR/libraylib.web.a" rcore.o rshapes.o rtextures.o rtext.o rmodels.o raudio.o wasm_compat.o
 
@@ -47,15 +50,17 @@ for h in raylib.h raymath.h rlgl.h rcamera.h; do
 done
 cp "$RAYLIBR_DIR/inst/raygui.h" "$BUILD_DIR/inst-include/"
 
-echo "=== Compiling raylibr C++ sources ==="
+echo "=== Compiling raylibr C++ sources (parallel, $JOBS jobs) ==="
 cd "$BUILD_DIR"
 SRCS="audio core models raygui_impl raygui_funcs raymath_funcs rcolors RcppExports rlgl shapes structs text textures types web manual_wrappers"
 for src in $SRCS; do
     em++ -std=gnu++17 -Oz -fPIC -fvisibility=hidden \
         -DPLATFORM_WEB_EMSCRIPTEN -DRCPP_DEMANGLER_ENABLED=0 -D__STRICT_ANSI__ -DNDEBUG \
         -I"$R_INCLUDE" -I"$RCPP_INCLUDE" -I"$BUILD_DIR/inst-include" \
-        -c "$RAYLIBR_DIR/src/$src.cpp" -o "$BUILD_DIR/$src.o"
+        -c "$RAYLIBR_DIR/src/$src.cpp" -o "$BUILD_DIR/$src.o" &
+    [ "$(jobs -p | wc -l)" -ge "$JOBS" ] && wait
 done
+wait
 
 echo "=== Linking raylibr.so ==="
 em++ -s SIDE_MODULE=1 -Oz \
@@ -80,16 +85,18 @@ cp "$R_LIB/raylibr/R/raylibr" "$PKG_DIR/raylibr/R/"
 cp "$R_LIB/raylibr/R/raylibr.rdb" "$PKG_DIR/raylibr/R/"
 cp "$R_LIB/raylibr/R/raylibr.rdx" "$PKG_DIR/raylibr/R/"
 cp -r "$R_LIB/raylibr/Meta" "$PKG_DIR/raylibr/"
+# Demo resources (~4MB) required by 7/11 webR demos that load assets via system.file()
 [ -d "$R_LIB/raylibr/demo_resources" ] && cp -r "$R_LIB/raylibr/demo_resources" "$PKG_DIR/raylibr/"
 
 cd "$PKG_DIR"
 xattr -cr raylibr 2>/dev/null || true
-COPYFILE_DISABLE=1 tar -czf raylibr_6.0.0.9001.tgz raylibr
+COPYFILE_DISABLE=1 tar --no-xattrs --no-mac-metadata -czf "raylibr_${PKG_VERSION}.tgz" raylibr
 
 mkdir -p "$REPO_DIR"
-cp "$PKG_DIR/raylibr_6.0.0.9001.tgz" "$REPO_DIR/"
+rm -f "$REPO_DIR"/raylibr_*.tgz
+cp "$PKG_DIR/raylibr_${PKG_VERSION}.tgz" "$REPO_DIR/"
 cd "$REPO_DIR"
 Rscript -e 'tools::write_PACKAGES(".", type="mac.binary")'
 
-echo "=== Done! Package at $REPO_DIR/raylibr_6.0.0.9001.tgz ==="
-ls -la "$REPO_DIR/raylibr_6.0.0.9001.tgz"
+echo "=== Done! Package at $REPO_DIR/raylibr_${PKG_VERSION}.tgz ==="
+ls -la "$REPO_DIR/raylibr_${PKG_VERSION}.tgz"
