@@ -198,12 +198,17 @@ hold_piece <- function() {
     piece <<- spawn(held)
     lock_timer <<- 0
     lock_resets <<- 0
+    if (!fits(piece)) game_over <<- TRUE
   }
   held <<- type
   can_hold <<- FALSE
 }
 
-gravity <- function() (0.8 - (level - 1) * 0.007)^(level - 1)
+# Seconds per row, levelling off at level 20
+gravity <- function() {
+  l <- min(level, 20)
+  (0.8 - (l - 1) * 0.007)^(l - 1)
+}
 
 new_game <- function() {
   board <<- matrix(0L, rows + hidden, cols)
