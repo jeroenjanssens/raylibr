@@ -212,7 +212,7 @@ draw_label <- function(text, y, size = 20, color = "gray") {
 }
 
 draw_overlay <- function(title, subtitle) {
-  draw_rectangle(0, 0, cols * scale, rows * scale, fade("black", 0.7))
+  draw_rectangle(0, 0, cols * scale, rows * scale, fade("black", 0.8))
   draw_text(title, (cols * scale - measure_text(title, 40)) / 2, 250, 40, "white")
   draw_text(subtitle, (cols * scale - measure_text(subtitle, 20)) / 2, 300, 20, "gray")
 }
@@ -223,8 +223,10 @@ draw_game <- function() {
 
   # Playfield
   draw_rectangle(0, 0, cols * scale, rows * scale, "gray8")
-  for (x in seq(0, cols * scale, scale)) draw_line(x, 0, x, rows * scale, "gray15")
-  for (y in seq(0, rows * scale, scale)) draw_line(0, y, cols * scale, y, "gray15")
+  xs <- seq(0, cols * scale, scale)
+  ys <- seq(0, rows * scale, scale)
+  draw_line(xs, 0, xs, rows * scale, "gray15")
+  draw_line(0, ys, cols * scale, ys, "gray15")
 
   filled <- which(board != 0, arr.ind = TRUE)
   draw_cells(filled, piece_colors[board[filled]])
@@ -235,10 +237,8 @@ draw_game <- function() {
 
   if (!is.null(piece)) {
     g <- cells(ghost())
-    for (i in seq_len(nrow(g))) {
-      draw_rectangle_lines((g[i, 2] - 1) * scale + 2, (g[i, 1] - hidden - 1) * scale + 2,
-                           scale - 4, scale - 4, piece_colors[piece$type])
-    }
+    draw_rectangle_lines((g[, 2] - 1) * scale + 2, (g[, 1] - hidden - 1) * scale + 2,
+                         scale - 4, scale - 4, piece_colors[piece$type])
     draw_cells(cells(piece), piece_colors[piece$type])
   }
 
