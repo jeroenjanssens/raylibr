@@ -31,6 +31,7 @@ demo("tetris", package = "raylibr")
 
 ## Source code
 
+```r
 library(raylibr)
 
 cols <- 10
