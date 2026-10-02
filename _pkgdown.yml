@@ -2,7 +2,16 @@ url: https://jeroenjanssens.github.io/raylibr/
 template:
   bootstrap: 5
   includes:
-    in_header: <script src="https://jeroenjanssens.github.io/raylibr/coi-serviceworker.js"></script>
+    in_header: |
+      <script>
+      (function() {
+        var m = location.pathname.match(/^(.*?\/)(articles|reference|news)\//);
+        var root = m ? m[1] : location.pathname.substring(0, location.pathname.lastIndexOf('/') + 1);
+        var s = document.createElement('script');
+        s.src = root + 'coi-serviceworker.js';
+        document.head.appendChild(s);
+      })();
+      </script>
 
 figures:
   dpi: 100
@@ -417,6 +426,7 @@ reference:
     - is_web
     - run_game_loop
     - eval_js
+    - export_html
 
   - title: Structs
     contents:
@@ -467,7 +477,7 @@ reference:
     contents:
     - flag
     - key
-    - log
+    - log_level
     - mouse_button
     - mouse_cursor
     - camera_mode

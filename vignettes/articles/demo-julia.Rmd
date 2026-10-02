@@ -8,7 +8,7 @@ An interactive Julia set fractal viewer powered by a GLSL fragment shader: press
 
 Click the canvas to focus it. Left-click to zoom in, right-click to zoom out and pan. Press keys 1–6 to jump to different points of interest, Space to pause, Left/Right to change animation speed.
 
-<iframe src="../wasm/julia.html" width="600" height="460" style="border:none; display:block; margin:0 auto;"></iframe>
+<iframe src="../wasm/julia.html" width="600" height="400" style="border:none; display:block; margin:0 auto;"></iframe>
 
 ## Run
 

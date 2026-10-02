@@ -8,7 +8,7 @@ A tiled starfield texture is warped by a GLSL wave distortion fragment shader, w
 
 A tiled starfield warped by a GLSL wave distortion shader. Just sit back and watch.
 
-<iframe src="../wasm/shader.html" width="800" height="510" style="border:none; display:block; margin:0 auto;"></iframe>
+<iframe src="../wasm/shader.html" width="800" height="450" style="border:none; display:block; margin:0 auto;"></iframe>
 
 ## Run
 

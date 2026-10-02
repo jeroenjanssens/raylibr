@@ -67,7 +67,7 @@ Browser main thread                 webR Web Worker
 └──────────────────────┘           └──────────────────────┘
 ```
 
-**Frame transfer**: Raylib's `SwapScreenBuffer()` calls `gl.readPixels()` on the OffscreenCanvas, then sends pixel data to the main thread via `BroadcastChannel.postMessage()`. The main thread flips the rows (WebGL is bottom-up) and draws to the visible `<canvas>` with `putImageData()`.
+**Frame transfer**: Raylib's `SwapScreenBuffer()` calls `gl.readPixels()` on the OffscreenCanvas, then sends pixel data to the main thread via `self.postMessage()` with a transferable buffer. The main thread flips the rows (WebGL is bottom-up) and draws to the visible `<canvas>` with `putImageData()`.
 
 **Input forwarding**: The main thread writes mouse coordinates and key codes to a `SharedArrayBuffer`. Raylib's `PollInputEvents()` reads from this buffer each frame using `Atomics.load()` and `Atomics.exchange()`.
 
@@ -98,35 +98,69 @@ This produces a webR-compatible package tarball. The script:
 
 ## HTML host page
 
-Each demo page follows this pattern:
+Each demo page intercepts webR's internal Web Worker to receive frame data and forward input. Here is the minimal pattern:
 
 ```html
 <canvas id="canvas" width="600" height="400"></canvas>
+<div id="loading">Loading raylibr...</div>
 
 <script type="module">
-import { WebR } from 'https://webr.r-wasm.org/v0.6.0/webr.mjs';
-
 const canvas = document.getElementById('canvas');
 const ctx2d = canvas.getContext('2d');
-let inputSAB = null;
+const loading = document.getElementById('loading');
 
-// Receive frames and SAB from worker
-const bc = new BroadcastChannel('raylibr-frames');
-bc.onmessage = (e) => {
-  if (e.data.t === 'f') {
-    const src = new Uint8ClampedArray(e.data.px);
-    const w = e.data.w, h = e.data.h, stride = w * 4;
-    const dst = new Uint8ClampedArray(src.length);
-    for (let y = 0; y < h; y++) {
-      dst.set(src.subarray((h - 1 - y) * stride, (h - y) * stride), y * stride);
-    }
-    ctx2d.putImageData(new ImageData(dst, w, h), 0, 0);
-  } else if (e.data.t === 'sab') {
-    inputSAB = new Int32Array(e.data.sab);
+// Monkey-patch Worker to intercept webR's internal worker
+const _OrigWorker = Worker;
+let webRWorker = null;
+globalThis.Worker = class extends _OrigWorker {
+  constructor(...args) {
+    super(...args);
+    webRWorker = this;
+    this.addEventListener('message', (e) => {
+      if (e.data && e.data.type === '__raylibr_cursor') {
+        canvas.style.cursor = e.data.cursor;
+      } else if (e.data && e.data.type === '__raylibr_frame') {
+        // Row-flip: WebGL reads bottom-up, canvas expects top-down
+        const src = new Uint8ClampedArray(e.data.px);
+        const w = e.data.w, h = e.data.h, stride = w * 4;
+        const dst = new Uint8ClampedArray(src.length);
+        for (let y = 0; y < h; y++) {
+          dst.set(src.subarray((h - 1 - y) * stride, (h - y) * stride), y * stride);
+        }
+        ctx2d.putImageData(new ImageData(dst, w, h), 0, 0);
+        if (loading.style.display !== 'none') loading.style.display = 'none';
+      }
+    });
   }
 };
 
-// Forward mouse input via SAB
+import { WebR } from 'https://webr.r-wasm.org/v0.6.0/webr.mjs';
+
+// Audio unlock (needed for demos that play sound)
+canvas.addEventListener("click", () => {
+  if (webRWorker) webRWorker.postMessage({type: "__raylibr_audio_unlock"});
+});
+
+// Start webR
+const webR = new WebR();
+await webR.init();
+await webR.installPackages(['Rcpp'], { repos: ['https://repo.r-wasm.org'], quiet: true });
+const localRepo = new URL('repo', window.location.href).href;
+await webR.installPackages(['raylibr'], { repos: [localRepo], quiet: true });
+await webR.evalR('library(raylibr)');
+await webR.evalR('...');  // Your R code here
+</script>
+```
+
+For demos that need input, listen for the `__raylibr_sab` message to receive the SharedArrayBuffer, then forward mouse/keyboard events by writing to it with `Atomics.store()`:
+
+```js
+// Inside the Worker message listener, add:
+if (e.data && e.data.type === '__raylibr_sab') {
+  inputSAB = new Int32Array(e.data.sab);
+}
+
+// Forward mouse position
 canvas.addEventListener('mousemove', (e) => {
   if (!inputSAB) return;
   const rect = canvas.getBoundingClientRect();
@@ -135,7 +169,7 @@ canvas.addEventListener('mousemove', (e) => {
   Atomics.store(inputSAB, 2, 1);
 });
 
-// Forward keyboard input
+// Forward keyboard input (key pressed)
 canvas.addEventListener('keydown', (e) => {
   if (!inputSAB) return;
   const KEY_MAP = { ArrowUp: 265, ArrowDown: 264, ArrowLeft: 263, ArrowRight: 262 };
@@ -143,15 +177,6 @@ canvas.addEventListener('keydown', (e) => {
   Atomics.store(inputSAB, 3, raylibKey);
   e.preventDefault();
 });
-
-// Start webR
-const webR = new WebR();
-await webR.init();
-await webR.installPackages(['Rcpp'], { repos: ['https://repo.r-wasm.org'], quiet: true });
-await webR.installPackages(['raylibr'], { repos: ['./repo'], quiet: true });
-await webR.evalR('library(raylibr)');
-await webR.evalR('demo("helloworld", package = "raylibr")');
-</script>
 ```
 
 ## SharedArrayBuffer layout
@@ -164,7 +189,12 @@ The input SAB is an `Int32Array` with 8 elements:
 | 1 | Mouse Y | `Atomics.store` / `Atomics.load` |
 | 2 | Cursor on screen (0/1) | `Atomics.store` / `Atomics.load` |
 | 3 | Last key pressed (Raylib key code) | `Atomics.store` / `Atomics.exchange` (consumed) |
-| 4-7 | Reserved | |
+| 4 | Left mouse button (0/1) | `Atomics.store` / `Atomics.load` |
+| 5 | Right mouse button (0/1) | `Atomics.store` / `Atomics.load` |
+| 6 | Key-down bitmask | `Atomics.or` / `Atomics.and` / `Atomics.load` |
+| 7 | Char pressed (code point) | `Atomics.store` / `Atomics.exchange` (consumed) |
+
+The key-down bitmask (index 6) encodes held-key state as bit flags: W=1, A=2, S=4, D=8, Left=16, Right=32, Up=64, Down=128, Space=256, [=512, ]=1024, .=2048, ,=4096, LShift=8192, RShift=16384. Not all demos use all bits.
 
 ## Cross-origin isolation
 
@@ -181,8 +211,11 @@ For local development, webR's `PostMessage` channel works without these headers 
 
 ## Limitations
 
-- **No audio** in worker mode (Web Audio API requires the main thread)
 - **No fullscreen or window resizing** (OffscreenCanvas has fixed dimensions)
 - **No touch input** forwarding (could be added via SAB)
-- **One instance per page** (BroadcastChannel uses a fixed name)
+- **One instance per page** (the Worker monkey-patch captures a single worker reference)
 - **No native file system** — use `raylibr_resource()` for bundled assets
+
+## Audio
+
+Audio works in worker mode via SharedArrayBuffer ring buffers. The worker generates PCM data each frame (called from `SwapScreenBuffer`), and the main thread's `ScriptProcessorNode` reads from the ring buffer for playback. See `raylibr-audio.js` for the proxy implementation and the `cubes` and `beatbox` demos for examples. A user click is required to unlock the `AudioContext` (browser autoplay policy).
