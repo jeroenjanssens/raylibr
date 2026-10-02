@@ -1152,6 +1152,265 @@ gui_value_box_float <- function(bounds, text, text_value, value, edit_mode) {
   gui_value_box_float_(bounds, text, text_value, value, edit_mode)
 }
 
+#' Export R script as webR HTML
+#'
+#' Generate an HTML file that runs a raylibr R script in the browser
+#' using webR. Input features (mouse, keyboard, audio) are auto-detected
+#' from the R code.
+#'
+#' @param script Path to an R script file.
+#' @param output Path for the output HTML file. Defaults to replacing
+#'   the \code{.R} extension with \code{.html}.
+#' @param title Page title. Auto-detected from \code{init_window()} if
+#'   not specified.
+#' @param width Canvas width in pixels. Auto-detected from
+#'   \code{init_window()} if not specified.
+#' @param height Canvas height in pixels. Auto-detected from
+#'   \code{init_window()} if not specified.
+#' @param background CSS background color for the page.
+#' @param cursor CSS cursor style for the canvas (e.g., \code{"crosshair"},
+#'   \code{"default"}). When \code{NULL} (the default), no cursor rule is
+#'   emitted.
+#'
+#' @return The output file path (invisibly). Also copies required
+#'   JavaScript helper files (\code{coi-serviceworker.js},
+#'   \code{raylibr-host.js}, \code{raylibr-audio.js}) to the output
+#'   directory if they are not already present.
+#'
+#' @details
+#' The generated HTML expects a \code{repo/} subdirectory containing
+#' the raylibr webR package built with \code{inst/wasm/build-webr.sh}.
+#'
+#' Input features are detected by scanning the R code:
+#' \itemize{
+#'   \item Mouse position: \code{get_mouse_position()}, etc.
+#'   \item Mouse buttons: \code{is_mouse_button_down()}, etc.
+#'   \item Keyboard (one-shot): \code{get_key_pressed()},
+#'     \code{is_key_pressed()}
+#'   \item Keyboard (held): \code{is_key_down()}
+#'   \item Text input: \code{gui_text_box()}, \code{get_char_pressed()}
+#'   \item Audio: \code{init_audio_device()}, \code{load_sound()}, etc.
+#' }
+#'
+#' Key mappings are built automatically from \code{key$...} references
+#' in the script. The JavaScript keyboard handler includes a
+#' single-character fallback so letter, digit, and punctuation keys
+#' work without explicit map entries.
+#'
+#' @examplesIf FALSE
+#' export_html("game.R")
+#' export_html("game.R", "output/game.html", title = "My Game")
+#'
+#' @export
+export_html <- function(script, output = NULL, title = NULL,
+                        width = NULL, height = NULL,
+                        background = "#000", cursor = NULL) {
+
+  code <- paste(readLines(script, warn = FALSE), collapse = "\n")
+
+  # --- Resolve init_window() arguments ----------------------------------
+  env <- list()
+  for (m in regmatches(code, gregexpr("(\\w+)\\s*<-\\s*(\\d+)(?=[^.])", code, perl = TRUE))[[1]]) {
+    p <- regmatches(m, regexec("(\\w+)\\s*<-\\s*(\\d+)", m))[[1]]
+    if (length(p) == 3) env[[p[2]]] <- as.integer(p[3])
+  }
+  for (m in regmatches(code, gregexpr("(\\w+)\\s*<-\\s*c\\((\\d+(?:\\s*,\\s*\\d+)*)\\)", code, perl = TRUE))[[1]]) {
+    p <- regmatches(m, regexec("(\\w+)\\s*<-\\s*c\\(([^)]+)\\)", m))[[1]]
+    if (length(p) == 3) env[[p[2]]] <- as.integer(strsplit(p[3], "\\s*,\\s*")[[1]])
+  }
+
+  resolve_int <- function(expr) {
+    expr <- trimws(expr)
+    if (grepl("^\\d+L?$", expr)) return(as.integer(sub("L$", "", expr)))
+    if (!is.null(env[[expr]])) return(env[[expr]][1])
+    idx <- regmatches(expr, regexec("^(\\w+)\\[\\s*(\\d+)\\s*\\]$", expr))[[1]]
+    if (length(idx) == 3 && !is.null(env[[idx[2]]])) {
+      i <- as.integer(idx[3])
+      v <- env[[idx[2]]]
+      if (i <= length(v)) return(v[i])
+    }
+    NULL
+  }
+
+  iw <- regmatches(code, regexec(
+    "init_window\\s*\\(\\s*([^,]+?)\\s*,\\s*([^,]+?)\\s*,\\s*([^)]+?)\\s*\\)",
+    code))[[1]]
+  if (length(iw) >= 4) {
+    if (is.null(width))  width  <- resolve_int(iw[2])
+    if (is.null(height)) height <- resolve_int(iw[3])
+    if (is.null(title)) {
+      tm <- regmatches(iw[4], regexec('"([^"]*)"', iw[4]))[[1]]
+      if (length(tm) >= 2) title <- tm[2]
+    }
+  }
+  if (is.null(width))  width  <- 600L
+  if (is.null(height)) height <- 400L
+  if (is.null(title))  title  <- tools::file_path_sans_ext(basename(script))
+
+  # --- Feature detection ------------------------------------------------
+  has_gui <- grepl("gui_button|gui_toggle|gui_check_box|gui_slider|gui_combo_box|gui_spinner|gui_scroll_panel|gui_text_box|gui_text_input_box|gui_color_bar|gui_value_box", code)
+  has_mouse <- has_gui || grepl(
+    "get_mouse_position|get_mouse_delta|is_cursor_on_screen|set_mouse_cursor|get_mouse_x|get_mouse_y|get_mouse_wheel_move",
+    code)
+  has_mouse_buttons <- has_gui || grepl(
+    "is_mouse_button_down|is_mouse_button_pressed|is_mouse_button_released",
+    code)
+  has_key_pressed <- grepl("get_key_pressed|is_key_pressed", code)
+  has_key_down <- grepl("is_key_down", code)
+  has_char_input <- grepl("gui_text_box|gui_text_input_box|get_char_pressed", code)
+  has_audio <- grepl("init_audio_device|load_sound|load_music_stream", code)
+
+  # --- Key extraction ---------------------------------------------------
+  all_key_names <- unique(sub("^key\\$", "",
+    regmatches(code, gregexpr("key\\$[a-z_0-9]+", code))[[1]]))
+
+  kd_pat <- regmatches(code, gregexpr(
+    "is_key_down\\s*\\(\\s*key\\$([a-z_0-9]+)\\s*\\)", code))[[1]]
+  keydown_keys <- unique(sub(".*key\\$([a-z_0-9]+).*", "\\1", kd_pat))
+
+  # Keys with multi-character e.key names (need explicit keyMap entries)
+  key_js_name <- c(
+    up = "ArrowUp", down = "ArrowDown", left = "ArrowLeft", right = "ArrowRight",
+    enter = "Enter", escape = "Escape", tab = "Tab", backspace = "Backspace",
+    delete = "Delete", insert = "Insert", home = "Home", end = "End",
+    page_up = "PageUp", page_down = "PageDown",
+    f1 = "F1", f2 = "F2", f3 = "F3", f4 = "F4", f5 = "F5", f6 = "F6",
+    f7 = "F7", f8 = "F8", f9 = "F9", f10 = "F10", f11 = "F11", f12 = "F12")
+
+  keymap_entries <- character(0)
+  if (has_key_pressed) {
+    for (kn in all_key_names) {
+      js_name <- key_js_name[kn]
+      if (is.na(js_name)) next
+      raylib_code <- key[[kn]]
+      if (is.null(raylib_code)) next
+      keymap_entries <- c(keymap_entries, paste0(js_name, ": ", raylib_code))
+    }
+  }
+
+  # Fixed keydown bitmask (must match patch_raylib.py)
+  kd_bit  <- c(w = 1L, a = 2L, s = 4L, d = 8L,
+               left = 16L, right = 32L, up = 64L, down = 128L,
+               space = 256L, left_bracket = 512L, right_bracket = 1024L,
+               period = 2048L, comma = 4096L,
+               left_shift = 8192L, right_shift = 16384L)
+  kd_code <- c(w = "KeyW", a = "KeyA", s = "KeyS", d = "KeyD",
+               left = "ArrowLeft", right = "ArrowRight",
+               up = "ArrowUp", down = "ArrowDown",
+               space = "Space", left_bracket = "BracketLeft",
+               right_bracket = "BracketRight",
+               period = "Period", comma = "Comma",
+               left_shift = "ShiftLeft", right_shift = "ShiftRight")
+
+  keydown_entries <- character(0)
+  if (has_key_down) {
+    for (kn in keydown_keys) {
+      if (!is.na(kd_bit[kn]) && !is.na(kd_code[kn]))
+        keydown_entries <- c(keydown_entries,
+                             paste0(kd_code[kn], ": ", kd_bit[kn]))
+    }
+  }
+  if (has_char_input) {
+    for (kn in c("left_shift", "right_shift")) {
+      entry <- paste0(kd_code[kn], ": ", kd_bit[kn])
+      if (!(entry %in% keydown_entries))
+        keydown_entries <- c(keydown_entries, entry)
+    }
+  }
+
+  # --- Build initRaylibr config -----------------------------------------
+  input_parts <- character(0)
+  if (has_mouse) input_parts <- c(input_parts, "    mouse: true")
+  if (has_mouse_buttons) input_parts <- c(input_parts, "    mouseButtons: true")
+  if (has_key_pressed) {
+    if (length(keymap_entries) > 0) {
+      input_parts <- c(input_parts, paste0(
+        "    keyMap: { ", paste(keymap_entries, collapse = ", "), " }"))
+    } else {
+      input_parts <- c(input_parts, "    keyMap: {}")
+    }
+  }
+  if (length(keydown_entries) > 0) {
+    input_parts <- c(input_parts, paste0(
+      "    keydownMap: { ", paste(keydown_entries, collapse = ", "), " }"))
+  }
+  if (has_char_input) input_parts <- c(input_parts, "    charInput: true")
+
+  has_input <- length(input_parts) > 0
+  has_keyboard <- has_key_pressed || length(keydown_entries) > 0
+
+  opts <- c("  canvas: document.getElementById('canvas')",
+            "  loadingEl: document.getElementById('loading')")
+  if (has_input) {
+    opts <- c(opts, paste0("  input: {\n",
+                           paste(input_parts, collapse = ",\n"), ",\n  }"))
+  }
+  if (has_audio) opts <- c(opts, "  audio: true")
+  if (has_keyboard && !has_char_input) opts <- c(opts, "  focusOnFirstFrame: true")
+  if (has_mouse_buttons || has_char_input) opts <- c(opts, "  focusOnMousedown: true")
+
+  opts_js <- paste(opts, collapse = ",\n")
+
+  # --- Escape R code for JS template literal ----------------------------
+  js_code <- gsub("\\", "\\\\", code, fixed = TRUE)
+  js_code <- gsub("`", "\\`", js_code, fixed = TRUE)
+  js_code <- gsub("${", "\\${", js_code, fixed = TRUE)
+
+  # --- Assemble HTML ----------------------------------------------------
+  html <- paste0(
+    "<!DOCTYPE html>\n",
+    "<html lang=\"en\">\n",
+    "<head>\n",
+    "<script src=\"coi-serviceworker.js\"></script>\n",
+    "<meta charset=\"utf-8\">\n",
+    "<meta name=\"viewport\" content=\"width=device-width\">\n",
+    "<title>", title, "</title>\n",
+    "<style>\n",
+    "  * { margin: 0; padding: 0; box-sizing: border-box; }\n",
+    "  body { background: ", background,
+    "; display: flex; justify-content: center; align-items: center; min-height: 100vh; }\n",
+    "  canvas { display: block; image-rendering: pixelated;",
+    if (!is.null(cursor)) paste0(" cursor: ", cursor, ";") else "", " }\n",
+    "  #loading { position: absolute; color: #888; font-family: monospace; font-size: 14px; }\n",
+    "</style>\n",
+    "</head>\n",
+    "<body>\n",
+    "<canvas id=\"canvas\" width=\"", width, "\" height=\"", height,
+    "\" tabindex=\"0\"></canvas>\n",
+    "<div id=\"loading\">Loading raylibr...</div>\n",
+    "\n",
+    "<script type=\"module\">\n",
+    "import { initRaylibr } from './raylibr-host.js';\n",
+    "\n",
+    "const { webR } = await initRaylibr({\n",
+    opts_js, ",\n",
+    "}).catch(e => { document.getElementById('loading').textContent = 'Error: ' + e.message; throw e; });\n",
+    "\n",
+    "await webR.evalR(`\n",
+    js_code, "\n`);\n",
+    "</script>\n",
+    "</body>\n",
+    "</html>\n")
+
+  # --- Write output -----------------------------------------------------
+  if (is.null(output)) output <- sub("\\.[Rr]$", ".html", script)
+  cat(html, file = output)
+
+  outdir <- dirname(normalizePath(output, mustWork = FALSE))
+  webr_dir <- system.file("webr", package = "raylibr")
+  if (nzchar(webr_dir)) {
+    for (f in c("coi-serviceworker.js", "raylibr-host.js", "raylibr-audio.js")) {
+      dst <- file.path(outdir, f)
+      if (!file.exists(dst)) file.copy(file.path(webr_dir, f), dst)
+    }
+  }
+
+  message("Wrote ", output)
+  message("Serve with a local web server. A 'repo/' subdirectory with the ",
+          "raylibr webR package is required.")
+  invisible(output)
+}
+
 abort <- function(message, call = NULL) {
   if (requireNamespace("rlang", quietly = TRUE)) {
     rlang::abort(message, call = call)
