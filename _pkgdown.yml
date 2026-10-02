@@ -62,6 +62,8 @@ navbar:
           href: articles/demo-balls.html
         - text: Snake
           href: articles/demo-snake.html
+        - text: Tetris
+          href: articles/demo-tetris.html
         - text: Stroop Test
           href: articles/demo-stroop.html
         - text: Waving Cubes
@@ -103,6 +105,7 @@ articles:
     - "articles/demo-mouse"
     - "articles/demo-balls"
     - "articles/demo-snake"
+    - "articles/demo-tetris"
     - "articles/demo-stroop"
     - "articles/demo-cubes"
     - "articles/demo-beatbox"

@@ -101,6 +101,13 @@ Run `demo("snake", package = "raylibr")` to play this game. Use the arrow keys t
 <img src="man/figures/raylibr-demo-snake.gif" width="666" />
 
 
+### Play a game of Tetris
+
+Run `demo("tetris", package = "raylibr")` to play this game. Use the arrow keys to move and rotate, Space to hard drop, and C to hold. Source: [`demo/tetris.R`](https://github.com/jeroenjanssens/raylibr/blob/HEAD/demo/tetris.R)
+
+<img src="man/figures/raylibr-demo-tetris.gif" width="510" />
+
+
 ### Load 3D models and apply post-processing shaders
 
 Run `demo("model", package = "raylibr")` to play this demo. Select a different shader with the left and right arrow keys. Source: [`demo/model.R`](https://github.com/jeroenjanssens/raylibr/blob/HEAD/demo/model.R)
