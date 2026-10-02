@@ -13,6 +13,7 @@ demos <- list(
   list(name = "cubes"),
   list(name = "mouse",     cursor = "crosshair"),
   list(name = "snake"),
+  list(name = "tetris"),
   list(name = "stroop",    background = "#fff"),
   list(name = "julia"),
   list(name = "gui",       background = "#ddd", cursor = "default"),
