@@ -18,3 +18,7 @@ vignettes/articles/file*.png
 
 # webR WASM build output (rebuilt by CI)
 pkgdown/assets/wasm/repo/
+
+# R CMD build/check output
+*.tar.gz
+*.Rcheck/
