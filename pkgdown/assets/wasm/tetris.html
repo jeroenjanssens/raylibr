@@ -217,7 +217,7 @@ new_game <- function() {
   score <<- 0
   lines_cleared <<- 0
   level <<- 1
-  fall_timer <<- 0
+  fall_progress <<- 0
   das_dir <<- 0
   das_timer <<- 0
   clearing <<- integer(0)
@@ -347,16 +347,16 @@ while (!window_should_close()) {
       }
     }
 
-    # Gravity, twenty times faster while soft dropping
+    # Gravity, twenty times faster while soft dropping. Progress is counted
+    # in rows so that switching speed never releases a burst of rows.
     soft_drop <- is_key_down(key$down)
-    interval <- gravity() / if (soft_drop) 20 else 1
-    fall_timer <- fall_timer + dt
-    while (fall_timer >= interval) {
-      fall_timer <- fall_timer - interval
+    fall_progress <- fall_progress + dt / (gravity() / if (soft_drop) 20 else 1)
+    while (fall_progress >= 1) {
+      fall_progress <- fall_progress - 1
       if (try_move(1, 0)) {
         if (soft_drop) score <- score + 1
       } else {
-        fall_timer <- 0
+        fall_progress <- 0
       }
     }
 
