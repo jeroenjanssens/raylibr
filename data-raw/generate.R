@@ -51,7 +51,7 @@ type_map <- list(
   "MaterialMap"    = list(cpp = "MaterialMap",    check = "is_material_map",      label = "A material_map"),
   "Model"          = list(cpp = "Model",         check = "is_model",             label = "A model"),
   "ModelAnimation" = list(cpp = "ModelAnimation", check = "is_model_animation",  label = "A model_animation"),
-  "Transform"      = list(cpp = "Transform",     check = "is_transform",         label = "A transform"),
+  "Transform"      = list(cpp = "Transform",     check = "is_raylib_transform",  label = "A raylib_transform"),
   "BoneInfo"       = list(cpp = "BoneInfo",      check = "is_bone_info",         label = "A bone_info"),
   "Wave"           = list(cpp = "Wave",          check = "is_wave",              label = "A wave"),
   "Sound"          = list(cpp = "Sound",         check = "is_sound",             label = "A sound"),
@@ -96,7 +96,7 @@ return_map <- list(
   "MaterialMap"    = list(r_doc = "A material_map"),
   "Model"          = list(r_doc = "A model"),
   "ModelAnimation" = list(r_doc = "A model_animation"),
-  "Transform"      = list(r_doc = "A transform"),
+  "Transform"      = list(r_doc = "A raylib_transform"),
   "Wave"           = list(r_doc = "A wave"),
   "Sound"          = list(r_doc = "A sound"),
   "Music"          = list(r_doc = "A music"),
@@ -191,7 +191,7 @@ get_example_value <- function(type, param_name = "") {
   if (type == "MaterialMap") return('material_map(texture, "white", 1.0)')
   if (type == "Model") return('load_model("model.obj")')
   if (type == "ModelAnimation") return("anim")
-  if (type == "Transform") return("transform(c(0, 0, 0), c(0, 0, 0, 1), c(1, 1, 1))")
+  if (type == "Transform") return("raylib_transform(c(0, 0, 0), c(0, 0, 0, 1), c(1, 1, 1))")
   if (type == "Wave") return('load_wave("sound.wav")')
   if (type == "Sound") return('load_sound("sound.wav")')
   if (type == "Music") return('load_music_stream("music.mp3")')
@@ -539,6 +539,9 @@ can_wrap_function <- function(func_row) {
 }
 
 get_r_class_name <- function(struct_name) {
+  # Transform would otherwise mask base::transform() and share its S3 class
+  # with scales' "transform" objects, which breaks ggplot2 scale transformations
+  if (struct_name == "Transform") return("raylib_transform")
   pascal_to_snake(struct_name)
 }
 
@@ -1055,6 +1058,13 @@ generate_struct_r <- function(struct_row) {
   lines <- c(lines, "#'")
   lines <- c(lines, paste0("#' @return A ", snake))
   lines <- c(lines, "#'")
+  if (name == "Transform") {
+    lines <- c(lines, "#' @details Raylib calls this struct `Transform`. In raylibr it is named")
+    lines <- c(lines, "#'   `raylib_transform()` (class `\"raylib_transform\"`) so that it doesn't mask")
+    lines <- c(lines, "#'   [base::transform()] or clash with the `\"transform\"` objects from the")
+    lines <- c(lines, "#'   scales package, which ggplot2 uses for scale transformations.")
+    lines <- c(lines, "#'")
+  }
   lines <- c(lines, "#' @note This class has been auto-generated from the following Raylib struct definition:")
   lines <- c(lines, "#'")
   lines <- c(lines, "#' ```")

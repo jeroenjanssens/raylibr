@@ -10364,85 +10364,85 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// transform_
-Transform transform_(Vector3 translation, Vector4 rotation, Vector3 scale);
-RcppExport SEXP _raylibr_transform_(SEXP translationSEXP, SEXP rotationSEXP, SEXP scaleSEXP) {
+// raylib_transform_
+Transform raylib_transform_(Vector3 translation, Vector4 rotation, Vector3 scale);
+RcppExport SEXP _raylibr_raylib_transform_(SEXP translationSEXP, SEXP rotationSEXP, SEXP scaleSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< Vector3 >::type translation(translationSEXP);
     Rcpp::traits::input_parameter< Vector4 >::type rotation(rotationSEXP);
     Rcpp::traits::input_parameter< Vector3 >::type scale(scaleSEXP);
-    rcpp_result_gen = Rcpp::wrap(transform_(translation, rotation, scale));
+    rcpp_result_gen = Rcpp::wrap(raylib_transform_(translation, rotation, scale));
     return rcpp_result_gen;
 END_RCPP
 }
-// transform_get_translation_
-Vector3 transform_get_translation_(Transform obj);
-RcppExport SEXP _raylibr_transform_get_translation_(SEXP objSEXP) {
+// raylib_transform_get_translation_
+Vector3 raylib_transform_get_translation_(Transform obj);
+RcppExport SEXP _raylibr_raylib_transform_get_translation_(SEXP objSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(transform_get_translation_(obj));
+    rcpp_result_gen = Rcpp::wrap(raylib_transform_get_translation_(obj));
     return rcpp_result_gen;
 END_RCPP
 }
-// transform_set_translation_
-Transform transform_set_translation_(Transform obj, Vector3 translation);
-RcppExport SEXP _raylibr_transform_set_translation_(SEXP objSEXP, SEXP translationSEXP) {
+// raylib_transform_set_translation_
+Transform raylib_transform_set_translation_(Transform obj, Vector3 translation);
+RcppExport SEXP _raylibr_raylib_transform_set_translation_(SEXP objSEXP, SEXP translationSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
     Rcpp::traits::input_parameter< Vector3 >::type translation(translationSEXP);
-    rcpp_result_gen = Rcpp::wrap(transform_set_translation_(obj, translation));
+    rcpp_result_gen = Rcpp::wrap(raylib_transform_set_translation_(obj, translation));
     return rcpp_result_gen;
 END_RCPP
 }
-// transform_get_rotation_
-Vector4 transform_get_rotation_(Transform obj);
-RcppExport SEXP _raylibr_transform_get_rotation_(SEXP objSEXP) {
+// raylib_transform_get_rotation_
+Vector4 raylib_transform_get_rotation_(Transform obj);
+RcppExport SEXP _raylibr_raylib_transform_get_rotation_(SEXP objSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(transform_get_rotation_(obj));
+    rcpp_result_gen = Rcpp::wrap(raylib_transform_get_rotation_(obj));
     return rcpp_result_gen;
 END_RCPP
 }
-// transform_set_rotation_
-Transform transform_set_rotation_(Transform obj, Vector4 rotation);
-RcppExport SEXP _raylibr_transform_set_rotation_(SEXP objSEXP, SEXP rotationSEXP) {
+// raylib_transform_set_rotation_
+Transform raylib_transform_set_rotation_(Transform obj, Vector4 rotation);
+RcppExport SEXP _raylibr_raylib_transform_set_rotation_(SEXP objSEXP, SEXP rotationSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
     Rcpp::traits::input_parameter< Vector4 >::type rotation(rotationSEXP);
-    rcpp_result_gen = Rcpp::wrap(transform_set_rotation_(obj, rotation));
+    rcpp_result_gen = Rcpp::wrap(raylib_transform_set_rotation_(obj, rotation));
     return rcpp_result_gen;
 END_RCPP
 }
-// transform_get_scale_
-Vector3 transform_get_scale_(Transform obj);
-RcppExport SEXP _raylibr_transform_get_scale_(SEXP objSEXP) {
+// raylib_transform_get_scale_
+Vector3 raylib_transform_get_scale_(Transform obj);
+RcppExport SEXP _raylibr_raylib_transform_get_scale_(SEXP objSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
-    rcpp_result_gen = Rcpp::wrap(transform_get_scale_(obj));
+    rcpp_result_gen = Rcpp::wrap(raylib_transform_get_scale_(obj));
     return rcpp_result_gen;
 END_RCPP
 }
-// transform_set_scale_
-Transform transform_set_scale_(Transform obj, Vector3 scale);
-RcppExport SEXP _raylibr_transform_set_scale_(SEXP objSEXP, SEXP scaleSEXP) {
+// raylib_transform_set_scale_
+Transform raylib_transform_set_scale_(Transform obj, Vector3 scale);
+RcppExport SEXP _raylibr_raylib_transform_set_scale_(SEXP objSEXP, SEXP scaleSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< Transform >::type obj(objSEXP);
     Rcpp::traits::input_parameter< Vector3 >::type scale(scaleSEXP);
-    rcpp_result_gen = Rcpp::wrap(transform_set_scale_(obj, scale));
+    rcpp_result_gen = Rcpp::wrap(raylib_transform_set_scale_(obj, scale));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -12853,13 +12853,13 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_material_map_set_color_", (DL_FUNC) &_raylibr_material_map_set_color_, 2},
     {"_raylibr_material_map_get_value_", (DL_FUNC) &_raylibr_material_map_get_value_, 1},
     {"_raylibr_material_map_set_value_", (DL_FUNC) &_raylibr_material_map_set_value_, 2},
-    {"_raylibr_transform_", (DL_FUNC) &_raylibr_transform_, 3},
-    {"_raylibr_transform_get_translation_", (DL_FUNC) &_raylibr_transform_get_translation_, 1},
-    {"_raylibr_transform_set_translation_", (DL_FUNC) &_raylibr_transform_set_translation_, 2},
-    {"_raylibr_transform_get_rotation_", (DL_FUNC) &_raylibr_transform_get_rotation_, 1},
-    {"_raylibr_transform_set_rotation_", (DL_FUNC) &_raylibr_transform_set_rotation_, 2},
-    {"_raylibr_transform_get_scale_", (DL_FUNC) &_raylibr_transform_get_scale_, 1},
-    {"_raylibr_transform_set_scale_", (DL_FUNC) &_raylibr_transform_set_scale_, 2},
+    {"_raylibr_raylib_transform_", (DL_FUNC) &_raylibr_raylib_transform_, 3},
+    {"_raylibr_raylib_transform_get_translation_", (DL_FUNC) &_raylibr_raylib_transform_get_translation_, 1},
+    {"_raylibr_raylib_transform_set_translation_", (DL_FUNC) &_raylibr_raylib_transform_set_translation_, 2},
+    {"_raylibr_raylib_transform_get_rotation_", (DL_FUNC) &_raylibr_raylib_transform_get_rotation_, 1},
+    {"_raylibr_raylib_transform_set_rotation_", (DL_FUNC) &_raylibr_raylib_transform_set_rotation_, 2},
+    {"_raylibr_raylib_transform_get_scale_", (DL_FUNC) &_raylibr_raylib_transform_get_scale_, 1},
+    {"_raylibr_raylib_transform_set_scale_", (DL_FUNC) &_raylibr_raylib_transform_set_scale_, 2},
     {"_raylibr_ray_", (DL_FUNC) &_raylibr_ray_, 2},
     {"_raylibr_ray_get_position_", (DL_FUNC) &_raylibr_ray_get_position_, 1},
     {"_raylibr_ray_set_position_", (DL_FUNC) &_raylibr_ray_set_position_, 2},

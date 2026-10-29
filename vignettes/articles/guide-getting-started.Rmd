@@ -107,7 +107,7 @@ bb <- bounding_box(c(-1, -1, -1), c(1, 1, 1))
 bb$min
 ```
 
-Other constructors include `color()`, `ray()`, `camera_2d()`, `ray_collision()`, and `transform()`.
+Other constructors include `color()`, `ray()`, `camera_2d()`, `ray_collision()`, and `raylib_transform()` (named this way so it does not mask `base::transform()`).
 
 Check types with predicates:
 ```{r type-check}

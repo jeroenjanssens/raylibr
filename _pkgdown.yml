@@ -442,7 +442,7 @@ reference:
     - glyph_info
     - material_map
     - n_patch_info
-    - transform
+    - raylib_transform
     - texture
     - render_texture
 

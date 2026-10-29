@@ -3545,32 +3545,32 @@ material_map_set_value_ <- function(obj, value) {
     .Call(`_raylibr_material_map_set_value_`, obj, value)
 }
 
-transform_ <- function(translation, rotation, scale) {
-    .Call(`_raylibr_transform_`, translation, rotation, scale)
+raylib_transform_ <- function(translation, rotation, scale) {
+    .Call(`_raylibr_raylib_transform_`, translation, rotation, scale)
 }
 
-transform_get_translation_ <- function(obj) {
-    .Call(`_raylibr_transform_get_translation_`, obj)
+raylib_transform_get_translation_ <- function(obj) {
+    .Call(`_raylibr_raylib_transform_get_translation_`, obj)
 }
 
-transform_set_translation_ <- function(obj, translation) {
-    .Call(`_raylibr_transform_set_translation_`, obj, translation)
+raylib_transform_set_translation_ <- function(obj, translation) {
+    .Call(`_raylibr_raylib_transform_set_translation_`, obj, translation)
 }
 
-transform_get_rotation_ <- function(obj) {
-    .Call(`_raylibr_transform_get_rotation_`, obj)
+raylib_transform_get_rotation_ <- function(obj) {
+    .Call(`_raylibr_raylib_transform_get_rotation_`, obj)
 }
 
-transform_set_rotation_ <- function(obj, rotation) {
-    .Call(`_raylibr_transform_set_rotation_`, obj, rotation)
+raylib_transform_set_rotation_ <- function(obj, rotation) {
+    .Call(`_raylibr_raylib_transform_set_rotation_`, obj, rotation)
 }
 
-transform_get_scale_ <- function(obj) {
-    .Call(`_raylibr_transform_get_scale_`, obj)
+raylib_transform_get_scale_ <- function(obj) {
+    .Call(`_raylibr_raylib_transform_get_scale_`, obj)
 }
 
-transform_set_scale_ <- function(obj, scale) {
-    .Call(`_raylibr_transform_set_scale_`, obj, scale)
+raylib_transform_set_scale_ <- function(obj, scale) {
+    .Call(`_raylibr_raylib_transform_set_scale_`, obj, scale)
 }
 
 ray_ <- function(position, direction) {
