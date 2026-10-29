@@ -14,8 +14,8 @@ Load shaders from files or from strings in memory:
 # From files
 shader <- load_shader("vertex.glsl", "fragment.glsl")
 
-# Pass NULL for either to use Raylib's default
-shader <- load_shader(NULL, "my_effect.glsl")
+# Pass "" for either to use Raylib's default
+shader <- load_shader("", "my_effect.glsl")
 
 # From strings
 fs_code <- "
@@ -30,7 +30,7 @@ void main() {
     finalColor = vec4(gray, gray, gray, color.a);
 }
 "
-shader <- load_shader_from_memory(NULL, fs_code)
+shader <- load_shader_from_memory("", fs_code)
 ```
 
 ## Using shaders
@@ -82,9 +82,9 @@ through a shader.
 ``` r
 
 # Setup
-target <- load_render_texture(400L, 300L)
-shader <- load_shader(NULL, "my_effect.glsl")
-source_rec <- rectangle(0, 0, 400, -300)  # flipped Y for render texture
+target <- load_render_texture(640L, 480L)
+shader <- load_shader("", "my_effect.glsl")
+source_rec <- rectangle(0, 0, 640, -480)  # flipped Y for render texture
 
 # In the game loop:
 begin_texture_mode(target)
@@ -102,28 +102,142 @@ end_drawing()
 Note the negative height in the source rectangle — render textures are
 vertically flipped in OpenGL.
 
-## Example
+## Examples
 
-Without a shader, a scene with colored circles looks like this:
+The examples below all post-process the same scene. Two small helpers
+keep the snippets short: `draw_scene()` draws the scene, and
+`post_process()` follows the pattern above, rendering the scene to a
+texture and drawing that texture through a shader.
 
 ``` r
 
-raylibr_screenshot(function() {
-  draw_circle(100L, 150L, 80.0, "red")
-  draw_circle(200L, 150L, 80.0, "green")
-  draw_circle(300L, 150L, 80.0, "blue")
-  draw_text("No shader", 10L, 10L, 20L, "white")
-})
+draw_scene <- function() {
+  draw_rectangle_gradient_v(0L, 0L, 640L, 480L, "midnightblue", "darkorchid4")
+  draw_circle(170L, 230L, 110.0, "gold")
+  draw_circle_lines(170L, 230L, 140.0, "white")
+  draw_rectangle(300L, 120L, 200L, 200L, "tomato")
+  draw_triangle(c(480, 380), c(620, 380), c(550, 250), "springgreen")
+  draw_text("raylibr", 40L, 400L, 60L, "white")
+}
+
+post_process <- function(shader) {
+  target <- load_render_texture(640L, 480L)
+  begin_texture_mode(target)
+  draw_scene()
+  end_texture_mode()
+
+  begin_shader_mode(shader)
+  draw_texture_rec(target$texture, rectangle(0, 0, 640, -480), c(0, 0), "white")
+  end_shader_mode()
+}
 ```
 
-![raylibr image](file5f1af13b847.png)
+Without a shader, the scene looks like this:
 
-raylibr image
+``` r
 
-A grayscale fragment shader would convert this to shades of gray by
-computing a weighted luminance from the RGB channels. The GLSL code uses
-the standard luminance weights `(0.299, 0.587, 0.114)` to match human
-perception.
+draw_scene()
+```
+
+![Image rendered by raylibr](file5e032db6f9e3.png)
+
+raylibr ships with a collection of post-processing shaders from the
+Raylib examples, which you can find with
+[`raylibr_resource()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_resource.md).
+
+### Grayscale
+
+Converts each pixel to its luminance, using the weights
+`(0.299, 0.587, 0.114)` to match human perception:
+
+``` r
+
+shader <- load_shader("", raylibr_resource("model/grayscale.fs"))
+post_process(shader)
+```
+
+![Image rendered by raylibr](file5e03553b8c5b.png)
+
+### Pixelation
+
+The pixelizer shader has uniforms for the block size, which you can set
+from R:
+
+``` r
+
+shader <- load_shader("", raylibr_resource("model/pixelizer.fs"))
+set_shader_value(shader, get_shader_location(shader, "pixelWidth"), 10)
+set_shader_value(shader, get_shader_location(shader, "pixelHeight"), 10)
+post_process(shader)
+```
+
+![Image rendered by raylibr](file5e03c1b79cc.png)
+
+### Edge detection
+
+The Sobel operator compares neighbouring pixels to find edges:
+
+``` r
+
+shader <- load_shader("", raylibr_resource("model/sobel.fs"))
+post_process(shader)
+```
+
+![Image rendered by raylibr](file5e03296c62da.png)
+
+### Thermal vision
+
+Maps the brightness of each pixel onto a heat-camera palette:
+
+``` r
+
+shader <- load_shader("", raylibr_resource("model/predator.fs"))
+post_process(shader)
+```
+
+![Image rendered by raylibr](file5e03245b02.png)
+
+### Fisheye
+
+A fragment shader can also move pixels around. This one samples the
+texture through a lens distortion:
+
+``` r
+
+shader <- load_shader("", raylibr_resource("model/fisheye.fs"))
+post_process(shader)
+```
+
+![Image rendered by raylibr](file5e035fea2330.png)
+
+### Writing your own
+
+A fragment shader of your own can be loaded from a string. This one
+inverts every color:
+
+``` r
+
+fs_code <- "
+#version 330
+in vec2 fragTexCoord;
+in vec4 fragColor;
+out vec4 finalColor;
+uniform sampler2D texture0;
+void main() {
+    vec4 color = texture(texture0, fragTexCoord) * fragColor;
+    finalColor = vec4(1.0 - color.rgb, color.a);
+}
+"
+shader <- load_shader_from_memory("", fs_code)
+post_process(shader)
+```
+
+![Image rendered by raylibr](file5e03523afc5f.png)
+
+In a real program, load shaders once before the game loop and free them
+with
+[`unload_shader()`](https://jeroenjanssens.github.io/raylibr/reference/unload_shader.md)
+afterwards.
 
 ## Further reading
 

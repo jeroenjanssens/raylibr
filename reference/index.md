@@ -1038,6 +1038,8 @@
   : Run game loop
 - [`eval_js()`](https://jeroenjanssens.github.io/raylibr/reference/eval_js.md)
   : Evaluate JavaScript
+- [`export_html()`](https://jeroenjanssens.github.io/raylibr/reference/export_html.md)
+  : Export R script as webR HTML
 
 ## Structs
 
@@ -1137,8 +1139,8 @@
   Flag
 - [`key`](https://jeroenjanssens.github.io/raylibr/reference/key.md) :
   Key
-- [`log`](https://jeroenjanssens.github.io/raylibr/reference/log.md) :
-  log
+- [`log_level`](https://jeroenjanssens.github.io/raylibr/reference/log_level.md)
+  : log Level
 - [`mouse_button`](https://jeroenjanssens.github.io/raylibr/reference/mouse_button.md)
   : Mouse Button
 - [`mouse_cursor`](https://jeroenjanssens.github.io/raylibr/reference/mouse_cursor.md)

@@ -171,6 +171,16 @@ Other draw functions:
 
 ``` r
 if (FALSE) {
-draw_billboard_pro(camera_3d(c(0, 10, 10)), load_texture("file.png"), rectangle(10, 10, 200, 100), c(0, 5, 0), c(0, 1, 0), c(100, 100), c(100, 100), 0.0, "red")
+draw_billboard_pro(
+    camera_3d(c(0, 10, 10)),
+    load_texture("file.png"),
+    rectangle(10, 10, 200, 100),
+    c(0, 5, 0),
+    c(0, 1, 0),
+    c(100, 100),
+    c(100, 100),
+    0.0,
+    "red"
+  )
 }
 ```

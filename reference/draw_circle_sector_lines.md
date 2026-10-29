@@ -165,5 +165,12 @@ Other draw functions:
 ## Examples
 
 ``` r
-raylibr_screenshot(function() draw_circle_sector_lines(c(200, 150), 80.0, 0.0, 270.0, 36L, "red"))
+raylibr_screenshot(function() draw_circle_sector_lines(
+                                  c(200, 150),
+                                  80.0,
+                                  0.0,
+                                  270.0,
+                                  36L,
+                                  "red"
+                                ))
 ```

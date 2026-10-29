@@ -153,5 +153,12 @@ Other draw functions:
 ## Examples
 
 ``` r
-raylibr_screenshot(function() draw_spline_segment_catmull_rom(c(200, 50), c(100, 250), c(300, 250), c(350, 100), 3.0, "red"))
+raylibr_screenshot(function() draw_spline_segment_catmull_rom(
+                                  c(200, 50),
+                                  c(100, 250),
+                                  c(300, 250),
+                                  c(350, 100),
+                                  3.0,
+                                  "red"
+                                ))
 ```

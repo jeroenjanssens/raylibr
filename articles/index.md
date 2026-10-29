@@ -30,6 +30,7 @@
 - [Bouncing
   Balls](https://jeroenjanssens.github.io/raylibr/articles/demo-balls.md):
 - [Snake](https://jeroenjanssens.github.io/raylibr/articles/demo-snake.md):
+- [Tetris](https://jeroenjanssens.github.io/raylibr/articles/demo-tetris.md):
 - [Stroop
   Test](https://jeroenjanssens.github.io/raylibr/articles/demo-stroop.md):
 - [Waving Cubes and

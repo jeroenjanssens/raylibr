@@ -23,35 +23,31 @@ result as an image:
 ``` r
 
 raylibr_screenshot(function() {
-  draw_circle(200L, 150L, 80.0, "yellow")
+  draw_circle(320L, 240L, 130.0, "yellow")
 })
 ```
 
-![raylibr image](file5d8f2d322f25.png)
+![Image rendered by raylibr](file5c7b96f535b.png)
 
-raylibr image
-
-The default canvas is 400x300 pixels with a black background. Everything
+The default canvas is 640x480 pixels with a black background. Everything
 you draw appears on top.
 
-You can compose multiple shapes in a single screenshot:
+From here on, snippets show only the drawing code — each one runs inside
+[`raylibr_screenshot()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_screenshot.md)
+automatically:
 
 ``` r
 
-raylibr_screenshot(function() {
-  draw_rectangle(50L, 50L, 300L, 200L, "midnightblue")
-  draw_circle(200L, 150L, 60.0, "gold")
-  draw_triangle(
-    c(200, 70), c(140, 190), c(260, 190),
-    color_alpha("white", 0.5)
-  )
-  draw_text("raylibr", 145L, 220L, 30L, "white")
-})
+draw_rectangle(80L, 80L, 480L, 320L, "midnightblue")
+draw_circle(320L, 240L, 95.0, "gold")
+draw_triangle(
+  c(320, 110), c(225, 305), c(415, 305),
+  color_alpha("white", 0.5)
+)
+draw_text("raylibr", 235L, 345L, 50L, "white")
 ```
 
-![raylibr image](file5d8f1b55be1b.png)
-
-raylibr image
+![Image rendered by raylibr](file5c7b3a4a227b.png)
 
 ## The game loop
 

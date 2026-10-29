@@ -167,6 +167,13 @@ Other draw functions:
 
 ``` r
 if (FALSE) {
-draw_texture_pro(load_texture("file.png"), rectangle(10, 10, 200, 100), rectangle(10, 10, 200, 100), c(100, 100), 0.0, "red")
+draw_texture_pro(
+    load_texture("file.png"),
+    rectangle(10, 10, 200, 100),
+    rectangle(10, 10, 200, 100),
+    c(100, 100),
+    0.0,
+    "red"
+  )
 }
 ```

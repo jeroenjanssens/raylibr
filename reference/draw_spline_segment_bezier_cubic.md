@@ -153,5 +153,12 @@ Other draw functions:
 ## Examples
 
 ``` r
-raylibr_screenshot(function() draw_spline_segment_bezier_cubic(c(200, 50), c(200, 150), c(200, 150), c(350, 100), 3.0, "red"))
+raylibr_screenshot(function() draw_spline_segment_bezier_cubic(
+                                  c(200, 50),
+                                  c(200, 150),
+                                  c(200, 150),
+                                  c(350, 100),
+                                  3.0,
+                                  "red"
+                                ))
 ```

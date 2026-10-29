@@ -146,5 +146,11 @@ Other draw functions:
 ## Examples
 
 ``` r
-raylibr_screenshot(function() draw_spline_segment_bezier_quadratic(c(200, 50), c(200, 150), c(300, 250), 3.0, "red"))
+raylibr_screenshot(function() draw_spline_segment_bezier_quadratic(
+                                  c(200, 50),
+                                  c(200, 150),
+                                  c(300, 250),
+                                  3.0,
+                                  "red"
+                                ))
 ```

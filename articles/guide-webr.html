@@ -15,8 +15,17 @@
 <link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="webR">
-<script src="https://jeroenjanssens.github.io/raylibr/coi-serviceworker.js"></script>
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<meta property="og:title" content="webR">
+<script>
+(function() {
+  var m = location.pathname.match(/^(.*?\/)(articles|reference|news)\//);
+  var root = m ? m[1] : location.pathname.substring(0, location.pathname.lastIndexOf('/') + 1);
+  var s = document.createElement('script');
+  s.src = root + 'coi-serviceworker.js';
+  document.head.appendChild(s);
+})();
+</script>
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -26,7 +35,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">raylibr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.0.9001</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,6 +69,7 @@
     <li><a class="dropdown-item" href="../articles/demo-mouse.html">Mouse Test</a></li>
     <li><a class="dropdown-item" href="../articles/demo-balls.html">Bouncing Balls</a></li>
     <li><a class="dropdown-item" href="../articles/demo-snake.html">Snake</a></li>
+    <li><a class="dropdown-item" href="../articles/demo-tetris.html">Tetris</a></li>
     <li><a class="dropdown-item" href="../articles/demo-stroop.html">Stroop Test</a></li>
     <li><a class="dropdown-item" href="../articles/demo-cubes.html">Waving Cubes</a></li>
     <li><a class="dropdown-item" href="../articles/demo-beatbox.html">Beatbox</a></li>
@@ -164,8 +174,8 @@ thread. Rendering and input are bridged across threads:</p>
 <p><strong>Frame transfer</strong>: Raylib’s
 <code>SwapScreenBuffer()</code> calls <code>gl.readPixels()</code> on
 the OffscreenCanvas, then sends pixel data to the main thread via
-<code>BroadcastChannel.postMessage()</code>. The main thread flips the
-rows (WebGL is bottom-up) and draws to the visible
+<code>self.postMessage()</code> with a transferable buffer. The main
+thread flips the rows (WebGL is bottom-up) and draws to the visible
 <code>&lt;canvas&gt;</code> with <code>putImageData()</code>.</p>
 <p><strong>Input forwarding</strong>: The main thread writes mouse
 coordinates and key codes to a <code>SharedArrayBuffer</code>. Raylib’s
@@ -208,58 +218,82 @@ native install</li>
 <div class="section level2">
 <h2 id="html-host-page">HTML host page<a class="anchor" aria-label="anchor" href="#html-host-page"></a>
 </h2>
-<p>Each demo page follows this pattern:</p>
+<p>Each demo page intercepts webR’s internal Web Worker to receive frame
+data and forward input. Here is the minimal pattern:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">canvas</span><span class="ot"> id</span><span class="op">=</span><span class="st">"canvas"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"600"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"400"</span><span class="dt">&gt;&lt;/</span><span class="kw">canvas</span><span class="dt">&gt;</span></span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">"module"</span><span class="dt">&gt;</span></span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="im">import</span> { WebR } <span class="im">from</span> <span class="st">'https://webr.r-wasm.org/v0.6.0/webr.mjs'</span><span class="op">;</span></span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="kw">const</span> canvas <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'canvas'</span>)<span class="op">;</span></span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="kw">const</span> ctx2d <span class="op">=</span> canvas<span class="op">.</span><span class="fu">getContext</span>(<span class="st">'2d'</span>)<span class="op">;</span></span>
-<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="kw">let</span> inputSAB <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
-<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="co">// Receive frames and SAB from worker</span></span>
-<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="kw">const</span> bc <span class="op">=</span> <span class="kw">new</span> <span class="fu">BroadcastChannel</span>(<span class="st">'raylibr-frames'</span>)<span class="op">;</span></span>
-<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>bc<span class="op">.</span><span class="at">onmessage</span> <span class="op">=</span> (e) <span class="kw">=&gt;</span> {</span>
-<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a>  <span class="cf">if</span> (e<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">t</span> <span class="op">===</span> <span class="st">'f'</span>) {</span>
-<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a>    <span class="kw">const</span> src <span class="op">=</span> <span class="kw">new</span> <span class="bu">Uint8ClampedArray</span>(e<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">px</span>)<span class="op">;</span></span>
-<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a>    <span class="kw">const</span> w <span class="op">=</span> e<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">w</span><span class="op">,</span> h <span class="op">=</span> e<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">h</span><span class="op">,</span> stride <span class="op">=</span> w <span class="op">*</span> <span class="dv">4</span><span class="op">;</span></span>
-<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a>    <span class="kw">const</span> dst <span class="op">=</span> <span class="kw">new</span> <span class="bu">Uint8ClampedArray</span>(src<span class="op">.</span><span class="at">length</span>)<span class="op">;</span></span>
-<span id="cb6-17"><a href="#cb6-17" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> y <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> y <span class="op">&lt;</span> h<span class="op">;</span> y<span class="op">++</span>) {</span>
-<span id="cb6-18"><a href="#cb6-18" tabindex="-1"></a>      dst<span class="op">.</span><span class="fu">set</span>(src<span class="op">.</span><span class="fu">subarray</span>((h <span class="op">-</span> <span class="dv">1</span> <span class="op">-</span> y) <span class="op">*</span> stride<span class="op">,</span> (h <span class="op">-</span> y) <span class="op">*</span> stride)<span class="op">,</span> y <span class="op">*</span> stride)<span class="op">;</span></span>
-<span id="cb6-19"><a href="#cb6-19" tabindex="-1"></a>    }</span>
-<span id="cb6-20"><a href="#cb6-20" tabindex="-1"></a>    ctx2d<span class="op">.</span><span class="fu">putImageData</span>(<span class="kw">new</span> <span class="bu">ImageData</span>(dst<span class="op">,</span> w<span class="op">,</span> h)<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span>)<span class="op">;</span></span>
-<span id="cb6-21"><a href="#cb6-21" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (e<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">t</span> <span class="op">===</span> <span class="st">'sab'</span>) {</span>
-<span id="cb6-22"><a href="#cb6-22" tabindex="-1"></a>    inputSAB <span class="op">=</span> <span class="kw">new</span> <span class="bu">Int32Array</span>(e<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">sab</span>)<span class="op">;</span></span>
-<span id="cb6-23"><a href="#cb6-23" tabindex="-1"></a>  }</span>
-<span id="cb6-24"><a href="#cb6-24" tabindex="-1"></a>}<span class="op">;</span></span>
-<span id="cb6-25"><a href="#cb6-25" tabindex="-1"></a></span>
-<span id="cb6-26"><a href="#cb6-26" tabindex="-1"></a><span class="co">// Forward mouse input via SAB</span></span>
-<span id="cb6-27"><a href="#cb6-27" tabindex="-1"></a>canvas<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'mousemove'</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
-<span id="cb6-28"><a href="#cb6-28" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>inputSAB) <span class="cf">return</span><span class="op">;</span></span>
-<span id="cb6-29"><a href="#cb6-29" tabindex="-1"></a>  <span class="kw">const</span> rect <span class="op">=</span> canvas<span class="op">.</span><span class="fu">getBoundingClientRect</span>()<span class="op">;</span></span>
-<span id="cb6-30"><a href="#cb6-30" tabindex="-1"></a>  <span class="bu">Atomics</span><span class="op">.</span><span class="fu">store</span>(inputSAB<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(e<span class="op">.</span><span class="at">clientX</span> <span class="op">-</span> rect<span class="op">.</span><span class="at">left</span>))<span class="op">;</span></span>
-<span id="cb6-31"><a href="#cb6-31" tabindex="-1"></a>  <span class="bu">Atomics</span><span class="op">.</span><span class="fu">store</span>(inputSAB<span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(e<span class="op">.</span><span class="at">clientY</span> <span class="op">-</span> rect<span class="op">.</span><span class="at">top</span>))<span class="op">;</span></span>
-<span id="cb6-32"><a href="#cb6-32" tabindex="-1"></a>  <span class="bu">Atomics</span><span class="op">.</span><span class="fu">store</span>(inputSAB<span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">1</span>)<span class="op">;</span></span>
-<span id="cb6-33"><a href="#cb6-33" tabindex="-1"></a>})<span class="op">;</span></span>
-<span id="cb6-34"><a href="#cb6-34" tabindex="-1"></a></span>
-<span id="cb6-35"><a href="#cb6-35" tabindex="-1"></a><span class="co">// Forward keyboard input</span></span>
-<span id="cb6-36"><a href="#cb6-36" tabindex="-1"></a>canvas<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'keydown'</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
-<span id="cb6-37"><a href="#cb6-37" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>inputSAB) <span class="cf">return</span><span class="op">;</span></span>
-<span id="cb6-38"><a href="#cb6-38" tabindex="-1"></a>  <span class="kw">const</span> KEY_MAP <span class="op">=</span> { <span class="dt">ArrowUp</span><span class="op">:</span> <span class="dv">265</span><span class="op">,</span> <span class="dt">ArrowDown</span><span class="op">:</span> <span class="dv">264</span><span class="op">,</span> <span class="dt">ArrowLeft</span><span class="op">:</span> <span class="dv">263</span><span class="op">,</span> <span class="dt">ArrowRight</span><span class="op">:</span> <span class="dv">262</span> }<span class="op">;</span></span>
-<span id="cb6-39"><a href="#cb6-39" tabindex="-1"></a>  <span class="kw">const</span> raylibKey <span class="op">=</span> KEY_MAP[e<span class="op">.</span><span class="at">key</span>] <span class="op">||</span> e<span class="op">.</span><span class="at">key</span><span class="op">.</span><span class="fu">toUpperCase</span>()<span class="op">.</span><span class="fu">charCodeAt</span>(<span class="dv">0</span>)<span class="op">;</span></span>
-<span id="cb6-40"><a href="#cb6-40" tabindex="-1"></a>  <span class="bu">Atomics</span><span class="op">.</span><span class="fu">store</span>(inputSAB<span class="op">,</span> <span class="dv">3</span><span class="op">,</span> raylibKey)<span class="op">;</span></span>
-<span id="cb6-41"><a href="#cb6-41" tabindex="-1"></a>  e<span class="op">.</span><span class="fu">preventDefault</span>()<span class="op">;</span></span>
-<span id="cb6-42"><a href="#cb6-42" tabindex="-1"></a>})<span class="op">;</span></span>
-<span id="cb6-43"><a href="#cb6-43" tabindex="-1"></a></span>
-<span id="cb6-44"><a href="#cb6-44" tabindex="-1"></a><span class="co">// Start webR</span></span>
-<span id="cb6-45"><a href="#cb6-45" tabindex="-1"></a><span class="kw">const</span> webR <span class="op">=</span> <span class="kw">new</span> <span class="fu">WebR</span>()<span class="op">;</span></span>
-<span id="cb6-46"><a href="#cb6-46" tabindex="-1"></a><span class="cf">await</span> webR<span class="op">.</span><span class="fu">init</span>()<span class="op">;</span></span>
-<span id="cb6-47"><a href="#cb6-47" tabindex="-1"></a><span class="cf">await</span> webR<span class="op">.</span><span class="fu">installPackages</span>([<span class="st">'Rcpp'</span>]<span class="op">,</span> { <span class="dt">repos</span><span class="op">:</span> [<span class="st">'https://repo.r-wasm.org'</span>]<span class="op">,</span> <span class="dt">quiet</span><span class="op">:</span> <span class="kw">true</span> })<span class="op">;</span></span>
-<span id="cb6-48"><a href="#cb6-48" tabindex="-1"></a><span class="cf">await</span> webR<span class="op">.</span><span class="fu">installPackages</span>([<span class="st">'raylibr'</span>]<span class="op">,</span> { <span class="dt">repos</span><span class="op">:</span> [<span class="st">'./repo'</span>]<span class="op">,</span> <span class="dt">quiet</span><span class="op">:</span> <span class="kw">true</span> })<span class="op">;</span></span>
-<span id="cb6-49"><a href="#cb6-49" tabindex="-1"></a><span class="cf">await</span> webR<span class="op">.</span><span class="fu">evalR</span>(<span class="st">'library(raylibr)'</span>)<span class="op">;</span></span>
-<span id="cb6-50"><a href="#cb6-50" tabindex="-1"></a><span class="cf">await</span> webR<span class="op">.</span><span class="fu">evalR</span>(<span class="st">'demo("helloworld", package = "raylibr")'</span>)<span class="op">;</span></span>
-<span id="cb6-51"><a href="#cb6-51" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"loading"</span><span class="dt">&gt;</span>Loading raylibr...<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">"module"</span><span class="dt">&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="kw">const</span> canvas <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'canvas'</span>)<span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="kw">const</span> ctx2d <span class="op">=</span> canvas<span class="op">.</span><span class="fu">getContext</span>(<span class="st">'2d'</span>)<span class="op">;</span></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="kw">const</span> loading <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'loading'</span>)<span class="op">;</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a><span class="co">// Monkey-patch Worker to intercept webR's internal worker</span></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="kw">const</span> _OrigWorker <span class="op">=</span> <span class="bu">Worker</span><span class="op">;</span></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="kw">let</span> webRWorker <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>globalThis<span class="op">.</span><span class="at">Worker</span> <span class="op">=</span> <span class="kw">class</span> <span class="kw">extends</span> _OrigWorker {</span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a>  <span class="fu">constructor</span>(<span class="op">...</span>args) {</span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a>    <span class="kw">super</span>(<span class="op">...</span>args)<span class="op">;</span></span>
+<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a>    webRWorker <span class="op">=</span> <span class="kw">this</span><span class="op">;</span></span>
+<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'message'</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
+<span id="cb6-17"><a href="#cb6-17" tabindex="-1"></a>      <span class="cf">if</span> (e<span class="op">.</span><span class="at">data</span> <span class="op">&amp;&amp;</span> e<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">type</span> <span class="op">===</span> <span class="st">'__raylibr_cursor'</span>) {</span>
+<span id="cb6-18"><a href="#cb6-18" tabindex="-1"></a>        canvas<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">cursor</span> <span class="op">=</span> e<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">cursor</span><span class="op">;</span></span>
+<span id="cb6-19"><a href="#cb6-19" tabindex="-1"></a>      } <span class="cf">else</span> <span class="cf">if</span> (e<span class="op">.</span><span class="at">data</span> <span class="op">&amp;&amp;</span> e<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">type</span> <span class="op">===</span> <span class="st">'__raylibr_frame'</span>) {</span>
+<span id="cb6-20"><a href="#cb6-20" tabindex="-1"></a>        <span class="co">// Row-flip: WebGL reads bottom-up, canvas expects top-down</span></span>
+<span id="cb6-21"><a href="#cb6-21" tabindex="-1"></a>        <span class="kw">const</span> src <span class="op">=</span> <span class="kw">new</span> <span class="bu">Uint8ClampedArray</span>(e<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">px</span>)<span class="op">;</span></span>
+<span id="cb6-22"><a href="#cb6-22" tabindex="-1"></a>        <span class="kw">const</span> w <span class="op">=</span> e<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">w</span><span class="op">,</span> h <span class="op">=</span> e<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">h</span><span class="op">,</span> stride <span class="op">=</span> w <span class="op">*</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb6-23"><a href="#cb6-23" tabindex="-1"></a>        <span class="kw">const</span> dst <span class="op">=</span> <span class="kw">new</span> <span class="bu">Uint8ClampedArray</span>(src<span class="op">.</span><span class="at">length</span>)<span class="op">;</span></span>
+<span id="cb6-24"><a href="#cb6-24" tabindex="-1"></a>        <span class="cf">for</span> (<span class="kw">let</span> y <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> y <span class="op">&lt;</span> h<span class="op">;</span> y<span class="op">++</span>) {</span>
+<span id="cb6-25"><a href="#cb6-25" tabindex="-1"></a>          dst<span class="op">.</span><span class="fu">set</span>(src<span class="op">.</span><span class="fu">subarray</span>((h <span class="op">-</span> <span class="dv">1</span> <span class="op">-</span> y) <span class="op">*</span> stride<span class="op">,</span> (h <span class="op">-</span> y) <span class="op">*</span> stride)<span class="op">,</span> y <span class="op">*</span> stride)<span class="op">;</span></span>
+<span id="cb6-26"><a href="#cb6-26" tabindex="-1"></a>        }</span>
+<span id="cb6-27"><a href="#cb6-27" tabindex="-1"></a>        ctx2d<span class="op">.</span><span class="fu">putImageData</span>(<span class="kw">new</span> <span class="bu">ImageData</span>(dst<span class="op">,</span> w<span class="op">,</span> h)<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb6-28"><a href="#cb6-28" tabindex="-1"></a>        <span class="cf">if</span> (loading<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">!==</span> <span class="st">'none'</span>) loading<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">'none'</span><span class="op">;</span></span>
+<span id="cb6-29"><a href="#cb6-29" tabindex="-1"></a>      }</span>
+<span id="cb6-30"><a href="#cb6-30" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb6-31"><a href="#cb6-31" tabindex="-1"></a>  }</span>
+<span id="cb6-32"><a href="#cb6-32" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb6-33"><a href="#cb6-33" tabindex="-1"></a></span>
+<span id="cb6-34"><a href="#cb6-34" tabindex="-1"></a><span class="im">import</span> { WebR } <span class="im">from</span> <span class="st">'https://webr.r-wasm.org/v0.6.0/webr.mjs'</span><span class="op">;</span></span>
+<span id="cb6-35"><a href="#cb6-35" tabindex="-1"></a></span>
+<span id="cb6-36"><a href="#cb6-36" tabindex="-1"></a><span class="co">// Audio unlock (needed for demos that play sound)</span></span>
+<span id="cb6-37"><a href="#cb6-37" tabindex="-1"></a>canvas<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"click"</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb6-38"><a href="#cb6-38" tabindex="-1"></a>  <span class="cf">if</span> (webRWorker) webRWorker<span class="op">.</span><span class="fu">postMessage</span>({<span class="dt">type</span><span class="op">:</span> <span class="st">"__raylibr_audio_unlock"</span>})<span class="op">;</span></span>
+<span id="cb6-39"><a href="#cb6-39" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb6-40"><a href="#cb6-40" tabindex="-1"></a></span>
+<span id="cb6-41"><a href="#cb6-41" tabindex="-1"></a><span class="co">// Start webR</span></span>
+<span id="cb6-42"><a href="#cb6-42" tabindex="-1"></a><span class="kw">const</span> webR <span class="op">=</span> <span class="kw">new</span> <span class="fu">WebR</span>()<span class="op">;</span></span>
+<span id="cb6-43"><a href="#cb6-43" tabindex="-1"></a><span class="cf">await</span> webR<span class="op">.</span><span class="fu">init</span>()<span class="op">;</span></span>
+<span id="cb6-44"><a href="#cb6-44" tabindex="-1"></a><span class="cf">await</span> webR<span class="op">.</span><span class="fu">installPackages</span>([<span class="st">'Rcpp'</span>]<span class="op">,</span> { <span class="dt">repos</span><span class="op">:</span> [<span class="st">'https://repo.r-wasm.org'</span>]<span class="op">,</span> <span class="dt">quiet</span><span class="op">:</span> <span class="kw">true</span> })<span class="op">;</span></span>
+<span id="cb6-45"><a href="#cb6-45" tabindex="-1"></a><span class="kw">const</span> localRepo <span class="op">=</span> <span class="kw">new</span> <span class="fu">URL</span>(<span class="st">'repo'</span><span class="op">,</span> <span class="bu">window</span><span class="op">.</span><span class="at">location</span><span class="op">.</span><span class="at">href</span>)<span class="op">.</span><span class="at">href</span><span class="op">;</span></span>
+<span id="cb6-46"><a href="#cb6-46" tabindex="-1"></a><span class="cf">await</span> webR<span class="op">.</span><span class="fu">installPackages</span>([<span class="st">'raylibr'</span>]<span class="op">,</span> { <span class="dt">repos</span><span class="op">:</span> [localRepo]<span class="op">,</span> <span class="dt">quiet</span><span class="op">:</span> <span class="kw">true</span> })<span class="op">;</span></span>
+<span id="cb6-47"><a href="#cb6-47" tabindex="-1"></a><span class="cf">await</span> webR<span class="op">.</span><span class="fu">evalR</span>(<span class="st">'library(raylibr)'</span>)<span class="op">;</span></span>
+<span id="cb6-48"><a href="#cb6-48" tabindex="-1"></a><span class="cf">await</span> webR<span class="op">.</span><span class="fu">evalR</span>(<span class="st">'...'</span>)<span class="op">;</span>  <span class="co">// Your R code here</span></span>
+<span id="cb6-49"><a href="#cb6-49" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>For demos that need input, listen for the <code>__raylibr_sab</code>
+message to receive the SharedArrayBuffer, then forward mouse/keyboard
+events by writing to it with <code>Atomics.store()</code>:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co">// Inside the Worker message listener, add:</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="cf">if</span> (e<span class="op">.</span><span class="at">data</span> <span class="op">&amp;&amp;</span> e<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">type</span> <span class="op">===</span> <span class="st">'__raylibr_sab'</span>) {</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>  inputSAB <span class="op">=</span> <span class="kw">new</span> <span class="bu">Int32Array</span>(e<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">sab</span>)<span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>}</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="co">// Forward mouse position</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>canvas<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'mousemove'</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>inputSAB) <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>  <span class="kw">const</span> rect <span class="op">=</span> canvas<span class="op">.</span><span class="fu">getBoundingClientRect</span>()<span class="op">;</span></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>  <span class="bu">Atomics</span><span class="op">.</span><span class="fu">store</span>(inputSAB<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(e<span class="op">.</span><span class="at">clientX</span> <span class="op">-</span> rect<span class="op">.</span><span class="at">left</span>))<span class="op">;</span></span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>  <span class="bu">Atomics</span><span class="op">.</span><span class="fu">store</span>(inputSAB<span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(e<span class="op">.</span><span class="at">clientY</span> <span class="op">-</span> rect<span class="op">.</span><span class="at">top</span>))<span class="op">;</span></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>  <span class="bu">Atomics</span><span class="op">.</span><span class="fu">store</span>(inputSAB<span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a><span class="co">// Forward keyboard input (key pressed)</span></span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a>canvas<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'keydown'</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>inputSAB) <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a>  <span class="kw">const</span> KEY_MAP <span class="op">=</span> { <span class="dt">ArrowUp</span><span class="op">:</span> <span class="dv">265</span><span class="op">,</span> <span class="dt">ArrowDown</span><span class="op">:</span> <span class="dv">264</span><span class="op">,</span> <span class="dt">ArrowLeft</span><span class="op">:</span> <span class="dv">263</span><span class="op">,</span> <span class="dt">ArrowRight</span><span class="op">:</span> <span class="dv">262</span> }<span class="op">;</span></span>
+<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a>  <span class="kw">const</span> raylibKey <span class="op">=</span> KEY_MAP[e<span class="op">.</span><span class="at">key</span>] <span class="op">||</span> e<span class="op">.</span><span class="at">key</span><span class="op">.</span><span class="fu">toUpperCase</span>()<span class="op">.</span><span class="fu">charCodeAt</span>(<span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb7-20"><a href="#cb7-20" tabindex="-1"></a>  <span class="bu">Atomics</span><span class="op">.</span><span class="fu">store</span>(inputSAB<span class="op">,</span> <span class="dv">3</span><span class="op">,</span> raylibKey)<span class="op">;</span></span>
+<span id="cb7-21"><a href="#cb7-21" tabindex="-1"></a>  e<span class="op">.</span><span class="fu">preventDefault</span>()<span class="op">;</span></span>
+<span id="cb7-22"><a href="#cb7-22" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="sharedarraybuffer-layout">SharedArrayBuffer layout<a class="anchor" aria-label="anchor" href="#sharedarraybuffer-layout"></a>
@@ -306,12 +340,40 @@ native install</li>
 (consumed)</td>
 </tr>
 <tr class="odd">
-<td>4-7</td>
-<td>Reserved</td>
-<td></td>
+<td>4</td>
+<td>Left mouse button (0/1)</td>
+<td>
+<code>Atomics.store</code> / <code>Atomics.load</code>
+</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Right mouse button (0/1)</td>
+<td>
+<code>Atomics.store</code> / <code>Atomics.load</code>
+</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Key-down bitmask</td>
+<td>
+<code>Atomics.or</code> / <code>Atomics.and</code> /
+<code>Atomics.load</code>
+</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Char pressed (code point)</td>
+<td>
+<code>Atomics.store</code> / <code>Atomics.exchange</code>
+(consumed)</td>
 </tr>
 </tbody>
 </table>
+<p>The key-down bitmask (index 6) encodes held-key state as bit flags:
+W=1, A=2, S=4, D=8, Left=16, Right=32, Up=64, Down=128, Space=256,
+[=512, ]=1024, .=2048, ,=4096, LShift=8192, RShift=16384. Not all demos
+use all bits.</p>
 </div>
 <div class="section level2">
 <h2 id="cross-origin-isolation">Cross-origin isolation<a class="anchor" aria-label="anchor" href="#cross-origin-isolation"></a>
@@ -331,21 +393,30 @@ without these headers but is slower.</p>
 </h2>
 <ul>
 <li>
-<strong>No audio</strong> in worker mode (Web Audio API requires the
-main thread)</li>
-<li>
 <strong>No fullscreen or window resizing</strong> (OffscreenCanvas
 has fixed dimensions)</li>
 <li>
 <strong>No touch input</strong> forwarding (could be added via
 SAB)</li>
 <li>
-<strong>One instance per page</strong> (BroadcastChannel uses a
-fixed name)</li>
+<strong>One instance per page</strong> (the Worker monkey-patch
+captures a single worker reference)</li>
 <li>
 <strong>No native file system</strong> — use
 <code><a href="../reference/raylibr_resource.html">raylibr_resource()</a></code> for bundled assets</li>
 </ul>
+</div>
+<div class="section level2">
+<h2 id="audio">Audio<a class="anchor" aria-label="anchor" href="#audio"></a>
+</h2>
+<p>Audio works in worker mode via SharedArrayBuffer ring buffers. The
+worker generates PCM data each frame (called from
+<code>SwapScreenBuffer</code>), and the main thread’s
+<code>ScriptProcessorNode</code> reads from the ring buffer for
+playback. See <code>raylibr-audio.js</code> for the proxy implementation
+and the <code>cubes</code> and <code>beatbox</code> demos for examples.
+A user click is required to unlock the <code>AudioContext</code>
+(browser autoplay policy).</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>

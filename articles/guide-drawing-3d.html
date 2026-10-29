@@ -15,8 +15,17 @@
 <link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Drawing 3D">
-<script src="https://jeroenjanssens.github.io/raylibr/coi-serviceworker.js"></script>
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<meta property="og:title" content="Drawing 3D">
+<script>
+(function() {
+  var m = location.pathname.match(/^(.*?\/)(articles|reference|news)\//);
+  var root = m ? m[1] : location.pathname.substring(0, location.pathname.lastIndexOf('/') + 1);
+  var s = document.createElement('script');
+  s.src = root + 'coi-serviceworker.js';
+  document.head.appendChild(s);
+})();
+</script>
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -26,7 +35,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">raylibr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.0.9001</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,6 +69,7 @@
     <li><a class="dropdown-item" href="../articles/demo-mouse.html">Mouse Test</a></li>
     <li><a class="dropdown-item" href="../articles/demo-balls.html">Bouncing Balls</a></li>
     <li><a class="dropdown-item" href="../articles/demo-snake.html">Snake</a></li>
+    <li><a class="dropdown-item" href="../articles/demo-tetris.html">Tetris</a></li>
     <li><a class="dropdown-item" href="../articles/demo-stroop.html">Stroop Test</a></li>
     <li><a class="dropdown-item" href="../articles/demo-cubes.html">Waving Cubes</a></li>
     <li><a class="dropdown-item" href="../articles/demo-beatbox.html">Beatbox</a></li>
@@ -98,10 +108,10 @@
 
     
     
-<p>This guide covers 3D shape rendering. Every example uses
-<code><a href="../reference/raylibr_screenshot_3d.html">raylibr_screenshot_3d()</a></code>, which sets up a hidden window with
-a camera at <code>c(4, 4, 4)</code> looking at the origin, draws a
-reference grid, then runs your drawing code.</p>
+<p>This guide covers 3D shape rendering. Every snippet shows only the
+drawing code; it runs inside <code><a href="../reference/raylibr_screenshot_3d.html">raylibr_screenshot_3d()</a></code>, which
+sets up a hidden window with a camera at <code>c(4, 4, 4)</code> looking
+at the origin, draws a reference grid, then runs the drawing code.</p>
 <div class="section level2">
 <h2 id="d-coordinate-system">3D coordinate system<a class="anchor" aria-label="anchor" href="#d-coordinate-system"></a>
 </h2>
@@ -145,26 +155,18 @@ coordinate conversion.</p>
 <p><code><a href="../reference/raylibr_screenshot_3d.html">raylibr_screenshot_3d()</a></code> handles all this boilerplate —
 you just provide the drawing code:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot_3d.html">raylibr_screenshot_3d</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/draw_cube.html">draw_cube</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.5</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5d0a12d6b5ba.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/draw_cube.html">draw_cube</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.5</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="st">"tomato"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5bf4118c5856.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 </div>
 <div class="section level2">
 <h2 id="cubes">Cubes<a class="anchor" aria-label="anchor" href="#cubes"></a>
 </h2>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot_3d.html">raylibr_screenshot_3d</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/draw_cube.html">draw_cube</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1.5</span>, <span class="fl">0.5</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="st">"steelblue"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_cube_wires.html">draw_cube_wires</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1.5</span>, <span class="fl">0.5</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="st">"white"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_cube.html">draw_cube</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.5</span>, <span class="fl">0.75</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.5</span>, <span class="fl">1.5</span>, <span class="fl">1.5</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"gold"</span>, <span class="fl">0.7</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_cube_wires.html">draw_cube_wires</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.5</span>, <span class="fl">0.75</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.5</span>, <span class="fl">1.5</span>, <span class="fl">1.5</span>, <span class="st">"white"</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5d0a435ba0e.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/draw_cube.html">draw_cube</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1.5</span>, <span class="fl">0.5</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="st">"steelblue"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_cube_wires.html">draw_cube_wires</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1.5</span>, <span class="fl">0.5</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="st">"white"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_cube.html">draw_cube</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.5</span>, <span class="fl">0.75</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.5</span>, <span class="fl">1.5</span>, <span class="fl">1.5</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"gold"</span>, <span class="fl">0.7</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_cube_wires.html">draw_cube_wires</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.5</span>, <span class="fl">0.75</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.5</span>, <span class="fl">1.5</span>, <span class="fl">1.5</span>, <span class="st">"white"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5bf4a3c9fc5.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p><code><a href="../reference/draw_cube.html">draw_cube()</a></code> takes a center position and
 width/height/length as floats. <code><a href="../reference/draw_cube_wires.html">draw_cube_wires()</a></code> draws the
 wireframe outline. <code><a href="../reference/draw_cube_v.html">draw_cube_v()</a></code> and
@@ -175,14 +177,10 @@ wireframe outline. <code><a href="../reference/draw_cube_v.html">draw_cube_v()</
 <h2 id="spheres">Spheres<a class="anchor" aria-label="anchor" href="#spheres"></a>
 </h2>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot_3d.html">raylibr_screenshot_3d</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/draw_sphere.html">draw_sphere</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1.5</span>, <span class="fl">1</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.0</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_sphere_wires.html">draw_sphere_wires</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.5</span>, <span class="fl">1</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.0</span>, <span class="fl">12L</span>, <span class="fl">12L</span>, <span class="st">"dodgerblue"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_sphere_ex.html">draw_sphere_ex</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">1</span>, <span class="op">-</span><span class="fl">2</span><span class="op">)</span>, <span class="fl">0.7</span>, <span class="fl">16L</span>, <span class="fl">16L</span>, <span class="st">"mediumseagreen"</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5d0a416a0684.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/draw_sphere.html">draw_sphere</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1.5</span>, <span class="fl">1</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.0</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_sphere_wires.html">draw_sphere_wires</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.5</span>, <span class="fl">1</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.0</span>, <span class="fl">12L</span>, <span class="fl">12L</span>, <span class="st">"dodgerblue"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_sphere_ex.html">draw_sphere_ex</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">1</span>, <span class="op">-</span><span class="fl">2</span><span class="op">)</span>, <span class="fl">0.7</span>, <span class="fl">16L</span>, <span class="fl">16L</span>, <span class="st">"mediumseagreen"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5bf42916e9af.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p><code><a href="../reference/draw_sphere.html">draw_sphere()</a></code> takes a center and radius.
 <code><a href="../reference/draw_sphere_ex.html">draw_sphere_ex()</a></code> adds control over the number of rings and
 slices (more = smoother). <code><a href="../reference/draw_sphere_wires.html">draw_sphere_wires()</a></code> draws a
@@ -192,14 +190,10 @@ wireframe sphere.</p>
 <h2 id="cylinders-and-capsules">Cylinders and capsules<a class="anchor" aria-label="anchor" href="#cylinders-and-capsules"></a>
 </h2>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot_3d.html">raylibr_screenshot_3d</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/draw_cylinder.html">draw_cylinder</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">2</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="fl">2.0</span>, <span class="fl">16L</span>, <span class="st">"steelblue"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_cylinder_ex.html">draw_cylinder_ex</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">2</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">0.8</span>, <span class="fl">0.3</span>, <span class="fl">16L</span>, <span class="st">"gold"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_capsule.html">draw_capsule</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">0.5</span>, <span class="fl">8L</span>, <span class="fl">8L</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5d0a34e6e6b2.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/draw_cylinder.html">draw_cylinder</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">2</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="fl">2.0</span>, <span class="fl">16L</span>, <span class="st">"steelblue"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_cylinder_ex.html">draw_cylinder_ex</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">2</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">0.8</span>, <span class="fl">0.3</span>, <span class="fl">16L</span>, <span class="st">"gold"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_capsule.html">draw_capsule</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">0.5</span>, <span class="fl">8L</span>, <span class="fl">8L</span>, <span class="st">"tomato"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5bf44a9f3111.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p><code><a href="../reference/draw_cylinder.html">draw_cylinder()</a></code> takes a base position, top/bottom radii,
 height, and slices. <code><a href="../reference/draw_cylinder_ex.html">draw_cylinder_ex()</a></code> takes start and end
 points for arbitrary orientation. <code><a href="../reference/draw_capsule.html">draw_capsule()</a></code> is a
@@ -209,18 +203,14 @@ cylinder with rounded ends.</p>
 <h2 id="planes-and-lines">Planes and lines<a class="anchor" aria-label="anchor" href="#planes-and-lines"></a>
 </h2>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot_3d.html">raylibr_screenshot_3d</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/draw_plane.html">draw_plane</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">3</span><span class="op">)</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"steelblue"</span>, <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_line_3d.html">draw_line_3d</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">2</span>, <span class="fl">0</span>, <span class="op">-</span><span class="fl">2</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">2</span><span class="op">)</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_point_3d.html">draw_point_3d</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">2</span>, <span class="fl">0</span><span class="op">)</span>, <span class="st">"gold"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_triangle_3d.html">draw_triangle_3d</a></span><span class="op">(</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span>,</span>
-<span>    <span class="st">"mediumseagreen"</span></span>
-<span>  <span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5d0a6a3d754d.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/draw_plane.html">draw_plane</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">3</span><span class="op">)</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"steelblue"</span>, <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_line_3d.html">draw_line_3d</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">2</span>, <span class="fl">0</span>, <span class="op">-</span><span class="fl">2</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">2</span><span class="op">)</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_point_3d.html">draw_point_3d</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">2</span>, <span class="fl">0</span><span class="op">)</span>, <span class="st">"gold"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_triangle_3d.html">draw_triangle_3d</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span>,</span>
+<span>  <span class="st">"mediumseagreen"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5bf4514555b2.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p><code><a href="../reference/draw_plane.html">draw_plane()</a></code> draws a flat quad at a given position with
 a given size.</p>
 </div>
@@ -231,15 +221,11 @@ a given size.</p>
 centered at the origin. <code><a href="../reference/raylibr_screenshot_3d.html">raylibr_screenshot_3d()</a></code> includes
 <code>draw_grid(10L, 1.0)</code> automatically:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot_3d.html">raylibr_screenshot_3d</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="co"># The grid is already drawn by raylibr_screenshot_3d()</span></span>
-<span>  <span class="co"># Just add something to see the scale</span></span>
-<span>  <span class="fu"><a href="../reference/draw_cube.html">draw_cube</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.5</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"tomato"</span>, <span class="fl">0.6</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_cube.html">draw_cube</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">0.5</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"steelblue"</span>, <span class="fl">0.6</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5d0a47e24957.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<code class="sourceCode R"><span><span class="co"># The grid is already drawn by raylibr_screenshot_3d()</span></span>
+<span><span class="co"># Just add something to see the scale</span></span>
+<span><span class="fu"><a href="../reference/draw_cube.html">draw_cube</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.5</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"tomato"</span>, <span class="fl">0.6</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_cube.html">draw_cube</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">0.5</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"steelblue"</span>, <span class="fl">0.6</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5bf432dbd660.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p>Each grid square is 1 unit wide. The cubes above are 1 unit on each
 side, spaced 2 units apart.</p>
 </div>
@@ -249,14 +235,10 @@ side, spaced 2 units apart.</p>
 <p><code><a href="../reference/bounding_box.html">bounding_box()</a></code> defines an axis-aligned box by its min
 and max corners. Useful for collision detection and visualization:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot_3d.html">raylibr_screenshot_3d</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">bb</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bounding_box.html">bounding_box</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1</span>, <span class="fl">0</span>, <span class="op">-</span><span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_bounding_box.html">draw_bounding_box</a></span><span class="op">(</span><span class="va">bb</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_sphere.html">draw_sphere</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">0.5</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"gold"</span>, <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5d0a69239421.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<code class="sourceCode R"><span><span class="va">bb</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bounding_box.html">bounding_box</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1</span>, <span class="fl">0</span>, <span class="op">-</span><span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_bounding_box.html">draw_bounding_box</a></span><span class="op">(</span><span class="va">bb</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_sphere.html">draw_sphere</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">0.5</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"gold"</span>, <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5bf47a58200c.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 </div>
 <div class="section level2">
 <h2 id="models">Models<a class="anchor" aria-label="anchor" href="#models"></a>

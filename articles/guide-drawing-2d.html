@@ -15,8 +15,17 @@
 <link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Drawing 2D Shapes">
-<script src="https://jeroenjanssens.github.io/raylibr/coi-serviceworker.js"></script>
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<meta property="og:title" content="Drawing 2D Shapes">
+<script>
+(function() {
+  var m = location.pathname.match(/^(.*?\/)(articles|reference|news)\//);
+  var root = m ? m[1] : location.pathname.substring(0, location.pathname.lastIndexOf('/') + 1);
+  var s = document.createElement('script');
+  s.src = root + 'coi-serviceworker.js';
+  document.head.appendChild(s);
+})();
+</script>
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -26,7 +35,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">raylibr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.0.9001</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,6 +69,7 @@
     <li><a class="dropdown-item" href="../articles/demo-mouse.html">Mouse Test</a></li>
     <li><a class="dropdown-item" href="../articles/demo-balls.html">Bouncing Balls</a></li>
     <li><a class="dropdown-item" href="../articles/demo-snake.html">Snake</a></li>
+    <li><a class="dropdown-item" href="../articles/demo-tetris.html">Tetris</a></li>
     <li><a class="dropdown-item" href="../articles/demo-stroop.html">Stroop Test</a></li>
     <li><a class="dropdown-item" href="../articles/demo-cubes.html">Waving Cubes</a></li>
     <li><a class="dropdown-item" href="../articles/demo-beatbox.html">Beatbox</a></li>
@@ -99,54 +109,47 @@
     
     
 <p>This guide covers all 2D shape-drawing functions available in
-raylibr. Each example uses <code><a href="../reference/raylibr_screenshot.html">raylibr_screenshot()</a></code> which
-creates a hidden 400x300 window with a black background.</p>
+raylibr. Each snippet shows only the drawing code; it runs inside
+<code><a href="../reference/raylibr_screenshot.html">raylibr_screenshot()</a></code> which creates a hidden 640x480 window
+with a black background.</p>
 <div class="section level2">
 <h2 id="coordinate-system">Coordinate system<a class="anchor" aria-label="anchor" href="#coordinate-system"></a>
 </h2>
 <p>The origin <code>(0, 0)</code> is at the <strong>top-left</strong>
 corner. X increases to the right, Y increases downward.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="co"># Axes</span></span>
-<span>  <span class="fu"><a href="../reference/draw_line_ex.html">draw_line_ex</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">20</span>, <span class="fl">20</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">380</span>, <span class="fl">20</span><span class="op">)</span>, <span class="fl">2.0</span>, <span class="st">"grey50"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_line_ex.html">draw_line_ex</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">20</span>, <span class="fl">20</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">20</span>, <span class="fl">280</span><span class="op">)</span>, <span class="fl">2.0</span>, <span class="st">"grey50"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"x"</span>, <span class="fl">370L</span>, <span class="fl">5L</span>, <span class="fl">16L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"y"</span>, <span class="fl">5L</span>, <span class="fl">265L</span>, <span class="fl">16L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"(0,0)"</span>, <span class="fl">25L</span>, <span class="fl">5L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span>  <span class="co"># Arrowheads</span></span>
-<span>  <span class="fu"><a href="../reference/draw_triangle.html">draw_triangle</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">380</span>, <span class="fl">20</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">370</span>, <span class="fl">15</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">370</span>, <span class="fl">25</span><span class="op">)</span>, <span class="st">"grey50"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_triangle.html">draw_triangle</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">20</span>, <span class="fl">280</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">15</span>, <span class="fl">270</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">25</span>, <span class="fl">270</span><span class="op">)</span>, <span class="st">"grey50"</span><span class="op">)</span></span>
-<span>  <span class="co"># Sample points</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">100L</span>, <span class="fl">80L</span>, <span class="fl">5.0</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"(100, 80)"</span>, <span class="fl">110L</span>, <span class="fl">72L</span>, <span class="fl">14L</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">300L</span>, <span class="fl">200L</span>, <span class="fl">5.0</span>, <span class="st">"dodgerblue"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"(300, 200)"</span>, <span class="fl">220L</span>, <span class="fl">192L</span>, <span class="fl">14L</span>, <span class="st">"dodgerblue"</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5c7a60bafdfb.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<code class="sourceCode R"><span><span class="co"># Axes</span></span>
+<span><span class="fu"><a href="../reference/draw_line_ex.html">draw_line_ex</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">30</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">610</span>, <span class="fl">30</span><span class="op">)</span>, <span class="fl">3.0</span>, <span class="st">"grey50"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_line_ex.html">draw_line_ex</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">30</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">450</span><span class="op">)</span>, <span class="fl">3.0</span>, <span class="st">"grey50"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"x"</span>, <span class="fl">590L</span>, <span class="fl">5L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"y"</span>, <span class="fl">8L</span>, <span class="fl">425L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"(0,0)"</span>, <span class="fl">40L</span>, <span class="fl">5L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="co"># Arrowheads</span></span>
+<span><span class="fu"><a href="../reference/draw_triangle.html">draw_triangle</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">610</span>, <span class="fl">30</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">595</span>, <span class="fl">22</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">595</span>, <span class="fl">38</span><span class="op">)</span>, <span class="st">"grey50"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_triangle.html">draw_triangle</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">450</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">22</span>, <span class="fl">435</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">38</span>, <span class="fl">435</span><span class="op">)</span>, <span class="st">"grey50"</span><span class="op">)</span></span>
+<span><span class="co"># Sample points</span></span>
+<span><span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">160L</span>, <span class="fl">130L</span>, <span class="fl">8.0</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"(160, 130)"</span>, <span class="fl">175L</span>, <span class="fl">120L</span>, <span class="fl">20L</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">480L</span>, <span class="fl">320L</span>, <span class="fl">8.0</span>, <span class="st">"dodgerblue"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"(480, 320)"</span>, <span class="fl">345L</span>, <span class="fl">310L</span>, <span class="fl">20L</span>, <span class="st">"dodgerblue"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5b634fe9ec7f.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 </div>
 <div class="section level2">
 <h2 id="lines">Lines<a class="anchor" aria-label="anchor" href="#lines"></a>
 </h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/draw_line.html">draw_line</a></span><span class="op">(</span><span class="fl">20L</span>, <span class="fl">40L</span>, <span class="fl">380L</span>, <span class="fl">40L</span>, <span class="st">"grey50"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"draw_line"</span>, <span class="fl">10L</span>, <span class="fl">20L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/draw_line.html">draw_line</a></span><span class="op">(</span><span class="fl">30L</span>, <span class="fl">65L</span>, <span class="fl">610L</span>, <span class="fl">65L</span>, <span class="st">"grey50"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"draw_line"</span>, <span class="fl">15L</span>, <span class="fl">30L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
 <span></span>
-<span>  <span class="fu"><a href="../reference/draw_line_ex.html">draw_line_ex</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">20</span>, <span class="fl">100</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">380</span>, <span class="fl">100</span><span class="op">)</span>, <span class="fl">4.0</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"draw_line_ex (thick)"</span>, <span class="fl">10L</span>, <span class="fl">75L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_line_ex.html">draw_line_ex</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">160</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">610</span>, <span class="fl">160</span><span class="op">)</span>, <span class="fl">6.0</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"draw_line_ex (thick)"</span>, <span class="fl">15L</span>, <span class="fl">120L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
 <span></span>
-<span>  <span class="fu"><a href="../reference/draw_line_bezier.html">draw_line_bezier</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">20</span>, <span class="fl">170</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">380</span>, <span class="fl">170</span><span class="op">)</span>, <span class="fl">3.0</span>, <span class="st">"dodgerblue"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"draw_line_bezier"</span>, <span class="fl">10L</span>, <span class="fl">140L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_line_bezier.html">draw_line_bezier</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">270</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">610</span>, <span class="fl">270</span><span class="op">)</span>, <span class="fl">5.0</span>, <span class="st">"dodgerblue"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"draw_line_bezier"</span>, <span class="fl">15L</span>, <span class="fl">225L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
 <span></span>
-<span>  <span class="fu"><a href="../reference/draw_line_dashed.html">draw_line_dashed</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">20</span>, <span class="fl">240</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">380</span>, <span class="fl">240</span><span class="op">)</span>, <span class="fl">10.0</span>, <span class="fl">5.0</span>, <span class="st">"mediumseagreen"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"draw_line_dashed"</span>, <span class="fl">10L</span>, <span class="fl">215L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5c7a29ee9d90.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<span><span class="fu"><a href="../reference/draw_line_dashed.html">draw_line_dashed</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">385</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">610</span>, <span class="fl">385</span><span class="op">)</span>, <span class="fl">16.0</span>, <span class="fl">8.0</span>, <span class="st">"mediumseagreen"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"draw_line_dashed"</span>, <span class="fl">15L</span>, <span class="fl">345L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5b63448c436c.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p><code><a href="../reference/draw_line_ex.html">draw_line_ex()</a></code> and <code><a href="../reference/draw_line_bezier.html">draw_line_bezier()</a></code> take
 <code>Vector2</code> endpoints (two-element numeric vectors) and a
 thickness argument.</p>
@@ -155,22 +158,18 @@ thickness argument.</p>
 <h2 id="circles">Circles<a class="anchor" aria-label="anchor" href="#circles"></a>
 </h2>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">80L</span>, <span class="fl">100L</span>, <span class="fl">60.0</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"filled"</span>, <span class="fl">55L</span>, <span class="fl">170L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">130L</span>, <span class="fl">160L</span>, <span class="fl">85.0</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"filled"</span>, <span class="fl">106L</span>, <span class="fl">265L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
 <span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle_gradient.html">draw_circle_gradient</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">200</span>, <span class="fl">100</span><span class="op">)</span>, <span class="fl">60.0</span>, <span class="st">"gold"</span>, <span class="st">"orangered"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"gradient"</span>, <span class="fl">172L</span>, <span class="fl">170L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_circle_gradient.html">draw_circle_gradient</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">320</span>, <span class="fl">160</span><span class="op">)</span>, <span class="fl">85.0</span>, <span class="st">"gold"</span>, <span class="st">"orangered"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"gradient"</span>, <span class="fl">278L</span>, <span class="fl">265L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
 <span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle_lines.html">draw_circle_lines</a></span><span class="op">(</span><span class="fl">320L</span>, <span class="fl">100L</span>, <span class="fl">60.0</span>, <span class="st">"dodgerblue"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"lines"</span>, <span class="fl">298L</span>, <span class="fl">170L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_circle_lines.html">draw_circle_lines</a></span><span class="op">(</span><span class="fl">510L</span>, <span class="fl">160L</span>, <span class="fl">85.0</span>, <span class="st">"dodgerblue"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"lines"</span>, <span class="fl">488L</span>, <span class="fl">265L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
 <span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle_v.html">draw_circle_v</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">200</span>, <span class="fl">240</span><span class="op">)</span>, <span class="fl">30.0</span>, <span class="st">"mediumseagreen"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"draw_circle_v takes a Vector2 center"</span>, <span class="fl">80L</span>, <span class="fl">280L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5c7a482a6870.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<span><span class="fu"><a href="../reference/draw_circle_v.html">draw_circle_v</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">320</span>, <span class="fl">380</span><span class="op">)</span>, <span class="fl">50.0</span>, <span class="st">"mediumseagreen"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"draw_circle_v takes a Vector2 center"</span>, <span class="fl">121L</span>, <span class="fl">445L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5b63e166bba.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p><code><a href="../reference/draw_circle.html">draw_circle()</a></code> takes integer center coordinates, while
 <code><a href="../reference/draw_circle_v.html">draw_circle_v()</a></code> takes a <code>c(x, y)</code> vector.</p>
 </div>
@@ -178,31 +177,27 @@ thickness argument.</p>
 <h2 id="rectangles">Rectangles<a class="anchor" aria-label="anchor" href="#rectangles"></a>
 </h2>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">10L</span>, <span class="fl">10L</span>, <span class="fl">120L</span>, <span class="fl">60L</span>, <span class="st">"steelblue"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"filled"</span>, <span class="fl">40L</span>, <span class="fl">30L</span>, <span class="fl">14L</span>, <span class="st">"white"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">15L</span>, <span class="fl">15L</span>, <span class="fl">195L</span>, <span class="fl">95L</span>, <span class="st">"steelblue"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"filled"</span>, <span class="fl">88L</span>, <span class="fl">52L</span>, <span class="fl">20L</span>, <span class="st">"white"</span><span class="op">)</span></span>
 <span></span>
-<span>  <span class="fu"><a href="../reference/draw_rectangle_lines.html">draw_rectangle_lines</a></span><span class="op">(</span><span class="fl">140L</span>, <span class="fl">10L</span>, <span class="fl">120L</span>, <span class="fl">60L</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"outline"</span>, <span class="fl">165L</span>, <span class="fl">30L</span>, <span class="fl">14L</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_rectangle_lines.html">draw_rectangle_lines</a></span><span class="op">(</span><span class="fl">222L</span>, <span class="fl">15L</span>, <span class="fl">195L</span>, <span class="fl">95L</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"outline"</span>, <span class="fl">286L</span>, <span class="fl">52L</span>, <span class="fl">20L</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
 <span></span>
-<span>  <span class="fu"><a href="../reference/draw_rectangle_rounded.html">draw_rectangle_rounded</a></span><span class="op">(</span><span class="fu"><a href="../reference/rectangle.html">rectangle</a></span><span class="op">(</span><span class="fl">270</span>, <span class="fl">10</span>, <span class="fl">120</span>, <span class="fl">60</span><span class="op">)</span>, <span class="fl">0.3</span>, <span class="fl">10L</span>, <span class="st">"mediumseagreen"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"rounded"</span>, <span class="fl">293L</span>, <span class="fl">30L</span>, <span class="fl">14L</span>, <span class="st">"white"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_rectangle_rounded.html">draw_rectangle_rounded</a></span><span class="op">(</span><span class="fu"><a href="../reference/rectangle.html">rectangle</a></span><span class="op">(</span><span class="fl">430</span>, <span class="fl">15</span>, <span class="fl">195</span>, <span class="fl">95</span><span class="op">)</span>, <span class="fl">0.3</span>, <span class="fl">10L</span>, <span class="st">"mediumseagreen"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"rounded"</span>, <span class="fl">486L</span>, <span class="fl">52L</span>, <span class="fl">20L</span>, <span class="st">"white"</span><span class="op">)</span></span>
 <span></span>
-<span>  <span class="fu"><a href="../reference/draw_rectangle_gradient_v.html">draw_rectangle_gradient_v</a></span><span class="op">(</span><span class="fl">10L</span>, <span class="fl">90L</span>, <span class="fl">120L</span>, <span class="fl">60L</span>, <span class="st">"purple"</span>, <span class="st">"pink"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"gradient"</span>, <span class="fl">30L</span>, <span class="fl">110L</span>, <span class="fl">14L</span>, <span class="st">"white"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_rectangle_gradient_v.html">draw_rectangle_gradient_v</a></span><span class="op">(</span><span class="fl">15L</span>, <span class="fl">145L</span>, <span class="fl">195L</span>, <span class="fl">95L</span>, <span class="st">"purple"</span>, <span class="st">"pink"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"gradient"</span>, <span class="fl">70L</span>, <span class="fl">182L</span>, <span class="fl">20L</span>, <span class="st">"white"</span><span class="op">)</span></span>
 <span></span>
-<span>  <span class="fu"><a href="../reference/draw_rectangle_pro.html">draw_rectangle_pro</a></span><span class="op">(</span></span>
-<span>    <span class="fu"><a href="../reference/rectangle.html">rectangle</a></span><span class="op">(</span><span class="fl">260</span>, <span class="fl">120</span>, <span class="fl">120</span>, <span class="fl">60</span><span class="op">)</span>,</span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">60</span>, <span class="fl">30</span><span class="op">)</span>, <span class="fl">15.0</span>, <span class="st">"gold"</span></span>
-<span>  <span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"rotated (pro)"</span>, <span class="fl">230L</span>, <span class="fl">170L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_rectangle_pro.html">draw_rectangle_pro</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="../reference/rectangle.html">rectangle</a></span><span class="op">(</span><span class="fl">415</span>, <span class="fl">190</span>, <span class="fl">195</span>, <span class="fl">95</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">98</span>, <span class="fl">48</span><span class="op">)</span>, <span class="fl">15.0</span>, <span class="st">"gold"</span></span>
+<span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"rotated (pro)"</span>, <span class="fl">346L</span>, <span class="fl">270L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
 <span></span>
-<span>  <span class="fu"><a href="../reference/draw_rectangle_rec.html">draw_rectangle_rec</a></span><span class="op">(</span><span class="fu"><a href="../reference/rectangle.html">rectangle</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">200</span>, <span class="fl">380</span>, <span class="fl">40</span><span class="op">)</span>, <span class="st">"grey20"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"draw_rectangle_rec takes a rectangle()"</span>, <span class="fl">20L</span>, <span class="fl">210L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5c7a6d61220e.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<span><span class="fu"><a href="../reference/draw_rectangle_rec.html">draw_rectangle_rec</a></span><span class="op">(</span><span class="fu"><a href="../reference/rectangle.html">rectangle</a></span><span class="op">(</span><span class="fl">15</span>, <span class="fl">330</span>, <span class="fl">610</span>, <span class="fl">65</span><span class="op">)</span>, <span class="st">"grey20"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"draw_rectangle_rec takes a rectangle()"</span>, <span class="fl">35L</span>, <span class="fl">352L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5b6377e5d49c.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p><code><a href="../reference/draw_rectangle_pro.html">draw_rectangle_pro()</a></code> supports rotation around an origin
 point. <code><a href="../reference/draw_rectangle_rec.html">draw_rectangle_rec()</a></code> and
 <code><a href="../reference/draw_rectangle_rounded.html">draw_rectangle_rounded()</a></code> take a <code><a href="../reference/rectangle.html">rectangle()</a></code>
@@ -212,21 +207,17 @@ struct.</p>
 <h2 id="triangles-and-polygons">Triangles and polygons<a class="anchor" aria-label="anchor" href="#triangles-and-polygons"></a>
 </h2>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/draw_triangle.html">draw_triangle</a></span><span class="op">(</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">30</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">180</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">170</span>, <span class="fl">180</span><span class="op">)</span>,</span>
-<span>    <span class="st">"tomato"</span></span>
-<span>  <span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"triangle"</span>, <span class="fl">55L</span>, <span class="fl">190L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/draw_triangle.html">draw_triangle</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">160</span>, <span class="fl">90</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">50</span>, <span class="fl">330</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">270</span>, <span class="fl">330</span><span class="op">)</span>,</span>
+<span>  <span class="st">"tomato"</span></span>
+<span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"triangle"</span>, <span class="fl">121L</span>, <span class="fl">350L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
 <span></span>
-<span>  <span class="fu"><a href="../reference/draw_poly.html">draw_poly</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">270</span>, <span class="fl">100</span><span class="op">)</span>, <span class="fl">6L</span>, <span class="fl">70.0</span>, <span class="fl">0.0</span>, <span class="st">"steelblue"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"hexagon"</span>, <span class="fl">238L</span>, <span class="fl">190L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_poly.html">draw_poly</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">430</span>, <span class="fl">210</span><span class="op">)</span>, <span class="fl">6L</span>, <span class="fl">110.0</span>, <span class="fl">0.0</span>, <span class="st">"steelblue"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"hexagon"</span>, <span class="fl">389L</span>, <span class="fl">350L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
 <span></span>
-<span>  <span class="fu"><a href="../reference/draw_poly_lines_ex.html">draw_poly_lines_ex</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">270</span>, <span class="fl">100</span><span class="op">)</span>, <span class="fl">6L</span>, <span class="fl">70.0</span>, <span class="fl">0.0</span>, <span class="fl">3.0</span>, <span class="st">"gold"</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5c7a11971e6a.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<span><span class="fu"><a href="../reference/draw_poly_lines_ex.html">draw_poly_lines_ex</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">430</span>, <span class="fl">210</span><span class="op">)</span>, <span class="fl">6L</span>, <span class="fl">110.0</span>, <span class="fl">0.0</span>, <span class="fl">5.0</span>, <span class="st">"gold"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5b6310b7ae8e.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p><code><a href="../reference/draw_poly.html">draw_poly()</a></code> draws a regular polygon: center, number of
 sides, radius, rotation, color. <code><a href="../reference/draw_poly_lines_ex.html">draw_poly_lines_ex()</a></code> draws
 its outline with a given thickness.</p>
@@ -238,18 +229,14 @@ render.</p>
 <h2 id="arcs-and-rings">Arcs and rings<a class="anchor" aria-label="anchor" href="#arcs-and-rings"></a>
 </h2>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle_sector.html">draw_circle_sector</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">120</span>, <span class="fl">150</span><span class="op">)</span>, <span class="fl">80.0</span>, <span class="fl">0.0</span>, <span class="fl">270.0</span>, <span class="fl">36L</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle_sector_lines.html">draw_circle_sector_lines</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">120</span>, <span class="fl">150</span><span class="op">)</span>, <span class="fl">80.0</span>, <span class="fl">0.0</span>, <span class="fl">270.0</span>, <span class="fl">36L</span>, <span class="st">"white"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"sector 0-270"</span>, <span class="fl">60L</span>, <span class="fl">245L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/draw_circle_sector.html">draw_circle_sector</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">190</span>, <span class="fl">240</span><span class="op">)</span>, <span class="fl">130.0</span>, <span class="fl">0.0</span>, <span class="fl">270.0</span>, <span class="fl">36L</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_circle_sector_lines.html">draw_circle_sector_lines</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">190</span>, <span class="fl">240</span><span class="op">)</span>, <span class="fl">130.0</span>, <span class="fl">0.0</span>, <span class="fl">270.0</span>, <span class="fl">36L</span>, <span class="st">"white"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"sector 0-270"</span>, <span class="fl">123L</span>, <span class="fl">395L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
 <span></span>
-<span>  <span class="fu"><a href="../reference/draw_ring.html">draw_ring</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">300</span>, <span class="fl">150</span><span class="op">)</span>, <span class="fl">40.0</span>, <span class="fl">80.0</span>, <span class="fl">0.0</span>, <span class="fl">270.0</span>, <span class="fl">36L</span>, <span class="st">"dodgerblue"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_ring_lines.html">draw_ring_lines</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">300</span>, <span class="fl">150</span><span class="op">)</span>, <span class="fl">40.0</span>, <span class="fl">80.0</span>, <span class="fl">0.0</span>, <span class="fl">270.0</span>, <span class="fl">36L</span>, <span class="st">"white"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"ring 0-270"</span>, <span class="fl">252L</span>, <span class="fl">245L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5c7a4cd35634.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<span><span class="fu"><a href="../reference/draw_ring.html">draw_ring</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">480</span>, <span class="fl">240</span><span class="op">)</span>, <span class="fl">65.0</span>, <span class="fl">130.0</span>, <span class="fl">0.0</span>, <span class="fl">270.0</span>, <span class="fl">36L</span>, <span class="st">"dodgerblue"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_ring_lines.html">draw_ring_lines</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">480</span>, <span class="fl">240</span><span class="op">)</span>, <span class="fl">65.0</span>, <span class="fl">130.0</span>, <span class="fl">0.0</span>, <span class="fl">270.0</span>, <span class="fl">36L</span>, <span class="st">"white"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"ring 0-270"</span>, <span class="fl">428L</span>, <span class="fl">395L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5b6347e9cd40.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p>Angles are in degrees. <code>0</code> points right, and the arc
 sweeps <strong>counter-clockwise</strong>. The <code>segments</code>
 parameter controls smoothness (more segments = smoother curves).</p>
@@ -261,25 +248,21 @@ parameter controls smoothness (more segments = smoother curves).</p>
 two columns for x and y):</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">pts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
-<span>  <span class="fl">30</span>, <span class="fl">250</span>,</span>
-<span>  <span class="fl">120</span>, <span class="fl">50</span>,</span>
-<span>  <span class="fl">200</span>, <span class="fl">200</span>,</span>
-<span>  <span class="fl">280</span>, <span class="fl">50</span>,</span>
-<span>  <span class="fl">370</span>, <span class="fl">250</span></span>
+<span>  <span class="fl">50</span>, <span class="fl">400</span>,</span>
+<span>  <span class="fl">190</span>, <span class="fl">80</span>,</span>
+<span>  <span class="fl">320</span>, <span class="fl">320</span>,</span>
+<span>  <span class="fl">450</span>, <span class="fl">80</span>,</span>
+<span>  <span class="fl">590</span>, <span class="fl">400</span></span>
 <span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fl">2</span>, byrow <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/draw_spline_catmull_rom.html">draw_spline_catmull_rom</a></span><span class="op">(</span><span class="va">pts</span>, <span class="fl">3.0</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_spline_linear.html">draw_spline_linear</a></span><span class="op">(</span><span class="va">pts</span>, <span class="fl">1.0</span>, <span class="st">"grey50"</span><span class="op">)</span></span>
-<span>  <span class="co"># Draw control points</span></span>
-<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_len</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">pts</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">pts</span><span class="op">[</span><span class="va">i</span>, <span class="fl">1</span><span class="op">]</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">pts</span><span class="op">[</span><span class="va">i</span>, <span class="fl">2</span><span class="op">]</span><span class="op">)</span>, <span class="fl">5.0</span>, <span class="st">"white"</span><span class="op">)</span></span>
-<span>  <span class="op">}</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"Catmull-Rom spline with control points"</span>, <span class="fl">50L</span>, <span class="fl">10L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5c7a742eb3f2.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<span><span class="fu"><a href="../reference/draw_spline_catmull_rom.html">draw_spline_catmull_rom</a></span><span class="op">(</span><span class="va">pts</span>, <span class="fl">5.0</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_spline_linear.html">draw_spline_linear</a></span><span class="op">(</span><span class="va">pts</span>, <span class="fl">1.0</span>, <span class="st">"grey50"</span><span class="op">)</span></span>
+<span><span class="co"># Draw control points</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_len</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">pts</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">pts</span><span class="op">[</span><span class="va">i</span>, <span class="fl">1</span><span class="op">]</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">pts</span><span class="op">[</span><span class="va">i</span>, <span class="fl">2</span><span class="op">]</span><span class="op">)</span>, <span class="fl">8.0</span>, <span class="st">"white"</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"Catmull-Rom spline with control points"</span>, <span class="fl">80L</span>, <span class="fl">15L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5b63400f1b9e.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p>Other spline types include <code><a href="../reference/draw_spline_bezier_cubic.html">draw_spline_bezier_cubic()</a></code>,
 <code><a href="../reference/draw_spline_bezier_quadratic.html">draw_spline_bezier_quadratic()</a></code>, and
 <code><a href="../reference/draw_spline_basis.html">draw_spline_basis()</a></code>.</p>
@@ -291,15 +274,11 @@ two columns for x and y):</p>
 draw on top of earlier ones. Combine this with
 <code><a href="../reference/color_alpha.html">color_alpha()</a></code> for transparency effects:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">50L</span>, <span class="fl">50L</span>, <span class="fl">200L</span>, <span class="fl">150L</span>, <span class="st">"steelblue"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">100L</span>, <span class="fl">80L</span>, <span class="fl">200L</span>, <span class="fl">150L</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"tomato"</span>, <span class="fl">0.7</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">280L</span>, <span class="fl">180L</span>, <span class="fl">80.0</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"gold"</span>, <span class="fl">0.6</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">320L</span>, <span class="fl">130L</span>, <span class="fl">60.0</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"mediumseagreen"</span>, <span class="fl">0.6</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5c7a641dcf50.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">80L</span>, <span class="fl">80L</span>, <span class="fl">320L</span>, <span class="fl">240L</span>, <span class="st">"steelblue"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">160L</span>, <span class="fl">130L</span>, <span class="fl">320L</span>, <span class="fl">240L</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"tomato"</span>, <span class="fl">0.7</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">450L</span>, <span class="fl">290L</span>, <span class="fl">130.0</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"gold"</span>, <span class="fl">0.6</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">510L</span>, <span class="fl">210L</span>, <span class="fl">95.0</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"mediumseagreen"</span>, <span class="fl">0.6</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5b6362faadd4.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p>See the <a href="guide-colors.html">Colors</a> guide for more on
 transparency and color manipulation.</p>
 </div>

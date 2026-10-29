@@ -60,29 +60,25 @@ Visualized — adding vectors `a` and `b`:
 
 ``` r
 
-raylibr_screenshot(function() {
-  ox <- 200L; oy <- 150L; s <- 40
+ox <- 260L; oy <- 420L; s <- 64
 
-  draw_line(0L, oy, 400L, oy, "darkgray")
-  draw_line(ox, 0L, ox, 300L, "darkgray")
+draw_line(0L, oy, 640L, oy, "darkgray")
+draw_line(ox, 0L, ox, 480L, "darkgray")
 
-  a <- c(3, 2)
-  draw_line_ex(c(ox, oy), c(ox + a[1]*s, oy - a[2]*s), 3.0, "red")
-  draw_text("a", as.integer(ox + a[1]*s + 5), as.integer(oy - a[2]*s), 20L, "red")
+a <- c(3, 2)
+draw_line_ex(c(ox, oy), c(ox + a[1]*s, oy - a[2]*s), 5.0, "red")
+draw_text("a", as.integer(ox + a[1]*s + 8), as.integer(oy - a[2]*s), 30L, "red")
 
-  b <- c(-1, 3)
-  draw_line_ex(c(ox, oy), c(ox + b[1]*s, oy - b[2]*s), 3.0, "blue")
-  draw_text("b", as.integer(ox + b[1]*s + 5), as.integer(oy - b[2]*s), 20L, "blue")
+b <- c(-1, 3)
+draw_line_ex(c(ox, oy), c(ox + b[1]*s, oy - b[2]*s), 5.0, "blue")
+draw_text("b", as.integer(ox + b[1]*s + 8), as.integer(oy - b[2]*s), 30L, "blue")
 
-  ab <- vector2_add(a, b)
-  draw_line_ex(c(ox, oy), c(ox + ab[1]*s, oy - ab[2]*s), 3.0, "green")
-  draw_text("a+b", as.integer(ox + ab[1]*s + 5), as.integer(oy - ab[2]*s), 20L, "green")
-})
+ab <- vector2_add(a, b)
+draw_line_ex(c(ox, oy), c(ox + ab[1]*s, oy - ab[2]*s), 5.0, "green")
+draw_text("a+b", as.integer(ox + ab[1]*s + 8), as.integer(oy - ab[2]*s), 30L, "green")
 ```
 
-![raylibr image](file5ecc24722fb3.png)
-
-raylibr image
+![Image rendered by raylibr](file5db5535c65de.png)
 
 Other useful Vector2 functions:
 [`vector2_scale()`](https://jeroenjanssens.github.io/raylibr/reference/vector2_scale.md),
@@ -117,19 +113,15 @@ surface normals and orientation.
 
 ``` r
 
-raylibr_screenshot_3d(function() {
-  draw_cube(c(0, 0.5, 0), 1, 1, 1, "red")
+draw_cube(c(0, 0.5, 0), 1, 1, 1, "red")
 
-  pos <- vector3_add(c(0, 0.5, 0), c(2, 0, 0))
-  draw_cube(pos, 1, 1, 1, "blue")
+pos <- vector3_add(c(0, 0.5, 0), c(2, 0, 0))
+draw_cube(pos, 1, 1, 1, "blue")
 
-  draw_line_3d(c(0, 0.5, 0), pos, "yellow")
-})
+draw_line_3d(c(0, 0.5, 0), pos, "yellow")
 ```
 
-![raylibr image](file5ecc5f0f8623.png)
-
-raylibr image
+![Image rendered by raylibr](file5db5e7c0add.png)
 
 Other key functions:
 [`vector3_rotate_by_axis_angle()`](https://jeroenjanssens.github.io/raylibr/reference/vector3_rotate_by_axis_angle.md),

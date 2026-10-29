@@ -171,5 +171,12 @@ Other draw functions:
 ## Examples
 
 ``` r
-raylibr_screenshot_3d(function() draw_cylinder_wires_ex(c(-1, 0, 0), c(1, 0, 0), 1.0, 1.0, 16L, "red"))
+raylibr_screenshot_3d(function() draw_cylinder_wires_ex(
+                                     c(-1, 0, 0),
+                                     c(1, 0, 0),
+                                     1.0,
+                                     1.0,
+                                     16L,
+                                     "red"
+                                   ))
 ```

@@ -155,5 +155,10 @@ Other draw functions:
 ## Examples
 
 ``` r
-raylibr_screenshot(function() draw_rectangle_rounded_lines(rectangle(100, 75, 200, 150), 0.3, 36L, "red"))
+raylibr_screenshot(function() draw_rectangle_rounded_lines(
+                                  rectangle(100, 75, 200, 150),
+                                  0.3,
+                                  36L,
+                                  "red"
+                                ))
 ```

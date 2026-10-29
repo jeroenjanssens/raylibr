@@ -1,9 +1,9 @@
 # Drawing 2D Shapes
 
 This guide covers all 2D shape-drawing functions available in raylibr.
-Each example uses
+Each snippet shows only the drawing code; it runs inside
 [`raylibr_screenshot()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_screenshot.md)
-which creates a hidden 400x300 window with a black background.
+which creates a hidden 640x480 window with a black background.
 
 ## Coordinate system
 
@@ -12,50 +12,42 @@ right, Y increases downward.
 
 ``` r
 
-raylibr_screenshot(function() {
-  # Axes
-  draw_line_ex(c(20, 20), c(380, 20), 2.0, "grey50")
-  draw_line_ex(c(20, 20), c(20, 280), 2.0, "grey50")
-  draw_text("x", 370L, 5L, 16L, "grey70")
-  draw_text("y", 5L, 265L, 16L, "grey70")
-  draw_text("(0,0)", 25L, 5L, 14L, "grey70")
-  # Arrowheads
-  draw_triangle(c(380, 20), c(370, 15), c(370, 25), "grey50")
-  draw_triangle(c(20, 280), c(15, 270), c(25, 270), "grey50")
-  # Sample points
-  draw_circle(100L, 80L, 5.0, "tomato")
-  draw_text("(100, 80)", 110L, 72L, 14L, "tomato")
-  draw_circle(300L, 200L, 5.0, "dodgerblue")
-  draw_text("(300, 200)", 220L, 192L, 14L, "dodgerblue")
-})
+# Axes
+draw_line_ex(c(30, 30), c(610, 30), 3.0, "grey50")
+draw_line_ex(c(30, 30), c(30, 450), 3.0, "grey50")
+draw_text("x", 590L, 5L, 20L, "grey70")
+draw_text("y", 8L, 425L, 20L, "grey70")
+draw_text("(0,0)", 40L, 5L, 20L, "grey70")
+# Arrowheads
+draw_triangle(c(610, 30), c(595, 22), c(595, 38), "grey50")
+draw_triangle(c(30, 450), c(22, 435), c(38, 435), "grey50")
+# Sample points
+draw_circle(160L, 130L, 8.0, "tomato")
+draw_text("(160, 130)", 175L, 120L, 20L, "tomato")
+draw_circle(480L, 320L, 8.0, "dodgerblue")
+draw_text("(480, 320)", 345L, 310L, 20L, "dodgerblue")
 ```
 
-![raylibr image](file5c7a60bafdfb.png)
-
-raylibr image
+![Image rendered by raylibr](file5b634fe9ec7f.png)
 
 ## Lines
 
 ``` r
 
-raylibr_screenshot(function() {
-  draw_line(20L, 40L, 380L, 40L, "grey50")
-  draw_text("draw_line", 10L, 20L, 14L, "grey70")
+draw_line(30L, 65L, 610L, 65L, "grey50")
+draw_text("draw_line", 15L, 30L, 20L, "grey70")
 
-  draw_line_ex(c(20, 100), c(380, 100), 4.0, "tomato")
-  draw_text("draw_line_ex (thick)", 10L, 75L, 14L, "grey70")
+draw_line_ex(c(30, 160), c(610, 160), 6.0, "tomato")
+draw_text("draw_line_ex (thick)", 15L, 120L, 20L, "grey70")
 
-  draw_line_bezier(c(20, 170), c(380, 170), 3.0, "dodgerblue")
-  draw_text("draw_line_bezier", 10L, 140L, 14L, "grey70")
+draw_line_bezier(c(30, 270), c(610, 270), 5.0, "dodgerblue")
+draw_text("draw_line_bezier", 15L, 225L, 20L, "grey70")
 
-  draw_line_dashed(c(20, 240), c(380, 240), 10.0, 5.0, "mediumseagreen")
-  draw_text("draw_line_dashed", 10L, 215L, 14L, "grey70")
-})
+draw_line_dashed(c(30, 385), c(610, 385), 16.0, 8.0, "mediumseagreen")
+draw_text("draw_line_dashed", 15L, 345L, 20L, "grey70")
 ```
 
-![raylibr image](file5c7a29ee9d90.png)
-
-raylibr image
+![Image rendered by raylibr](file5b63448c436c.png)
 
 [`draw_line_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_line_ex.md)
 and
@@ -67,24 +59,20 @@ argument.
 
 ``` r
 
-raylibr_screenshot(function() {
-  draw_circle(80L, 100L, 60.0, "tomato")
-  draw_text("filled", 55L, 170L, 14L, "grey70")
+draw_circle(130L, 160L, 85.0, "tomato")
+draw_text("filled", 106L, 265L, 20L, "grey70")
 
-  draw_circle_gradient(c(200, 100), 60.0, "gold", "orangered")
-  draw_text("gradient", 172L, 170L, 14L, "grey70")
+draw_circle_gradient(c(320, 160), 85.0, "gold", "orangered")
+draw_text("gradient", 278L, 265L, 20L, "grey70")
 
-  draw_circle_lines(320L, 100L, 60.0, "dodgerblue")
-  draw_text("lines", 298L, 170L, 14L, "grey70")
+draw_circle_lines(510L, 160L, 85.0, "dodgerblue")
+draw_text("lines", 488L, 265L, 20L, "grey70")
 
-  draw_circle_v(c(200, 240), 30.0, "mediumseagreen")
-  draw_text("draw_circle_v takes a Vector2 center", 80L, 280L, 14L, "grey70")
-})
+draw_circle_v(c(320, 380), 50.0, "mediumseagreen")
+draw_text("draw_circle_v takes a Vector2 center", 121L, 445L, 20L, "grey70")
 ```
 
-![raylibr image](file5c7a482a6870.png)
-
-raylibr image
+![Image rendered by raylibr](file5b63e166bba.png)
 
 [`draw_circle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle.md)
 takes integer center coordinates, while
@@ -95,33 +83,29 @@ takes a `c(x, y)` vector.
 
 ``` r
 
-raylibr_screenshot(function() {
-  draw_rectangle(10L, 10L, 120L, 60L, "steelblue")
-  draw_text("filled", 40L, 30L, 14L, "white")
+draw_rectangle(15L, 15L, 195L, 95L, "steelblue")
+draw_text("filled", 88L, 52L, 20L, "white")
 
-  draw_rectangle_lines(140L, 10L, 120L, 60L, "tomato")
-  draw_text("outline", 165L, 30L, 14L, "tomato")
+draw_rectangle_lines(222L, 15L, 195L, 95L, "tomato")
+draw_text("outline", 286L, 52L, 20L, "tomato")
 
-  draw_rectangle_rounded(rectangle(270, 10, 120, 60), 0.3, 10L, "mediumseagreen")
-  draw_text("rounded", 293L, 30L, 14L, "white")
+draw_rectangle_rounded(rectangle(430, 15, 195, 95), 0.3, 10L, "mediumseagreen")
+draw_text("rounded", 486L, 52L, 20L, "white")
 
-  draw_rectangle_gradient_v(10L, 90L, 120L, 60L, "purple", "pink")
-  draw_text("gradient", 30L, 110L, 14L, "white")
+draw_rectangle_gradient_v(15L, 145L, 195L, 95L, "purple", "pink")
+draw_text("gradient", 70L, 182L, 20L, "white")
 
-  draw_rectangle_pro(
-    rectangle(260, 120, 120, 60),
-    c(60, 30), 15.0, "gold"
-  )
-  draw_text("rotated (pro)", 230L, 170L, 14L, "grey70")
+draw_rectangle_pro(
+  rectangle(415, 190, 195, 95),
+  c(98, 48), 15.0, "gold"
+)
+draw_text("rotated (pro)", 346L, 270L, 20L, "grey70")
 
-  draw_rectangle_rec(rectangle(10, 200, 380, 40), "grey20")
-  draw_text("draw_rectangle_rec takes a rectangle()", 20L, 210L, 14L, "grey70")
-})
+draw_rectangle_rec(rectangle(15, 330, 610, 65), "grey20")
+draw_text("draw_rectangle_rec takes a rectangle()", 35L, 352L, 20L, "grey70")
 ```
 
-![raylibr image](file5c7a6d61220e.png)
-
-raylibr image
+![Image rendered by raylibr](file5b6377e5d49c.png)
 
 [`draw_rectangle_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_pro.md)
 supports rotation around an origin point.
@@ -136,23 +120,19 @@ struct.
 
 ``` r
 
-raylibr_screenshot(function() {
-  draw_triangle(
-    c(100, 30), c(30, 180), c(170, 180),
-    "tomato"
-  )
-  draw_text("triangle", 55L, 190L, 14L, "grey70")
+draw_triangle(
+  c(160, 90), c(50, 330), c(270, 330),
+  "tomato"
+)
+draw_text("triangle", 121L, 350L, 20L, "grey70")
 
-  draw_poly(c(270, 100), 6L, 70.0, 0.0, "steelblue")
-  draw_text("hexagon", 238L, 190L, 14L, "grey70")
+draw_poly(c(430, 210), 6L, 110.0, 0.0, "steelblue")
+draw_text("hexagon", 389L, 350L, 20L, "grey70")
 
-  draw_poly_lines_ex(c(270, 100), 6L, 70.0, 0.0, 3.0, "gold")
-})
+draw_poly_lines_ex(c(430, 210), 6L, 110.0, 0.0, 5.0, "gold")
 ```
 
-![raylibr image](file5c7a11971e6a.png)
-
-raylibr image
+![Image rendered by raylibr](file5b6310b7ae8e.png)
 
 [`draw_poly()`](https://jeroenjanssens.github.io/raylibr/reference/draw_poly.md)
 draws a regular polygon: center, number of sides, radius, rotation,
@@ -169,20 +149,16 @@ render.
 
 ``` r
 
-raylibr_screenshot(function() {
-  draw_circle_sector(c(120, 150), 80.0, 0.0, 270.0, 36L, "tomato")
-  draw_circle_sector_lines(c(120, 150), 80.0, 0.0, 270.0, 36L, "white")
-  draw_text("sector 0-270", 60L, 245L, 14L, "grey70")
+draw_circle_sector(c(190, 240), 130.0, 0.0, 270.0, 36L, "tomato")
+draw_circle_sector_lines(c(190, 240), 130.0, 0.0, 270.0, 36L, "white")
+draw_text("sector 0-270", 123L, 395L, 20L, "grey70")
 
-  draw_ring(c(300, 150), 40.0, 80.0, 0.0, 270.0, 36L, "dodgerblue")
-  draw_ring_lines(c(300, 150), 40.0, 80.0, 0.0, 270.0, 36L, "white")
-  draw_text("ring 0-270", 252L, 245L, 14L, "grey70")
-})
+draw_ring(c(480, 240), 65.0, 130.0, 0.0, 270.0, 36L, "dodgerblue")
+draw_ring_lines(c(480, 240), 65.0, 130.0, 0.0, 270.0, 36L, "white")
+draw_text("ring 0-270", 428L, 395L, 20L, "grey70")
 ```
 
-![raylibr image](file5c7a4cd35634.png)
-
-raylibr image
+![Image rendered by raylibr](file5b6347e9cd40.png)
 
 Angles are in degrees. `0` points right, and the arc sweeps
 **counter-clockwise**. The `segments` parameter controls smoothness
@@ -196,27 +172,23 @@ columns for x and y):
 ``` r
 
 pts <- matrix(c(
-  30, 250,
-  120, 50,
-  200, 200,
-  280, 50,
-  370, 250
+  50, 400,
+  190, 80,
+  320, 320,
+  450, 80,
+  590, 400
 ), ncol = 2, byrow = TRUE)
 
-raylibr_screenshot(function() {
-  draw_spline_catmull_rom(pts, 3.0, "tomato")
-  draw_spline_linear(pts, 1.0, "grey50")
-  # Draw control points
-  for (i in seq_len(nrow(pts))) {
-    draw_circle(as.integer(pts[i, 1]), as.integer(pts[i, 2]), 5.0, "white")
-  }
-  draw_text("Catmull-Rom spline with control points", 50L, 10L, 14L, "grey70")
-})
+draw_spline_catmull_rom(pts, 5.0, "tomato")
+draw_spline_linear(pts, 1.0, "grey50")
+# Draw control points
+for (i in seq_len(nrow(pts))) {
+  draw_circle(as.integer(pts[i, 1]), as.integer(pts[i, 2]), 8.0, "white")
+}
+draw_text("Catmull-Rom spline with control points", 80L, 15L, 20L, "grey70")
 ```
 
-![raylibr image](file5c7a742eb3f2.png)
-
-raylibr image
+![Image rendered by raylibr](file5b63400f1b9e.png)
 
 Other spline types include
 [`draw_spline_bezier_cubic()`](https://jeroenjanssens.github.io/raylibr/reference/draw_spline_bezier_cubic.md),
@@ -233,17 +205,13 @@ for transparency effects:
 
 ``` r
 
-raylibr_screenshot(function() {
-  draw_rectangle(50L, 50L, 200L, 150L, "steelblue")
-  draw_rectangle(100L, 80L, 200L, 150L, color_alpha("tomato", 0.7))
-  draw_circle(280L, 180L, 80.0, color_alpha("gold", 0.6))
-  draw_circle(320L, 130L, 60.0, color_alpha("mediumseagreen", 0.6))
-})
+draw_rectangle(80L, 80L, 320L, 240L, "steelblue")
+draw_rectangle(160L, 130L, 320L, 240L, color_alpha("tomato", 0.7))
+draw_circle(450L, 290L, 130.0, color_alpha("gold", 0.6))
+draw_circle(510L, 210L, 95.0, color_alpha("mediumseagreen", 0.6))
 ```
 
-![raylibr image](file5c7a641dcf50.png)
-
-raylibr image
+![Image rendered by raylibr](file5b6362faadd4.png)
 
 See the
 [Colors](https://jeroenjanssens.github.io/raylibr/articles/guide-colors.md)

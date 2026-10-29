@@ -15,8 +15,17 @@
 <link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Text &amp; Fonts">
-<script src="https://jeroenjanssens.github.io/raylibr/coi-serviceworker.js"></script>
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<meta property="og:title" content="Text &amp; Fonts">
+<script>
+(function() {
+  var m = location.pathname.match(/^(.*?\/)(articles|reference|news)\//);
+  var root = m ? m[1] : location.pathname.substring(0, location.pathname.lastIndexOf('/') + 1);
+  var s = document.createElement('script');
+  s.src = root + 'coi-serviceworker.js';
+  document.head.appendChild(s);
+})();
+</script>
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -26,7 +35,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">raylibr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.0.9001</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,6 +69,7 @@
     <li><a class="dropdown-item" href="../articles/demo-mouse.html">Mouse Test</a></li>
     <li><a class="dropdown-item" href="../articles/demo-balls.html">Bouncing Balls</a></li>
     <li><a class="dropdown-item" href="../articles/demo-snake.html">Snake</a></li>
+    <li><a class="dropdown-item" href="../articles/demo-tetris.html">Tetris</a></li>
     <li><a class="dropdown-item" href="../articles/demo-stroop.html">Stroop Test</a></li>
     <li><a class="dropdown-item" href="../articles/demo-cubes.html">Waving Cubes</a></li>
     <li><a class="dropdown-item" href="../articles/demo-beatbox.html">Beatbox</a></li>
@@ -107,15 +117,11 @@ and spacing.</p>
 <p><code><a href="../reference/draw_text.html">draw_text()</a></code> is the quickest way to put text on screen.
 Pass the string, position, font size (integer), and color.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"Small (10)"</span>, <span class="fl">20L</span>, <span class="fl">20L</span>, <span class="fl">10L</span>, <span class="st">"lightgray"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"Medium (20)"</span>, <span class="fl">20L</span>, <span class="fl">50L</span>, <span class="fl">20L</span>, <span class="st">"skyblue"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"Large (40)"</span>, <span class="fl">20L</span>, <span class="fl">90L</span>, <span class="fl">40L</span>, <span class="st">"yellow"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"Huge (60)"</span>, <span class="fl">20L</span>, <span class="fl">150L</span>, <span class="fl">60L</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5f5d20b85eea.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"Small (20)"</span>, <span class="fl">30L</span>, <span class="fl">30L</span>, <span class="fl">20L</span>, <span class="st">"lightgray"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"Medium (30)"</span>, <span class="fl">30L</span>, <span class="fl">80L</span>, <span class="fl">30L</span>, <span class="st">"skyblue"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"Large (60)"</span>, <span class="fl">30L</span>, <span class="fl">145L</span>, <span class="fl">60L</span>, <span class="st">"yellow"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"Huge (90)"</span>, <span class="fl">30L</span>, <span class="fl">240L</span>, <span class="fl">90L</span>, <span class="st">"tomato"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5e884f1443a2.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p>The default font is a built-in bitmap font included with Raylib.</p>
 </div>
 <div class="section level2">
@@ -137,17 +143,13 @@ Pass the string, position, font size (integer), and color.</p>
 origin is relative to the top-left of the text and determines the pivot
 for rotation.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">font</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_font_default.html">get_font_default</a></span><span class="op">(</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text_pro.html">draw_text_pro</a></span><span class="op">(</span><span class="va">font</span>, <span class="st">"0 degrees"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">200</span>, <span class="fl">150</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">0.0</span>, <span class="fl">20.0</span>, <span class="fl">2.0</span>, <span class="fu"><a href="../reference/as_color.html">as_color</a></span><span class="op">(</span><span class="st">"white"</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text_pro.html">draw_text_pro</a></span><span class="op">(</span><span class="va">font</span>, <span class="st">"45 degrees"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">200</span>, <span class="fl">150</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">45.0</span>, <span class="fl">20.0</span>, <span class="fl">2.0</span>, <span class="fu"><a href="../reference/as_color.html">as_color</a></span><span class="op">(</span><span class="st">"lime"</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text_pro.html">draw_text_pro</a></span><span class="op">(</span><span class="va">font</span>, <span class="st">"90 degrees"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">200</span>, <span class="fl">150</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">90.0</span>, <span class="fl">20.0</span>, <span class="fl">2.0</span>, <span class="fu"><a href="../reference/as_color.html">as_color</a></span><span class="op">(</span><span class="st">"skyblue"</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text_pro.html">draw_text_pro</a></span><span class="op">(</span><span class="va">font</span>, <span class="st">"-30 degrees"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">200</span>, <span class="fl">150</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, <span class="op">-</span><span class="fl">30.0</span>, <span class="fl">20.0</span>, <span class="fl">2.0</span>, <span class="fu"><a href="../reference/as_color.html">as_color</a></span><span class="op">(</span><span class="st">"yellow"</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">200L</span>, <span class="fl">150L</span>, <span class="fl">4.0</span>, <span class="st">"red"</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5f5d454c7ad.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<code class="sourceCode R"><span><span class="va">font</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_font_default.html">get_font_default</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text_pro.html">draw_text_pro</a></span><span class="op">(</span><span class="va">font</span>, <span class="st">"0 degrees"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">240</span>, <span class="fl">190</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">0.0</span>, <span class="fl">30.0</span>, <span class="fl">3.0</span>, <span class="fu"><a href="../reference/as_color.html">as_color</a></span><span class="op">(</span><span class="st">"white"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text_pro.html">draw_text_pro</a></span><span class="op">(</span><span class="va">font</span>, <span class="st">"45 degrees"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">240</span>, <span class="fl">190</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">45.0</span>, <span class="fl">30.0</span>, <span class="fl">3.0</span>, <span class="fu"><a href="../reference/as_color.html">as_color</a></span><span class="op">(</span><span class="st">"limegreen"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text_pro.html">draw_text_pro</a></span><span class="op">(</span><span class="va">font</span>, <span class="st">"90 degrees"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">240</span>, <span class="fl">190</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, <span class="fl">90.0</span>, <span class="fl">30.0</span>, <span class="fl">3.0</span>, <span class="fu"><a href="../reference/as_color.html">as_color</a></span><span class="op">(</span><span class="st">"skyblue"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text_pro.html">draw_text_pro</a></span><span class="op">(</span><span class="va">font</span>, <span class="st">"-30 degrees"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">240</span>, <span class="fl">190</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, <span class="op">-</span><span class="fl">30.0</span>, <span class="fl">30.0</span>, <span class="fl">3.0</span>, <span class="fu"><a href="../reference/as_color.html">as_color</a></span><span class="op">(</span><span class="st">"yellow"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">240L</span>, <span class="fl">190L</span>, <span class="fl">6.0</span>, <span class="st">"red"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5e886ad69ca5.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p>The red dot marks the shared origin point. Each string fans out from
 there at a different angle.</p>
 </div>
@@ -157,17 +159,13 @@ there at a different angle.</p>
 <p><code><a href="../reference/measure_text.html">measure_text()</a></code> returns the width of a string in pixels
 at a given font size. Use it to center text:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">text</span> <span class="op">&lt;-</span> <span class="st">"Centered!"</span></span>
-<span>  <span class="va">size</span> <span class="op">&lt;-</span> <span class="fl">40L</span></span>
-<span>  <span class="va">w</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/measure_text.html">measure_text</a></span><span class="op">(</span><span class="va">text</span>, <span class="va">size</span><span class="op">)</span></span>
-<span>  <span class="va">x</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="fl">400L</span> <span class="op">-</span> <span class="va">w</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html" class="external-link">%/%</a></span> <span class="fl">2L</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="va">text</span>, <span class="va">x</span>, <span class="fl">130L</span>, <span class="va">size</span>, <span class="st">"gold"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_line.html">draw_line</a></span><span class="op">(</span><span class="fl">200L</span>, <span class="fl">0L</span>, <span class="fl">200L</span>, <span class="fl">300L</span>, <span class="st">"darkgray"</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5f5d65e91b26.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<code class="sourceCode R"><span><span class="va">text</span> <span class="op">&lt;-</span> <span class="st">"Centered!"</span></span>
+<span><span class="va">size</span> <span class="op">&lt;-</span> <span class="fl">60L</span></span>
+<span><span class="va">w</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/measure_text.html">measure_text</a></span><span class="op">(</span><span class="va">text</span>, <span class="va">size</span><span class="op">)</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="fl">640L</span> <span class="op">-</span> <span class="va">w</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html" class="external-link">%/%</a></span> <span class="fl">2L</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="va">text</span>, <span class="va">x</span>, <span class="fl">210L</span>, <span class="va">size</span>, <span class="st">"gold"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_line.html">draw_line</a></span><span class="op">(</span><span class="fl">320L</span>, <span class="fl">0L</span>, <span class="fl">320L</span>, <span class="fl">480L</span>, <span class="st">"darkgray"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5e88479bb995.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p>For custom fonts, use
 <code>measure_text_ex(font, text, font_size, spacing)</code> which
 returns a Vector2 with both width and height.</p>

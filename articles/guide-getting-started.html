@@ -15,8 +15,17 @@
 <link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Getting Started">
-<script src="https://jeroenjanssens.github.io/raylibr/coi-serviceworker.js"></script>
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<meta property="og:title" content="Getting Started">
+<script>
+(function() {
+  var m = location.pathname.match(/^(.*?\/)(articles|reference|news)\//);
+  var root = m ? m[1] : location.pathname.substring(0, location.pathname.lastIndexOf('/') + 1);
+  var s = document.createElement('script');
+  s.src = root + 'coi-serviceworker.js';
+  document.head.appendChild(s);
+})();
+</script>
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -26,7 +35,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">raylibr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.0.9001</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,6 +69,7 @@
     <li><a class="dropdown-item" href="../articles/demo-mouse.html">Mouse Test</a></li>
     <li><a class="dropdown-item" href="../articles/demo-balls.html">Bouncing Balls</a></li>
     <li><a class="dropdown-item" href="../articles/demo-snake.html">Snake</a></li>
+    <li><a class="dropdown-item" href="../articles/demo-tetris.html">Tetris</a></li>
     <li><a class="dropdown-item" href="../articles/demo-stroop.html">Stroop Test</a></li>
     <li><a class="dropdown-item" href="../articles/demo-cubes.html">Waving Cubes</a></li>
     <li><a class="dropdown-item" href="../articles/demo-beatbox.html">Beatbox</a></li>
@@ -116,27 +126,22 @@ browser via <a href="guide-webr.html">webR</a>.</p>
 drawing code, and returns the result as an image:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">200L</span>, <span class="fl">150L</span>, <span class="fl">80.0</span>, <span class="st">"yellow"</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">320L</span>, <span class="fl">240L</span>, <span class="fl">130.0</span>, <span class="st">"yellow"</span><span class="op">)</span></span>
 <span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5d8f2d322f25.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
-<p>The default canvas is 400x300 pixels with a black background.
+<p><img src="file5c7b96f535b.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
+<p>The default canvas is 640x480 pixels with a black background.
 Everything you draw appears on top.</p>
-<p>You can compose multiple shapes in a single screenshot:</p>
+<p>From here on, snippets show only the drawing code — each one runs
+inside <code><a href="../reference/raylibr_screenshot.html">raylibr_screenshot()</a></code> automatically:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">50L</span>, <span class="fl">50L</span>, <span class="fl">300L</span>, <span class="fl">200L</span>, <span class="st">"midnightblue"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">200L</span>, <span class="fl">150L</span>, <span class="fl">60.0</span>, <span class="st">"gold"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_triangle.html">draw_triangle</a></span><span class="op">(</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">200</span>, <span class="fl">70</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">140</span>, <span class="fl">190</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">260</span>, <span class="fl">190</span><span class="op">)</span>,</span>
-<span>    <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"white"</span>, <span class="fl">0.5</span><span class="op">)</span></span>
-<span>  <span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"raylibr"</span>, <span class="fl">145L</span>, <span class="fl">220L</span>, <span class="fl">30L</span>, <span class="st">"white"</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5d8f1b55be1b.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">80L</span>, <span class="fl">80L</span>, <span class="fl">480L</span>, <span class="fl">320L</span>, <span class="st">"midnightblue"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">320L</span>, <span class="fl">240L</span>, <span class="fl">95.0</span>, <span class="st">"gold"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_triangle.html">draw_triangle</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">320</span>, <span class="fl">110</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">225</span>, <span class="fl">305</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">415</span>, <span class="fl">305</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"white"</span>, <span class="fl">0.5</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"raylibr"</span>, <span class="fl">235L</span>, <span class="fl">345L</span>, <span class="fl">50L</span>, <span class="st">"white"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5c7b3a4a227b.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 </div>
 <div class="section level2">
 <h2 id="the-game-loop">The game loop<a class="anchor" aria-label="anchor" href="#the-game-loop"></a>

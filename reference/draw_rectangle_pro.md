@@ -151,5 +151,10 @@ Other draw functions:
 ## Examples
 
 ``` r
-raylibr_screenshot(function() draw_rectangle_pro(rectangle(100, 75, 200, 150), c(0, 0), 0.0, "red"))
+raylibr_screenshot(function() draw_rectangle_pro(
+                                  rectangle(100, 75, 200, 150),
+                                  c(0, 0),
+                                  0.0,
+                                  "red"
+                                ))
 ```

@@ -59,6 +59,9 @@ Other check functions:
 ## Examples
 
 ``` r
-check_collision_boxes(bounding_box(c(-1, -1, -1), c(1, 1, 1)), bounding_box(c(-1, -1, -1), c(1, 1, 1)))
+check_collision_boxes(
+    bounding_box(c(-1, -1, -1), c(1, 1, 1)),
+    bounding_box(c(-1, -1, -1), c(1, 1, 1))
+  )
 #> [1] TRUE
 ```

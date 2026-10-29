@@ -169,5 +169,11 @@ Other draw functions:
 ## Examples
 
 ``` r
-raylibr_screenshot(function() draw_rectangle_gradient_ex(rectangle(100, 75, 200, 150), "red", "red", "red", "red"))
+raylibr_screenshot(function() draw_rectangle_gradient_ex(
+                                  rectangle(100, 75, 200, 150),
+                                  "red",
+                                  "red",
+                                  "red",
+                                  "red"
+                                ))
 ```

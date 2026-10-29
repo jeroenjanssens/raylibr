@@ -7,7 +7,7 @@ framebuffer as an `image` object.
 ## Usage
 
 ``` r
-raylibr_screenshot_3d(draw, width = 400L, height = 300L)
+raylibr_screenshot_3d(draw, width = 640L, height = 480L)
 ```
 
 ## Arguments
@@ -27,7 +27,9 @@ raylibr_screenshot_3d(draw, width = 400L, height = 300L)
 
 ## Value
 
-An image object.
+An image object. On HiDPI displays the framebuffer is captured at full
+pixel density (e.g., 1280x960 for a 640x480 window at 2x scale); knitr
+still displays it at `width` x `height`.
 
 ## Examples
 

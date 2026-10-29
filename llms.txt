@@ -97,6 +97,15 @@ arrow keys to control the snake. Source:
 
 ![](reference/figures/raylibr-demo-snake.gif)
 
+### Play a game of Tetris
+
+Run `demo("tetris", package = "raylibr")` to play this game. Use the
+arrow keys to move and rotate, Space to hard drop, and C to hold.
+Source:
+[`demo/tetris.R`](https://github.com/jeroenjanssens/raylibr/blob/HEAD/demo/tetris.R)
+
+![](reference/figures/raylibr-demo-tetris.gif)
+
 ### Load 3D models and apply post-processing shaders
 
 Run `demo("model", package = "raylibr")` to play this demo. Select a
@@ -1193,6 +1202,8 @@ The `raylibr` package is licensed under the MIT License.
   : Run game loop
 - [`eval_js()`](https://jeroenjanssens.github.io/raylibr/reference/eval_js.md)
   : Evaluate JavaScript
+- [`export_html()`](https://jeroenjanssens.github.io/raylibr/reference/export_html.md)
+  : Export R script as webR HTML
 
 ## Structs
 
@@ -1292,8 +1303,8 @@ The `raylibr` package is licensed under the MIT License.
   Flag
 - [`key`](https://jeroenjanssens.github.io/raylibr/reference/key.md) :
   Key
-- [`log`](https://jeroenjanssens.github.io/raylibr/reference/log.md) :
-  log
+- [`log_level`](https://jeroenjanssens.github.io/raylibr/reference/log_level.md)
+  : log Level
 - [`mouse_button`](https://jeroenjanssens.github.io/raylibr/reference/mouse_button.md)
   : Mouse Button
 - [`mouse_cursor`](https://jeroenjanssens.github.io/raylibr/reference/mouse_cursor.md)
@@ -2073,6 +2084,7 @@ The `raylibr` package is licensed under the MIT License.
 - [Bouncing
   Balls](https://jeroenjanssens.github.io/raylibr/articles/demo-balls.md):
 - [Snake](https://jeroenjanssens.github.io/raylibr/articles/demo-snake.md):
+- [Tetris](https://jeroenjanssens.github.io/raylibr/articles/demo-tetris.md):
 - [Stroop
   Test](https://jeroenjanssens.github.io/raylibr/articles/demo-stroop.md):
 - [Waving Cubes and

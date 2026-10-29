@@ -15,6 +15,7 @@
 <url><loc>https://jeroenjanssens.github.io/raylibr/articles/demo-shader.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/articles/demo-snake.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/articles/demo-stroop.html</loc></url>
+<url><loc>https://jeroenjanssens.github.io/raylibr/articles/demo-tetris.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/articles/guide-audio.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/articles/guide-camera.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/articles/guide-colors.html</loc></url>
@@ -188,6 +189,7 @@
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/end_vr_stereo_mode.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/eval_js.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/export_font_as_code.html</loc></url>
+<url><loc>https://jeroenjanssens.github.io/raylibr/reference/export_html.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/export_image.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/export_image_as_code.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/export_mesh.html</loc></url>
@@ -518,7 +520,7 @@
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/load_texture_from_image.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/load_vr_stereo_config.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/load_wave.html</loc></url>
-<url><loc>https://jeroenjanssens.github.io/raylibr/reference/log.html</loc></url>
+<url><loc>https://jeroenjanssens.github.io/raylibr/reference/log_level.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/make_directory.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/material_map.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/reference/material_map_index.html</loc></url>
@@ -931,10 +933,12 @@
 <url><loc>https://jeroenjanssens.github.io/raylibr/wasm/gui.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/wasm/hello.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/wasm/julia.html</loc></url>
+<url><loc>https://jeroenjanssens.github.io/raylibr/wasm/model.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/wasm/mouse.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/wasm/raycaster.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/wasm/shader.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/wasm/snake.html</loc></url>
 <url><loc>https://jeroenjanssens.github.io/raylibr/wasm/stroop.html</loc></url>
+<url><loc>https://jeroenjanssens.github.io/raylibr/wasm/tetris.html</loc></url>
 </urlset>
 

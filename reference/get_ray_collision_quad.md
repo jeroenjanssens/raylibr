@@ -153,6 +153,12 @@ Other get functions:
 ## Examples
 
 ``` r
-get_ray_collision_quad(ray(c(0, 0, 0), c(0, 0, 1)), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0))
+get_ray_collision_quad(
+    ray(c(0, 0, 0), c(0, 0, 1)),
+    c(0, 0, 0),
+    c(0, 0, 0),
+    c(0, 0, 0),
+    c(0, 0, 0)
+  )
 #> ray_collision(hit = FALSE, distance = 0, point = 0, 0, 0, normal = 0, 0, 0) 
 ```

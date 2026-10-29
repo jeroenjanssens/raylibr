@@ -18,26 +18,21 @@ colors <- c(
   "salmon", "coral", "khaki", "palegreen",
   "skyblue", "plum", "sienna", "grey70"
 )
-
-raylibr_screenshot(function() {
-  cols <- 5L
-  w <- 70L
-  h <- 50L
-  pad <- 10L
-  for (i in seq_along(colors)) {
-    row <- (i - 1L) %/% cols
-    col <- (i - 1L) %% cols
-    x <- pad + col * (w + pad)
-    y <- pad + row * (h + pad + 14L)
-    draw_rectangle(as.integer(x), as.integer(y), w, h, colors[i])
-    draw_text(colors[i], as.integer(x + 2L), as.integer(y + h + 1L), 10L, "grey70")
-  }
-})
+cols <- 5L
+w <- 108L
+h <- 78L
+pad <- 16L
+for (i in seq_along(colors)) {
+  row <- (i - 1L) %/% cols
+  col <- (i - 1L) %% cols
+  x <- pad + col * (w + pad)
+  y <- pad + row * (h + pad + 20L)
+  draw_rectangle(as.integer(x), as.integer(y), w, h, colors[i])
+  draw_text(colors[i], as.integer(x), as.integer(y + h + 3L), 15L, "grey70")
+}
 ```
 
-![raylibr image](file5c0454f828cf.png)
-
-raylibr image
+![Image rendered by raylibr](file5af43abbdac9.png)
 
 This includes all of
 [`colors()`](https://rdrr.io/r/grDevices/colors.html) from base R —
@@ -75,18 +70,14 @@ creates a transparent version of any color. The alpha ranges from 0
 
 ``` r
 
-raylibr_screenshot(function() {
-  draw_circle(150L, 130L, 80.0, "tomato")
-  draw_circle(200L, 130L, 80.0, color_alpha("steelblue", 0.6))
-  draw_circle(250L, 130L, 80.0, color_alpha("gold", 0.6))
-  draw_circle(175L, 180L, 80.0, color_alpha("mediumseagreen", 0.5))
-  draw_circle(225L, 180L, 80.0, color_alpha("orchid", 0.5))
-})
+draw_circle(240L, 210L, 125.0, "tomato")
+draw_circle(320L, 210L, 125.0, color_alpha("steelblue", 0.6))
+draw_circle(400L, 210L, 125.0, color_alpha("gold", 0.6))
+draw_circle(280L, 290L, 125.0, color_alpha("mediumseagreen", 0.5))
+draw_circle(360L, 290L, 125.0, color_alpha("orchid", 0.5))
 ```
 
-![raylibr image](file5c0436b98f7a.png)
-
-raylibr image
+![Image rendered by raylibr](file5af4a066173.png)
 
 [`fade()`](https://jeroenjanssens.github.io/raylibr/reference/fade.md)
 does the same thing as
@@ -99,40 +90,36 @@ raylibr provides functions to adjust colors:
 
 ``` r
 
-raylibr_screenshot(function() {
-  base <- "steelblue"
-  w <- 36L
-  h <- 60L
+base <- "steelblue"
+w <- 58L
+h <- 96L
 
-  # Brightness: -255 to 255
-  draw_text("brightness", 10L, 10L, 14L, "grey70")
-  for (i in 0:9) {
-    b <- -200 + i * 44
-    draw_rectangle(10L + as.integer(i) * (w + 2L), 30L, w, h,
-                   color_brightness(base, b / 255))
-  }
+# Brightness: -255 to 255
+draw_text("brightness", 16L, 16L, 20L, "grey70")
+for (i in 0:9) {
+  b <- -200 + i * 44
+  draw_rectangle(16L + as.integer(i) * (w + 3L), 48L, w, h,
+                 color_brightness(base, b / 255))
+}
 
-  # Tint
-  draw_text("tint toward gold", 10L, 110L, 14L, "grey70")
-  for (i in 0:9) {
-    frac <- i / 9
-    draw_rectangle(10L + as.integer(i) * (w + 2L), 130L, w, h,
-                   color_lerp(base, "gold", frac))
-  }
+# Tint
+draw_text("tint toward gold", 16L, 176L, 20L, "grey70")
+for (i in 0:9) {
+  frac <- i / 9
+  draw_rectangle(16L + as.integer(i) * (w + 3L), 208L, w, h,
+                 color_lerp(base, "gold", frac))
+}
 
-  # Contrast: -255 to 255
-  draw_text("contrast", 10L, 210L, 14L, "grey70")
-  for (i in 0:9) {
-    c_val <- -200 + i * 44
-    draw_rectangle(10L + as.integer(i) * (w + 2L), 230L, w, h,
-                   color_contrast(base, c_val / 255))
-  }
-})
+# Contrast: -255 to 255
+draw_text("contrast", 16L, 336L, 20L, "grey70")
+for (i in 0:9) {
+  c_val <- -200 + i * 44
+  draw_rectangle(16L + as.integer(i) * (w + 3L), 368L, w, h,
+                 color_contrast(base, c_val / 255))
+}
 ```
 
-![raylibr image](file5c042fba275b.png)
-
-raylibr image
+![Image rendered by raylibr](file5af43fc4bab7.png)
 
 - `color_brightness(color, factor)` — lighten (positive) or darken
   (negative)
@@ -147,33 +134,29 @@ is great for generating color ramps:
 
 ``` r
 
-raylibr_screenshot(function() {
-  n <- 36L
-  w <- as.integer(380 / n)
-  # Hue rainbow
-  draw_text("hue (saturation=1, value=1)", 10L, 10L, 14L, "grey70")
-  for (i in 0:(n - 1L)) {
-    draw_rectangle(10L + as.integer(i) * w, 30L, w, 50L,
-                   color_from_hsv(i * 360.0 / n, 1.0, 1.0))
-  }
-  # Saturation ramp
-  draw_text("saturation (hue=200, value=1)", 10L, 100L, 14L, "grey70")
-  for (i in 0:(n - 1L)) {
-    draw_rectangle(10L + as.integer(i) * w, 120L, w, 50L,
-                   color_from_hsv(200.0, i / (n - 1.0), 1.0))
-  }
-  # Value ramp
-  draw_text("value (hue=200, saturation=1)", 10L, 190L, 14L, "grey70")
-  for (i in 0:(n - 1L)) {
-    draw_rectangle(10L + as.integer(i) * w, 210L, w, 50L,
-                   color_from_hsv(200.0, 1.0, i / (n - 1.0)))
-  }
-})
+n <- 36L
+w <- 16L
+# Hue rainbow
+draw_text("hue (saturation=1, value=1)", 32L, 16L, 20L, "grey70")
+for (i in 0:(n - 1L)) {
+  draw_rectangle(32L + as.integer(i) * w, 48L, w, 80L,
+                 color_from_hsv(i * 360.0 / n, 1.0, 1.0))
+}
+# Saturation ramp
+draw_text("saturation (hue=200, value=1)", 32L, 160L, 20L, "grey70")
+for (i in 0:(n - 1L)) {
+  draw_rectangle(32L + as.integer(i) * w, 192L, w, 80L,
+                 color_from_hsv(200.0, i / (n - 1.0), 1.0))
+}
+# Value ramp
+draw_text("value (hue=200, saturation=1)", 32L, 304L, 20L, "grey70")
+for (i in 0:(n - 1L)) {
+  draw_rectangle(32L + as.integer(i) * w, 336L, w, 80L,
+                 color_from_hsv(200.0, 1.0, i / (n - 1.0)))
+}
 ```
 
-![raylibr image](file5c043f1d8d50.png)
-
-raylibr image
+![Image rendered by raylibr](file5af41daa57ce.png)
 
 Convert back with
 [`color_to_hsv()`](https://jeroenjanssens.github.io/raylibr/reference/color_to_hsv.md):
@@ -192,39 +175,35 @@ blends between two colors. Use it to create smooth gradients:
 
 ``` r
 
-raylibr_screenshot(function() {
-  n <- 40L
-  w <- as.integer(380 / n)
+n <- 40L
+w <- 15L
 
-  from <- "tomato"
-  to <- "steelblue"
-  draw_text("tomato -> steelblue", 10L, 10L, 14L, "grey70")
-  for (i in 0:(n - 1L)) {
-    draw_rectangle(10L + as.integer(i) * w, 30L, w, 50L,
-                   color_lerp(from, to, i / (n - 1.0)))
-  }
+from <- "tomato"
+to <- "steelblue"
+draw_text("tomato -> steelblue", 20L, 16L, 20L, "grey70")
+for (i in 0:(n - 1L)) {
+  draw_rectangle(20L + as.integer(i) * w, 48L, w, 80L,
+                 color_lerp(from, to, i / (n - 1.0)))
+}
 
-  from2 <- "mediumseagreen"
-  to2 <- "orchid"
-  draw_text("mediumseagreen -> orchid", 10L, 100L, 14L, "grey70")
-  for (i in 0:(n - 1L)) {
-    draw_rectangle(10L + as.integer(i) * w, 120L, w, 50L,
-                   color_lerp(from2, to2, i / (n - 1.0)))
-  }
+from2 <- "mediumseagreen"
+to2 <- "orchid"
+draw_text("mediumseagreen -> orchid", 20L, 160L, 20L, "grey70")
+for (i in 0:(n - 1L)) {
+  draw_rectangle(20L + as.integer(i) * w, 192L, w, 80L,
+                 color_lerp(from2, to2, i / (n - 1.0)))
+}
 
-  from3 <- "gold"
-  to3 <- "midnightblue"
-  draw_text("gold -> midnightblue", 10L, 190L, 14L, "grey70")
-  for (i in 0:(n - 1L)) {
-    draw_rectangle(10L + as.integer(i) * w, 210L, w, 50L,
-                   color_lerp(from3, to3, i / (n - 1.0)))
-  }
-})
+from3 <- "gold"
+to3 <- "midnightblue"
+draw_text("gold -> midnightblue", 20L, 304L, 20L, "grey70")
+for (i in 0:(n - 1L)) {
+  draw_rectangle(20L + as.integer(i) * w, 336L, w, 80L,
+                 color_lerp(from3, to3, i / (n - 1.0)))
+}
 ```
 
-![raylibr image](file5c04b5ffe7a.png)
-
-raylibr image
+![Image rendered by raylibr](file5af453b69df2.png)
 
 [`color_alpha_blend()`](https://jeroenjanssens.github.io/raylibr/reference/color_alpha_blend.md)
 blends a foreground color over a background, respecting the foreground’s

@@ -13,26 +13,21 @@ raylibr can generate several kinds of procedural images:
 
 ``` r
 
-raylibr_screenshot(function() {
-  imgs <- list(
-    gen_image_checked(200L, 150L, 20L, 20L, as_color("darkgray"), as_color("gray")),
-    gen_image_gradient_linear(200L, 150L, 0L, as_color("darkblue"), as_color("skyblue")),
-    gen_image_perlin_noise(200L, 150L, 0L, 0L, 4.0),
-    gen_image_cellular(200L, 150L, 16L)
-  )
-  positions <- list(c(0L, 0L), c(200L, 0L), c(0L, 150L), c(200L, 150L))
-  for (i in seq_along(imgs)) {
-    tex <- load_texture_from_image(imgs[[i]])
-    draw_texture(tex, positions[[i]][1], positions[[i]][2], as_color("white"))
-    unload_texture(tex)
-    unload_image(imgs[[i]])
-  }
-})
+imgs <- list(
+  gen_image_checked(320L, 240L, 40L, 40L, "darkgray", "gray"),
+  gen_image_gradient_linear(320L, 240L, 0L, "darkblue", "skyblue"),
+  gen_image_perlin_noise(320L, 240L, 0L, 0L, 4.0),
+  gen_image_cellular(320L, 240L, 32L)
+)
+positions <- list(c(0L, 0L), c(320L, 0L), c(0L, 240L), c(320L, 240L))
+for (i in seq_along(imgs)) {
+  tex <- load_texture_from_image(imgs[[i]])
+  unload_image(imgs[[i]])
+  draw_texture(tex, positions[[i]][1], positions[[i]][2], "white")
+}
 ```
 
-![raylibr image](file5ddf32589308.png)
-
-raylibr image
+![Image rendered by raylibr](file5cca2b30b8a2.png)
 
 Top-left: checkerboard (`gen_image_checked`). Top-right: linear gradient
 (`gen_image_gradient_linear`). Bottom-left: Perlin noise
@@ -86,26 +81,21 @@ or load directly with
 
 ``` r
 
-raylibr_screenshot(function() {
-  img <- gen_image_checked(64L, 64L, 8L, 8L, as_color("purple"), as_color("mediumpurple"))
-  tex <- load_texture_from_image(img)
-  unload_image(img)
+img <- gen_image_checked(64L, 64L, 8L, 8L, "purple", "mediumpurple")
+tex <- load_texture_from_image(img)
+unload_image(img)
 
-  draw_texture(tex, 20L, 20L, as_color("white"))
-  draw_texture_ex(tex, c(120, 20), 30.0, 2.0, as_color("white"))
-  draw_texture_pro(
-    tex,
-    rectangle(0, 0, 64, 64),
-    rectangle(280, 80, 128, 128),
-    c(64, 64), 45.0, as_color("white")
-  )
-  unload_texture(tex)
-})
+draw_texture(tex, 40L, 40L, "white")
+draw_texture_ex(tex, c(200, 40), 30.0, 2.5, "white")
+draw_texture_pro(
+  tex,
+  rectangle(0, 0, 64, 64),
+  rectangle(470, 260, 200, 200),
+  c(100, 100), 45.0, "white"
+)
 ```
 
-![raylibr image](file5ddf155a0ff1.png)
-
-raylibr image
+![Image rendered by raylibr](file5cca7c1d88a9.png)
 
 - [`draw_texture()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture.md)
   draws at a position with a tint color
@@ -114,6 +104,16 @@ raylibr image
 - [`draw_texture_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_pro.md)
   gives full control: source rectangle, destination rectangle, origin,
   and rotation
+
+The image can be unloaded as soon as it has been uploaded as a texture.
+The texture itself must stay loaded until the frame has been drawn:
+Raylib collects draw calls in a batch and only sends them to the GPU at
+[`end_drawing()`](https://jeroenjanssens.github.io/raylibr/reference/end_drawing.md),
+so a texture unloaded before then is drawn as nothing. In a game loop,
+load textures before the loop and call
+[`unload_texture()`](https://jeroenjanssens.github.io/raylibr/reference/unload_texture.md)
+after it. In these snippets the screenshot window is closed right after
+the frame, which releases the textures with it.
 
 ## Render textures
 

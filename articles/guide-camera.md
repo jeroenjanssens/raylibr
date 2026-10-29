@@ -23,23 +23,19 @@ screen coordinates directly — useful for HUD elements.
 
 ``` r
 
-raylibr_screenshot(function() {
-  cam <- camera_2d(c(200, 150), c(100, 100), rotation = 0, zoom = 2)
-  begin_mode_2d(cam)
-  draw_rectangle(50L, 50L, 100L, 100L, "red")
-  draw_circle(100L, 100L, 30.0, "yellow")
-  draw_circle(150L, 50L, 20.0, "skyblue")
-  end_mode_2d()
-  draw_text("Zoom: 2x", 10L, 10L, 20L, "white")
-})
+cam <- camera_2d(c(320, 240), c(100, 100), rotation = 0, zoom = 3)
+begin_mode_2d(cam)
+draw_rectangle(50L, 50L, 100L, 100L, "red")
+draw_circle(100L, 100L, 30.0, "yellow")
+draw_circle(150L, 50L, 20.0, "skyblue")
+end_mode_2d()
+draw_text("Zoom: 3x", 15L, 15L, 30L, "white")
 ```
 
-![raylibr image](file5ba037e82189.png)
-
-raylibr image
+![Image rendered by raylibr](file5a904ee191ba.png)
 
 The rectangle and circles are drawn in world coordinates. The camera
-zooms in 2x and centers on `(100, 100)`, so they appear magnified. The
+zooms in 3x and centers on `(100, 100)`, so they appear magnified. The
 text is drawn outside the camera block, so it stays fixed on screen.
 
 ## 3D camera
@@ -76,9 +72,7 @@ raylibr_screenshot(function() {
 })
 ```
 
-![raylibr image](file5ba07ece19e6.png)
-
-raylibr image
+![Image rendered by raylibr](file5a90364c490.png)
 
 The helper
 [`raylibr_screenshot_3d()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_screenshot_3d.md)
@@ -106,9 +100,7 @@ raylibr_screenshot(function() {
 })
 ```
 
-![raylibr image](file5ba040f38815.png)
-
-raylibr image
+![Image rendered by raylibr](file5a90964b22.png)
 
 ``` r
 
@@ -125,9 +117,7 @@ raylibr_screenshot(function() {
 })
 ```
 
-![raylibr image](file5ba047e689e9.png)
-
-raylibr image
+![Image rendered by raylibr](file5a9058491cee.png)
 
 ## Built-in camera modes
 

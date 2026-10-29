@@ -15,8 +15,17 @@
 <link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Colors">
-<script src="https://jeroenjanssens.github.io/raylibr/coi-serviceworker.js"></script>
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<meta property="og:title" content="Colors">
+<script>
+(function() {
+  var m = location.pathname.match(/^(.*?\/)(articles|reference|news)\//);
+  var root = m ? m[1] : location.pathname.substring(0, location.pathname.lastIndexOf('/') + 1);
+  var s = document.createElement('script');
+  s.src = root + 'coi-serviceworker.js';
+  document.head.appendChild(s);
+})();
+</script>
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -26,7 +35,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">raylibr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.0.9001</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,6 +69,7 @@
     <li><a class="dropdown-item" href="../articles/demo-mouse.html">Mouse Test</a></li>
     <li><a class="dropdown-item" href="../articles/demo-balls.html">Bouncing Balls</a></li>
     <li><a class="dropdown-item" href="../articles/demo-snake.html">Snake</a></li>
+    <li><a class="dropdown-item" href="../articles/demo-tetris.html">Tetris</a></li>
     <li><a class="dropdown-item" href="../articles/demo-stroop.html">Stroop Test</a></li>
     <li><a class="dropdown-item" href="../articles/demo-cubes.html">Waving Cubes</a></li>
     <li><a class="dropdown-item" href="../articles/demo-beatbox.html">Beatbox</a></li>
@@ -114,24 +124,19 @@ string:</p>
 <span>  <span class="st">"salmon"</span>, <span class="st">"coral"</span>, <span class="st">"khaki"</span>, <span class="st">"palegreen"</span>,</span>
 <span>  <span class="st">"skyblue"</span>, <span class="st">"plum"</span>, <span class="st">"sienna"</span>, <span class="st">"grey70"</span></span>
 <span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">cols</span> <span class="op">&lt;-</span> <span class="fl">5L</span></span>
-<span>  <span class="va">w</span> <span class="op">&lt;-</span> <span class="fl">70L</span></span>
-<span>  <span class="va">h</span> <span class="op">&lt;-</span> <span class="fl">50L</span></span>
-<span>  <span class="va">pad</span> <span class="op">&lt;-</span> <span class="fl">10L</span></span>
-<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_along</a></span><span class="op">(</span><span class="va">colors</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="va">row</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">i</span> <span class="op">-</span> <span class="fl">1L</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html" class="external-link">%/%</a></span> <span class="va">cols</span></span>
-<span>    <span class="va">col</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">i</span> <span class="op">-</span> <span class="fl">1L</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html" class="external-link">%%</a></span> <span class="va">cols</span></span>
-<span>    <span class="va">x</span> <span class="op">&lt;-</span> <span class="va">pad</span> <span class="op">+</span> <span class="va">col</span> <span class="op">*</span> <span class="op">(</span><span class="va">w</span> <span class="op">+</span> <span class="va">pad</span><span class="op">)</span></span>
-<span>    <span class="va">y</span> <span class="op">&lt;-</span> <span class="va">pad</span> <span class="op">+</span> <span class="va">row</span> <span class="op">*</span> <span class="op">(</span><span class="va">h</span> <span class="op">+</span> <span class="va">pad</span> <span class="op">+</span> <span class="fl">14L</span><span class="op">)</span></span>
-<span>    <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, <span class="va">w</span>, <span class="va">h</span>, <span class="va">colors</span><span class="op">[</span><span class="va">i</span><span class="op">]</span><span class="op">)</span></span>
-<span>    <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="va">colors</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">x</span> <span class="op">+</span> <span class="fl">2L</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">y</span> <span class="op">+</span> <span class="va">h</span> <span class="op">+</span> <span class="fl">1L</span><span class="op">)</span>, <span class="fl">10L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span>  <span class="op">}</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5c0454f828cf.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<span><span class="va">cols</span> <span class="op">&lt;-</span> <span class="fl">5L</span></span>
+<span><span class="va">w</span> <span class="op">&lt;-</span> <span class="fl">108L</span></span>
+<span><span class="va">h</span> <span class="op">&lt;-</span> <span class="fl">78L</span></span>
+<span><span class="va">pad</span> <span class="op">&lt;-</span> <span class="fl">16L</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_along</a></span><span class="op">(</span><span class="va">colors</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">row</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">i</span> <span class="op">-</span> <span class="fl">1L</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html" class="external-link">%/%</a></span> <span class="va">cols</span></span>
+<span>  <span class="va">col</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">i</span> <span class="op">-</span> <span class="fl">1L</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html" class="external-link">%%</a></span> <span class="va">cols</span></span>
+<span>  <span class="va">x</span> <span class="op">&lt;-</span> <span class="va">pad</span> <span class="op">+</span> <span class="va">col</span> <span class="op">*</span> <span class="op">(</span><span class="va">w</span> <span class="op">+</span> <span class="va">pad</span><span class="op">)</span></span>
+<span>  <span class="va">y</span> <span class="op">&lt;-</span> <span class="va">pad</span> <span class="op">+</span> <span class="va">row</span> <span class="op">*</span> <span class="op">(</span><span class="va">h</span> <span class="op">+</span> <span class="va">pad</span> <span class="op">+</span> <span class="fl">20L</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, <span class="va">w</span>, <span class="va">h</span>, <span class="va">colors</span><span class="op">[</span><span class="va">i</span><span class="op">]</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="va">colors</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">y</span> <span class="op">+</span> <span class="va">h</span> <span class="op">+</span> <span class="fl">3L</span><span class="op">)</span>, <span class="fl">15L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+<p><img src="file5af43abbdac9.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p>This includes all of <code><a href="https://rdrr.io/r/grDevices/colors.html" class="external-link">colors()</a></code> from base R —
 <code>"red"</code>, <code>"steelblue"</code>, <code>"grey90"</code>,
 <code>"antiquewhite"</code>, and 653 more.</p>
@@ -159,16 +164,12 @@ string:</p>
 <p><code><a href="../reference/color_alpha.html">color_alpha()</a></code> creates a transparent version of any
 color. The alpha ranges from 0 (invisible) to 1 (opaque):</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">150L</span>, <span class="fl">130L</span>, <span class="fl">80.0</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">200L</span>, <span class="fl">130L</span>, <span class="fl">80.0</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"steelblue"</span>, <span class="fl">0.6</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">250L</span>, <span class="fl">130L</span>, <span class="fl">80.0</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"gold"</span>, <span class="fl">0.6</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">175L</span>, <span class="fl">180L</span>, <span class="fl">80.0</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"mediumseagreen"</span>, <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">225L</span>, <span class="fl">180L</span>, <span class="fl">80.0</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"orchid"</span>, <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5c0436b98f7a.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">240L</span>, <span class="fl">210L</span>, <span class="fl">125.0</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">320L</span>, <span class="fl">210L</span>, <span class="fl">125.0</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"steelblue"</span>, <span class="fl">0.6</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">400L</span>, <span class="fl">210L</span>, <span class="fl">125.0</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"gold"</span>, <span class="fl">0.6</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">280L</span>, <span class="fl">290L</span>, <span class="fl">125.0</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"mediumseagreen"</span>, <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">360L</span>, <span class="fl">290L</span>, <span class="fl">125.0</span>, <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"orchid"</span>, <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5af4a066173.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p><code><a href="../reference/fade.html">fade()</a></code> does the same thing as <code><a href="../reference/color_alpha.html">color_alpha()</a></code>
 — both set the alpha channel.</p>
 </div>
@@ -177,38 +178,34 @@ color. The alpha ranges from 0 (invisible) to 1 (opaque):</p>
 </h2>
 <p>raylibr provides functions to adjust colors:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">base</span> <span class="op">&lt;-</span> <span class="st">"steelblue"</span></span>
-<span>  <span class="va">w</span> <span class="op">&lt;-</span> <span class="fl">36L</span></span>
-<span>  <span class="va">h</span> <span class="op">&lt;-</span> <span class="fl">60L</span></span>
+<code class="sourceCode R"><span><span class="va">base</span> <span class="op">&lt;-</span> <span class="st">"steelblue"</span></span>
+<span><span class="va">w</span> <span class="op">&lt;-</span> <span class="fl">58L</span></span>
+<span><span class="va">h</span> <span class="op">&lt;-</span> <span class="fl">96L</span></span>
 <span></span>
-<span>  <span class="co"># Brightness: -255 to 255</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"brightness"</span>, <span class="fl">10L</span>, <span class="fl">10L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="fl">9</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="va">b</span> <span class="op">&lt;-</span> <span class="op">-</span><span class="fl">200</span> <span class="op">+</span> <span class="va">i</span> <span class="op">*</span> <span class="fl">44</span></span>
-<span>    <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">10L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="op">(</span><span class="va">w</span> <span class="op">+</span> <span class="fl">2L</span><span class="op">)</span>, <span class="fl">30L</span>, <span class="va">w</span>, <span class="va">h</span>,</span>
-<span>                   <span class="fu"><a href="../reference/color_brightness.html">color_brightness</a></span><span class="op">(</span><span class="va">base</span>, <span class="va">b</span> <span class="op">/</span> <span class="fl">255</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="op">}</span></span>
+<span><span class="co"># Brightness: -255 to 255</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"brightness"</span>, <span class="fl">16L</span>, <span class="fl">16L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="fl">9</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">b</span> <span class="op">&lt;-</span> <span class="op">-</span><span class="fl">200</span> <span class="op">+</span> <span class="va">i</span> <span class="op">*</span> <span class="fl">44</span></span>
+<span>  <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">16L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="op">(</span><span class="va">w</span> <span class="op">+</span> <span class="fl">3L</span><span class="op">)</span>, <span class="fl">48L</span>, <span class="va">w</span>, <span class="va">h</span>,</span>
+<span>                 <span class="fu"><a href="../reference/color_brightness.html">color_brightness</a></span><span class="op">(</span><span class="va">base</span>, <span class="va">b</span> <span class="op">/</span> <span class="fl">255</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
 <span></span>
-<span>  <span class="co"># Tint</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"tint toward gold"</span>, <span class="fl">10L</span>, <span class="fl">110L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="fl">9</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="va">frac</span> <span class="op">&lt;-</span> <span class="va">i</span> <span class="op">/</span> <span class="fl">9</span></span>
-<span>    <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">10L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="op">(</span><span class="va">w</span> <span class="op">+</span> <span class="fl">2L</span><span class="op">)</span>, <span class="fl">130L</span>, <span class="va">w</span>, <span class="va">h</span>,</span>
-<span>                   <span class="fu"><a href="../reference/color_lerp.html">color_lerp</a></span><span class="op">(</span><span class="va">base</span>, <span class="st">"gold"</span>, <span class="va">frac</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="op">}</span></span>
+<span><span class="co"># Tint</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"tint toward gold"</span>, <span class="fl">16L</span>, <span class="fl">176L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="fl">9</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">frac</span> <span class="op">&lt;-</span> <span class="va">i</span> <span class="op">/</span> <span class="fl">9</span></span>
+<span>  <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">16L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="op">(</span><span class="va">w</span> <span class="op">+</span> <span class="fl">3L</span><span class="op">)</span>, <span class="fl">208L</span>, <span class="va">w</span>, <span class="va">h</span>,</span>
+<span>                 <span class="fu"><a href="../reference/color_lerp.html">color_lerp</a></span><span class="op">(</span><span class="va">base</span>, <span class="st">"gold"</span>, <span class="va">frac</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
 <span></span>
-<span>  <span class="co"># Contrast: -255 to 255</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"contrast"</span>, <span class="fl">10L</span>, <span class="fl">210L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="fl">9</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="va">c_val</span> <span class="op">&lt;-</span> <span class="op">-</span><span class="fl">200</span> <span class="op">+</span> <span class="va">i</span> <span class="op">*</span> <span class="fl">44</span></span>
-<span>    <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">10L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="op">(</span><span class="va">w</span> <span class="op">+</span> <span class="fl">2L</span><span class="op">)</span>, <span class="fl">230L</span>, <span class="va">w</span>, <span class="va">h</span>,</span>
-<span>                   <span class="fu"><a href="../reference/color_contrast.html">color_contrast</a></span><span class="op">(</span><span class="va">base</span>, <span class="va">c_val</span> <span class="op">/</span> <span class="fl">255</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="op">}</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5c042fba275b.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<span><span class="co"># Contrast: -255 to 255</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"contrast"</span>, <span class="fl">16L</span>, <span class="fl">336L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="fl">9</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">c_val</span> <span class="op">&lt;-</span> <span class="op">-</span><span class="fl">200</span> <span class="op">+</span> <span class="va">i</span> <span class="op">*</span> <span class="fl">44</span></span>
+<span>  <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">16L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="op">(</span><span class="va">w</span> <span class="op">+</span> <span class="fl">3L</span><span class="op">)</span>, <span class="fl">368L</span>, <span class="va">w</span>, <span class="va">h</span>,</span>
+<span>                 <span class="fu"><a href="../reference/color_contrast.html">color_contrast</a></span><span class="op">(</span><span class="va">base</span>, <span class="va">c_val</span> <span class="op">/</span> <span class="fl">255</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+<p><img src="file5af43fc4bab7.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <ul>
 <li>
 <code>color_brightness(color, factor)</code> — lighten (positive) or
@@ -228,31 +225,27 @@ another</li>
 saturation (0–1), and value (0–1). This is great for generating color
 ramps:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">36L</span></span>
-<span>  <span class="va">w</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="fl">380</span> <span class="op">/</span> <span class="va">n</span><span class="op">)</span></span>
-<span>  <span class="co"># Hue rainbow</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"hue (saturation=1, value=1)"</span>, <span class="fl">10L</span>, <span class="fl">10L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1L</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">10L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="va">w</span>, <span class="fl">30L</span>, <span class="va">w</span>, <span class="fl">50L</span>,</span>
-<span>                   <span class="fu"><a href="../reference/color_from_hsv.html">color_from_hsv</a></span><span class="op">(</span><span class="va">i</span> <span class="op">*</span> <span class="fl">360.0</span> <span class="op">/</span> <span class="va">n</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="op">}</span></span>
-<span>  <span class="co"># Saturation ramp</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"saturation (hue=200, value=1)"</span>, <span class="fl">10L</span>, <span class="fl">100L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1L</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">10L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="va">w</span>, <span class="fl">120L</span>, <span class="va">w</span>, <span class="fl">50L</span>,</span>
-<span>                   <span class="fu"><a href="../reference/color_from_hsv.html">color_from_hsv</a></span><span class="op">(</span><span class="fl">200.0</span>, <span class="va">i</span> <span class="op">/</span> <span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1.0</span><span class="op">)</span>, <span class="fl">1.0</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="op">}</span></span>
-<span>  <span class="co"># Value ramp</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"value (hue=200, saturation=1)"</span>, <span class="fl">10L</span>, <span class="fl">190L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1L</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">10L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="va">w</span>, <span class="fl">210L</span>, <span class="va">w</span>, <span class="fl">50L</span>,</span>
-<span>                   <span class="fu"><a href="../reference/color_from_hsv.html">color_from_hsv</a></span><span class="op">(</span><span class="fl">200.0</span>, <span class="fl">1.0</span>, <span class="va">i</span> <span class="op">/</span> <span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1.0</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="op">}</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5c043f1d8d50.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<code class="sourceCode R"><span><span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">36L</span></span>
+<span><span class="va">w</span> <span class="op">&lt;-</span> <span class="fl">16L</span></span>
+<span><span class="co"># Hue rainbow</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"hue (saturation=1, value=1)"</span>, <span class="fl">32L</span>, <span class="fl">16L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1L</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">32L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="va">w</span>, <span class="fl">48L</span>, <span class="va">w</span>, <span class="fl">80L</span>,</span>
+<span>                 <span class="fu"><a href="../reference/color_from_hsv.html">color_from_hsv</a></span><span class="op">(</span><span class="va">i</span> <span class="op">*</span> <span class="fl">360.0</span> <span class="op">/</span> <span class="va">n</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="co"># Saturation ramp</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"saturation (hue=200, value=1)"</span>, <span class="fl">32L</span>, <span class="fl">160L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1L</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">32L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="va">w</span>, <span class="fl">192L</span>, <span class="va">w</span>, <span class="fl">80L</span>,</span>
+<span>                 <span class="fu"><a href="../reference/color_from_hsv.html">color_from_hsv</a></span><span class="op">(</span><span class="fl">200.0</span>, <span class="va">i</span> <span class="op">/</span> <span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1.0</span><span class="op">)</span>, <span class="fl">1.0</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="co"># Value ramp</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"value (hue=200, saturation=1)"</span>, <span class="fl">32L</span>, <span class="fl">304L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1L</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">32L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="va">w</span>, <span class="fl">336L</span>, <span class="va">w</span>, <span class="fl">80L</span>,</span>
+<span>                 <span class="fu"><a href="../reference/color_from_hsv.html">color_from_hsv</a></span><span class="op">(</span><span class="fl">200.0</span>, <span class="fl">1.0</span>, <span class="va">i</span> <span class="op">/</span> <span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1.0</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+<p><img src="file5af41daa57ce.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p>Convert back with <code><a href="../reference/color_to_hsv.html">color_to_hsv()</a></code>:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/color_to_hsv.html">color_to_hsv</a></span><span class="op">(</span><span class="st">"tomato"</span><span class="op">)</span></span>
@@ -265,37 +258,33 @@ ramps:</p>
 <p><code><a href="../reference/color_lerp.html">color_lerp()</a></code> blends between two colors. Use it to create
 smooth gradients:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">40L</span></span>
-<span>  <span class="va">w</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="fl">380</span> <span class="op">/</span> <span class="va">n</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">40L</span></span>
+<span><span class="va">w</span> <span class="op">&lt;-</span> <span class="fl">15L</span></span>
 <span></span>
-<span>  <span class="va">from</span> <span class="op">&lt;-</span> <span class="st">"tomato"</span></span>
-<span>  <span class="va">to</span> <span class="op">&lt;-</span> <span class="st">"steelblue"</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"tomato -&gt; steelblue"</span>, <span class="fl">10L</span>, <span class="fl">10L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1L</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">10L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="va">w</span>, <span class="fl">30L</span>, <span class="va">w</span>, <span class="fl">50L</span>,</span>
-<span>                   <span class="fu"><a href="../reference/color_lerp.html">color_lerp</a></span><span class="op">(</span><span class="va">from</span>, <span class="va">to</span>, <span class="va">i</span> <span class="op">/</span> <span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1.0</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="op">}</span></span>
+<span><span class="va">from</span> <span class="op">&lt;-</span> <span class="st">"tomato"</span></span>
+<span><span class="va">to</span> <span class="op">&lt;-</span> <span class="st">"steelblue"</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"tomato -&gt; steelblue"</span>, <span class="fl">20L</span>, <span class="fl">16L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1L</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">20L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="va">w</span>, <span class="fl">48L</span>, <span class="va">w</span>, <span class="fl">80L</span>,</span>
+<span>                 <span class="fu"><a href="../reference/color_lerp.html">color_lerp</a></span><span class="op">(</span><span class="va">from</span>, <span class="va">to</span>, <span class="va">i</span> <span class="op">/</span> <span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1.0</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
 <span></span>
-<span>  <span class="va">from2</span> <span class="op">&lt;-</span> <span class="st">"mediumseagreen"</span></span>
-<span>  <span class="va">to2</span> <span class="op">&lt;-</span> <span class="st">"orchid"</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"mediumseagreen -&gt; orchid"</span>, <span class="fl">10L</span>, <span class="fl">100L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1L</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">10L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="va">w</span>, <span class="fl">120L</span>, <span class="va">w</span>, <span class="fl">50L</span>,</span>
-<span>                   <span class="fu"><a href="../reference/color_lerp.html">color_lerp</a></span><span class="op">(</span><span class="va">from2</span>, <span class="va">to2</span>, <span class="va">i</span> <span class="op">/</span> <span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1.0</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="op">}</span></span>
+<span><span class="va">from2</span> <span class="op">&lt;-</span> <span class="st">"mediumseagreen"</span></span>
+<span><span class="va">to2</span> <span class="op">&lt;-</span> <span class="st">"orchid"</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"mediumseagreen -&gt; orchid"</span>, <span class="fl">20L</span>, <span class="fl">160L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1L</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">20L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="va">w</span>, <span class="fl">192L</span>, <span class="va">w</span>, <span class="fl">80L</span>,</span>
+<span>                 <span class="fu"><a href="../reference/color_lerp.html">color_lerp</a></span><span class="op">(</span><span class="va">from2</span>, <span class="va">to2</span>, <span class="va">i</span> <span class="op">/</span> <span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1.0</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
 <span></span>
-<span>  <span class="va">from3</span> <span class="op">&lt;-</span> <span class="st">"gold"</span></span>
-<span>  <span class="va">to3</span> <span class="op">&lt;-</span> <span class="st">"midnightblue"</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"gold -&gt; midnightblue"</span>, <span class="fl">10L</span>, <span class="fl">190L</span>, <span class="fl">14L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
-<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1L</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">10L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="va">w</span>, <span class="fl">210L</span>, <span class="va">w</span>, <span class="fl">50L</span>,</span>
-<span>                   <span class="fu"><a href="../reference/color_lerp.html">color_lerp</a></span><span class="op">(</span><span class="va">from3</span>, <span class="va">to3</span>, <span class="va">i</span> <span class="op">/</span> <span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1.0</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="op">}</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5c04b5ffe7a.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
-</div>
+<span><span class="va">from3</span> <span class="op">&lt;-</span> <span class="st">"gold"</span></span>
+<span><span class="va">to3</span> <span class="op">&lt;-</span> <span class="st">"midnightblue"</span></span>
+<span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"gold -&gt; midnightblue"</span>, <span class="fl">20L</span>, <span class="fl">304L</span>, <span class="fl">20L</span>, <span class="st">"grey70"</span><span class="op">)</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span><span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1L</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">20L</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">*</span> <span class="va">w</span>, <span class="fl">336L</span>, <span class="va">w</span>, <span class="fl">80L</span>,</span>
+<span>                 <span class="fu"><a href="../reference/color_lerp.html">color_lerp</a></span><span class="op">(</span><span class="va">from3</span>, <span class="va">to3</span>, <span class="va">i</span> <span class="op">/</span> <span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="fl">1.0</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+<p><img src="file5af453b69df2.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p><code><a href="../reference/color_alpha_blend.html">color_alpha_blend()</a></code> blends a foreground color over a
 background, respecting the foreground’s alpha channel — useful for
 compositing.</p>

@@ -15,8 +15,17 @@
 <link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Shaders">
-<script src="https://jeroenjanssens.github.io/raylibr/coi-serviceworker.js"></script>
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<meta property="og:title" content="Shaders">
+<script>
+(function() {
+  var m = location.pathname.match(/^(.*?\/)(articles|reference|news)\//);
+  var root = m ? m[1] : location.pathname.substring(0, location.pathname.lastIndexOf('/') + 1);
+  var s = document.createElement('script');
+  s.src = root + 'coi-serviceworker.js';
+  document.head.appendChild(s);
+})();
+</script>
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -26,7 +35,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">raylibr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.0.9001</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,6 +69,7 @@
     <li><a class="dropdown-item" href="../articles/demo-mouse.html">Mouse Test</a></li>
     <li><a class="dropdown-item" href="../articles/demo-balls.html">Bouncing Balls</a></li>
     <li><a class="dropdown-item" href="../articles/demo-snake.html">Snake</a></li>
+    <li><a class="dropdown-item" href="../articles/demo-tetris.html">Tetris</a></li>
     <li><a class="dropdown-item" href="../articles/demo-stroop.html">Stroop Test</a></li>
     <li><a class="dropdown-item" href="../articles/demo-cubes.html">Waving Cubes</a></li>
     <li><a class="dropdown-item" href="../articles/demo-beatbox.html">Beatbox</a></li>
@@ -111,8 +121,8 @@ visual effects.</p>
 <code class="sourceCode R"><span><span class="co"># From files</span></span>
 <span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader.html">load_shader</a></span><span class="op">(</span><span class="st">"vertex.glsl"</span>, <span class="st">"fragment.glsl"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Pass NULL for either to use Raylib's default</span></span>
-<span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader.html">load_shader</a></span><span class="op">(</span><span class="cn">NULL</span>, <span class="st">"my_effect.glsl"</span><span class="op">)</span></span>
+<span><span class="co"># Pass "" for either to use Raylib's default</span></span>
+<span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader.html">load_shader</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">"my_effect.glsl"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># From strings</span></span>
 <span><span class="va">fs_code</span> <span class="op">&lt;-</span> <span class="st">"</span></span>
@@ -127,7 +137,7 @@ visual effects.</p>
 <span><span class="st">    finalColor = vec4(gray, gray, gray, color.a);</span></span>
 <span><span class="st">}</span></span>
 <span><span class="st">"</span></span>
-<span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader_from_memory.html">load_shader_from_memory</a></span><span class="op">(</span><span class="cn">NULL</span>, <span class="va">fs_code</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader_from_memory.html">load_shader_from_memory</a></span><span class="op">(</span><span class="st">""</span>, <span class="va">fs_code</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="using-shaders">Using shaders<a class="anchor" aria-label="anchor" href="#using-shaders"></a>
@@ -165,9 +175,9 @@ normally to an off-screen texture, then draw that texture to the screen
 through a shader.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Setup</span></span>
-<span><span class="va">target</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_render_texture.html">load_render_texture</a></span><span class="op">(</span><span class="fl">400L</span>, <span class="fl">300L</span><span class="op">)</span></span>
-<span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader.html">load_shader</a></span><span class="op">(</span><span class="cn">NULL</span>, <span class="st">"my_effect.glsl"</span><span class="op">)</span></span>
-<span><span class="va">source_rec</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rectangle.html">rectangle</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">400</span>, <span class="op">-</span><span class="fl">300</span><span class="op">)</span>  <span class="co"># flipped Y for render texture</span></span>
+<span><span class="va">target</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_render_texture.html">load_render_texture</a></span><span class="op">(</span><span class="fl">640L</span>, <span class="fl">480L</span><span class="op">)</span></span>
+<span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader.html">load_shader</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">"my_effect.glsl"</span><span class="op">)</span></span>
+<span><span class="va">source_rec</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rectangle.html">rectangle</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">640</span>, <span class="op">-</span><span class="fl">480</span><span class="op">)</span>  <span class="co"># flipped Y for render texture</span></span>
 <span></span>
 <span><span class="co"># In the game loop:</span></span>
 <span><span class="fu"><a href="../reference/begin_texture_mode.html">begin_texture_mode</a></span><span class="op">(</span><span class="va">target</span><span class="op">)</span></span>
@@ -184,23 +194,112 @@ through a shader.</p>
 are vertically flipped in OpenGL.</p>
 </div>
 <div class="section level2">
-<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+<h2 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
 </h2>
-<p>Without a shader, a scene with colored circles looks like this:</p>
+<p>The examples below all post-process the same scene. Two small helpers
+keep the snippets short: <code>draw_scene()</code> draws the scene, and
+<code>post_process()</code> follows the pattern above, rendering the
+scene to a texture and drawing that texture through a shader.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">100L</span>, <span class="fl">150L</span>, <span class="fl">80.0</span>, <span class="st">"red"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">200L</span>, <span class="fl">150L</span>, <span class="fl">80.0</span>, <span class="st">"green"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">300L</span>, <span class="fl">150L</span>, <span class="fl">80.0</span>, <span class="st">"blue"</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"No shader"</span>, <span class="fl">10L</span>, <span class="fl">10L</span>, <span class="fl">20L</span>, <span class="st">"white"</span><span class="op">)</span></span>
-<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="file5f1af13b847.png" alt="raylibr image"><div class="figcaption">raylibr image</div>
+<code class="sourceCode R"><span><span class="va">draw_scene</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="../reference/draw_rectangle_gradient_v.html">draw_rectangle_gradient_v</a></span><span class="op">(</span><span class="fl">0L</span>, <span class="fl">0L</span>, <span class="fl">640L</span>, <span class="fl">480L</span>, <span class="st">"midnightblue"</span>, <span class="st">"darkorchid4"</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">170L</span>, <span class="fl">230L</span>, <span class="fl">110.0</span>, <span class="st">"gold"</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="../reference/draw_circle_lines.html">draw_circle_lines</a></span><span class="op">(</span><span class="fl">170L</span>, <span class="fl">230L</span>, <span class="fl">140.0</span>, <span class="st">"white"</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="../reference/draw_rectangle.html">draw_rectangle</a></span><span class="op">(</span><span class="fl">300L</span>, <span class="fl">120L</span>, <span class="fl">200L</span>, <span class="fl">200L</span>, <span class="st">"tomato"</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="../reference/draw_triangle.html">draw_triangle</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">480</span>, <span class="fl">380</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">620</span>, <span class="fl">380</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">550</span>, <span class="fl">250</span><span class="op">)</span>, <span class="st">"springgreen"</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"raylibr"</span>, <span class="fl">40L</span>, <span class="fl">400L</span>, <span class="fl">60L</span>, <span class="st">"white"</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="va">post_process</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">shader</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">target</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_render_texture.html">load_render_texture</a></span><span class="op">(</span><span class="fl">640L</span>, <span class="fl">480L</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="../reference/begin_texture_mode.html">begin_texture_mode</a></span><span class="op">(</span><span class="va">target</span><span class="op">)</span></span>
+<span>  <span class="fu">draw_scene</span><span class="op">(</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="../reference/end_texture_mode.html">end_texture_mode</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span>  <span class="fu"><a href="../reference/begin_shader_mode.html">begin_shader_mode</a></span><span class="op">(</span><span class="va">shader</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="../reference/draw_texture_rec.html">draw_texture_rec</a></span><span class="op">(</span><span class="va">target</span><span class="op">$</span><span class="va">texture</span>, <span class="fu"><a href="../reference/rectangle.html">rectangle</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">640</span>, <span class="op">-</span><span class="fl">480</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, <span class="st">"white"</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="../reference/end_shader_mode.html">end_shader_mode</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+<p>Without a shader, the scene looks like this:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">draw_scene</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5e032db6f9e3.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
+<p>raylibr ships with a collection of post-processing shaders from the
+Raylib examples, which you can find with
+<code><a href="../reference/raylibr_resource.html">raylibr_resource()</a></code>.</p>
+<div class="section level3">
+<h3 id="grayscale">Grayscale<a class="anchor" aria-label="anchor" href="#grayscale"></a>
+</h3>
+<p>Converts each pixel to its luminance, using the weights
+<code>(0.299, 0.587, 0.114)</code> to match human perception:</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader.html">load_shader</a></span><span class="op">(</span><span class="st">""</span>, <span class="fu"><a href="../reference/raylibr_resource.html">raylibr_resource</a></span><span class="op">(</span><span class="st">"model/grayscale.fs"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">post_process</span><span class="op">(</span><span class="va">shader</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5e03553b8c5b.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 </div>
-<p>A grayscale fragment shader would convert this to shades of gray by
-computing a weighted luminance from the RGB channels. The GLSL code uses
-the standard luminance weights <code>(0.299, 0.587, 0.114)</code> to
-match human perception.</p>
+<div class="section level3">
+<h3 id="pixelation">Pixelation<a class="anchor" aria-label="anchor" href="#pixelation"></a>
+</h3>
+<p>The pixelizer shader has uniforms for the block size, which you can
+set from R:</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader.html">load_shader</a></span><span class="op">(</span><span class="st">""</span>, <span class="fu"><a href="../reference/raylibr_resource.html">raylibr_resource</a></span><span class="op">(</span><span class="st">"model/pixelizer.fs"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/set_shader_value.html">set_shader_value</a></span><span class="op">(</span><span class="va">shader</span>, <span class="fu"><a href="../reference/get_shader_location.html">get_shader_location</a></span><span class="op">(</span><span class="va">shader</span>, <span class="st">"pixelWidth"</span><span class="op">)</span>, <span class="fl">10</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/set_shader_value.html">set_shader_value</a></span><span class="op">(</span><span class="va">shader</span>, <span class="fu"><a href="../reference/get_shader_location.html">get_shader_location</a></span><span class="op">(</span><span class="va">shader</span>, <span class="st">"pixelHeight"</span><span class="op">)</span>, <span class="fl">10</span><span class="op">)</span></span>
+<span><span class="fu">post_process</span><span class="op">(</span><span class="va">shader</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5e03c1b79cc.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
+</div>
+<div class="section level3">
+<h3 id="edge-detection">Edge detection<a class="anchor" aria-label="anchor" href="#edge-detection"></a>
+</h3>
+<p>The Sobel operator compares neighbouring pixels to find edges:</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader.html">load_shader</a></span><span class="op">(</span><span class="st">""</span>, <span class="fu"><a href="../reference/raylibr_resource.html">raylibr_resource</a></span><span class="op">(</span><span class="st">"model/sobel.fs"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">post_process</span><span class="op">(</span><span class="va">shader</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5e03296c62da.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
+</div>
+<div class="section level3">
+<h3 id="thermal-vision">Thermal vision<a class="anchor" aria-label="anchor" href="#thermal-vision"></a>
+</h3>
+<p>Maps the brightness of each pixel onto a heat-camera palette:</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader.html">load_shader</a></span><span class="op">(</span><span class="st">""</span>, <span class="fu"><a href="../reference/raylibr_resource.html">raylibr_resource</a></span><span class="op">(</span><span class="st">"model/predator.fs"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">post_process</span><span class="op">(</span><span class="va">shader</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5e03245b02.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
+</div>
+<div class="section level3">
+<h3 id="fisheye">Fisheye<a class="anchor" aria-label="anchor" href="#fisheye"></a>
+</h3>
+<p>A fragment shader can also move pixels around. This one samples the
+texture through a lens distortion:</p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader.html">load_shader</a></span><span class="op">(</span><span class="st">""</span>, <span class="fu"><a href="../reference/raylibr_resource.html">raylibr_resource</a></span><span class="op">(</span><span class="st">"model/fisheye.fs"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">post_process</span><span class="op">(</span><span class="va">shader</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5e035fea2330.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
+</div>
+<div class="section level3">
+<h3 id="writing-your-own">Writing your own<a class="anchor" aria-label="anchor" href="#writing-your-own"></a>
+</h3>
+<p>A fragment shader of your own can be loaded from a string. This one
+inverts every color:</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fs_code</span> <span class="op">&lt;-</span> <span class="st">"</span></span>
+<span><span class="st">#version 330</span></span>
+<span><span class="st">in vec2 fragTexCoord;</span></span>
+<span><span class="st">in vec4 fragColor;</span></span>
+<span><span class="st">out vec4 finalColor;</span></span>
+<span><span class="st">uniform sampler2D texture0;</span></span>
+<span><span class="st">void main() {</span></span>
+<span><span class="st">    vec4 color = texture(texture0, fragTexCoord) * fragColor;</span></span>
+<span><span class="st">    finalColor = vec4(1.0 - color.rgb, color.a);</span></span>
+<span><span class="st">}</span></span>
+<span><span class="st">"</span></span>
+<span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader_from_memory.html">load_shader_from_memory</a></span><span class="op">(</span><span class="st">""</span>, <span class="va">fs_code</span><span class="op">)</span></span>
+<span><span class="fu">post_process</span><span class="op">(</span><span class="va">shader</span><span class="op">)</span></span></code></pre></div>
+<p><img src="file5e03523afc5f.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
+<p>In a real program, load shaders once before the game loop and free
+them with <code><a href="../reference/unload_shader.html">unload_shader()</a></code> afterwards.</p>
+</div>
 </div>
 <div class="section level2">
 <h2 id="further-reading">Further reading<a class="anchor" aria-label="anchor" href="#further-reading"></a>

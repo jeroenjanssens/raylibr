@@ -12,17 +12,13 @@ font size (integer), and color.
 
 ``` r
 
-raylibr_screenshot(function() {
-  draw_text("Small (10)", 20L, 20L, 10L, "lightgray")
-  draw_text("Medium (20)", 20L, 50L, 20L, "skyblue")
-  draw_text("Large (40)", 20L, 90L, 40L, "yellow")
-  draw_text("Huge (60)", 20L, 150L, 60L, "tomato")
-})
+draw_text("Small (20)", 30L, 30L, 20L, "lightgray")
+draw_text("Medium (30)", 30L, 80L, 30L, "skyblue")
+draw_text("Large (60)", 30L, 145L, 60L, "yellow")
+draw_text("Huge (90)", 30L, 240L, 90L, "tomato")
 ```
 
-![raylibr image](file5f5d20b85eea.png)
-
-raylibr image
+![Image rendered by raylibr](file5e884f1443a2.png)
 
 The default font is a built-in bitmap font included with Raylib.
 
@@ -50,19 +46,15 @@ top-left of the text and determines the pivot for rotation.
 
 ``` r
 
-raylibr_screenshot(function() {
-  font <- get_font_default()
-  draw_text_pro(font, "0 degrees", c(200, 150), c(0, 0), 0.0, 20.0, 2.0, as_color("white"))
-  draw_text_pro(font, "45 degrees", c(200, 150), c(0, 0), 45.0, 20.0, 2.0, as_color("lime"))
-  draw_text_pro(font, "90 degrees", c(200, 150), c(0, 0), 90.0, 20.0, 2.0, as_color("skyblue"))
-  draw_text_pro(font, "-30 degrees", c(200, 150), c(0, 0), -30.0, 20.0, 2.0, as_color("yellow"))
-  draw_circle(200L, 150L, 4.0, "red")
-})
+font <- get_font_default()
+draw_text_pro(font, "0 degrees", c(240, 190), c(0, 0), 0.0, 30.0, 3.0, as_color("white"))
+draw_text_pro(font, "45 degrees", c(240, 190), c(0, 0), 45.0, 30.0, 3.0, as_color("limegreen"))
+draw_text_pro(font, "90 degrees", c(240, 190), c(0, 0), 90.0, 30.0, 3.0, as_color("skyblue"))
+draw_text_pro(font, "-30 degrees", c(240, 190), c(0, 0), -30.0, 30.0, 3.0, as_color("yellow"))
+draw_circle(240L, 190L, 6.0, "red")
 ```
 
-![raylibr image](file5f5d454c7ad.png)
-
-raylibr image
+![Image rendered by raylibr](file5e886ad69ca5.png)
 
 The red dot marks the shared origin point. Each string fans out from
 there at a different angle.
@@ -75,19 +67,15 @@ center text:
 
 ``` r
 
-raylibr_screenshot(function() {
-  text <- "Centered!"
-  size <- 40L
-  w <- measure_text(text, size)
-  x <- (400L - w) %/% 2L
-  draw_text(text, x, 130L, size, "gold")
-  draw_line(200L, 0L, 200L, 300L, "darkgray")
-})
+text <- "Centered!"
+size <- 60L
+w <- measure_text(text, size)
+x <- (640L - w) %/% 2L
+draw_text(text, x, 210L, size, "gold")
+draw_line(320L, 0L, 320L, 480L, "darkgray")
 ```
 
-![raylibr image](file5f5d65e91b26.png)
-
-raylibr image
+![Image rendered by raylibr](file5e88479bb995.png)
 
 For custom fonts, use `measure_text_ex(font, text, font_size, spacing)`
 which returns a Vector2 with both width and height.

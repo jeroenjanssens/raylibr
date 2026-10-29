@@ -1,7 +1,21 @@
 # raylibr: R Wrapper for 'Raylib'
 
-This package wraps Raylib, a simple and easy-to-use library to enjoy
-videogames programming.
+Wraps 'Raylib' (<https://www.raylib.com/>), a simple and easy-to-use C
+library for videogames programming. Provides R functions for 2D/3D
+rendering, audio, input handling, and GUI via 'raygui'.
+
+## Resource management
+
+Raylib resources such as textures, models, sounds, fonts, and shaders
+allocate GPU or audio memory that R's garbage collector cannot
+automatically release. Always call the corresponding `unload_*()`
+function (e.g.,
+[`unload_texture()`](https://jeroenjanssens.github.io/raylibr/reference/unload_texture.md),
+[`unload_model()`](https://jeroenjanssens.github.io/raylibr/reference/unload_model.md))
+before calling
+[`close_window()`](https://jeroenjanssens.github.io/raylibr/reference/close_window.md).
+Letting resource objects go out of scope without unloading them will
+leak GPU/audio memory.
 
 ## See also
 

@@ -97,6 +97,15 @@ arrow keys to control the snake. Source:
 
 ![](reference/figures/raylibr-demo-snake.gif)
 
+### Play a game of Tetris
+
+Run `demo("tetris", package = "raylibr")` to play this game. Use the
+arrow keys to move and rotate, Space to hard drop, and C to hold.
+Source:
+[`demo/tetris.R`](https://github.com/jeroenjanssens/raylibr/blob/HEAD/demo/tetris.R)
+
+![](reference/figures/raylibr-demo-tetris.gif)
+
 ### Load 3D models and apply post-processing shaders
 
 Run `demo("model", package = "raylibr")` to play this demo. Select a

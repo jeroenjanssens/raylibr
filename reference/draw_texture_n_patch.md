@@ -162,6 +162,13 @@ Other draw functions:
 
 ``` r
 if (FALSE) {
-draw_texture_n_patch(load_texture("file.png"), n_patch_info(rectangle(0, 0, 64, 64), 16L, 16L, 16L, 16L, 0L), rectangle(10, 10, 200, 100), c(100, 100), 0.0, "red")
+draw_texture_n_patch(
+    load_texture("file.png"),
+    n_patch_info(rectangle(0, 0, 64, 64), 16L, 16L, 16L, 16L, 0L),
+    rectangle(10, 10, 200, 100),
+    c(100, 100),
+    0.0,
+    "red"
+  )
 }
 ```
