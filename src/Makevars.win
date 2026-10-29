@@ -16,6 +16,7 @@ $(OBJECTS): raylib_built
 
 raylib_built:
 	(cd ../inst; tar -xf $(RAYLIB_SRC).tar.gz)
+	"$(R_HOME)/bin$(R_ARCH_BIN)/Rscript" ../tools/patch_raylib.R ../inst/$(RAYLIB_SRC)/src
 	(cd ../inst/$(RAYLIB_SRC)/src; $(MAKE) PLATFORM=PLATFORM_DESKTOP > /dev/null 2>&1) || \
 	(cd ../inst/$(RAYLIB_SRC)/src; $(MAKE) PLATFORM=PLATFORM_DESKTOP)
 	mkdir -p ../inst/include
