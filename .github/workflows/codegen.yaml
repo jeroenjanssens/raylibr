@@ -24,9 +24,18 @@ jobs:
           r-version: 'release'
           use-public-rspm: true
 
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgl1-mesa-dev libx11-dev libxrandr-dev \
+            libxinerama-dev libxcursor-dev libxi-dev
+
       - name: Install dependencies
         run: |
-          install.packages(c("jsonlite", "Rcpp", "roxygen2"))
+          # roxygen2 must match RoxygenNote in DESCRIPTION; newer versions
+          # rewrite every Rd file and would fail the drift check below
+          install.packages(c("jsonlite", "Rcpp", "remotes"))
+          remotes::install_version("roxygen2", "7.3.3", upgrade = "never")
         shell: Rscript {0}
 
       - name: Run code generator
