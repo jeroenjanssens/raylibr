@@ -6,6 +6,7 @@ title: "Text & Fonts"
 library(raylibr)
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 CAN_RENDER <- raylibr:::has_display()
+source("_setup.R")
 ```
 
 raylibr provides several functions for drawing text, from simple one-liners to fully controlled rendering with custom fonts, rotation, and spacing.
@@ -14,13 +15,11 @@ raylibr provides several functions for drawing text, from simple one-liners to f
 
 `draw_text()` is the quickest way to put text on screen. Pass the string, position, font size (integer), and color.
 
-```{r text-sizes, eval=CAN_RENDER}
-raylibr_screenshot(function() {
-  draw_text("Small (10)", 20L, 20L, 10L, "lightgray")
-  draw_text("Medium (20)", 20L, 50L, 20L, "skyblue")
-  draw_text("Large (40)", 20L, 90L, 40L, "yellow")
-  draw_text("Huge (60)", 20L, 150L, 60L, "tomato")
-})
+```{raylib text-sizes, eval=CAN_RENDER}
+draw_text("Small (20)", 30L, 30L, 20L, "lightgray")
+draw_text("Medium (30)", 30L, 80L, 30L, "skyblue")
+draw_text("Large (60)", 30L, 145L, 60L, "yellow")
+draw_text("Huge (90)", 30L, 240L, 90L, "tomato")
 ```
 
 The default font is a built-in bitmap font included with Raylib.
@@ -41,15 +40,13 @@ unload_font(font)
 
 `draw_text_pro()` adds rotation and an origin point. The origin is relative to the top-left of the text and determines the pivot for rotation.
 
-```{r text-rotation, eval=CAN_RENDER}
-raylibr_screenshot(function() {
-  font <- get_font_default()
-  draw_text_pro(font, "0 degrees", c(200, 150), c(0, 0), 0.0, 20.0, 2.0, as_color("white"))
-  draw_text_pro(font, "45 degrees", c(200, 150), c(0, 0), 45.0, 20.0, 2.0, as_color("lime"))
-  draw_text_pro(font, "90 degrees", c(200, 150), c(0, 0), 90.0, 20.0, 2.0, as_color("skyblue"))
-  draw_text_pro(font, "-30 degrees", c(200, 150), c(0, 0), -30.0, 20.0, 2.0, as_color("yellow"))
-  draw_circle(200L, 150L, 4.0, "red")
-})
+```{raylib text-rotation, eval=CAN_RENDER}
+font <- get_font_default()
+draw_text_pro(font, "0 degrees", c(240, 190), c(0, 0), 0.0, 30.0, 3.0, as_color("white"))
+draw_text_pro(font, "45 degrees", c(240, 190), c(0, 0), 45.0, 30.0, 3.0, as_color("limegreen"))
+draw_text_pro(font, "90 degrees", c(240, 190), c(0, 0), 90.0, 30.0, 3.0, as_color("skyblue"))
+draw_text_pro(font, "-30 degrees", c(240, 190), c(0, 0), -30.0, 30.0, 3.0, as_color("yellow"))
+draw_circle(240L, 190L, 6.0, "red")
 ```
 
 The red dot marks the shared origin point. Each string fans out from there at a different angle.
@@ -58,15 +55,13 @@ The red dot marks the shared origin point. Each string fans out from there at a 
 
 `measure_text()` returns the width of a string in pixels at a given font size. Use it to center text:
 
-```{r text-center, eval=CAN_RENDER}
-raylibr_screenshot(function() {
-  text <- "Centered!"
-  size <- 40L
-  w <- measure_text(text, size)
-  x <- (400L - w) %/% 2L
-  draw_text(text, x, 130L, size, "gold")
-  draw_line(200L, 0L, 200L, 300L, "darkgray")
-})
+```{raylib text-center, eval=CAN_RENDER}
+text <- "Centered!"
+size <- 60L
+w <- measure_text(text, size)
+x <- (640L - w) %/% 2L
+draw_text(text, x, 210L, size, "gold")
+draw_line(320L, 0L, 320L, 480L, "darkgray")
 ```
 
 For custom fonts, use `measure_text_ex(font, text, font_size, spacing)` which returns a Vector2 with both width and height.

@@ -6,6 +6,7 @@ title: "raymath"
 library(raylibr)
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 CAN_RENDER <- raylibr:::has_display()
+source("_setup.R")
 ```
 
 raylibr includes the full raymath library — vector, matrix, and quaternion operations commonly needed in graphics programming. These use plain R types, so standard R operations work alongside raymath functions.
@@ -47,25 +48,23 @@ vector2_rotate(c(1, 0), pi / 2)
 
 Visualized — adding vectors `a` and `b`:
 
-```{r vec2-visual, eval=CAN_RENDER}
-raylibr_screenshot(function() {
-  ox <- 200L; oy <- 150L; s <- 40
+```{raylib vec2-visual, eval=CAN_RENDER}
+ox <- 260L; oy <- 420L; s <- 64
 
-  draw_line(0L, oy, 400L, oy, "darkgray")
-  draw_line(ox, 0L, ox, 300L, "darkgray")
+draw_line(0L, oy, 640L, oy, "darkgray")
+draw_line(ox, 0L, ox, 480L, "darkgray")
 
-  a <- c(3, 2)
-  draw_line_ex(c(ox, oy), c(ox + a[1]*s, oy - a[2]*s), 3.0, "red")
-  draw_text("a", as.integer(ox + a[1]*s + 5), as.integer(oy - a[2]*s), 20L, "red")
+a <- c(3, 2)
+draw_line_ex(c(ox, oy), c(ox + a[1]*s, oy - a[2]*s), 5.0, "red")
+draw_text("a", as.integer(ox + a[1]*s + 8), as.integer(oy - a[2]*s), 30L, "red")
 
-  b <- c(-1, 3)
-  draw_line_ex(c(ox, oy), c(ox + b[1]*s, oy - b[2]*s), 3.0, "blue")
-  draw_text("b", as.integer(ox + b[1]*s + 5), as.integer(oy - b[2]*s), 20L, "blue")
+b <- c(-1, 3)
+draw_line_ex(c(ox, oy), c(ox + b[1]*s, oy - b[2]*s), 5.0, "blue")
+draw_text("b", as.integer(ox + b[1]*s + 8), as.integer(oy - b[2]*s), 30L, "blue")
 
-  ab <- vector2_add(a, b)
-  draw_line_ex(c(ox, oy), c(ox + ab[1]*s, oy - ab[2]*s), 3.0, "green")
-  draw_text("a+b", as.integer(ox + ab[1]*s + 5), as.integer(oy - ab[2]*s), 20L, "green")
-})
+ab <- vector2_add(a, b)
+draw_line_ex(c(ox, oy), c(ox + ab[1]*s, oy - ab[2]*s), 5.0, "green")
+draw_text("a+b", as.integer(ox + ab[1]*s + 8), as.integer(oy - ab[2]*s), 30L, "green")
 ```
 
 Other useful Vector2 functions: `vector2_scale()`, `vector2_multiply()`, `vector2_negate()`, `vector2_reflect()`, `vector2_clamp()`, `vector2_move_towards()`.
@@ -83,15 +82,13 @@ vector3_normalize(c(1, 2, 2))
 
 `vector3_cross_product()` returns a vector perpendicular to both inputs — essential for computing surface normals and orientation.
 
-```{r vec3-visual, eval=CAN_RENDER}
-raylibr_screenshot_3d(function() {
-  draw_cube(c(0, 0.5, 0), 1, 1, 1, "red")
+```{raylib3d vec3-visual, eval=CAN_RENDER}
+draw_cube(c(0, 0.5, 0), 1, 1, 1, "red")
 
-  pos <- vector3_add(c(0, 0.5, 0), c(2, 0, 0))
-  draw_cube(pos, 1, 1, 1, "blue")
+pos <- vector3_add(c(0, 0.5, 0), c(2, 0, 0))
+draw_cube(pos, 1, 1, 1, "blue")
 
-  draw_line_3d(c(0, 0.5, 0), pos, "yellow")
-})
+draw_line_3d(c(0, 0.5, 0), pos, "yellow")
 ```
 
 Other key functions: `vector3_rotate_by_axis_angle()`, `vector3_project()`, `vector3_reject()`, `vector3_unproject()`, `vector3_barycenter()`, `vector3_ortho_normalize()`.
