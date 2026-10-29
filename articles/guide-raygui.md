@@ -23,7 +23,7 @@ gui_check_box(rectangle(65, 235, 30, 30), "Enable sound", TRUE)
 gui_button(rectangle(225, 330, 160, 65), "Apply")
 ```
 
-![Image rendered by raylibr](file5e9d5242d28b.png)
+![Image rendered by raylibr](file5db958b3da3e.png)
 
 ## Buttons and labels
 
@@ -54,7 +54,7 @@ gui_check_box(rectangle(65, 290, 30, 30), "Fullscreen", FALSE)
 gui_check_box(rectangle(65, 340, 30, 30), "VSync", TRUE)
 ```
 
-![Image rendered by raylibr](file5e9d5bc626cf.png)
+![Image rendered by raylibr](file5db92e355cb9.png)
 
 [`gui_toggle()`](https://jeroenjanssens.github.io/raylibr/reference/gui_toggle.md)
 returns the new active state.
@@ -74,7 +74,7 @@ gui_progress_bar(rectangle(65, 195, 480, 30), "", "75%", 0.75, 0, 1)
 gui_spinner(rectangle(65, 260, 240, 50), "", 42L, 0L, 100L, FALSE)
 ```
 
-![Image rendered by raylibr](file5e9d947c9c9.png)
+![Image rendered by raylibr](file5db97aba4437.png)
 
 [`gui_slider()`](https://jeroenjanssens.github.io/raylibr/reference/gui_slider.md)
 and
@@ -110,7 +110,7 @@ gui_color_bar_hue(rectangle(448, 80, 48, 320), "", 120)
 gui_color_bar_alpha(rectangle(528, 80, 48, 320), "", 0.7)
 ```
 
-![Image rendered by raylibr](file5e9d2473ddbc.png)
+![Image rendered by raylibr](file5db9ebb23c3.png)
 
 [`gui_color_picker()`](https://jeroenjanssens.github.io/raylibr/reference/gui_color_picker.md)
 returns a color.

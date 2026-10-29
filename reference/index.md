@@ -1061,8 +1061,8 @@
   : Material Map
 - [`n_patch_info()`](https://jeroenjanssens.github.io/raylibr/reference/n_patch_info.md)
   : n Patch Info
-- [`transform()`](https://jeroenjanssens.github.io/raylibr/reference/transform.md)
-  : Transform
+- [`raylib_transform()`](https://jeroenjanssens.github.io/raylibr/reference/raylib_transform.md)
+  : Raylib Transform
 - [`texture()`](https://jeroenjanssens.github.io/raylibr/reference/texture.md)
   : Texture
 - [`render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/render_texture.md)
@@ -1108,6 +1108,8 @@
   : Test if object is a ray_collision
 - [`is_raylib_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/is_raylib_matrix.md)
   : Test if object is a raylib matrix
+- [`is_raylib_transform()`](https://jeroenjanssens.github.io/raylibr/reference/is_raylib_transform.md)
+  : Test if object is a raylib_transform
 - [`is_rectangle()`](https://jeroenjanssens.github.io/raylibr/reference/is_rectangle.md)
   : Test if object is a rectangle
 - [`is_render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/is_render_texture.md)
@@ -1118,8 +1120,6 @@
   : Test if object is a sound
 - [`is_texture()`](https://jeroenjanssens.github.io/raylibr/reference/is_texture.md)
   : Test if object is a texture
-- [`is_transform()`](https://jeroenjanssens.github.io/raylibr/reference/is_transform.md)
-  : Test if object is a transform
 - [`is_vector_2()`](https://jeroenjanssens.github.io/raylibr/reference/is_vector_2.md)
   : Test if object is a vector of length 2
 - [`is_vector_3()`](https://jeroenjanssens.github.io/raylibr/reference/is_vector_3.md)

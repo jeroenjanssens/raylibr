@@ -35,7 +35,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">raylibr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,6 +81,7 @@
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+<li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
 <ul class="navbar-nav">
 <li class="nav-item"><form class="form-inline" role="search">
@@ -128,7 +129,7 @@ drawing code, and returns the result as an image:</p>
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/raylibr_screenshot.html">raylibr_screenshot</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="fu"><a href="../reference/draw_circle.html">draw_circle</a></span><span class="op">(</span><span class="fl">320L</span>, <span class="fl">240L</span>, <span class="fl">130.0</span>, <span class="st">"yellow"</span><span class="op">)</span></span>
 <span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<p><img src="file5dbff6527d3.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
+<p><img src="file5cdc2559d099.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p>The default canvas is 640x480 pixels with a black background.
 Everything you draw appears on top.</p>
 <p>From here on, snippets show only the drawing code — each one runs
@@ -141,7 +142,7 @@ inside <code><a href="../reference/raylibr_screenshot.html">raylibr_screenshot()
 <span>  <span class="fu"><a href="../reference/color_alpha.html">color_alpha</a></span><span class="op">(</span><span class="st">"white"</span>, <span class="fl">0.5</span><span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/draw_text.html">draw_text</a></span><span class="op">(</span><span class="st">"raylibr"</span>, <span class="fl">235L</span>, <span class="fl">345L</span>, <span class="fl">50L</span>, <span class="st">"white"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="file5dbfb6c9b28.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
+<p><img src="file5cdc3f1454c2.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 </div>
 <div class="section level2">
 <h2 id="the-game-loop">The game loop<a class="anchor" aria-label="anchor" href="#the-game-loop"></a>
@@ -217,7 +218,8 @@ matrix.</p>
 <span><span class="co">#&gt; -1 -1 -1</span></span></code></pre></div>
 <p>Other constructors include <code><a href="../reference/color.html">color()</a></code>, <code><a href="../reference/ray.html">ray()</a></code>,
 <code><a href="../reference/camera_2d.html">camera_2d()</a></code>, <code><a href="../reference/ray_collision.html">ray_collision()</a></code>, and
-<code><a href="../reference/transform.html">transform()</a></code>.</p>
+<code><a href="../reference/raylib_transform.html">raylib_transform()</a></code> (named this way so it does not mask
+<code><a href="https://rdrr.io/r/base/transform.html" class="external-link">base::transform()</a></code>).</p>
 <p>Check types with predicates:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/is_rectangle.html">is_rectangle</a></span><span class="op">(</span><span class="va">rec</span><span class="op">)</span></span>

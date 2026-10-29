@@ -27,7 +27,7 @@ raylibr_screenshot(function() {
 })
 ```
 
-![Image rendered by raylibr](file5dbff6527d3.png)
+![Image rendered by raylibr](file5cdc2559d099.png)
 
 The default canvas is 640x480 pixels with a black background. Everything
 you draw appears on top.
@@ -47,7 +47,7 @@ draw_triangle(
 draw_text("raylibr", 235L, 345L, 50L, "white")
 ```
 
-![Image rendered by raylibr](file5dbfb6c9b28.png)
+![Image rendered by raylibr](file5cdc3f1454c2.png)
 
 ## The game loop
 
@@ -139,7 +139,9 @@ Other constructors include
 [`camera_2d()`](https://jeroenjanssens.github.io/raylibr/reference/camera_2d.md),
 [`ray_collision()`](https://jeroenjanssens.github.io/raylibr/reference/ray_collision.md),
 and
-[`transform()`](https://jeroenjanssens.github.io/raylibr/reference/transform.md).
+[`raylib_transform()`](https://jeroenjanssens.github.io/raylibr/reference/raylib_transform.md)
+(named this way so it does not mask
+[`base::transform()`](https://rdrr.io/r/base/transform.html)).
 
 Check types with predicates:
 

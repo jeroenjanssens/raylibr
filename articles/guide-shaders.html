@@ -35,7 +35,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">raylibr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,6 +81,7 @@
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+<li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
 <ul class="navbar-nav">
 <li class="nav-item"><form class="form-inline" role="search">
@@ -223,7 +224,7 @@ scene to a texture and drawing that texture through a shader.</p>
 <p>Without a shader, the scene looks like this:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">draw_scene</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><img src="file5f514b7a5d58.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
+<p><img src="file5e6c4e771661.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p>raylibr ships with a collection of post-processing shaders from the
 Raylib examples, which you can find with
 <code><a href="../reference/raylibr_resource.html">raylibr_resource()</a></code>.</p>
@@ -235,7 +236,7 @@ Raylib examples, which you can find with
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader.html">load_shader</a></span><span class="op">(</span><span class="st">""</span>, <span class="fu"><a href="../reference/raylibr_resource.html">raylibr_resource</a></span><span class="op">(</span><span class="st">"model/grayscale.fs"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu">post_process</span><span class="op">(</span><span class="va">shader</span><span class="op">)</span></span></code></pre></div>
-<p><img src="file5f5145077e42.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
+<p><img src="file5e6c7cfbf328.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 </div>
 <div class="section level3">
 <h3 id="pixelation">Pixelation<a class="anchor" aria-label="anchor" href="#pixelation"></a>
@@ -247,7 +248,7 @@ set from R:</p>
 <span><span class="fu"><a href="../reference/set_shader_value.html">set_shader_value</a></span><span class="op">(</span><span class="va">shader</span>, <span class="fu"><a href="../reference/get_shader_location.html">get_shader_location</a></span><span class="op">(</span><span class="va">shader</span>, <span class="st">"pixelWidth"</span><span class="op">)</span>, <span class="fl">10</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/set_shader_value.html">set_shader_value</a></span><span class="op">(</span><span class="va">shader</span>, <span class="fu"><a href="../reference/get_shader_location.html">get_shader_location</a></span><span class="op">(</span><span class="va">shader</span>, <span class="st">"pixelHeight"</span><span class="op">)</span>, <span class="fl">10</span><span class="op">)</span></span>
 <span><span class="fu">post_process</span><span class="op">(</span><span class="va">shader</span><span class="op">)</span></span></code></pre></div>
-<p><img src="file5f511797e430.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
+<p><img src="file5e6c780e4159.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 </div>
 <div class="section level3">
 <h3 id="edge-detection">Edge detection<a class="anchor" aria-label="anchor" href="#edge-detection"></a>
@@ -256,7 +257,7 @@ set from R:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader.html">load_shader</a></span><span class="op">(</span><span class="st">""</span>, <span class="fu"><a href="../reference/raylibr_resource.html">raylibr_resource</a></span><span class="op">(</span><span class="st">"model/sobel.fs"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu">post_process</span><span class="op">(</span><span class="va">shader</span><span class="op">)</span></span></code></pre></div>
-<p><img src="file5f51280774.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
+<p><img src="file5e6c56cbcb82.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 </div>
 <div class="section level3">
 <h3 id="thermal-vision">Thermal vision<a class="anchor" aria-label="anchor" href="#thermal-vision"></a>
@@ -265,7 +266,7 @@ set from R:</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader.html">load_shader</a></span><span class="op">(</span><span class="st">""</span>, <span class="fu"><a href="../reference/raylibr_resource.html">raylibr_resource</a></span><span class="op">(</span><span class="st">"model/predator.fs"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu">post_process</span><span class="op">(</span><span class="va">shader</span><span class="op">)</span></span></code></pre></div>
-<p><img src="file5f511b19de3e.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
+<p><img src="file5e6c5c2b5966.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 </div>
 <div class="section level3">
 <h3 id="fisheye">Fisheye<a class="anchor" aria-label="anchor" href="#fisheye"></a>
@@ -275,7 +276,7 @@ texture through a lens distortion:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader.html">load_shader</a></span><span class="op">(</span><span class="st">""</span>, <span class="fu"><a href="../reference/raylibr_resource.html">raylibr_resource</a></span><span class="op">(</span><span class="st">"model/fisheye.fs"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu">post_process</span><span class="op">(</span><span class="va">shader</span><span class="op">)</span></span></code></pre></div>
-<p><img src="file5f5165478c2b.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
+<p><img src="file5e6c5595d2c7.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 </div>
 <div class="section level3">
 <h3 id="writing-your-own">Writing your own<a class="anchor" aria-label="anchor" href="#writing-your-own"></a>
@@ -296,7 +297,7 @@ inverts every color:</p>
 <span><span class="st">"</span></span>
 <span><span class="va">shader</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_shader_from_memory.html">load_shader_from_memory</a></span><span class="op">(</span><span class="st">""</span>, <span class="va">fs_code</span><span class="op">)</span></span>
 <span><span class="fu">post_process</span><span class="op">(</span><span class="va">shader</span><span class="op">)</span></span></code></pre></div>
-<p><img src="file5f5141307ec.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
+<p><img src="file5e6cb88f5b4.png" class="raylibr-image" alt="Image rendered by raylibr" width="640" height="480"></p>
 <p>In a real program, load shaders once before the game loop and free
 them with <code><a href="../reference/unload_shader.html">unload_shader()</a></code> afterwards.</p>
 </div>
