@@ -356,12 +356,12 @@ void unload_vr_stereo_config_(VrStereoConfig config) {
 
 // [[Rcpp::export]]
 Shader load_shader_(const char * vs_file_name, const char * fs_file_name) {
-  return LoadShader(vs_file_name, fs_file_name);
+  return LoadShader((vs_file_name[0] ? vs_file_name : nullptr), (fs_file_name[0] ? fs_file_name : nullptr));
 }
 
 // [[Rcpp::export]]
 Shader load_shader_from_memory_(const char * vs_code, const char * fs_code) {
-  return LoadShaderFromMemory(vs_code, fs_code);
+  return LoadShaderFromMemory((vs_code[0] ? vs_code : nullptr), (fs_code[0] ? fs_code : nullptr));
 }
 
 // [[Rcpp::export]]

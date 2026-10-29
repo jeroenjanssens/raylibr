@@ -385,6 +385,13 @@ skip_functions <- c(
   "UnloadFileText", "UnloadUTF8", "TextCopy", "TextAppend"
 )
 
+# String parameters where Raylib treats NULL as "use the default". R passes
+# "" for these, which is converted to nullptr before calling Raylib.
+null_if_empty_params <- list(
+  LoadShader = c("vsFileName", "fsFileName"),
+  LoadShaderFromMemory = c("vsCode", "fsCode")
+)
+
 # Structs to wrap (with field access). Excludes Vector2/3/4 and Matrix which
 # are handled as plain R vectors/matrices.
 wrapped_structs <- c(
@@ -736,7 +743,10 @@ generate_function_cpp <- function(func_row) {
     cpp_types <- sapply(params$type, get_cpp_type)
     param_names <- field_to_snake(params$name)
     param_str <- paste(cpp_types, param_names, collapse = ", ")
-    call_str <- paste(param_names, collapse = ", ")
+    call_args <- param_names
+    nullable <- params$name %in% null_if_empty_params[[name]]
+    call_args[nullable] <- sprintf("(%s[0] ? %s : nullptr)", param_names[nullable], param_names[nullable])
+    call_str <- paste(call_args, collapse = ", ")
   }
 
   lines <- c(
