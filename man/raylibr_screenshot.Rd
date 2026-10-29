@@ -4,7 +4,7 @@
 \alias{raylibr_screenshot}
 \title{Render a 2D scene to an image}
 \usage{
-raylibr_screenshot(draw, width = 400L, height = 300L)
+raylibr_screenshot(draw, width = 640L, height = 480L)
 }
 \arguments{
 \item{draw}{A function containing drawing calls
@@ -15,7 +15,9 @@ raylibr_screenshot(draw, width = 400L, height = 300L)
 \item{height}{An integer. Window height in pixels.}
 }
 \value{
-An image object.
+An image object. On HiDPI displays the framebuffer is captured at
+full pixel density (e.g., 1280x960 for a 640x480 window at 2x scale);
+knitr still displays it at \code{width} x \code{height}.
 }
 \description{
 Creates a hidden window, calls the supplied drawing function

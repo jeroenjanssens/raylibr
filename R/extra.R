@@ -190,7 +190,9 @@ has_display <- function() {
 #' @param width An integer. Window width in pixels.
 #' @param height An integer. Window height in pixels.
 #'
-#' @return An image object.
+#' @return An image object. On HiDPI displays the framebuffer is captured at
+#'   full pixel density (e.g., 1280x960 for a 640x480 window at 2x scale);
+#'   knitr still displays it at \code{width} x \code{height}.
 #'
 #' @examplesIf FALSE
 #' raylibr_screenshot(function() {
@@ -198,17 +200,21 @@ has_display <- function() {
 #' })
 #'
 #' @export
-raylibr_screenshot <- function(draw, width = 400L, height = 300L) {
-  set_config_flags(flag$window_hidden)
+raylibr_screenshot <- function(draw, width = 640L, height = 480L) {
+  set_config_flags(flag$window_hidden + flag$window_highdpi)
   init_window(width, height, "raylibr")
   on.exit(close_window())
+  # raygui keeps the font texture from the previous window; reset it
+  gui_set_font(get_font_default())
   for (i in 1:2) {
     begin_drawing()
     clear_background("black")
     draw()
     end_drawing()
   }
-  load_image_from_screen()
+  img <- load_image_from_screen()
+  attr(img, "display_size") <- c(width, height)
+  img
 }
 
 #' Render a 3D scene to an image
@@ -222,7 +228,9 @@ raylibr_screenshot <- function(draw, width = 400L, height = 300L) {
 #' @param width An integer. Window width in pixels.
 #' @param height An integer. Window height in pixels.
 #'
-#' @return An image object.
+#' @return An image object. On HiDPI displays the framebuffer is captured at
+#'   full pixel density (e.g., 1280x960 for a 640x480 window at 2x scale);
+#'   knitr still displays it at \code{width} x \code{height}.
 #'
 #' @examplesIf FALSE
 #' raylibr_screenshot_3d(function() {
@@ -230,10 +238,12 @@ raylibr_screenshot <- function(draw, width = 400L, height = 300L) {
 #' })
 #'
 #' @export
-raylibr_screenshot_3d <- function(draw, width = 400L, height = 300L) {
-  set_config_flags(flag$window_hidden)
+raylibr_screenshot_3d <- function(draw, width = 640L, height = 480L) {
+  set_config_flags(flag$window_hidden + flag$window_highdpi)
   init_window(width, height, "raylibr")
   on.exit(close_window())
+  # raygui keeps the font texture from the previous window; reset it
+  gui_set_font(get_font_default())
   cam <- camera_3d(c(4, 4, 4))
   for (i in 1:2) {
     begin_drawing()
@@ -244,7 +254,9 @@ raylibr_screenshot_3d <- function(draw, width = 400L, height = 300L) {
     end_mode_3d()
     end_drawing()
   }
-  load_image_from_screen()
+  img <- load_image_from_screen()
+  attr(img, "display_size") <- c(width, height)
+  img
 }
 
 #' @importFrom grDevices as.raster
@@ -262,7 +274,11 @@ print.image <- function(x, ...) {
 knit_print.image <- function(x, ...) {
   f <- tempfile(tmpdir = ".", fileext = ".png")
   export_image(x, f)
-  knitr::asis_output(paste0('![raylibr image](', f, ')'))
+  size <- attr(x, "display_size")
+  # Empty caption plus an explicit alt attribute keeps pandoc from wrapping
+  # the image in a <figure> with a caption.
+  dims <- if (is.null(size)) "" else sprintf(" width=%d height=%d", size[1], size[2])
+  knitr::asis_output(paste0('![](', f, '){.raylibr-image alt="Image rendered by raylibr"', dims, '}'))
 }
 
 # --- Camera mutation ----------------------------------------------------------
