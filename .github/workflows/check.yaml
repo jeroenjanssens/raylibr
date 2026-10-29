@@ -52,6 +52,30 @@ jobs:
             libgl1-mesa-dri \
             xvfb
 
+      - name: Install Mesa software renderer (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          # pal1000/mesa-dist-win: pre-built Mesa 3D for Windows (llvmpipe, GL 4.5+)
+          $tag = "26.2.4"
+          $url = "https://github.com/pal1000/mesa-dist-win/releases/download/$tag/mesa3d-$tag-release-msvc.7z"
+          Write-Host "Downloading Mesa $tag ..."
+          Invoke-WebRequest -Uri $url -OutFile "$env:TEMP\mesa.7z"
+          Write-Host "Extracting ..."
+          & "C:\Program Files\7-Zip\7z.exe" x "$env:TEMP\mesa.7z" -o"$env:TEMP\mesa" -y | Out-Null
+          # Place Mesa DLLs in R's bin directory (LoadLibrary searches there before System32)
+          $rbin = & Rscript.exe --no-save -e "cat(R.home('bin'))"
+          Write-Host "R bin dir: $rbin"
+          # Copy all x64 DLLs so all transitive deps (e.g. LLVM pieces) are present.
+          # opengl32.dll  = Mesa WGL loader (thin wrapper since Mesa 21.3.0)
+          # libgallium_wgl.dll = Gallium megadriver containing llvmpipe/softpipe
+          Get-ChildItem "$env:TEMP\mesa\x64\*.dll" | Copy-Item -Destination "$rbin\" -Force
+          # Confirm key DLLs are in place
+          Get-ChildItem "$rbin\opengl32.dll", "$rbin\libgallium_wgl.dll" | Select-Object Name, Length
+          # Tell Mesa to use the pure-software llvmpipe driver
+          "GALLIUM_DRIVER=llvmpipe" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          "RAYLIBR_GL=true"         | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: any::rcmdcheck
@@ -62,6 +86,7 @@ jobs:
         run: |
           Xvfb :99 -screen 0 1024x768x24 &
           echo "DISPLAY=:99" >> $GITHUB_ENV
+          echo "RAYLIBR_GL=true" >> $GITHUB_ENV
 
       - uses: r-lib/actions/check-r-package@v2
         with:

@@ -1,6 +1,6 @@
 library(raylibr)
 
-skip_on_ci()
+skip_if_no_gl()
 
 test_that("camera getters return expected types", {
   init_window(100, 100, "test")

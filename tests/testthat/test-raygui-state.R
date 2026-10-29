@@ -1,10 +1,11 @@
 library(raylibr)
 
-skip_on_ci()
+skip_if_no_gl()
 
 test_that("gui_enable and gui_disable work", {
   init_window(100, 100, "test")
   on.exit(close_window())
+  gui_set_font(get_font_default())
 
   gui_enable()
   gui_disable()
@@ -15,6 +16,7 @@ test_that("gui_enable and gui_disable work", {
 test_that("gui_lock and gui_unlock work", {
   init_window(100, 100, "test")
   on.exit(close_window())
+  gui_set_font(get_font_default())
 
   gui_lock()
   expect_true(gui_is_locked())
@@ -25,6 +27,7 @@ test_that("gui_lock and gui_unlock work", {
 test_that("gui_set_state and gui_get_state round-trip", {
   init_window(100, 100, "test")
   on.exit(close_window())
+  gui_set_font(get_font_default())
 
   gui_set_state(gui_state$disabled)
   expect_equal(gui_get_state(), gui_state$disabled)
@@ -35,6 +38,7 @@ test_that("gui_set_state and gui_get_state round-trip", {
 test_that("gui_set_alpha works", {
   init_window(100, 100, "test")
   on.exit(close_window())
+  gui_set_font(get_font_default())
 
   gui_set_alpha(0.5)
   gui_set_alpha(1.0)
@@ -44,6 +48,7 @@ test_that("gui_set_alpha works", {
 test_that("gui_set_style and gui_get_style round-trip", {
   init_window(100, 100, "test")
   on.exit(close_window())
+  gui_set_font(get_font_default())
 
   gui_load_style_default()
   original <- gui_get_style(gui_control$default, gui_default_property$text_size)
@@ -55,6 +60,7 @@ test_that("gui_set_style and gui_get_style round-trip", {
 test_that("gui_load_style_default works", {
   init_window(100, 100, "test")
   on.exit(close_window())
+  gui_set_font(get_font_default())
 
   gui_load_style_default()
   expect_true(TRUE)
@@ -63,6 +69,7 @@ test_that("gui_load_style_default works", {
 test_that("gui_set_font and gui_get_font work", {
   init_window(100, 100, "test")
   on.exit(close_window())
+  gui_set_font(get_font_default())
 
   font <- gui_get_font()
   expect_true(is_font(font))
@@ -73,6 +80,7 @@ test_that("gui_set_font and gui_get_font work", {
 test_that("gui tooltip functions work", {
   init_window(100, 100, "test")
   on.exit(close_window())
+  gui_set_font(get_font_default())
 
   gui_enable_tooltip()
   gui_set_tooltip("test tooltip")
@@ -83,6 +91,7 @@ test_that("gui tooltip functions work", {
 test_that("gui_set_icon_scale works", {
   init_window(100, 100, "test")
   on.exit(close_window())
+  gui_set_font(get_font_default())
 
   gui_set_icon_scale(2L)
   gui_set_icon_scale(1L)
@@ -92,6 +101,7 @@ test_that("gui_set_icon_scale works", {
 test_that("gui_get_text_width returns integer", {
   init_window(100, 100, "test")
   on.exit(close_window())
+  gui_set_font(get_font_default())
 
   w <- gui_get_text_width("Hello")
   expect_true(is.integer(w) || is.numeric(w))
