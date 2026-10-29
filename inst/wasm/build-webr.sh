@@ -90,7 +90,9 @@ cp -r "$R_LIB/raylibr/Meta" "$PKG_DIR/raylibr/"
 
 cd "$PKG_DIR"
 xattr -cr raylibr 2>/dev/null || true
-COPYFILE_DISABLE=1 tar --no-xattrs --no-mac-metadata -czf "raylibr_${PKG_VERSION}.tgz" raylibr
+# xattr and COPYFILE_DISABLE keep macOS metadata out; GNU tar lacks the
+# --no-xattrs/--no-mac-metadata flags, so they are not used here
+COPYFILE_DISABLE=1 tar -czf "raylibr_${PKG_VERSION}.tgz" raylibr
 
 mkdir -p "$REPO_DIR"
 rm -f "$REPO_DIR"/raylibr_*.tgz
