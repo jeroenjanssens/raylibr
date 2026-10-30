@@ -1623,7 +1623,9 @@ static Vector3 ConvertRGBtoHSV(Vector3 rgb);                    // Convert color
 
 static void GuiTooltip(Rectangle controlRec);                   // Draw tooltip using control rec position
 static int GuiScrollBar(Rectangle bounds, int value, int minValue, int maxValue); // Scroll bar control, used by GuiScrollPanel()
+#if defined(RAYGUI_FONT_ICONS_BAKING)  // raylibr: only compile when used (avoids an unused-function warning)
 static int GuiFontIconBaking(Image *imFont, Font font, Rectangle *whiteRec); // Update font image atlas to append raygui icons
+#endif
 
 static Color GuiFade(Color color, float alpha); // Fade color by an alpha factor
 
@@ -4730,9 +4732,10 @@ void GuiLoadStyle(const char *fileName)
                 unsigned char *fileData = (unsigned char *)RAYGUI_CALLOC(fileDataSize, sizeof(unsigned char));
                 if (fileData != NULL)
                 {
-                    fread(fileData, sizeof(unsigned char), fileDataSize, rgsFile);
+                    // raylibr: use the number of bytes read (avoids an unused-result warning)
+                    int readSize = (int)fread(fileData, sizeof(unsigned char), fileDataSize, rgsFile);
 
-                    GuiLoadStyleFromMemory(fileData, fileDataSize);
+                    GuiLoadStyleFromMemory(fileData, readSize);
 
                     RAYGUI_FREE(fileData);
                 }
@@ -6004,6 +6007,7 @@ static int GuiScrollBar(Rectangle bounds, int value, int minValue, int maxValue)
 }
 
 // Update font image atlas to append raygui icons
+#if defined(RAYGUI_FONT_ICONS_BAKING)  // raylibr: only compile when used (avoids an unused-function warning)
 static int GuiFontIconBaking(Image *imFont, Font font, Rectangle *whiteRec)
 {
     int iconOffsetY = 0;
@@ -6086,6 +6090,7 @@ static int GuiFontIconBaking(Image *imFont, Font font, Rectangle *whiteRec)
 
     return iconOffsetY;
 }
+#endif
 
 // Split controls text into multiple strings
 // NOTE: Re-used by GuiToggleSlider(), GuiComboBox(), GuiDropdownBox(), GuiListView(), GuiMessageBox(), GuiInputBox()
