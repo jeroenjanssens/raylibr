@@ -59,7 +59,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/jeroenjanssens/raylibr/blob/v6.0.4/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/jeroenjanssens/raylibr/blob/main/DESCRIPTION)
 
 Janssens J (2026). *raylibr: R Wrapper for 'Raylib'*. R package version
 6.0.4, <https://github.com/jeroenjanssens/raylibr>.
