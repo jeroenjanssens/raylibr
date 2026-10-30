@@ -41,8 +41,9 @@ definition:
 
 ``` r
 mat <- material_map(load_texture("file.png"), "red", 0.0)
+#> Error: `load_texture()` needs an open window. Call `init_window()` first.
 mat$texture
-#> texture(id = 0, width = 0, height = 0, mipmaps = 0, format = 0) 
+#> Error: object 'mat' not found
 mat$color
-#> color(r = 255, g = 0, b = 0, a = 255) 
+#> Error: object 'mat' not found
 ```

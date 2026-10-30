@@ -63,7 +63,7 @@ handles all this boilerplate — you just provide the drawing code:
 draw_cube(c(0, 0.5, 0), 1.0, 1.0, 1.0, "tomato")
 ```
 
-![Image rendered by raylibr](file5cf429077ac8.png)
+![Image rendered by raylibr](file5bad5de097fd.png)
 
 ## Cubes
 
@@ -75,7 +75,7 @@ draw_cube(c(1.5, 0.75, 0), 1.5, 1.5, 1.5, color_alpha("gold", 0.7))
 draw_cube_wires(c(1.5, 0.75, 0), 1.5, 1.5, 1.5, "white")
 ```
 
-![Image rendered by raylibr](file5cf4c3afa88.png)
+![Image rendered by raylibr](file5bad2e753a69.png)
 
 [`draw_cube()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cube.md)
 takes a center position and width/height/length as floats.
@@ -95,7 +95,7 @@ draw_sphere_wires(c(1.5, 1, 0), 1.0, 12L, 12L, "dodgerblue")
 draw_sphere_ex(c(0, 1, -2), 0.7, 16L, 16L, "mediumseagreen")
 ```
 
-![Image rendered by raylibr](file5cf44dc4f355.png)
+![Image rendered by raylibr](file5bad8102473.png)
 
 [`draw_sphere()`](https://jeroenjanssens.github.io/raylibr/reference/draw_sphere.md)
 takes a center and radius.
@@ -113,7 +113,7 @@ draw_cylinder_ex(c(0, 0, 0), c(0, 2, 0), 0.8, 0.3, 16L, "gold")
 draw_capsule(c(2, 0, 0), c(2, 2, 0), 0.5, 8L, 8L, "tomato")
 ```
 
-![Image rendered by raylibr](file5cf4493593eb.png)
+![Image rendered by raylibr](file5bad7ad578ad.png)
 
 [`draw_cylinder()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cylinder.md)
 takes a base position, top/bottom radii, height, and slices.
@@ -135,7 +135,7 @@ draw_triangle_3d(
 )
 ```
 
-![Image rendered by raylibr](file5cf46fd4273d.png)
+![Image rendered by raylibr](file5bad66c27b6d.png)
 
 [`draw_plane()`](https://jeroenjanssens.github.io/raylibr/reference/draw_plane.md)
 draws a flat quad at a given position with a given size.
@@ -155,7 +155,7 @@ draw_cube(c(0, 0.5, 0), 1.0, 1.0, 1.0, color_alpha("tomato", 0.6))
 draw_cube(c(2, 0.5, 0), 1.0, 1.0, 1.0, color_alpha("steelblue", 0.6))
 ```
 
-![Image rendered by raylibr](file5cf466055cd9.png)
+![Image rendered by raylibr](file5bad402bcfa6.png)
 
 Each grid square is 1 unit wide. The cubes above are 1 unit on each
 side, spaced 2 units apart.
@@ -173,7 +173,7 @@ draw_bounding_box(bb, "tomato")
 draw_sphere(c(0, 1, 0), 0.5, color_alpha("gold", 0.5))
 ```
 
-![Image rendered by raylibr](file5cf435b89df.png)
+![Image rendered by raylibr](file5bad2e0564b7.png)
 
 ## Models
 

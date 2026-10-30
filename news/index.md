@@ -1,5 +1,38 @@
 # Changelog
 
+## raylibr (development version)
+
+### Bug fixes
+
+- Functions that need an open window (drawing, `begin_*()`/`end_*()`,
+  loading textures, shaders, fonts and models, raygui controls, and
+  rlgl) now stop with an error such as
+  “[`draw_circle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle.md)
+  needs an open window” instead of crashing R when no window is open.
+
+- raygui now uses the font of the current window. It kept the font of
+  the first window opened in a session, whose data is freed when that
+  window closes, so raygui text could disappear, text measurements could
+  return garbage, and R could crash after opening several windows.
+
+- [`gui_scroll_panel()`](https://jeroenjanssens.github.io/raylibr/reference/gui_scroll_panel.md)
+  now returns `view` as a rectangle, so `view$x` works and `view` can be
+  passed back in on the next frame. It was a plain numeric vector with
+  class `"raylibr_rectangle"`. `scroll` and `view` are now checked like
+  the other arguments.
+
+- [`is_color()`](https://jeroenjanssens.github.io/raylibr/reference/is_color.md)
+  now returns `TRUE` or `FALSE` for every input. It raised an error for
+  lists with `r`, `g`, `b` and `a`, returned `NA` for `NA` and unnamed
+  lists, and accepted fractional and out-of-range numbers such as `42.5`
+  and `2^32` as packed RGBA values.
+
+- raylibr’s methods for its struct classes (`$`, `[[`,
+  [`print()`](https://rdrr.io/r/base/print.html), and so on) now leave
+  objects from other packages alone when they share a class name. For
+  example, printing colorspace colors failed with “Incompatible color
+  provided” while raylibr was loaded.
+
 ## raylibr 6.0.2
 
 ### Breaking changes

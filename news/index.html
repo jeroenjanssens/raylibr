@@ -72,6 +72,17 @@
     </div>
 
     <div class="section level2">
+<h2 class="pkg-version" data-toc-text="development version" id="raylibr-development-version">raylibr (development version)<a class="anchor" aria-label="anchor" href="#raylibr-development-version"></a></h2>
+<div class="section level3">
+<h3 id="bug-fixes-development-version">Bug fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-development-version"></a></h3>
+<ul><li><p>Functions that need an open window (drawing, <code>begin_*()</code>/<code>end_*()</code>, loading textures, shaders, fonts and models, raygui controls, and rlgl) now stop with an error such as “<code><a href="../reference/draw_circle.html">draw_circle()</a></code> needs an open window” instead of crashing R when no window is open.</p></li>
+<li><p>raygui now uses the font of the current window. It kept the font of the first window opened in a session, whose data is freed when that window closes, so raygui text could disappear, text measurements could return garbage, and R could crash after opening several windows.</p></li>
+<li><p><code><a href="../reference/gui_scroll_panel.html">gui_scroll_panel()</a></code> now returns <code>view</code> as a rectangle, so <code>view$x</code> works and <code>view</code> can be passed back in on the next frame. It was a plain numeric vector with class <code>"raylibr_rectangle"</code>. <code>scroll</code> and <code>view</code> are now checked like the other arguments.</p></li>
+<li><p><code><a href="../reference/is_color.html">is_color()</a></code> now returns <code>TRUE</code> or <code>FALSE</code> for every input. It raised an error for lists with <code>r</code>, <code>g</code>, <code>b</code> and <code>a</code>, returned <code>NA</code> for <code>NA</code> and unnamed lists, and accepted fractional and out-of-range numbers such as <code>42.5</code> and <code>2^32</code> as packed RGBA values.</p></li>
+<li><p>raylibr’s methods for its struct classes (<code>$</code>, <code>[[</code>, <code><a href="https://rdrr.io/r/base/print.html" class="external-link">print()</a></code>, and so on) now leave objects from other packages alone when they share a class name. For example, printing colorspace colors failed with “Incompatible color provided” while raylibr was loaded.</p></li>
+</ul></div>
+</div>
+    <div class="section level2">
 <h2 class="pkg-version" data-toc-text="6.0.2" id="raylibr-602">raylibr 6.0.2<a class="anchor" aria-label="anchor" href="#raylibr-602"></a></h2>
 <div class="section level3">
 <h3 id="breaking-changes-6-0-2">Breaking changes<a class="anchor" aria-label="anchor" href="#breaking-changes-6-0-2"></a></h3>
