@@ -128,5 +128,5 @@ Other get functions:
 
 ``` r
 get_frame_time()
-#> [1] 0.000654127
+#> [1] 0.000732848
 ```
