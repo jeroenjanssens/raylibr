@@ -33,11 +33,24 @@ GUI controls.
   use into `tools::R_user_dir("raylibr", "cache")`. No example or test
   downloads anything.
 
+## Test environments
+
+* GitHub Actions: macOS (R release), Windows (R release), Ubuntu (R release
+  and R-devel). Windows and Ubuntu run the window tests and examples with
+  software OpenGL (Mesa llvmpipe / Xvfb).
+* R-hub: linux (R-devel), macos-arm64 (R-devel), windows (R-devel), gcc16,
+  clang23, clang-ubsan, gcc-asan, lto, nosuggests.
+* win-builder: R-devel and R-release.
+* Local: macOS (R 4.5.1), `R CMD check --as-cran`.
+
 ## R CMD check results
 
 0 errors | 0 warnings | 1 note
 
 * This is a new submission.
 
-The package was checked on GitHub Actions (Windows, macOS, Ubuntu with R
-release and R-devel), win-builder (R-devel) and R-hub.
+All R-hub platforms, including the sanitizer builds (clang-ubsan, gcc-asan),
+report Status: OK.
+
+TODO before submitting: replace this line with the win-builder results from
+the email (R-devel and R-release).
