@@ -51,7 +51,24 @@ jobs:
       - name: Build WASM package
         run: bash inst/wasm/build-webr.sh
 
+      # The pkgdown workflow pushes to gh-pages too; if both push at the same
+      # time one is rejected, so retry once after a short wait
       - name: Deploy WASM repo to gh-pages
+        id: deploy
+        continue-on-error: true
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          clean: false
+          branch: gh-pages
+          folder: pkgdown/assets/wasm/repo
+          target-folder: wasm/repo
+
+      - name: Wait before retrying deploy
+        if: steps.deploy.outcome == 'failure'
+        run: sleep 30
+
+      - name: Deploy WASM repo to gh-pages (retry)
+        if: steps.deploy.outcome == 'failure'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           clean: false

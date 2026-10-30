@@ -49,8 +49,24 @@ jobs:
         run: pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)
         shell: Rscript {0}
 
+      # The webR workflow pushes to gh-pages too; if both push at the same time
+      # one is rejected, so retry once after a short wait
       - name: Deploy to GitHub pages 🚀
+        id: deploy
         if: github.event_name != 'pull_request'
+        continue-on-error: true
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          clean: false
+          branch: gh-pages
+          folder: docs
+
+      - name: Wait before retrying deploy
+        if: github.event_name != 'pull_request' && steps.deploy.outcome == 'failure'
+        run: sleep 30
+
+      - name: Deploy to GitHub pages (retry)
+        if: github.event_name != 'pull_request' && steps.deploy.outcome == 'failure'
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           clean: false
