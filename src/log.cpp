@@ -7,14 +7,20 @@
 #include "raylibr.h"
 #include <cstdarg>
 #include <cstdio>
-#include <thread>
 
+// webR is single-threaded (and its R doesn't provide the thread functions
+// <thread> needs), so the thread check is only compiled for desktop R.
+#ifndef __EMSCRIPTEN__
+#include <thread>
 static std::thread::id r_thread;
+#endif
 
 static void raylibr_trace_log(int level, const char *text, va_list args) {
+#ifndef __EMSCRIPTEN__
   // R's API may only be called from R's main thread; Raylib also logs from
   // its audio thread, so drop those messages rather than crash.
   if (std::this_thread::get_id() != r_thread) return;
+#endif
 
   const char *prefix = "";
   switch (level) {
@@ -35,7 +41,9 @@ static void raylibr_trace_log(int level, const char *text, va_list args) {
 // shown by default; use set_trace_log_level() to see more.
 // [[Rcpp::export]]
 void raylibr_init_logging_() {
+#ifndef __EMSCRIPTEN__
   r_thread = std::this_thread::get_id();
+#endif
   SetTraceLogCallback(raylibr_trace_log);
   SetTraceLogLevel(LOG_WARNING);
 }

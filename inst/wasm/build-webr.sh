@@ -66,14 +66,13 @@ done
 wait
 
 echo "=== Linking raylibr.so ==="
-em++ -s SIDE_MODULE=1 -Oz \
-    $BUILD_DIR/audio.o $BUILD_DIR/core.o $BUILD_DIR/models.o \
-    $BUILD_DIR/raygui_impl.o $BUILD_DIR/raygui_funcs.o $BUILD_DIR/raymath_funcs.o \
-    $BUILD_DIR/rcolors.o $BUILD_DIR/RcppExports.o $BUILD_DIR/rlgl.o \
-    $BUILD_DIR/shapes.o $BUILD_DIR/structs.o $BUILD_DIR/text.o \
-    $BUILD_DIR/textures.o $BUILD_DIR/types.o $BUILD_DIR/web.o \
-    $BUILD_DIR/manual_wrappers.o $BUILD_DIR/libraylib.web.a \
-    -o $BUILD_DIR/raylibr.so
+# Link every object compiled above (the same SRCS list, so none can be left out)
+OBJS=""
+for src in $SRCS; do
+    [ -f "$BUILD_DIR/$src.o" ] || { echo "ERROR: $src.cpp failed to compile"; exit 1; }
+    OBJS="$OBJS $BUILD_DIR/$src.o"
+done
+em++ -s SIDE_MODULE=1 -Oz $OBJS $BUILD_DIR/libraylib.web.a -o $BUILD_DIR/raylibr.so
 
 echo "=== Packaging for webR ==="
 R_LIB="$(Rscript -e 'cat(.libPaths()[1])')"
