@@ -1,8 +1,8 @@
 Package: raylibr
-Version: 6.0.3.9000
+Version: 6.0.4
 Imports: grDevices, grid, Rcpp, utils
 LinkingTo: Rcpp
 Suggests: knitr, rlang, testthat (>= 3.0.0)
 License: MIT + file LICENSE
-MD5sum: 107c940187435ae18bd22431afbd4d27
-File: raylibr_6.0.3.9000.tgz
+MD5sum: 7d8c36998d0f99a7688439a14d7ad463
+File: raylibr_6.0.4.tgz
