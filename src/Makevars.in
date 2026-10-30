@@ -2,6 +2,9 @@
 
 RAYLIB_SRC = raylib-6.0-minimal
 
+# Build Raylib with R's compiler and flags (appended to Raylib's own via CUSTOM_CFLAGS)
+RAYLIB_MAKE_ARGS = PLATFORM=PLATFORM_DESKTOP CC="$(CC)" AR="$(AR)" CUSTOM_CFLAGS="$(CFLAGS) $(CPICFLAGS)"
+
 PKG_CPPFLAGS = -I../inst/include
 PKG_LIBS = -L../inst/$(RAYLIB_SRC)/src -lraylib @SYS_LIBS@
 
@@ -17,8 +20,8 @@ $(OBJECTS): raylib_built
 raylib_built:
 	(cd ../inst; tar -xf $(RAYLIB_SRC).tar.gz)
 	"$(R_HOME)/bin$(R_ARCH_BIN)/Rscript" ../tools/patch_raylib.R ../inst/$(RAYLIB_SRC)/src
-	(cd ../inst/$(RAYLIB_SRC)/src; $(MAKE) PLATFORM=PLATFORM_DESKTOP > /dev/null 2>&1) || \
-	(cd ../inst/$(RAYLIB_SRC)/src; $(MAKE) PLATFORM=PLATFORM_DESKTOP)
+	(cd ../inst/$(RAYLIB_SRC)/src; $(MAKE) $(RAYLIB_MAKE_ARGS) > /dev/null 2>&1) || \
+	(cd ../inst/$(RAYLIB_SRC)/src; $(MAKE) $(RAYLIB_MAKE_ARGS))
 	mkdir -p ../inst/include
 	cp ../inst/$(RAYLIB_SRC)/src/raylib.h ../inst/include
 	cp ../inst/$(RAYLIB_SRC)/src/raymath.h ../inst/include
