@@ -207,16 +207,21 @@ raylibr_resource <- function(name) {
   missing <- files[!file.exists(file.path(cache, files))]
   if (length(missing) > 0) {
     message("Downloading ", length(missing), " raylibr resource file(s) to ", cache)
-    base_url <- getOption("raylibr.assets_url",
-                          paste0("https://raw.githubusercontent.com/jeroenjanssens/raylibr/", ref, "/assets/"))
+    # Fall back to main, e.g. for a version installed from GitHub before its tag exists
+    github <- "https://raw.githubusercontent.com/jeroenjanssens/raylibr/"
+    base_urls <- getOption("raylibr.assets_url", unique(paste0(github, c(ref, "main"), "/assets/")))
     for (f in missing) {
       dest <- file.path(cache, f)
       dir.create(dirname(dest), recursive = TRUE, showWarnings = FALSE)
-      ok <- tryCatch(utils::download.file(paste0(base_url, f), dest, mode = "wb", quiet = TRUE) == 0,
-                     error = function(e) FALSE, warning = function(w) FALSE)
+      ok <- FALSE
+      for (base_url in base_urls) {
+        ok <- tryCatch(utils::download.file(paste0(base_url, f), dest, mode = "wb", quiet = TRUE) == 0,
+                       error = function(e) FALSE, warning = function(w) FALSE)
+        if (ok) break
+      }
       if (!ok) {
         unlink(dest)
-        abort(paste0('Could not download raylibr resource "', f, '" from ', base_url,
+        abort(paste0('Could not download raylibr resource "', f, '" from ', base_urls[1],
                      '. Check your internet connection.'), call = NULL)
       }
     }
