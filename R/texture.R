@@ -97,16 +97,19 @@ texture_get <- function(o, field) {
 
 #' @export
 "$.texture" <- function(o, field) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   texture_get(o, field)
 }
 
 #' @export
 "$<-.texture" <- function(o, field, value) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   texture_set(o, field, value)
 }
 
 #' @export
 .DollarNames.texture <- function(x, pattern) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   c("id", "width", "height", "mipmaps", "format")
 }
 
@@ -124,11 +127,13 @@ texture_get <- function(o, field) {
 
 #' @export
 print.texture <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   cat(as.character(x), "\n")
 }
 
 #' @export
 as.character.texture <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]

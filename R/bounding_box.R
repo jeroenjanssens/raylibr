@@ -73,16 +73,19 @@ bounding_box_get <- function(o, field) {
 
 #' @export
 "$.bounding_box" <- function(o, field) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   bounding_box_get(o, field)
 }
 
 #' @export
 "$<-.bounding_box" <- function(o, field, value) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   bounding_box_set(o, field, value)
 }
 
 #' @export
 .DollarNames.bounding_box <- function(x, pattern) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   c("min", "max")
 }
 
@@ -100,11 +103,13 @@ bounding_box_get <- function(o, field) {
 
 #' @export
 print.bounding_box <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   cat(as.character(x), "\n")
 }
 
 #' @export
 as.character.bounding_box <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]

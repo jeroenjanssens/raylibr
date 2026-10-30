@@ -1217,19 +1217,25 @@ generate_struct_r <- function(struct_row) {
   lines <- c(lines, "}")
   lines <- c(lines, "")
 
-  # S3 methods
+  # S3 methods. raylibr objects are external pointers; anything else with the
+  # same class name (e.g., colorspace's S4 "color" objects) gets R's default
+  # behavior, so other packages using the class name keep working.
+  not_ours <- '  if (typeof(%s) != "externalptr") return(NextMethod())'
   lines <- c(lines, "#' @export")
   lines <- c(lines, paste0('"$.', snake, '" <- function(o, field) {'))
+  lines <- c(lines, sprintf(not_ours, "o"))
   lines <- c(lines, paste0("  ", snake, "_get(o, field)"))
   lines <- c(lines, "}")
   lines <- c(lines, "")
   lines <- c(lines, "#' @export")
   lines <- c(lines, paste0('"$<-.', snake, '" <- function(o, field, value) {'))
+  lines <- c(lines, sprintf(not_ours, "o"))
   lines <- c(lines, paste0("  ", snake, "_set(o, field, value)"))
   lines <- c(lines, "}")
   lines <- c(lines, "")
   lines <- c(lines, "#' @export")
   lines <- c(lines, paste0('.DollarNames.', snake, ' <- function(x, pattern) {'))
+  lines <- c(lines, sprintf(not_ours, "x"))
   lines <- c(lines, paste0('  c(', paste0('"', field_snakes, '"', collapse = ", "), ')'))
   lines <- c(lines, "}")
   lines <- c(lines, "")
@@ -1249,6 +1255,7 @@ generate_struct_r <- function(struct_row) {
   # print method
   lines <- c(lines, "#' @export")
   lines <- c(lines, paste0("print.", snake, " <- function(x, ...) {"))
+  lines <- c(lines, sprintf(not_ours, "x"))
   lines <- c(lines, "  cat(as.character(x), \"\\n\")")
   lines <- c(lines, "}")
   lines <- c(lines, "")
@@ -1256,6 +1263,7 @@ generate_struct_r <- function(struct_row) {
   # as.character method
   lines <- c(lines, "#' @export")
   lines <- c(lines, paste0("as.character.", snake, " <- function(x, ...) {"))
+  lines <- c(lines, sprintf(not_ours, "x"))
   lines <- c(lines, "  fields <- .DollarNames(x)")
   lines <- c(lines, '  values <- vapply(fields, function(field) {')
   lines <- c(lines, '    val <- x[[field]]')

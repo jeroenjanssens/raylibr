@@ -89,16 +89,19 @@ ray_collision_get <- function(o, field) {
 
 #' @export
 "$.ray_collision" <- function(o, field) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   ray_collision_get(o, field)
 }
 
 #' @export
 "$<-.ray_collision" <- function(o, field, value) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   ray_collision_set(o, field, value)
 }
 
 #' @export
 .DollarNames.ray_collision <- function(x, pattern) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   c("hit", "distance", "point", "normal")
 }
 
@@ -116,11 +119,13 @@ ray_collision_get <- function(o, field) {
 
 #' @export
 print.ray_collision <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   cat(as.character(x), "\n")
 }
 
 #' @export
 as.character.ray_collision <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]

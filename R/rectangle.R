@@ -89,16 +89,19 @@ rectangle_get <- function(o, field) {
 
 #' @export
 "$.rectangle" <- function(o, field) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   rectangle_get(o, field)
 }
 
 #' @export
 "$<-.rectangle" <- function(o, field, value) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   rectangle_set(o, field, value)
 }
 
 #' @export
 .DollarNames.rectangle <- function(x, pattern) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   c("x", "y", "width", "height")
 }
 
@@ -116,11 +119,13 @@ rectangle_get <- function(o, field) {
 
 #' @export
 print.rectangle <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   cat(as.character(x), "\n")
 }
 
 #' @export
 as.character.rectangle <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]

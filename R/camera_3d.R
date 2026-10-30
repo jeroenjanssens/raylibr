@@ -97,16 +97,19 @@ camera_3d_get <- function(o, field) {
 
 #' @export
 "$.camera_3d" <- function(o, field) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   camera_3d_get(o, field)
 }
 
 #' @export
 "$<-.camera_3d" <- function(o, field, value) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   camera_3d_set(o, field, value)
 }
 
 #' @export
 .DollarNames.camera_3d <- function(x, pattern) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   c("position", "target", "up", "fovy", "projection")
 }
 
@@ -124,11 +127,13 @@ camera_3d_get <- function(o, field) {
 
 #' @export
 print.camera_3d <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   cat(as.character(x), "\n")
 }
 
 #' @export
 as.character.camera_3d <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]

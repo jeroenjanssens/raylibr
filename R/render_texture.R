@@ -81,16 +81,19 @@ render_texture_get <- function(o, field) {
 
 #' @export
 "$.render_texture" <- function(o, field) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   render_texture_get(o, field)
 }
 
 #' @export
 "$<-.render_texture" <- function(o, field, value) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   render_texture_set(o, field, value)
 }
 
 #' @export
 .DollarNames.render_texture <- function(x, pattern) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   c("id", "texture", "depth")
 }
 
@@ -108,11 +111,13 @@ render_texture_get <- function(o, field) {
 
 #' @export
 print.render_texture <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   cat(as.character(x), "\n")
 }
 
 #' @export
 as.character.render_texture <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]

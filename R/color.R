@@ -89,16 +89,19 @@ color_get <- function(o, field) {
 
 #' @export
 "$.color" <- function(o, field) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   color_get(o, field)
 }
 
 #' @export
 "$<-.color" <- function(o, field, value) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   color_set(o, field, value)
 }
 
 #' @export
 .DollarNames.color <- function(x, pattern) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   c("r", "g", "b", "a")
 }
 
@@ -116,11 +119,13 @@ color_get <- function(o, field) {
 
 #' @export
 print.color <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   cat(as.character(x), "\n")
 }
 
 #' @export
 as.character.color <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]

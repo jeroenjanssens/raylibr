@@ -89,16 +89,19 @@ camera_2d_get <- function(o, field) {
 
 #' @export
 "$.camera_2d" <- function(o, field) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   camera_2d_get(o, field)
 }
 
 #' @export
 "$<-.camera_2d" <- function(o, field, value) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   camera_2d_set(o, field, value)
 }
 
 #' @export
 .DollarNames.camera_2d <- function(x, pattern) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   c("offset", "target", "rotation", "zoom")
 }
 
@@ -116,11 +119,13 @@ camera_2d_get <- function(o, field) {
 
 #' @export
 print.camera_2d <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   cat(as.character(x), "\n")
 }
 
 #' @export
 as.character.camera_2d <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]

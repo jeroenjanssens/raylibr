@@ -81,16 +81,19 @@ material_map_get <- function(o, field) {
 
 #' @export
 "$.material_map" <- function(o, field) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   material_map_get(o, field)
 }
 
 #' @export
 "$<-.material_map" <- function(o, field, value) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   material_map_set(o, field, value)
 }
 
 #' @export
 .DollarNames.material_map <- function(x, pattern) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   c("texture", "color", "value")
 }
 
@@ -108,11 +111,13 @@ material_map_get <- function(o, field) {
 
 #' @export
 print.material_map <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   cat(as.character(x), "\n")
 }
 
 #' @export
 as.character.material_map <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]

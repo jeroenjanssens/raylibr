@@ -73,16 +73,19 @@ ray_get <- function(o, field) {
 
 #' @export
 "$.ray" <- function(o, field) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   ray_get(o, field)
 }
 
 #' @export
 "$<-.ray" <- function(o, field, value) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   ray_set(o, field, value)
 }
 
 #' @export
 .DollarNames.ray <- function(x, pattern) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   c("position", "direction")
 }
 
@@ -100,11 +103,13 @@ ray_get <- function(o, field) {
 
 #' @export
 print.ray <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   cat(as.character(x), "\n")
 }
 
 #' @export
 as.character.ray <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]

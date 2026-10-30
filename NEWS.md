@@ -22,6 +22,11 @@
   unnamed lists, and accepted fractional and out-of-range numbers such as
   `42.5` and `2^32` as packed RGBA values.
 
+* raylibr's methods for its struct classes (`$`, `[[`, `print()`, and so on)
+  now leave objects from other packages alone when they share a class name.
+  For example, printing colorspace colors failed with "Incompatible color
+  provided" while raylibr was loaded.
+
 # raylibr 6.0.2
 
 ## Breaking changes

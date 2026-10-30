@@ -105,16 +105,19 @@ n_patch_info_get <- function(o, field) {
 
 #' @export
 "$.n_patch_info" <- function(o, field) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   n_patch_info_get(o, field)
 }
 
 #' @export
 "$<-.n_patch_info" <- function(o, field, value) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   n_patch_info_set(o, field, value)
 }
 
 #' @export
 .DollarNames.n_patch_info <- function(x, pattern) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   c("source", "left", "top", "right", "bottom", "layout")
 }
 
@@ -132,11 +135,13 @@ n_patch_info_get <- function(o, field) {
 
 #' @export
 print.n_patch_info <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   cat(as.character(x), "\n")
 }
 
 #' @export
 as.character.n_patch_info <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]

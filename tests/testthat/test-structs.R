@@ -118,3 +118,14 @@ test_that("camera_3d field assignment", {
   cam$position <- c(5, 5, 5)
   expect_equal(unname(cam$position), c(5, 5, 5))
 })
+
+test_that("struct methods leave other objects with the same class alone", {
+  # e.g., colorspace's S4 "color" objects; here a plain list
+  x <- structure(list(r = 1, name = "mine"), class = "color")
+  expect_equal(x$name, "mine")
+  expect_equal(x[["name"]], "mine")
+  x$name <- "changed"
+  expect_equal(x$name, "changed")
+  expect_output(print(x), "mine|changed")
+  expect_equal(unclass(as.character(x)), c("1", "changed"))
+})

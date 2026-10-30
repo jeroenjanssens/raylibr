@@ -263,6 +263,7 @@ raylibr_screenshot_3d <- function(draw, width = 640L, height = 480L) {
 #' @importFrom grDevices as.raster
 #' @export
 print.image <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   grid::grid.newpage()
   grid::grid.raster(as.raster(image_to_raster_(x)),
                     width = grid::unit(1, "npc"),
@@ -273,6 +274,7 @@ print.image <- function(x, ...) {
 
 #' @exportS3Method knitr::knit_print
 knit_print.image <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   f <- tempfile(tmpdir = ".", fileext = ".png")
   export_image(x, f)
   size <- attr(x, "display_size")

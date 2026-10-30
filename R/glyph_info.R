@@ -97,16 +97,19 @@ glyph_info_get <- function(o, field) {
 
 #' @export
 "$.glyph_info" <- function(o, field) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   glyph_info_get(o, field)
 }
 
 #' @export
 "$<-.glyph_info" <- function(o, field, value) {
+  if (typeof(o) != "externalptr") return(NextMethod())
   glyph_info_set(o, field, value)
 }
 
 #' @export
 .DollarNames.glyph_info <- function(x, pattern) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   c("value", "offset_x", "offset_y", "advance_x", "image")
 }
 
@@ -124,11 +127,13 @@ glyph_info_get <- function(o, field) {
 
 #' @export
 print.glyph_info <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   cat(as.character(x), "\n")
 }
 
 #' @export
 as.character.glyph_info <- function(x, ...) {
+  if (typeof(x) != "externalptr") return(NextMethod())
   fields <- .DollarNames(x)
   values <- vapply(fields, function(field) {
     val <- x[[field]]
