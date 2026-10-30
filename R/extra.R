@@ -171,15 +171,15 @@ raylibr_resource <- function(name) {
   system.file("demo_resources", name, package = "raylibr")
 }
 
+# Whether examples and guides may open a window. Non-interactive sessions
+# (R CMD check, CRAN, CI) only render with RAYLIBR_GL=true, which CI and
+# local site builds set once a display or software GL is available.
 has_display <- function() {
-  # RAYLIBR_GL=true/false overrides the platform/CI checks. CI sets it to
-  # true once a software-GL backend (Mesa, Xvfb) is ready.
   gl <- tolower(Sys.getenv("RAYLIBR_GL"))
   if (gl == "true") return(TRUE)
   if (gl == "false") return(FALSE)
-  sysname <- Sys.info()[["sysname"]]
-  if (sysname == "Linux") return(nzchar(Sys.getenv("DISPLAY")))
-  if (nzchar(Sys.getenv("CI"))) return(FALSE)
+  if (!interactive()) return(FALSE)
+  if (Sys.info()[["sysname"]] == "Linux") return(nzchar(Sys.getenv("DISPLAY")))
   TRUE
 }
 
