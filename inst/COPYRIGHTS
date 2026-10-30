@@ -23,8 +23,8 @@ raygui 5.0
   Source: https://github.com/raysan5/raygui
   Included as: inst/raygui.h
   Modified: RAYGUI_LOG wrapped in #ifndef so raylibr can disable its printf
-    output (see src/raygui_impl.cpp), GuiLoadStyle() uses the result of
-    fread(), and GuiFontIconBaking() is only compiled when
+    output (see src/raygui_impl.cpp), GuiLoadStyle() checks the results of
+    fread() and fgets(), and GuiFontIconBaking() is only compiled when
     RAYGUI_FONT_ICONS_BAKING is defined, to avoid compiler warnings.
 
 The raylib source includes these libraries (in src/external/ of the tarball):

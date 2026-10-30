@@ -4632,7 +4632,7 @@ void GuiLoadStyle(const char *fileName)
     if (rgsFile != NULL)
     {
         char buffer[MAX_LINE_BUFFER_SIZE] = { 0 };
-        fgets(buffer, MAX_LINE_BUFFER_SIZE, rgsFile);
+        if (fgets(buffer, MAX_LINE_BUFFER_SIZE, rgsFile) == NULL) buffer[0] = '\0';  // raylibr: check fgets() result
 
         if (buffer[0] == '#')
         {
@@ -4709,7 +4709,7 @@ void GuiLoadStyle(const char *fileName)
                     default: break;
                 }
 
-                fgets(buffer, MAX_LINE_BUFFER_SIZE, rgsFile);
+                if (fgets(buffer, MAX_LINE_BUFFER_SIZE, rgsFile) == NULL) break;  // raylibr: check fgets() result
             }
         }
         else tryBinary = true;
