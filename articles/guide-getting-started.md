@@ -27,7 +27,7 @@ raylibr_screenshot(function() {
 })
 ```
 
-![Image rendered by raylibr](file5c19beb157c.png)
+![Image rendered by raylibr](file5c066352aa9.png)
 
 The default canvas is 640x480 pixels with a black background. Everything
 you draw appears on top.
@@ -47,7 +47,7 @@ draw_triangle(
 draw_text("raylibr", 235L, 345L, 50L, "white")
 ```
 
-![Image rendered by raylibr](file5c19452f5f7b.png)
+![Image rendered by raylibr](file5c066394d443.png)
 
 ## The game loop
 
