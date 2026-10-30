@@ -25,3 +25,10 @@ pkgdown/assets/wasm/repo/
 
 # Claude Code local state (worktrees, settings)
 .claude/
+
+# Copied from the bundled Raylib and inst/raygui.h at build time
+inst/include/raylib.h
+inst/include/raymath.h
+inst/include/rcamera.h
+inst/include/rlgl.h
+inst/include/raygui.h

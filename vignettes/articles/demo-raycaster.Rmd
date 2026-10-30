@@ -123,12 +123,9 @@ set_window_state(flag$window_resizable)
 set_target_fps(window_fps)
 hide_cursor()
 
-base_path <- system.file(package = "raylibr")
-font <- load_font_ex(file.path(base_path,
-                               "demo_resources", "ShareTechMono-Regular.ttf"),
-                     32)
+font <- load_font_ex(raylibr_resource("ShareTechMono-Regular.ttf"), 32)
 
-textures <- lapply(paste0(base_path, "/demo_resources/", textures), load_texture)
+textures <- lapply(textures, function(f) load_texture(raylibr_resource(f)))
 
 
 # game loop --------------------------------------------------------------------

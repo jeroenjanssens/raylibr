@@ -32,5 +32,26 @@ Useful links:
 \author{
 \strong{Maintainer}: Jeroen Janssens \email{jeroen@jeroenjanssens.com} (\href{https://orcid.org/0000-0002-5878-8924}{ORCID})
 
+Other contributors:
+\itemize{
+  \item Ramon Santamaria (Author of the bundled 'raylib' and 'raygui' libraries) [copyright holder]
+  \item Marcus Geelnard (GLFW library) [copyright holder]
+  \item Camilla Löwy (GLFW library) [copyright holder]
+  \item David Reid (miniaudio and dr_libs libraries) [copyright holder]
+  \item Sean Barrett (stb libraries) [copyright holder]
+  \item Johannes Kuhlmann (cgltf library) [copyright holder]
+  \item Philip Rideout (par_shapes library) [copyright holder]
+  \item Dominic Szablewski (qoi and qoa libraries) [copyright holder]
+  \item Joshua Reisenauer (jar_xm and jar_mod libraries) [copyright holder]
+  \item Romain Dalmaso (libxm, on which jar_xm is based) [copyright holder]
+  \item bzt (m3d library) [copyright holder]
+  \item Syoyo Fujita (tinyobj_loader_c library) [copyright holder]
+  \item Johann Nadalutti (vox_loader library) [copyright holder]
+  \item Micha Mettke (sdefl and sinfl libraries) [copyright holder]
+  \item Kevlin Henney (dirent for Win32) [copyright holder]
+  \item Jeffery Myers (fix_win32_compatibility header) [copyright holder]
+  \item The Khronos Group Inc. (OpenGL API definitions in glad) [copyright holder]
+}
+
 }
 \keyword{internal}

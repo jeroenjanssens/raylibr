@@ -23,7 +23,7 @@ demo("beatbox", package = "raylibr")
 ```r
 library(raylibr)
 
-files <- list.files(file.path(system.file(package = "raylibr"), "demo_resources", "beatbox-samples"), full.names = TRUE)
+files <- list.files(raylibr_resource("beatbox-samples"), full.names = TRUE)
 ids <- sub("^.*\\/([a-z0-9]+)\\.wav$", "\\1", files)
 texts <- c()
 lives <- c()
@@ -37,7 +37,7 @@ s <- 600
 init_window(s, s, "R & Raylib: Beatbox like Jeroen")
 set_target_fps(30)
 
-background <- load_texture(file.path(system.file(package = "raylibr"), "demo_resources","beatbox.png"))
+background <- load_texture(raylibr_resource("beatbox.png"))
 
 while (!window_should_close()) {
   k <- get_key_pressed()

@@ -88,8 +88,9 @@ cp "$R_LIB/raylibr/R/raylibr" "$PKG_DIR/raylibr/R/"
 cp "$R_LIB/raylibr/R/raylibr.rdb" "$PKG_DIR/raylibr/R/"
 cp "$R_LIB/raylibr/R/raylibr.rdx" "$PKG_DIR/raylibr/R/"
 cp -r "$R_LIB/raylibr/Meta" "$PKG_DIR/raylibr/"
-# Demo resources (~4MB) required by 7/11 webR demos that load assets via system.file()
-[ -d "$R_LIB/raylibr/demo_resources" ] && cp -r "$R_LIB/raylibr/demo_resources" "$PKG_DIR/raylibr/"
+# Demo resources (~4MB) for the webR demos. The CRAN package doesn't include
+# them (raylibr_resource() downloads them), but the browser can't, so bundle them.
+cp -r "$RAYLIBR_DIR/assets" "$PKG_DIR/raylibr/demo_resources"
 
 cd "$PKG_DIR"
 xattr -cr raylibr 2>/dev/null || true

@@ -1,5 +1,14 @@
 # raylibr (development version)
 
+## Changes
+
+* The demo assets (textures, fonts, sounds, shaders and the 3D model) are no
+  longer installed with the package, which keeps it under CRAN's size limit.
+  `raylibr_resource()` downloads them on first use into a cache directory
+  (`tools::R_user_dir("raylibr", "cache")`), or reads them from the
+  directory in the `RAYLIBR_ASSETS` environment variable. Passing a
+  directory, such as `raylibr_resource("model")`, gives all files in it.
+
 ## Bug fixes
 
 * Functions that need an open window (drawing, `begin_*()`/`end_*()`,

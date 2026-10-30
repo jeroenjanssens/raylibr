@@ -2,8 +2,8 @@ library(raylibr)
 
 init_window(800, 450, "R & Raylib: Stars")
 
-t <- load_texture(file.path(system.file(package = "raylibr"), "demo_resources", "space.png"))
-s <- load_shader("", file.path(system.file(package = "raylibr"), "demo_resources", "wave.fs"))
+t <- load_texture(raylibr_resource("space.png"))
+s <- load_shader("", raylibr_resource("wave.fs"))
 
 loc_seconds <- get_shader_location(s, "secondes")
 loc_freq_x <- get_shader_location(s, "freqX")

@@ -43,8 +43,12 @@ Tests that open a window use `skip_if_no_gl()` (`tests/testthat/helper-gl.R`): t
 Examples and guides only render images when `raylibr:::has_display()` is `TRUE`, which in non-interactive sessions requires `RAYLIBR_GL=true`:
 
 ```r
-RAYLIBR_GL=true Rscript -e 'pkgdown::build_site()'
+RAYLIBR_GL=true RAYLIBR_ASSETS=$PWD/assets Rscript -e 'pkgdown::build_site()'
 ```
+
+## Demo assets
+
+Textures, fonts, sounds, shaders and the model used by the demos live in `assets/`, which is not part of the package (CRAN's size limit). `raylibr_resource()` downloads them on first use into `tools::R_user_dir("raylibr", "cache")`, or reads them from `RAYLIBR_ASSETS` if set. `inst/assets.txt` lists every file in `assets/`; update it when adding or removing assets (a test checks this). The webR build bundles `assets/` into the webR package.
 
 ## Key design decisions
 

@@ -32,7 +32,7 @@ points_of_interest <- list(
 
 init_window(600, 400, "R & Raylib: Julia Sets")
 
-s <- load_shader("", file.path(system.file(package = "raylibr"), "demo_resources", "julia_set.fs"))
+s <- load_shader("", raylibr_resource("julia_set.fs"))
 
 target <- load_render_texture(get_screen_width(), get_screen_height())
 current_c <- points_of_interest[[1]]

@@ -1,6 +1,6 @@
 Package: raylibr
 Title: R Wrapper for 'Raylib'
-Version: 6.0.2
+Version: 6.0.2.9000
 Authors@R: c(
     person("Jeroen", "Janssens", email = "jeroen@jeroenjanssens.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-5878-8924")),

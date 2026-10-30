@@ -2,21 +2,39 @@
 % Please edit documentation in R/extra.R
 \name{raylibr_resource}
 \alias{raylibr_resource}
-\title{Resolve resource path}
+\title{Get the path to a demo resource}
 \usage{
 raylibr_resource(name)
 }
 \arguments{
-\item{name}{File name (e.g., \code{"texture.png"}).}
+\item{name}{Path of a resource relative to the resource directory, e.g.
+\code{"space.png"} or \code{"model/grayscale.fs"}. A directory such as
+\code{"beatbox-samples"} gives all resources in it.}
 }
 \value{
-Full path to the resource file.
+The full path to the resource file or directory.
 }
 \description{
-Get the path to a file in the package's demo resources directory.
-Works correctly on both desktop and web (Emscripten virtual filesystem).
+The demos use textures, fonts, sounds, shaders and a 3D model that are
+not part of the installed package, to keep it small. The first time a
+resource is needed it is downloaded from the raylibr GitHub repository
+into a cache directory (see \code{\link[tools:userdir]{tools::R_user_dir()}}), and later calls use
+the cached copy.
+}
+\details{
+Resources are looked up in this order:
+\enumerate{
+\item The package's \code{demo_resources} directory, which the webR build
+includes.
+\item The directory in the \code{RAYLIBR_ASSETS} environment variable, if set,
+e.g. the \code{assets} directory of a raylibr checkout.
+\item The cache, downloading the resource first if needed.
+}
 }
 \examples{
-raylibr_resource("texture.png")
-
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
+texture_file <- raylibr_resource("space.png")
+shader_dir <- raylibr_resource("model")
+list.files(shader_dir)
+\dontshow{\}) # examplesIf}
 }

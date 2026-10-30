@@ -43,6 +43,7 @@ jobs:
           Xvfb :99 -screen 0 1024x768x24 &
           echo "DISPLAY=:99" >> $GITHUB_ENV
           echo "RAYLIBR_GL=true" >> $GITHUB_ENV
+          echo "RAYLIBR_ASSETS=$GITHUB_WORKSPACE/assets" >> $GITHUB_ENV
 
       - name: Build site
         run: pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)

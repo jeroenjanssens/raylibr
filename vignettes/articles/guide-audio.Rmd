@@ -61,7 +61,7 @@ run_game_loop(
   init_fn = function() {
     init_window(800L, 600L, "Music Demo")
     set_target_fps(60L)
-    music <<- load_music_stream(raylibr_resource("music.ogg"))
+    music <<- load_music_stream(raylibr_resource("mini1111.xm"))
     play_music_stream(music)
   },
   update_fn = function() {

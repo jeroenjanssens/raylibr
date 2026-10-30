@@ -112,8 +112,11 @@ rprand, rltexgpu, win32_clipboard
     src/external/win32_clipboard.h
 
 ================================================================================
-Demo resources (inst/demo_resources/)
+Demo resources
 ================================================================================
+
+Not included in the R package; raylibr_resource() downloads them from the
+assets/ directory of the raylibr repository. The webR build bundles them.
 
 church.obj3d, church_diffuse.png
   Raylib example assets, zlib/libpng license

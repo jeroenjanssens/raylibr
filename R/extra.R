@@ -155,20 +155,73 @@ run_game_loop <- function(update_fn, init_fn = NULL, cleanup_fn = NULL) {
   }
 }
 
-#' Resolve resource path
+#' Get the path to a demo resource
 #'
-#' Get the path to a file in the package's demo resources directory.
-#' Works correctly on both desktop and web (Emscripten virtual filesystem).
+#' The demos use textures, fonts, sounds, shaders and a 3D model that are
+#' not part of the installed package, to keep it small. The first time a
+#' resource is needed it is downloaded from the raylibr GitHub repository
+#' into a cache directory (see [tools::R_user_dir()]), and later calls use
+#' the cached copy.
 #'
-#' @param name File name (e.g., \code{"texture.png"}).
-#' @return Full path to the resource file.
+#' Resources are looked up in this order:
 #'
-#' @examples
-#' raylibr_resource("texture.png")
+#' 1. The package's `demo_resources` directory, which the webR build
+#'    includes.
+#' 2. The directory in the `RAYLIBR_ASSETS` environment variable, if set,
+#'    e.g. the `assets` directory of a raylibr checkout.
+#' 3. The cache, downloading the resource first if needed.
+#'
+#' @param name Path of a resource relative to the resource directory, e.g.
+#'   `"space.png"` or `"model/grayscale.fs"`. A directory such as
+#'   `"beatbox-samples"` gives all resources in it.
+#' @return The full path to the resource file or directory.
+#'
+#' @examplesIf interactive()
+#' texture_file <- raylibr_resource("space.png")
+#' shader_dir <- raylibr_resource("model")
+#' list.files(shader_dir)
 #'
 #' @export
 raylibr_resource <- function(name) {
-  system.file("demo_resources", name, package = "raylibr")
+  if (!is_const_char_pointer(name)) abort(paste0('`name` must be a string, not ', friendly_typeof(name), '.'), call = NULL)
+
+  bundled <- system.file("demo_resources", name, package = "raylibr")
+  if (nzchar(bundled)) return(bundled)
+
+  local_dir <- Sys.getenv("RAYLIBR_ASSETS")
+  if (nzchar(local_dir)) {
+    path <- file.path(local_dir, name)
+    if (!file.exists(path)) abort(paste0('Resource "', name, '" not found in RAYLIBR_ASSETS (', local_dir, ').'), call = NULL)
+    return(path)
+  }
+
+  manifest <- readLines(system.file("assets.txt", package = "raylibr"))
+  name <- sub("/+$", "", name)
+  files <- manifest[manifest == name | startsWith(manifest, paste0(name, "/"))]
+  if (length(files) == 0) abort(paste0('"', name, '" is not a raylibr resource.'), call = NULL)
+
+  version <- as.character(utils::packageVersion("raylibr"))
+  # Development versions (four components) use the main branch
+  ref <- if (length(strsplit(version, ".", fixed = TRUE)[[1]]) > 3) "main" else paste0("v", version)
+  cache <- file.path(tools::R_user_dir("raylibr", "cache"), "assets", ref)
+  missing <- files[!file.exists(file.path(cache, files))]
+  if (length(missing) > 0) {
+    message("Downloading ", length(missing), " raylibr resource file(s) to ", cache)
+    base_url <- getOption("raylibr.assets_url",
+                          paste0("https://raw.githubusercontent.com/jeroenjanssens/raylibr/", ref, "/assets/"))
+    for (f in missing) {
+      dest <- file.path(cache, f)
+      dir.create(dirname(dest), recursive = TRUE, showWarnings = FALSE)
+      ok <- tryCatch(utils::download.file(paste0(base_url, f), dest, mode = "wb", quiet = TRUE) == 0,
+                     error = function(e) FALSE, warning = function(w) FALSE)
+      if (!ok) {
+        unlink(dest)
+        abort(paste0('Could not download raylibr resource "', f, '" from ', base_url,
+                     '. Check your internet connection.'), call = NULL)
+      }
+    }
+  }
+  file.path(cache, name)
 }
 
 # Whether examples and guides may open a window. Non-interactive sessions

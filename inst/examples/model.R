@@ -1,6 +1,6 @@
 library(raylibr)
 
-base_path <- file.path(system.file(package = "raylibr"), "demo_resources", "model")
+base_path <- raylibr_resource("model")
 
 shader_pattern <- if (is_web()) "*_web.fs" else "*.fs"
 shader_files <- list.files(base_path, pattern = shader_pattern, full.names = TRUE)

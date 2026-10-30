@@ -14,3 +14,5 @@
 ^README\.html$
 ^man/figures/.*\.gif$
 ^inst/wasm$
+^assets$
+^inst/include/(raylib|raymath|rcamera|rlgl|raygui)\.h$
