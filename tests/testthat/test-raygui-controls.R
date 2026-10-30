@@ -251,6 +251,36 @@ test_that("gui_scroll_panel returns list", {
   expect_true("view" %in% names(result))
 })
 
+test_that("gui_scroll_panel view is a rectangle that can be passed back", {
+  init_window(100, 100, "test")
+  on.exit(close_window())
+
+  begin_drawing()
+  r1 <- gui_scroll_panel(
+    rectangle(10, 10, 80, 80), "Panel",
+    rectangle(0, 0, 200, 200), c(0, 0), rectangle(0, 0, 0, 0))
+  end_drawing()
+  expect_true(is_rectangle(r1$view))
+  expect_type(r1$view$width, "double")
+
+  # Next frame: feed scroll and view back in, as a scroll panel is used
+  begin_drawing()
+  r2 <- gui_scroll_panel(
+    rectangle(10, 10, 80, 80), "Panel",
+    rectangle(0, 0, 200, 200), r1$scroll, r1$view)
+  end_drawing()
+  expect_true(is_rectangle(r2$view))
+})
+
+test_that("gui_scroll_panel checks scroll and view", {
+  expect_error(
+    gui_scroll_panel(rectangle(0, 0, 1, 1), "", rectangle(0, 0, 1, 1), c(0, 0), c(0, 0, 1, 1)),
+    "`view` must be a rectangle")
+  expect_error(
+    gui_scroll_panel(rectangle(0, 0, 1, 1), "", rectangle(0, 0, 1, 1), "a", rectangle(0, 0, 1, 1)),
+    "`scroll` must be a numeric vector of length 2")
+})
+
 test_that("gui_draw_icon works without error", {
   init_window(100, 100, "test")
   on.exit(close_window())

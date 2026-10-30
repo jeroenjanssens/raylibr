@@ -12,6 +12,11 @@
   closes, so raygui text could disappear, text measurements could return
   garbage, and R could crash after opening several windows.
 
+* `gui_scroll_panel()` now returns `view` as a rectangle, so `view$x` works
+  and `view` can be passed back in on the next frame. It was a plain numeric
+  vector with class `"raylibr_rectangle"`. `scroll` and `view` are now
+  checked like the other arguments.
+
 # raylibr 6.0.2
 
 ## Breaking changes

@@ -343,13 +343,6 @@ static Rcpp::NumericVector vec2_to_r(Vector2 v) {
   return r;
 }
 
-static Rcpp::NumericVector rect_to_r(Rectangle r) {
-  Rcpp::NumericVector rv(4);
-  rv[0] = r.x; rv[1] = r.y; rv[2] = r.width; rv[3] = r.height;
-  rv.names() = Rcpp::CharacterVector::create("x", "y", "width", "height");
-  rv.attr("class") = "raylibr_rectangle";
-  return rv;
-}
 
 // [[Rcpp::export]]
 Rcpp::List gui_scroll_panel_(Rectangle bounds, const char* text, Rectangle content,
@@ -358,7 +351,7 @@ Rcpp::List gui_scroll_panel_(Rectangle bounds, const char* text, Rectangle conte
   int result = GuiScrollPanel(bounds, text, content, &scroll, &view);
   return Rcpp::List::create(Rcpp::Named("result") = result,
                             Rcpp::Named("scroll") = vec2_to_r(scroll),
-                            Rcpp::Named("view") = rect_to_r(view));
+                            Rcpp::Named("view") = Rcpp::wrap(view));
 }
 
 // [[Rcpp::export]]

@@ -1088,6 +1088,8 @@ camera_roll <- function(camera, angle) {
 gui_scroll_panel <- function(bounds, text, content, scroll, view) {
   if (!is_rectangle(bounds)) abort(paste0('`bounds` must be a rectangle, not ', friendly_typeof(bounds), '.'), call = NULL)
   if (!is_rectangle(content)) abort(paste0('`content` must be a rectangle, not ', friendly_typeof(content), '.'), call = NULL)
+  if (!is_vector_2(scroll)) abort(paste0('`scroll` must be a numeric vector of length 2, not ', friendly_typeof(scroll), '.'), call = NULL)
+  if (!is_rectangle(view)) abort(paste0('`view` must be a rectangle, not ', friendly_typeof(view), '.'), call = NULL)
   gui_scroll_panel_(bounds, text, content, scroll, view)
 }
 
