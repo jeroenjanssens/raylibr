@@ -4,5 +4,5 @@ Imports: grDevices, grid, Rcpp, utils
 LinkingTo: Rcpp
 Suggests: knitr, rlang, testthat (>= 3.0.0)
 License: MIT + file LICENSE
-MD5sum: dfdec97d0a88be502568bd62d1492138
+MD5sum: f4a7336eadd17693988bd2bfa8c8d886
 File: raylibr_6.0.3.9000.tgz
