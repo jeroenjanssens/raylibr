@@ -26,7 +26,7 @@ This function has been auto-generated from the following Raylib function definit
 }
 \examples{
 \dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
-draw_texture(load_texture("file.png"), 100L, 100L, "red")
+draw_texture(texture(0L, 64L, 64L, 1L, 7L), 100L, 100L, "red")
 \dontshow{\}) # examplesIf}
 }
 \seealso{

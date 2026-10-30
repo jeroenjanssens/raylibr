@@ -31,7 +31,7 @@ This function has been auto-generated from the following Raylib function definit
 \examples{
 \dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 draw_texture_n_patch(
-    load_texture("file.png"),
+    texture(0L, 64L, 64L, 1L, 7L),
     n_patch_info(rectangle(0, 0, 64, 64), 16L, 16L, 16L, 16L, 0L),
     rectangle(10, 10, 200, 100),
     c(100, 100),

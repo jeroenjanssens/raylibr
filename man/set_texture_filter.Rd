@@ -22,7 +22,7 @@ This function has been auto-generated from the following Raylib function definit
 }
 \examples{
 \dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
-set_texture_filter(load_texture("file.png"), 0L)
+set_texture_filter(texture(0L, 64L, 64L, 1L, 7L), 0L)
 \dontshow{\}) # examplesIf}
 }
 \seealso{

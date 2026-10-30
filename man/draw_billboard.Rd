@@ -28,7 +28,7 @@ This function has been auto-generated from the following Raylib function definit
 }
 \examples{
 \dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
-draw_billboard(camera_3d(c(0, 10, 10)), load_texture("file.png"), c(0, 5, 0), 1.0, "red")
+draw_billboard(camera_3d(c(0, 10, 10)), texture(0L, 64L, 64L, 1L, 7L), c(0, 5, 0), 1.0, "red")
 \dontshow{\}) # examplesIf}
 }
 \seealso{

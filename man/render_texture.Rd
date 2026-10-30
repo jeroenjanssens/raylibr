@@ -30,7 +30,7 @@ This class has been auto-generated from the following Raylib struct definition:
 }\if{html}{\out{</div>}}
 }
 \examples{
-ren <- render_texture(0L, load_texture("file.png"), load_texture("file.png"))
+ren <- render_texture(0L, texture(0L, 64L, 64L, 1L, 7L), texture(0L, 64L, 64L, 1L, 7L))
 ren$id
 ren$texture
 

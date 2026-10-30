@@ -24,7 +24,7 @@ This function has been auto-generated from the following Raylib function definit
 }
 \examples{
 \dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
-set_shader_value_texture(load_shader("", "shader.fs"), 0L, load_texture("file.png"))
+set_shader_value_texture(load_shader("", "shader.fs"), 0L, texture(0L, 64L, 64L, 1L, 7L))
 \dontshow{\}) # examplesIf}
 }
 \seealso{

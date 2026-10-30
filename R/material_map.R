@@ -40,7 +40,7 @@ is_material_map <- function(x) {
 #' @family material_map functions
 #'
 #' @examples
-#' mat <- material_map(load_texture("file.png"), "red", 0.0)
+#' mat <- material_map(texture(0L, 64L, 64L, 1L, 7L), "red", 0.0)
 #' mat$texture
 #' mat$color
 #'

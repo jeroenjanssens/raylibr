@@ -20,7 +20,7 @@ This function has been auto-generated from the following Raylib function definit
 }
 \examples{
 \dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
-unload_texture(load_texture("file.png"))
+unload_texture(texture(0L, 64L, 64L, 1L, 7L))
 \dontshow{\}) # examplesIf}
 }
 \seealso{

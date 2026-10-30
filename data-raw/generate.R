@@ -177,7 +177,7 @@ get_example_value <- function(type, param_name = "") {
   if (type == "Matrix") return("diag(4)")
   if (type == "Rectangle") return("rectangle(10, 10, 200, 100)")
   if (type == "Image") return('gen_image_color(100, 100, "blue")')
-  if (type %in% c("Texture2D", "Texture")) return('load_texture("file.png")')
+  if (type %in% c("Texture2D", "Texture")) return("texture(0L, 64L, 64L, 1L, 7L)")  # A struct; needs no window
   if (type %in% c("RenderTexture2D", "RenderTexture")) return("load_render_texture(800, 450)")
   if (type == "Font") return("get_font_default()")
   if (type %in% c("Camera3D", "Camera")) return("camera_3d(c(0, 10, 10))")

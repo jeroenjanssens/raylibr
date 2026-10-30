@@ -1979,7 +1979,7 @@ set_shader_value_matrix <- function(shader, loc_index, mat) {
 #' @family set functions
 #'
 #' @examplesIf FALSE
-#' set_shader_value_texture(load_shader("", "shader.fs"), 0L, load_texture("file.png"))
+#' set_shader_value_texture(load_shader("", "shader.fs"), 0L, texture(0L, 64L, 64L, 1L, 7L))
 #'
 #' @export
 set_shader_value_texture <- function(shader, loc_index, texture) {
@@ -4617,7 +4617,7 @@ get_gesture_pinch_angle <- function() {
 #' @family set functions
 #'
 #' @examplesIf FALSE
-#' set_shapes_texture(load_texture("file.png"), rectangle(10, 10, 200, 100))
+#' set_shapes_texture(texture(0L, 64L, 64L, 1L, 7L), rectangle(10, 10, 200, 100))
 #'
 #' @export
 set_shapes_texture <- function(texture, source) {
@@ -7011,7 +7011,7 @@ load_image_raw <- function(file_name, width, height, format, header_size) {
 #' @family load functions
 #'
 #' @examplesIf FALSE
-#' load_image_from_texture(load_texture("file.png"))
+#' load_image_from_texture(texture(0L, 64L, 64L, 1L, 7L))
 #'
 #' @export
 load_image_from_texture <- function(texture) {
@@ -7749,7 +7749,7 @@ load_render_texture <- function(width, height) {
 #' @family is functions
 #'
 #' @examplesIf FALSE
-#' is_texture_valid(load_texture("file.png"))
+#' is_texture_valid(texture(0L, 64L, 64L, 1L, 7L))
 #'
 #' @export
 is_texture_valid <- function(texture) {
@@ -7773,7 +7773,7 @@ is_texture_valid <- function(texture) {
 #' @family unload functions
 #'
 #' @examplesIf FALSE
-#' unload_texture(load_texture("file.png"))
+#' unload_texture(texture(0L, 64L, 64L, 1L, 7L))
 #'
 #' @export
 unload_texture <- function(texture) {
@@ -7851,7 +7851,7 @@ unload_render_texture <- function(target) {
 #' @family set functions
 #'
 #' @examplesIf FALSE
-#' set_texture_filter(load_texture("file.png"), 0L)
+#' set_texture_filter(texture(0L, 64L, 64L, 1L, 7L), 0L)
 #'
 #' @export
 set_texture_filter <- function(texture, filter) {
@@ -7878,7 +7878,7 @@ set_texture_filter <- function(texture, filter) {
 #' @family set functions
 #'
 #' @examplesIf FALSE
-#' set_texture_wrap(load_texture("file.png"), 0L)
+#' set_texture_wrap(texture(0L, 64L, 64L, 1L, 7L), 0L)
 #'
 #' @export
 set_texture_wrap <- function(texture, wrap) {
@@ -7906,7 +7906,7 @@ set_texture_wrap <- function(texture, wrap) {
 #' @family draw functions
 #'
 #' @examplesIf FALSE
-#' draw_texture(load_texture("file.png"), 100L, 100L, "red")
+#' draw_texture(texture(0L, 64L, 64L, 1L, 7L), 100L, 100L, "red")
 #'
 #' @export
 draw_texture <- function(texture, pos_x, pos_y, tint) {
@@ -7945,7 +7945,7 @@ draw_texture <- function(texture, pos_x, pos_y, tint) {
 #' @family draw functions
 #'
 #' @examplesIf FALSE
-#' draw_texture_v(load_texture("file.png"), c(100, 100), "red")
+#' draw_texture_v(texture(0L, 64L, 64L, 1L, 7L), c(100, 100), "red")
 #'
 #' @export
 draw_texture_v <- function(texture, position, tint) {
@@ -7984,7 +7984,7 @@ draw_texture_v <- function(texture, position, tint) {
 #' @family draw functions
 #'
 #' @examplesIf FALSE
-#' draw_texture_ex(load_texture("file.png"), c(100, 100), 0.0, 1.0, "red")
+#' draw_texture_ex(texture(0L, 64L, 64L, 1L, 7L), c(100, 100), 0.0, 1.0, "red")
 #'
 #' @export
 draw_texture_ex <- function(texture, position, rotation, scale, tint) {
@@ -8026,7 +8026,7 @@ draw_texture_ex <- function(texture, position, rotation, scale, tint) {
 #' @family draw functions
 #'
 #' @examplesIf FALSE
-#' draw_texture_rec(load_texture("file.png"), rectangle(10, 10, 200, 100), c(100, 100), "red")
+#' draw_texture_rec(texture(0L, 64L, 64L, 1L, 7L), rectangle(10, 10, 200, 100), c(100, 100), "red")
 #'
 #' @export
 draw_texture_rec <- function(texture, source, position, tint) {
@@ -8069,7 +8069,7 @@ draw_texture_rec <- function(texture, source, position, tint) {
 #'
 #' @examplesIf FALSE
 #' draw_texture_pro(
-#'     load_texture("file.png"),
+#'     texture(0L, 64L, 64L, 1L, 7L),
 #'     rectangle(10, 10, 200, 100),
 #'     rectangle(10, 10, 200, 100),
 #'     c(100, 100),
@@ -8122,7 +8122,7 @@ draw_texture_pro <- function(texture, source, dest, origin, rotation, tint) {
 #'
 #' @examplesIf FALSE
 #' draw_texture_n_patch(
-#'     load_texture("file.png"),
+#'     texture(0L, 64L, 64L, 1L, 7L),
 #'     n_patch_info(rectangle(0, 0, 64, 64), 16L, 16L, 16L, 16L, 0L),
 #'     rectangle(10, 10, 200, 100),
 #'     c(100, 100),
@@ -10851,7 +10851,7 @@ draw_bounding_box <- function(box, color) {
 #' @family draw functions
 #'
 #' @examplesIf FALSE
-#' draw_billboard(camera_3d(c(0, 10, 10)), load_texture("file.png"), c(0, 5, 0), 1.0, "red")
+#' draw_billboard(camera_3d(c(0, 10, 10)), texture(0L, 64L, 64L, 1L, 7L), c(0, 5, 0), 1.0, "red")
 #'
 #' @export
 draw_billboard <- function(camera, texture, position, scale, tint) {
@@ -10897,7 +10897,7 @@ draw_billboard <- function(camera, texture, position, scale, tint) {
 #' @examplesIf FALSE
 #' draw_billboard_rec(
 #'     camera_3d(c(0, 10, 10)),
-#'     load_texture("file.png"),
+#'     texture(0L, 64L, 64L, 1L, 7L),
 #'     rectangle(10, 10, 200, 100),
 #'     c(0, 5, 0),
 #'     c(100, 100),
@@ -10953,7 +10953,7 @@ draw_billboard_rec <- function(camera, texture, source, position, size, tint) {
 #' @examplesIf FALSE
 #' draw_billboard_pro(
 #'     camera_3d(c(0, 10, 10)),
-#'     load_texture("file.png"),
+#'     texture(0L, 64L, 64L, 1L, 7L),
 #'     rectangle(10, 10, 200, 100),
 #'     c(0, 5, 0),
 #'     c(0, 1, 0),
