@@ -35,7 +35,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">raylibr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.2.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -144,7 +144,7 @@ word.</p>
 <span><span class="fu"><a href="../reference/init_window.html">init_window</a></span><span class="op">(</span><span class="va">screen_size</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>, <span class="va">screen_size</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span>, <span class="st">"R &amp; Raylib: Stroop Test"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">font_size</span> <span class="op">&lt;-</span> <span class="fl">200</span></span>
-<span><span class="va">font</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_font_ex.html">load_font_ex</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span>package <span class="op">=</span> <span class="st">"raylibr"</span><span class="op">)</span>, <span class="st">"demo_resources"</span>, <span class="st">"source-sans-pro-v14-latin-regular.ttf"</span><span class="op">)</span>, <span class="va">font_size</span><span class="op">)</span></span>
+<span><span class="va">font</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/load_font_ex.html">load_font_ex</a></span><span class="op">(</span><span class="fu"><a href="../reference/raylibr_resource.html">raylibr_resource</a></span><span class="op">(</span><span class="st">"source-sans-pro-v14-latin-regular.ttf"</span><span class="op">)</span>, <span class="va">font_size</span><span class="op">)</span></span>
 <span></span>
 <span><span class="kw">while</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="../reference/window_should_close.html">window_should_close</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="va">screen_size</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="../reference/get_screen_width.html">get_screen_width</a></span><span class="op">(</span><span class="op">)</span>, <span class="fu"><a href="../reference/get_screen_height.html">get_screen_height</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>

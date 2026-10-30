@@ -23,7 +23,8 @@ Generated files (do not edit by hand): - `src/structs.cpp`,
 
 Hand-maintained files: - `src/types.cpp` — Vector2/3/4, RaylibMatrix,
 Color conversions - `src/rcolors.cpp` — R color name map - `src/web.cpp`
-— Emscripten/webR bridge - `R/extra.R` — Manual wrappers
+— Emscripten/webR bridge - `src/log.cpp` — Sends Raylib’s log through
+R’s console (set up in `.onLoad()`) - `R/extra.R` — Manual wrappers
 (set_shader_value, load_font_ex, run_game_loop, etc.) - `R/is.R` — Type
 predicates
 
@@ -50,8 +51,19 @@ Examples and guides only render images when `raylibr:::has_display()` is
 `TRUE`, which in non-interactive sessions requires `RAYLIBR_GL=true`:
 
 ``` r
-RAYLIBR_GL=true Rscript -e 'pkgdown::build_site()'
+RAYLIBR_GL=true RAYLIBR_ASSETS=$PWD/assets Rscript -e 'pkgdown::build_site()'
 ```
+
+## Demo assets
+
+Textures, fonts, sounds, shaders and the model used by the demos live in
+`assets/`, which is not part of the package (CRAN’s size limit).
+[`raylibr_resource()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_resource.md)
+downloads them on first use into
+`tools::R_user_dir("raylibr", "cache")`, or reads them from
+`RAYLIBR_ASSETS` if set. `inst/assets.txt` lists every file in
+`assets/`; update it when adding or removing assets (a test checks
+this). The webR build bundles `assets/` into the webR package.
 
 ## Key design decisions
 

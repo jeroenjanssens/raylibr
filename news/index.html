@@ -15,7 +15,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">raylibr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.2.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,6 +73,11 @@
 
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="development version" id="raylibr-development-version">raylibr (development version)<a class="anchor" aria-label="anchor" href="#raylibr-development-version"></a></h2>
+<div class="section level3">
+<h3 id="changes-development-version">Changes<a class="anchor" aria-label="anchor" href="#changes-development-version"></a></h3>
+<ul><li><p>The demo assets (textures, fonts, sounds, shaders and the 3D model) are no longer installed with the package, which keeps it under CRAN’s size limit. <code><a href="../reference/raylibr_resource.html">raylibr_resource()</a></code> downloads them on first use into a cache directory (<code>tools::R_user_dir("raylibr", "cache")</code>), or reads them from the directory in the <code>RAYLIBR_ASSETS</code> environment variable. Passing a directory, such as <code>raylibr_resource("model")</code>, gives all files in it.</p></li>
+<li><p>Raylib’s log messages now go through R’s console, like <code><a href="https://rdrr.io/r/base/message.html" class="external-link">message()</a></code>, instead of being printed directly to the terminal, and only warnings and errors are shown by default. Use <code>set_trace_log_level(log_level$info)</code> to see all messages.</p></li>
+</ul></div>
 <div class="section level3">
 <h3 id="bug-fixes-development-version">Bug fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-development-version"></a></h3>
 <ul><li><p>Functions that need an open window (drawing, <code>begin_*()</code>/<code>end_*()</code>, loading textures, shaders, fonts and models, raygui controls, and rlgl) now stop with an error such as “<code><a href="../reference/draw_circle.html">draw_circle()</a></code> needs an open window” instead of crashing R when no window is open.</p></li>

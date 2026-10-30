@@ -31,8 +31,10 @@ demo("model", package = "raylibr")
 
 library(raylibr)
 
-shader_files <- list.files(file.path(system.file(package = "raylibr"), "demo_resources", "model"),
+shader_files <- list.files(raylibr_resource("model"),
                            pattern = "*.fs", full.names = TRUE)
+# The *_web.fs variants are for the browser (GLSL ES)
+shader_files <- shader_files[!grepl("_web\\.fs$", shader_files)]
 shader_files <- c("/none.fs", shader_files)
 shader_names <- sub("^.*\\/([a-z0-9_]+)\\.fs$", "\\1", shader_files)
 
@@ -41,11 +43,11 @@ screen_height <- 450
 
 init_window(screen_width, screen_height, "R & Raylib: 3D Model and Post-Processing Shaders")
 
-obj_src <- file.path(system.file(package = "raylibr"), "demo_resources", "model", "church.obj3d")
+obj_src <- raylibr_resource("model/church.obj3d")
 obj_tmp <- file.path(tempdir(), "church.obj")
 file.copy(obj_src, obj_tmp, overwrite = TRUE)
 church_model <- load_model(obj_tmp)
-church_texture <- load_texture(file.path(system.file(package = "raylibr"), "demo_resources", "model", "church_diffuse.png"))
+church_texture <- load_texture(raylibr_resource("model/church_diffuse.png"))
 set_model_texture(church_model, 0, material_map_index$albedo, church_texture)
 church_position <- c(0, 0, 0)
 

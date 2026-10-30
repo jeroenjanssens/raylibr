@@ -1166,7 +1166,7 @@ The `raylibr` package is licensed under the MIT License.
 - [`raylib_version()`](https://jeroenjanssens.github.io/raylibr/reference/raylib_version.md)
   : Raylib Version
 - [`raylibr_resource()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_resource.md)
-  : Resolve resource path
+  : Get the path to a demo resource
 - [`set_trace_log_level()`](https://jeroenjanssens.github.io/raylibr/reference/set_trace_log_level.md)
   : Set Trace Log Level
 - [`set_config_flags()`](https://jeroenjanssens.github.io/raylibr/reference/set_config_flags.md)

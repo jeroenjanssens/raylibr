@@ -2,6 +2,23 @@
 
 ## raylibr (development version)
 
+### Changes
+
+- The demo assets (textures, fonts, sounds, shaders and the 3D model)
+  are no longer installed with the package, which keeps it under CRAN’s
+  size limit.
+  [`raylibr_resource()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_resource.md)
+  downloads them on first use into a cache directory
+  (`tools::R_user_dir("raylibr", "cache")`), or reads them from the
+  directory in the `RAYLIBR_ASSETS` environment variable. Passing a
+  directory, such as `raylibr_resource("model")`, gives all files in it.
+
+- Raylib’s log messages now go through R’s console, like
+  [`message()`](https://rdrr.io/r/base/message.html), instead of being
+  printed directly to the terminal, and only warnings and errors are
+  shown by default. Use `set_trace_log_level(log_level$info)` to see all
+  messages.
+
 ### Bug fixes
 
 - Functions that need an open window (drawing, `begin_*()`/`end_*()`,

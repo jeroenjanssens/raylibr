@@ -15,7 +15,7 @@
 
     <a class="navbar-brand me-2" href="index.html">raylibr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.2.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,7 +84,7 @@
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>Rscript <span class="sc">-</span>e <span class="st">'Rcpp::compileAttributes()'</span></span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>Rscript <span class="sc">-</span>e <span class="st">'roxygen2::roxygenise()'</span></span></code></pre></div>
 <p>Generated files (do not edit by hand): - <code>src/structs.cpp</code>, <code>src/{core,shapes,textures,text,models,audio}.cpp</code> - <code>R/functions.R</code>, <code>R/enums.R</code>, per-struct R files - <code>inst/include/raylibr_types.h</code></p>
-<p>Hand-maintained files: - <code>src/types.cpp</code> — Vector2/3/4, RaylibMatrix, Color conversions - <code>src/rcolors.cpp</code> — R color name map - <code>src/web.cpp</code> — Emscripten/webR bridge - <code>R/extra.R</code> — Manual wrappers (set_shader_value, load_font_ex, run_game_loop, etc.) - <code>R/is.R</code> — Type predicates</p>
+<p>Hand-maintained files: - <code>src/types.cpp</code> — Vector2/3/4, RaylibMatrix, Color conversions - <code>src/rcolors.cpp</code> — R color name map - <code>src/web.cpp</code> — Emscripten/webR bridge - <code>src/log.cpp</code> — Sends Raylib’s log through R’s console (set up in <code>.onLoad()</code>) - <code>R/extra.R</code> — Manual wrappers (set_shader_value, load_font_ex, run_game_loop, etc.) - <code>R/is.R</code> — Type predicates</p>
 </div>
 <div class="section level2">
 <h2 id="building">Building<a class="anchor" aria-label="anchor" href="#building"></a></h2>
@@ -98,7 +98,11 @@
 <div class="section level2">
 <h2 id="website">Website<a class="anchor" aria-label="anchor" href="#website"></a></h2>
 <p>Examples and guides only render images when <code>raylibr:::has_display()</code> is <code>TRUE</code>, which in non-interactive sessions requires <code>RAYLIBR_GL=true</code>:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>RAYLIBR_GL<span class="ot">=</span>true Rscript <span class="sc">-</span>e <span class="st">'pkgdown::build_site()'</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>RAYLIBR_GL<span class="ot">=</span>true RAYLIBR_ASSETS<span class="ot">=</span><span class="er">$</span>PWD<span class="sc">/</span>assets Rscript <span class="sc">-</span>e <span class="st">'pkgdown::build_site()'</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="demo-assets">Demo assets<a class="anchor" aria-label="anchor" href="#demo-assets"></a></h2>
+<p>Textures, fonts, sounds, shaders and the model used by the demos live in <code>assets/</code>, which is not part of the package (CRAN’s size limit). <code><a href="reference/raylibr_resource.html">raylibr_resource()</a></code> downloads them on first use into <code>tools::R_user_dir("raylibr", "cache")</code>, or reads them from <code>RAYLIBR_ASSETS</code> if set. <code>inst/assets.txt</code> lists every file in <code>assets/</code>; update it when adding or removing assets (a test checks this). The webR build bundles <code>assets/</code> into the webR package.</p>
 </div>
 <div class="section level2">
 <h2 id="key-design-decisions">Key design decisions<a class="anchor" aria-label="anchor" href="#key-design-decisions"></a></h2>
