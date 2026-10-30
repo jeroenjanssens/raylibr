@@ -32,48 +32,56 @@ static std::vector<Vector2> matrix_to_vec2(Rcpp::NumericMatrix mat) {
 
 // [[Rcpp::export]]
 void draw_line_strip_(Rcpp::NumericMatrix points, Color color) {
+  raylibr_require_window("draw_line_strip");
   auto pts = matrix_to_vec2(points);
   DrawLineStrip(pts.data(), pts.size(), color);
 }
 
 // [[Rcpp::export]]
 void draw_triangle_fan_(Rcpp::NumericMatrix points, Color color) {
+  raylibr_require_window("draw_triangle_fan");
   auto pts = matrix_to_vec2(points);
   DrawTriangleFan(pts.data(), pts.size(), color);
 }
 
 // [[Rcpp::export]]
 void draw_triangle_strip_(Rcpp::NumericMatrix points, Color color) {
+  raylibr_require_window("draw_triangle_strip");
   auto pts = matrix_to_vec2(points);
   DrawTriangleStrip(pts.data(), pts.size(), color);
 }
 
 // [[Rcpp::export]]
 void draw_spline_linear_(Rcpp::NumericMatrix points, float thick, Color color) {
+  raylibr_require_window("draw_spline_linear");
   auto pts = matrix_to_vec2(points);
   DrawSplineLinear(pts.data(), pts.size(), thick, color);
 }
 
 // [[Rcpp::export]]
 void draw_spline_basis_(Rcpp::NumericMatrix points, float thick, Color color) {
+  raylibr_require_window("draw_spline_basis");
   auto pts = matrix_to_vec2(points);
   DrawSplineBasis(pts.data(), pts.size(), thick, color);
 }
 
 // [[Rcpp::export]]
 void draw_spline_catmull_rom_(Rcpp::NumericMatrix points, float thick, Color color) {
+  raylibr_require_window("draw_spline_catmull_rom");
   auto pts = matrix_to_vec2(points);
   DrawSplineCatmullRom(pts.data(), pts.size(), thick, color);
 }
 
 // [[Rcpp::export]]
 void draw_spline_bezier_quadratic_(Rcpp::NumericMatrix points, float thick, Color color) {
+  raylibr_require_window("draw_spline_bezier_quadratic");
   auto pts = matrix_to_vec2(points);
   DrawSplineBezierQuadratic(pts.data(), pts.size(), thick, color);
 }
 
 // [[Rcpp::export]]
 void draw_spline_bezier_cubic_(Rcpp::NumericMatrix points, float thick, Color color) {
+  raylibr_require_window("draw_spline_bezier_cubic");
   auto pts = matrix_to_vec2(points);
   DrawSplineBezierCubic(pts.data(), pts.size(), thick, color);
 }
@@ -82,6 +90,7 @@ void draw_spline_bezier_cubic_(Rcpp::NumericMatrix points, float thick, Color co
 
 // [[Rcpp::export]]
 void draw_triangle_strip_3d_(Rcpp::NumericMatrix points, Color color) {
+  raylibr_require_window("draw_triangle_strip_3d");
   int n = points.nrow();
   std::vector<Vector3> pts(n);
   for (int i = 0; i < n; i++) {
@@ -126,12 +135,14 @@ void set_model_mesh_material_(SEXP model_ptr, int mesh_id, int material_id) {
 
 // [[Rcpp::export]]
 void gen_mesh_tangents_(SEXP mesh_ptr) {
+  raylibr_require_window("gen_mesh_tangents");
   XPtr<Mesh> m(mesh_ptr);
   GenMeshTangents(m.get());
 }
 
 // [[Rcpp::export]]
 void upload_mesh_(SEXP mesh_ptr, bool dynamic) {
+  raylibr_require_window("upload_mesh");
   XPtr<Mesh> m(mesh_ptr);
   UploadMesh(m.get(), dynamic);
 }
@@ -164,6 +175,7 @@ static RaylibMatrix sexp_to_matrix(SEXP x) {
 
 // [[Rcpp::export]]
 void draw_mesh_instanced_(Mesh mesh, Material material, Rcpp::List transforms) {
+  raylibr_require_window("draw_mesh_instanced");
   int n = transforms.size();
   std::vector<RaylibMatrix> mats(n);
   for (int i = 0; i < n; i++) {
@@ -292,21 +304,25 @@ void camera_roll_(SEXP camera_ptr, float angle) {
 
 // [[Rcpp::export]]
 void set_shader_value_float_(Shader shader, int loc_index, float value) {
+  raylibr_require_window("set_shader_value_float");
   SetShaderValue(shader, loc_index, &value, SHADER_UNIFORM_FLOAT);
 }
 
 // [[Rcpp::export]]
 void set_shader_value_vector_2_(Shader shader, int loc_index, Vector2 value) {
+  raylibr_require_window("set_shader_value_vector_2");
   SetShaderValue(shader, loc_index, &value, SHADER_UNIFORM_VEC2);
 }
 
 // [[Rcpp::export]]
 void set_shader_value_vector_3_(Shader shader, int loc_index, Vector3 value) {
+  raylibr_require_window("set_shader_value_vector_3");
   SetShaderValue(shader, loc_index, &value, SHADER_UNIFORM_VEC3);
 }
 
 // [[Rcpp::export]]
 void set_shader_value_vector_4_(Shader shader, int loc_index, Vector4 value) {
+  raylibr_require_window("set_shader_value_vector_4");
   SetShaderValue(shader, loc_index, &value, SHADER_UNIFORM_VEC4);
 }
 
@@ -314,6 +330,7 @@ void set_shader_value_vector_4_(Shader shader, int loc_index, Vector4 value) {
 
 // [[Rcpp::export]]
 Font load_font_ex_(const char* file_name, int font_size) {
+  raylibr_require_window("load_font_ex");
   return LoadFontEx(file_name, font_size, NULL, 0);
 }
 
@@ -337,6 +354,7 @@ static Rcpp::NumericVector rect_to_r(Rectangle r) {
 // [[Rcpp::export]]
 Rcpp::List gui_scroll_panel_(Rectangle bounds, const char* text, Rectangle content,
                               Vector2 scroll, Rectangle view) {
+  raylibr_require_window("gui_scroll_panel");
   int result = GuiScrollPanel(bounds, text, content, &scroll, &view);
   return Rcpp::List::create(Rcpp::Named("result") = result,
                             Rcpp::Named("scroll") = vec2_to_r(scroll),
@@ -345,6 +363,7 @@ Rcpp::List gui_scroll_panel_(Rectangle bounds, const char* text, Rectangle conte
 
 // [[Rcpp::export]]
 Rcpp::List gui_text_box_(Rectangle bounds, std::string text, int text_size, bool edit_mode) {
+  raylibr_require_window("gui_text_box");
   std::vector<char> buf(text_size + 1, 0);
   strncpy(buf.data(), text.c_str(), text_size);
   int result = GuiTextBox(bounds, buf.data(), text_size, edit_mode);
@@ -356,6 +375,7 @@ Rcpp::List gui_text_box_(Rectangle bounds, std::string text, int text_size, bool
 Rcpp::List gui_text_input_box_(Rectangle bounds, const char* title, const char* message,
                                 std::string text, int text_size, const char* btn_text,
                                 int btn_active, bool secret_view_active) {
+  raylibr_require_window("gui_text_input_box");
   std::vector<char> buf(text_size + 1, 0);
   strncpy(buf.data(), text.c_str(), text_size);
   int result = GuiTextInputBox(bounds, title, message, buf.data(), text_size,
@@ -369,6 +389,7 @@ Rcpp::List gui_text_input_box_(Rectangle bounds, const char* title, const char* 
 // [[Rcpp::export]]
 Rcpp::List gui_value_box_float_(Rectangle bounds, const char* text,
                                  std::string text_value, float value, bool edit_mode) {
+  raylibr_require_window("gui_value_box_float");
   std::vector<char> buf(64, 0);
   strncpy(buf.data(), text_value.c_str(), 63);
   int result = GuiValueBoxFloat(bounds, text, buf.data(), &value, edit_mode);

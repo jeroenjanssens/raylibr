@@ -13,4 +13,13 @@ using namespace Rcpp;
 
 extern std::map<Rcpp::String, Color> rcolors;
 
+// Functions that need an OpenGL context crash R when no window is open, so
+// stop with an R error instead. fn is the R function name.
+inline void raylibr_require_window(const char *fn) {
+  if (!IsWindowReady()) {
+    std::string msg = std::string("`") + fn + "()` needs an open window. Call `init_window()` first.";
+    throw Rcpp::exception(msg.c_str(), false);
+  }
+}
+
 #endif // __RAYLIBRH__

@@ -6,11 +6,13 @@
 
 // [[Rcpp::export]]
 void begin_texture_mode_(RenderTexture2D target) {
+  raylibr_require_window("begin_texture_mode");
   return BeginTextureMode(target);
 }
 
 // [[Rcpp::export]]
 void end_texture_mode_() {
+  raylibr_require_window("end_texture_mode");
   return EndTextureMode();
 }
 
@@ -26,11 +28,13 @@ Image load_image_raw_(const char * file_name, int width, int height, int format,
 
 // [[Rcpp::export]]
 Image load_image_from_texture_(Texture2D texture) {
+  raylibr_require_window("load_image_from_texture");
   return LoadImageFromTexture(texture);
 }
 
 // [[Rcpp::export]]
 Image load_image_from_screen_() {
+  raylibr_require_window("load_image_from_screen");
   return LoadImageFromScreen();
 }
 
@@ -126,16 +130,19 @@ Color get_image_color_(Image image, int x, int y) {
 
 // [[Rcpp::export]]
 Texture2D load_texture_(const char * file_name) {
+  raylibr_require_window("load_texture");
   return LoadTexture(file_name);
 }
 
 // [[Rcpp::export]]
 Texture2D load_texture_from_image_(Image image) {
+  raylibr_require_window("load_texture_from_image");
   return LoadTextureFromImage(image);
 }
 
 // [[Rcpp::export]]
 RenderTexture2D load_render_texture_(int width, int height) {
+  raylibr_require_window("load_render_texture");
   return LoadRenderTexture(width, height);
 }
 
@@ -146,6 +153,7 @@ bool is_texture_valid_(Texture2D texture) {
 
 // [[Rcpp::export]]
 void unload_texture_(Texture2D texture) {
+  raylibr_require_window("unload_texture");
   return UnloadTexture(texture);
 }
 
@@ -156,16 +164,19 @@ bool is_render_texture_valid_(RenderTexture2D target) {
 
 // [[Rcpp::export]]
 void unload_render_texture_(RenderTexture2D target) {
+  raylibr_require_window("unload_render_texture");
   return UnloadRenderTexture(target);
 }
 
 // [[Rcpp::export]]
 void set_texture_filter_(Texture2D texture, int filter) {
+  raylibr_require_window("set_texture_filter");
   return SetTextureFilter(texture, filter);
 }
 
 // [[Rcpp::export]]
 void set_texture_wrap_(Texture2D texture, int wrap) {
+  raylibr_require_window("set_texture_wrap");
   return SetTextureWrap(texture, wrap);
 }
 

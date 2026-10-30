@@ -1,3 +1,12 @@
+# raylibr (development version)
+
+## Bug fixes
+
+* Functions that need an open window (drawing, `begin_*()`/`end_*()`,
+  loading textures, shaders, fonts and models, raygui controls, and rlgl)
+  now stop with an error such as "`draw_circle()` needs an open window"
+  instead of crashing R when no window is open.
+
 # raylibr 6.0.2
 
 ## Breaking changes

@@ -11,6 +11,7 @@ void init_window_(int width, int height, const char * title) {
 
 // [[Rcpp::export]]
 void close_window_() {
+  raylibr_require_window("close_window");
   return CloseWindow();
 }
 
@@ -61,6 +62,7 @@ bool is_window_state_(unsigned int flag) {
 
 // [[Rcpp::export]]
 void set_window_state_(unsigned int flags) {
+  raylibr_require_window("set_window_state");
   return SetWindowState(flags);
 }
 
@@ -71,71 +73,85 @@ void clear_window_state_(unsigned int flags) {
 
 // [[Rcpp::export]]
 void toggle_fullscreen_() {
+  raylibr_require_window("toggle_fullscreen");
   return ToggleFullscreen();
 }
 
 // [[Rcpp::export]]
 void toggle_borderless_windowed_() {
+  raylibr_require_window("toggle_borderless_windowed");
   return ToggleBorderlessWindowed();
 }
 
 // [[Rcpp::export]]
 void maximize_window_() {
+  raylibr_require_window("maximize_window");
   return MaximizeWindow();
 }
 
 // [[Rcpp::export]]
 void minimize_window_() {
+  raylibr_require_window("minimize_window");
   return MinimizeWindow();
 }
 
 // [[Rcpp::export]]
 void restore_window_() {
+  raylibr_require_window("restore_window");
   return RestoreWindow();
 }
 
 // [[Rcpp::export]]
 void set_window_icon_(Image image) {
+  raylibr_require_window("set_window_icon");
   return SetWindowIcon(image);
 }
 
 // [[Rcpp::export]]
 void set_window_title_(const char * title) {
+  raylibr_require_window("set_window_title");
   return SetWindowTitle(title);
 }
 
 // [[Rcpp::export]]
 void set_window_position_(int x, int y) {
+  raylibr_require_window("set_window_position");
   return SetWindowPosition(x, y);
 }
 
 // [[Rcpp::export]]
 void set_window_monitor_(int monitor) {
+  raylibr_require_window("set_window_monitor");
   return SetWindowMonitor(monitor);
 }
 
 // [[Rcpp::export]]
 void set_window_min_size_(int width, int height) {
+  raylibr_require_window("set_window_min_size");
   return SetWindowMinSize(width, height);
 }
 
 // [[Rcpp::export]]
 void set_window_max_size_(int width, int height) {
+  raylibr_require_window("set_window_max_size");
   return SetWindowMaxSize(width, height);
 }
 
 // [[Rcpp::export]]
 void set_window_size_(int width, int height) {
+  raylibr_require_window("set_window_size");
   return SetWindowSize(width, height);
 }
 
 // [[Rcpp::export]]
 void set_window_opacity_(float opacity) {
+  raylibr_require_window("set_window_opacity");
   return SetWindowOpacity(opacity);
 }
 
 // [[Rcpp::export]]
 void set_window_focused_() {
+  raylibr_require_window("set_window_focused");
   return SetWindowFocused();
 }
 
@@ -241,11 +257,13 @@ void disable_event_waiting_() {
 
 // [[Rcpp::export]]
 void show_cursor_() {
+  raylibr_require_window("show_cursor");
   return ShowCursor();
 }
 
 // [[Rcpp::export]]
 void hide_cursor_() {
+  raylibr_require_window("hide_cursor");
   return HideCursor();
 }
 
@@ -256,11 +274,13 @@ bool is_cursor_hidden_() {
 
 // [[Rcpp::export]]
 void enable_cursor_() {
+  raylibr_require_window("enable_cursor");
   return EnableCursor();
 }
 
 // [[Rcpp::export]]
 void disable_cursor_() {
+  raylibr_require_window("disable_cursor");
   return DisableCursor();
 }
 
@@ -271,96 +291,115 @@ bool is_cursor_on_screen_() {
 
 // [[Rcpp::export]]
 void clear_background_(Color color) {
+  raylibr_require_window("clear_background");
   return ClearBackground(color);
 }
 
 // [[Rcpp::export]]
 void begin_drawing_() {
+  raylibr_require_window("begin_drawing");
   return BeginDrawing();
 }
 
 // [[Rcpp::export]]
 void end_drawing_() {
+  raylibr_require_window("end_drawing");
   return EndDrawing();
 }
 
 // [[Rcpp::export]]
 void begin_mode_2d_(Camera2D camera) {
+  raylibr_require_window("begin_mode_2d");
   return BeginMode2D(camera);
 }
 
 // [[Rcpp::export]]
 void end_mode_2d_() {
+  raylibr_require_window("end_mode_2d");
   return EndMode2D();
 }
 
 // [[Rcpp::export]]
 void begin_mode_3d_(Camera3D camera) {
+  raylibr_require_window("begin_mode_3d");
   return BeginMode3D(camera);
 }
 
 // [[Rcpp::export]]
 void end_mode_3d_() {
+  raylibr_require_window("end_mode_3d");
   return EndMode3D();
 }
 
 // [[Rcpp::export]]
 void begin_shader_mode_(Shader shader) {
+  raylibr_require_window("begin_shader_mode");
   return BeginShaderMode(shader);
 }
 
 // [[Rcpp::export]]
 void end_shader_mode_() {
+  raylibr_require_window("end_shader_mode");
   return EndShaderMode();
 }
 
 // [[Rcpp::export]]
 void begin_blend_mode_(int mode) {
+  raylibr_require_window("begin_blend_mode");
   return BeginBlendMode(mode);
 }
 
 // [[Rcpp::export]]
 void end_blend_mode_() {
+  raylibr_require_window("end_blend_mode");
   return EndBlendMode();
 }
 
 // [[Rcpp::export]]
 void begin_scissor_mode_(int x, int y, int width, int height) {
+  raylibr_require_window("begin_scissor_mode");
   return BeginScissorMode(x, y, width, height);
 }
 
 // [[Rcpp::export]]
 void end_scissor_mode_() {
+  raylibr_require_window("end_scissor_mode");
   return EndScissorMode();
 }
 
 // [[Rcpp::export]]
 void begin_vr_stereo_mode_(VrStereoConfig config) {
+  raylibr_require_window("begin_vr_stereo_mode");
   return BeginVrStereoMode(config);
 }
 
 // [[Rcpp::export]]
 void end_vr_stereo_mode_() {
+  raylibr_require_window("end_vr_stereo_mode");
   return EndVrStereoMode();
 }
 
 // [[Rcpp::export]]
 VrStereoConfig load_vr_stereo_config_(VrDeviceInfo device) {
+  raylibr_require_window("load_vr_stereo_config");
   return LoadVrStereoConfig(device);
 }
 
 // [[Rcpp::export]]
 void unload_vr_stereo_config_(VrStereoConfig config) {
+  raylibr_require_window("unload_vr_stereo_config");
   return UnloadVrStereoConfig(config);
 }
 
 // [[Rcpp::export]]
 Shader load_shader_(const char * vs_file_name, const char * fs_file_name) {
+  raylibr_require_window("load_shader");
   return LoadShader((vs_file_name[0] ? vs_file_name : nullptr), (fs_file_name[0] ? fs_file_name : nullptr));
 }
 
 // [[Rcpp::export]]
 Shader load_shader_from_memory_(const char * vs_code, const char * fs_code) {
+  raylibr_require_window("load_shader_from_memory");
   return LoadShaderFromMemory((vs_code[0] ? vs_code : nullptr), (fs_code[0] ? fs_code : nullptr));
 }
 
@@ -371,26 +410,31 @@ bool is_shader_valid_(Shader shader) {
 
 // [[Rcpp::export]]
 int get_shader_location_(Shader shader, const char * uniform_name) {
+  raylibr_require_window("get_shader_location");
   return GetShaderLocation(shader, uniform_name);
 }
 
 // [[Rcpp::export]]
 int get_shader_location_attrib_(Shader shader, const char * attrib_name) {
+  raylibr_require_window("get_shader_location_attrib");
   return GetShaderLocationAttrib(shader, attrib_name);
 }
 
 // [[Rcpp::export]]
 void set_shader_value_matrix_(Shader shader, int loc_index, RaylibMatrix mat) {
+  raylibr_require_window("set_shader_value_matrix");
   return SetShaderValueMatrix(shader, loc_index, mat);
 }
 
 // [[Rcpp::export]]
 void set_shader_value_texture_(Shader shader, int loc_index, Texture2D texture) {
+  raylibr_require_window("set_shader_value_texture");
   return SetShaderValueTexture(shader, loc_index, texture);
 }
 
 // [[Rcpp::export]]
 void unload_shader_(Shader shader) {
+  raylibr_require_window("unload_shader");
   return UnloadShader(shader);
 }
 
@@ -456,11 +500,13 @@ int get_fps_() {
 
 // [[Rcpp::export]]
 void swap_screen_buffer_() {
+  raylibr_require_window("swap_screen_buffer");
   return SwapScreenBuffer();
 }
 
 // [[Rcpp::export]]
 void poll_input_events_() {
+  raylibr_require_window("poll_input_events");
   return PollInputEvents();
 }
 
@@ -791,6 +837,7 @@ Vector2 get_mouse_delta_() {
 
 // [[Rcpp::export]]
 void set_mouse_position_(int x, int y) {
+  raylibr_require_window("set_mouse_position");
   return SetMousePosition(x, y);
 }
 
@@ -816,6 +863,7 @@ Vector2 get_mouse_wheel_move_v_() {
 
 // [[Rcpp::export]]
 void set_mouse_cursor_(int cursor) {
+  raylibr_require_window("set_mouse_cursor");
   return SetMouseCursor(cursor);
 }
 
@@ -896,11 +944,13 @@ Rectangle get_shapes_texture_rectangle_() {
 
 // [[Rcpp::export]]
 Image image_text_(const char * text, int font_size, Color color) {
+  raylibr_require_window("image_text");
   return ImageText(text, font_size, color);
 }
 
 // [[Rcpp::export]]
 Image image_text_ex_(Font font, const char * text, float font_size, float spacing, Color tint) {
+  raylibr_require_window("image_text_ex");
   return ImageTextEx(font, text, font_size, spacing, tint);
 }
 
@@ -921,6 +971,7 @@ int get_pixel_data_size_(int width, int height, int format) {
 
 // [[Rcpp::export]]
 bool export_font_as_code_(Font font, const char * file_name) {
+  raylibr_require_window("export_font_as_code");
   return ExportFontAsCode(font, file_name);
 }
 
@@ -936,11 +987,13 @@ const char * get_text_between_(const char * text, const char * begin, const char
 
 // [[Rcpp::export]]
 void draw_bounding_box_(BoundingBox box, Color color) {
+  raylibr_require_window("draw_bounding_box");
   return DrawBoundingBox(box, color);
 }
 
 // [[Rcpp::export]]
 void unload_mesh_(Mesh mesh) {
+  raylibr_require_window("unload_mesh");
   return UnloadMesh(mesh);
 }
 
@@ -971,6 +1024,7 @@ Wave wave_copy_(Wave wave) {
 
 // [[Rcpp::export]]
 void draw_bounding_box_vectorized_(List box, List color) {
+  raylibr_require_window("draw_bounding_box");
   for (int i = 0; i < box.length(); i++) {
     DrawBoundingBox(as<BoundingBox>(box[i]), as<Color>(color[i]));
   }

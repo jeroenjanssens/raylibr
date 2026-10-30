@@ -11,211 +11,253 @@ void set_shapes_texture_(Texture2D texture, Rectangle source) {
 
 // [[Rcpp::export]]
 void draw_pixel_(int pos_x, int pos_y, Color color) {
+  raylibr_require_window("draw_pixel");
   return DrawPixel(pos_x, pos_y, color);
 }
 
 // [[Rcpp::export]]
 void draw_pixel_v_(Vector2 position, Color color) {
+  raylibr_require_window("draw_pixel_v");
   return DrawPixelV(position, color);
 }
 
 // [[Rcpp::export]]
 void draw_line_(int start_pos_x, int start_pos_y, int end_pos_x, int end_pos_y, Color color) {
+  raylibr_require_window("draw_line");
   return DrawLine(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color);
 }
 
 // [[Rcpp::export]]
 void draw_line_v_(Vector2 start_pos, Vector2 end_pos, Color color) {
+  raylibr_require_window("draw_line_v");
   return DrawLineV(start_pos, end_pos, color);
 }
 
 // [[Rcpp::export]]
 void draw_line_ex_(Vector2 start_pos, Vector2 end_pos, float thick, Color color) {
+  raylibr_require_window("draw_line_ex");
   return DrawLineEx(start_pos, end_pos, thick, color);
 }
 
 // [[Rcpp::export]]
 void draw_line_bezier_(Vector2 start_pos, Vector2 end_pos, float thick, Color color) {
+  raylibr_require_window("draw_line_bezier");
   return DrawLineBezier(start_pos, end_pos, thick, color);
 }
 
 // [[Rcpp::export]]
 void draw_line_dashed_(Vector2 start_pos, Vector2 end_pos, int dash_size, int space_size, Color color) {
+  raylibr_require_window("draw_line_dashed");
   return DrawLineDashed(start_pos, end_pos, dash_size, space_size, color);
 }
 
 // [[Rcpp::export]]
 void draw_circle_(int center_x, int center_y, float radius, Color color) {
+  raylibr_require_window("draw_circle");
   return DrawCircle(center_x, center_y, radius, color);
 }
 
 // [[Rcpp::export]]
 void draw_circle_v_(Vector2 center, float radius, Color color) {
+  raylibr_require_window("draw_circle_v");
   return DrawCircleV(center, radius, color);
 }
 
 // [[Rcpp::export]]
 void draw_circle_gradient_(Vector2 center, float radius, Color inner, Color outer) {
+  raylibr_require_window("draw_circle_gradient");
   return DrawCircleGradient(center, radius, inner, outer);
 }
 
 // [[Rcpp::export]]
 void draw_circle_sector_(Vector2 center, float radius, float start_angle, float end_angle, int segments, Color color) {
+  raylibr_require_window("draw_circle_sector");
   return DrawCircleSector(center, radius, start_angle, end_angle, segments, color);
 }
 
 // [[Rcpp::export]]
 void draw_circle_sector_lines_(Vector2 center, float radius, float start_angle, float end_angle, int segments, Color color) {
+  raylibr_require_window("draw_circle_sector_lines");
   return DrawCircleSectorLines(center, radius, start_angle, end_angle, segments, color);
 }
 
 // [[Rcpp::export]]
 void draw_circle_lines_(int center_x, int center_y, float radius, Color color) {
+  raylibr_require_window("draw_circle_lines");
   return DrawCircleLines(center_x, center_y, radius, color);
 }
 
 // [[Rcpp::export]]
 void draw_circle_lines_v_(Vector2 center, float radius, Color color) {
+  raylibr_require_window("draw_circle_lines_v");
   return DrawCircleLinesV(center, radius, color);
 }
 
 // [[Rcpp::export]]
 void draw_ellipse_(int center_x, int center_y, float radius_h, float radius_v, Color color) {
+  raylibr_require_window("draw_ellipse");
   return DrawEllipse(center_x, center_y, radius_h, radius_v, color);
 }
 
 // [[Rcpp::export]]
 void draw_ellipse_v_(Vector2 center, float radius_h, float radius_v, Color color) {
+  raylibr_require_window("draw_ellipse_v");
   return DrawEllipseV(center, radius_h, radius_v, color);
 }
 
 // [[Rcpp::export]]
 void draw_ellipse_lines_(int center_x, int center_y, float radius_h, float radius_v, Color color) {
+  raylibr_require_window("draw_ellipse_lines");
   return DrawEllipseLines(center_x, center_y, radius_h, radius_v, color);
 }
 
 // [[Rcpp::export]]
 void draw_ellipse_lines_v_(Vector2 center, float radius_h, float radius_v, Color color) {
+  raylibr_require_window("draw_ellipse_lines_v");
   return DrawEllipseLinesV(center, radius_h, radius_v, color);
 }
 
 // [[Rcpp::export]]
 void draw_ring_(Vector2 center, float inner_radius, float outer_radius, float start_angle, float end_angle, int segments, Color color) {
+  raylibr_require_window("draw_ring");
   return DrawRing(center, inner_radius, outer_radius, start_angle, end_angle, segments, color);
 }
 
 // [[Rcpp::export]]
 void draw_ring_lines_(Vector2 center, float inner_radius, float outer_radius, float start_angle, float end_angle, int segments, Color color) {
+  raylibr_require_window("draw_ring_lines");
   return DrawRingLines(center, inner_radius, outer_radius, start_angle, end_angle, segments, color);
 }
 
 // [[Rcpp::export]]
 void draw_rectangle_(int pos_x, int pos_y, int width, int height, Color color) {
+  raylibr_require_window("draw_rectangle");
   return DrawRectangle(pos_x, pos_y, width, height, color);
 }
 
 // [[Rcpp::export]]
 void draw_rectangle_v_(Vector2 position, Vector2 size, Color color) {
+  raylibr_require_window("draw_rectangle_v");
   return DrawRectangleV(position, size, color);
 }
 
 // [[Rcpp::export]]
 void draw_rectangle_rec_(Rectangle rec, Color color) {
+  raylibr_require_window("draw_rectangle_rec");
   return DrawRectangleRec(rec, color);
 }
 
 // [[Rcpp::export]]
 void draw_rectangle_pro_(Rectangle rec, Vector2 origin, float rotation, Color color) {
+  raylibr_require_window("draw_rectangle_pro");
   return DrawRectanglePro(rec, origin, rotation, color);
 }
 
 // [[Rcpp::export]]
 void draw_rectangle_gradient_v_(int pos_x, int pos_y, int width, int height, Color top, Color bottom) {
+  raylibr_require_window("draw_rectangle_gradient_v");
   return DrawRectangleGradientV(pos_x, pos_y, width, height, top, bottom);
 }
 
 // [[Rcpp::export]]
 void draw_rectangle_gradient_h_(int pos_x, int pos_y, int width, int height, Color left, Color right) {
+  raylibr_require_window("draw_rectangle_gradient_h");
   return DrawRectangleGradientH(pos_x, pos_y, width, height, left, right);
 }
 
 // [[Rcpp::export]]
 void draw_rectangle_gradient_ex_(Rectangle rec, Color top_left, Color bottom_left, Color bottom_right, Color top_right) {
+  raylibr_require_window("draw_rectangle_gradient_ex");
   return DrawRectangleGradientEx(rec, top_left, bottom_left, bottom_right, top_right);
 }
 
 // [[Rcpp::export]]
 void draw_rectangle_lines_(int pos_x, int pos_y, int width, int height, Color color) {
+  raylibr_require_window("draw_rectangle_lines");
   return DrawRectangleLines(pos_x, pos_y, width, height, color);
 }
 
 // [[Rcpp::export]]
 void draw_rectangle_lines_ex_(Rectangle rec, float line_thick, Color color) {
+  raylibr_require_window("draw_rectangle_lines_ex");
   return DrawRectangleLinesEx(rec, line_thick, color);
 }
 
 // [[Rcpp::export]]
 void draw_rectangle_rounded_(Rectangle rec, float roundness, int segments, Color color) {
+  raylibr_require_window("draw_rectangle_rounded");
   return DrawRectangleRounded(rec, roundness, segments, color);
 }
 
 // [[Rcpp::export]]
 void draw_rectangle_rounded_lines_(Rectangle rec, float roundness, int segments, Color color) {
+  raylibr_require_window("draw_rectangle_rounded_lines");
   return DrawRectangleRoundedLines(rec, roundness, segments, color);
 }
 
 // [[Rcpp::export]]
 void draw_rectangle_rounded_lines_ex_(Rectangle rec, float roundness, int segments, float line_thick, Color color) {
+  raylibr_require_window("draw_rectangle_rounded_lines_ex");
   return DrawRectangleRoundedLinesEx(rec, roundness, segments, line_thick, color);
 }
 
 // [[Rcpp::export]]
 void draw_triangle_(Vector2 v1, Vector2 v2, Vector2 v3, Color color) {
+  raylibr_require_window("draw_triangle");
   return DrawTriangle(v1, v2, v3, color);
 }
 
 // [[Rcpp::export]]
 void draw_triangle_lines_(Vector2 v1, Vector2 v2, Vector2 v3, Color color) {
+  raylibr_require_window("draw_triangle_lines");
   return DrawTriangleLines(v1, v2, v3, color);
 }
 
 // [[Rcpp::export]]
 void draw_poly_(Vector2 center, int sides, float radius, float rotation, Color color) {
+  raylibr_require_window("draw_poly");
   return DrawPoly(center, sides, radius, rotation, color);
 }
 
 // [[Rcpp::export]]
 void draw_poly_lines_(Vector2 center, int sides, float radius, float rotation, Color color) {
+  raylibr_require_window("draw_poly_lines");
   return DrawPolyLines(center, sides, radius, rotation, color);
 }
 
 // [[Rcpp::export]]
 void draw_poly_lines_ex_(Vector2 center, int sides, float radius, float rotation, float line_thick, Color color) {
+  raylibr_require_window("draw_poly_lines_ex");
   return DrawPolyLinesEx(center, sides, radius, rotation, line_thick, color);
 }
 
 // [[Rcpp::export]]
 void draw_spline_segment_linear_(Vector2 p1, Vector2 p2, float thick, Color color) {
+  raylibr_require_window("draw_spline_segment_linear");
   return DrawSplineSegmentLinear(p1, p2, thick, color);
 }
 
 // [[Rcpp::export]]
 void draw_spline_segment_basis_(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, float thick, Color color) {
+  raylibr_require_window("draw_spline_segment_basis");
   return DrawSplineSegmentBasis(p1, p2, p3, p4, thick, color);
 }
 
 // [[Rcpp::export]]
 void draw_spline_segment_catmull_rom_(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, float thick, Color color) {
+  raylibr_require_window("draw_spline_segment_catmull_rom");
   return DrawSplineSegmentCatmullRom(p1, p2, p3, p4, thick, color);
 }
 
 // [[Rcpp::export]]
 void draw_spline_segment_bezier_quadratic_(Vector2 p1, Vector2 c2, Vector2 p3, float thick, Color color) {
+  raylibr_require_window("draw_spline_segment_bezier_quadratic");
   return DrawSplineSegmentBezierQuadratic(p1, c2, p3, thick, color);
 }
 
 // [[Rcpp::export]]
 void draw_spline_segment_bezier_cubic_(Vector2 p1, Vector2 c2, Vector2 c3, Vector2 p4, float thick, Color color) {
+  raylibr_require_window("draw_spline_segment_bezier_cubic");
   return DrawSplineSegmentBezierCubic(p1, c2, c3, p4, thick, color);
 }
 
@@ -291,16 +333,19 @@ Rectangle get_collision_rec_(Rectangle rec1, Rectangle rec2) {
 
 // [[Rcpp::export]]
 void draw_line_3d_(Vector3 start_pos, Vector3 end_pos, Color color) {
+  raylibr_require_window("draw_line_3d");
   return DrawLine3D(start_pos, end_pos, color);
 }
 
 // [[Rcpp::export]]
 void draw_circle_3d_(Vector3 center, float radius, Vector3 rotation_axis, float rotation_angle, Color color) {
+  raylibr_require_window("draw_circle_3d");
   return DrawCircle3D(center, radius, rotation_axis, rotation_angle, color);
 }
 
 // [[Rcpp::export]]
 void draw_triangle_3d_(Vector3 v1, Vector3 v2, Vector3 v3, Color color) {
+  raylibr_require_window("draw_triangle_3d");
   return DrawTriangle3D(v1, v2, v3, color);
 }
 
@@ -321,6 +366,7 @@ bool check_collision_box_sphere_(BoundingBox box, Vector3 center, float radius) 
 
 // [[Rcpp::export]]
 void draw_pixel_vectorized_(NumericVector pos_x, NumericVector pos_y, List color) {
+  raylibr_require_window("draw_pixel");
   for (int i = 0; i < pos_x.length(); i++) {
     DrawPixel((int)pos_x[i], (int)pos_y[i], as<Color>(color[i]));
   }
@@ -328,6 +374,7 @@ void draw_pixel_vectorized_(NumericVector pos_x, NumericVector pos_y, List color
 
 // [[Rcpp::export]]
 void draw_pixel_v_vectorized_(NumericMatrix position, List color) {
+  raylibr_require_window("draw_pixel_v");
   for (int i = 0; i < position.nrow(); i++) {
     DrawPixelV(Vector2{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1)))}, as<Color>(color[i]));
   }
@@ -335,6 +382,7 @@ void draw_pixel_v_vectorized_(NumericMatrix position, List color) {
 
 // [[Rcpp::export]]
 void draw_line_vectorized_(NumericVector start_pos_x, NumericVector start_pos_y, NumericVector end_pos_x, NumericVector end_pos_y, List color) {
+  raylibr_require_window("draw_line");
   for (int i = 0; i < start_pos_x.length(); i++) {
     DrawLine((int)start_pos_x[i], (int)start_pos_y[i], (int)end_pos_x[i], (int)end_pos_y[i], as<Color>(color[i]));
   }
@@ -342,6 +390,7 @@ void draw_line_vectorized_(NumericVector start_pos_x, NumericVector start_pos_y,
 
 // [[Rcpp::export]]
 void draw_line_v_vectorized_(NumericMatrix start_pos, NumericMatrix end_pos, List color) {
+  raylibr_require_window("draw_line_v");
   for (int i = 0; i < start_pos.nrow(); i++) {
     DrawLineV(Vector2{as<float>(wrap(start_pos(i,0))), as<float>(wrap(start_pos(i,1)))}, Vector2{as<float>(wrap(end_pos(i,0))), as<float>(wrap(end_pos(i,1)))}, as<Color>(color[i]));
   }
@@ -349,6 +398,7 @@ void draw_line_v_vectorized_(NumericMatrix start_pos, NumericMatrix end_pos, Lis
 
 // [[Rcpp::export]]
 void draw_line_ex_vectorized_(NumericMatrix start_pos, NumericMatrix end_pos, NumericVector thick, List color) {
+  raylibr_require_window("draw_line_ex");
   for (int i = 0; i < start_pos.nrow(); i++) {
     DrawLineEx(Vector2{as<float>(wrap(start_pos(i,0))), as<float>(wrap(start_pos(i,1)))}, Vector2{as<float>(wrap(end_pos(i,0))), as<float>(wrap(end_pos(i,1)))}, (float)thick[i], as<Color>(color[i]));
   }
@@ -356,6 +406,7 @@ void draw_line_ex_vectorized_(NumericMatrix start_pos, NumericMatrix end_pos, Nu
 
 // [[Rcpp::export]]
 void draw_line_bezier_vectorized_(NumericMatrix start_pos, NumericMatrix end_pos, NumericVector thick, List color) {
+  raylibr_require_window("draw_line_bezier");
   for (int i = 0; i < start_pos.nrow(); i++) {
     DrawLineBezier(Vector2{as<float>(wrap(start_pos(i,0))), as<float>(wrap(start_pos(i,1)))}, Vector2{as<float>(wrap(end_pos(i,0))), as<float>(wrap(end_pos(i,1)))}, (float)thick[i], as<Color>(color[i]));
   }
@@ -363,6 +414,7 @@ void draw_line_bezier_vectorized_(NumericMatrix start_pos, NumericMatrix end_pos
 
 // [[Rcpp::export]]
 void draw_line_dashed_vectorized_(NumericMatrix start_pos, NumericMatrix end_pos, NumericVector dash_size, NumericVector space_size, List color) {
+  raylibr_require_window("draw_line_dashed");
   for (int i = 0; i < start_pos.nrow(); i++) {
     DrawLineDashed(Vector2{as<float>(wrap(start_pos(i,0))), as<float>(wrap(start_pos(i,1)))}, Vector2{as<float>(wrap(end_pos(i,0))), as<float>(wrap(end_pos(i,1)))}, (int)dash_size[i], (int)space_size[i], as<Color>(color[i]));
   }
@@ -370,6 +422,7 @@ void draw_line_dashed_vectorized_(NumericMatrix start_pos, NumericMatrix end_pos
 
 // [[Rcpp::export]]
 void draw_circle_vectorized_(NumericVector center_x, NumericVector center_y, NumericVector radius, List color) {
+  raylibr_require_window("draw_circle");
   for (int i = 0; i < center_x.length(); i++) {
     DrawCircle((int)center_x[i], (int)center_y[i], (float)radius[i], as<Color>(color[i]));
   }
@@ -377,6 +430,7 @@ void draw_circle_vectorized_(NumericVector center_x, NumericVector center_y, Num
 
 // [[Rcpp::export]]
 void draw_circle_v_vectorized_(NumericMatrix center, NumericVector radius, List color) {
+  raylibr_require_window("draw_circle_v");
   for (int i = 0; i < center.nrow(); i++) {
     DrawCircleV(Vector2{as<float>(wrap(center(i,0))), as<float>(wrap(center(i,1)))}, (float)radius[i], as<Color>(color[i]));
   }
@@ -384,6 +438,7 @@ void draw_circle_v_vectorized_(NumericMatrix center, NumericVector radius, List 
 
 // [[Rcpp::export]]
 void draw_circle_gradient_vectorized_(NumericMatrix center, NumericVector radius, List inner, List outer) {
+  raylibr_require_window("draw_circle_gradient");
   for (int i = 0; i < center.nrow(); i++) {
     DrawCircleGradient(Vector2{as<float>(wrap(center(i,0))), as<float>(wrap(center(i,1)))}, (float)radius[i], as<Color>(inner[i]), as<Color>(outer[i]));
   }
@@ -391,6 +446,7 @@ void draw_circle_gradient_vectorized_(NumericMatrix center, NumericVector radius
 
 // [[Rcpp::export]]
 void draw_circle_sector_vectorized_(NumericMatrix center, NumericVector radius, NumericVector start_angle, NumericVector end_angle, NumericVector segments, List color) {
+  raylibr_require_window("draw_circle_sector");
   for (int i = 0; i < center.nrow(); i++) {
     DrawCircleSector(Vector2{as<float>(wrap(center(i,0))), as<float>(wrap(center(i,1)))}, (float)radius[i], (float)start_angle[i], (float)end_angle[i], (int)segments[i], as<Color>(color[i]));
   }
@@ -398,6 +454,7 @@ void draw_circle_sector_vectorized_(NumericMatrix center, NumericVector radius, 
 
 // [[Rcpp::export]]
 void draw_circle_sector_lines_vectorized_(NumericMatrix center, NumericVector radius, NumericVector start_angle, NumericVector end_angle, NumericVector segments, List color) {
+  raylibr_require_window("draw_circle_sector_lines");
   for (int i = 0; i < center.nrow(); i++) {
     DrawCircleSectorLines(Vector2{as<float>(wrap(center(i,0))), as<float>(wrap(center(i,1)))}, (float)radius[i], (float)start_angle[i], (float)end_angle[i], (int)segments[i], as<Color>(color[i]));
   }
@@ -405,6 +462,7 @@ void draw_circle_sector_lines_vectorized_(NumericMatrix center, NumericVector ra
 
 // [[Rcpp::export]]
 void draw_circle_lines_vectorized_(NumericVector center_x, NumericVector center_y, NumericVector radius, List color) {
+  raylibr_require_window("draw_circle_lines");
   for (int i = 0; i < center_x.length(); i++) {
     DrawCircleLines((int)center_x[i], (int)center_y[i], (float)radius[i], as<Color>(color[i]));
   }
@@ -412,6 +470,7 @@ void draw_circle_lines_vectorized_(NumericVector center_x, NumericVector center_
 
 // [[Rcpp::export]]
 void draw_circle_lines_v_vectorized_(NumericMatrix center, NumericVector radius, List color) {
+  raylibr_require_window("draw_circle_lines_v");
   for (int i = 0; i < center.nrow(); i++) {
     DrawCircleLinesV(Vector2{as<float>(wrap(center(i,0))), as<float>(wrap(center(i,1)))}, (float)radius[i], as<Color>(color[i]));
   }
@@ -419,6 +478,7 @@ void draw_circle_lines_v_vectorized_(NumericMatrix center, NumericVector radius,
 
 // [[Rcpp::export]]
 void draw_ellipse_vectorized_(NumericVector center_x, NumericVector center_y, NumericVector radius_h, NumericVector radius_v, List color) {
+  raylibr_require_window("draw_ellipse");
   for (int i = 0; i < center_x.length(); i++) {
     DrawEllipse((int)center_x[i], (int)center_y[i], (float)radius_h[i], (float)radius_v[i], as<Color>(color[i]));
   }
@@ -426,6 +486,7 @@ void draw_ellipse_vectorized_(NumericVector center_x, NumericVector center_y, Nu
 
 // [[Rcpp::export]]
 void draw_ellipse_v_vectorized_(NumericMatrix center, NumericVector radius_h, NumericVector radius_v, List color) {
+  raylibr_require_window("draw_ellipse_v");
   for (int i = 0; i < center.nrow(); i++) {
     DrawEllipseV(Vector2{as<float>(wrap(center(i,0))), as<float>(wrap(center(i,1)))}, (float)radius_h[i], (float)radius_v[i], as<Color>(color[i]));
   }
@@ -433,6 +494,7 @@ void draw_ellipse_v_vectorized_(NumericMatrix center, NumericVector radius_h, Nu
 
 // [[Rcpp::export]]
 void draw_ellipse_lines_vectorized_(NumericVector center_x, NumericVector center_y, NumericVector radius_h, NumericVector radius_v, List color) {
+  raylibr_require_window("draw_ellipse_lines");
   for (int i = 0; i < center_x.length(); i++) {
     DrawEllipseLines((int)center_x[i], (int)center_y[i], (float)radius_h[i], (float)radius_v[i], as<Color>(color[i]));
   }
@@ -440,6 +502,7 @@ void draw_ellipse_lines_vectorized_(NumericVector center_x, NumericVector center
 
 // [[Rcpp::export]]
 void draw_ellipse_lines_v_vectorized_(NumericMatrix center, NumericVector radius_h, NumericVector radius_v, List color) {
+  raylibr_require_window("draw_ellipse_lines_v");
   for (int i = 0; i < center.nrow(); i++) {
     DrawEllipseLinesV(Vector2{as<float>(wrap(center(i,0))), as<float>(wrap(center(i,1)))}, (float)radius_h[i], (float)radius_v[i], as<Color>(color[i]));
   }
@@ -447,6 +510,7 @@ void draw_ellipse_lines_v_vectorized_(NumericMatrix center, NumericVector radius
 
 // [[Rcpp::export]]
 void draw_ring_vectorized_(NumericMatrix center, NumericVector inner_radius, NumericVector outer_radius, NumericVector start_angle, NumericVector end_angle, NumericVector segments, List color) {
+  raylibr_require_window("draw_ring");
   for (int i = 0; i < center.nrow(); i++) {
     DrawRing(Vector2{as<float>(wrap(center(i,0))), as<float>(wrap(center(i,1)))}, (float)inner_radius[i], (float)outer_radius[i], (float)start_angle[i], (float)end_angle[i], (int)segments[i], as<Color>(color[i]));
   }
@@ -454,6 +518,7 @@ void draw_ring_vectorized_(NumericMatrix center, NumericVector inner_radius, Num
 
 // [[Rcpp::export]]
 void draw_ring_lines_vectorized_(NumericMatrix center, NumericVector inner_radius, NumericVector outer_radius, NumericVector start_angle, NumericVector end_angle, NumericVector segments, List color) {
+  raylibr_require_window("draw_ring_lines");
   for (int i = 0; i < center.nrow(); i++) {
     DrawRingLines(Vector2{as<float>(wrap(center(i,0))), as<float>(wrap(center(i,1)))}, (float)inner_radius[i], (float)outer_radius[i], (float)start_angle[i], (float)end_angle[i], (int)segments[i], as<Color>(color[i]));
   }
@@ -461,6 +526,7 @@ void draw_ring_lines_vectorized_(NumericMatrix center, NumericVector inner_radiu
 
 // [[Rcpp::export]]
 void draw_rectangle_vectorized_(NumericVector pos_x, NumericVector pos_y, NumericVector width, NumericVector height, List color) {
+  raylibr_require_window("draw_rectangle");
   for (int i = 0; i < pos_x.length(); i++) {
     DrawRectangle((int)pos_x[i], (int)pos_y[i], (int)width[i], (int)height[i], as<Color>(color[i]));
   }
@@ -468,6 +534,7 @@ void draw_rectangle_vectorized_(NumericVector pos_x, NumericVector pos_y, Numeri
 
 // [[Rcpp::export]]
 void draw_rectangle_v_vectorized_(NumericMatrix position, NumericMatrix size, List color) {
+  raylibr_require_window("draw_rectangle_v");
   for (int i = 0; i < position.nrow(); i++) {
     DrawRectangleV(Vector2{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1)))}, Vector2{as<float>(wrap(size(i,0))), as<float>(wrap(size(i,1)))}, as<Color>(color[i]));
   }
@@ -475,6 +542,7 @@ void draw_rectangle_v_vectorized_(NumericMatrix position, NumericMatrix size, Li
 
 // [[Rcpp::export]]
 void draw_rectangle_rec_vectorized_(List rec, List color) {
+  raylibr_require_window("draw_rectangle_rec");
   for (int i = 0; i < rec.length(); i++) {
     DrawRectangleRec(as<Rectangle>(rec[i]), as<Color>(color[i]));
   }
@@ -482,6 +550,7 @@ void draw_rectangle_rec_vectorized_(List rec, List color) {
 
 // [[Rcpp::export]]
 void draw_rectangle_pro_vectorized_(List rec, NumericMatrix origin, NumericVector rotation, List color) {
+  raylibr_require_window("draw_rectangle_pro");
   for (int i = 0; i < rec.length(); i++) {
     DrawRectanglePro(as<Rectangle>(rec[i]), Vector2{as<float>(wrap(origin(i,0))), as<float>(wrap(origin(i,1)))}, (float)rotation[i], as<Color>(color[i]));
   }
@@ -489,6 +558,7 @@ void draw_rectangle_pro_vectorized_(List rec, NumericMatrix origin, NumericVecto
 
 // [[Rcpp::export]]
 void draw_rectangle_gradient_v_vectorized_(NumericVector pos_x, NumericVector pos_y, NumericVector width, NumericVector height, List top, List bottom) {
+  raylibr_require_window("draw_rectangle_gradient_v");
   for (int i = 0; i < pos_x.length(); i++) {
     DrawRectangleGradientV((int)pos_x[i], (int)pos_y[i], (int)width[i], (int)height[i], as<Color>(top[i]), as<Color>(bottom[i]));
   }
@@ -496,6 +566,7 @@ void draw_rectangle_gradient_v_vectorized_(NumericVector pos_x, NumericVector po
 
 // [[Rcpp::export]]
 void draw_rectangle_gradient_h_vectorized_(NumericVector pos_x, NumericVector pos_y, NumericVector width, NumericVector height, List left, List right) {
+  raylibr_require_window("draw_rectangle_gradient_h");
   for (int i = 0; i < pos_x.length(); i++) {
     DrawRectangleGradientH((int)pos_x[i], (int)pos_y[i], (int)width[i], (int)height[i], as<Color>(left[i]), as<Color>(right[i]));
   }
@@ -503,6 +574,7 @@ void draw_rectangle_gradient_h_vectorized_(NumericVector pos_x, NumericVector po
 
 // [[Rcpp::export]]
 void draw_rectangle_gradient_ex_vectorized_(List rec, List top_left, List bottom_left, List bottom_right, List top_right) {
+  raylibr_require_window("draw_rectangle_gradient_ex");
   for (int i = 0; i < rec.length(); i++) {
     DrawRectangleGradientEx(as<Rectangle>(rec[i]), as<Color>(top_left[i]), as<Color>(bottom_left[i]), as<Color>(bottom_right[i]), as<Color>(top_right[i]));
   }
@@ -510,6 +582,7 @@ void draw_rectangle_gradient_ex_vectorized_(List rec, List top_left, List bottom
 
 // [[Rcpp::export]]
 void draw_rectangle_lines_vectorized_(NumericVector pos_x, NumericVector pos_y, NumericVector width, NumericVector height, List color) {
+  raylibr_require_window("draw_rectangle_lines");
   for (int i = 0; i < pos_x.length(); i++) {
     DrawRectangleLines((int)pos_x[i], (int)pos_y[i], (int)width[i], (int)height[i], as<Color>(color[i]));
   }
@@ -517,6 +590,7 @@ void draw_rectangle_lines_vectorized_(NumericVector pos_x, NumericVector pos_y, 
 
 // [[Rcpp::export]]
 void draw_rectangle_lines_ex_vectorized_(List rec, NumericVector line_thick, List color) {
+  raylibr_require_window("draw_rectangle_lines_ex");
   for (int i = 0; i < rec.length(); i++) {
     DrawRectangleLinesEx(as<Rectangle>(rec[i]), (float)line_thick[i], as<Color>(color[i]));
   }
@@ -524,6 +598,7 @@ void draw_rectangle_lines_ex_vectorized_(List rec, NumericVector line_thick, Lis
 
 // [[Rcpp::export]]
 void draw_rectangle_rounded_vectorized_(List rec, NumericVector roundness, NumericVector segments, List color) {
+  raylibr_require_window("draw_rectangle_rounded");
   for (int i = 0; i < rec.length(); i++) {
     DrawRectangleRounded(as<Rectangle>(rec[i]), (float)roundness[i], (int)segments[i], as<Color>(color[i]));
   }
@@ -531,6 +606,7 @@ void draw_rectangle_rounded_vectorized_(List rec, NumericVector roundness, Numer
 
 // [[Rcpp::export]]
 void draw_rectangle_rounded_lines_vectorized_(List rec, NumericVector roundness, NumericVector segments, List color) {
+  raylibr_require_window("draw_rectangle_rounded_lines");
   for (int i = 0; i < rec.length(); i++) {
     DrawRectangleRoundedLines(as<Rectangle>(rec[i]), (float)roundness[i], (int)segments[i], as<Color>(color[i]));
   }
@@ -538,6 +614,7 @@ void draw_rectangle_rounded_lines_vectorized_(List rec, NumericVector roundness,
 
 // [[Rcpp::export]]
 void draw_rectangle_rounded_lines_ex_vectorized_(List rec, NumericVector roundness, NumericVector segments, NumericVector line_thick, List color) {
+  raylibr_require_window("draw_rectangle_rounded_lines_ex");
   for (int i = 0; i < rec.length(); i++) {
     DrawRectangleRoundedLinesEx(as<Rectangle>(rec[i]), (float)roundness[i], (int)segments[i], (float)line_thick[i], as<Color>(color[i]));
   }
@@ -545,6 +622,7 @@ void draw_rectangle_rounded_lines_ex_vectorized_(List rec, NumericVector roundne
 
 // [[Rcpp::export]]
 void draw_triangle_vectorized_(NumericMatrix v1, NumericMatrix v2, NumericMatrix v3, List color) {
+  raylibr_require_window("draw_triangle");
   for (int i = 0; i < v1.nrow(); i++) {
     DrawTriangle(Vector2{as<float>(wrap(v1(i,0))), as<float>(wrap(v1(i,1)))}, Vector2{as<float>(wrap(v2(i,0))), as<float>(wrap(v2(i,1)))}, Vector2{as<float>(wrap(v3(i,0))), as<float>(wrap(v3(i,1)))}, as<Color>(color[i]));
   }
@@ -552,6 +630,7 @@ void draw_triangle_vectorized_(NumericMatrix v1, NumericMatrix v2, NumericMatrix
 
 // [[Rcpp::export]]
 void draw_triangle_lines_vectorized_(NumericMatrix v1, NumericMatrix v2, NumericMatrix v3, List color) {
+  raylibr_require_window("draw_triangle_lines");
   for (int i = 0; i < v1.nrow(); i++) {
     DrawTriangleLines(Vector2{as<float>(wrap(v1(i,0))), as<float>(wrap(v1(i,1)))}, Vector2{as<float>(wrap(v2(i,0))), as<float>(wrap(v2(i,1)))}, Vector2{as<float>(wrap(v3(i,0))), as<float>(wrap(v3(i,1)))}, as<Color>(color[i]));
   }
@@ -559,6 +638,7 @@ void draw_triangle_lines_vectorized_(NumericMatrix v1, NumericMatrix v2, Numeric
 
 // [[Rcpp::export]]
 void draw_poly_vectorized_(NumericMatrix center, NumericVector sides, NumericVector radius, NumericVector rotation, List color) {
+  raylibr_require_window("draw_poly");
   for (int i = 0; i < center.nrow(); i++) {
     DrawPoly(Vector2{as<float>(wrap(center(i,0))), as<float>(wrap(center(i,1)))}, (int)sides[i], (float)radius[i], (float)rotation[i], as<Color>(color[i]));
   }
@@ -566,6 +646,7 @@ void draw_poly_vectorized_(NumericMatrix center, NumericVector sides, NumericVec
 
 // [[Rcpp::export]]
 void draw_poly_lines_vectorized_(NumericMatrix center, NumericVector sides, NumericVector radius, NumericVector rotation, List color) {
+  raylibr_require_window("draw_poly_lines");
   for (int i = 0; i < center.nrow(); i++) {
     DrawPolyLines(Vector2{as<float>(wrap(center(i,0))), as<float>(wrap(center(i,1)))}, (int)sides[i], (float)radius[i], (float)rotation[i], as<Color>(color[i]));
   }
@@ -573,6 +654,7 @@ void draw_poly_lines_vectorized_(NumericMatrix center, NumericVector sides, Nume
 
 // [[Rcpp::export]]
 void draw_poly_lines_ex_vectorized_(NumericMatrix center, NumericVector sides, NumericVector radius, NumericVector rotation, NumericVector line_thick, List color) {
+  raylibr_require_window("draw_poly_lines_ex");
   for (int i = 0; i < center.nrow(); i++) {
     DrawPolyLinesEx(Vector2{as<float>(wrap(center(i,0))), as<float>(wrap(center(i,1)))}, (int)sides[i], (float)radius[i], (float)rotation[i], (float)line_thick[i], as<Color>(color[i]));
   }
@@ -580,6 +662,7 @@ void draw_poly_lines_ex_vectorized_(NumericMatrix center, NumericVector sides, N
 
 // [[Rcpp::export]]
 void draw_spline_segment_linear_vectorized_(NumericMatrix p1, NumericMatrix p2, NumericVector thick, List color) {
+  raylibr_require_window("draw_spline_segment_linear");
   for (int i = 0; i < p1.nrow(); i++) {
     DrawSplineSegmentLinear(Vector2{as<float>(wrap(p1(i,0))), as<float>(wrap(p1(i,1)))}, Vector2{as<float>(wrap(p2(i,0))), as<float>(wrap(p2(i,1)))}, (float)thick[i], as<Color>(color[i]));
   }
@@ -587,6 +670,7 @@ void draw_spline_segment_linear_vectorized_(NumericMatrix p1, NumericMatrix p2, 
 
 // [[Rcpp::export]]
 void draw_spline_segment_basis_vectorized_(NumericMatrix p1, NumericMatrix p2, NumericMatrix p3, NumericMatrix p4, NumericVector thick, List color) {
+  raylibr_require_window("draw_spline_segment_basis");
   for (int i = 0; i < p1.nrow(); i++) {
     DrawSplineSegmentBasis(Vector2{as<float>(wrap(p1(i,0))), as<float>(wrap(p1(i,1)))}, Vector2{as<float>(wrap(p2(i,0))), as<float>(wrap(p2(i,1)))}, Vector2{as<float>(wrap(p3(i,0))), as<float>(wrap(p3(i,1)))}, Vector2{as<float>(wrap(p4(i,0))), as<float>(wrap(p4(i,1)))}, (float)thick[i], as<Color>(color[i]));
   }
@@ -594,6 +678,7 @@ void draw_spline_segment_basis_vectorized_(NumericMatrix p1, NumericMatrix p2, N
 
 // [[Rcpp::export]]
 void draw_spline_segment_catmull_rom_vectorized_(NumericMatrix p1, NumericMatrix p2, NumericMatrix p3, NumericMatrix p4, NumericVector thick, List color) {
+  raylibr_require_window("draw_spline_segment_catmull_rom");
   for (int i = 0; i < p1.nrow(); i++) {
     DrawSplineSegmentCatmullRom(Vector2{as<float>(wrap(p1(i,0))), as<float>(wrap(p1(i,1)))}, Vector2{as<float>(wrap(p2(i,0))), as<float>(wrap(p2(i,1)))}, Vector2{as<float>(wrap(p3(i,0))), as<float>(wrap(p3(i,1)))}, Vector2{as<float>(wrap(p4(i,0))), as<float>(wrap(p4(i,1)))}, (float)thick[i], as<Color>(color[i]));
   }
@@ -601,6 +686,7 @@ void draw_spline_segment_catmull_rom_vectorized_(NumericMatrix p1, NumericMatrix
 
 // [[Rcpp::export]]
 void draw_spline_segment_bezier_quadratic_vectorized_(NumericMatrix p1, NumericMatrix c2, NumericMatrix p3, NumericVector thick, List color) {
+  raylibr_require_window("draw_spline_segment_bezier_quadratic");
   for (int i = 0; i < p1.nrow(); i++) {
     DrawSplineSegmentBezierQuadratic(Vector2{as<float>(wrap(p1(i,0))), as<float>(wrap(p1(i,1)))}, Vector2{as<float>(wrap(c2(i,0))), as<float>(wrap(c2(i,1)))}, Vector2{as<float>(wrap(p3(i,0))), as<float>(wrap(p3(i,1)))}, (float)thick[i], as<Color>(color[i]));
   }
@@ -608,6 +694,7 @@ void draw_spline_segment_bezier_quadratic_vectorized_(NumericMatrix p1, NumericM
 
 // [[Rcpp::export]]
 void draw_spline_segment_bezier_cubic_vectorized_(NumericMatrix p1, NumericMatrix c2, NumericMatrix c3, NumericMatrix p4, NumericVector thick, List color) {
+  raylibr_require_window("draw_spline_segment_bezier_cubic");
   for (int i = 0; i < p1.nrow(); i++) {
     DrawSplineSegmentBezierCubic(Vector2{as<float>(wrap(p1(i,0))), as<float>(wrap(p1(i,1)))}, Vector2{as<float>(wrap(c2(i,0))), as<float>(wrap(c2(i,1)))}, Vector2{as<float>(wrap(c3(i,0))), as<float>(wrap(c3(i,1)))}, Vector2{as<float>(wrap(p4(i,0))), as<float>(wrap(p4(i,1)))}, (float)thick[i], as<Color>(color[i]));
   }
@@ -615,6 +702,7 @@ void draw_spline_segment_bezier_cubic_vectorized_(NumericMatrix p1, NumericMatri
 
 // [[Rcpp::export]]
 void draw_line_3d_vectorized_(NumericMatrix start_pos, NumericMatrix end_pos, List color) {
+  raylibr_require_window("draw_line_3d");
   for (int i = 0; i < start_pos.nrow(); i++) {
     DrawLine3D(Vector3{as<float>(wrap(start_pos(i,0))), as<float>(wrap(start_pos(i,1))), as<float>(wrap(start_pos(i,2)))}, Vector3{as<float>(wrap(end_pos(i,0))), as<float>(wrap(end_pos(i,1))), as<float>(wrap(end_pos(i,2)))}, as<Color>(color[i]));
   }
@@ -622,6 +710,7 @@ void draw_line_3d_vectorized_(NumericMatrix start_pos, NumericMatrix end_pos, Li
 
 // [[Rcpp::export]]
 void draw_circle_3d_vectorized_(NumericMatrix center, NumericVector radius, NumericMatrix rotation_axis, NumericVector rotation_angle, List color) {
+  raylibr_require_window("draw_circle_3d");
   for (int i = 0; i < center.nrow(); i++) {
     DrawCircle3D(Vector3{as<float>(wrap(center(i,0))), as<float>(wrap(center(i,1))), as<float>(wrap(center(i,2)))}, (float)radius[i], Vector3{as<float>(wrap(rotation_axis(i,0))), as<float>(wrap(rotation_axis(i,1))), as<float>(wrap(rotation_axis(i,2)))}, (float)rotation_angle[i], as<Color>(color[i]));
   }
@@ -629,6 +718,7 @@ void draw_circle_3d_vectorized_(NumericMatrix center, NumericVector radius, Nume
 
 // [[Rcpp::export]]
 void draw_triangle_3d_vectorized_(NumericMatrix v1, NumericMatrix v2, NumericMatrix v3, List color) {
+  raylibr_require_window("draw_triangle_3d");
   for (int i = 0; i < v1.nrow(); i++) {
     DrawTriangle3D(Vector3{as<float>(wrap(v1(i,0))), as<float>(wrap(v1(i,1))), as<float>(wrap(v1(i,2)))}, Vector3{as<float>(wrap(v2(i,0))), as<float>(wrap(v2(i,1))), as<float>(wrap(v2(i,2)))}, Vector3{as<float>(wrap(v3(i,0))), as<float>(wrap(v3(i,1))), as<float>(wrap(v3(i,2)))}, as<Color>(color[i]));
   }

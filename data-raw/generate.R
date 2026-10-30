@@ -545,6 +545,36 @@ get_r_class_name <- function(struct_name) {
   pascal_to_snake(struct_name)
 }
 
+# --- Window guard -------------------------------------------------------------
+
+# Raylib, raygui, and rlgl functions that need an open window (an OpenGL
+# context or a GLFW window). Called without one, they crash R, so their
+# wrappers call raylibr_require_window() first (see src/raylibr.h). Checked
+# against calling every wrapped function without a window: all that crashed
+# match these patterns. Audio functions need an audio device instead.
+needs_window <- function(cname) {
+  patterns <- c(
+    "^Draw", "^(Begin|End)[A-Z]", "^ClearBackground$", "^CloseWindow$",
+    "^SwapScreenBuffer$", "^PollInputEvents$",
+    "^(Maximize|Minimize|Restore)Window$", "^SetWindow", "^Toggle(Fullscreen|BorderlessWindowed)$",
+    "^(Show|Hide|Enable|Disable)Cursor$", "^SetMouse(Position|Cursor)$",
+    "^(Load|Unload|Update)Texture", "^(Load|Unload)RenderTexture$", "^SetTexture(Filter|Wrap)$",
+    "^GenTextureMipmaps$", "^LoadImageFrom(Screen|Texture)$",
+    "^(Load|Unload)Shader", "^SetShaderValue", "^GetShaderLocation",
+    "^GenMesh", "^UploadMesh$", "^UnloadMesh$", "^(Load|Unload)Model", "^LoadMaterialDefault$",
+    "^UnloadMaterial$", "^(Load|Unload)Font", "^ExportFontAsCode$", "^GetGlyph", "^ImageText",
+    "^(Load|Unload)VrStereoConfig$",
+    "^rl(?!(GetVersion|GetPixelFormatName|GetCullDistanceNear|GetCullDistanceFar)$)",
+    "^Gui(?!(Enable|Disable|Lock|Unlock|IsLocked|SetAlpha|SetState|GetState|SetFont|GetFont|SetStyle|GetStyle|LoadStyle|EnableTooltip|DisableTooltip|SetTooltip|IconText|SetIconScale|GetIcons|LoadIcons))"
+  )
+  any(vapply(patterns, grepl, logical(1), x = cname, perl = TRUE))
+}
+
+# C++ line that guards a wrapper, or NULL if the function needs no window
+window_guard <- function(cname, rname) {
+  if (needs_window(cname)) paste0('  raylibr_require_window("', rname, '");') else NULL
+}
+
 # --- Vectorization helpers ----------------------------------------------------
 
 is_vectorizable <- function(func_row) {
@@ -755,6 +785,7 @@ generate_function_cpp <- function(func_row) {
   lines <- c(
     "// [[Rcpp::export]]",
     paste0(cpp_ret, " ", snake, "_(", param_str, ") {"),
+    window_guard(name, snake),
     paste0("  return ", name, "(", call_str, ");"),
     "}"
   )
@@ -791,6 +822,7 @@ generate_function_cpp_vectorized <- function(func_row) {
   lines <- c(
     "// [[Rcpp::export]]",
     paste0("void ", snake, "_vectorized_(", param_str, ") {"),
+    window_guard(name, snake),
     paste0("  for (int i = 0; i < ", loop_bound, "; i++) {"),
     paste0("    ", name, "(", call_str, ");"),
     "  }",
@@ -1563,6 +1595,7 @@ if (file.exists(rlgl_api_file)) {
     rlgl_cpp_lines <- c(rlgl_cpp_lines,
       "// [[Rcpp::export]]",
       paste0(cpp_ret, " ", snake, "_(", param_str, ") {"),
+      window_guard(name, snake),
       paste0("  return ", name, "(", call_str, ");"),
       "}",
       ""
@@ -1941,6 +1974,7 @@ if (file.exists(raygui_api_file)) {
       raygui_cpp_lines <- c(raygui_cpp_lines,
         "// [[Rcpp::export]]",
         paste0(cpp_ret, " ", snake, "_() {"),
+        window_guard(name, snake),
         paste0("  return ", name, "();"),
         "}",
         ""
@@ -1956,6 +1990,7 @@ if (file.exists(raygui_api_file)) {
       raygui_cpp_lines <- c(raygui_cpp_lines,
         "// [[Rcpp::export]]",
         paste0(cpp_ret, " ", snake, "_(", param_str, ") {"),
+        window_guard(name, snake),
         paste0("  return ", name, "(", call_str, ");"),
         "}",
         ""
@@ -1987,6 +2022,7 @@ if (file.exists(raygui_api_file)) {
       raygui_cpp_lines <- c(raygui_cpp_lines,
         "// [[Rcpp::export]]",
         paste0("Rcpp::List ", snake, "_(", paste(cpp_params, collapse = ", "), ") {"),
+        window_guard(name, snake),
         paste0("  int result = ", name, "(", paste(call_args, collapse = ", "), ");"),
         paste0("  return Rcpp::List::create(Rcpp::Named(\"result\") = result, ",
                paste(list_entries, collapse = ", "), ");"),

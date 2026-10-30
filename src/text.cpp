@@ -6,31 +6,37 @@
 
 // [[Rcpp::export]]
 void draw_texture_(Texture2D texture, int pos_x, int pos_y, Color tint) {
+  raylibr_require_window("draw_texture");
   return DrawTexture(texture, pos_x, pos_y, tint);
 }
 
 // [[Rcpp::export]]
 void draw_texture_v_(Texture2D texture, Vector2 position, Color tint) {
+  raylibr_require_window("draw_texture_v");
   return DrawTextureV(texture, position, tint);
 }
 
 // [[Rcpp::export]]
 void draw_texture_ex_(Texture2D texture, Vector2 position, float rotation, float scale, Color tint) {
+  raylibr_require_window("draw_texture_ex");
   return DrawTextureEx(texture, position, rotation, scale, tint);
 }
 
 // [[Rcpp::export]]
 void draw_texture_rec_(Texture2D texture, Rectangle source, Vector2 position, Color tint) {
+  raylibr_require_window("draw_texture_rec");
   return DrawTextureRec(texture, source, position, tint);
 }
 
 // [[Rcpp::export]]
 void draw_texture_pro_(Texture2D texture, Rectangle source, Rectangle dest, Vector2 origin, float rotation, Color tint) {
+  raylibr_require_window("draw_texture_pro");
   return DrawTexturePro(texture, source, dest, origin, rotation, tint);
 }
 
 // [[Rcpp::export]]
 void draw_texture_n_patch_(Texture2D texture, NPatchInfo n_patch_info, Rectangle dest, Vector2 origin, float rotation, Color tint) {
+  raylibr_require_window("draw_texture_n_patch");
   return DrawTextureNPatch(texture, n_patch_info, dest, origin, rotation, tint);
 }
 
@@ -41,11 +47,13 @@ Font get_font_default_() {
 
 // [[Rcpp::export]]
 Font load_font_(const char * file_name) {
+  raylibr_require_window("load_font");
   return LoadFont(file_name);
 }
 
 // [[Rcpp::export]]
 Font load_font_from_image_(Image image, Color key, int first_char) {
+  raylibr_require_window("load_font_from_image");
   return LoadFontFromImage(image, key, first_char);
 }
 
@@ -56,31 +64,37 @@ bool is_font_valid_(Font font) {
 
 // [[Rcpp::export]]
 void unload_font_(Font font) {
+  raylibr_require_window("unload_font");
   return UnloadFont(font);
 }
 
 // [[Rcpp::export]]
 void draw_fps_(int pos_x, int pos_y) {
+  raylibr_require_window("draw_fps");
   return DrawFPS(pos_x, pos_y);
 }
 
 // [[Rcpp::export]]
 void draw_text_(const char * text, int pos_x, int pos_y, int font_size, Color color) {
+  raylibr_require_window("draw_text");
   return DrawText(text, pos_x, pos_y, font_size, color);
 }
 
 // [[Rcpp::export]]
 void draw_text_ex_(Font font, const char * text, Vector2 position, float font_size, float spacing, Color tint) {
+  raylibr_require_window("draw_text_ex");
   return DrawTextEx(font, text, position, font_size, spacing, tint);
 }
 
 // [[Rcpp::export]]
 void draw_text_pro_(Font font, const char * text, Vector2 position, Vector2 origin, float rotation, float font_size, float spacing, Color tint) {
+  raylibr_require_window("draw_text_pro");
   return DrawTextPro(font, text, position, origin, rotation, font_size, spacing, tint);
 }
 
 // [[Rcpp::export]]
 void draw_text_codepoint_(Font font, int codepoint, Vector2 position, float font_size, Color tint) {
+  raylibr_require_window("draw_text_codepoint");
   return DrawTextCodepoint(font, codepoint, position, font_size, tint);
 }
 
@@ -96,16 +110,19 @@ Vector2 measure_text_ex_(Font font, const char * text, float font_size, float sp
 
 // [[Rcpp::export]]
 int get_glyph_index_(Font font, int codepoint) {
+  raylibr_require_window("get_glyph_index");
   return GetGlyphIndex(font, codepoint);
 }
 
 // [[Rcpp::export]]
 GlyphInfo get_glyph_info_(Font font, int codepoint) {
+  raylibr_require_window("get_glyph_info");
   return GetGlyphInfo(font, codepoint);
 }
 
 // [[Rcpp::export]]
 Rectangle get_glyph_atlas_rec_(Font font, int codepoint) {
+  raylibr_require_window("get_glyph_atlas_rec");
   return GetGlyphAtlasRec(font, codepoint);
 }
 
@@ -206,6 +223,7 @@ float text_to_float_(const char * text) {
 
 // [[Rcpp::export]]
 void draw_texture_vectorized_(List texture, NumericVector pos_x, NumericVector pos_y, List tint) {
+  raylibr_require_window("draw_texture");
   for (int i = 0; i < texture.length(); i++) {
     DrawTexture(as<Texture2D>(texture[i]), (int)pos_x[i], (int)pos_y[i], as<Color>(tint[i]));
   }
@@ -213,6 +231,7 @@ void draw_texture_vectorized_(List texture, NumericVector pos_x, NumericVector p
 
 // [[Rcpp::export]]
 void draw_texture_v_vectorized_(List texture, NumericMatrix position, List tint) {
+  raylibr_require_window("draw_texture_v");
   for (int i = 0; i < texture.length(); i++) {
     DrawTextureV(as<Texture2D>(texture[i]), Vector2{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1)))}, as<Color>(tint[i]));
   }
@@ -220,6 +239,7 @@ void draw_texture_v_vectorized_(List texture, NumericMatrix position, List tint)
 
 // [[Rcpp::export]]
 void draw_texture_ex_vectorized_(List texture, NumericMatrix position, NumericVector rotation, NumericVector scale, List tint) {
+  raylibr_require_window("draw_texture_ex");
   for (int i = 0; i < texture.length(); i++) {
     DrawTextureEx(as<Texture2D>(texture[i]), Vector2{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1)))}, (float)rotation[i], (float)scale[i], as<Color>(tint[i]));
   }
@@ -227,6 +247,7 @@ void draw_texture_ex_vectorized_(List texture, NumericMatrix position, NumericVe
 
 // [[Rcpp::export]]
 void draw_texture_rec_vectorized_(List texture, List source, NumericMatrix position, List tint) {
+  raylibr_require_window("draw_texture_rec");
   for (int i = 0; i < texture.length(); i++) {
     DrawTextureRec(as<Texture2D>(texture[i]), as<Rectangle>(source[i]), Vector2{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1)))}, as<Color>(tint[i]));
   }
@@ -234,6 +255,7 @@ void draw_texture_rec_vectorized_(List texture, List source, NumericMatrix posit
 
 // [[Rcpp::export]]
 void draw_texture_pro_vectorized_(List texture, List source, List dest, NumericMatrix origin, NumericVector rotation, List tint) {
+  raylibr_require_window("draw_texture_pro");
   for (int i = 0; i < texture.length(); i++) {
     DrawTexturePro(as<Texture2D>(texture[i]), as<Rectangle>(source[i]), as<Rectangle>(dest[i]), Vector2{as<float>(wrap(origin(i,0))), as<float>(wrap(origin(i,1)))}, (float)rotation[i], as<Color>(tint[i]));
   }
@@ -241,6 +263,7 @@ void draw_texture_pro_vectorized_(List texture, List source, List dest, NumericM
 
 // [[Rcpp::export]]
 void draw_texture_n_patch_vectorized_(List texture, List n_patch_info, List dest, NumericMatrix origin, NumericVector rotation, List tint) {
+  raylibr_require_window("draw_texture_n_patch");
   for (int i = 0; i < texture.length(); i++) {
     DrawTextureNPatch(as<Texture2D>(texture[i]), as<NPatchInfo>(n_patch_info[i]), as<Rectangle>(dest[i]), Vector2{as<float>(wrap(origin(i,0))), as<float>(wrap(origin(i,1)))}, (float)rotation[i], as<Color>(tint[i]));
   }
@@ -248,6 +271,7 @@ void draw_texture_n_patch_vectorized_(List texture, List n_patch_info, List dest
 
 // [[Rcpp::export]]
 void draw_fps_vectorized_(NumericVector pos_x, NumericVector pos_y) {
+  raylibr_require_window("draw_fps");
   for (int i = 0; i < pos_x.length(); i++) {
     DrawFPS((int)pos_x[i], (int)pos_y[i]);
   }
@@ -255,6 +279,7 @@ void draw_fps_vectorized_(NumericVector pos_x, NumericVector pos_y) {
 
 // [[Rcpp::export]]
 void draw_text_vectorized_(CharacterVector text, NumericVector pos_x, NumericVector pos_y, NumericVector font_size, List color) {
+  raylibr_require_window("draw_text");
   for (int i = 0; i < text.length(); i++) {
     DrawText(Rcpp::as<std::string>(text[i]).c_str(), (int)pos_x[i], (int)pos_y[i], (int)font_size[i], as<Color>(color[i]));
   }
@@ -262,6 +287,7 @@ void draw_text_vectorized_(CharacterVector text, NumericVector pos_x, NumericVec
 
 // [[Rcpp::export]]
 void draw_text_ex_vectorized_(List font, CharacterVector text, NumericMatrix position, NumericVector font_size, NumericVector spacing, List tint) {
+  raylibr_require_window("draw_text_ex");
   for (int i = 0; i < font.length(); i++) {
     DrawTextEx(as<Font>(font[i]), Rcpp::as<std::string>(text[i]).c_str(), Vector2{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1)))}, (float)font_size[i], (float)spacing[i], as<Color>(tint[i]));
   }
@@ -269,6 +295,7 @@ void draw_text_ex_vectorized_(List font, CharacterVector text, NumericMatrix pos
 
 // [[Rcpp::export]]
 void draw_text_pro_vectorized_(List font, CharacterVector text, NumericMatrix position, NumericMatrix origin, NumericVector rotation, NumericVector font_size, NumericVector spacing, List tint) {
+  raylibr_require_window("draw_text_pro");
   for (int i = 0; i < font.length(); i++) {
     DrawTextPro(as<Font>(font[i]), Rcpp::as<std::string>(text[i]).c_str(), Vector2{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1)))}, Vector2{as<float>(wrap(origin(i,0))), as<float>(wrap(origin(i,1)))}, (float)rotation[i], (float)font_size[i], (float)spacing[i], as<Color>(tint[i]));
   }
@@ -276,6 +303,7 @@ void draw_text_pro_vectorized_(List font, CharacterVector text, NumericMatrix po
 
 // [[Rcpp::export]]
 void draw_text_codepoint_vectorized_(List font, NumericVector codepoint, NumericMatrix position, NumericVector font_size, List tint) {
+  raylibr_require_window("draw_text_codepoint");
   for (int i = 0; i < font.length(); i++) {
     DrawTextCodepoint(as<Font>(font[i]), (int)codepoint[i], Vector2{as<float>(wrap(position(i,0))), as<float>(wrap(position(i,1)))}, (float)font_size[i], as<Color>(tint[i]));
   }
