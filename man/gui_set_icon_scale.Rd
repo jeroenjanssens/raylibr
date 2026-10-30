@@ -13,9 +13,8 @@ gui_set_icon_scale(scale)
 Set default icon drawing size.
 }
 \examples{
-\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_set_icon_scale(0L)
-\dontshow{\}) # examplesIf}
+
 }
 \seealso{
 Other gui functions: 

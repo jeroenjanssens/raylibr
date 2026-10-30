@@ -90,7 +90,7 @@ close_window <- function() {
 #' @family close functions
 #' @family should functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' window_should_close()
 #'
 #' @export
@@ -115,7 +115,7 @@ window_should_close <- function() {
 #' @family window functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_window_ready()
 #'
 #' @export
@@ -140,7 +140,7 @@ is_window_ready <- function() {
 #' @family window functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_window_fullscreen()
 #'
 #' @export
@@ -165,7 +165,7 @@ is_window_fullscreen <- function() {
 #' @family window functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_window_hidden()
 #'
 #' @export
@@ -190,7 +190,7 @@ is_window_hidden <- function() {
 #' @family window functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_window_minimized()
 #'
 #' @export
@@ -215,7 +215,7 @@ is_window_minimized <- function() {
 #' @family window functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_window_maximized()
 #'
 #' @export
@@ -240,7 +240,7 @@ is_window_maximized <- function() {
 #' @family window functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_window_focused()
 #'
 #' @export
@@ -265,7 +265,7 @@ is_window_focused <- function() {
 #' @family window functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_window_resized()
 #'
 #' @export
@@ -291,7 +291,7 @@ is_window_resized <- function() {
 #' @family window functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_window_state(0L)
 #'
 #' @export
@@ -340,7 +340,7 @@ set_window_state <- function(flags) {
 #' @family state functions
 #' @family window functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' clear_window_state(0L)
 #'
 #' @export
@@ -472,7 +472,7 @@ restore_window <- function() {
 #' @family set functions
 #'
 #' @examplesIf FALSE
-#' set_window_icon(gen_image_color(100, 100, "blue"))
+#' set_window_icon(gen_image_color(200, 200, "blue"))
 #'
 #' @export
 set_window_icon <- function(image) {
@@ -703,7 +703,7 @@ set_window_focused <- function() {
 #' @family screen functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_screen_width()
 #'
 #' @export
@@ -728,7 +728,7 @@ get_screen_width <- function() {
 #' @family screen functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_screen_height()
 #'
 #' @export
@@ -753,7 +753,7 @@ get_screen_height <- function() {
 #' @family render functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_render_width()
 #'
 #' @export
@@ -778,7 +778,7 @@ get_render_width <- function() {
 #' @family render functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_render_height()
 #'
 #' @export
@@ -1164,7 +1164,7 @@ get_clipboard_image <- function() {
 #' @family waiting functions
 #' @family event functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' enable_event_waiting()
 #'
 #' @export
@@ -1186,7 +1186,7 @@ enable_event_waiting <- function() {
 #' @family waiting functions
 #' @family event functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' disable_event_waiting()
 #'
 #' @export
@@ -1253,7 +1253,7 @@ hide_cursor <- function() {
 #' @family cursor functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_cursor_hidden()
 #'
 #' @export
@@ -1320,7 +1320,7 @@ disable_cursor <- function() {
 #' @family cursor functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_cursor_on_screen()
 #'
 #' @export
@@ -2032,7 +2032,7 @@ unload_shader <- function(shader) {
 #' @family screen functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_screen_to_world_ray(c(100, 100), camera_3d(c(0, 10, 10)))
 #'
 #' @export
@@ -2063,7 +2063,7 @@ get_screen_to_world_ray <- function(position, camera) {
 #' @family screen functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_screen_to_world_ray_ex(c(100, 100), camera_3d(c(0, 10, 10)), 800L, 450L)
 #'
 #' @export
@@ -2094,7 +2094,7 @@ get_screen_to_world_ray_ex <- function(position, camera, width, height) {
 #' @family world functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_world_to_screen(c(0, 5, 0), camera_3d(c(0, 10, 10)))
 #'
 #' @export
@@ -2125,7 +2125,7 @@ get_world_to_screen <- function(position, camera) {
 #' @family world functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_world_to_screen_ex(c(0, 5, 0), camera_3d(c(0, 10, 10)), 800L, 450L)
 #'
 #' @export
@@ -2156,7 +2156,7 @@ get_world_to_screen_ex <- function(position, camera, width, height) {
 #' @family world functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_world_to_screen_2d(c(100, 100), camera_2d(c(400, 300), c(0, 0)))
 #'
 #' @export
@@ -2185,7 +2185,7 @@ get_world_to_screen_2d <- function(position, camera) {
 #' @family screen functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_screen_to_world_2d(c(100, 100), camera_2d(c(400, 300), c(0, 0)))
 #'
 #' @export
@@ -2213,7 +2213,7 @@ get_screen_to_world_2d <- function(position, camera) {
 #' @family camera functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_camera_matrix(camera_3d(c(0, 10, 10)))
 #'
 #' @export
@@ -2240,7 +2240,7 @@ get_camera_matrix <- function(camera) {
 #' @family camera functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_camera_matrix_2d(camera_2d(c(400, 300), c(0, 0)))
 #'
 #' @export
@@ -2291,7 +2291,7 @@ set_target_fps <- function(fps = 60L) {
 #' @family frame functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_frame_time()
 #'
 #' @export
@@ -2339,7 +2339,7 @@ get_time <- function() {
 #' @family fps functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_fps()
 #'
 #' @export
@@ -3376,7 +3376,7 @@ stop_automation_event_recording <- function() {
 #' @family key functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_key_pressed(0L)
 #'
 #' @export
@@ -3403,7 +3403,7 @@ is_key_pressed <- function(key) {
 #' @family key functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_key_pressed_repeat(0L)
 #'
 #' @export
@@ -3430,7 +3430,7 @@ is_key_pressed_repeat <- function(key) {
 #' @family key functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_key_down(0L)
 #'
 #' @export
@@ -3457,7 +3457,7 @@ is_key_down <- function(key) {
 #' @family key functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_key_released(0L)
 #'
 #' @export
@@ -3484,7 +3484,7 @@ is_key_released <- function(key) {
 #' @family key functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_key_up(0L)
 #'
 #' @export
@@ -3510,7 +3510,7 @@ is_key_up <- function(key) {
 #' @family key functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_key_pressed()
 #'
 #' @export
@@ -3535,7 +3535,7 @@ get_key_pressed <- function() {
 #' @family char functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_char_pressed()
 #'
 #' @export
@@ -3561,7 +3561,7 @@ get_char_pressed <- function() {
 #' @family key functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_key_name(0L)
 #'
 #' @export
@@ -3613,7 +3613,7 @@ set_exit_key <- function(key) {
 #' @family gamepad functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_gamepad_available(0L)
 #'
 #' @export
@@ -3640,7 +3640,7 @@ is_gamepad_available <- function(gamepad) {
 #' @family gamepad functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_gamepad_name(0L)
 #'
 #' @export
@@ -3668,7 +3668,7 @@ get_gamepad_name <- function(gamepad) {
 #' @family gamepad functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_gamepad_button_pressed(0L, 0L)
 #'
 #' @export
@@ -3697,7 +3697,7 @@ is_gamepad_button_pressed <- function(gamepad, button) {
 #' @family gamepad functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_gamepad_button_down(0L, 0L)
 #'
 #' @export
@@ -3726,7 +3726,7 @@ is_gamepad_button_down <- function(gamepad, button) {
 #' @family gamepad functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_gamepad_button_released(0L, 0L)
 #'
 #' @export
@@ -3755,7 +3755,7 @@ is_gamepad_button_released <- function(gamepad, button) {
 #' @family gamepad functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_gamepad_button_up(0L, 0L)
 #'
 #' @export
@@ -3782,7 +3782,7 @@ is_gamepad_button_up <- function(gamepad, button) {
 #' @family gamepad functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_gamepad_button_pressed()
 #'
 #' @export
@@ -3808,7 +3808,7 @@ get_gamepad_button_pressed <- function() {
 #' @family gamepad functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_gamepad_axis_count(0L)
 #'
 #' @export
@@ -3836,7 +3836,7 @@ get_gamepad_axis_count <- function(gamepad) {
 #' @family gamepad functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_gamepad_axis_movement(0L, 0L)
 #'
 #' @export
@@ -3922,7 +3922,7 @@ set_gamepad_vibration <- function(gamepad, left_motor, right_motor, duration) {
 #' @family mouse functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_mouse_button_pressed(0L)
 #'
 #' @export
@@ -3949,7 +3949,7 @@ is_mouse_button_pressed <- function(button) {
 #' @family mouse functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_mouse_button_down(0L)
 #'
 #' @export
@@ -3976,7 +3976,7 @@ is_mouse_button_down <- function(button) {
 #' @family mouse functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_mouse_button_released(0L)
 #'
 #' @export
@@ -4003,7 +4003,7 @@ is_mouse_button_released <- function(button) {
 #' @family mouse functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_mouse_button_up(0L)
 #'
 #' @export
@@ -4029,7 +4029,7 @@ is_mouse_button_up <- function(button) {
 #' @family mouse functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_mouse_x()
 #'
 #' @export
@@ -4054,7 +4054,7 @@ get_mouse_x <- function() {
 #' @family mouse functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_mouse_y()
 #'
 #' @export
@@ -4079,7 +4079,7 @@ get_mouse_y <- function() {
 #' @family mouse functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_mouse_position()
 #'
 #' @export
@@ -4104,7 +4104,7 @@ get_mouse_position <- function() {
 #' @family mouse functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_mouse_delta()
 #'
 #' @export
@@ -4210,7 +4210,7 @@ set_mouse_scale <- function(scale_x, scale_y) {
 #' @family mouse functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_mouse_wheel_move()
 #'
 #' @export
@@ -4235,7 +4235,7 @@ get_mouse_wheel_move <- function() {
 #' @family mouse functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_mouse_wheel_move_v()
 #'
 #' @export
@@ -4285,7 +4285,7 @@ set_mouse_cursor <- function(cursor) {
 #' @family touch functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_touch_x()
 #'
 #' @export
@@ -4310,7 +4310,7 @@ get_touch_x <- function() {
 #' @family touch functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_touch_y()
 #'
 #' @export
@@ -4336,7 +4336,7 @@ get_touch_y <- function() {
 #' @family touch functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_touch_position(0L)
 #'
 #' @export
@@ -4363,7 +4363,7 @@ get_touch_position <- function(index) {
 #' @family touch functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_touch_point_id(0L)
 #'
 #' @export
@@ -4389,7 +4389,7 @@ get_touch_point_id <- function(index) {
 #' @family touch functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_touch_point_count()
 #'
 #' @export
@@ -4440,7 +4440,7 @@ set_gestures_enabled <- function(flags) {
 #' @family gesture functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_gesture_detected(0L)
 #'
 #' @export
@@ -4466,7 +4466,7 @@ is_gesture_detected <- function(gesture) {
 #' @family gesture functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_gesture_detected()
 #'
 #' @export
@@ -4491,7 +4491,7 @@ get_gesture_detected <- function() {
 #' @family gesture functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_gesture_hold_duration()
 #'
 #' @export
@@ -4516,7 +4516,7 @@ get_gesture_hold_duration <- function() {
 #' @family gesture functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_gesture_drag_vector()
 #'
 #' @export
@@ -4541,7 +4541,7 @@ get_gesture_drag_vector <- function() {
 #' @family gesture functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_gesture_drag_angle()
 #'
 #' @export
@@ -4566,7 +4566,7 @@ get_gesture_drag_angle <- function() {
 #' @family gesture functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_gesture_pinch_vector()
 #'
 #' @export
@@ -4591,7 +4591,7 @@ get_gesture_pinch_vector <- function() {
 #' @family gesture functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_gesture_pinch_angle()
 #'
 #' @export
@@ -4643,7 +4643,7 @@ set_shapes_texture <- function(texture, source) {
 #' @family shapes functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_shapes_texture()
 #'
 #' @export
@@ -4668,7 +4668,7 @@ get_shapes_texture <- function() {
 #' @family shapes functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_shapes_texture_rectangle()
 #'
 #' @export
@@ -6501,7 +6501,7 @@ draw_spline_segment_bezier_cubic <- function(p1, c2, c3, p4, thick, color) {
 #' @family spline functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_spline_point_linear(c(100, 100), c(100, 100), 0.0)
 #'
 #' @export
@@ -6534,7 +6534,7 @@ get_spline_point_linear <- function(start_pos, end_pos, t) {
 #' @family spline functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_spline_point_basis(c(100, 100), c(100, 100), c(100, 100), c(100, 100), 0.0)
 #'
 #' @export
@@ -6569,7 +6569,7 @@ get_spline_point_basis <- function(p1, p2, p3, p4, t) {
 #' @family spline functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_spline_point_catmull_rom(c(100, 100), c(100, 100), c(100, 100), c(100, 100), 0.0)
 #'
 #' @export
@@ -6603,7 +6603,7 @@ get_spline_point_catmull_rom <- function(p1, p2, p3, p4, t) {
 #' @family spline functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_spline_point_bezier_quad(c(100, 100), c(100, 100), c(100, 100), 0.0)
 #'
 #' @export
@@ -6637,7 +6637,7 @@ get_spline_point_bezier_quad <- function(p1, c2, p3, t) {
 #' @family spline functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_spline_point_bezier_cubic(c(100, 100), c(100, 100), c(100, 100), c(100, 100), 0.0)
 #'
 #' @export
@@ -7062,8 +7062,8 @@ load_image_from_screen <- function() {
 #' @family image functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
-#' is_image_valid(gen_image_color(100, 100, "blue"))
+#' @examples
+#' is_image_valid(gen_image_color(200, 200, "blue"))
 #'
 #' @export
 is_image_valid <- function(image) {
@@ -7087,7 +7087,7 @@ is_image_valid <- function(image) {
 #' @family unload functions
 #'
 #' @examplesIf FALSE
-#' unload_image(gen_image_color(100, 100, "blue"))
+#' unload_image(gen_image_color(200, 200, "blue"))
 #'
 #' @export
 unload_image <- function(image) {
@@ -7114,7 +7114,7 @@ unload_image <- function(image) {
 #' @family export functions
 #'
 #' @examplesIf FALSE
-#' export_image(gen_image_color(100, 100, "blue"), "file.png")
+#' export_image(gen_image_color(200, 200, "blue"), "file.png")
 #'
 #' @export
 export_image <- function(image, file_name) {
@@ -7143,7 +7143,7 @@ export_image <- function(image, file_name) {
 #' @family export functions
 #'
 #' @examplesIf FALSE
-#' export_image_as_code(gen_image_color(100, 100, "blue"), "file.png")
+#' export_image_as_code(gen_image_color(200, 200, "blue"), "file.png")
 #'
 #' @export
 export_image_as_code <- function(image, file_name) {
@@ -7171,7 +7171,7 @@ export_image_as_code <- function(image, file_name) {
 #' @family color functions
 #' @family image functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' gen_image_color(800L, 450L, "red")
 #'
 #' @export
@@ -7203,7 +7203,7 @@ gen_image_color <- function(width, height, color) {
 #' @family linear functions
 #' @family image functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' gen_image_gradient_linear(800L, 450L, 0L, "red", "red")
 #'
 #' @export
@@ -7237,7 +7237,7 @@ gen_image_gradient_linear <- function(width, height, direction, start, end) {
 #' @family radial functions
 #' @family image functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' gen_image_gradient_radial(800L, 450L, 0.0, "red", "red")
 #'
 #' @export
@@ -7271,7 +7271,7 @@ gen_image_gradient_radial <- function(width, height, density, inner, outer) {
 #' @family square functions
 #' @family image functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' gen_image_gradient_square(800L, 450L, 0.0, "red", "red")
 #'
 #' @export
@@ -7306,7 +7306,7 @@ gen_image_gradient_square <- function(width, height, density, inner, outer) {
 #' @family checked functions
 #' @family image functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' gen_image_checked(800L, 450L, 0L, 0L, "red", "red")
 #'
 #' @export
@@ -7339,7 +7339,7 @@ gen_image_checked <- function(width, height, checks_x, checks_y, col1, col2) {
 #' @family noise functions
 #' @family image functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' gen_image_white_noise(800L, 450L, 0.0)
 #'
 #' @export
@@ -7371,7 +7371,7 @@ gen_image_white_noise <- function(width, height, factor) {
 #' @family noise functions
 #' @family image functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' gen_image_perlin_noise(800L, 450L, 0L, 0L, 1.0)
 #'
 #' @export
@@ -7403,7 +7403,7 @@ gen_image_perlin_noise <- function(width, height, offset_x, offset_y, scale) {
 #' @family cellular functions
 #' @family image functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' gen_image_cellular(800L, 450L, 32L)
 #'
 #' @export
@@ -7460,8 +7460,8 @@ gen_image_text <- function(width, height, text) {
 #'
 #' @family copy functions
 #'
-#' @examplesIf FALSE
-#' image_copy(gen_image_color(100, 100, "blue"))
+#' @examples
+#' image_copy(gen_image_color(200, 200, "blue"))
 #'
 #' @export
 image_copy <- function(image) {
@@ -7487,8 +7487,8 @@ image_copy <- function(image) {
 #' @family image functions
 #' @family from functions
 #'
-#' @examplesIf FALSE
-#' image_from_image(gen_image_color(100, 100, "blue"), rectangle(10, 10, 200, 100))
+#' @examples
+#' image_from_image(gen_image_color(200, 200, "blue"), rectangle(10, 10, 200, 100))
 #'
 #' @export
 image_from_image <- function(image, rec) {
@@ -7515,8 +7515,8 @@ image_from_image <- function(image, rec) {
 #' @family channel functions
 #' @family from functions
 #'
-#' @examplesIf FALSE
-#' image_from_channel(gen_image_color(100, 100, "blue"), 0L)
+#' @examples
+#' image_from_channel(gen_image_color(200, 200, "blue"), 0L)
 #'
 #' @export
 image_from_channel <- function(image, selected_channel) {
@@ -7607,8 +7607,8 @@ image_text_ex <- function(font, text, font_size, spacing, tint) {
 #' @family image functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
-#' get_image_alpha_border(gen_image_color(100, 100, "blue"), 0.0)
+#' @examples
+#' get_image_alpha_border(gen_image_color(200, 200, "blue"), 0.0)
 #'
 #' @export
 get_image_alpha_border <- function(image, threshold) {
@@ -7637,8 +7637,8 @@ get_image_alpha_border <- function(image, threshold) {
 #' @family image functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
-#' get_image_color(gen_image_color(100, 100, "blue"), 100L, 100L)
+#' @examples
+#' get_image_color(gen_image_color(200, 200, "blue"), 100L, 100L)
 #'
 #' @export
 get_image_color <- function(image, x, y) {
@@ -7693,7 +7693,7 @@ load_texture <- function(file_name) {
 #' @family load functions
 #'
 #' @examplesIf FALSE
-#' load_texture_from_image(gen_image_color(100, 100, "blue"))
+#' load_texture_from_image(gen_image_color(200, 200, "blue"))
 #'
 #' @export
 load_texture_from_image <- function(image) {
@@ -7748,7 +7748,7 @@ load_render_texture <- function(width, height) {
 #' @family texture functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_texture_valid(texture(0L, 64L, 64L, 1L, 7L))
 #'
 #' @export
@@ -8170,7 +8170,7 @@ draw_texture_n_patch <- function(texture, n_patch_info, dest, origin, rotation, 
 #' @family equal functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' color_is_equal("red", "red")
 #'
 #' @export
@@ -8580,7 +8580,7 @@ get_pixel_data_size <- function(width, height, format) {
 #' @family font functions
 #' @family get functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' get_font_default()
 #'
 #' @export
@@ -8635,7 +8635,7 @@ load_font <- function(file_name) {
 #' @family load functions
 #'
 #' @examplesIf FALSE
-#' load_font_from_image(gen_image_color(100, 100, "blue"), "red", 0L)
+#' load_font_from_image(gen_image_color(200, 200, "blue"), "red", 0L)
 #'
 #' @export
 load_font_from_image <- function(image, key, first_char) {
@@ -8663,7 +8663,7 @@ load_font_from_image <- function(image, key, first_char) {
 #' @family font functions
 #' @family is functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' is_font_valid(get_font_default())
 #'
 #' @export
@@ -8957,7 +8957,7 @@ draw_text_codepoint <- function(font, codepoint, position, font_size, tint) {
 #' @family text functions
 #' @family set functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' set_text_line_spacing(0L)
 #'
 #' @export
@@ -11428,7 +11428,7 @@ gen_mesh_knot <- function(radius, size, rad_seg, sides) {
 #' @family mesh functions
 #'
 #' @examplesIf FALSE
-#' gen_mesh_heightmap(gen_image_color(100, 100, "blue"), c(1, 1, 1))
+#' gen_mesh_heightmap(gen_image_color(200, 200, "blue"), c(1, 1, 1))
 #'
 #' @export
 gen_mesh_heightmap <- function(heightmap, size) {
@@ -11456,7 +11456,7 @@ gen_mesh_heightmap <- function(heightmap, size) {
 #' @family mesh functions
 #'
 #' @examplesIf FALSE
-#' gen_mesh_cubicmap(gen_image_color(100, 100, "blue"), c(1, 1, 1))
+#' gen_mesh_cubicmap(gen_image_color(200, 200, "blue"), c(1, 1, 1))
 #'
 #' @export
 gen_mesh_cubicmap <- function(cubicmap, cube_size) {

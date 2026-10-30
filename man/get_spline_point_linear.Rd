@@ -26,9 +26,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_spline_point_linear(c(100, 100), c(100, 100), 0.0)
-\dontshow{\}) # examplesIf}
+
 }
 \seealso{
 Other linear functions: 

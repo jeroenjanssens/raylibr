@@ -30,9 +30,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gen_image_gradient_square(800L, 450L, 0.0, "red", "red")
-\dontshow{\}) # examplesIf}
+
 }
 \seealso{
 Other image functions: 

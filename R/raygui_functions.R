@@ -64,7 +64,7 @@ gui_unlock <- function() {
 #'
 #' @family gui functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' gui_is_locked()
 #'
 #' @export
@@ -114,7 +114,7 @@ gui_set_state <- function(state) {
 #'
 #' @family gui functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' gui_get_state()
 #'
 #' @export
@@ -147,7 +147,7 @@ gui_set_font <- function(font) {
 #'
 #' @family gui functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' gui_get_font()
 #'
 #' @export
@@ -165,7 +165,7 @@ gui_get_font <- function() {
 #'
 #' @family gui functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' gui_set_style(0L, 0L, 0L)
 #'
 #' @export
@@ -187,7 +187,7 @@ gui_set_style <- function(control, property, value) {
 #'
 #' @family gui functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' gui_get_style(0L, 0L)
 #'
 #' @export
@@ -281,7 +281,7 @@ gui_set_tooltip <- function(tooltip) {
 #'
 #' @family gui functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' gui_set_icon_scale(0L)
 #'
 #' @export

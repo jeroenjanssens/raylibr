@@ -216,7 +216,7 @@ rl_set_clip_planes <- function(near_plane, far_plane) {
 #'
 #' @family rlgl functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' rl_get_cull_distance_near()
 #'
 #' @export
@@ -231,7 +231,7 @@ rl_get_cull_distance_near <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' rl_get_cull_distance_far()
 #'
 #' @export
@@ -1335,7 +1335,7 @@ rl_gl_close <- function() {
 #'
 #' @family rlgl functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' rl_get_version()
 #'
 #' @export
@@ -1642,7 +1642,7 @@ rl_load_texture_depth <- function(width, height, use_render_buffer) {
 #'
 #' @family rlgl functions
 #'
-#' @examplesIf FALSE
+#' @examples
 #' rl_get_pixel_format_name(0L)
 #'
 #' @export

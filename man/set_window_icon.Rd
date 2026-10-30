@@ -20,7 +20,7 @@ This function has been auto-generated from the following Raylib function definit
 }
 \examples{
 \dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
-set_window_icon(gen_image_color(100, 100, "blue"))
+set_window_icon(gen_image_color(200, 200, "blue"))
 \dontshow{\}) # examplesIf}
 }
 \seealso{

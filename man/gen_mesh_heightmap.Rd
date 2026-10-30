@@ -25,7 +25,7 @@ This function has been auto-generated from the following Raylib function definit
 }
 \examples{
 \dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
-gen_mesh_heightmap(gen_image_color(100, 100, "blue"), c(1, 1, 1))
+gen_mesh_heightmap(gen_image_color(200, 200, "blue"), c(1, 1, 1))
 \dontshow{\}) # examplesIf}
 }
 \seealso{

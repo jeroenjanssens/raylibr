@@ -19,9 +19,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 set_text_line_spacing(0L)
-\dontshow{\}) # examplesIf}
+
 }
 \seealso{
 Other text functions: 

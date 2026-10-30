@@ -36,7 +36,7 @@ This class has been auto-generated from the following Raylib struct definition:
 }\if{html}{\out{</div>}}
 }
 \examples{
-gly <- glyph_info(0L, 0L, 0L, 0L, gen_image_color(100, 100, "blue"))
+gly <- glyph_info(0L, 0L, 0L, 0L, gen_image_color(200, 200, "blue"))
 gly$value
 gly$offset_x
 

@@ -13,9 +13,8 @@ A number
 Rl Get Cull Distance Near
 }
 \examples{
-\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_get_cull_distance_near()
-\dontshow{\}) # examplesIf}
+
 }
 \seealso{
 Other rlgl functions: 

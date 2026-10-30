@@ -24,9 +24,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_screen_to_world_2d(c(100, 100), camera_2d(c(400, 300), c(0, 0)))
-\dontshow{\}) # examplesIf}
+
 }
 \seealso{
 Other 2d functions: 

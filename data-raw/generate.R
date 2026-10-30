@@ -176,7 +176,7 @@ get_example_value <- function(type, param_name = "") {
   if (type %in% c("Vector4", "Quaternion")) return("c(0, 0, 0, 1)")
   if (type == "Matrix") return("diag(4)")
   if (type == "Rectangle") return("rectangle(10, 10, 200, 100)")
-  if (type == "Image") return('gen_image_color(100, 100, "blue")')
+  if (type == "Image") return('gen_image_color(200, 200, "blue")')
   if (type %in% c("Texture2D", "Texture")) return("texture(0L, 64L, 64L, 1L, 7L)")  # A struct; needs no window
   if (type %in% c("RenderTexture2D", "RenderTexture")) return("load_render_texture(800, 450)")
   if (type == "Font") return("get_font_default()")
@@ -577,6 +577,29 @@ post_call_cpp <- list(
   InitWindow = "  GuiSetFont(GetFontDefault());"
 )
 
+# Whether a function's generated example can run anywhere, including on CRAN:
+# it needs no window, has no side effects (files, audio devices, global
+# settings that would affect later examples, network, clipboard), and its
+# example arguments can be created without a window.
+runs_without_window <- function(cname, param_types = character(0)) {
+  side_effects <- c(
+    "^(Load|Unload|Export|Save)", "File", "Directory", "Path",
+    "Audio", "Sound", "Music", "Wave", "MasterVolume", "Monitor",
+    "^Set(ConfigFlags|TraceLog|TargetFPS|ExitKey|Window|Mouse|Gestures|Gamepad|Clipboard|Shapes)",
+    "^(Init|Close|Wait|Take|Open|Get)(Window|Time|Screenshot|URL|Clipboard)",
+    "AutomationEvent", "^Gui(LoadStyle|LoadIcons|SetFont)", "^GuiSet(State|Alpha)$",
+    "^Gui(Lock|Unlock|Enable|Disable)$", "^GuiEnableTooltip$", "^GuiDisableTooltip$", "^GuiSetTooltip$",
+    "^rl(Set|Load|Unload|Enable|Disable)"
+  )
+  window_objects <- c("Mesh", "Model", "ModelAnimation", "Material", "Shader", "RenderTexture",
+                      "RenderTexture2D", "Sound", "Music", "Wave", "AudioStream",
+                      "VrDeviceInfo", "VrStereoConfig")
+  !needs_window(cname) &&
+    !any(vapply(side_effects, grepl, logical(1), x = cname, perl = TRUE)) &&
+    !any(param_types %in% window_objects) &&
+    !any(grepl("\\*", param_types))
+}
+
 # C++ line that guards a wrapper, or NULL if the function needs no window
 window_guard <- function(cname, rname) {
   if (needs_window(cname)) paste0('  raylibr_require_window("', rname, '");') else NULL
@@ -915,7 +938,7 @@ generate_function_r <- function(func_row) {
     lines <- c(lines, "#' @examplesIf raylibr:::has_display()")
     ex_lines <- readLines(example_file)
     lines <- c(lines, paste0("#' ", ex_lines))
-  } else if (is_safe_example(name)) {
+  } else if (is_safe_example(name) || runs_without_window(name, param_types)) {
     lines <- c(lines, "#' @examples")
     if (is.null(params) || nrow(params) == 0) {
       lines <- c(lines, paste0("#' ", snake, "()"))
@@ -1662,7 +1685,8 @@ if (file.exists(rlgl_api_file)) {
     lines <- c(lines, "#'")
 
     # Examples
-    lines <- c(lines, "#' @examplesIf FALSE")
+    rlgl_param_types <- if (is.null(params) || nrow(params) == 0) character(0) else params$type
+    lines <- c(lines, if (runs_without_window(name, rlgl_param_types)) "#' @examples" else "#' @examplesIf FALSE")
     if (is.null(params) || (is.data.frame(params) && nrow(params) == 0)) {
       lines <- c(lines, paste0("#' ", snake, "()"))
     } else {
@@ -2114,7 +2138,8 @@ if (file.exists(raygui_api_file)) {
     lines <- c(lines, "#'")
 
     # Examples
-    lines <- c(lines, "#' @examplesIf FALSE")
+    gui_param_types <- if (is.null(params) || nrow(params) == 0) character(0) else params$type
+    lines <- c(lines, if (runs_without_window(name, gui_param_types)) "#' @examples" else "#' @examplesIf FALSE")
     if (is.null(params) || (is.data.frame(params) && nrow(params) == 0)) {
       lines <- c(lines, paste0("#' ", snake, "()"))
     } else {

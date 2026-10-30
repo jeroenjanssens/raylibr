@@ -20,7 +20,7 @@ This function has been auto-generated from the following Raylib function definit
 }
 \examples{
 \dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
-unload_image(gen_image_color(100, 100, "blue"))
+unload_image(gen_image_color(200, 200, "blue"))
 \dontshow{\}) # examplesIf}
 }
 \seealso{

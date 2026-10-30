@@ -13,9 +13,8 @@ A number
 Rl Get Cull Distance Far
 }
 \examples{
-\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 rl_get_cull_distance_far()
-\dontshow{\}) # examplesIf}
+
 }
 \seealso{
 Other rlgl functions: 

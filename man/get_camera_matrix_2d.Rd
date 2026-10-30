@@ -22,9 +22,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_camera_matrix_2d(camera_2d(c(400, 300), c(0, 0)))
-\dontshow{\}) # examplesIf}
+
 }
 \seealso{
 Other 2d functions: 

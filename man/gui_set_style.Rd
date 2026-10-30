@@ -17,9 +17,8 @@ gui_set_style(control, property, value)
 Set one style property.
 }
 \examples{
-\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_set_style(0L, 0L, 0L)
-\dontshow{\}) # examplesIf}
+
 }
 \seealso{
 Other gui functions: 

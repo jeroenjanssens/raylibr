@@ -24,9 +24,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 is_gamepad_button_down(0L, 0L)
-\dontshow{\}) # examplesIf}
+
 }
 \seealso{
 Other down functions: 

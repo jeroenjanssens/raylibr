@@ -13,9 +13,8 @@ An integer
 Get gui state (global state).
 }
 \examples{
-\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_get_state()
-\dontshow{\}) # examplesIf}
+
 }
 \seealso{
 Other gui functions: 

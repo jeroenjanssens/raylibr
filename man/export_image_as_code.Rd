@@ -25,7 +25,7 @@ This function has been auto-generated from the following Raylib function definit
 }
 \examples{
 \dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
-export_image_as_code(gen_image_color(100, 100, "blue"), "file.png")
+export_image_as_code(gen_image_color(200, 200, "blue"), "file.png")
 \dontshow{\}) # examplesIf}
 }
 \seealso{

@@ -24,9 +24,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
-get_image_alpha_border(gen_image_color(100, 100, "blue"), 0.0)
-\dontshow{\}) # examplesIf}
+get_image_alpha_border(gen_image_color(200, 200, "blue"), 0.0)
+
 }
 \seealso{
 Other image functions: 

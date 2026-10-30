@@ -22,9 +22,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 is_texture_valid(texture(0L, 64L, 64L, 1L, 7L))
-\dontshow{\}) # examplesIf}
+
 }
 \seealso{
 Other valid functions: 

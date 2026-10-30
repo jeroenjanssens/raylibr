@@ -23,7 +23,7 @@ This function has been auto-generated from the following Raylib function definit
 }
 \examples{
 \dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
-load_texture_from_image(gen_image_color(100, 100, "blue"))
+load_texture_from_image(gen_image_color(200, 200, "blue"))
 \dontshow{\}) # examplesIf}
 }
 \seealso{

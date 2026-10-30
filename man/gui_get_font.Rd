@@ -13,9 +13,8 @@ A font
 Get gui custom font (global state).
 }
 \examples{
-\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 gui_get_font()
-\dontshow{\}) # examplesIf}
+
 }
 \seealso{
 Other gui functions: 

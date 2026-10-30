@@ -22,9 +22,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 is_mouse_button_up(0L)
-\dontshow{\}) # examplesIf}
+
 }
 \seealso{
 Other up functions: 

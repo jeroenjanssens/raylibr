@@ -19,9 +19,8 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 get_key_pressed()
-\dontshow{\}) # examplesIf}
+
 }
 \seealso{
 Other pressed functions: 
