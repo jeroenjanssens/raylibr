@@ -124,5 +124,5 @@ Other get functions:
 
 ``` r
 get_fps()
-#> [1] 50407
+#> [1] 58002
 ```
