@@ -6,7 +6,8 @@
 
 // [[Rcpp::export]]
 void init_window_(int width, int height, const char * title) {
-  return InitWindow(width, height, title);
+  InitWindow(width, height, title);
+  GuiSetFont(GetFontDefault());
 }
 
 // [[Rcpp::export]]

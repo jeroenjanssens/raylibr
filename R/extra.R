@@ -209,8 +209,6 @@ raylibr_screenshot <- function(draw, width = 640L, height = 480L) {
   set_config_flags(flag$window_hidden + flag$window_highdpi)
   init_window(width, height, "raylibr")
   on.exit(close_window())
-  # raygui keeps the font texture from the previous window; reset it
-  gui_set_font(get_font_default())
   for (i in 1:2) {
     begin_drawing()
     clear_background("black")
@@ -247,8 +245,6 @@ raylibr_screenshot_3d <- function(draw, width = 640L, height = 480L) {
   set_config_flags(flag$window_hidden + flag$window_highdpi)
   init_window(width, height, "raylibr")
   on.exit(close_window())
-  # raygui keeps the font texture from the previous window; reset it
-  gui_set_font(get_font_default())
   cam <- camera_3d(c(4, 4, 4))
   for (i in 1:2) {
     begin_drawing()

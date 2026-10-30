@@ -570,6 +570,13 @@ needs_window <- function(cname) {
   any(vapply(patterns, grepl, logical(1), x = cname, perl = TRUE))
 }
 
+# Extra C++ to run after calling a Raylib function in its wrapper
+post_call_cpp <- list(
+  # raygui keeps the font of the previous window, whose texture and glyph
+  # data are freed by CloseWindow(), so text disappears or R crashes
+  InitWindow = "  GuiSetFont(GetFontDefault());"
+)
+
 # C++ line that guards a wrapper, or NULL if the function needs no window
 window_guard <- function(cname, rname) {
   if (needs_window(cname)) paste0('  raylibr_require_window("', rname, '");') else NULL
@@ -786,7 +793,11 @@ generate_function_cpp <- function(func_row) {
     "// [[Rcpp::export]]",
     paste0(cpp_ret, " ", snake, "_(", param_str, ") {"),
     window_guard(name, snake),
-    paste0("  return ", name, "(", call_str, ");"),
+    if (is.null(post_call_cpp[[name]])) {
+      paste0("  return ", name, "(", call_str, ");")
+    } else {
+      c(paste0("  ", name, "(", call_str, ");"), post_call_cpp[[name]])
+    },
     "}"
   )
 

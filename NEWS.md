@@ -7,6 +7,11 @@
   now stop with an error such as "`draw_circle()` needs an open window"
   instead of crashing R when no window is open.
 
+* raygui now uses the font of the current window. It kept the font of the
+  first window opened in a session, whose data is freed when that window
+  closes, so raygui text could disappear, text measurements could return
+  garbage, and R could crash after opening several windows.
+
 # raylibr 6.0.2
 
 ## Breaking changes
