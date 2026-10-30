@@ -77,10 +77,11 @@ is_raylib_matrix <- function(x) {
 #' @importFrom grDevices colors
 #' @export
 is_color <- function(x) {
-  class(x) == "color" ||
-  is_unsigned_int(x) ||
+  inherits(x, "color") ||
+  # A packed 32-bit RGBA value, e.g. 0xFF0000FF
+  (is_number(x) && !is.na(x) && x >= 0 && x <= 4294967295 && x == trunc(x)) ||
   (is_const_char_pointer(x) && x %in% colors()) ||
-  (is.list(x) && names(x) == c("r", "g", "b", "a"))
+  (is.list(x) && identical(names(x), c("r", "g", "b", "a")))
 }
 
 is_const_char_pointer <- function(x) {

@@ -17,6 +17,11 @@
   vector with class `"raylibr_rectangle"`. `scroll` and `view` are now
   checked like the other arguments.
 
+* `is_color()` now returns `TRUE` or `FALSE` for every input. It raised an
+  error for lists with `r`, `g`, `b` and `a`, returned `NA` for `NA` and
+  unnamed lists, and accepted fractional and out-of-range numbers such as
+  `42.5` and `2^32` as packed RGBA values.
+
 # raylibr 6.0.2
 
 ## Breaking changes

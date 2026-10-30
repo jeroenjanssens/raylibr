@@ -78,3 +78,19 @@ test_that("R color database is complete", {
     expect_s3_class(c, "color")
   }
 })
+
+test_that("is_color accepts colors, names, packed RGBA values and rgba lists", {
+  is_color <- raylibr:::is_color
+  expect_true(is_color(color(255, 0, 0)))
+  expect_true(is_color("red"))
+  expect_true(is_color(0xFF0000FF))
+  expect_true(is_color(0L))
+  expect_true(is_color(list(r = 255, g = 0, b = 0, a = 255)))
+})
+
+test_that("is_color returns FALSE (not NA or an error) for non-colors", {
+  is_color <- raylibr:::is_color
+  for (x in list(42.5, -1, 2^32, NA_real_, c(1, 2), list(1, 2), "notacolor", NULL)) {
+    expect_identical(is_color(x), FALSE)
+  }
+})
