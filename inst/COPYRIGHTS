@@ -26,7 +26,8 @@ raygui 5.0
     output (see src/raygui_impl.cpp), GuiLoadStyle() checks the results of
     fread() and fgets(), GuiFontIconBaking() is only compiled when
     RAYGUI_FONT_ICONS_BAKING is defined, and a negative glyph count in a
-    style file is treated as zero, to avoid compiler warnings.
+    style file is treated as zero (also in the allocation sizes), to avoid
+    compiler warnings.
 
 The raylib source includes these libraries (in src/external/ of the tarball):
 

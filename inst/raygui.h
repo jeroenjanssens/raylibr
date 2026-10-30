@@ -4964,7 +4964,7 @@ void GuiLoadStyleFromMemory(const unsigned char *fileData, int dataSize)
             else
             {
                 // Recs data is uncompressed
-                font.recs = (Rectangle *)RAYGUI_CALLOC(font.glyphCount, sizeof(Rectangle));
+                font.recs = (Rectangle *)RAYGUI_CALLOC((font.glyphCount > 0)? (unsigned int)font.glyphCount : 0, sizeof(Rectangle));  // raylibr: non-negative size
                 for (int i = 0; i < font.glyphCount; i++)
                 {
                     memcpy(&font.recs[i], fileDataPtr, sizeof(Rectangle));
@@ -4985,7 +4985,7 @@ void GuiLoadStyleFromMemory(const unsigned char *fileData, int dataSize)
             }
 
             // Allocate required glyphs space to fill with data
-            font.glyphs = (GlyphInfo *)RAYGUI_CALLOC(font.glyphCount, sizeof(GlyphInfo));
+            font.glyphs = (GlyphInfo *)RAYGUI_CALLOC((font.glyphCount > 0)? (unsigned int)font.glyphCount : 0, sizeof(GlyphInfo));  // raylibr: non-negative size
 
             if ((glyphsDataCompressedSize > 0) && (glyphsDataCompressedSize != glyphsDataSize))
             {
