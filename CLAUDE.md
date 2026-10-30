@@ -39,8 +39,19 @@ build artifacts, delete `src/raylib_built` and reinstall.
 Rscript -e 'testthat::test_local()'
 ```
 
-Tests are headless (no window needed). The test suite covers structs,
-types, enums, colors, validation, and webR helpers.
+Tests that open a window use `skip_if_no_gl()`
+(`tests/testthat/helper-gl.R`): they run locally on a desktop, skip on
+CRAN and CI, and always run with `RAYLIBR_GL=true` (CI sets this after
+starting Xvfb or installing Mesa).
+
+## Website
+
+Examples and guides only render images when `raylibr:::has_display()` is
+`TRUE`, which in non-interactive sessions requires `RAYLIBR_GL=true`:
+
+``` r
+RAYLIBR_GL=true Rscript -e 'pkgdown::build_site()'
+```
 
 ## Key design decisions
 

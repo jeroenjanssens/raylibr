@@ -93,7 +93,12 @@
 <div class="section level2">
 <h2 id="testing">Testing<a class="anchor" aria-label="anchor" href="#testing"></a></h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>Rscript <span class="sc">-</span>e <span class="st">'testthat::test_local()'</span></span></code></pre></div>
-<p>Tests are headless (no window needed). The test suite covers structs, types, enums, colors, validation, and webR helpers.</p>
+<p>Tests that open a window use <code>skip_if_no_gl()</code> (<code>tests/testthat/helper-gl.R</code>): they run locally on a desktop, skip on CRAN and CI, and always run with <code>RAYLIBR_GL=true</code> (CI sets this after starting Xvfb or installing Mesa).</p>
+</div>
+<div class="section level2">
+<h2 id="website">Website<a class="anchor" aria-label="anchor" href="#website"></a></h2>
+<p>Examples and guides only render images when <code>raylibr:::has_display()</code> is <code>TRUE</code>, which in non-interactive sessions requires <code>RAYLIBR_GL=true</code>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>RAYLIBR_GL<span class="ot">=</span>true Rscript <span class="sc">-</span>e <span class="st">'pkgdown::build_site()'</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="key-design-decisions">Key design decisions<a class="anchor" aria-label="anchor" href="#key-design-decisions"></a></h2>
