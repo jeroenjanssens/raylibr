@@ -2603,6 +2603,15 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// raylibr_init_logging_
+void raylibr_init_logging_();
+RcppExport SEXP _raylibr_raylibr_init_logging_() {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    raylibr_init_logging_();
+    return R_NilValue;
+END_RCPP
+}
 // update_camera_
 void update_camera_(SEXP camera_ptr, int mode);
 RcppExport SEXP _raylibr_update_camera_(SEXP camera_ptrSEXP, SEXP modeSEXP) {
@@ -12211,6 +12220,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_raylibr_close_audio_device_", (DL_FUNC) &_raylibr_close_audio_device_, 0},
     {"_raylibr_wave_copy_", (DL_FUNC) &_raylibr_wave_copy_, 1},
     {"_raylibr_draw_bounding_box_vectorized_", (DL_FUNC) &_raylibr_draw_bounding_box_vectorized_, 2},
+    {"_raylibr_raylibr_init_logging_", (DL_FUNC) &_raylibr_raylibr_init_logging_, 0},
     {"_raylibr_update_camera_", (DL_FUNC) &_raylibr_update_camera_, 2},
     {"_raylibr_update_camera_pro_", (DL_FUNC) &_raylibr_update_camera_pro_, 4},
     {"_raylibr_draw_line_strip_", (DL_FUNC) &_raylibr_draw_line_strip_, 2},

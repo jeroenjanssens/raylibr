@@ -55,7 +55,7 @@ cp "$RAYLIBR_DIR/inst/raygui.h" "$BUILD_DIR/inst-include/"
 
 echo "=== Compiling raylibr C++ sources (parallel, $JOBS jobs) ==="
 cd "$BUILD_DIR"
-SRCS="audio core models raygui_impl raygui_funcs raymath_funcs rcolors RcppExports rlgl shapes structs text textures types web manual_wrappers"
+SRCS="audio core log models raygui_impl raygui_funcs raymath_funcs rcolors RcppExports rlgl shapes structs text textures types web manual_wrappers"
 for src in $SRCS; do
     em++ -std=gnu++17 -Oz -fPIC -fvisibility=hidden \
         -DPLATFORM_WEB_EMSCRIPTEN -DRCPP_DEMANGLER_ENABLED=0 -D__STRICT_ANSI__ -DNDEBUG \

@@ -9,6 +9,11 @@
   directory in the `RAYLIBR_ASSETS` environment variable. Passing a
   directory, such as `raylibr_resource("model")`, gives all files in it.
 
+* Raylib's log messages now go through R's console, like `message()`,
+  instead of being printed directly to the terminal, and only warnings and
+  errors are shown by default. Use `set_trace_log_level(log_level$info)` to
+  see all messages.
+
 ## Bug fixes
 
 * Functions that need an open window (drawing, `begin_*()`/`end_*()`,

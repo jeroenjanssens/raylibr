@@ -977,6 +977,10 @@ draw_bounding_box_vectorized_ <- function(box, color) {
     invisible(.Call(`_raylibr_draw_bounding_box_vectorized_`, box, color))
 }
 
+raylibr_init_logging_ <- function() {
+    invisible(.Call(`_raylibr_raylibr_init_logging_`))
+}
+
 update_camera_ <- function(camera_ptr, mode) {
     invisible(.Call(`_raylibr_update_camera_`, camera_ptr, mode))
 }

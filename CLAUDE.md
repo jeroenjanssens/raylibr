@@ -23,6 +23,7 @@ Hand-maintained files:
 - `src/types.cpp` — Vector2/3/4, RaylibMatrix, Color conversions
 - `src/rcolors.cpp` — R color name map
 - `src/web.cpp` — Emscripten/webR bridge
+- `src/log.cpp` — Sends Raylib's log through R's console (set up in `.onLoad()`)
 - `R/extra.R` — Manual wrappers (set_shader_value, load_font_ex, run_game_loop, etc.)
 - `R/is.R` — Type predicates
 

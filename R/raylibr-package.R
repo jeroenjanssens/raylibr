@@ -15,3 +15,9 @@
 #' @useDynLib raylibr, .registration = TRUE
 ## usethis namespace: end
 NULL
+
+.onLoad <- function(libname, pkgname) {
+  # Send Raylib's log messages to R's console instead of stdout, and only
+  # show warnings and errors by default
+  raylibr_init_logging_()
+}
