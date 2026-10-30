@@ -4887,6 +4887,7 @@ void GuiLoadStyleFromMemory(const unsigned char *fileData, int dataSize)
 
             memcpy(&font.baseSize, fileDataPtr, sizeof(int));
             memcpy(&font.glyphCount, fileDataPtr + 4, sizeof(int));
+            if (font.glyphCount < 0) font.glyphCount = 0;  // raylibr: ignore a corrupt (negative) glyph count
             memcpy(&fontType, fileDataPtr + 4 + 4, sizeof(int));
             fileDataPtr += 12;
 

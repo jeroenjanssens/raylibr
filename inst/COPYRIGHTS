@@ -24,8 +24,9 @@ raygui 5.0
   Included as: inst/raygui.h
   Modified: RAYGUI_LOG wrapped in #ifndef so raylibr can disable its printf
     output (see src/raygui_impl.cpp), GuiLoadStyle() checks the results of
-    fread() and fgets(), and GuiFontIconBaking() is only compiled when
-    RAYGUI_FONT_ICONS_BAKING is defined, to avoid compiler warnings.
+    fread() and fgets(), GuiFontIconBaking() is only compiled when
+    RAYGUI_FONT_ICONS_BAKING is defined, and a negative glyph count in a
+    style file is treated as zero, to avoid compiler warnings.
 
 The raylib source includes these libraries (in src/external/ of the tarball):
 
