@@ -60,6 +60,17 @@ jobs:
         with:
           token: ${{ secrets.RHUB_TOKEN }}
           job-config: ${{ matrix.config.job-config }}
+      - name: Install X11 and OpenGL headers (Linux)
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          SUDO=""; [ "$(id -u)" != 0 ] && SUDO=sudo
+          if command -v apt-get > /dev/null; then
+            $SUDO apt-get update -qq
+            $SUDO apt-get install -y -qq libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libxext-dev libgl-dev
+          elif command -v dnf > /dev/null; then
+            $SUDO dnf install -y -q libX11-devel libXrandr-devel libXinerama-devel libXcursor-devel libXi-devel libXext-devel mesa-libGL-devel
+          fi
       - uses: r-hub/actions/setup-deps@v1
         with:
           token: ${{ secrets.RHUB_TOKEN }}
@@ -89,6 +100,17 @@ jobs:
         with:
           token: ${{ secrets.RHUB_TOKEN }}
           job-config: ${{ matrix.config.job-config }}
+      - name: Install X11 and OpenGL headers (Linux)
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          SUDO=""; [ "$(id -u)" != 0 ] && SUDO=sudo
+          if command -v apt-get > /dev/null; then
+            $SUDO apt-get update -qq
+            $SUDO apt-get install -y -qq libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libxext-dev libgl-dev
+          elif command -v dnf > /dev/null; then
+            $SUDO dnf install -y -q libX11-devel libXrandr-devel libXinerama-devel libXcursor-devel libXi-devel libXext-devel mesa-libGL-devel
+          fi
       - uses: r-hub/actions/setup-deps@v1
         with:
           job-config: ${{ matrix.config.job-config }}
