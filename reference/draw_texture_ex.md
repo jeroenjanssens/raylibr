@@ -177,6 +177,6 @@ Other draw functions:
 
 ``` r
 if (FALSE) {
-draw_texture_ex(load_texture("file.png"), c(100, 100), 0.0, 1.0, "red")
+draw_texture_ex(texture(0L, 64L, 64L, 1L, 7L), c(100, 100), 0.0, 1.0, "red")
 }
 ```

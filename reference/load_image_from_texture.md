@@ -102,6 +102,6 @@ Other load functions:
 
 ``` r
 if (FALSE) {
-load_image_from_texture(load_texture("file.png"))
+load_image_from_texture(texture(0L, 64L, 64L, 1L, 7L))
 }
 ```

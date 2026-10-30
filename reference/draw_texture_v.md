@@ -163,6 +163,6 @@ Other draw functions:
 
 ``` r
 if (FALSE) {
-draw_texture_v(load_texture("file.png"), c(100, 100), "red")
+draw_texture_v(texture(0L, 64L, 64L, 1L, 7L), c(100, 100), "red")
 }
 ```

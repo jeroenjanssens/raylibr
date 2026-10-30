@@ -27,7 +27,7 @@ for (i in seq_along(imgs)) {
 }
 ```
 
-![Image rendered by raylibr](file5c8373228d36.png)
+![Image rendered by raylibr](file5c3f5a7ecce4.png)
 
 Top-left: checkerboard (`gen_image_checked`). Top-right: linear gradient
 (`gen_image_gradient_linear`). Bottom-left: Perlin noise
@@ -95,7 +95,7 @@ draw_texture_pro(
 )
 ```
 
-![Image rendered by raylibr](file5c836eeeaca6.png)
+![Image rendered by raylibr](file5c3fc365ee4.png)
 
 - [`draw_texture()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture.md)
   draws at a position with a tint color

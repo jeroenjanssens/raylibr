@@ -116,6 +116,6 @@ Other is functions:
 
 ``` r
 if (FALSE) {
-is_texture_valid(load_texture("file.png"))
+is_texture_valid(texture(0L, 64L, 64L, 1L, 7L))
 }
 ```

@@ -154,7 +154,7 @@ Other draw functions:
 if (FALSE) {
 draw_billboard_rec(
     camera_3d(c(0, 10, 10)),
-    load_texture("file.png"),
+    texture(0L, 64L, 64L, 1L, 7L),
     rectangle(10, 10, 200, 100),
     c(0, 5, 0),
     c(100, 100),

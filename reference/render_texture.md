@@ -40,10 +40,9 @@ definition:
 ## Examples
 
 ``` r
-ren <- render_texture(0L, load_texture("file.png"), load_texture("file.png"))
-#> Error: `load_texture()` needs an open window. Call `init_window()` first.
+ren <- render_texture(0L, texture(0L, 64L, 64L, 1L, 7L), texture(0L, 64L, 64L, 1L, 7L))
 ren$id
-#> Error: object 'ren' not found
+#> [1] 0
 ren$texture
-#> Error: object 'ren' not found
+#> texture(id = 0, width = 64, height = 64, mipmaps = 1, format = 7) 
 ```

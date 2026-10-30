@@ -95,6 +95,6 @@ Other set functions:
 
 ``` r
 if (FALSE) {
-set_texture_filter(load_texture("file.png"), 0L)
+set_texture_filter(texture(0L, 64L, 64L, 1L, 7L), 0L)
 }
 ```

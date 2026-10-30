@@ -162,6 +162,6 @@ Other draw functions:
 
 ``` r
 if (FALSE) {
-draw_texture_rec(load_texture("file.png"), rectangle(10, 10, 200, 100), c(100, 100), "red")
+draw_texture_rec(texture(0L, 64L, 64L, 1L, 7L), rectangle(10, 10, 200, 100), c(100, 100), "red")
 }
 ```

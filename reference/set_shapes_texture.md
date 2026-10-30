@@ -99,6 +99,6 @@ Other set functions:
 
 ``` r
 if (FALSE) {
-set_shapes_texture(load_texture("file.png"), rectangle(10, 10, 200, 100))
+set_shapes_texture(texture(0L, 64L, 64L, 1L, 7L), rectangle(10, 10, 200, 100))
 }
 ```

@@ -40,10 +40,9 @@ definition:
 ## Examples
 
 ``` r
-mat <- material_map(load_texture("file.png"), "red", 0.0)
-#> Error: `load_texture()` needs an open window. Call `init_window()` first.
+mat <- material_map(texture(0L, 64L, 64L, 1L, 7L), "red", 0.0)
 mat$texture
-#> Error: object 'mat' not found
+#> texture(id = 0, width = 64, height = 64, mipmaps = 1, format = 7) 
 mat$color
-#> Error: object 'mat' not found
+#> color(r = 255, g = 0, b = 0, a = 255) 
 ```

@@ -154,6 +154,6 @@ Other draw functions:
 
 ``` r
 if (FALSE) {
-draw_texture(load_texture("file.png"), 100L, 100L, "red")
+draw_texture(texture(0L, 64L, 64L, 1L, 7L), 100L, 100L, "red")
 }
 ```
