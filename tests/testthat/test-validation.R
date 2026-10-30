@@ -65,3 +65,9 @@ test_that("struct field access rejects invalid field names", {
   r <- rectangle(0, 0, 0, 0)
   expect_error(r$invalid, "no property")
 })
+
+test_that("gen_image_checked rejects non-positive check sizes instead of crashing", {
+  expect_error(gen_image_checked(8L, 8L, 0L, 4L, "red", "blue"), "`checks_x` must be positive")
+  expect_error(gen_image_checked(8L, 8L, 4L, -1L, "red", "blue"), "`checks_y` must be positive")
+  expect_true(is_image(gen_image_checked(8L, 8L, 4L, 4L, "red", "blue")))
+})

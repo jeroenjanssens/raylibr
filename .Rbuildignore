@@ -18,3 +18,4 @@
 ^inst/include/(raylib|raymath|rcamera|rlgl|raygui)\.h$
 ^cran-comments\.md$
 ^CRAN-SUBMISSION$
+^\.gitattributes$

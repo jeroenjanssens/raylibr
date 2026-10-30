@@ -32,7 +32,7 @@ This function has been auto-generated from the following Raylib function definit
 }\if{html}{\out{</div>}}
 }
 \examples{
-gen_image_checked(800L, 450L, 0L, 0L, "red", "red")
+gen_image_checked(800L, 450L, 40L, 40L, "red", "red")
 
 }
 \seealso{

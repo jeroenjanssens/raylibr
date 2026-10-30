@@ -7307,14 +7307,16 @@ gen_image_gradient_square <- function(width, height, density, inner, outer) {
 #' @family image functions
 #'
 #' @examples
-#' gen_image_checked(800L, 450L, 0L, 0L, "red", "red")
+#' gen_image_checked(800L, 450L, 40L, 40L, "red", "red")
 #'
 #' @export
 gen_image_checked <- function(width, height, checks_x, checks_y, col1, col2) {
   if (!is_int(width)) abort(paste0('`width` must be an integer, not ', friendly_typeof(width), '.'), call = NULL)
   if (!is_int(height)) abort(paste0('`height` must be an integer, not ', friendly_typeof(height), '.'), call = NULL)
   if (!is_int(checks_x)) abort(paste0('`checks_x` must be an integer, not ', friendly_typeof(checks_x), '.'), call = NULL)
+  if (checks_x <= 0) abort('`checks_x` must be positive.', call = NULL)
   if (!is_int(checks_y)) abort(paste0('`checks_y` must be an integer, not ', friendly_typeof(checks_y), '.'), call = NULL)
+  if (checks_y <= 0) abort('`checks_y` must be positive.', call = NULL)
   if (!is_color(col1)) abort(paste0('`col1` must be a color, not ', friendly_typeof(col1), '.'), call = NULL)
   if (!is_color(col2)) abort(paste0('`col2` must be a color, not ', friendly_typeof(col2), '.'), call = NULL)
   gen_image_checked_(width, height, checks_x, checks_y, col1, col2)

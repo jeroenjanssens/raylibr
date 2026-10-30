@@ -1,0 +1,9 @@
+# Keep LF line endings in sources on every platform (a CRLF checkout on
+# Windows makes R CMD check report the copied raygui.h)
+*.c text eol=lf
+*.h text eol=lf
+*.cpp text eol=lf
+*.m text eol=lf
+Makevars* text eol=lf
+configure text eol=lf
+cleanup text eol=lf

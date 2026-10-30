@@ -128,6 +128,7 @@ get_example_value <- function(type, param_name = "") {
     if (pn %in% c("loc_index", "map_type", "mode", "layout", "index", "frame")) return("0L")
     if (grepl("size", pn)) return("32L")
     if (grepl("count", pn)) return("10L")
+    if (grepl("^checks_", pn)) return("40L")
     if (grepl("cols|columns", pn)) return("4L")
     if (grepl("rows", pn)) return("4L")
     return("0L")
@@ -600,6 +601,12 @@ runs_without_window <- function(cname, param_types = character(0)) {
     !any(grepl("\\*", param_types))
 }
 
+# Integer arguments that Raylib divides by. Zero would crash R on most CPUs
+# (integer division by zero traps), so the R wrappers require positive values.
+positive_params <- list(
+  GenImageChecked = c("checksX", "checksY")
+)
+
 # C++ line that guards a wrapper, or NULL if the function needs no window
 window_guard <- function(cname, rname) {
   if (needs_window(cname)) paste0('  raylibr_require_window("', rname, '");') else NULL
@@ -1024,6 +1031,9 @@ generate_function_r <- function(func_row) {
         lines <- c(lines, paste0("  if (!", check, "(", pname, ")) abort(paste0('`",
                                   pname, "` must be ", label_lower,
                                   ", not ', friendly_typeof(", pname, "), '.'), call = NULL)"))
+      }
+      if (params$name[i] %in% positive_params[[name]]) {
+        lines <- c(lines, paste0("  if (", pname, " <= 0) abort('`", pname, "` must be positive.', call = NULL)"))
       }
     }
 

@@ -26,6 +26,10 @@
 
 ## Bug fixes
 
+* `gen_image_checked()` now requires `checks_x` and `checks_y` to be
+  positive. Zero crashed R with a floating point exception (integer
+  division by zero) on Intel and AMD processors.
+
 * Functions that need an open window (drawing, `begin_*()`/`end_*()`,
   loading textures, shaders, fonts and models, raygui controls, and rlgl)
   now stop with an error such as "`draw_circle()` needs an open window"
