@@ -28,6 +28,9 @@ cd raylib-6.0-minimal/src
 # Add -fPIC for SIDE_MODULE compatibility
 sed -i.bak 's/^CFLAGS = -Wall/CFLAGS = -Wall -fPIC/' Makefile
 
+# Bug fixes applied to every build (same as the desktop build in src/Makevars*)
+Rscript "$RAYLIBR_DIR/tools/patch_raylib.R" .
+
 # Patch Raylib sources for webR worker support (SharedArrayBuffer input, BroadcastChannel frames)
 Rscript "$RAYLIBR_DIR/inst/wasm/patch_raylib.R"
 
