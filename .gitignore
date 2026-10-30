@@ -22,3 +22,6 @@ pkgdown/assets/wasm/repo/
 # R CMD build/check output
 *.tar.gz
 *.Rcheck/
+
+# Claude Code local state (worktrees, settings)
+.claude/
