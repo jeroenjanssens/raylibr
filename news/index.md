@@ -1,5 +1,12 @@
 # Changelog
 
+## raylibr (development version)
+
+- On Linux, installation now checks for the X11 and OpenGL development
+  headers the bundled raylib needs, and if any are missing stops with a
+  message listing them and the packages to install. `SystemRequirements`
+  lists the libraries.
+
 ## raylibr 6.0.3
 
 ### Changes

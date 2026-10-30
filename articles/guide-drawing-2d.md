@@ -28,7 +28,7 @@ draw_circle(480L, 320L, 8.0, "dodgerblue")
 draw_text("(480, 320)", 345L, 310L, 20L, "dodgerblue")
 ```
 
-![Image rendered by raylibr](file5aef1cac9e92.png)
+![Image rendered by raylibr](file5ca22dcafeb3.png)
 
 ## Lines
 
@@ -47,7 +47,7 @@ draw_line_dashed(c(30, 385), c(610, 385), 16.0, 8.0, "mediumseagreen")
 draw_text("draw_line_dashed", 15L, 345L, 20L, "grey70")
 ```
 
-![Image rendered by raylibr](file5aef7c092e45.png)
+![Image rendered by raylibr](file5ca24a8f1fcd.png)
 
 [`draw_line_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_line_ex.md)
 and
@@ -72,7 +72,7 @@ draw_circle_v(c(320, 380), 50.0, "mediumseagreen")
 draw_text("draw_circle_v takes a Vector2 center", 121L, 445L, 20L, "grey70")
 ```
 
-![Image rendered by raylibr](file5aef5e2e43c0.png)
+![Image rendered by raylibr](file5ca27bbad0b2.png)
 
 [`draw_circle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle.md)
 takes integer center coordinates, while
@@ -105,7 +105,7 @@ draw_rectangle_rec(rectangle(15, 330, 610, 65), "grey20")
 draw_text("draw_rectangle_rec takes a rectangle()", 35L, 352L, 20L, "grey70")
 ```
 
-![Image rendered by raylibr](file5aef57e0dd73.png)
+![Image rendered by raylibr](file5ca242d8fb7a.png)
 
 [`draw_rectangle_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle_pro.md)
 supports rotation around an origin point.
@@ -132,7 +132,7 @@ draw_text("hexagon", 389L, 350L, 20L, "grey70")
 draw_poly_lines_ex(c(430, 210), 6L, 110.0, 0.0, 5.0, "gold")
 ```
 
-![Image rendered by raylibr](file5aef3dcb7d1f.png)
+![Image rendered by raylibr](file5ca22e9d08fa.png)
 
 [`draw_poly()`](https://jeroenjanssens.github.io/raylibr/reference/draw_poly.md)
 draws a regular polygon: center, number of sides, radius, rotation,
@@ -158,7 +158,7 @@ draw_ring_lines(c(480, 240), 65.0, 130.0, 0.0, 270.0, 36L, "white")
 draw_text("ring 0-270", 428L, 395L, 20L, "grey70")
 ```
 
-![Image rendered by raylibr](file5aef1b45665e.png)
+![Image rendered by raylibr](file5ca21a30a369.png)
 
 Angles are in degrees. `0` points right, and the arc sweeps
 **counter-clockwise**. The `segments` parameter controls smoothness
@@ -188,7 +188,7 @@ for (i in seq_len(nrow(pts))) {
 draw_text("Catmull-Rom spline with control points", 80L, 15L, 20L, "grey70")
 ```
 
-![Image rendered by raylibr](file5aef2018a52a.png)
+![Image rendered by raylibr](file5ca270ea3bd1.png)
 
 Other spline types include
 [`draw_spline_bezier_cubic()`](https://jeroenjanssens.github.io/raylibr/reference/draw_spline_bezier_cubic.md),
@@ -211,7 +211,7 @@ draw_circle(450L, 290L, 130.0, color_alpha("gold", 0.6))
 draw_circle(510L, 210L, 95.0, color_alpha("mediumseagreen", 0.6))
 ```
 
-![Image rendered by raylibr](file5aef100ae063.png)
+![Image rendered by raylibr](file5ca22a53fdad.png)
 
 See the
 [Colors](https://jeroenjanssens.github.io/raylibr/articles/guide-colors.md)

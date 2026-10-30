@@ -32,7 +32,7 @@ end_mode_2d()
 draw_text("Zoom: 3x", 15L, 15L, 30L, "white")
 ```
 
-![Image rendered by raylibr](file5a1c23f471b6.png)
+![Image rendered by raylibr](file5bce6485efa.png)
 
 The rectangle and circles are drawn in world coordinates. The camera
 zooms in 3x and centers on `(100, 100)`, so they appear magnified. The
@@ -72,7 +72,7 @@ raylibr_screenshot(function() {
 })
 ```
 
-![Image rendered by raylibr](file5a1c24a91be5.png)
+![Image rendered by raylibr](file5bce1e7099e8.png)
 
 The helper
 [`raylibr_screenshot_3d()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_screenshot_3d.md)
@@ -100,7 +100,7 @@ raylibr_screenshot(function() {
 })
 ```
 
-![Image rendered by raylibr](file5a1c20fbff94.png)
+![Image rendered by raylibr](file5bce77ee892d.png)
 
 ``` r
 
@@ -117,7 +117,7 @@ raylibr_screenshot(function() {
 })
 ```
 
-![Image rendered by raylibr](file5a1c1367a67.png)
+![Image rendered by raylibr](file5bce5d846882.png)
 
 ## Built-in camera modes
 

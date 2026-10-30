@@ -62,12 +62,12 @@ Source:
 [`DESCRIPTION`](https://github.com/jeroenjanssens/raylibr/blob/main/DESCRIPTION)
 
 Janssens J (2026). *raylibr: R Wrapper for 'Raylib'*. R package version
-6.0.3, <https://github.com/jeroenjanssens/raylibr>.
+6.0.3.9000, <https://github.com/jeroenjanssens/raylibr>.
 
     @Manual{,
       title = {raylibr: R Wrapper for 'Raylib'},
       author = {Jeroen Janssens},
       year = {2026},
-      note = {R package version 6.0.3},
+      note = {R package version 6.0.3.9000},
       url = {https://github.com/jeroenjanssens/raylibr},
     }
