@@ -15,7 +15,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">raylibr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.3.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.0.4</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,8 +72,10 @@
     </div>
 
     <div class="section level2">
-<h2 class="pkg-version" data-toc-text="development version" id="raylibr-development-version">raylibr (development version)<a class="anchor" aria-label="anchor" href="#raylibr-development-version"></a></h2>
-<ul><li>On Linux, installation now checks for the X11 and OpenGL development headers the bundled raylib needs, and if any are missing stops with a message listing them and the packages to install. <code>SystemRequirements</code> lists the libraries.</li>
+<h2 class="pkg-version" data-toc-text="6.0.4" id="raylibr-604">raylibr 6.0.4<a class="anchor" aria-label="anchor" href="#raylibr-604"></a></h2>
+<ul><li><p>On Linux, installation now checks for the X11 and OpenGL development headers the bundled raylib needs, and if any are missing stops with a message listing them and the packages to install. <code>SystemRequirements</code> lists the libraries.</p></li>
+<li><p>The webR demos on the website failed with “resolved is not a function” in 6.0.3, because the webR build left out the code that routes raylib’s log through R. They work again.</p></li>
+<li><p>raygui no longer asks for a huge allocation when a style file has a corrupt (negative) glyph count, which also removes a compiler warning with gcc 16.</p></li>
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="6.0.3" id="raylibr-603">raylibr 6.0.3<a class="anchor" aria-label="anchor" href="#raylibr-603"></a></h2>

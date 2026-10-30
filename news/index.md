@@ -1,11 +1,19 @@
 # Changelog
 
-## raylibr (development version)
+## raylibr 6.0.4
 
 - On Linux, installation now checks for the X11 and OpenGL development
   headers the bundled raylib needs, and if any are missing stops with a
   message listing them and the packages to install. `SystemRequirements`
   lists the libraries.
+
+- The webR demos on the website failed with “resolved is not a function”
+  in 6.0.3, because the webR build left out the code that routes
+  raylib’s log through R. They work again.
+
+- raygui no longer asks for a huge allocation when a style file has a
+  corrupt (negative) glyph count, which also removes a compiler warning
+  with gcc 16.
 
 ## raylibr 6.0.3
 
