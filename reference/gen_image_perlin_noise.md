@@ -75,7 +75,6 @@ Other image functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 gen_image_perlin_noise(800L, 450L, 0L, 0L, 1.0)
-}
+
 ```

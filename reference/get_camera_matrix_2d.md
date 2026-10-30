@@ -148,7 +148,10 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_camera_matrix_2d(camera_2d(c(400, 300), c(0, 0)))
-}
+#>      [,1] [,2] [,3] [,4]
+#> [1,]    1    0    0  400
+#> [2,]    0    1    0  300
+#> [3,]    0    0    1    0
+#> [4,]    0    0    0    1
 ```

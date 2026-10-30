@@ -148,7 +148,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_screen_to_world_ray(c(100, 100), camera_3d(c(0, 10, 10)))
-}
+#> ray(position = 0, 10, 10, direction = -0.510826528072357, -0.33289697766304, -0.792613387107849) 
 ```

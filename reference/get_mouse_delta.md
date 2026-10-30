@@ -134,7 +134,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_mouse_delta()
-}
+#> x y 
+#> 0 0 
 ```

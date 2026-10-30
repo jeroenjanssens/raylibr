@@ -72,7 +72,6 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 gui_is_locked()
-}
+#> [1] FALSE
 ```

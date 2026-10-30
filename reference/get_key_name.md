@@ -140,7 +140,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_key_name(0L)
-}
+#> NULL
 ```

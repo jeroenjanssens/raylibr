@@ -82,7 +82,5 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 gui_set_style(0L, 0L, 0L)
-}
 ```

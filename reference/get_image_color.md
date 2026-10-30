@@ -164,7 +164,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
-get_image_color(gen_image_color(100, 100, "blue"), 100L, 100L)
-}
+get_image_color(gen_image_color(200, 200, "blue"), 100L, 100L)
+#> color(r = 0, g = 0, b = 255, a = 255) 
 ```

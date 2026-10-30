@@ -145,7 +145,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_screen_to_world_2d(c(100, 100), camera_2d(c(400, 300), c(0, 0)))
-}
+#>    x    y 
+#> -300 -200 
 ```

@@ -56,6 +56,6 @@ Other mesh functions:
 
 ``` r
 if (FALSE) {
-gen_mesh_heightmap(gen_image_color(100, 100, "blue"), c(1, 1, 1))
+gen_mesh_heightmap(gen_image_color(200, 200, "blue"), c(1, 1, 1))
 }
 ```

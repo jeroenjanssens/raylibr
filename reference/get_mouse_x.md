@@ -137,7 +137,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_mouse_x()
-}
+#> [1] 0
 ```

@@ -100,7 +100,6 @@ Other is functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 is_window_resized()
-}
+#> [1] FALSE
 ```

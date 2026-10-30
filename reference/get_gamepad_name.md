@@ -142,7 +142,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_gamepad_name(0L)
-}
+#> [1] ""
 ```

@@ -151,7 +151,6 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 rl_get_version()
-}
+#> [1] 3
 ```

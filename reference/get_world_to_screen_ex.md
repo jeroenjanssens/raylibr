@@ -160,7 +160,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_world_to_screen_ex(c(0, 5, 0), camera_3d(c(0, 10, 10)), 800L, 450L)
-}
+#>        x        y 
+#> 400.0000 117.8889 
 ```

@@ -151,7 +151,6 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 rl_get_cull_distance_far()
-}
+#> [1] 4000
 ```

@@ -155,7 +155,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
-get_image_alpha_border(gen_image_color(100, 100, "blue"), 0.0)
-}
+get_image_alpha_border(gen_image_color(200, 200, "blue"), 0.0)
+#> rectangle(x = 0, y = 0, width = 200, height = 200) 
 ```

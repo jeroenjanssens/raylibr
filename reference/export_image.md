@@ -69,6 +69,6 @@ Other export functions:
 
 ``` r
 if (FALSE) {
-export_image(gen_image_color(100, 100, "blue"), "file.png")
+export_image(gen_image_color(200, 200, "blue"), "file.png")
 }
 ```

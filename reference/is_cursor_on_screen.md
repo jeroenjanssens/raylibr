@@ -91,7 +91,6 @@ Other is functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 is_cursor_on_screen()
-}
+#> [1] FALSE
 ```

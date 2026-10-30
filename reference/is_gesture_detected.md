@@ -90,7 +90,6 @@ Other is functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 is_gesture_detected(0L)
-}
+#> [1] TRUE
 ```

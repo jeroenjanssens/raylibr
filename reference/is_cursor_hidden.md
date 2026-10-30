@@ -84,7 +84,6 @@ Other is functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 is_cursor_hidden()
-}
+#> [1] FALSE
 ```

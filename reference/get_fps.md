@@ -123,7 +123,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_fps()
-}
+#> [1] 50407
 ```

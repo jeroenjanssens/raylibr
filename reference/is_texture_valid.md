@@ -115,7 +115,6 @@ Other is functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 is_texture_valid(texture(0L, 64L, 64L, 1L, 7L))
-}
+#> [1] FALSE
 ```

@@ -34,7 +34,6 @@ Other copy functions:
 ## Examples
 
 ``` r
-if (FALSE) {
-image_copy(gen_image_color(100, 100, "blue"))
-}
+image_copy(gen_image_color(200, 200, "blue"))
+
 ```

@@ -103,7 +103,6 @@ Other is functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 is_window_hidden()
-}
+#> [1] FALSE
 ```

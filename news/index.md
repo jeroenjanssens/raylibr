@@ -1,6 +1,6 @@
 # Changelog
 
-## raylibr (development version)
+## raylibr 6.0.3
 
 ### Changes
 
@@ -19,7 +19,22 @@
   shown by default. Use `set_trace_log_level(log_level$info)` to see all
   messages.
 
+- Examples and the guides’ code only open a window in interactive
+  sessions or when the environment variable `RAYLIBR_GL` is `"true"`, so
+  R CMD check on a machine without a display no longer tries to. Many
+  more examples of functions that need no window now run.
+
+- The bundled raylib is rebuilt from the official 6.0 release without
+  the parts raylibr doesn’t use, and is compiled with R’s compiler and
+  flags. All bundled libraries and their authors are now credited in
+  `DESCRIPTION` and `inst/COPYRIGHTS`.
+
 ### Bug fixes
+
+- [`gen_image_checked()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_checked.md)
+  now requires `checks_x` and `checks_y` to be positive. Zero crashed R
+  with a floating point exception (integer division by zero) on Intel
+  and AMD processors.
 
 - Functions that need an open window (drawing, `begin_*()`/`end_*()`,
   loading textures, shaders, fonts and models, raygui controls, and

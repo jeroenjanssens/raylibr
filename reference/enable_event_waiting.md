@@ -26,7 +26,5 @@ Other event functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 enable_event_waiting()
-}
 ```

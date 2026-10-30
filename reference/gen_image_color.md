@@ -69,7 +69,6 @@ Other image functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 gen_image_color(800L, 450L, "red")
-}
+
 ```

@@ -110,7 +110,6 @@ Other is functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 is_window_state(0L)
-}
+#> [1] TRUE
 ```

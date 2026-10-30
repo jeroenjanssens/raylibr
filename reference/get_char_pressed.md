@@ -127,7 +127,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_char_pressed()
-}
+#> [1] 0
 ```

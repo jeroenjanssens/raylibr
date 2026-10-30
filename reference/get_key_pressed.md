@@ -136,7 +136,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_key_pressed()
-}
+#> [1] 0
 ```

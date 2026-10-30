@@ -138,7 +138,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_touch_position(0L)
-}
+#> x y 
+#> 0 0 
 ```

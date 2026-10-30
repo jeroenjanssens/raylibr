@@ -138,7 +138,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_gamepad_button_pressed()
-}
+#> [1] 0
 ```

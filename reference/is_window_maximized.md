@@ -100,7 +100,6 @@ Other is functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 is_window_maximized()
-}
+#> [1] FALSE
 ```

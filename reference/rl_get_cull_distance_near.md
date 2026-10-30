@@ -151,7 +151,6 @@ Other rlgl functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 rl_get_cull_distance_near()
-}
+#> [1] 0.05
 ```

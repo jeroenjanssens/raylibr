@@ -131,7 +131,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_touch_point_id(0L)
-}
+#> [1] 0
 ```

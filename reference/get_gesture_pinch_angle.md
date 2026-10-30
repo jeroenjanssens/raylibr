@@ -130,7 +130,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_gesture_pinch_angle()
-}
+#> [1] 0
 ```

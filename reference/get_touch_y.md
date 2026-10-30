@@ -128,7 +128,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_touch_y()
-}
+#> [1] 0
 ```

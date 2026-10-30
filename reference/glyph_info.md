@@ -50,7 +50,7 @@ definition:
 ## Examples
 
 ``` r
-gly <- glyph_info(0L, 0L, 0L, 0L, gen_image_color(100, 100, "blue"))
+gly <- glyph_info(0L, 0L, 0L, 0L, gen_image_color(200, 200, "blue"))
 gly$value
 #> [1] 0
 gly$offset_x

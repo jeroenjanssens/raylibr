@@ -57,7 +57,5 @@ Other window functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 clear_window_state(0L)
-}
 ```

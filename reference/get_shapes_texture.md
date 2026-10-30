@@ -145,7 +145,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_shapes_texture()
-}
+#> texture(id = 2, width = 128, height = 128, mipmaps = 1, format = 2) 
 ```

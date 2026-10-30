@@ -29,7 +29,6 @@ Other close functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 window_should_close()
-}
+#> [1] TRUE
 ```

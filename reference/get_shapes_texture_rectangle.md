@@ -138,7 +138,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_shapes_texture_rectangle()
-}
+#> rectangle(x = 41, y = 46, width = 2, height = 8) 
 ```

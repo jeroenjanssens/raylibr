@@ -77,7 +77,6 @@ Other image functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 gen_image_gradient_linear(800L, 450L, 0L, "red", "red")
-}
+
 ```

@@ -147,7 +147,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_mouse_wheel_move_v()
-}
+#> x y 
+#> 0 0 
 ```

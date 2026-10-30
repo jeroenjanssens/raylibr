@@ -86,7 +86,5 @@ Other set functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 set_text_line_spacing(0L)
-}
 ```

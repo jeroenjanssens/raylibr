@@ -127,7 +127,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_frame_time()
-}
+#> [1] 0.000664021
 ```

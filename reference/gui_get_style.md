@@ -82,7 +82,6 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 gui_get_style(0L, 0L)
-}
+#> [1] -2088532993
 ```

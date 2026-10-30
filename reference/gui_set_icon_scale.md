@@ -74,7 +74,5 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 gui_set_icon_scale(0L)
-}
 ```

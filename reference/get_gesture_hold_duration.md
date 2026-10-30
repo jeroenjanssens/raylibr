@@ -127,7 +127,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_gesture_hold_duration()
-}
+#> [1] 0
 ```

@@ -141,7 +141,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_gamepad_axis_movement(0L, 0L)
-}
+#> [1] 0
 ```

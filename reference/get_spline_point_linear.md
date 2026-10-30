@@ -148,7 +148,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_spline_point_linear(c(100, 100), c(100, 100), 0.0)
-}
+#>   x   y 
+#> 100 100 
 ```

@@ -102,7 +102,6 @@ Other is functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 is_font_valid(get_font_default())
-}
+#> [1] FALSE
 ```

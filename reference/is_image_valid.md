@@ -119,7 +119,6 @@ Other is functions:
 ## Examples
 
 ``` r
-if (FALSE) {
-is_image_valid(gen_image_color(100, 100, "blue"))
-}
+is_image_valid(gen_image_color(200, 200, "blue"))
+#> [1] TRUE
 ```

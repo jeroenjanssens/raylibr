@@ -72,7 +72,8 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 gui_get_font()
-}
+#> <pointer: 0x56183a237fc0>
+#> attr(,"class")
+#> [1] "font"
 ```

@@ -95,7 +95,6 @@ Other is functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 is_key_pressed(0L)
-}
+#> [1] FALSE
 ```

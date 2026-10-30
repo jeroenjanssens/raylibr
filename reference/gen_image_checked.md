@@ -76,7 +76,6 @@ Other image functions:
 ## Examples
 
 ``` r
-if (FALSE) {
-gen_image_checked(800L, 450L, 0L, 0L, "red", "red")
-}
+gen_image_checked(800L, 450L, 40L, 40L, "red", "red")
+
 ```

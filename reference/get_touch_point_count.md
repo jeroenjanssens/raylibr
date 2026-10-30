@@ -131,7 +131,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_touch_point_count()
-}
+#> [1] 0
 ```

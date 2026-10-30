@@ -96,6 +96,6 @@ Other load functions:
 
 ``` r
 if (FALSE) {
-load_font_from_image(gen_image_color(100, 100, "blue"), "red", 0L)
+load_font_from_image(gen_image_color(200, 200, "blue"), "red", 0L)
 }
 ```

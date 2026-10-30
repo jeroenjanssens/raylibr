@@ -91,7 +91,6 @@ Other is functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 is_gamepad_available(0L)
-}
+#> [1] FALSE
 ```

@@ -103,7 +103,6 @@ Other is functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 is_window_fullscreen()
-}
+#> [1] FALSE
 ```

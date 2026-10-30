@@ -141,7 +141,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_mouse_position()
-}
+#> x y 
+#> 0 0 
 ```

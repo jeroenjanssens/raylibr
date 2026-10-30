@@ -65,7 +65,6 @@ Other from functions:
 ## Examples
 
 ``` r
-if (FALSE) {
-image_from_image(gen_image_color(100, 100, "blue"), rectangle(10, 10, 200, 100))
-}
+image_from_image(gen_image_color(200, 200, "blue"), rectangle(10, 10, 200, 100))
+
 ```

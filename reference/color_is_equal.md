@@ -86,7 +86,6 @@ Other is functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 color_is_equal("red", "red")
-}
+#> [1] TRUE
 ```

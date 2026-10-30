@@ -130,7 +130,7 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_gesture_drag_vector()
-}
+#> x y 
+#> 0 0 
 ```

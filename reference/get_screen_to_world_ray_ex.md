@@ -166,7 +166,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_screen_to_world_ray_ex(c(100, 100), camera_3d(c(0, 10, 10)), 800L, 450L)
-}
+#> ray(position = 0, 10, 10, direction = -0.656407296657562, -0.303756266832352, -0.690551698207855) 
 ```

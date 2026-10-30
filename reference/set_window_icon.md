@@ -96,6 +96,6 @@ Other set functions:
 
 ``` r
 if (FALSE) {
-set_window_icon(gen_image_color(100, 100, "blue"))
+set_window_icon(gen_image_color(200, 200, "blue"))
 }
 ```

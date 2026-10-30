@@ -39,7 +39,6 @@ Other from functions:
 ## Examples
 
 ``` r
-if (FALSE) {
-image_from_channel(gen_image_color(100, 100, "blue"), 0L)
-}
+image_from_channel(gen_image_color(200, 200, "blue"), 0L)
+
 ```

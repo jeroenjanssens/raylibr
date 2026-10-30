@@ -72,7 +72,6 @@ Other gui functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 gui_get_state()
-}
+#> [1] 0
 ```

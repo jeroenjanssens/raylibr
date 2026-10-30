@@ -99,7 +99,6 @@ Other is functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 is_gamepad_button_up(0L, 0L)
-}
+#> [1] FALSE
 ```

@@ -68,6 +68,6 @@ Other unload functions:
 
 ``` r
 if (FALSE) {
-unload_image(gen_image_color(100, 100, "blue"))
+unload_image(gen_image_color(200, 200, "blue"))
 }
 ```

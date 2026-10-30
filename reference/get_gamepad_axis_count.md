@@ -143,7 +143,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_gamepad_axis_count(0L)
-}
+#> [1] 0
 ```

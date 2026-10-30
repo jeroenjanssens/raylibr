@@ -134,7 +134,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_screen_width()
-}
+#> [1] 640
 ```

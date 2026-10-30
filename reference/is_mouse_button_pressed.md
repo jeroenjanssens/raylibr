@@ -101,7 +101,6 @@ Other is functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 is_mouse_button_pressed(0L)
-}
+#> [1] FALSE
 ```

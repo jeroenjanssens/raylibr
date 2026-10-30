@@ -131,7 +131,8 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_font_default()
-}
+#> <pointer: 0x56183aca6760>
+#> attr(,"class")
+#> [1] "font"
 ```

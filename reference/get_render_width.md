@@ -130,7 +130,6 @@ Other get functions:
 ## Examples
 
 ``` r
-if (FALSE) {
 get_render_width()
-}
+#> [1] 640
 ```
