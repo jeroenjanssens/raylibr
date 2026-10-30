@@ -1,13 +1,33 @@
 Package: raylibr
 Title: R Wrapper for 'Raylib'
 Version: 6.0.2
-Authors@R: 
+Authors@R: c(
     person("Jeroen", "Janssens", email = "jeroen@jeroenjanssens.com", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0002-5878-8924"))
+           comment = c(ORCID = "0000-0002-5878-8924")),
+    person("Ramon", "Santamaria", role = "cph",
+           comment = "Author of the bundled 'raylib' and 'raygui' libraries"),
+    person("Marcus", "Geelnard", role = "cph", comment = "GLFW library"),
+    person("Camilla", "Löwy", role = "cph", comment = "GLFW library"),
+    person("David", "Reid", role = "cph", comment = "miniaudio and dr_libs libraries"),
+    person("Sean", "Barrett", role = "cph", comment = "stb libraries"),
+    person("Johannes", "Kuhlmann", role = "cph", comment = "cgltf library"),
+    person("Philip", "Rideout", role = "cph", comment = "par_shapes library"),
+    person("Dominic", "Szablewski", role = "cph", comment = "qoi and qoa libraries"),
+    person("Joshua", "Reisenauer", role = "cph", comment = "jar_xm and jar_mod libraries"),
+    person("Romain", "Dalmaso", role = "cph", comment = "libxm, on which jar_xm is based"),
+    person("bzt", role = "cph", comment = "m3d library"),
+    person("Syoyo", "Fujita", role = "cph", comment = "tinyobj_loader_c library"),
+    person("Johann", "Nadalutti", role = "cph", comment = "vox_loader library"),
+    person("Micha", "Mettke", role = "cph", comment = "sdefl and sinfl libraries"),
+    person("Kevlin", "Henney", role = "cph", comment = "dirent for Win32"),
+    person("Jeffery", "Myers", role = "cph", comment = "fix_win32_compatibility header"),
+    person("The Khronos Group Inc.", role = "cph", comment = "OpenGL API definitions in glad")
+  )
 Description: Wraps 'Raylib' (<https://www.raylib.com/>), a simple and easy-to-use
     C library for videogames programming. Provides R functions for 2D/3D
     rendering, audio, input handling, and GUI via 'raygui'.
 License: MIT + file LICENSE
+Copyright: See file inst/COPYRIGHTS for the bundled libraries.
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
