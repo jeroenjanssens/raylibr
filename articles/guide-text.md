@@ -18,7 +18,7 @@ draw_text("Large (60)", 30L, 145L, 60L, "yellow")
 draw_text("Huge (90)", 30L, 240L, 90L, "tomato")
 ```
 
-![Image rendered by raylibr](file5f863677619f.png)
+![Image rendered by raylibr](file5ed3743d323e.png)
 
 The default font is a built-in bitmap font included with Raylib.
 
@@ -54,7 +54,7 @@ draw_text_pro(font, "-30 degrees", c(240, 190), c(0, 0), -30.0, 30.0, 3.0, as_co
 draw_circle(240L, 190L, 6.0, "red")
 ```
 
-![Image rendered by raylibr](file5f86157fecf9.png)
+![Image rendered by raylibr](file5ed3e3a914e.png)
 
 The red dot marks the shared origin point. Each string fans out from
 there at a different angle.
@@ -75,7 +75,7 @@ draw_text(text, x, 210L, size, "gold")
 draw_line(320L, 0L, 320L, 480L, "darkgray")
 ```
 
-![Image rendered by raylibr](file5f8626870d0f.png)
+![Image rendered by raylibr](file5ed3522d4b8c.png)
 
 For custom fonts, use `measure_text_ex(font, text, font_size, spacing)`
 which returns a Vector2 with both width and height.

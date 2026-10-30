@@ -73,7 +73,7 @@ Other gui functions:
 
 ``` r
 gui_get_font()
-#> <pointer: 0x55573c6ccc50>
+#> <pointer: 0x55ea403139a0>
 #> attr(,"class")
 #> [1] "font"
 ```
