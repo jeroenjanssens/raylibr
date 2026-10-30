@@ -13,7 +13,10 @@ GUI controls.
   `CPICFLAGS`). It is the official 6.0 release without window backends and
   libraries raylibr does not use (see `data-raw/make_raylib_tarball.R` in
   the repository). Building it needs GNU make, OpenGL and, on Linux, X11
-  development libraries, as declared in SystemRequirements.
+  development libraries, as declared in SystemRequirements. On Linux,
+  `configure` checks for the needed X11 extension and OpenGL headers and
+  stops with a message naming the missing headers and the packages that
+  provide them.
 * raylib bundles several libraries (GLFW, miniaudio, stb, dr_libs and
   others). Their authors are listed in Authors@R with role "cph", and each
   library, its license and copyright are listed in `inst/COPYRIGHTS`.
