@@ -28,22 +28,22 @@ definition:
 ## See also
 
 Other float functions:
-[`float_clamp()`](https://jeroenjanssens.github.io/raylibr/reference/float_clamp.md),
-[`float_equals()`](https://jeroenjanssens.github.io/raylibr/reference/float_equals.md),
-[`float_lerp()`](https://jeroenjanssens.github.io/raylibr/reference/float_lerp.md),
-[`float_normalize()`](https://jeroenjanssens.github.io/raylibr/reference/float_normalize.md),
-[`float_remap()`](https://jeroenjanssens.github.io/raylibr/reference/float_remap.md),
-[`float_wrap()`](https://jeroenjanssens.github.io/raylibr/reference/float_wrap.md)
+[`float_clamp()`](https://raylibr.jeroenjanssens.com/reference/float_clamp.md),
+[`float_equals()`](https://raylibr.jeroenjanssens.com/reference/float_equals.md),
+[`float_lerp()`](https://raylibr.jeroenjanssens.com/reference/float_lerp.md),
+[`float_normalize()`](https://raylibr.jeroenjanssens.com/reference/float_normalize.md),
+[`float_remap()`](https://raylibr.jeroenjanssens.com/reference/float_remap.md),
+[`float_wrap()`](https://raylibr.jeroenjanssens.com/reference/float_wrap.md)
 
 Other to functions:
-[`color_to_hsv()`](https://jeroenjanssens.github.io/raylibr/reference/color_to_hsv.md),
-[`color_to_int()`](https://jeroenjanssens.github.io/raylibr/reference/color_to_int.md),
-[`text_to_camel()`](https://jeroenjanssens.github.io/raylibr/reference/text_to_camel.md),
-[`text_to_integer()`](https://jeroenjanssens.github.io/raylibr/reference/text_to_integer.md),
-[`text_to_lower()`](https://jeroenjanssens.github.io/raylibr/reference/text_to_lower.md),
-[`text_to_pascal()`](https://jeroenjanssens.github.io/raylibr/reference/text_to_pascal.md),
-[`text_to_snake()`](https://jeroenjanssens.github.io/raylibr/reference/text_to_snake.md),
-[`text_to_upper()`](https://jeroenjanssens.github.io/raylibr/reference/text_to_upper.md)
+[`color_to_hsv()`](https://raylibr.jeroenjanssens.com/reference/color_to_hsv.md),
+[`color_to_int()`](https://raylibr.jeroenjanssens.com/reference/color_to_int.md),
+[`text_to_camel()`](https://raylibr.jeroenjanssens.com/reference/text_to_camel.md),
+[`text_to_integer()`](https://raylibr.jeroenjanssens.com/reference/text_to_integer.md),
+[`text_to_lower()`](https://raylibr.jeroenjanssens.com/reference/text_to_lower.md),
+[`text_to_pascal()`](https://raylibr.jeroenjanssens.com/reference/text_to_pascal.md),
+[`text_to_snake()`](https://raylibr.jeroenjanssens.com/reference/text_to_snake.md),
+[`text_to_upper()`](https://raylibr.jeroenjanssens.com/reference/text_to_upper.md)
 
 ## Examples
 

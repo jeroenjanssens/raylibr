@@ -4,12 +4,12 @@ An interactive Julia set fractal viewer powered by a GLSL fragment
 shader: press keys 1–6 to jump between six classic points of interest,
 click and drag to pan, and scroll to zoom. The fractal is rendered into
 a `render_texture` each frame, then displayed via
-[`draw_texture_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_ex.md)
+[`draw_texture_ex()`](https://raylibr.jeroenjanssens.com/reference/draw_texture_ex.md)
 with the shader active. It exercises
-[`load_render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_render_texture.md),
-[`begin_texture_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_texture_mode.md),
+[`load_render_texture()`](https://raylibr.jeroenjanssens.com/reference/load_render_texture.md),
+[`begin_texture_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_texture_mode.md),
 `target$texture` field access,
-[`set_shader_value()`](https://jeroenjanssens.github.io/raylibr/reference/set_shader_value.md)
+[`set_shader_value()`](https://raylibr.jeroenjanssens.com/reference/set_shader_value.md)
 for per-frame uniforms, and mouse input.
 
 ## Try it

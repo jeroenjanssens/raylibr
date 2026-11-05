@@ -18,11 +18,11 @@ definition:
 ## See also
 
 Other recording functions:
-[`stop_automation_event_recording()`](https://jeroenjanssens.github.io/raylibr/reference/stop_automation_event_recording.md)
+[`stop_automation_event_recording()`](https://raylibr.jeroenjanssens.com/reference/stop_automation_event_recording.md)
 
 Other automation functions:
-[`set_automation_event_base_frame()`](https://jeroenjanssens.github.io/raylibr/reference/set_automation_event_base_frame.md),
-[`stop_automation_event_recording()`](https://jeroenjanssens.github.io/raylibr/reference/stop_automation_event_recording.md)
+[`set_automation_event_base_frame()`](https://raylibr.jeroenjanssens.com/reference/set_automation_event_base_frame.md),
+[`stop_automation_event_recording()`](https://raylibr.jeroenjanssens.com/reference/stop_automation_event_recording.md)
 
 ## Examples
 

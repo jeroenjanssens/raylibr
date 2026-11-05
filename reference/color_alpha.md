@@ -32,7 +32,7 @@ definition:
 ## See also
 
 Other alpha functions:
-[`color_alpha_blend()`](https://jeroenjanssens.github.io/raylibr/reference/color_alpha_blend.md)
+[`color_alpha_blend()`](https://raylibr.jeroenjanssens.com/reference/color_alpha_blend.md)
 
 ## Examples
 

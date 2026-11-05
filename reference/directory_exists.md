@@ -28,7 +28,7 @@ definition:
 ## See also
 
 Other exists functions:
-[`file_exists()`](https://jeroenjanssens.github.io/raylibr/reference/file_exists.md)
+[`file_exists()`](https://raylibr.jeroenjanssens.com/reference/file_exists.md)
 
 ## Examples
 

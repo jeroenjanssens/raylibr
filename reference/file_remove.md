@@ -28,7 +28,7 @@ definition:
 ## See also
 
 Other remove functions:
-[`text_remove_spaces()`](https://jeroenjanssens.github.io/raylibr/reference/text_remove_spaces.md)
+[`text_remove_spaces()`](https://raylibr.jeroenjanssens.com/reference/text_remove_spaces.md)
 
 ## Examples
 

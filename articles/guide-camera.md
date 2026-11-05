@@ -6,7 +6,7 @@ rotate your view of the scene.
 
 ## 2D camera
 
-[`camera_2d()`](https://jeroenjanssens.github.io/raylibr/reference/camera_2d.md)
+[`camera_2d()`](https://raylibr.jeroenjanssens.com/reference/camera_2d.md)
 creates a 2D camera with four properties:
 
 - **offset** — where the target appears on screen (in pixels)
@@ -15,9 +15,9 @@ creates a 2D camera with four properties:
 - **zoom** — magnification factor (1.0 = normal)
 
 Wrap your drawing calls in
-[`begin_mode_2d()`](https://jeroenjanssens.github.io/raylibr/reference/begin_mode_2d.md)
+[`begin_mode_2d()`](https://raylibr.jeroenjanssens.com/reference/begin_mode_2d.md)
 /
-[`end_mode_2d()`](https://jeroenjanssens.github.io/raylibr/reference/end_mode_2d.md)
+[`end_mode_2d()`](https://raylibr.jeroenjanssens.com/reference/end_mode_2d.md)
 to apply the camera transform. Anything drawn outside this block uses
 screen coordinates directly — useful for HUD elements.
 
@@ -32,7 +32,7 @@ end_mode_2d()
 draw_text("Zoom: 3x", 15L, 15L, 30L, "white")
 ```
 
-![Image rendered by raylibr](file5b843e80e4c4.png)
+![Image rendered by raylibr](file5b052d84c4f0.png)
 
 The rectangle and circles are drawn in world coordinates. The camera
 zooms in 3x and centers on `(100, 100)`, so they appear magnified. The
@@ -40,7 +40,7 @@ text is drawn outside the camera block, so it stays fixed on screen.
 
 ## 3D camera
 
-[`camera_3d()`](https://jeroenjanssens.github.io/raylibr/reference/camera_3d.md)
+[`camera_3d()`](https://raylibr.jeroenjanssens.com/reference/camera_3d.md)
 sets up a 3D perspective view:
 
 ``` r
@@ -56,9 +56,9 @@ cam <- camera_3d(
 
 All parameters except `position` have sensible defaults. Wrap 3D drawing
 in
-[`begin_mode_3d()`](https://jeroenjanssens.github.io/raylibr/reference/begin_mode_3d.md)
+[`begin_mode_3d()`](https://raylibr.jeroenjanssens.com/reference/begin_mode_3d.md)
 /
-[`end_mode_3d()`](https://jeroenjanssens.github.io/raylibr/reference/end_mode_3d.md):
+[`end_mode_3d()`](https://raylibr.jeroenjanssens.com/reference/end_mode_3d.md):
 
 ``` r
 
@@ -72,10 +72,10 @@ raylibr_screenshot(function() {
 })
 ```
 
-![Image rendered by raylibr](file5b847a808b0c.png)
+![Image rendered by raylibr](file5b05f44bf87.png)
 
 The helper
-[`raylibr_screenshot_3d()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_screenshot_3d.md)
+[`raylibr_screenshot_3d()`](https://raylibr.jeroenjanssens.com/reference/raylibr_screenshot_3d.md)
 provides a shortcut — it sets up a camera at `c(4, 4, 4)`, draws a grid,
 and wraps your drawing function automatically.
 
@@ -100,7 +100,7 @@ raylibr_screenshot(function() {
 })
 ```
 
-![Image rendered by raylibr](file5b8420fede39.png)
+![Image rendered by raylibr](file5b0552570383.png)
 
 ``` r
 
@@ -117,12 +117,12 @@ raylibr_screenshot(function() {
 })
 ```
 
-![Image rendered by raylibr](file5b841c4e899d.png)
+![Image rendered by raylibr](file5b0547d276f3.png)
 
 ## Built-in camera modes
 
 For interactive applications,
-[`update_camera()`](https://jeroenjanssens.github.io/raylibr/reference/update_camera.md)
+[`update_camera()`](https://raylibr.jeroenjanssens.com/reference/update_camera.md)
 provides four built-in control schemes:
 
 ``` r
@@ -136,7 +136,7 @@ update_camera(cam, camera_mode$first_person)  # FPS-style controls
 update_camera(cam, camera_mode$third_person)  # follow behind target
 ```
 
-[`update_camera()`](https://jeroenjanssens.github.io/raylibr/reference/update_camera.md)
+[`update_camera()`](https://raylibr.jeroenjanssens.com/reference/update_camera.md)
 modifies the camera in place — no need to reassign.
 
 ## Manual camera control

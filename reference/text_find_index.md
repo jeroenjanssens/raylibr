@@ -32,8 +32,8 @@ definition:
 ## See also
 
 Other index functions:
-[`file_text_find_index()`](https://jeroenjanssens.github.io/raylibr/reference/file_text_find_index.md),
-[`get_glyph_index()`](https://jeroenjanssens.github.io/raylibr/reference/get_glyph_index.md)
+[`file_text_find_index()`](https://raylibr.jeroenjanssens.com/reference/file_text_find_index.md),
+[`get_glyph_index()`](https://raylibr.jeroenjanssens.com/reference/get_glyph_index.md)
 
 ## Examples
 

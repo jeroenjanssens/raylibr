@@ -25,9 +25,9 @@ set_material_texture(material, map_type, texture)
 ## See also
 
 Other material functions:
-[`is_material_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_material_valid.md),
-[`load_material_default()`](https://jeroenjanssens.github.io/raylibr/reference/load_material_default.md),
-[`unload_material()`](https://jeroenjanssens.github.io/raylibr/reference/unload_material.md)
+[`is_material_valid()`](https://raylibr.jeroenjanssens.com/reference/is_material_valid.md),
+[`load_material_default()`](https://raylibr.jeroenjanssens.com/reference/load_material_default.md),
+[`unload_material()`](https://raylibr.jeroenjanssens.com/reference/unload_material.md)
 
 ## Examples
 

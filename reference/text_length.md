@@ -28,8 +28,8 @@ definition:
 ## See also
 
 Other length functions:
-[`get_file_length()`](https://jeroenjanssens.github.io/raylibr/reference/get_file_length.md),
-[`get_music_time_length()`](https://jeroenjanssens.github.io/raylibr/reference/get_music_time_length.md)
+[`get_file_length()`](https://raylibr.jeroenjanssens.com/reference/get_file_length.md),
+[`get_music_time_length()`](https://raylibr.jeroenjanssens.com/reference/get_music_time_length.md)
 
 ## Examples
 

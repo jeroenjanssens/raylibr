@@ -28,14 +28,14 @@ definition:
 ## See also
 
 Other to functions:
-[`color_to_hsv()`](https://jeroenjanssens.github.io/raylibr/reference/color_to_hsv.md),
-[`color_to_int()`](https://jeroenjanssens.github.io/raylibr/reference/color_to_int.md),
-[`text_to_camel()`](https://jeroenjanssens.github.io/raylibr/reference/text_to_camel.md),
-[`text_to_float()`](https://jeroenjanssens.github.io/raylibr/reference/text_to_float.md),
-[`text_to_integer()`](https://jeroenjanssens.github.io/raylibr/reference/text_to_integer.md),
-[`text_to_lower()`](https://jeroenjanssens.github.io/raylibr/reference/text_to_lower.md),
-[`text_to_snake()`](https://jeroenjanssens.github.io/raylibr/reference/text_to_snake.md),
-[`text_to_upper()`](https://jeroenjanssens.github.io/raylibr/reference/text_to_upper.md)
+[`color_to_hsv()`](https://raylibr.jeroenjanssens.com/reference/color_to_hsv.md),
+[`color_to_int()`](https://raylibr.jeroenjanssens.com/reference/color_to_int.md),
+[`text_to_camel()`](https://raylibr.jeroenjanssens.com/reference/text_to_camel.md),
+[`text_to_float()`](https://raylibr.jeroenjanssens.com/reference/text_to_float.md),
+[`text_to_integer()`](https://raylibr.jeroenjanssens.com/reference/text_to_integer.md),
+[`text_to_lower()`](https://raylibr.jeroenjanssens.com/reference/text_to_lower.md),
+[`text_to_snake()`](https://raylibr.jeroenjanssens.com/reference/text_to_snake.md),
+[`text_to_upper()`](https://raylibr.jeroenjanssens.com/reference/text_to_upper.md)
 
 ## Examples
 

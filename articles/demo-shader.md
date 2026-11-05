@@ -3,14 +3,14 @@
 A tiled starfield texture is warped by a GLSL wave distortion fragment
 shader, with frequency, amplitude, and speed parameters passed from R
 each frame via
-[`set_shader_value()`](https://jeroenjanssens.github.io/raylibr/reference/set_shader_value.md).
+[`set_shader_value()`](https://raylibr.jeroenjanssens.com/reference/set_shader_value.md).
 The demo shows the full shader workflow:
-[`load_shader()`](https://jeroenjanssens.github.io/raylibr/reference/load_shader.md),
-[`get_shader_location()`](https://jeroenjanssens.github.io/raylibr/reference/get_shader_location.md),
+[`load_shader()`](https://raylibr.jeroenjanssens.com/reference/load_shader.md),
+[`get_shader_location()`](https://raylibr.jeroenjanssens.com/reference/get_shader_location.md),
 per-frame uniform updates,
-[`begin_shader_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_shader_mode.md)
+[`begin_shader_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_shader_mode.md)
 /
-[`end_shader_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_shader_mode.md),
+[`end_shader_mode()`](https://raylibr.jeroenjanssens.com/reference/end_shader_mode.md),
 and accessing struct fields via `t$width` to tile the texture
 seamlessly.
 

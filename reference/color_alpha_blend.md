@@ -36,11 +36,11 @@ definition:
 ## See also
 
 Other blend functions:
-[`begin_blend_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_blend_mode.md),
-[`end_blend_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_blend_mode.md)
+[`begin_blend_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_blend_mode.md),
+[`end_blend_mode()`](https://raylibr.jeroenjanssens.com/reference/end_blend_mode.md)
 
 Other alpha functions:
-[`color_alpha()`](https://jeroenjanssens.github.io/raylibr/reference/color_alpha.md)
+[`color_alpha()`](https://raylibr.jeroenjanssens.com/reference/color_alpha.md)
 
 ## Examples
 

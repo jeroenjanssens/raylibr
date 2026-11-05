@@ -22,7 +22,7 @@
 - The demo assets (textures, fonts, sounds, shaders and the 3D model)
   are no longer installed with the package, which keeps it under CRAN’s
   size limit.
-  [`raylibr_resource()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_resource.md)
+  [`raylibr_resource()`](https://raylibr.jeroenjanssens.com/reference/raylibr_resource.md)
   downloads them on first use into a cache directory
   (`tools::R_user_dir("raylibr", "cache")`), or reads them from the
   directory in the `RAYLIBR_ASSETS` environment variable. Passing a
@@ -46,7 +46,7 @@
 
 ### Bug fixes
 
-- [`gen_image_checked()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_checked.md)
+- [`gen_image_checked()`](https://raylibr.jeroenjanssens.com/reference/gen_image_checked.md)
   now requires `checks_x` and `checks_y` to be positive. Zero crashed R
   with a floating point exception (integer division by zero) on Intel
   and AMD processors.
@@ -54,7 +54,7 @@
 - Functions that need an open window (drawing, `begin_*()`/`end_*()`,
   loading textures, shaders, fonts and models, raygui controls, and
   rlgl) now stop with an error such as
-  “[`draw_circle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle.md)
+  “[`draw_circle()`](https://raylibr.jeroenjanssens.com/reference/draw_circle.md)
   needs an open window” instead of crashing R when no window is open.
 
 - raygui now uses the font of the current window. It kept the font of
@@ -62,13 +62,13 @@
   window closes, so raygui text could disappear, text measurements could
   return garbage, and R could crash after opening several windows.
 
-- [`gui_scroll_panel()`](https://jeroenjanssens.github.io/raylibr/reference/gui_scroll_panel.md)
+- [`gui_scroll_panel()`](https://raylibr.jeroenjanssens.com/reference/gui_scroll_panel.md)
   now returns `view` as a rectangle, so `view$x` works and `view` can be
   passed back in on the next frame. It was a plain numeric vector with
   class `"raylibr_rectangle"`. `scroll` and `view` are now checked like
   the other arguments.
 
-- [`is_color()`](https://jeroenjanssens.github.io/raylibr/reference/is_color.md)
+- [`is_color()`](https://raylibr.jeroenjanssens.com/reference/is_color.md)
   now returns `TRUE` or `FALSE` for every input. It raised an error for
   lists with `r`, `g`, `b` and `a`, returned `NA` for `NA` and unnamed
   lists, and accepted fractional and out-of-range numbers such as `42.5`
@@ -85,10 +85,10 @@
 ### Breaking changes
 
 - [`transform()`](https://rdrr.io/r/base/transform.html) is now
-  [`raylib_transform()`](https://jeroenjanssens.github.io/raylibr/reference/raylib_transform.md),
+  [`raylib_transform()`](https://raylibr.jeroenjanssens.com/reference/raylib_transform.md),
   its objects have class `"raylib_transform"`, and `is_transform()` is
   now
-  [`is_raylib_transform()`](https://jeroenjanssens.github.io/raylibr/reference/is_raylib_transform.md).
+  [`is_raylib_transform()`](https://raylibr.jeroenjanssens.com/reference/is_raylib_transform.md).
   The old name masked
   [`base::transform()`](https://rdrr.io/r/base/transform.html) every
   time raylibr was attached, and the shared `"transform"` class made
@@ -97,14 +97,14 @@
   as `scale_x_log10()`. The Raylib struct itself is still called
   `Transform`.
 
-- [`raylibr_screenshot()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_screenshot.md)
+- [`raylibr_screenshot()`](https://raylibr.jeroenjanssens.com/reference/raylibr_screenshot.md)
   and
-  [`raylibr_screenshot_3d()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_screenshot_3d.md)
+  [`raylibr_screenshot_3d()`](https://raylibr.jeroenjanssens.com/reference/raylibr_screenshot_3d.md)
   now default to a 640x480 window (was 400x300).
 
 ### New features
 
-- [`export_html()`](https://jeroenjanssens.github.io/raylibr/reference/export_html.md)
+- [`export_html()`](https://raylibr.jeroenjanssens.com/reference/export_html.md)
   turns a raylibr script into a standalone webR page that runs in the
   browser.
 
@@ -113,9 +113,9 @@
 
 ### Improvements
 
-- [`raylibr_screenshot()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_screenshot.md)
+- [`raylibr_screenshot()`](https://raylibr.jeroenjanssens.com/reference/raylibr_screenshot.md)
   and
-  [`raylibr_screenshot_3d()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_screenshot_3d.md)
+  [`raylibr_screenshot_3d()`](https://raylibr.jeroenjanssens.com/reference/raylibr_screenshot_3d.md)
   capture at full pixel density on HiDPI displays, so images in R
   Markdown and on the website are sharp. In knitr output they are shown
   at their logical size, centered and without a caption.
@@ -125,19 +125,19 @@
 
 ### Bug fixes
 
-- [`load_shader_from_memory()`](https://jeroenjanssens.github.io/raylibr/reference/load_shader_from_memory.md)
+- [`load_shader_from_memory()`](https://raylibr.jeroenjanssens.com/reference/load_shader_from_memory.md)
   with `""` for the vertex shader now uses Raylib’s default vertex
   shader instead of silently falling back to the default shader, and
   `load_shader("", ...)` no longer logs a file-open warning.
 
 - In HiDPI windows, drawing inside
-  [`begin_mode_2d()`](https://jeroenjanssens.github.io/raylibr/reference/begin_mode_2d.md)
+  [`begin_mode_2d()`](https://raylibr.jeroenjanssens.com/reference/begin_mode_2d.md)
   now uses the correct scale.
 
 - Window flags set by
-  [`set_config_flags()`](https://jeroenjanssens.github.io/raylibr/reference/set_config_flags.md)
+  [`set_config_flags()`](https://raylibr.jeroenjanssens.com/reference/set_config_flags.md)
   (for example by
-  [`raylibr_screenshot()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_screenshot.md),
+  [`raylibr_screenshot()`](https://raylibr.jeroenjanssens.com/reference/raylibr_screenshot.md),
   which opens a hidden window) no longer carry over to windows opened
   later in the same session.
 

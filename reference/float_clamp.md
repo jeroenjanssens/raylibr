@@ -29,12 +29,12 @@ A number
 ## See also
 
 Other float functions:
-[`float_equals()`](https://jeroenjanssens.github.io/raylibr/reference/float_equals.md),
-[`float_lerp()`](https://jeroenjanssens.github.io/raylibr/reference/float_lerp.md),
-[`float_normalize()`](https://jeroenjanssens.github.io/raylibr/reference/float_normalize.md),
-[`float_remap()`](https://jeroenjanssens.github.io/raylibr/reference/float_remap.md),
-[`float_wrap()`](https://jeroenjanssens.github.io/raylibr/reference/float_wrap.md),
-[`text_to_float()`](https://jeroenjanssens.github.io/raylibr/reference/text_to_float.md)
+[`float_equals()`](https://raylibr.jeroenjanssens.com/reference/float_equals.md),
+[`float_lerp()`](https://raylibr.jeroenjanssens.com/reference/float_lerp.md),
+[`float_normalize()`](https://raylibr.jeroenjanssens.com/reference/float_normalize.md),
+[`float_remap()`](https://raylibr.jeroenjanssens.com/reference/float_remap.md),
+[`float_wrap()`](https://raylibr.jeroenjanssens.com/reference/float_wrap.md),
+[`text_to_float()`](https://raylibr.jeroenjanssens.com/reference/text_to_float.md)
 
 ## Examples
 

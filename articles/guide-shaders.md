@@ -36,9 +36,9 @@ shader <- load_shader_from_memory("", fs_code)
 ## Using shaders
 
 Wrap your drawing calls in
-[`begin_shader_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_shader_mode.md)
+[`begin_shader_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_shader_mode.md)
 /
-[`end_shader_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_shader_mode.md):
+[`end_shader_mode()`](https://raylibr.jeroenjanssens.com/reference/end_shader_mode.md):
 
 ``` r
 
@@ -64,14 +64,14 @@ set_shader_value(shader, loc, c(1, 0, 0))    # vec3
 set_shader_value(shader, loc, c(1, 0, 0, 1)) # vec4
 ```
 
-[`set_shader_value()`](https://jeroenjanssens.github.io/raylibr/reference/set_shader_value.md)
+[`set_shader_value()`](https://raylibr.jeroenjanssens.com/reference/set_shader_value.md)
 automatically picks the right GLSL type based on the length of the R
 vector.
 
 For matrices, use
-[`set_shader_value_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/set_shader_value_matrix.md).
+[`set_shader_value_matrix()`](https://raylibr.jeroenjanssens.com/reference/set_shader_value_matrix.md).
 For textures, use
-[`set_shader_value_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_shader_value_texture.md).
+[`set_shader_value_texture()`](https://raylibr.jeroenjanssens.com/reference/set_shader_value_texture.md).
 
 ## Post-processing pattern
 
@@ -139,11 +139,11 @@ Without a shader, the scene looks like this:
 draw_scene()
 ```
 
-![Image rendered by raylibr](file5efd2f51c861.png)
+![Image rendered by raylibr](file5e7c3ac1f649.png)
 
 raylibr ships with a collection of post-processing shaders from the
 Raylib examples, which you can find with
-[`raylibr_resource()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_resource.md).
+[`raylibr_resource()`](https://raylibr.jeroenjanssens.com/reference/raylibr_resource.md).
 
 ### Grayscale
 
@@ -156,7 +156,7 @@ shader <- load_shader("", raylibr_resource("model/grayscale.fs"))
 post_process(shader)
 ```
 
-![Image rendered by raylibr](file5efd6d7e8ba5.png)
+![Image rendered by raylibr](file5e7c315c8ac2.png)
 
 ### Pixelation
 
@@ -171,7 +171,7 @@ set_shader_value(shader, get_shader_location(shader, "pixelHeight"), 10)
 post_process(shader)
 ```
 
-![Image rendered by raylibr](file5efd42e2539c.png)
+![Image rendered by raylibr](file5e7c52644b1f.png)
 
 ### Edge detection
 
@@ -183,7 +183,7 @@ shader <- load_shader("", raylibr_resource("model/sobel.fs"))
 post_process(shader)
 ```
 
-![Image rendered by raylibr](file5efd7ca5ba86.png)
+![Image rendered by raylibr](file5e7c7806be1d.png)
 
 ### Thermal vision
 
@@ -195,7 +195,7 @@ shader <- load_shader("", raylibr_resource("model/predator.fs"))
 post_process(shader)
 ```
 
-![Image rendered by raylibr](file5efd35fdb714.png)
+![Image rendered by raylibr](file5e7c76d11131.png)
 
 ### Fisheye
 
@@ -208,7 +208,7 @@ shader <- load_shader("", raylibr_resource("model/fisheye.fs"))
 post_process(shader)
 ```
 
-![Image rendered by raylibr](file5efd117b2bfa.png)
+![Image rendered by raylibr](file5e7c156740a2.png)
 
 ### Writing your own
 
@@ -232,11 +232,11 @@ shader <- load_shader_from_memory("", fs_code)
 post_process(shader)
 ```
 
-![Image rendered by raylibr](file5efd5d54ad25.png)
+![Image rendered by raylibr](file5e7c6d45ce6f.png)
 
 In a real program, load shaders once before the game loop and free them
 with
-[`unload_shader()`](https://jeroenjanssens.github.io/raylibr/reference/unload_shader.md)
+[`unload_shader()`](https://raylibr.jeroenjanssens.com/reference/unload_shader.md)
 afterwards.
 
 ## Further reading
@@ -244,8 +244,8 @@ afterwards.
 See these demos for more advanced shader usage:
 
 - [Shader
-  Stars](https://jeroenjanssens.github.io/raylibr/articles/demo-shader.md)
-  — animated GLSL fragment shader with uniform updates each frame
+  Stars](https://raylibr.jeroenjanssens.com/articles/demo-shader.md) —
+  animated GLSL fragment shader with uniform updates each frame
 - [Julia
-  Sets](https://jeroenjanssens.github.io/raylibr/articles/demo-julia.md)
-  — fractal rendering with mouse-driven zoom via shader uniforms
+  Sets](https://raylibr.jeroenjanssens.com/articles/demo-julia.md) —
+  fractal rendering with mouse-driven zoom via shader uniforms

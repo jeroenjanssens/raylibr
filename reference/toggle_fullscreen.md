@@ -19,7 +19,7 @@ definition:
 ## See also
 
 Other fullscreen functions:
-[`is_window_fullscreen()`](https://jeroenjanssens.github.io/raylibr/reference/is_window_fullscreen.md)
+[`is_window_fullscreen()`](https://raylibr.jeroenjanssens.com/reference/is_window_fullscreen.md)
 
 ## Examples
 

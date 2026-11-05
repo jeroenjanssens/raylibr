@@ -40,9 +40,9 @@ run_game_loop(
 ```
 
 For text input, use
-[`get_key_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/get_key_pressed.md)
+[`get_key_pressed()`](https://raylibr.jeroenjanssens.com/reference/get_key_pressed.md)
 to consume queued key events or
-[`get_char_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/get_char_pressed.md)
+[`get_char_pressed()`](https://raylibr.jeroenjanssens.com/reference/get_char_pressed.md)
 for Unicode characters:
 
 ``` r
@@ -56,7 +56,7 @@ while (char_code > 0L) {
 
 By default, pressing Escape closes the window. Change or disable this
 with
-[`set_exit_key()`](https://jeroenjanssens.github.io/raylibr/reference/set_exit_key.md):
+[`set_exit_key()`](https://raylibr.jeroenjanssens.com/reference/set_exit_key.md):
 
 ``` r
 
@@ -146,7 +146,6 @@ if (is_gesture_detected(4L)) {
 ## See also
 
 For complete interactive input examples, see the [Mouse
-Test](https://jeroenjanssens.github.io/raylibr/articles/demo-mouse.md)
-and
-[Snake](https://jeroenjanssens.github.io/raylibr/articles/demo-snake.md)
+Test](https://raylibr.jeroenjanssens.com/articles/demo-mouse.md) and
+[Snake](https://raylibr.jeroenjanssens.com/articles/demo-snake.md)
 demos.

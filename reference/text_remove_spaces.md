@@ -28,7 +28,7 @@ definition:
 ## See also
 
 Other remove functions:
-[`file_remove()`](https://jeroenjanssens.github.io/raylibr/reference/file_remove.md)
+[`file_remove()`](https://raylibr.jeroenjanssens.com/reference/file_remove.md)
 
 ## Examples
 

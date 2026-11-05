@@ -36,7 +36,7 @@ definition:
 ## See also
 
 Other insert functions:
-[`text_insert_alloc()`](https://jeroenjanssens.github.io/raylibr/reference/text_insert_alloc.md)
+[`text_insert_alloc()`](https://raylibr.jeroenjanssens.com/reference/text_insert_alloc.md)
 
 ## Examples
 

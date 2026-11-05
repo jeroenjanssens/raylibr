@@ -4,7 +4,7 @@ Creates a hidden window, calls the supplied drawing function on a black
 background, and returns the captured framebuffer as an `image` object.
 The image auto-displays in knitr documents (like ggplot2 plots) and can
 be saved with
-[`export_image()`](https://jeroenjanssens.github.io/raylibr/reference/export_image.md).
+[`export_image()`](https://raylibr.jeroenjanssens.com/reference/export_image.md).
 
 ## Usage
 

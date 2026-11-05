@@ -28,9 +28,9 @@ definition:
 ## See also
 
 Other from functions:
-[`color_from_hsv()`](https://jeroenjanssens.github.io/raylibr/reference/color_from_hsv.md),
-[`image_from_channel()`](https://jeroenjanssens.github.io/raylibr/reference/image_from_channel.md),
-[`image_from_image()`](https://jeroenjanssens.github.io/raylibr/reference/image_from_image.md)
+[`color_from_hsv()`](https://raylibr.jeroenjanssens.com/reference/color_from_hsv.md),
+[`image_from_channel()`](https://raylibr.jeroenjanssens.com/reference/image_from_channel.md),
+[`image_from_image()`](https://raylibr.jeroenjanssens.com/reference/image_from_image.md)
 
 ## Examples
 

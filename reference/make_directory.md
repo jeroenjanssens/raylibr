@@ -29,12 +29,12 @@ definition:
 ## See also
 
 Other directory functions:
-[`change_directory()`](https://jeroenjanssens.github.io/raylibr/reference/change_directory.md),
-[`get_application_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_application_directory.md),
-[`get_directory_file_count()`](https://jeroenjanssens.github.io/raylibr/reference/get_directory_file_count.md),
-[`get_directory_file_count_ex()`](https://jeroenjanssens.github.io/raylibr/reference/get_directory_file_count_ex.md),
-[`get_directory_path()`](https://jeroenjanssens.github.io/raylibr/reference/get_directory_path.md),
-[`get_working_directory()`](https://jeroenjanssens.github.io/raylibr/reference/get_working_directory.md)
+[`change_directory()`](https://raylibr.jeroenjanssens.com/reference/change_directory.md),
+[`get_application_directory()`](https://raylibr.jeroenjanssens.com/reference/get_application_directory.md),
+[`get_directory_file_count()`](https://raylibr.jeroenjanssens.com/reference/get_directory_file_count.md),
+[`get_directory_file_count_ex()`](https://raylibr.jeroenjanssens.com/reference/get_directory_file_count_ex.md),
+[`get_directory_path()`](https://raylibr.jeroenjanssens.com/reference/get_directory_path.md),
+[`get_working_directory()`](https://raylibr.jeroenjanssens.com/reference/get_working_directory.md)
 
 ## Examples
 

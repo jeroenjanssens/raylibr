@@ -4,7 +4,7 @@ A showcase of raygui’s immediate-mode GUI widgets: a button, toggle,
 checkbox, sliders, a progress bar, combo box, spinner, text input, a hue
 color bar, and a status bar — all live and interactive. The background
 color shifts with the hue slider via
-[`color_from_hsv()`](https://jeroenjanssens.github.io/raylibr/reference/color_from_hsv.md).
+[`color_from_hsv()`](https://raylibr.jeroenjanssens.com/reference/color_from_hsv.md).
 This demo covers the output-pointer pattern used by raygui controls,
 where each call returns a list with a `result` code and the updated
 control value.

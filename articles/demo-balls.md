@@ -3,7 +3,7 @@
 One thousand balls with random sizes, positions, velocities, and colors
 bounce around a window with simple wall-collision physics. The entire
 frame is rendered in two vectorized calls —
-[`draw_circle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle.md)
+[`draw_circle()`](https://raylibr.jeroenjanssens.com/reference/draw_circle.md)
 receives numeric vectors for all positions, sizes, and colors at once —
 demonstrating how raylibr’s C++-level vectorization keeps R code concise
 while maintaining high frame rates.

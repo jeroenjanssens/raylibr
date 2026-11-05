@@ -6,7 +6,7 @@ and spacing.
 
 ## Simple text
 
-[`draw_text()`](https://jeroenjanssens.github.io/raylibr/reference/draw_text.md)
+[`draw_text()`](https://raylibr.jeroenjanssens.com/reference/draw_text.md)
 is the quickest way to put text on screen. Pass the string, position,
 font size (integer), and color.
 
@@ -18,14 +18,14 @@ draw_text("Large (60)", 30L, 145L, 60L, "yellow")
 draw_text("Huge (90)", 30L, 240L, 90L, "tomato")
 ```
 
-![Image rendered by raylibr](file5f8264cf2ed4.png)
+![Image rendered by raylibr](file5f01b0526b4.png)
 
 The default font is a built-in bitmap font included with Raylib.
 
 ## Custom fonts
 
 For higher quality text, load a TTF or OTF font with
-[`load_font_ex()`](https://jeroenjanssens.github.io/raylibr/reference/load_font_ex.md):
+[`load_font_ex()`](https://raylibr.jeroenjanssens.com/reference/load_font_ex.md):
 
 ``` r
 
@@ -34,13 +34,13 @@ draw_text_ex(font, "Custom font!", c(100, 100), 32.0, 2.0, "white")
 unload_font(font)
 ```
 
-[`draw_text_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_text_ex.md)
+[`draw_text_ex()`](https://raylibr.jeroenjanssens.com/reference/draw_text_ex.md)
 takes a font object, text, position (Vector2), font size (float),
 character spacing, and color.
 
 ## Rotated text
 
-[`draw_text_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_text_pro.md)
+[`draw_text_pro()`](https://raylibr.jeroenjanssens.com/reference/draw_text_pro.md)
 adds rotation and an origin point. The origin is relative to the
 top-left of the text and determines the pivot for rotation.
 
@@ -54,14 +54,14 @@ draw_text_pro(font, "-30 degrees", c(240, 190), c(0, 0), -30.0, 30.0, 3.0, as_co
 draw_circle(240L, 190L, 6.0, "red")
 ```
 
-![Image rendered by raylibr](file5f8260a5702b.png)
+![Image rendered by raylibr](file5f01357931e4.png)
 
 The red dot marks the shared origin point. Each string fans out from
 there at a different angle.
 
 ## Measuring text
 
-[`measure_text()`](https://jeroenjanssens.github.io/raylibr/reference/measure_text.md)
+[`measure_text()`](https://raylibr.jeroenjanssens.com/reference/measure_text.md)
 returns the width of a string in pixels at a given font size. Use it to
 center text:
 
@@ -75,14 +75,14 @@ draw_text(text, x, 210L, size, "gold")
 draw_line(320L, 0L, 320L, 480L, "darkgray")
 ```
 
-![Image rendered by raylibr](file5f822d7cbe23.png)
+![Image rendered by raylibr](file5f014350d91b.png)
 
 For custom fonts, use `measure_text_ex(font, text, font_size, spacing)`
 which returns a Vector2 with both width and height.
 
 ## Line spacing
 
-[`set_text_line_spacing()`](https://jeroenjanssens.github.io/raylibr/reference/set_text_line_spacing.md)
+[`set_text_line_spacing()`](https://raylibr.jeroenjanssens.com/reference/set_text_line_spacing.md)
 controls the vertical distance between lines when drawing multi-line
 strings (strings containing `\n`):
 

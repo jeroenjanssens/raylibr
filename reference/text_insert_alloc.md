@@ -36,11 +36,11 @@ definition:
 ## See also
 
 Other alloc functions:
-[`text_replace_alloc()`](https://jeroenjanssens.github.io/raylibr/reference/text_replace_alloc.md),
-[`text_replace_between_alloc()`](https://jeroenjanssens.github.io/raylibr/reference/text_replace_between_alloc.md)
+[`text_replace_alloc()`](https://raylibr.jeroenjanssens.com/reference/text_replace_alloc.md),
+[`text_replace_between_alloc()`](https://raylibr.jeroenjanssens.com/reference/text_replace_between_alloc.md)
 
 Other insert functions:
-[`text_insert()`](https://jeroenjanssens.github.io/raylibr/reference/text_insert.md)
+[`text_insert()`](https://raylibr.jeroenjanssens.com/reference/text_insert.md)
 
 ## Examples
 

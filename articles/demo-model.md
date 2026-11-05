@@ -4,13 +4,13 @@ Loads a textured OBJ church model and renders it to a `render_texture`,
 then applies one of eleven post-processing fragment shaders (grayscale,
 blur, pixelizer, cross-hatching, sobel, and more) via left/right arrow
 keys. It demonstrates
-[`load_model()`](https://jeroenjanssens.github.io/raylibr/reference/load_model.md),
-[`set_model_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_model_texture.md),
-[`update_camera()`](https://jeroenjanssens.github.io/raylibr/reference/update_camera.md)
+[`load_model()`](https://raylibr.jeroenjanssens.com/reference/load_model.md),
+[`set_model_texture()`](https://raylibr.jeroenjanssens.com/reference/set_model_texture.md),
+[`update_camera()`](https://raylibr.jeroenjanssens.com/reference/update_camera.md)
 for orbital movement,
-[`begin_texture_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_texture_mode.md)
+[`begin_texture_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_texture_mode.md)
 for off-screen rendering,
-[`draw_texture_rec()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_rec.md)
+[`draw_texture_rec()`](https://raylibr.jeroenjanssens.com/reference/draw_texture_rec.md)
 with a flipped rectangle to correct the render texture’s Y axis, and
 `target$texture` field access.
 

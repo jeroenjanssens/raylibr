@@ -40,13 +40,13 @@ definition:
 ## See also
 
 Other between functions:
-[`get_text_between()`](https://jeroenjanssens.github.io/raylibr/reference/get_text_between.md)
+[`get_text_between()`](https://raylibr.jeroenjanssens.com/reference/get_text_between.md)
 
 Other replace functions:
-[`file_text_replace()`](https://jeroenjanssens.github.io/raylibr/reference/file_text_replace.md),
-[`text_replace()`](https://jeroenjanssens.github.io/raylibr/reference/text_replace.md),
-[`text_replace_alloc()`](https://jeroenjanssens.github.io/raylibr/reference/text_replace_alloc.md),
-[`text_replace_between_alloc()`](https://jeroenjanssens.github.io/raylibr/reference/text_replace_between_alloc.md)
+[`file_text_replace()`](https://raylibr.jeroenjanssens.com/reference/file_text_replace.md),
+[`text_replace()`](https://raylibr.jeroenjanssens.com/reference/text_replace.md),
+[`text_replace_alloc()`](https://raylibr.jeroenjanssens.com/reference/text_replace_alloc.md),
+[`text_replace_between_alloc()`](https://raylibr.jeroenjanssens.com/reference/text_replace_between_alloc.md)
 
 ## Examples
 

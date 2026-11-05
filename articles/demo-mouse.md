@@ -2,18 +2,18 @@
 
 A grid of dots that react to the mouse cursor: each dot moves away from
 the pointer proportional to proximity, and its color shifts with
-[`color_from_hsv()`](https://jeroenjanssens.github.io/raylibr/reference/color_from_hsv.md)
+[`color_from_hsv()`](https://raylibr.jeroenjanssens.com/reference/color_from_hsv.md)
 based on how far it was pushed. This demo exercises mouse input
-([`get_mouse_position()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_position.md),
-[`is_cursor_on_screen()`](https://jeroenjanssens.github.io/raylibr/reference/is_cursor_on_screen.md),
-[`set_mouse_cursor()`](https://jeroenjanssens.github.io/raylibr/reference/set_mouse_cursor.md)),
+([`get_mouse_position()`](https://raylibr.jeroenjanssens.com/reference/get_mouse_position.md),
+[`is_cursor_on_screen()`](https://raylibr.jeroenjanssens.com/reference/is_cursor_on_screen.md),
+[`set_mouse_cursor()`](https://raylibr.jeroenjanssens.com/reference/set_mouse_cursor.md)),
 raymath functions
-([`vector2_distance()`](https://jeroenjanssens.github.io/raylibr/reference/vector2_distance.md),
-[`vector2_move_towards()`](https://jeroenjanssens.github.io/raylibr/reference/vector2_move_towards.md)),
+([`vector2_distance()`](https://raylibr.jeroenjanssens.com/reference/vector2_distance.md),
+[`vector2_move_towards()`](https://raylibr.jeroenjanssens.com/reference/vector2_move_towards.md)),
 and
-[`draw_circle_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle_v.md)
+[`draw_circle_v()`](https://raylibr.jeroenjanssens.com/reference/draw_circle_v.md)
 /
-[`draw_line_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_line_v.md)
+[`draw_line_v()`](https://raylibr.jeroenjanssens.com/reference/draw_line_v.md)
 for rendering.
 
 ## Try it

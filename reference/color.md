@@ -45,9 +45,9 @@ definition:
 ## See also
 
 Other color functions:
-[`gen_image_color()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_color.md),
-[`get_color()`](https://jeroenjanssens.github.io/raylibr/reference/get_color.md),
-[`get_image_color()`](https://jeroenjanssens.github.io/raylibr/reference/get_image_color.md)
+[`gen_image_color()`](https://raylibr.jeroenjanssens.com/reference/gen_image_color.md),
+[`get_color()`](https://raylibr.jeroenjanssens.com/reference/get_color.md),
+[`get_image_color()`](https://raylibr.jeroenjanssens.com/reference/get_image_color.md)
 
 ## Examples
 

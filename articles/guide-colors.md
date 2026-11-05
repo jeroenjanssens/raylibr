@@ -32,7 +32,7 @@ for (i in seq_along(colors)) {
 }
 ```
 
-![Image rendered by raylibr](file5be971d2605e.png)
+![Image rendered by raylibr](file5b6a3421f272.png)
 
 This includes all of
 [`colors()`](https://rdrr.io/r/grDevices/colors.html) from base R —
@@ -52,7 +52,7 @@ col$a
 ```
 
 Convert from other representations with
-[`as_color()`](https://jeroenjanssens.github.io/raylibr/reference/as_color.md):
+[`as_color()`](https://raylibr.jeroenjanssens.com/reference/as_color.md):
 
 ``` r
 
@@ -64,7 +64,7 @@ as_color(0xFF6347FF)
 
 ## Transparency
 
-[`color_alpha()`](https://jeroenjanssens.github.io/raylibr/reference/color_alpha.md)
+[`color_alpha()`](https://raylibr.jeroenjanssens.com/reference/color_alpha.md)
 creates a transparent version of any color. The alpha ranges from 0
 (invisible) to 1 (opaque):
 
@@ -77,11 +77,11 @@ draw_circle(280L, 290L, 125.0, color_alpha("mediumseagreen", 0.5))
 draw_circle(360L, 290L, 125.0, color_alpha("orchid", 0.5))
 ```
 
-![Image rendered by raylibr](file5be91805f156.png)
+![Image rendered by raylibr](file5b6a431c6f58.png)
 
-[`fade()`](https://jeroenjanssens.github.io/raylibr/reference/fade.md)
-does the same thing as
-[`color_alpha()`](https://jeroenjanssens.github.io/raylibr/reference/color_alpha.md)
+[`fade()`](https://raylibr.jeroenjanssens.com/reference/fade.md) does
+the same thing as
+[`color_alpha()`](https://raylibr.jeroenjanssens.com/reference/color_alpha.md)
 — both set the alpha channel.
 
 ## Color manipulation
@@ -119,7 +119,7 @@ for (i in 0:9) {
 }
 ```
 
-![Image rendered by raylibr](file5be953b01636.png)
+![Image rendered by raylibr](file5b6a1c1ba78b.png)
 
 - `color_brightness(color, factor)` — lighten (positive) or darken
   (negative)
@@ -128,7 +128,7 @@ for (i in 0:9) {
 
 ## HSV color space
 
-[`color_from_hsv()`](https://jeroenjanssens.github.io/raylibr/reference/color_from_hsv.md)
+[`color_from_hsv()`](https://raylibr.jeroenjanssens.com/reference/color_from_hsv.md)
 creates colors from hue (0–360), saturation (0–1), and value (0–1). This
 is great for generating color ramps:
 
@@ -156,10 +156,10 @@ for (i in 0:(n - 1L)) {
 }
 ```
 
-![Image rendered by raylibr](file5be935edbcb7.png)
+![Image rendered by raylibr](file5b6a3d896631.png)
 
 Convert back with
-[`color_to_hsv()`](https://jeroenjanssens.github.io/raylibr/reference/color_to_hsv.md):
+[`color_to_hsv()`](https://raylibr.jeroenjanssens.com/reference/color_to_hsv.md):
 
 ``` r
 
@@ -170,7 +170,7 @@ color_to_hsv("tomato")
 
 ## Interpolation
 
-[`color_lerp()`](https://jeroenjanssens.github.io/raylibr/reference/color_lerp.md)
+[`color_lerp()`](https://raylibr.jeroenjanssens.com/reference/color_lerp.md)
 blends between two colors. Use it to create smooth gradients:
 
 ``` r
@@ -203,8 +203,8 @@ for (i in 0:(n - 1L)) {
 }
 ```
 
-![Image rendered by raylibr](file5be977a964c8.png)
+![Image rendered by raylibr](file5b6a169f7b3b.png)
 
-[`color_alpha_blend()`](https://jeroenjanssens.github.io/raylibr/reference/color_alpha_blend.md)
+[`color_alpha_blend()`](https://raylibr.jeroenjanssens.com/reference/color_alpha_blend.md)
 blends a foreground color over a background, respecting the foreground’s
 alpha channel — useful for compositing.

@@ -5,17 +5,17 @@ mouse look, textured walls, depth-based fog, and an optional top-down
 debug view showing the live ray grid. The renderer fires a configurable
 number of rays per frame using vectorized R arithmetic, then draws all
 wall slices in a single
-[`draw_texture_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_pro.md)
+[`draw_texture_pro()`](https://raylibr.jeroenjanssens.com/reference/draw_texture_pro.md)
 call with per-slice source/destination rectangles and tint colors. It
 demonstrates advanced use of
-[`draw_texture_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_pro.md)
+[`draw_texture_pro()`](https://raylibr.jeroenjanssens.com/reference/draw_texture_pro.md)
 vectorization,
-[`load_font_ex()`](https://jeroenjanssens.github.io/raylibr/reference/load_font_ex.md),
-[`draw_text_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_text_ex.md)
+[`load_font_ex()`](https://raylibr.jeroenjanssens.com/reference/load_font_ex.md),
+[`draw_text_ex()`](https://raylibr.jeroenjanssens.com/reference/draw_text_ex.md)
 for multi-line HUD text,
-[`toggle_fullscreen()`](https://jeroenjanssens.github.io/raylibr/reference/toggle_fullscreen.md),
+[`toggle_fullscreen()`](https://raylibr.jeroenjanssens.com/reference/toggle_fullscreen.md),
 and
-[`set_window_state()`](https://jeroenjanssens.github.io/raylibr/reference/set_window_state.md).
+[`set_window_state()`](https://raylibr.jeroenjanssens.com/reference/set_window_state.md).
 
 ![](../reference/figures/raylibr-demo-raycaster.gif)
 

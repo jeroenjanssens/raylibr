@@ -28,8 +28,8 @@ definition:
 ## See also
 
 Other copy functions:
-[`file_copy()`](https://jeroenjanssens.github.io/raylibr/reference/file_copy.md),
-[`image_copy()`](https://jeroenjanssens.github.io/raylibr/reference/image_copy.md)
+[`file_copy()`](https://raylibr.jeroenjanssens.com/reference/file_copy.md),
+[`image_copy()`](https://raylibr.jeroenjanssens.com/reference/image_copy.md)
 
 ## Examples
 

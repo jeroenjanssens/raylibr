@@ -10,13 +10,12 @@ pak::pak("jeroenjanssens/raylibr")
 ```
 
 raylibr works on macOS, Linux, and Windows. It also runs in the browser
-via
-[webR](https://jeroenjanssens.github.io/raylibr/articles/guide-webr.md).
+via [webR](https://raylibr.jeroenjanssens.com/articles/guide-webr.md).
 
 ## Your first image
 
 The quickest way to see raylibr in action is
-[`raylibr_screenshot()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_screenshot.md).
+[`raylibr_screenshot()`](https://raylibr.jeroenjanssens.com/reference/raylibr_screenshot.md).
 It creates a hidden window, runs your drawing code, and returns the
 result as an image:
 
@@ -27,13 +26,13 @@ raylibr_screenshot(function() {
 })
 ```
 
-![Image rendered by raylibr](file5d721d79bfcb.png)
+![Image rendered by raylibr](file5cf413fedf41.png)
 
 The default canvas is 640x480 pixels with a black background. Everything
 you draw appears on top.
 
 From here on, snippets show only the drawing code — each one runs inside
-[`raylibr_screenshot()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_screenshot.md)
+[`raylibr_screenshot()`](https://raylibr.jeroenjanssens.com/reference/raylibr_screenshot.md)
 automatically:
 
 ``` r
@@ -47,7 +46,7 @@ draw_triangle(
 draw_text("raylibr", 235L, 345L, 50L, "white")
 ```
 
-![Image rendered by raylibr](file5d7217fbec37.png)
+![Image rendered by raylibr](file5cf47e3f272b.png)
 
 ## The game loop
 
@@ -73,7 +72,7 @@ close_window()
 
 For code that needs to work both on desktop and in the browser (via
 webR), use
-[`run_game_loop()`](https://jeroenjanssens.github.io/raylibr/reference/run_game_loop.md)
+[`run_game_loop()`](https://raylibr.jeroenjanssens.com/reference/run_game_loop.md)
 instead of a `while` loop:
 
 ``` r
@@ -98,7 +97,7 @@ run_game_loop(
 raylibr follows a few consistent conventions:
 
 **snake_case names.** Raylib’s `DrawCircle()` becomes
-[`draw_circle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle.md).
+[`draw_circle()`](https://raylibr.jeroenjanssens.com/reference/draw_circle.md).
 
 **Integers need `L`.** Width, height, pixel coordinates, and font sizes
 are integers. Write `200L`, not `200`.
@@ -106,7 +105,7 @@ are integers. Write `200L`, not `200`.
 **R color names work everywhere.** Any function that takes a color
 accepts R’s 657 built-in color names: `"red"`, `"steelblue"`,
 `"grey90"`, etc. See the
-[Colors](https://jeroenjanssens.github.io/raylibr/articles/guide-colors.md)
+[Colors](https://raylibr.jeroenjanssens.com/articles/guide-colors.md)
 guide for details.
 
 **Vectors map to R numerics.** A Raylib `Vector2` is `c(x, y)`, a
@@ -134,12 +133,12 @@ bb$min
 ```
 
 Other constructors include
-[`color()`](https://jeroenjanssens.github.io/raylibr/reference/color.md),
-[`ray()`](https://jeroenjanssens.github.io/raylibr/reference/ray.md),
-[`camera_2d()`](https://jeroenjanssens.github.io/raylibr/reference/camera_2d.md),
-[`ray_collision()`](https://jeroenjanssens.github.io/raylibr/reference/ray_collision.md),
+[`color()`](https://raylibr.jeroenjanssens.com/reference/color.md),
+[`ray()`](https://raylibr.jeroenjanssens.com/reference/ray.md),
+[`camera_2d()`](https://raylibr.jeroenjanssens.com/reference/camera_2d.md),
+[`ray_collision()`](https://raylibr.jeroenjanssens.com/reference/ray_collision.md),
 and
-[`raylib_transform()`](https://jeroenjanssens.github.io/raylibr/reference/raylib_transform.md)
+[`raylib_transform()`](https://raylibr.jeroenjanssens.com/reference/raylib_transform.md)
 (named this way so it does not mask
 [`base::transform()`](https://rdrr.io/r/base/transform.html)).
 
@@ -175,30 +174,30 @@ or `is_key_pressed(key$space)`.
 ## What’s next
 
 - [Drawing 2D
-  Shapes](https://jeroenjanssens.github.io/raylibr/articles/guide-drawing-2d.md)
+  Shapes](https://raylibr.jeroenjanssens.com/articles/guide-drawing-2d.md)
   — circles, rectangles, lines, and more
 - [Drawing
-  3D](https://jeroenjanssens.github.io/raylibr/articles/guide-drawing-3d.md)
-  — cubes, spheres, and cameras
-- [Colors](https://jeroenjanssens.github.io/raylibr/articles/guide-colors.md)
+  3D](https://raylibr.jeroenjanssens.com/articles/guide-drawing-3d.md) —
+  cubes, spheres, and cameras
+- [Colors](https://raylibr.jeroenjanssens.com/articles/guide-colors.md)
   — R color names, transparency, HSV, and blending
 - [Text &
-  Fonts](https://jeroenjanssens.github.io/raylibr/articles/guide-text.md)
-  — rendering text and loading custom fonts
+  Fonts](https://raylibr.jeroenjanssens.com/articles/guide-text.md) —
+  rendering text and loading custom fonts
 - [Images &
-  Textures](https://jeroenjanssens.github.io/raylibr/articles/guide-images.md)
+  Textures](https://raylibr.jeroenjanssens.com/articles/guide-images.md)
   — loading, generating, and drawing images
-- [Input](https://jeroenjanssens.github.io/raylibr/articles/guide-input.md)
-  — keyboard, mouse, and gamepad
-- [Audio](https://jeroenjanssens.github.io/raylibr/articles/guide-audio.md)
-  — sound effects and music
-- [Camera](https://jeroenjanssens.github.io/raylibr/articles/guide-camera.md)
+- [Input](https://raylibr.jeroenjanssens.com/articles/guide-input.md) —
+  keyboard, mouse, and gamepad
+- [Audio](https://raylibr.jeroenjanssens.com/articles/guide-audio.md) —
+  sound effects and music
+- [Camera](https://raylibr.jeroenjanssens.com/articles/guide-camera.md)
   — 2D and 3D camera systems
-- [Shaders](https://jeroenjanssens.github.io/raylibr/articles/guide-shaders.md)
+- [Shaders](https://raylibr.jeroenjanssens.com/articles/guide-shaders.md)
   — GLSL shaders and post-processing
-- [raygui](https://jeroenjanssens.github.io/raylibr/articles/guide-raygui.md)
+- [raygui](https://raylibr.jeroenjanssens.com/articles/guide-raygui.md)
   — immediate-mode GUI widgets
-- [raymath](https://jeroenjanssens.github.io/raylibr/articles/guide-raymath.md)
+- [raymath](https://raylibr.jeroenjanssens.com/articles/guide-raymath.md)
   — vector, matrix, and quaternion math
-- [webR](https://jeroenjanssens.github.io/raylibr/articles/guide-webr.md)
-  — running raylibr in the browser
+- [webR](https://raylibr.jeroenjanssens.com/articles/guide-webr.md) —
+  running raylibr in the browser

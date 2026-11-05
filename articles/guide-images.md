@@ -27,7 +27,7 @@ for (i in seq_along(imgs)) {
 }
 ```
 
-![Image rendered by raylibr](file5dc4ed9527a.png)
+![Image rendered by raylibr](file5d43416d2be6.png)
 
 Top-left: checkerboard (`gen_image_checked`). Top-right: linear gradient
 (`gen_image_gradient_linear`). Bottom-left: Perlin noise
@@ -35,16 +35,16 @@ Top-left: checkerboard (`gen_image_checked`). Top-right: linear gradient
 (`gen_image_cellular`).
 
 Other generators include
-[`gen_image_color()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_color.md),
-[`gen_image_gradient_radial()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_gradient_radial.md),
-[`gen_image_gradient_square()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_gradient_square.md),
+[`gen_image_color()`](https://raylibr.jeroenjanssens.com/reference/gen_image_color.md),
+[`gen_image_gradient_radial()`](https://raylibr.jeroenjanssens.com/reference/gen_image_gradient_radial.md),
+[`gen_image_gradient_square()`](https://raylibr.jeroenjanssens.com/reference/gen_image_gradient_square.md),
 and
-[`gen_image_white_noise()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_white_noise.md).
+[`gen_image_white_noise()`](https://raylibr.jeroenjanssens.com/reference/gen_image_white_noise.md).
 
 ## Loading images
 
 Load an image from a file with
-[`load_image()`](https://jeroenjanssens.github.io/raylibr/reference/load_image.md):
+[`load_image()`](https://raylibr.jeroenjanssens.com/reference/load_image.md):
 
 ``` r
 
@@ -68,16 +68,16 @@ channel <- image_from_channel(img, 0L)
 ```
 
 You can also draw onto images with
-[`image_draw_line_ex()`](https://jeroenjanssens.github.io/raylibr/reference/image_draw_line_ex.md)
+[`image_draw_line_ex()`](https://raylibr.jeroenjanssens.com/reference/image_draw_line_ex.md)
 and
-[`image_draw_triangle()`](https://jeroenjanssens.github.io/raylibr/reference/image_draw_triangle.md).
+[`image_draw_triangle()`](https://raylibr.jeroenjanssens.com/reference/image_draw_triangle.md).
 
 ## Drawing textures
 
 Convert an image to a texture with
-[`load_texture_from_image()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture_from_image.md),
+[`load_texture_from_image()`](https://raylibr.jeroenjanssens.com/reference/load_texture_from_image.md),
 or load directly with
-[`load_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture.md):
+[`load_texture()`](https://raylibr.jeroenjanssens.com/reference/load_texture.md):
 
 ``` r
 
@@ -95,23 +95,23 @@ draw_texture_pro(
 )
 ```
 
-![Image rendered by raylibr](file5dc42a0f3783.png)
+![Image rendered by raylibr](file5d4341ab0fbf.png)
 
-- [`draw_texture()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture.md)
+- [`draw_texture()`](https://raylibr.jeroenjanssens.com/reference/draw_texture.md)
   draws at a position with a tint color
-- [`draw_texture_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_ex.md)
+- [`draw_texture_ex()`](https://raylibr.jeroenjanssens.com/reference/draw_texture_ex.md)
   adds rotation and scale
-- [`draw_texture_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_pro.md)
+- [`draw_texture_pro()`](https://raylibr.jeroenjanssens.com/reference/draw_texture_pro.md)
   gives full control: source rectangle, destination rectangle, origin,
   and rotation
 
 The image can be unloaded as soon as it has been uploaded as a texture.
 The texture itself must stay loaded until the frame has been drawn:
 Raylib collects draw calls in a batch and only sends them to the GPU at
-[`end_drawing()`](https://jeroenjanssens.github.io/raylibr/reference/end_drawing.md),
+[`end_drawing()`](https://raylibr.jeroenjanssens.com/reference/end_drawing.md),
 so a texture unloaded before then is drawn as nothing. In a game loop,
 load textures before the loop and call
-[`unload_texture()`](https://jeroenjanssens.github.io/raylibr/reference/unload_texture.md)
+[`unload_texture()`](https://raylibr.jeroenjanssens.com/reference/unload_texture.md)
 after it. In these snippets the screenshot window is closed right after
 the frame, which releases the textures with it.
 

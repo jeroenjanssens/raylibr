@@ -4,13 +4,13 @@ An implementation of the classic Stroop psychological experiment: press
 any key to display a color word (e.g. “red”) rendered in a *different*
 color (e.g. blue), challenging the brain’s automatic reading response.
 It demonstrates
-[`load_font_ex()`](https://jeroenjanssens.github.io/raylibr/reference/load_font_ex.md)
+[`load_font_ex()`](https://raylibr.jeroenjanssens.com/reference/load_font_ex.md)
 for custom fonts,
-[`measure_text_ex()`](https://jeroenjanssens.github.io/raylibr/reference/measure_text_ex.md)
+[`measure_text_ex()`](https://raylibr.jeroenjanssens.com/reference/measure_text_ex.md)
 and
-[`draw_text_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_text_ex.md)
+[`draw_text_ex()`](https://raylibr.jeroenjanssens.com/reference/draw_text_ex.md)
 for precise text layout, and
-[`get_key_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/get_key_pressed.md)
+[`get_key_pressed()`](https://raylibr.jeroenjanssens.com/reference/get_key_pressed.md)
 for input handling.
 
 ## Try it

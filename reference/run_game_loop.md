@@ -16,7 +16,7 @@ run_game_loop(update_fn, init_fn = NULL, cleanup_fn = NULL)
 - update_fn:
 
   A function called once per frame. Should contain
-  [`begin_drawing()`](https://jeroenjanssens.github.io/raylibr/reference/begin_drawing.md)/[`end_drawing()`](https://jeroenjanssens.github.io/raylibr/reference/end_drawing.md)
+  [`begin_drawing()`](https://raylibr.jeroenjanssens.com/reference/begin_drawing.md)/[`end_drawing()`](https://raylibr.jeroenjanssens.com/reference/end_drawing.md)
   calls.
 
 - init_fn:
@@ -26,7 +26,7 @@ run_game_loop(update_fn, init_fn = NULL, cleanup_fn = NULL)
 - cleanup_fn:
 
   Optional function called after the loop ends (e.g., to call
-  [`close_window()`](https://jeroenjanssens.github.io/raylibr/reference/close_window.md)).
+  [`close_window()`](https://raylibr.jeroenjanssens.com/reference/close_window.md)).
 
 ## Examples
 

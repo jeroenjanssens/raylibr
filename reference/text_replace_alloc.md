@@ -36,14 +36,14 @@ definition:
 ## See also
 
 Other alloc functions:
-[`text_insert_alloc()`](https://jeroenjanssens.github.io/raylibr/reference/text_insert_alloc.md),
-[`text_replace_between_alloc()`](https://jeroenjanssens.github.io/raylibr/reference/text_replace_between_alloc.md)
+[`text_insert_alloc()`](https://raylibr.jeroenjanssens.com/reference/text_insert_alloc.md),
+[`text_replace_between_alloc()`](https://raylibr.jeroenjanssens.com/reference/text_replace_between_alloc.md)
 
 Other replace functions:
-[`file_text_replace()`](https://jeroenjanssens.github.io/raylibr/reference/file_text_replace.md),
-[`text_replace()`](https://jeroenjanssens.github.io/raylibr/reference/text_replace.md),
-[`text_replace_between()`](https://jeroenjanssens.github.io/raylibr/reference/text_replace_between.md),
-[`text_replace_between_alloc()`](https://jeroenjanssens.github.io/raylibr/reference/text_replace_between_alloc.md)
+[`file_text_replace()`](https://raylibr.jeroenjanssens.com/reference/file_text_replace.md),
+[`text_replace()`](https://raylibr.jeroenjanssens.com/reference/text_replace.md),
+[`text_replace_between()`](https://raylibr.jeroenjanssens.com/reference/text_replace_between.md),
+[`text_replace_between_alloc()`](https://raylibr.jeroenjanssens.com/reference/text_replace_between_alloc.md)
 
 ## Examples
 

@@ -7,8 +7,7 @@ client-side — no server required.
 
 ## Detecting webR
 
-Use
-[`is_web()`](https://jeroenjanssens.github.io/raylibr/reference/is_web.md)
+Use [`is_web()`](https://raylibr.jeroenjanssens.com/reference/is_web.md)
 to check whether your code is running under Emscripten/webR:
 
 ``` r
@@ -24,7 +23,7 @@ if (is_web()) {
 
 On desktop, R can use a blocking `while` loop. In the browser, blocking
 the thread would freeze the page.
-[`run_game_loop()`](https://jeroenjanssens.github.io/raylibr/reference/run_game_loop.md)
+[`run_game_loop()`](https://raylibr.jeroenjanssens.com/reference/run_game_loop.md)
 handles both cases:
 
 ``` r
@@ -50,7 +49,7 @@ browser’s event loop stay responsive.
 
 ## JavaScript interop
 
-[`eval_js()`](https://jeroenjanssens.github.io/raylibr/reference/eval_js.md)
+[`eval_js()`](https://raylibr.jeroenjanssens.com/reference/eval_js.md)
 executes JavaScript from R, useful for browser-specific features:
 
 ``` r
@@ -246,7 +245,7 @@ headers but is slower.
 - **One instance per page** (the Worker monkey-patch captures a single
   worker reference)
 - **No native file system** — use
-  [`raylibr_resource()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_resource.md)
+  [`raylibr_resource()`](https://raylibr.jeroenjanssens.com/reference/raylibr_resource.md)
   for bundled assets
 
 ## Audio

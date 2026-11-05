@@ -23,11 +23,11 @@ gui_check_box(rectangle(65, 235, 30, 30), "Enable sound", TRUE)
 gui_button(rectangle(225, 330, 160, 65), "Apply")
 ```
 
-![Image rendered by raylibr](file5e4b5624194b.png)
+![Image rendered by raylibr](file5dca471e6af6.png)
 
 ## Buttons and labels
 
-[`gui_button()`](https://jeroenjanssens.github.io/raylibr/reference/gui_button.md)
+[`gui_button()`](https://raylibr.jeroenjanssens.com/reference/gui_button.md)
 draws a clickable button and returns `TRUE` when clicked:
 
 ``` r
@@ -37,9 +37,9 @@ if (gui_button(rectangle(100, 100, 120, 40), "Click me")) {
 }
 ```
 
-[`gui_label()`](https://jeroenjanssens.github.io/raylibr/reference/gui_label.md)
+[`gui_label()`](https://raylibr.jeroenjanssens.com/reference/gui_label.md)
 draws static text.
-[`gui_label_button()`](https://jeroenjanssens.github.io/raylibr/reference/gui_label_button.md)
+[`gui_label_button()`](https://raylibr.jeroenjanssens.com/reference/gui_label_button.md)
 is a clickable text label.
 
 ## Toggles and checkboxes
@@ -54,13 +54,13 @@ gui_check_box(rectangle(65, 290, 30, 30), "Fullscreen", FALSE)
 gui_check_box(rectangle(65, 340, 30, 30), "VSync", TRUE)
 ```
 
-![Image rendered by raylibr](file5e4b3b6cc73c.png)
+![Image rendered by raylibr](file5dca599e3fa8.png)
 
-[`gui_toggle()`](https://jeroenjanssens.github.io/raylibr/reference/gui_toggle.md)
+[`gui_toggle()`](https://raylibr.jeroenjanssens.com/reference/gui_toggle.md)
 returns the new active state.
-[`gui_toggle_group()`](https://jeroenjanssens.github.io/raylibr/reference/gui_toggle_group.md)
+[`gui_toggle_group()`](https://raylibr.jeroenjanssens.com/reference/gui_toggle_group.md)
 shows multiple options and returns the selected index.
-[`gui_check_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_check_box.md)
+[`gui_check_box()`](https://raylibr.jeroenjanssens.com/reference/gui_check_box.md)
 returns the new checked state.
 
 ## Sliders and progress bars
@@ -74,20 +74,20 @@ gui_progress_bar(rectangle(65, 195, 480, 30), "", "75%", 0.75, 0, 1)
 gui_spinner(rectangle(65, 260, 240, 50), "", 42L, 0L, 100L, FALSE)
 ```
 
-![Image rendered by raylibr](file5e4b6c488bf6.png)
+![Image rendered by raylibr](file5dca39a50dc.png)
 
-[`gui_slider()`](https://jeroenjanssens.github.io/raylibr/reference/gui_slider.md)
+[`gui_slider()`](https://raylibr.jeroenjanssens.com/reference/gui_slider.md)
 and
-[`gui_slider_bar()`](https://jeroenjanssens.github.io/raylibr/reference/gui_slider_bar.md)
+[`gui_slider_bar()`](https://raylibr.jeroenjanssens.com/reference/gui_slider_bar.md)
 return the new value.
-[`gui_progress_bar()`](https://jeroenjanssens.github.io/raylibr/reference/gui_progress_bar.md)
+[`gui_progress_bar()`](https://raylibr.jeroenjanssens.com/reference/gui_progress_bar.md)
 is display-only.
-[`gui_spinner()`](https://jeroenjanssens.github.io/raylibr/reference/gui_spinner.md)
+[`gui_spinner()`](https://raylibr.jeroenjanssens.com/reference/gui_spinner.md)
 shows a value with +/- buttons.
 
 ## Text input
 
-[`gui_text_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_text_box.md)
+[`gui_text_box()`](https://raylibr.jeroenjanssens.com/reference/gui_text_box.md)
 renders an editable text field. The `edit_mode` parameter controls
 whether it’s active for input:
 
@@ -96,9 +96,9 @@ whether it’s active for input:
 text <- gui_text_box(rectangle(40, 40, 200, 30), text, 256L, edit_mode)
 ```
 
-[`gui_combo_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_combo_box.md)
+[`gui_combo_box()`](https://raylibr.jeroenjanssens.com/reference/gui_combo_box.md)
 shows a dropdown-style selector,
-[`gui_dropdown_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_dropdown_box.md)
+[`gui_dropdown_box()`](https://raylibr.jeroenjanssens.com/reference/gui_dropdown_box.md)
 shows an expandable list.
 
 ## Color controls
@@ -110,13 +110,13 @@ gui_color_bar_hue(rectangle(448, 80, 48, 320), "", 120)
 gui_color_bar_alpha(rectangle(528, 80, 48, 320), "", 0.7)
 ```
 
-![Image rendered by raylibr](file5e4b42628b8c.png)
+![Image rendered by raylibr](file5dca632a41a3.png)
 
-[`gui_color_picker()`](https://jeroenjanssens.github.io/raylibr/reference/gui_color_picker.md)
+[`gui_color_picker()`](https://raylibr.jeroenjanssens.com/reference/gui_color_picker.md)
 returns a color.
-[`gui_color_bar_hue()`](https://jeroenjanssens.github.io/raylibr/reference/gui_color_bar_hue.md)
+[`gui_color_bar_hue()`](https://raylibr.jeroenjanssens.com/reference/gui_color_bar_hue.md)
 returns a hue value (0-360).
-[`gui_color_bar_alpha()`](https://jeroenjanssens.github.io/raylibr/reference/gui_color_bar_alpha.md)
+[`gui_color_bar_alpha()`](https://raylibr.jeroenjanssens.com/reference/gui_color_bar_alpha.md)
 returns an alpha value (0-1).
 
 ## Containers
@@ -131,7 +131,7 @@ returns an alpha value (0-1).
 ## Styling
 
 Customize the look of controls with
-[`gui_set_style()`](https://jeroenjanssens.github.io/raylibr/reference/gui_set_style.md):
+[`gui_set_style()`](https://raylibr.jeroenjanssens.com/reference/gui_set_style.md):
 
 ``` r
 
@@ -158,5 +158,5 @@ gui_unlock()
 ## Further reading
 
 See the [GUI Controls
-demo](https://jeroenjanssens.github.io/raylibr/articles/demo-gui.md) for
-a complete interactive example with all major control types.
+demo](https://raylibr.jeroenjanssens.com/articles/demo-gui.md) for a
+complete interactive example with all major control types.

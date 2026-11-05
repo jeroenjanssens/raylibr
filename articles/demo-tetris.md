@@ -7,17 +7,16 @@ playfield is an integer matrix, so collision checks and line clears are
 plain matrix indexing (`board[cells]`,
 [`rowSums()`](https://rdrr.io/r/base/colSums.html)), and every cell on
 the board is drawn with a single vectorized
-[`draw_rectangle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_rectangle.md)
+[`draw_rectangle()`](https://raylibr.jeroenjanssens.com/reference/draw_rectangle.md)
 call. It demonstrates combining
-[`get_key_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/get_key_pressed.md)
+[`get_key_pressed()`](https://raylibr.jeroenjanssens.com/reference/get_key_pressed.md)
 for one-shot actions with
-[`is_key_down()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_down.md)
+[`is_key_down()`](https://raylibr.jeroenjanssens.com/reference/is_key_down.md)
 for held keys (delayed auto shift and soft drop), frame-rate independent
 timing with
-[`get_frame_time()`](https://jeroenjanssens.github.io/raylibr/reference/get_frame_time.md),
-and
-[`fade()`](https://jeroenjanssens.github.io/raylibr/reference/fade.md)
-for semi-transparent overlays.
+[`get_frame_time()`](https://raylibr.jeroenjanssens.com/reference/get_frame_time.md),
+and [`fade()`](https://raylibr.jeroenjanssens.com/reference/fade.md) for
+semi-transparent overlays.
 
 ![Tetris gameplay](../reference/figures/raylibr-demo-tetris.gif)
 

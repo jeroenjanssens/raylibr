@@ -41,20 +41,20 @@ files, building, testing, the website and demo assets.
 
 - **Audio functions without an audio device (untested, may crash).**
   Sound, music and audio-stream functions likely crash R when
-  [`init_audio_device()`](https://jeroenjanssens.github.io/raylibr/reference/init_audio_device.md)
+  [`init_audio_device()`](https://raylibr.jeroenjanssens.com/reference/init_audio_device.md)
   hasn’t been called, the same way drawing functions crashed without a
   window. A guard like the window guard (section 2.1) would fix it. Not
   investigated; needs testing with real sound objects.
 - **Name overlaps (decision: keep).**
   - raylibr’s `key` enum hides data.table’s
-    [`key()`](https://jeroenjanssens.github.io/raylibr/reference/key.md)
-    if data.table is attached *before* raylibr; attached *after*,
+    [`key()`](https://raylibr.jeroenjanssens.com/reference/key.md) if
+    data.table is attached *before* raylibr; attached *after*,
     `key$space` breaks. `key(dt)` keeps working either way.
-  - [`file_exists()`](https://jeroenjanssens.github.io/raylibr/reference/file_exists.md),
-    [`file_copy()`](https://jeroenjanssens.github.io/raylibr/reference/file_copy.md),
-    [`file_move()`](https://jeroenjanssens.github.io/raylibr/reference/file_move.md)
+  - [`file_exists()`](https://raylibr.jeroenjanssens.com/reference/file_exists.md),
+    [`file_copy()`](https://raylibr.jeroenjanssens.com/reference/file_copy.md),
+    [`file_move()`](https://raylibr.jeroenjanssens.com/reference/file_move.md)
     and
-    [`file_rename()`](https://jeroenjanssens.github.io/raylibr/reference/file_rename.md)
+    [`file_rename()`](https://raylibr.jeroenjanssens.com/reference/file_rename.md)
     overlap with fs/xfun. Maintainer decided to keep exporting all 27
     file helpers.
   - The `color` class clash with colorspace is fixed (section 2.4), so
@@ -62,7 +62,7 @@ files, building, testing, the website and demo assets.
 - **452 help pages still have `@examplesIf FALSE`.** They’re functions
   that need a window, audio, files or GPU objects. Possible improvement:
   handwrite examples that wrap them in
-  [`raylibr_screenshot()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_screenshot.md).
+  [`raylibr_screenshot()`](https://raylibr.jeroenjanssens.com/reference/raylibr_screenshot.md).
 - **`-Wextra` warnings in raygui** (missing field initializers). R and
   CRAN don’t use `-Wextra`, so they are left as upstream wrote them.
 - **“Array buffer allocation failed”** appeared in headless Chrome for
@@ -85,9 +85,9 @@ NEWS.md; the important design decisions:
 
 Functions that need an OpenGL context or a GLFW window used to crash R
 (segfault or GLFW assertion) without a window. Now they stop with
-“[`draw_circle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle.md)
+“[`draw_circle()`](https://raylibr.jeroenjanssens.com/reference/draw_circle.md)
 needs an open window. Call
-[`init_window()`](https://jeroenjanssens.github.io/raylibr/reference/init_window.md)
+[`init_window()`](https://raylibr.jeroenjanssens.com/reference/init_window.md)
 first.” - `needs_window()` in `data-raw/generate.R` holds the name
 rules. The generated wrappers call `raylibr_require_window()` (in
 `src/raylibr.h`). 21 hand-written wrappers in `src/manual_wrappers.cpp`
@@ -112,7 +112,7 @@ call from R is about 16 µs).
   with an integer-division sanitizer build.
 - **Demo assets** moved from `inst/demo_resources/` to `assets/`, which
   is excluded from the package.
-  [`raylibr_resource()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_resource.md)
+  [`raylibr_resource()`](https://raylibr.jeroenjanssens.com/reference/raylibr_resource.md)
   downloads them on first use into
   `tools::R_user_dir("raylibr", "cache")`. It tries the `v<version>` tag
   first, then `main` (development versions with four version components
@@ -149,20 +149,20 @@ call from R is about 16 µs).
 ### 2.3 Other fixes
 
 - [`transform()`](https://rdrr.io/r/base/transform.html) was renamed to
-  [`raylib_transform()`](https://jeroenjanssens.github.io/raylibr/reference/raylib_transform.md)
+  [`raylib_transform()`](https://raylibr.jeroenjanssens.com/reference/raylib_transform.md)
   (class `"raylib_transform"`). It hid
   [`base::transform()`](https://rdrr.io/r/base/transform.html) and broke
   ggplot2 scales. **Only Transform was renamed**: the maintainer
   rejected renaming all classes.
-- [`gen_image_checked()`](https://jeroenjanssens.github.io/raylibr/reference/gen_image_checked.md)
+- [`gen_image_checked()`](https://raylibr.jeroenjanssens.com/reference/gen_image_checked.md)
   requires positive check sizes. Zero crashed R with SIGFPE on x86 (ARM
   returns 0, so macOS didn’t show it).
-- [`gui_scroll_panel()`](https://jeroenjanssens.github.io/raylibr/reference/gui_scroll_panel.md)
+- [`gui_scroll_panel()`](https://raylibr.jeroenjanssens.com/reference/gui_scroll_panel.md)
   returns a real rectangle for `view`.
-- [`is_color()`](https://jeroenjanssens.github.io/raylibr/reference/is_color.md)
+- [`is_color()`](https://raylibr.jeroenjanssens.com/reference/is_color.md)
   returns `TRUE`/`FALSE` for every input.
 - raygui resets its font in
-  [`init_window()`](https://jeroenjanssens.github.io/raylibr/reference/init_window.md).
+  [`init_window()`](https://raylibr.jeroenjanssens.com/reference/init_window.md).
   It kept the first window’s freed font, so text vanished, sizes were
   garbage, and R could crash.
 - `load_shader*("")` passes NULL to Raylib.

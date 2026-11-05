@@ -28,7 +28,7 @@ definition:
 ## See also
 
 Other exists functions:
-[`directory_exists()`](https://jeroenjanssens.github.io/raylibr/reference/directory_exists.md)
+[`directory_exists()`](https://raylibr.jeroenjanssens.com/reference/directory_exists.md)
 
 ## Examples
 

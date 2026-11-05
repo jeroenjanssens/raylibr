@@ -24,9 +24,9 @@ definition:
 ## See also
 
 Other time functions:
-[`get_file_mod_time()`](https://jeroenjanssens.github.io/raylibr/reference/get_file_mod_time.md),
-[`get_frame_time()`](https://jeroenjanssens.github.io/raylibr/reference/get_frame_time.md),
-[`get_time()`](https://jeroenjanssens.github.io/raylibr/reference/get_time.md)
+[`get_file_mod_time()`](https://raylibr.jeroenjanssens.com/reference/get_file_mod_time.md),
+[`get_frame_time()`](https://raylibr.jeroenjanssens.com/reference/get_frame_time.md),
+[`get_time()`](https://raylibr.jeroenjanssens.com/reference/get_time.md)
 
 ## Examples
 

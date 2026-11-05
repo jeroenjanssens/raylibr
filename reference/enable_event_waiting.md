@@ -18,10 +18,10 @@ definition:
 ## See also
 
 Other waiting functions:
-[`disable_event_waiting()`](https://jeroenjanssens.github.io/raylibr/reference/disable_event_waiting.md)
+[`disable_event_waiting()`](https://raylibr.jeroenjanssens.com/reference/disable_event_waiting.md)
 
 Other event functions:
-[`disable_event_waiting()`](https://jeroenjanssens.github.io/raylibr/reference/disable_event_waiting.md)
+[`disable_event_waiting()`](https://raylibr.jeroenjanssens.com/reference/disable_event_waiting.md)
 
 ## Examples
 

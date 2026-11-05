@@ -3,17 +3,17 @@
 Press letter keys to trigger individual percussion sound samples; each
 keystroke plays the corresponding WAV file and spawns a floating label
 that fades out over 30 frames. The demo shows
-[`load_sound()`](https://jeroenjanssens.github.io/raylibr/reference/load_sound.md)
+[`load_sound()`](https://raylibr.jeroenjanssens.com/reference/load_sound.md)
 /
-[`play_sound()`](https://jeroenjanssens.github.io/raylibr/reference/play_sound.md)
+[`play_sound()`](https://raylibr.jeroenjanssens.com/reference/play_sound.md)
 for one-shot audio,
-[`load_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture.md)
+[`load_texture()`](https://raylibr.jeroenjanssens.com/reference/load_texture.md)
 /
-[`draw_texture()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture.md)
+[`draw_texture()`](https://raylibr.jeroenjanssens.com/reference/draw_texture.md)
 for a background image,
-[`fade()`](https://jeroenjanssens.github.io/raylibr/reference/fade.md)
-for decaying text opacity, and
-[`draw_text()`](https://jeroenjanssens.github.io/raylibr/reference/draw_text.md)
+[`fade()`](https://raylibr.jeroenjanssens.com/reference/fade.md) for
+decaying text opacity, and
+[`draw_text()`](https://raylibr.jeroenjanssens.com/reference/draw_text.md)
 called inside a loop to stack multiple simultaneous labels.
 
 ![](../reference/figures/raylibr-demo-beatbox.gif)

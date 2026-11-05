@@ -32,19 +32,19 @@ export_html(
 - title:
 
   Page title. Auto-detected from
-  [`init_window()`](https://jeroenjanssens.github.io/raylibr/reference/init_window.md)
+  [`init_window()`](https://raylibr.jeroenjanssens.com/reference/init_window.md)
   if not specified.
 
 - width:
 
   Canvas width in pixels. Auto-detected from
-  [`init_window()`](https://jeroenjanssens.github.io/raylibr/reference/init_window.md)
+  [`init_window()`](https://raylibr.jeroenjanssens.com/reference/init_window.md)
   if not specified.
 
 - height:
 
   Canvas height in pixels. Auto-detected from
-  [`init_window()`](https://jeroenjanssens.github.io/raylibr/reference/init_window.md)
+  [`init_window()`](https://raylibr.jeroenjanssens.com/reference/init_window.md)
   if not specified.
 
 - background:
@@ -70,27 +70,27 @@ webR package built with `inst/wasm/build-webr.sh`.
 Input features are detected by scanning the R code:
 
 - Mouse position:
-  [`get_mouse_position()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_position.md),
+  [`get_mouse_position()`](https://raylibr.jeroenjanssens.com/reference/get_mouse_position.md),
   etc.
 
 - Mouse buttons:
-  [`is_mouse_button_down()`](https://jeroenjanssens.github.io/raylibr/reference/is_mouse_button_down.md),
+  [`is_mouse_button_down()`](https://raylibr.jeroenjanssens.com/reference/is_mouse_button_down.md),
   etc.
 
 - Keyboard (one-shot):
-  [`get_key_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/get_key_pressed.md),
-  [`is_key_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_pressed.md)
+  [`get_key_pressed()`](https://raylibr.jeroenjanssens.com/reference/get_key_pressed.md),
+  [`is_key_pressed()`](https://raylibr.jeroenjanssens.com/reference/is_key_pressed.md)
 
 - Keyboard (held):
-  [`is_key_down()`](https://jeroenjanssens.github.io/raylibr/reference/is_key_down.md)
+  [`is_key_down()`](https://raylibr.jeroenjanssens.com/reference/is_key_down.md)
 
 - Text input:
-  [`gui_text_box()`](https://jeroenjanssens.github.io/raylibr/reference/gui_text_box.md),
-  [`get_char_pressed()`](https://jeroenjanssens.github.io/raylibr/reference/get_char_pressed.md)
+  [`gui_text_box()`](https://raylibr.jeroenjanssens.com/reference/gui_text_box.md),
+  [`get_char_pressed()`](https://raylibr.jeroenjanssens.com/reference/get_char_pressed.md)
 
 - Audio:
-  [`init_audio_device()`](https://jeroenjanssens.github.io/raylibr/reference/init_audio_device.md),
-  [`load_sound()`](https://jeroenjanssens.github.io/raylibr/reference/load_sound.md),
+  [`init_audio_device()`](https://raylibr.jeroenjanssens.com/reference/init_audio_device.md),
+  [`load_sound()`](https://raylibr.jeroenjanssens.com/reference/load_sound.md),
   etc.
 
 Key mappings are built automatically from `key$...` references in the

@@ -33,7 +33,7 @@ definition:
 ## See also
 
 Other move functions:
-[`get_mouse_wheel_move()`](https://jeroenjanssens.github.io/raylibr/reference/get_mouse_wheel_move.md)
+[`get_mouse_wheel_move()`](https://raylibr.jeroenjanssens.com/reference/get_mouse_wheel_move.md)
 
 ## Examples
 

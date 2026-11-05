@@ -78,15 +78,15 @@ draw_line_ex(c(ox, oy), c(ox + ab[1]*s, oy - ab[2]*s), 5.0, "green")
 draw_text("a+b", as.integer(ox + ab[1]*s + 8), as.integer(oy - ab[2]*s), 30L, "green")
 ```
 
-![Image rendered by raylibr](file5eaf4ca0dd04.png)
+![Image rendered by raylibr](file5e2e525a1496.png)
 
 Other useful Vector2 functions:
-[`vector2_scale()`](https://jeroenjanssens.github.io/raylibr/reference/vector2_scale.md),
-[`vector2_multiply()`](https://jeroenjanssens.github.io/raylibr/reference/vector2_multiply.md),
-[`vector2_negate()`](https://jeroenjanssens.github.io/raylibr/reference/vector2_negate.md),
-[`vector2_reflect()`](https://jeroenjanssens.github.io/raylibr/reference/vector2_reflect.md),
-[`vector2_clamp()`](https://jeroenjanssens.github.io/raylibr/reference/vector2_clamp.md),
-[`vector2_move_towards()`](https://jeroenjanssens.github.io/raylibr/reference/vector2_move_towards.md).
+[`vector2_scale()`](https://raylibr.jeroenjanssens.com/reference/vector2_scale.md),
+[`vector2_multiply()`](https://raylibr.jeroenjanssens.com/reference/vector2_multiply.md),
+[`vector2_negate()`](https://raylibr.jeroenjanssens.com/reference/vector2_negate.md),
+[`vector2_reflect()`](https://raylibr.jeroenjanssens.com/reference/vector2_reflect.md),
+[`vector2_clamp()`](https://raylibr.jeroenjanssens.com/reference/vector2_clamp.md),
+[`vector2_move_towards()`](https://raylibr.jeroenjanssens.com/reference/vector2_move_towards.md).
 
 ## Vector3 operations
 
@@ -107,7 +107,7 @@ vector3_normalize(c(1, 2, 2))
 #> 0.3333333 0.6666667 0.6666667
 ```
 
-[`vector3_cross_product()`](https://jeroenjanssens.github.io/raylibr/reference/vector3_cross_product.md)
+[`vector3_cross_product()`](https://raylibr.jeroenjanssens.com/reference/vector3_cross_product.md)
 returns a vector perpendicular to both inputs — essential for computing
 surface normals and orientation.
 
@@ -121,15 +121,15 @@ draw_cube(pos, 1, 1, 1, "blue")
 draw_line_3d(c(0, 0.5, 0), pos, "yellow")
 ```
 
-![Image rendered by raylibr](file5eaf1e5d4963.png)
+![Image rendered by raylibr](file5e2e2abd96d5.png)
 
 Other key functions:
-[`vector3_rotate_by_axis_angle()`](https://jeroenjanssens.github.io/raylibr/reference/vector3_rotate_by_axis_angle.md),
-[`vector3_project()`](https://jeroenjanssens.github.io/raylibr/reference/vector3_project.md),
-[`vector3_reject()`](https://jeroenjanssens.github.io/raylibr/reference/vector3_reject.md),
-[`vector3_unproject()`](https://jeroenjanssens.github.io/raylibr/reference/vector3_unproject.md),
-[`vector3_barycenter()`](https://jeroenjanssens.github.io/raylibr/reference/vector3_barycenter.md),
-[`vector3_ortho_normalize()`](https://jeroenjanssens.github.io/raylibr/reference/vector3_ortho_normalize.md).
+[`vector3_rotate_by_axis_angle()`](https://raylibr.jeroenjanssens.com/reference/vector3_rotate_by_axis_angle.md),
+[`vector3_project()`](https://raylibr.jeroenjanssens.com/reference/vector3_project.md),
+[`vector3_reject()`](https://raylibr.jeroenjanssens.com/reference/vector3_reject.md),
+[`vector3_unproject()`](https://raylibr.jeroenjanssens.com/reference/vector3_unproject.md),
+[`vector3_barycenter()`](https://raylibr.jeroenjanssens.com/reference/vector3_barycenter.md),
+[`vector3_ortho_normalize()`](https://raylibr.jeroenjanssens.com/reference/vector3_ortho_normalize.md).
 
 ## Matrix operations
 
@@ -185,14 +185,14 @@ q_mid <- quaternion_slerp(q1, q2, 0.5)
 mat <- quaternion_to_matrix(q_mid)
 ```
 
-[`quaternion_slerp()`](https://jeroenjanssens.github.io/raylibr/reference/quaternion_slerp.md)
+[`quaternion_slerp()`](https://raylibr.jeroenjanssens.com/reference/quaternion_slerp.md)
 (Spherical Linear intERPolation) produces smooth rotation transitions —
 essential for animation.
 
 Other quaternion functions:
-[`quaternion_normalize()`](https://jeroenjanssens.github.io/raylibr/reference/quaternion_normalize.md),
-[`quaternion_invert()`](https://jeroenjanssens.github.io/raylibr/reference/quaternion_invert.md),
-[`quaternion_multiply()`](https://jeroenjanssens.github.io/raylibr/reference/quaternion_multiply.md),
-[`quaternion_from_matrix()`](https://jeroenjanssens.github.io/raylibr/reference/quaternion_from_matrix.md),
-[`quaternion_to_euler()`](https://jeroenjanssens.github.io/raylibr/reference/quaternion_to_euler.md),
-[`quaternion_nlerp()`](https://jeroenjanssens.github.io/raylibr/reference/quaternion_nlerp.md).
+[`quaternion_normalize()`](https://raylibr.jeroenjanssens.com/reference/quaternion_normalize.md),
+[`quaternion_invert()`](https://raylibr.jeroenjanssens.com/reference/quaternion_invert.md),
+[`quaternion_multiply()`](https://raylibr.jeroenjanssens.com/reference/quaternion_multiply.md),
+[`quaternion_from_matrix()`](https://raylibr.jeroenjanssens.com/reference/quaternion_from_matrix.md),
+[`quaternion_to_euler()`](https://raylibr.jeroenjanssens.com/reference/quaternion_to_euler.md),
+[`quaternion_nlerp()`](https://raylibr.jeroenjanssens.com/reference/quaternion_nlerp.md).

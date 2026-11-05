@@ -24,23 +24,23 @@ definition:
 ## See also
 
 Other sound functions:
-[`is_sound_playing()`](https://jeroenjanssens.github.io/raylibr/reference/is_sound_playing.md),
-[`is_sound_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_sound_valid.md),
-[`load_sound()`](https://jeroenjanssens.github.io/raylibr/reference/load_sound.md),
-[`load_sound_alias()`](https://jeroenjanssens.github.io/raylibr/reference/load_sound_alias.md),
-[`load_sound_from_wave()`](https://jeroenjanssens.github.io/raylibr/reference/load_sound_from_wave.md),
-[`pause_sound()`](https://jeroenjanssens.github.io/raylibr/reference/pause_sound.md),
-[`play_sound()`](https://jeroenjanssens.github.io/raylibr/reference/play_sound.md),
-[`set_sound_pan()`](https://jeroenjanssens.github.io/raylibr/reference/set_sound_pan.md),
-[`set_sound_pitch()`](https://jeroenjanssens.github.io/raylibr/reference/set_sound_pitch.md),
-[`set_sound_volume()`](https://jeroenjanssens.github.io/raylibr/reference/set_sound_volume.md),
-[`stop_sound()`](https://jeroenjanssens.github.io/raylibr/reference/stop_sound.md),
-[`unload_sound()`](https://jeroenjanssens.github.io/raylibr/reference/unload_sound.md),
-[`unload_sound_alias()`](https://jeroenjanssens.github.io/raylibr/reference/unload_sound_alias.md)
+[`is_sound_playing()`](https://raylibr.jeroenjanssens.com/reference/is_sound_playing.md),
+[`is_sound_valid()`](https://raylibr.jeroenjanssens.com/reference/is_sound_valid.md),
+[`load_sound()`](https://raylibr.jeroenjanssens.com/reference/load_sound.md),
+[`load_sound_alias()`](https://raylibr.jeroenjanssens.com/reference/load_sound_alias.md),
+[`load_sound_from_wave()`](https://raylibr.jeroenjanssens.com/reference/load_sound_from_wave.md),
+[`pause_sound()`](https://raylibr.jeroenjanssens.com/reference/pause_sound.md),
+[`play_sound()`](https://raylibr.jeroenjanssens.com/reference/play_sound.md),
+[`set_sound_pan()`](https://raylibr.jeroenjanssens.com/reference/set_sound_pan.md),
+[`set_sound_pitch()`](https://raylibr.jeroenjanssens.com/reference/set_sound_pitch.md),
+[`set_sound_volume()`](https://raylibr.jeroenjanssens.com/reference/set_sound_volume.md),
+[`stop_sound()`](https://raylibr.jeroenjanssens.com/reference/stop_sound.md),
+[`unload_sound()`](https://raylibr.jeroenjanssens.com/reference/unload_sound.md),
+[`unload_sound_alias()`](https://raylibr.jeroenjanssens.com/reference/unload_sound_alias.md)
 
 Other resume functions:
-[`resume_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/resume_audio_stream.md),
-[`resume_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/resume_music_stream.md)
+[`resume_audio_stream()`](https://raylibr.jeroenjanssens.com/reference/resume_audio_stream.md),
+[`resume_music_stream()`](https://raylibr.jeroenjanssens.com/reference/resume_music_stream.md)
 
 ## Examples
 

@@ -58,7 +58,7 @@ RAYLIBR_GL=true RAYLIBR_ASSETS=$PWD/assets Rscript -e 'pkgdown::build_site()'
 
 Textures, fonts, sounds, shaders and the model used by the demos live in
 `assets/`, which is not part of the package (CRAN’s size limit).
-[`raylibr_resource()`](https://jeroenjanssens.github.io/raylibr/reference/raylibr_resource.md)
+[`raylibr_resource()`](https://raylibr.jeroenjanssens.com/reference/raylibr_resource.md)
 downloads them on first use into
 `tools::R_user_dir("raylibr", "cache")`, or reads them from
 `RAYLIBR_ASSETS` if set. `inst/assets.txt` lists every file in
@@ -72,5 +72,5 @@ this). The webR build bundles `assets/` into the webR package.
 - R color names work anywhere a color is expected
 - Split C++ files for parallel compilation
 - webR:
-  [`run_game_loop()`](https://jeroenjanssens.github.io/raylibr/reference/run_game_loop.md)
+  [`run_game_loop()`](https://raylibr.jeroenjanssens.com/reference/run_game_loop.md)
   provides callback-based loop for Emscripten

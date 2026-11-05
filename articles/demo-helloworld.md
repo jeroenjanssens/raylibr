@@ -4,17 +4,16 @@ The simplest raylibr demo: open a window, draw a pulsing set of
 concentric circles, and fade two text labels in and out using
 [`sin()`](https://rdrr.io/r/base/Trig.html) over time. It demonstrates
 the core game loop
-([`begin_drawing()`](https://jeroenjanssens.github.io/raylibr/reference/begin_drawing.md)
+([`begin_drawing()`](https://raylibr.jeroenjanssens.com/reference/begin_drawing.md)
 /
-[`end_drawing()`](https://jeroenjanssens.github.io/raylibr/reference/end_drawing.md)),
+[`end_drawing()`](https://raylibr.jeroenjanssens.com/reference/end_drawing.md)),
 vectorized
-[`draw_circle()`](https://jeroenjanssens.github.io/raylibr/reference/draw_circle.md)
+[`draw_circle()`](https://raylibr.jeroenjanssens.com/reference/draw_circle.md)
 and
-[`draw_text()`](https://jeroenjanssens.github.io/raylibr/reference/draw_text.md)
-calls,
-[`fade()`](https://jeroenjanssens.github.io/raylibr/reference/fade.md)
+[`draw_text()`](https://raylibr.jeroenjanssens.com/reference/draw_text.md)
+calls, [`fade()`](https://raylibr.jeroenjanssens.com/reference/fade.md)
 for transparency, and
-[`draw_fps()`](https://jeroenjanssens.github.io/raylibr/reference/draw_fps.md)
+[`draw_fps()`](https://raylibr.jeroenjanssens.com/reference/draw_fps.md)
 for a frame-rate overlay.
 
 ![](../reference/figures/raylibr-demo-helloworld.gif)

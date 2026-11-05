@@ -24,47 +24,47 @@ definition:
 ## See also
 
 Other texture functions:
-[`begin_texture_mode()`](https://jeroenjanssens.github.io/raylibr/reference/begin_texture_mode.md),
-[`draw_texture()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture.md),
-[`draw_texture_ex()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_ex.md),
-[`draw_texture_n_patch()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_n_patch.md),
-[`draw_texture_pro()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_pro.md),
-[`draw_texture_rec()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_rec.md),
-[`draw_texture_v()`](https://jeroenjanssens.github.io/raylibr/reference/draw_texture_v.md),
-[`end_texture_mode()`](https://jeroenjanssens.github.io/raylibr/reference/end_texture_mode.md),
-[`get_shapes_texture()`](https://jeroenjanssens.github.io/raylibr/reference/get_shapes_texture.md),
-[`is_texture_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_texture_valid.md),
-[`load_image_from_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_image_from_texture.md),
-[`load_render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_render_texture.md),
-[`load_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture.md),
-[`load_texture_from_image()`](https://jeroenjanssens.github.io/raylibr/reference/load_texture_from_image.md),
-[`set_shader_value_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_shader_value_texture.md),
-[`set_shapes_texture()`](https://jeroenjanssens.github.io/raylibr/reference/set_shapes_texture.md),
-[`set_texture_filter()`](https://jeroenjanssens.github.io/raylibr/reference/set_texture_filter.md),
-[`set_texture_wrap()`](https://jeroenjanssens.github.io/raylibr/reference/set_texture_wrap.md),
-[`texture()`](https://jeroenjanssens.github.io/raylibr/reference/texture.md),
-[`unload_texture()`](https://jeroenjanssens.github.io/raylibr/reference/unload_texture.md)
+[`begin_texture_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_texture_mode.md),
+[`draw_texture()`](https://raylibr.jeroenjanssens.com/reference/draw_texture.md),
+[`draw_texture_ex()`](https://raylibr.jeroenjanssens.com/reference/draw_texture_ex.md),
+[`draw_texture_n_patch()`](https://raylibr.jeroenjanssens.com/reference/draw_texture_n_patch.md),
+[`draw_texture_pro()`](https://raylibr.jeroenjanssens.com/reference/draw_texture_pro.md),
+[`draw_texture_rec()`](https://raylibr.jeroenjanssens.com/reference/draw_texture_rec.md),
+[`draw_texture_v()`](https://raylibr.jeroenjanssens.com/reference/draw_texture_v.md),
+[`end_texture_mode()`](https://raylibr.jeroenjanssens.com/reference/end_texture_mode.md),
+[`get_shapes_texture()`](https://raylibr.jeroenjanssens.com/reference/get_shapes_texture.md),
+[`is_texture_valid()`](https://raylibr.jeroenjanssens.com/reference/is_texture_valid.md),
+[`load_image_from_texture()`](https://raylibr.jeroenjanssens.com/reference/load_image_from_texture.md),
+[`load_render_texture()`](https://raylibr.jeroenjanssens.com/reference/load_render_texture.md),
+[`load_texture()`](https://raylibr.jeroenjanssens.com/reference/load_texture.md),
+[`load_texture_from_image()`](https://raylibr.jeroenjanssens.com/reference/load_texture_from_image.md),
+[`set_shader_value_texture()`](https://raylibr.jeroenjanssens.com/reference/set_shader_value_texture.md),
+[`set_shapes_texture()`](https://raylibr.jeroenjanssens.com/reference/set_shapes_texture.md),
+[`set_texture_filter()`](https://raylibr.jeroenjanssens.com/reference/set_texture_filter.md),
+[`set_texture_wrap()`](https://raylibr.jeroenjanssens.com/reference/set_texture_wrap.md),
+[`texture()`](https://raylibr.jeroenjanssens.com/reference/texture.md),
+[`unload_texture()`](https://raylibr.jeroenjanssens.com/reference/unload_texture.md)
 
 Other render functions:
-[`get_render_height()`](https://jeroenjanssens.github.io/raylibr/reference/get_render_height.md),
-[`get_render_width()`](https://jeroenjanssens.github.io/raylibr/reference/get_render_width.md),
-[`is_render_texture_valid()`](https://jeroenjanssens.github.io/raylibr/reference/is_render_texture_valid.md),
-[`load_render_texture()`](https://jeroenjanssens.github.io/raylibr/reference/load_render_texture.md)
+[`get_render_height()`](https://raylibr.jeroenjanssens.com/reference/get_render_height.md),
+[`get_render_width()`](https://raylibr.jeroenjanssens.com/reference/get_render_width.md),
+[`is_render_texture_valid()`](https://raylibr.jeroenjanssens.com/reference/is_render_texture_valid.md),
+[`load_render_texture()`](https://raylibr.jeroenjanssens.com/reference/load_render_texture.md)
 
 Other unload functions:
-[`unload_audio_stream()`](https://jeroenjanssens.github.io/raylibr/reference/unload_audio_stream.md),
-[`unload_font()`](https://jeroenjanssens.github.io/raylibr/reference/unload_font.md),
-[`unload_image()`](https://jeroenjanssens.github.io/raylibr/reference/unload_image.md),
-[`unload_material()`](https://jeroenjanssens.github.io/raylibr/reference/unload_material.md),
-[`unload_mesh()`](https://jeroenjanssens.github.io/raylibr/reference/unload_mesh.md),
-[`unload_model()`](https://jeroenjanssens.github.io/raylibr/reference/unload_model.md),
-[`unload_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/unload_music_stream.md),
-[`unload_shader()`](https://jeroenjanssens.github.io/raylibr/reference/unload_shader.md),
-[`unload_sound()`](https://jeroenjanssens.github.io/raylibr/reference/unload_sound.md),
-[`unload_sound_alias()`](https://jeroenjanssens.github.io/raylibr/reference/unload_sound_alias.md),
-[`unload_texture()`](https://jeroenjanssens.github.io/raylibr/reference/unload_texture.md),
-[`unload_vr_stereo_config()`](https://jeroenjanssens.github.io/raylibr/reference/unload_vr_stereo_config.md),
-[`unload_wave()`](https://jeroenjanssens.github.io/raylibr/reference/unload_wave.md)
+[`unload_audio_stream()`](https://raylibr.jeroenjanssens.com/reference/unload_audio_stream.md),
+[`unload_font()`](https://raylibr.jeroenjanssens.com/reference/unload_font.md),
+[`unload_image()`](https://raylibr.jeroenjanssens.com/reference/unload_image.md),
+[`unload_material()`](https://raylibr.jeroenjanssens.com/reference/unload_material.md),
+[`unload_mesh()`](https://raylibr.jeroenjanssens.com/reference/unload_mesh.md),
+[`unload_model()`](https://raylibr.jeroenjanssens.com/reference/unload_model.md),
+[`unload_music_stream()`](https://raylibr.jeroenjanssens.com/reference/unload_music_stream.md),
+[`unload_shader()`](https://raylibr.jeroenjanssens.com/reference/unload_shader.md),
+[`unload_sound()`](https://raylibr.jeroenjanssens.com/reference/unload_sound.md),
+[`unload_sound_alias()`](https://raylibr.jeroenjanssens.com/reference/unload_sound_alias.md),
+[`unload_texture()`](https://raylibr.jeroenjanssens.com/reference/unload_texture.md),
+[`unload_vr_stereo_config()`](https://raylibr.jeroenjanssens.com/reference/unload_vr_stereo_config.md),
+[`unload_wave()`](https://raylibr.jeroenjanssens.com/reference/unload_wave.md)
 
 ## Examples
 

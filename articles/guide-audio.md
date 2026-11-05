@@ -2,7 +2,7 @@
 
 raylibr supports sound effects and music playback through Raylib’s audio
 system. The audio device is automatically initialized when you call
-[`init_window()`](https://jeroenjanssens.github.io/raylibr/reference/init_window.md).
+[`init_window()`](https://raylibr.jeroenjanssens.com/reference/init_window.md).
 
 ## Sound effects
 
@@ -49,7 +49,7 @@ unload_sound(snd)
 Music streams read audio data in small chunks, making them suitable for
 longer tracks like background music. The key difference from sounds: you
 must call
-[`update_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/update_music_stream.md)
+[`update_music_stream()`](https://raylibr.jeroenjanssens.com/reference/update_music_stream.md)
 every frame to feed the audio buffer.
 
 ``` r
@@ -145,7 +145,7 @@ close_audio_device()
 ## See also
 
 For complete audio examples, see the
-[Beatbox](https://jeroenjanssens.github.io/raylibr/articles/demo-beatbox.md)
+[Beatbox](https://raylibr.jeroenjanssens.com/articles/demo-beatbox.md)
 demo (sound effects) and the [Waving
-Cubes](https://jeroenjanssens.github.io/raylibr/articles/demo-cubes.md)
-demo (music stream).
+Cubes](https://raylibr.jeroenjanssens.com/articles/demo-cubes.md) demo
+(music stream).

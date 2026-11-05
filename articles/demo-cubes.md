@@ -2,18 +2,18 @@
 
 A 3D grid of 3,375 color-coded cubes that wave and pulse in sync with a
 looping XM music track. Camera position orbits automatically via
-[`camera_3d()`](https://jeroenjanssens.github.io/raylibr/reference/camera_3d.md)
+[`camera_3d()`](https://raylibr.jeroenjanssens.com/reference/camera_3d.md)
 field access, cube positions are computed with
 [`sin()`](https://rdrr.io/r/base/Trig.html) over R vectors, and the
 entire scene is rendered in a single vectorized
-[`draw_cube()`](https://jeroenjanssens.github.io/raylibr/reference/draw_cube.md)
+[`draw_cube()`](https://raylibr.jeroenjanssens.com/reference/draw_cube.md)
 call. This demo combines 3D mode
-([`begin_mode_3d()`](https://jeroenjanssens.github.io/raylibr/reference/begin_mode_3d.md)),
+([`begin_mode_3d()`](https://raylibr.jeroenjanssens.com/reference/begin_mode_3d.md)),
 audio streaming
-([`load_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/load_music_stream.md),
-[`update_music_stream()`](https://jeroenjanssens.github.io/raylibr/reference/update_music_stream.md)),
+([`load_music_stream()`](https://raylibr.jeroenjanssens.com/reference/load_music_stream.md),
+[`update_music_stream()`](https://raylibr.jeroenjanssens.com/reference/update_music_stream.md)),
 and
-[`color_from_hsv()`](https://jeroenjanssens.github.io/raylibr/reference/color_from_hsv.md)
+[`color_from_hsv()`](https://raylibr.jeroenjanssens.com/reference/color_from_hsv.md)
 for HSV-based coloring.
 
 ![](../reference/figures/raylibr-demo-cubes.gif)

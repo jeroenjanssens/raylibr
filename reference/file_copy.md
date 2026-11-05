@@ -32,8 +32,8 @@ definition:
 ## See also
 
 Other copy functions:
-[`image_copy()`](https://jeroenjanssens.github.io/raylibr/reference/image_copy.md),
-[`wave_copy()`](https://jeroenjanssens.github.io/raylibr/reference/wave_copy.md)
+[`image_copy()`](https://raylibr.jeroenjanssens.com/reference/image_copy.md),
+[`wave_copy()`](https://raylibr.jeroenjanssens.com/reference/wave_copy.md)
 
 ## Examples
 
