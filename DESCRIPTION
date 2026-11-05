@@ -49,5 +49,5 @@ Suggests:
     rlang,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-URL: https://github.com/jeroenjanssens/raylibr, https://jeroenjanssens.github.io/raylibr/
+URL: https://github.com/jeroenjanssens/raylibr, https://raylibr.jeroenjanssens.com/
 BugReports: https://github.com/jeroenjanssens/raylibr/issues

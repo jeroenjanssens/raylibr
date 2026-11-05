@@ -24,7 +24,7 @@ without unloading them will leak GPU/audio memory.
 Useful links:
 \itemize{
   \item \url{https://github.com/jeroenjanssens/raylibr}
-  \item \url{https://jeroenjanssens.github.io/raylibr/}
+  \item \url{https://raylibr.jeroenjanssens.com/}
   \item Report bugs at \url{https://github.com/jeroenjanssens/raylibr/issues}
 }
 
