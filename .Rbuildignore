@@ -9,7 +9,6 @@
 ^vignettes$
 ^data-raw$
 ^src/raylib_built$
-^CLAUDE\.md$
 ^bin$
 ^README\.html$
 ^man/figures/.*\.gif$
@@ -19,4 +18,4 @@
 ^cran-comments\.md$
 ^CRAN-SUBMISSION$
 ^\.gitattributes$
-^handoff\.md$
+^\.claude$
