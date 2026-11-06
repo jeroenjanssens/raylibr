@@ -26,11 +26,7 @@ is_mouse_button_down(0L)
 
 }
 \seealso{
-Other down functions: 
-\code{\link{is_gamepad_button_down}()},
-\code{\link{is_key_down}()}
-
-Other mouse functions: 
+\ifelse{latex}{The other topics in the Input — Mouse section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Input — Mouse:
 \code{\link{get_mouse_delta}()},
 \code{\link{get_mouse_position}()},
 \code{\link{get_mouse_wheel_move}()},
@@ -44,56 +40,5 @@ Other mouse functions:
 \code{\link{set_mouse_offset}()},
 \code{\link{set_mouse_position}()},
 \code{\link{set_mouse_scale}()}
-
-Other is functions: 
-\code{\link{color_is_equal}()},
-\code{\link{is_audio_device_ready}()},
-\code{\link{is_audio_stream_playing}()},
-\code{\link{is_audio_stream_processed}()},
-\code{\link{is_audio_stream_valid}()},
-\code{\link{is_cursor_hidden}()},
-\code{\link{is_cursor_on_screen}()},
-\code{\link{is_file_dropped}()},
-\code{\link{is_file_extension}()},
-\code{\link{is_file_name_valid}()},
-\code{\link{is_font_valid}()},
-\code{\link{is_gamepad_available}()},
-\code{\link{is_gamepad_button_down}()},
-\code{\link{is_gamepad_button_pressed}()},
-\code{\link{is_gamepad_button_released}()},
-\code{\link{is_gamepad_button_up}()},
-\code{\link{is_gesture_detected}()},
-\code{\link{is_image_valid}()},
-\code{\link{is_key_down}()},
-\code{\link{is_key_pressed}()},
-\code{\link{is_key_pressed_repeat}()},
-\code{\link{is_key_released}()},
-\code{\link{is_key_up}()},
-\code{\link{is_material_valid}()},
-\code{\link{is_model_animation_valid}()},
-\code{\link{is_model_valid}()},
-\code{\link{is_mouse_button_pressed}()},
-\code{\link{is_mouse_button_released}()},
-\code{\link{is_mouse_button_up}()},
-\code{\link{is_music_stream_playing}()},
-\code{\link{is_music_valid}()},
-\code{\link{is_path_file}()},
-\code{\link{is_render_texture_valid}()},
-\code{\link{is_shader_valid}()},
-\code{\link{is_sound_playing}()},
-\code{\link{is_sound_valid}()},
-\code{\link{is_texture_valid}()},
-\code{\link{is_wave_valid}()},
-\code{\link{is_window_focused}()},
-\code{\link{is_window_fullscreen}()},
-\code{\link{is_window_hidden}()},
-\code{\link{is_window_maximized}()},
-\code{\link{is_window_minimized}()},
-\code{\link{is_window_ready}()},
-\code{\link{is_window_resized}()},
-\code{\link{is_window_state}()},
-\code{\link{text_is_equal}()}
 }
-\concept{down functions}
-\concept{is functions}
-\concept{mouse functions}
+}

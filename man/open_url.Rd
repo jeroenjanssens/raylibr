@@ -23,4 +23,21 @@ This function has been auto-generated from the following Raylib function definit
 open_url("https://example.com")
 \dontshow{\}) # examplesIf}
 }
-\concept{url functions}
+\seealso{
+\ifelse{latex}{The other topics in the Utility section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Utility:
+\code{\link{get_clipboard_image}()},
+\code{\link{get_clipboard_text}()},
+\code{\link{get_random_value}()},
+\code{\link{raylib_version}()},
+\code{\link{raylibr_resource}()},
+\code{\link{raylibr_screenshot}()},
+\code{\link{raylibr_screenshot_3d}()},
+\code{\link{set_clipboard_text}()},
+\code{\link{set_config_flags}()},
+\code{\link{set_exit_key}()},
+\code{\link{set_random_seed}()},
+\code{\link{set_trace_log_level}()},
+\code{\link{take_screenshot}()},
+\code{\link{wait_time}()}
+}
+}

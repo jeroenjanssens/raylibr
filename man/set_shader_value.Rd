@@ -25,7 +25,7 @@ set_shader_value(shader, loc, c(1.0, 0.0))
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other shader functions: 
+\ifelse{latex}{The other topics in the Shaders section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Shaders:
 \code{\link{begin_shader_mode}()},
 \code{\link{end_shader_mode}()},
 \code{\link{get_shader_location}()},
@@ -37,4 +37,4 @@ Other shader functions:
 \code{\link{set_shader_value_texture}()},
 \code{\link{unload_shader}()}
 }
-\concept{shader functions}
+}

@@ -1,3 +1,19 @@
+## Resubmission
+
+This is a resubmission. In 6.0.5, the Debian pre-test reported "LaTeX
+errors when creating PDF version" (with no errors listed) and a leftover
+`raylibr-manual.tex`.
+
+The cause was not a LaTeX error. The "See also" lists of the 894 help
+pages made LaTeX report thousands of overfull lines (16 MB of texi2dvi
+output), and `R CMD Rd2pdf` passes that output to a single `message()`
+call, which failed with "C stack usage is too close to the limit". We
+reproduced this in a Debian container (R 4.6.2, TeX Live).
+
+In 6.0.6 these lists are shown in HTML and text help only, and the PDF
+manual gets a one-line note instead. The same Debian setup now produces
+87 KB of texi2dvi output and builds the manual on the first attempt.
+
 ## Submission
 
 This is a new submission.

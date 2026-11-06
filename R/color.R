@@ -9,6 +9,8 @@
 #' @examples
 #' is_color("not a color")
 #'
+#' @eval .family_seealso("is_color")
+#'
 #' @export
 is_color <- function(x) {
   inherits(x, "color")
@@ -39,7 +41,7 @@ is_color <- function(x) {
 #'
 #' @rdname color
 #'
-#' @family color functions
+#' @eval .family_seealso("color")
 #'
 #' @examples
 #' col <- color(255L, 255L, 255L)

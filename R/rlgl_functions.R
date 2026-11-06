@@ -5,8 +5,6 @@
 #'
 #' @param mode An integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_matrix_mode(0L)
 #'
@@ -19,8 +17,6 @@ rl_matrix_mode <- function(mode) {
 #' Rl Push Matrix
 #'
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_push_matrix()
 #'
@@ -32,8 +28,6 @@ rl_push_matrix <- function() {
 #' Rl Pop Matrix
 #'
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_pop_matrix()
 #'
@@ -44,8 +38,6 @@ rl_pop_matrix <- function() {
 
 #' Rl Load Identity
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_load_identity()
@@ -61,8 +53,6 @@ rl_load_identity <- function() {
 #' @param x A number.
 #' @param y A number.
 #' @param z A number.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_translatef(0.0, 0.0, 0.0)
@@ -83,8 +73,6 @@ rl_translatef <- function(x, y, z) {
 #' @param y A number.
 #' @param z A number.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_rotatef(0.0, 0.0, 0.0, 0.0)
 #'
@@ -103,8 +91,6 @@ rl_rotatef <- function(angle, x, y, z) {
 #' @param x A number.
 #' @param y A number.
 #' @param z A number.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_scalef(0.0, 0.0, 0.0)
@@ -126,8 +112,6 @@ rl_scalef <- function(x, y, z) {
 #' @param top A number.
 #' @param znear A number.
 #' @param zfar A number.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_frustum(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
@@ -153,8 +137,6 @@ rl_frustum <- function(left, right, bottom, top, znear, zfar) {
 #' @param znear A number.
 #' @param zfar A number.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_ortho(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
 #'
@@ -177,8 +159,6 @@ rl_ortho <- function(left, right, bottom, top, znear, zfar) {
 #' @param width An integer.
 #' @param height An integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_viewport(100L, 100L, 800L, 450L)
 #'
@@ -197,8 +177,6 @@ rl_viewport <- function(x, y, width, height) {
 #' @param near_plane A number.
 #' @param far_plane A number.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_set_clip_planes(0.0, 0.0)
 #'
@@ -214,8 +192,6 @@ rl_set_clip_planes <- function(near_plane, far_plane) {
 #'
 #' @return A number
 #'
-#' @family rlgl functions
-#'
 #' @examples
 #' rl_get_cull_distance_near()
 #'
@@ -228,8 +204,6 @@ rl_get_cull_distance_near <- function() {
 #'
 #'
 #' @return A number
-#'
-#' @family rlgl functions
 #'
 #' @examples
 #' rl_get_cull_distance_far()
@@ -244,8 +218,6 @@ rl_get_cull_distance_far <- function() {
 #'
 #' @param mode An integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_begin(0L)
 #'
@@ -257,8 +229,6 @@ rl_begin <- function(mode) {
 
 #' Rl End
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_end()
@@ -273,8 +243,6 @@ rl_end <- function() {
 #'
 #' @param x An integer.
 #' @param y An integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_vertex2i(100L, 100L)
@@ -291,8 +259,6 @@ rl_vertex2i <- function(x, y) {
 #'
 #' @param x A number.
 #' @param y A number.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_vertex2f(0.0, 0.0)
@@ -311,8 +277,6 @@ rl_vertex2f <- function(x, y) {
 #' @param y A number.
 #' @param z A number.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_vertex3f(0.0, 0.0, 0.0)
 #'
@@ -330,8 +294,6 @@ rl_vertex3f <- function(x, y, z) {
 #' @param x A number.
 #' @param y A number.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_tex_coord2f(0.0, 0.0)
 #'
@@ -348,8 +310,6 @@ rl_tex_coord2f <- function(x, y) {
 #' @param x A number.
 #' @param y A number.
 #' @param z A number.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_normal3f(0.0, 0.0, 0.0)
@@ -370,8 +330,6 @@ rl_normal3f <- function(x, y, z) {
 #' @param b A non-negative integer (0-255).
 #' @param a A non-negative integer (0-255).
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_color4ub(255L, 255L, 255L, 255L)
 #'
@@ -390,8 +348,6 @@ rl_color4ub <- function(r, g, b, a) {
 #' @param x A number.
 #' @param y A number.
 #' @param z A number.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_color3f(0.0, 0.0, 0.0)
@@ -412,8 +368,6 @@ rl_color3f <- function(x, y, z) {
 #' @param z A number.
 #' @param w A number.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_color4f(0.0, 0.0, 0.0, 0.0)
 #'
@@ -433,8 +387,6 @@ rl_color4f <- function(x, y, z, w) {
 #'
 #' @return A logical
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_enable_vertex_array(0L)
 #'
@@ -446,8 +398,6 @@ rl_enable_vertex_array <- function(vao_id) {
 
 #' Rl Disable Vertex Array
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_disable_vertex_array()
@@ -462,8 +412,6 @@ rl_disable_vertex_array <- function() {
 #'
 #' @param id A non-negative integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_enable_vertex_buffer(0L)
 #'
@@ -475,8 +423,6 @@ rl_enable_vertex_buffer <- function(id) {
 
 #' Rl Disable Vertex Buffer
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_disable_vertex_buffer()
@@ -491,8 +437,6 @@ rl_disable_vertex_buffer <- function() {
 #'
 #' @param id A non-negative integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_enable_vertex_buffer_element(0L)
 #'
@@ -504,8 +448,6 @@ rl_enable_vertex_buffer_element <- function(id) {
 
 #' Rl Disable Vertex Buffer Element
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_disable_vertex_buffer_element()
@@ -519,8 +461,6 @@ rl_disable_vertex_buffer_element <- function() {
 #'
 #'
 #' @param index A non-negative integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_enable_vertex_attribute(0L)
@@ -536,8 +476,6 @@ rl_enable_vertex_attribute <- function(index) {
 #'
 #' @param index A non-negative integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_disable_vertex_attribute(0L)
 #'
@@ -551,8 +489,6 @@ rl_disable_vertex_attribute <- function(index) {
 #'
 #'
 #' @param vertex_attrib_type An integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_disable_state_pointer(0L)
@@ -568,8 +504,6 @@ rl_disable_state_pointer <- function(vertex_attrib_type) {
 #'
 #' @param slot An integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_active_texture_slot(0L)
 #'
@@ -584,8 +518,6 @@ rl_active_texture_slot <- function(slot) {
 #'
 #' @param id A non-negative integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_enable_texture(0L)
 #'
@@ -597,8 +529,6 @@ rl_enable_texture <- function(id) {
 
 #' Rl Disable Texture
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_disable_texture()
@@ -613,8 +543,6 @@ rl_disable_texture <- function() {
 #'
 #' @param id A non-negative integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_enable_texture_cubemap(0L)
 #'
@@ -626,8 +554,6 @@ rl_enable_texture_cubemap <- function(id) {
 
 #' Rl Disable Texture Cubemap
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_disable_texture_cubemap()
@@ -643,8 +569,6 @@ rl_disable_texture_cubemap <- function() {
 #' @param id A non-negative integer.
 #' @param param An integer.
 #' @param value An integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_texture_parameters(0L, 0L, 0L)
@@ -664,8 +588,6 @@ rl_texture_parameters <- function(id, param, value) {
 #' @param param An integer.
 #' @param value An integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_cubemap_parameters(0L, 0L, 0L)
 #'
@@ -682,8 +604,6 @@ rl_cubemap_parameters <- function(id, param, value) {
 #'
 #' @param id A non-negative integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_enable_shader(0L)
 #'
@@ -695,8 +615,6 @@ rl_enable_shader <- function(id) {
 
 #' Rl Disable Shader
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_disable_shader()
@@ -711,8 +629,6 @@ rl_disable_shader <- function() {
 #'
 #' @param id A non-negative integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_enable_framebuffer(0L)
 #'
@@ -724,8 +640,6 @@ rl_enable_framebuffer <- function(id) {
 
 #' Rl Disable Framebuffer
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_disable_framebuffer()
@@ -740,8 +654,6 @@ rl_disable_framebuffer <- function() {
 #'
 #' @return An integer
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_get_active_framebuffer()
 #'
@@ -754,8 +666,6 @@ rl_get_active_framebuffer <- function() {
 #'
 #'
 #' @param count An integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_active_draw_buffers(10L)
@@ -778,8 +688,6 @@ rl_active_draw_buffers <- function(count) {
 #' @param dst_width An integer.
 #' @param dst_height An integer.
 #' @param buffer_mask An integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_blit_framebuffer(0L, 0L, 800L, 450L, 0L, 0L, 800L, 450L, 0L)
@@ -804,8 +712,6 @@ rl_blit_framebuffer <- function(src_x, src_y, src_width, src_height, dst_x, dst_
 #' @param target A non-negative integer.
 #' @param framebuffer A non-negative integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_bind_framebuffer(0L, 0L)
 #'
@@ -819,8 +725,6 @@ rl_bind_framebuffer <- function(target, framebuffer) {
 #' Rl Enable Color Blend
 #'
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_enable_color_blend()
 #'
@@ -831,8 +735,6 @@ rl_enable_color_blend <- function() {
 
 #' Rl Disable Color Blend
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_disable_color_blend()
@@ -845,8 +747,6 @@ rl_disable_color_blend <- function() {
 #' Rl Enable Depth Test
 #'
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_enable_depth_test()
 #'
@@ -857,8 +757,6 @@ rl_enable_depth_test <- function() {
 
 #' Rl Disable Depth Test
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_disable_depth_test()
@@ -871,8 +769,6 @@ rl_disable_depth_test <- function() {
 #' Rl Enable Depth Mask
 #'
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_enable_depth_mask()
 #'
@@ -883,8 +779,6 @@ rl_enable_depth_mask <- function() {
 
 #' Rl Disable Depth Mask
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_disable_depth_mask()
@@ -897,8 +791,6 @@ rl_disable_depth_mask <- function() {
 #' Rl Enable Backface Culling
 #'
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_enable_backface_culling()
 #'
@@ -909,8 +801,6 @@ rl_enable_backface_culling <- function() {
 
 #' Rl Disable Backface Culling
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_disable_backface_culling()
@@ -927,8 +817,6 @@ rl_disable_backface_culling <- function() {
 #' @param g A logical.
 #' @param b A logical.
 #' @param a A logical.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_color_mask(TRUE, TRUE, TRUE, TRUE)
@@ -947,8 +835,6 @@ rl_color_mask <- function(r, g, b, a) {
 #'
 #' @param mode An integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_set_cull_face(0L)
 #'
@@ -961,8 +847,6 @@ rl_set_cull_face <- function(mode) {
 #' Rl Enable Scissor Test
 #'
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_enable_scissor_test()
 #'
@@ -973,8 +857,6 @@ rl_enable_scissor_test <- function() {
 
 #' Rl Disable Scissor Test
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_disable_scissor_test()
@@ -992,8 +874,6 @@ rl_disable_scissor_test <- function() {
 #' @param width An integer.
 #' @param height An integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_scissor(100L, 100L, 800L, 450L)
 #'
@@ -1009,8 +889,6 @@ rl_scissor <- function(x, y, width, height) {
 #' Rl Enable Point Mode
 #'
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_enable_point_mode()
 #'
@@ -1021,8 +899,6 @@ rl_enable_point_mode <- function() {
 
 #' Rl Disable Point Mode
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_disable_point_mode()
@@ -1036,8 +912,6 @@ rl_disable_point_mode <- function() {
 #'
 #'
 #' @param size A number.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_set_point_size(1.0)
@@ -1053,8 +927,6 @@ rl_set_point_size <- function(size) {
 #'
 #' @return A number
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_get_point_size()
 #'
@@ -1066,8 +938,6 @@ rl_get_point_size <- function() {
 #' Rl Enable Wire Mode
 #'
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_enable_wire_mode()
 #'
@@ -1078,8 +948,6 @@ rl_enable_wire_mode <- function() {
 
 #' Rl Disable Wire Mode
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_disable_wire_mode()
@@ -1093,8 +961,6 @@ rl_disable_wire_mode <- function() {
 #'
 #'
 #' @param width A number.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_set_line_width(200.0)
@@ -1110,8 +976,6 @@ rl_set_line_width <- function(width) {
 #'
 #' @return A number
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_get_line_width()
 #'
@@ -1122,8 +986,6 @@ rl_get_line_width <- function() {
 
 #' Rl Enable Smooth Lines
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_enable_smooth_lines()
@@ -1136,8 +998,6 @@ rl_enable_smooth_lines <- function() {
 #' Rl Disable Smooth Lines
 #'
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_disable_smooth_lines()
 #'
@@ -1149,8 +1009,6 @@ rl_disable_smooth_lines <- function() {
 #' Rl Enable Stereo Render
 #'
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_enable_stereo_render()
 #'
@@ -1161,8 +1019,6 @@ rl_enable_stereo_render <- function() {
 
 #' Rl Disable Stereo Render
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_disable_stereo_render()
@@ -1176,8 +1032,6 @@ rl_disable_stereo_render <- function() {
 #'
 #'
 #' @return A logical
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_is_stereo_render_enabled()
@@ -1195,8 +1049,6 @@ rl_is_stereo_render_enabled <- function() {
 #' @param b A non-negative integer (0-255).
 #' @param a A non-negative integer (0-255).
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_clear_color(255L, 255L, 255L, 255L)
 #'
@@ -1212,8 +1064,6 @@ rl_clear_color <- function(r, g, b, a) {
 #' Rl Clear Screen Buffers
 #'
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_clear_screen_buffers()
 #'
@@ -1224,8 +1074,6 @@ rl_clear_screen_buffers <- function() {
 
 #' Rl Check Errors
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_check_errors()
@@ -1239,8 +1087,6 @@ rl_check_errors <- function() {
 #'
 #'
 #' @param mode An integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_set_blend_mode(0L)
@@ -1257,8 +1103,6 @@ rl_set_blend_mode <- function(mode) {
 #' @param gl_src_factor An integer.
 #' @param gl_dst_factor An integer.
 #' @param gl_equation An integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_set_blend_factors(0L, 0L, 0L)
@@ -1281,8 +1125,6 @@ rl_set_blend_factors <- function(gl_src_factor, gl_dst_factor, gl_equation) {
 #' @param gl_eq_rgb An integer.
 #' @param gl_eq_alpha An integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_set_blend_factors_separate(0L, 0L, 0L, 0L, 0L, 0L)
 #'
@@ -1303,8 +1145,6 @@ rl_set_blend_factors_separate <- function(gl_src_rgb, gl_dst_rgb, gl_src_alpha, 
 #' @param width An integer.
 #' @param height An integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_gl_init(800L, 450L)
 #'
@@ -1317,8 +1157,6 @@ rl_gl_init <- function(width, height) {
 
 #' Rl Gl Close
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_gl_close()
@@ -1333,8 +1171,6 @@ rl_gl_close <- function() {
 #'
 #' @return An integer
 #'
-#' @family rlgl functions
-#'
 #' @examples
 #' rl_get_version()
 #'
@@ -1347,8 +1183,6 @@ rl_get_version <- function() {
 #'
 #'
 #' @param width An integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_set_framebuffer_width(800L)
@@ -1364,8 +1198,6 @@ rl_set_framebuffer_width <- function(width) {
 #'
 #' @return An integer
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_get_framebuffer_width()
 #'
@@ -1378,8 +1210,6 @@ rl_get_framebuffer_width <- function() {
 #'
 #'
 #' @param height An integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_set_framebuffer_height(450L)
@@ -1395,8 +1225,6 @@ rl_set_framebuffer_height <- function(height) {
 #'
 #' @return An integer
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_get_framebuffer_height()
 #'
@@ -1409,8 +1237,6 @@ rl_get_framebuffer_height <- function() {
 #'
 #'
 #' @return An integer
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_get_texture_id_default()
@@ -1425,8 +1251,6 @@ rl_get_texture_id_default <- function() {
 #'
 #' @return An integer
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_get_shader_id_default()
 #'
@@ -1437,8 +1261,6 @@ rl_get_shader_id_default <- function() {
 
 #' Rl Draw Render Batch Active
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_draw_render_batch_active()
@@ -1455,8 +1277,6 @@ rl_draw_render_batch_active <- function() {
 #'
 #' @return A logical
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_check_render_batch_limit(10L)
 #'
@@ -1470,8 +1290,6 @@ rl_check_render_batch_limit <- function(v_count) {
 #'
 #'
 #' @param id A non-negative integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_set_texture(0L)
@@ -1487,8 +1305,6 @@ rl_set_texture <- function(id) {
 #'
 #' @return An integer
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_load_vertex_array()
 #'
@@ -1501,8 +1317,6 @@ rl_load_vertex_array <- function() {
 #'
 #'
 #' @param vao_id A non-negative integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_unload_vertex_array(0L)
@@ -1517,8 +1331,6 @@ rl_unload_vertex_array <- function(vao_id) {
 #'
 #'
 #' @param vbo_id A non-negative integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_unload_vertex_buffer(0L)
@@ -1538,8 +1350,6 @@ rl_unload_vertex_buffer <- function(vbo_id) {
 #' @param normalized A logical.
 #' @param stride An integer.
 #' @param offset An integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_set_vertex_attribute(0L, 32L, 0L, TRUE, 0L, 0L)
@@ -1561,8 +1371,6 @@ rl_set_vertex_attribute <- function(index, comp_size, type, normalized, stride, 
 #' @param index A non-negative integer.
 #' @param divisor An integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_set_vertex_attribute_divisor(0L, 0L)
 #'
@@ -1578,8 +1386,6 @@ rl_set_vertex_attribute_divisor <- function(index, divisor) {
 #'
 #' @param offset An integer.
 #' @param count An integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_draw_vertex_array(0L, 10L)
@@ -1597,8 +1403,6 @@ rl_draw_vertex_array <- function(offset, count) {
 #' @param offset An integer.
 #' @param count An integer.
 #' @param instances An integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_draw_vertex_array_instanced(0L, 10L, 0L)
@@ -1620,8 +1424,6 @@ rl_draw_vertex_array_instanced <- function(offset, count, instances) {
 #'
 #' @return An integer
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_load_texture_depth(800L, 450L, TRUE)
 #'
@@ -1640,8 +1442,6 @@ rl_load_texture_depth <- function(width, height, use_render_buffer) {
 #'
 #' @return A string
 #'
-#' @family rlgl functions
-#'
 #' @examples
 #' rl_get_pixel_format_name(0L)
 #'
@@ -1656,8 +1456,6 @@ rl_get_pixel_format_name <- function(format) {
 #'
 #' @param id A non-negative integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_unload_texture(0L)
 #'
@@ -1671,8 +1469,6 @@ rl_unload_texture <- function(id) {
 #'
 #'
 #' @return An integer
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_load_framebuffer()
@@ -1690,8 +1486,6 @@ rl_load_framebuffer <- function() {
 #' @param attach_type An integer.
 #' @param tex_type An integer.
 #' @param mip_level An integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_framebuffer_attach(0L, 0L, 0L, 0L, 0L)
@@ -1713,8 +1507,6 @@ rl_framebuffer_attach <- function(id, tex_id, attach_type, tex_type, mip_level) 
 #'
 #' @return A logical
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_framebuffer_complete(0L)
 #'
@@ -1728,8 +1520,6 @@ rl_framebuffer_complete <- function(id) {
 #'
 #'
 #' @param id A non-negative integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_unload_framebuffer(0L)
@@ -1745,8 +1535,6 @@ rl_unload_framebuffer <- function(id) {
 #'
 #' @param width An integer.
 #' @param height An integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_resize_framebuffer(800L, 450L)
@@ -1766,8 +1554,6 @@ rl_resize_framebuffer <- function(width, height) {
 #'
 #' @return An integer
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_load_shader("text", 0L)
 #'
@@ -1785,8 +1571,6 @@ rl_load_shader <- function(code, type) {
 #' @param fs_code A string.
 #'
 #' @return An integer
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_load_shader_program("text", "text")
@@ -1806,8 +1590,6 @@ rl_load_shader_program <- function(vs_code, fs_code) {
 #'
 #' @return An integer
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_load_shader_program_ex(0L, 0L)
 #'
@@ -1825,8 +1607,6 @@ rl_load_shader_program_ex <- function(vs_id, fs_id) {
 #'
 #' @return An integer
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_load_shader_program_compute(0L)
 #'
@@ -1841,8 +1621,6 @@ rl_load_shader_program_compute <- function(cs_id) {
 #'
 #' @param id A non-negative integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_unload_shader(0L)
 #'
@@ -1856,8 +1634,6 @@ rl_unload_shader <- function(id) {
 #'
 #'
 #' @param id A non-negative integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_unload_shader_program(0L)
@@ -1875,8 +1651,6 @@ rl_unload_shader_program <- function(id) {
 #' @param uniform_name A string.
 #'
 #' @return An integer
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_get_location_uniform(0L, "text")
@@ -1896,8 +1670,6 @@ rl_get_location_uniform <- function(id, uniform_name) {
 #'
 #' @return An integer
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_get_location_attrib(0L, "text")
 #'
@@ -1914,8 +1686,6 @@ rl_get_location_attrib <- function(id, attrib_name) {
 #' @param loc_index An integer.
 #' @param mat A 4x4 numeric matrix.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_set_uniform_matrix(0L, diag(4))
 #'
@@ -1931,8 +1701,6 @@ rl_set_uniform_matrix <- function(loc_index, mat) {
 #'
 #' @param loc_index An integer.
 #' @param texture_id A non-negative integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_set_uniform_sampler(0L, 0L)
@@ -1951,8 +1719,6 @@ rl_set_uniform_sampler <- function(loc_index, texture_id) {
 #' @param group_y A non-negative integer.
 #' @param group_z A non-negative integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_compute_shader_dispatch(0L, 0L, 0L)
 #'
@@ -1969,8 +1735,6 @@ rl_compute_shader_dispatch <- function(group_x, group_y, group_z) {
 #'
 #' @param ssbo_id A non-negative integer.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_unload_shader_buffer(0L)
 #'
@@ -1985,8 +1749,6 @@ rl_unload_shader_buffer <- function(ssbo_id) {
 #'
 #' @param id A non-negative integer.
 #' @param index A non-negative integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_bind_shader_buffer(0L, 0L)
@@ -2006,8 +1768,6 @@ rl_bind_shader_buffer <- function(id, index) {
 #' @param dest_offset A non-negative integer.
 #' @param src_offset A non-negative integer.
 #' @param count A non-negative integer.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_copy_shader_buffer(0L, 0L, 0L, 0L, 10L)
@@ -2029,8 +1789,6 @@ rl_copy_shader_buffer <- function(dest_id, src_id, dest_offset, src_offset, coun
 #'
 #' @return An integer
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_get_shader_buffer_size(0L)
 #'
@@ -2047,8 +1805,6 @@ rl_get_shader_buffer_size <- function(id) {
 #' @param index A non-negative integer.
 #' @param format An integer.
 #' @param readonly A logical.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_bind_image_texture(0L, 0L, 0L, TRUE)
@@ -2067,8 +1823,6 @@ rl_bind_image_texture <- function(id, index, format, readonly) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_get_matrix_modelview()
 #'
@@ -2082,8 +1836,6 @@ rl_get_matrix_modelview <- function() {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_get_matrix_projection()
 #'
@@ -2096,8 +1848,6 @@ rl_get_matrix_projection <- function() {
 #'
 #'
 #' @return A 4x4 numeric matrix
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_get_matrix_transform()
@@ -2113,8 +1863,6 @@ rl_get_matrix_transform <- function() {
 #' @param eye An integer.
 #'
 #' @return A 4x4 numeric matrix
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_get_matrix_projection_stereo(0L)
@@ -2132,8 +1880,6 @@ rl_get_matrix_projection_stereo <- function(eye) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_get_matrix_view_offset_stereo(0L)
 #'
@@ -2147,8 +1893,6 @@ rl_get_matrix_view_offset_stereo <- function(eye) {
 #'
 #'
 #' @param proj A 4x4 numeric matrix.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_set_matrix_projection(diag(4))
@@ -2164,8 +1908,6 @@ rl_set_matrix_projection <- function(proj) {
 #'
 #' @param view A 4x4 numeric matrix.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_set_matrix_modelview(diag(4))
 #'
@@ -2180,8 +1922,6 @@ rl_set_matrix_modelview <- function(view) {
 #'
 #' @param right A 4x4 numeric matrix.
 #' @param left A 4x4 numeric matrix.
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_set_matrix_projection_stereo(diag(4), diag(4))
@@ -2199,8 +1939,6 @@ rl_set_matrix_projection_stereo <- function(right, left) {
 #' @param right A 4x4 numeric matrix.
 #' @param left A 4x4 numeric matrix.
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_set_matrix_view_offset_stereo(diag(4), diag(4))
 #'
@@ -2214,8 +1952,6 @@ rl_set_matrix_view_offset_stereo <- function(right, left) {
 #' Rl Load Draw Cube
 #'
 #'
-#' @family rlgl functions
-#'
 #' @examplesIf FALSE
 #' rl_load_draw_cube()
 #'
@@ -2226,8 +1962,6 @@ rl_load_draw_cube <- function() {
 
 #' Rl Load Draw Quad
 #'
-#'
-#' @family rlgl functions
 #'
 #' @examplesIf FALSE
 #' rl_load_draw_quad()

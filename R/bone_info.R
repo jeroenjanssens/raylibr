@@ -7,6 +7,8 @@
 #' @examples
 #' is_bone_info("not a bone_info")
 #'
+#' @eval .family_seealso("is_bone_info")
+#'
 #' @export
 is_bone_info <- function(x) {
   inherits(x, "bone_info")

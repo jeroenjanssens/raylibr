@@ -7,6 +7,8 @@
 #' @examples
 #' is_audio_stream("not a audio_stream")
 #'
+#' @eval .family_seealso("is_audio_stream")
+#'
 #' @export
 is_audio_stream <- function(x) {
   inherits(x, "audio_stream")

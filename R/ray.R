@@ -9,6 +9,8 @@
 #' @examples
 #' is_ray("not a ray")
 #'
+#' @eval .family_seealso("is_ray")
+#'
 #' @export
 is_ray <- function(x) {
   inherits(x, "ray")
@@ -35,7 +37,7 @@ is_ray <- function(x) {
 #'
 #' @rdname ray
 #'
-#' @family ray functions
+#' @eval .family_seealso("ray")
 #'
 #' @examples
 #' ray <- ray(c(0, 5, 0), c(0, 0, 0))

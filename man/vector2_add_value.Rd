@@ -22,7 +22,7 @@ vector2_add_value(c(100, 100), 0.0)
 
 }
 \seealso{
-Other vector2 functions: 
+\ifelse{latex}{The other topics in the raymath — Vector2 section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other raymath — Vector2:
 \code{\link{vector2_add}()},
 \code{\link{vector2_angle}()},
 \code{\link{vector2_clamp}()},
@@ -54,4 +54,4 @@ Other vector2 functions:
 \code{\link{vector2_transform}()},
 \code{\link{vector2_zero}()}
 }
-\concept{vector2 functions}
+}

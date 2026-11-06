@@ -6,7 +6,7 @@
 #' @param loc_index An integer.
 #' @param value A number or numerical vector of length 2, 3, or 4.
 #'
-#' @family shader functions
+#' @eval .family_seealso("set_shader_value")
 #'
 #' @examplesIf FALSE
 #' shader <- load_shader("", "shader.fs")
@@ -48,7 +48,7 @@ set_shader_value <- function(shader, loc_index, value) {
 #' Font LoadFontEx(const char *fileName, int fontSize, int *fontChars, int glyphCount);
 #' ```
 #'
-#' @family font functions
+#' @eval .family_seealso("load_font_ex")
 #'
 #' @examplesIf FALSE
 #' font <- load_font_ex("myfont.ttf", 32L)
@@ -69,6 +69,8 @@ load_font_ex <- function(file_name, font_size) {
 #' @examples
 #' raylib_version()
 #'
+#' @eval .family_seealso("raylib_version")
+#'
 #' @export
 raylib_version <- function() {
   raylib_version_()
@@ -86,6 +88,8 @@ raylib_version <- function() {
 #' as_color("red")
 #' as_color(list(r = 255, g = 0, b = 0, a = 255))
 #'
+#' @eval .family_seealso("as_color")
+#'
 #' @export
 as_color <- function(x) {
   color_from_(x)
@@ -100,6 +104,8 @@ as_color <- function(x) {
 #' @examples
 #' is_web()
 #'
+#' @eval .family_seealso("is_web")
+#'
 #' @export
 is_web <- function() {
   is_web_()
@@ -112,6 +118,8 @@ is_web <- function() {
 #'
 #' @examplesIf FALSE
 #' eval_js("document.title")
+#'
+#' @eval .family_seealso("eval_js")
 #'
 #' @export
 eval_js <- function(script) {
@@ -141,6 +149,8 @@ eval_js <- function(script) {
 #'   init_fn = function() init_window(800L, 450L, "Game"),
 #'   cleanup_fn = function() close_window()
 #' )
+#'
+#' @eval .family_seealso("run_game_loop")
 #'
 #' @export
 run_game_loop <- function(update_fn, init_fn = NULL, cleanup_fn = NULL) {
@@ -180,6 +190,8 @@ run_game_loop <- function(update_fn, init_fn = NULL, cleanup_fn = NULL) {
 #' texture_file <- raylibr_resource("space.png")
 #' shader_dir <- raylibr_resource("model")
 #' list.files(shader_dir)
+#'
+#' @eval .family_seealso("raylibr_resource")
 #'
 #' @export
 raylibr_resource <- function(name) {
@@ -262,6 +274,8 @@ has_display <- function() {
 #'   draw_circle(200L, 150L, 80.0, "yellow")
 #' })
 #'
+#' @eval .family_seealso("raylibr_screenshot")
+#'
 #' @export
 raylibr_screenshot <- function(draw, width = 640L, height = 480L) {
   set_config_flags(flag$window_hidden + flag$window_highdpi)
@@ -297,6 +311,8 @@ raylibr_screenshot <- function(draw, width = 640L, height = 480L) {
 #' raylibr_screenshot_3d(function() {
 #'   draw_cube(c(0, 0, 0), 2.0, 2.0, 2.0, "red")
 #' })
+#'
+#' @eval .family_seealso("raylibr_screenshot_3d")
 #'
 #' @export
 raylibr_screenshot_3d <- function(draw, width = 640L, height = 480L) {
@@ -351,7 +367,7 @@ knit_print.image <- function(x, ...) {
 #' @param camera A camera_3d.
 #' @param mode An integer. Camera mode (use camera_mode enum).
 #'
-#' @family camera functions
+#' @eval .family_seealso("update_camera")
 #'
 #' @examplesIf FALSE
 #' cam <- camera_3d(c(0, 10, 10))
@@ -374,7 +390,7 @@ update_camera <- function(camera, mode) {
 #' @param rotation A numeric vector of length 3.
 #' @param zoom A number.
 #'
-#' @family camera functions
+#' @eval .family_seealso("update_camera_pro")
 #'
 #' @examplesIf FALSE
 #' cam <- camera_3d(c(0, 10, 10))
@@ -399,7 +415,7 @@ update_camera_pro <- function(camera, movement, rotation, zoom) {
 #' @param points A numeric matrix with 2 columns (x, y).
 #' @param color A color.
 #'
-#' @family draw functions
+#' @eval .family_seealso("draw_line_strip")
 #'
 #' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(50, 200, 350, 50, 150, 250), ncol = 2)
@@ -418,7 +434,7 @@ draw_line_strip <- function(points, color) {
 #' @param points A numeric matrix with 2 columns (x, y).
 #' @param color A color.
 #'
-#' @family draw functions
+#' @eval .family_seealso("draw_triangle_fan")
 #'
 #' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(200, 300, 100, 300, 100, 50, 250, 250), ncol = 2)
@@ -437,7 +453,7 @@ draw_triangle_fan <- function(points, color) {
 #' @param points A numeric matrix with 2 columns (x, y).
 #' @param color A color.
 #'
-#' @family draw functions
+#' @eval .family_seealso("draw_triangle_strip")
 #'
 #' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(50, 150, 250, 350, 80, 220, 80, 220), ncol = 2)
@@ -457,7 +473,7 @@ draw_triangle_strip <- function(points, color) {
 #' @param thick A number. Line thickness.
 #' @param color A color.
 #'
-#' @family draw functions
+#' @eval .family_seealso("draw_spline_linear")
 #'
 #' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(50, 200, 350, 50, 250, 100), ncol = 2)
@@ -477,7 +493,7 @@ draw_spline_linear <- function(points, thick, color) {
 #' @param thick A number. Line thickness.
 #' @param color A color.
 #'
-#' @family draw functions
+#' @eval .family_seealso("draw_spline_basis")
 #'
 #' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(50, 150, 250, 350, 50, 200, 50, 250), ncol = 2)
@@ -497,7 +513,7 @@ draw_spline_basis <- function(points, thick, color) {
 #' @param thick A number. Line thickness.
 #' @param color A color.
 #'
-#' @family draw functions
+#' @eval .family_seealso("draw_spline_catmull_rom")
 #'
 #' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(50, 150, 250, 350, 50, 250, 250, 50), ncol = 2)
@@ -517,7 +533,7 @@ draw_spline_catmull_rom <- function(points, thick, color) {
 #' @param thick A number. Line thickness.
 #' @param color A color.
 #'
-#' @family draw functions
+#' @eval .family_seealso("draw_spline_bezier_quadratic")
 #'
 #' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(50, 200, 350, 250, 50, 250), ncol = 2)
@@ -537,7 +553,7 @@ draw_spline_bezier_quadratic <- function(points, thick, color) {
 #' @param thick A number. Line thickness.
 #' @param color A color.
 #'
-#' @family draw functions
+#' @eval .family_seealso("draw_spline_bezier_cubic")
 #'
 #' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(50, 150, 250, 350, 50, 250, 250, 50), ncol = 2)
@@ -556,7 +572,7 @@ draw_spline_bezier_cubic <- function(points, thick, color) {
 #' @param points A numeric matrix with 3 columns (x, y, z).
 #' @param color A color.
 #'
-#' @family draw functions
+#' @eval .family_seealso("draw_triangle_strip_3d")
 #'
 #' @examplesIf raylibr:::has_display()
 #' pts <- matrix(c(0, 1, 2, 3, 0, 1, 0, 1, 0, 0, 0, 0), ncol = 3)
@@ -578,7 +594,7 @@ draw_triangle_strip_3d <- function(points, color) {
 #' @param init_frame An integer. Initial frame.
 #' @param final_frame An integer. Final frame.
 #'
-#' @family wave functions
+#' @eval .family_seealso("wave_crop")
 #'
 #' @examplesIf FALSE
 #' w <- load_wave("sound.wav")
@@ -602,7 +618,7 @@ wave_crop <- function(wave, init_frame, final_frame) {
 #' @param sample_size An integer.
 #' @param channels An integer.
 #'
-#' @family wave functions
+#' @eval .family_seealso("wave_format")
 #'
 #' @examplesIf FALSE
 #' w <- load_wave("sound.wav")
@@ -629,7 +645,7 @@ wave_format <- function(wave, sample_rate, sample_size, channels) {
 #' @param map_type An integer. Material map type.
 #' @param texture A texture.
 #'
-#' @family model functions
+#' @eval .family_seealso("set_model_texture")
 #'
 #' @examplesIf FALSE
 #' model <- load_model("model.obj")
@@ -654,7 +670,7 @@ set_model_texture <- function(model, material_id, map_type, texture) {
 #' @param map_type An integer. Material map type.
 #' @param texture A texture.
 #'
-#' @family material functions
+#' @eval .family_seealso("set_material_texture")
 #'
 #' @examplesIf FALSE
 #' mat <- load_material_default()
@@ -678,7 +694,7 @@ set_material_texture <- function(material, map_type, texture) {
 #' @param mesh_id An integer. Mesh index.
 #' @param material_id An integer. Material index.
 #'
-#' @family model functions
+#' @eval .family_seealso("set_model_mesh_material")
 #'
 #' @examplesIf FALSE
 #' model <- load_model("model.obj")
@@ -699,7 +715,7 @@ set_model_mesh_material <- function(model, mesh_id, material_id) {
 #'
 #' @param mesh A mesh.
 #'
-#' @family mesh functions
+#' @eval .family_seealso("gen_mesh_tangents")
 #'
 #' @examplesIf FALSE
 #' mesh <- gen_mesh_cube(1.0, 1.0, 1.0)
@@ -719,7 +735,7 @@ gen_mesh_tangents <- function(mesh) {
 #' @param mesh A mesh.
 #' @param dynamic A logical. Whether the mesh data is dynamic.
 #'
-#' @family mesh functions
+#' @eval .family_seealso("upload_mesh")
 #'
 #' @examplesIf FALSE
 #' mesh <- gen_mesh_cube(1.0, 1.0, 1.0)
@@ -745,7 +761,7 @@ upload_mesh <- function(mesh, dynamic) {
 #' @param thick An integer. Line thickness.
 #' @param color A color.
 #'
-#' @family image functions
+#' @eval .family_seealso("image_draw_line_ex")
 #'
 #' @examplesIf FALSE
 #' img <- gen_image_color(100, 100, "white")
@@ -770,7 +786,7 @@ image_draw_line_ex <- function(dst, start, end, thick, color) {
 #' @param v3 A numeric vector of length 2.
 #' @param color A color.
 #'
-#' @family image functions
+#' @eval .family_seealso("image_draw_triangle")
 #'
 #' @examplesIf FALSE
 #' img <- gen_image_color(200, 200, "white")
@@ -796,7 +812,7 @@ image_draw_triangle <- function(dst, v1, v2, v3, color) {
 #' @param material A material.
 #' @param transforms A list of 4x4 numeric matrices.
 #'
-#' @family draw functions
+#' @eval .family_seealso("draw_mesh_instanced")
 #'
 #' @examplesIf FALSE
 #' mesh <- gen_mesh_cube(1.0, 1.0, 1.0)
@@ -823,7 +839,7 @@ draw_mesh_instanced <- function(mesh, material, transforms) {
 #'
 #' @return A list with elements `v1` and `v2`, both numeric vectors of length 3.
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_ortho_normalize")
 #'
 #' @examples
 #' result <- vector3_ortho_normalize(c(1, 0, 0), c(0, 1, 0))
@@ -845,7 +861,7 @@ vector3_ortho_normalize <- function(v1, v2) {
 #'
 #' @return A list with elements `axis` (numeric vector of length 3) and `angle` (number).
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_to_axis_angle")
 #'
 #' @examples
 #' result <- quaternion_to_axis_angle(c(0, 0, 0, 1))
@@ -867,7 +883,7 @@ quaternion_to_axis_angle <- function(q) {
 #' @return A list with elements `translation` (numeric vector of length 3),
 #'   `rotation` (numeric vector of length 4, quaternion), and `scale` (numeric vector of length 3).
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_decompose")
 #'
 #' @examples
 #' result <- matrix_decompose(diag(4))
@@ -889,7 +905,7 @@ matrix_decompose <- function(mat) {
 #'
 #' @return A numeric vector of length 3.
 #'
-#' @family camera functions
+#' @eval .family_seealso("get_camera_forward")
 #'
 #' @examples
 #' cam <- camera_3d(c(0, 10, 10))
@@ -907,7 +923,7 @@ get_camera_forward <- function(camera) {
 #'
 #' @return A numeric vector of length 3.
 #'
-#' @family camera functions
+#' @eval .family_seealso("get_camera_up")
 #'
 #' @examples
 #' cam <- camera_3d(c(0, 10, 10))
@@ -925,7 +941,7 @@ get_camera_up <- function(camera) {
 #'
 #' @return A numeric vector of length 3.
 #'
-#' @family camera functions
+#' @eval .family_seealso("get_camera_right")
 #'
 #' @examples
 #' cam <- camera_3d(c(0, 10, 10))
@@ -943,7 +959,7 @@ get_camera_right <- function(camera) {
 #'
 #' @return A 4x4 numeric matrix.
 #'
-#' @family camera functions
+#' @eval .family_seealso("get_camera_view_matrix")
 #'
 #' @examples
 #' cam <- camera_3d(c(0, 10, 10))
@@ -962,7 +978,7 @@ get_camera_view_matrix <- function(camera) {
 #'
 #' @return A 4x4 numeric matrix.
 #'
-#' @family camera functions
+#' @eval .family_seealso("get_camera_projection_matrix")
 #'
 #' @examples
 #' cam <- camera_3d(c(0, 10, 10))
@@ -981,7 +997,7 @@ get_camera_projection_matrix <- function(camera, aspect) {
 #' @param distance A number.
 #' @param move_in_world_plane A logical.
 #'
-#' @family camera functions
+#' @eval .family_seealso("camera_move_forward")
 #'
 #' @examples
 #' cam <- camera_3d(c(0, 10, 10))
@@ -1001,7 +1017,7 @@ camera_move_forward <- function(camera, distance, move_in_world_plane) {
 #' @param camera A camera_3d.
 #' @param distance A number.
 #'
-#' @family camera functions
+#' @eval .family_seealso("camera_move_up")
 #'
 #' @examples
 #' cam <- camera_3d(c(0, 10, 10))
@@ -1021,7 +1037,7 @@ camera_move_up <- function(camera, distance) {
 #' @param distance A number.
 #' @param move_in_world_plane A logical.
 #'
-#' @family camera functions
+#' @eval .family_seealso("camera_move_right")
 #'
 #' @examples
 #' cam <- camera_3d(c(0, 10, 10))
@@ -1041,7 +1057,7 @@ camera_move_right <- function(camera, distance, move_in_world_plane) {
 #' @param camera A camera_3d.
 #' @param delta A number.
 #'
-#' @family camera functions
+#' @eval .family_seealso("camera_move_to_target")
 #'
 #' @examples
 #' cam <- camera_3d(c(0, 10, 10))
@@ -1061,7 +1077,7 @@ camera_move_to_target <- function(camera, delta) {
 #' @param angle A number. Rotation angle in radians.
 #' @param rotate_around_target A logical.
 #'
-#' @family camera functions
+#' @eval .family_seealso("camera_yaw")
 #'
 #' @examples
 #' cam <- camera_3d(c(0, 10, 10))
@@ -1084,7 +1100,7 @@ camera_yaw <- function(camera, angle, rotate_around_target) {
 #' @param rotate_around_target A logical.
 #' @param rotate_up A logical.
 #'
-#' @family camera functions
+#' @eval .family_seealso("camera_pitch")
 #'
 #' @examples
 #' cam <- camera_3d(c(0, 10, 10))
@@ -1106,7 +1122,7 @@ camera_pitch <- function(camera, angle, lock_view, rotate_around_target, rotate_
 #' @param camera A camera_3d.
 #' @param angle A number. Rotation angle in radians.
 #'
-#' @family camera functions
+#' @eval .family_seealso("camera_roll")
 #'
 #' @examples
 #' cam <- camera_3d(c(0, 10, 10))
@@ -1135,7 +1151,7 @@ camera_roll <- function(camera, angle) {
 #' @return A list with \code{result} (integer), \code{scroll} (numeric vector of length 2),
 #'   and \code{view} (rectangle).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_scroll_panel")
 #'
 #' @examplesIf FALSE
 #' gui_scroll_panel(
@@ -1164,7 +1180,7 @@ gui_scroll_panel <- function(bounds, text, content, scroll, view) {
 #'
 #' @return A list with \code{result} (integer) and \code{text} (string).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_text_box")
 #'
 #' @examplesIf FALSE
 #' gui_text_box(rectangle(10, 10, 200, 30), "Hello", 64L, FALSE)
@@ -1191,7 +1207,7 @@ gui_text_box <- function(bounds, text, text_size, edit_mode) {
 #' @return A list with \code{result} (integer), \code{text} (string),
 #'   \code{btn_active} (integer), and \code{secret_view_active} (logical).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_text_input_box")
 #'
 #' @examplesIf FALSE
 #' gui_text_input_box(
@@ -1220,7 +1236,7 @@ gui_text_input_box <- function(bounds, title, message, text, text_size, btn_text
 #' @return A list with \code{result} (integer), \code{text_value} (string),
 #'   and \code{value} (number).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_value_box_float")
 #'
 #' @examplesIf FALSE
 #' gui_value_box_float(rectangle(10, 10, 100, 30), "Value:", "0.0", 0.0, FALSE)
@@ -1279,6 +1295,8 @@ gui_value_box_float <- function(bounds, text, text_value, value, edit_mode) {
 #' @examplesIf FALSE
 #' export_html("game.R")
 #' export_html("game.R", "output/game.html", title = "My Game")
+#'
+#' @eval .family_seealso("export_html")
 #'
 #' @export
 export_html <- function(script, output = NULL, title = NULL,

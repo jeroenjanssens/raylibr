@@ -38,4 +38,18 @@ ray$hit
 ray$distance
 
 }
-\concept{ray_collision functions}
+\seealso{
+\ifelse{latex}{The other topics in the Structs section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Structs:
+\code{\link{bounding_box}()},
+\code{\link{camera_2d}()},
+\code{\link{camera_3d}()},
+\code{\link{glyph_info}()},
+\code{\link{material_map}()},
+\code{\link{n_patch_info}()},
+\code{\link{ray}()},
+\code{\link{raylib_transform}()},
+\code{\link{rectangle}()},
+\code{\link{render_texture}()},
+\code{\link{texture}()}
+}
+}

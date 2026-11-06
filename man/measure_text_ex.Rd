@@ -33,42 +33,42 @@ measure_text_ex(get_font_default(), "Hello", 1.0, 1.0)
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other ex functions: 
-\code{\link{draw_cylinder_ex}()},
-\code{\link{draw_cylinder_wires_ex}()},
-\code{\link{draw_line_ex}()},
-\code{\link{draw_model_ex}()},
-\code{\link{draw_model_wires_ex}()},
-\code{\link{draw_poly_lines_ex}()},
-\code{\link{draw_rectangle_gradient_ex}()},
-\code{\link{draw_rectangle_lines_ex}()},
-\code{\link{draw_rectangle_rounded_lines_ex}()},
-\code{\link{draw_sphere_ex}()},
-\code{\link{draw_text_ex}()},
-\code{\link{draw_texture_ex}()},
-\code{\link{get_directory_file_count_ex}()},
-\code{\link{get_screen_to_world_ray_ex}()},
-\code{\link{get_world_to_screen_ex}()},
-\code{\link{image_text_ex}()},
-\code{\link{update_model_animation_ex}()}
-
-Other text functions: 
+\ifelse{latex}{The other topics in the Text & fonts section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Text & fonts:
 \code{\link{draw_text}()},
 \code{\link{draw_text_codepoint}()},
 \code{\link{draw_text_ex}()},
 \code{\link{draw_text_pro}()},
-\code{\link{file_text_find_index}()},
-\code{\link{file_text_replace}()},
-\code{\link{gen_image_text}()},
-\code{\link{get_clipboard_text}()},
+\code{\link{export_font_as_code}()},
+\code{\link{get_codepoint_count}()},
+\code{\link{get_font_default}()},
+\code{\link{get_glyph_atlas_rec}()},
+\code{\link{get_glyph_index}()},
+\code{\link{get_glyph_info}()},
 \code{\link{get_text_between}()},
-\code{\link{image_text}()},
-\code{\link{image_text_ex}()},
-\code{\link{load_file_text}()},
+\code{\link{is_font_valid}()},
+\code{\link{load_font}()},
+\code{\link{load_font_ex}()},
+\code{\link{load_font_from_image}()},
 \code{\link{measure_text}()},
-\code{\link{save_file_text}()},
-\code{\link{set_clipboard_text}()},
-\code{\link{set_text_line_spacing}()}
+\code{\link{set_text_line_spacing}()},
+\code{\link{text_find_index}()},
+\code{\link{text_insert}()},
+\code{\link{text_insert_alloc}()},
+\code{\link{text_is_equal}()},
+\code{\link{text_length}()},
+\code{\link{text_remove_spaces}()},
+\code{\link{text_replace}()},
+\code{\link{text_replace_alloc}()},
+\code{\link{text_replace_between}()},
+\code{\link{text_replace_between_alloc}()},
+\code{\link{text_subtext}()},
+\code{\link{text_to_camel}()},
+\code{\link{text_to_float}()},
+\code{\link{text_to_integer}()},
+\code{\link{text_to_lower}()},
+\code{\link{text_to_pascal}()},
+\code{\link{text_to_snake}()},
+\code{\link{text_to_upper}()},
+\code{\link{unload_font}()}
 }
-\concept{ex functions}
-\concept{text functions}
+}

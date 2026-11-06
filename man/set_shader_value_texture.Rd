@@ -28,29 +28,7 @@ set_shader_value_texture(load_shader("", "shader.fs"), 0L, texture(0L, 64L, 64L,
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other texture functions: 
-\code{\link{begin_texture_mode}()},
-\code{\link{draw_texture}()},
-\code{\link{draw_texture_ex}()},
-\code{\link{draw_texture_n_patch}()},
-\code{\link{draw_texture_pro}()},
-\code{\link{draw_texture_rec}()},
-\code{\link{draw_texture_v}()},
-\code{\link{end_texture_mode}()},
-\code{\link{get_shapes_texture}()},
-\code{\link{is_texture_valid}()},
-\code{\link{load_image_from_texture}()},
-\code{\link{load_render_texture}()},
-\code{\link{load_texture}()},
-\code{\link{load_texture_from_image}()},
-\code{\link{set_shapes_texture}()},
-\code{\link{set_texture_filter}()},
-\code{\link{set_texture_wrap}()},
-\code{\link{texture}()},
-\code{\link{unload_render_texture}()},
-\code{\link{unload_texture}()}
-
-Other shader functions: 
+\ifelse{latex}{The other topics in the Shaders section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Shaders:
 \code{\link{begin_shader_mode}()},
 \code{\link{end_shader_mode}()},
 \code{\link{get_shader_location}()},
@@ -61,49 +39,5 @@ Other shader functions:
 \code{\link{set_shader_value}()},
 \code{\link{set_shader_value_matrix}()},
 \code{\link{unload_shader}()}
-
-Other set functions: 
-\code{\link{set_audio_stream_buffer_size_default}()},
-\code{\link{set_audio_stream_pan}()},
-\code{\link{set_audio_stream_pitch}()},
-\code{\link{set_audio_stream_volume}()},
-\code{\link{set_automation_event_base_frame}()},
-\code{\link{set_clipboard_text}()},
-\code{\link{set_config_flags}()},
-\code{\link{set_exit_key}()},
-\code{\link{set_gamepad_mappings}()},
-\code{\link{set_gamepad_vibration}()},
-\code{\link{set_gestures_enabled}()},
-\code{\link{set_master_volume}()},
-\code{\link{set_mouse_cursor}()},
-\code{\link{set_mouse_offset}()},
-\code{\link{set_mouse_position}()},
-\code{\link{set_mouse_scale}()},
-\code{\link{set_music_pan}()},
-\code{\link{set_music_pitch}()},
-\code{\link{set_music_volume}()},
-\code{\link{set_random_seed}()},
-\code{\link{set_shader_value_matrix}()},
-\code{\link{set_shapes_texture}()},
-\code{\link{set_sound_pan}()},
-\code{\link{set_sound_pitch}()},
-\code{\link{set_sound_volume}()},
-\code{\link{set_target_fps}()},
-\code{\link{set_text_line_spacing}()},
-\code{\link{set_texture_filter}()},
-\code{\link{set_texture_wrap}()},
-\code{\link{set_trace_log_level}()},
-\code{\link{set_window_focused}()},
-\code{\link{set_window_icon}()},
-\code{\link{set_window_max_size}()},
-\code{\link{set_window_min_size}()},
-\code{\link{set_window_monitor}()},
-\code{\link{set_window_opacity}()},
-\code{\link{set_window_position}()},
-\code{\link{set_window_size}()},
-\code{\link{set_window_state}()},
-\code{\link{set_window_title}()}
 }
-\concept{set functions}
-\concept{shader functions}
-\concept{texture functions}
+}

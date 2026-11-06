@@ -37,4 +37,16 @@ shader_uniform$ivec3
 shader_uniform$sampler2d
 
 }
+\seealso{
+\ifelse{latex}{The other topics in the Enums & constants section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Enums & constants:
+\code{\link{camera_mode}},
+\code{\link{camera_projection}},
+\code{\link{flag}},
+\code{\link{key}},
+\code{\link{log_level}},
+\code{\link{material_map_index}},
+\code{\link{mouse_button}},
+\code{\link{mouse_cursor}}
+}
+}
 \keyword{datasets}

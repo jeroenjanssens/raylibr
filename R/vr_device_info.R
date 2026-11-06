@@ -7,6 +7,8 @@
 #' @examples
 #' is_vr_device_info("not a vr_device_info")
 #'
+#' @eval .family_seealso("is_vr_device_info")
+#'
 #' @export
 is_vr_device_info <- function(x) {
   inherits(x, "vr_device_info")

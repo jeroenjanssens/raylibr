@@ -9,6 +9,8 @@
 #' @examples
 #' is_texture("not a texture")
 #'
+#' @eval .family_seealso("is_texture")
+#'
 #' @export
 is_texture <- function(x) {
   inherits(x, "texture")
@@ -41,7 +43,7 @@ is_texture <- function(x) {
 #'
 #' @rdname texture
 #'
-#' @family texture functions
+#' @eval .family_seealso("texture")
 #'
 #' @examples
 #' tex <- texture(0L, 800L, 450L, 0L, 0L)

@@ -28,33 +28,7 @@ set_shader_value_matrix(load_shader("", "shader.fs"), 0L, diag(4))
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other matrix functions: 
-\code{\link{get_camera_matrix}()},
-\code{\link{matrix_add}()},
-\code{\link{matrix_compose}()},
-\code{\link{matrix_decompose}()},
-\code{\link{matrix_determinant}()},
-\code{\link{matrix_frustum}()},
-\code{\link{matrix_identity}()},
-\code{\link{matrix_invert}()},
-\code{\link{matrix_look_at}()},
-\code{\link{matrix_multiply}()},
-\code{\link{matrix_multiply_value}()},
-\code{\link{matrix_ortho}()},
-\code{\link{matrix_perspective}()},
-\code{\link{matrix_rotate}()},
-\code{\link{matrix_rotate_x}()},
-\code{\link{matrix_rotate_xyz}()},
-\code{\link{matrix_rotate_y}()},
-\code{\link{matrix_rotate_z}()},
-\code{\link{matrix_rotate_zyx}()},
-\code{\link{matrix_scale}()},
-\code{\link{matrix_subtract}()},
-\code{\link{matrix_trace}()},
-\code{\link{matrix_translate}()},
-\code{\link{matrix_transpose}()}
-
-Other shader functions: 
+\ifelse{latex}{The other topics in the Shaders section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Shaders:
 \code{\link{begin_shader_mode}()},
 \code{\link{end_shader_mode}()},
 \code{\link{get_shader_location}()},
@@ -65,49 +39,5 @@ Other shader functions:
 \code{\link{set_shader_value}()},
 \code{\link{set_shader_value_texture}()},
 \code{\link{unload_shader}()}
-
-Other set functions: 
-\code{\link{set_audio_stream_buffer_size_default}()},
-\code{\link{set_audio_stream_pan}()},
-\code{\link{set_audio_stream_pitch}()},
-\code{\link{set_audio_stream_volume}()},
-\code{\link{set_automation_event_base_frame}()},
-\code{\link{set_clipboard_text}()},
-\code{\link{set_config_flags}()},
-\code{\link{set_exit_key}()},
-\code{\link{set_gamepad_mappings}()},
-\code{\link{set_gamepad_vibration}()},
-\code{\link{set_gestures_enabled}()},
-\code{\link{set_master_volume}()},
-\code{\link{set_mouse_cursor}()},
-\code{\link{set_mouse_offset}()},
-\code{\link{set_mouse_position}()},
-\code{\link{set_mouse_scale}()},
-\code{\link{set_music_pan}()},
-\code{\link{set_music_pitch}()},
-\code{\link{set_music_volume}()},
-\code{\link{set_random_seed}()},
-\code{\link{set_shader_value_texture}()},
-\code{\link{set_shapes_texture}()},
-\code{\link{set_sound_pan}()},
-\code{\link{set_sound_pitch}()},
-\code{\link{set_sound_volume}()},
-\code{\link{set_target_fps}()},
-\code{\link{set_text_line_spacing}()},
-\code{\link{set_texture_filter}()},
-\code{\link{set_texture_wrap}()},
-\code{\link{set_trace_log_level}()},
-\code{\link{set_window_focused}()},
-\code{\link{set_window_icon}()},
-\code{\link{set_window_max_size}()},
-\code{\link{set_window_min_size}()},
-\code{\link{set_window_monitor}()},
-\code{\link{set_window_opacity}()},
-\code{\link{set_window_position}()},
-\code{\link{set_window_size}()},
-\code{\link{set_window_state}()},
-\code{\link{set_window_title}()}
 }
-\concept{matrix functions}
-\concept{set functions}
-\concept{shader functions}
+}

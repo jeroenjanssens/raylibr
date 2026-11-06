@@ -20,3 +20,10 @@ Evaluate JavaScript
 eval_js("document.title")
 \dontshow{\}) # examplesIf}
 }
+\seealso{
+\ifelse{latex}{The other topics in the webR / Emscripten section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other webR / Emscripten:
+\code{\link{export_html}()},
+\code{\link{is_web}()},
+\code{\link{run_game_loop}()}
+}
+}

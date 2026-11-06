@@ -26,66 +26,18 @@ is_gesture_detected(0L)
 
 }
 \seealso{
-Other detected functions: 
-\code{\link{get_gesture_detected}()}
-
-Other gesture functions: 
+\ifelse{latex}{The other topics in the Input — Touch & gestures section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Input — Touch & gestures:
 \code{\link{get_gesture_detected}()},
 \code{\link{get_gesture_drag_angle}()},
 \code{\link{get_gesture_drag_vector}()},
 \code{\link{get_gesture_hold_duration}()},
 \code{\link{get_gesture_pinch_angle}()},
-\code{\link{get_gesture_pinch_vector}()}
-
-Other is functions: 
-\code{\link{color_is_equal}()},
-\code{\link{is_audio_device_ready}()},
-\code{\link{is_audio_stream_playing}()},
-\code{\link{is_audio_stream_processed}()},
-\code{\link{is_audio_stream_valid}()},
-\code{\link{is_cursor_hidden}()},
-\code{\link{is_cursor_on_screen}()},
-\code{\link{is_file_dropped}()},
-\code{\link{is_file_extension}()},
-\code{\link{is_file_name_valid}()},
-\code{\link{is_font_valid}()},
-\code{\link{is_gamepad_available}()},
-\code{\link{is_gamepad_button_down}()},
-\code{\link{is_gamepad_button_pressed}()},
-\code{\link{is_gamepad_button_released}()},
-\code{\link{is_gamepad_button_up}()},
-\code{\link{is_image_valid}()},
-\code{\link{is_key_down}()},
-\code{\link{is_key_pressed}()},
-\code{\link{is_key_pressed_repeat}()},
-\code{\link{is_key_released}()},
-\code{\link{is_key_up}()},
-\code{\link{is_material_valid}()},
-\code{\link{is_model_animation_valid}()},
-\code{\link{is_model_valid}()},
-\code{\link{is_mouse_button_down}()},
-\code{\link{is_mouse_button_pressed}()},
-\code{\link{is_mouse_button_released}()},
-\code{\link{is_mouse_button_up}()},
-\code{\link{is_music_stream_playing}()},
-\code{\link{is_music_valid}()},
-\code{\link{is_path_file}()},
-\code{\link{is_render_texture_valid}()},
-\code{\link{is_shader_valid}()},
-\code{\link{is_sound_playing}()},
-\code{\link{is_sound_valid}()},
-\code{\link{is_texture_valid}()},
-\code{\link{is_wave_valid}()},
-\code{\link{is_window_focused}()},
-\code{\link{is_window_fullscreen}()},
-\code{\link{is_window_hidden}()},
-\code{\link{is_window_maximized}()},
-\code{\link{is_window_minimized}()},
-\code{\link{is_window_ready}()},
-\code{\link{is_window_resized}()},
-\code{\link{is_window_state}()},
-\code{\link{text_is_equal}()}
+\code{\link{get_gesture_pinch_vector}()},
+\code{\link{get_touch_point_count}()},
+\code{\link{get_touch_point_id}()},
+\code{\link{get_touch_position}()},
+\code{\link{get_touch_x}()},
+\code{\link{get_touch_y}()},
+\code{\link{set_gestures_enabled}()}
 }
-\concept{detected functions}
-\concept{gesture functions}
-\concept{is functions}
+}

@@ -22,7 +22,7 @@ vector3_cross_product(c(0, 0, 0), c(0, 0, 0))
 
 }
 \seealso{
-Other vector3 functions: 
+\ifelse{latex}{The other topics in the raymath — Vector3 section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other raymath — Vector3:
 \code{\link{vector3_add}()},
 \code{\link{vector3_add_value}()},
 \code{\link{vector3_angle}()},
@@ -61,4 +61,4 @@ Other vector3 functions:
 \code{\link{vector3_unproject}()},
 \code{\link{vector3_zero}()}
 }
-\concept{vector3 functions}
+}

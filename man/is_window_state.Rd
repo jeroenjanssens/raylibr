@@ -26,13 +26,24 @@ is_window_state(0L)
 
 }
 \seealso{
-Other state functions: 
-\code{\link{clear_window_state}()},
-\code{\link{set_window_state}()}
-
-Other window functions: 
+\ifelse{latex}{The other topics in the Window management section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Window management:
 \code{\link{clear_window_state}()},
 \code{\link{close_window}()},
+\code{\link{disable_event_waiting}()},
+\code{\link{enable_event_waiting}()},
+\code{\link{get_current_monitor}()},
+\code{\link{get_monitor_count}()},
+\code{\link{get_monitor_height}()},
+\code{\link{get_monitor_name}()},
+\code{\link{get_monitor_physical_height}()},
+\code{\link{get_monitor_physical_width}()},
+\code{\link{get_monitor_position}()},
+\code{\link{get_monitor_refresh_rate}()},
+\code{\link{get_monitor_width}()},
+\code{\link{get_render_height}()},
+\code{\link{get_render_width}()},
+\code{\link{get_screen_height}()},
+\code{\link{get_screen_width}()},
 \code{\link{get_window_position}()},
 \code{\link{get_window_scale_dpi}()},
 \code{\link{init_window}()},
@@ -55,57 +66,9 @@ Other window functions:
 \code{\link{set_window_position}()},
 \code{\link{set_window_size}()},
 \code{\link{set_window_state}()},
-\code{\link{set_window_title}()}
-
-Other is functions: 
-\code{\link{color_is_equal}()},
-\code{\link{is_audio_device_ready}()},
-\code{\link{is_audio_stream_playing}()},
-\code{\link{is_audio_stream_processed}()},
-\code{\link{is_audio_stream_valid}()},
-\code{\link{is_cursor_hidden}()},
-\code{\link{is_cursor_on_screen}()},
-\code{\link{is_file_dropped}()},
-\code{\link{is_file_extension}()},
-\code{\link{is_file_name_valid}()},
-\code{\link{is_font_valid}()},
-\code{\link{is_gamepad_available}()},
-\code{\link{is_gamepad_button_down}()},
-\code{\link{is_gamepad_button_pressed}()},
-\code{\link{is_gamepad_button_released}()},
-\code{\link{is_gamepad_button_up}()},
-\code{\link{is_gesture_detected}()},
-\code{\link{is_image_valid}()},
-\code{\link{is_key_down}()},
-\code{\link{is_key_pressed}()},
-\code{\link{is_key_pressed_repeat}()},
-\code{\link{is_key_released}()},
-\code{\link{is_key_up}()},
-\code{\link{is_material_valid}()},
-\code{\link{is_model_animation_valid}()},
-\code{\link{is_model_valid}()},
-\code{\link{is_mouse_button_down}()},
-\code{\link{is_mouse_button_pressed}()},
-\code{\link{is_mouse_button_released}()},
-\code{\link{is_mouse_button_up}()},
-\code{\link{is_music_stream_playing}()},
-\code{\link{is_music_valid}()},
-\code{\link{is_path_file}()},
-\code{\link{is_render_texture_valid}()},
-\code{\link{is_shader_valid}()},
-\code{\link{is_sound_playing}()},
-\code{\link{is_sound_valid}()},
-\code{\link{is_texture_valid}()},
-\code{\link{is_wave_valid}()},
-\code{\link{is_window_focused}()},
-\code{\link{is_window_fullscreen}()},
-\code{\link{is_window_hidden}()},
-\code{\link{is_window_maximized}()},
-\code{\link{is_window_minimized}()},
-\code{\link{is_window_ready}()},
-\code{\link{is_window_resized}()},
-\code{\link{text_is_equal}()}
+\code{\link{set_window_title}()},
+\code{\link{toggle_borderless_windowed}()},
+\code{\link{toggle_fullscreen}()},
+\code{\link{window_should_close}()}
 }
-\concept{is functions}
-\concept{state functions}
-\concept{window functions}
+}

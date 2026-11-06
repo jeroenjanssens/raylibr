@@ -9,6 +9,8 @@
 #' @examples
 #' is_rectangle("not a rectangle")
 #'
+#' @eval .family_seealso("is_rectangle")
+#'
 #' @export
 is_rectangle <- function(x) {
   inherits(x, "rectangle")
@@ -39,7 +41,7 @@ is_rectangle <- function(x) {
 #'
 #' @rdname rectangle
 #'
-#' @family rectangle functions
+#' @eval .family_seealso("rectangle")
 #'
 #' @examples
 #' rec <- rectangle(0.0, 0.0, 200.0, 100.0)

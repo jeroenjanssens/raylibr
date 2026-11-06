@@ -22,7 +22,7 @@ vector4_subtract_value(c(0, 0, 0, 1), 0.0)
 
 }
 \seealso{
-Other vector4 functions: 
+\ifelse{latex}{The other topics in the raymath — Vector4 section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other raymath — Vector4:
 \code{\link{vector4_add}()},
 \code{\link{vector4_add_value}()},
 \code{\link{vector4_distance}()},
@@ -45,4 +45,4 @@ Other vector4 functions:
 \code{\link{vector4_subtract}()},
 \code{\link{vector4_zero}()}
 }
-\concept{vector4 functions}
+}

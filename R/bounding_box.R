@@ -9,6 +9,8 @@
 #' @examples
 #' is_bounding_box("not a bounding_box")
 #'
+#' @eval .family_seealso("is_bounding_box")
+#'
 #' @export
 is_bounding_box <- function(x) {
   inherits(x, "bounding_box")
@@ -35,7 +37,7 @@ is_bounding_box <- function(x) {
 #'
 #' @rdname bounding_box
 #'
-#' @family bounding_box functions
+#' @eval .family_seealso("bounding_box")
 #'
 #' @examples
 #' bou <- bounding_box(c(0, 0, 0), c(0, 0, 0))

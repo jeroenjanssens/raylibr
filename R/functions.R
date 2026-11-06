@@ -38,8 +38,7 @@
 #' void InitWindow(int width, int height, const char * title);
 #' ```
 #'
-#' @family window functions
-#' @family init functions
+#' @eval .family_seealso("init_window")
 #'
 #' @examplesIf FALSE
 #' init_window(800L, 450L, "My Window")
@@ -63,8 +62,7 @@ init_window <- function(width = 640L, height = 480L, title = "raylibr") {
 #' void CloseWindow(void);
 #' ```
 #'
-#' @family window functions
-#' @family close functions
+#' @eval .family_seealso("close_window")
 #'
 #' @examplesIf FALSE
 #' close_window()
@@ -87,8 +85,7 @@ close_window <- function() {
 #' bool WindowShouldClose(void);
 #' ```
 #'
-#' @family close functions
-#' @family should functions
+#' @eval .family_seealso("window_should_close")
 #'
 #' @examples
 #' window_should_close()
@@ -111,9 +108,7 @@ window_should_close <- function() {
 #' bool IsWindowReady(void);
 #' ```
 #'
-#' @family ready functions
-#' @family window functions
-#' @family is functions
+#' @eval .family_seealso("is_window_ready")
 #'
 #' @examples
 #' is_window_ready()
@@ -136,9 +131,7 @@ is_window_ready <- function() {
 #' bool IsWindowFullscreen(void);
 #' ```
 #'
-#' @family fullscreen functions
-#' @family window functions
-#' @family is functions
+#' @eval .family_seealso("is_window_fullscreen")
 #'
 #' @examples
 #' is_window_fullscreen()
@@ -161,9 +154,7 @@ is_window_fullscreen <- function() {
 #' bool IsWindowHidden(void);
 #' ```
 #'
-#' @family hidden functions
-#' @family window functions
-#' @family is functions
+#' @eval .family_seealso("is_window_hidden")
 #'
 #' @examples
 #' is_window_hidden()
@@ -186,9 +177,7 @@ is_window_hidden <- function() {
 #' bool IsWindowMinimized(void);
 #' ```
 #'
-#' @family minimized functions
-#' @family window functions
-#' @family is functions
+#' @eval .family_seealso("is_window_minimized")
 #'
 #' @examples
 #' is_window_minimized()
@@ -211,9 +200,7 @@ is_window_minimized <- function() {
 #' bool IsWindowMaximized(void);
 #' ```
 #'
-#' @family maximized functions
-#' @family window functions
-#' @family is functions
+#' @eval .family_seealso("is_window_maximized")
 #'
 #' @examples
 #' is_window_maximized()
@@ -236,9 +223,7 @@ is_window_maximized <- function() {
 #' bool IsWindowFocused(void);
 #' ```
 #'
-#' @family focused functions
-#' @family window functions
-#' @family is functions
+#' @eval .family_seealso("is_window_focused")
 #'
 #' @examples
 #' is_window_focused()
@@ -261,9 +246,7 @@ is_window_focused <- function() {
 #' bool IsWindowResized(void);
 #' ```
 #'
-#' @family resized functions
-#' @family window functions
-#' @family is functions
+#' @eval .family_seealso("is_window_resized")
 #'
 #' @examples
 #' is_window_resized()
@@ -287,9 +270,7 @@ is_window_resized <- function() {
 #' bool IsWindowState(unsigned int flag);
 #' ```
 #'
-#' @family state functions
-#' @family window functions
-#' @family is functions
+#' @eval .family_seealso("is_window_state")
 #'
 #' @examples
 #' is_window_state(0L)
@@ -312,9 +293,7 @@ is_window_state <- function(flag) {
 #' void SetWindowState(unsigned int flags);
 #' ```
 #'
-#' @family state functions
-#' @family window functions
-#' @family set functions
+#' @eval .family_seealso("set_window_state")
 #'
 #' @examplesIf FALSE
 #' set_window_state(0L)
@@ -337,8 +316,7 @@ set_window_state <- function(flags) {
 #' void ClearWindowState(unsigned int flags);
 #' ```
 #'
-#' @family state functions
-#' @family window functions
+#' @eval .family_seealso("clear_window_state")
 #'
 #' @examples
 #' clear_window_state(0L)
@@ -360,7 +338,7 @@ clear_window_state <- function(flags) {
 #' void ToggleFullscreen(void);
 #' ```
 #'
-#' @family fullscreen functions
+#' @eval .family_seealso("toggle_fullscreen")
 #'
 #' @examplesIf FALSE
 #' toggle_fullscreen()
@@ -381,8 +359,7 @@ toggle_fullscreen <- function() {
 #' void ToggleBorderlessWindowed(void);
 #' ```
 #'
-#' @family windowed functions
-#' @family borderless functions
+#' @eval .family_seealso("toggle_borderless_windowed")
 #'
 #' @examplesIf FALSE
 #' toggle_borderless_windowed()
@@ -403,7 +380,7 @@ toggle_borderless_windowed <- function() {
 #' void MaximizeWindow(void);
 #' ```
 #'
-#' @family window functions
+#' @eval .family_seealso("maximize_window")
 #'
 #' @examplesIf FALSE
 #' maximize_window()
@@ -424,7 +401,7 @@ maximize_window <- function() {
 #' void MinimizeWindow(void);
 #' ```
 #'
-#' @family window functions
+#' @eval .family_seealso("minimize_window")
 #'
 #' @examplesIf FALSE
 #' minimize_window()
@@ -445,7 +422,7 @@ minimize_window <- function() {
 #' void RestoreWindow(void);
 #' ```
 #'
-#' @family window functions
+#' @eval .family_seealso("restore_window")
 #'
 #' @examplesIf FALSE
 #' restore_window()
@@ -467,9 +444,7 @@ restore_window <- function() {
 #' void SetWindowIcon(Image image);
 #' ```
 #'
-#' @family icon functions
-#' @family window functions
-#' @family set functions
+#' @eval .family_seealso("set_window_icon")
 #'
 #' @examplesIf FALSE
 #' set_window_icon(gen_image_color(200, 200, "blue"))
@@ -492,9 +467,7 @@ set_window_icon <- function(image) {
 #' void SetWindowTitle(const char * title);
 #' ```
 #'
-#' @family title functions
-#' @family window functions
-#' @family set functions
+#' @eval .family_seealso("set_window_title")
 #'
 #' @examplesIf FALSE
 #' set_window_title("My Window")
@@ -518,9 +491,7 @@ set_window_title <- function(title) {
 #' void SetWindowPosition(int x, int y);
 #' ```
 #'
-#' @family position functions
-#' @family window functions
-#' @family set functions
+#' @eval .family_seealso("set_window_position")
 #'
 #' @examplesIf FALSE
 #' set_window_position(100L, 100L)
@@ -544,9 +515,7 @@ set_window_position <- function(x, y) {
 #' void SetWindowMonitor(int monitor);
 #' ```
 #'
-#' @family monitor functions
-#' @family window functions
-#' @family set functions
+#' @eval .family_seealso("set_window_monitor")
 #'
 #' @examplesIf FALSE
 #' set_window_monitor(0L)
@@ -570,9 +539,7 @@ set_window_monitor <- function(monitor) {
 #' void SetWindowMinSize(int width, int height);
 #' ```
 #'
-#' @family size functions
-#' @family window functions
-#' @family set functions
+#' @eval .family_seealso("set_window_min_size")
 #'
 #' @examplesIf FALSE
 #' set_window_min_size(800L, 450L)
@@ -597,9 +564,7 @@ set_window_min_size <- function(width, height) {
 #' void SetWindowMaxSize(int width, int height);
 #' ```
 #'
-#' @family size functions
-#' @family window functions
-#' @family set functions
+#' @eval .family_seealso("set_window_max_size")
 #'
 #' @examplesIf FALSE
 #' set_window_max_size(800L, 450L)
@@ -624,9 +589,7 @@ set_window_max_size <- function(width, height) {
 #' void SetWindowSize(int width, int height);
 #' ```
 #'
-#' @family size functions
-#' @family window functions
-#' @family set functions
+#' @eval .family_seealso("set_window_size")
 #'
 #' @examplesIf FALSE
 #' set_window_size(800L, 450L)
@@ -650,9 +613,7 @@ set_window_size <- function(width, height) {
 #' void SetWindowOpacity(float opacity);
 #' ```
 #'
-#' @family opacity functions
-#' @family window functions
-#' @family set functions
+#' @eval .family_seealso("set_window_opacity")
 #'
 #' @examplesIf FALSE
 #' set_window_opacity(0.0)
@@ -674,9 +635,7 @@ set_window_opacity <- function(opacity) {
 #' void SetWindowFocused(void);
 #' ```
 #'
-#' @family focused functions
-#' @family window functions
-#' @family set functions
+#' @eval .family_seealso("set_window_focused")
 #'
 #' @examplesIf FALSE
 #' set_window_focused()
@@ -699,9 +658,7 @@ set_window_focused <- function() {
 #' int GetScreenWidth(void);
 #' ```
 #'
-#' @family width functions
-#' @family screen functions
-#' @family get functions
+#' @eval .family_seealso("get_screen_width")
 #'
 #' @examples
 #' get_screen_width()
@@ -724,9 +681,7 @@ get_screen_width <- function() {
 #' int GetScreenHeight(void);
 #' ```
 #'
-#' @family height functions
-#' @family screen functions
-#' @family get functions
+#' @eval .family_seealso("get_screen_height")
 #'
 #' @examples
 #' get_screen_height()
@@ -749,9 +704,7 @@ get_screen_height <- function() {
 #' int GetRenderWidth(void);
 #' ```
 #'
-#' @family width functions
-#' @family render functions
-#' @family get functions
+#' @eval .family_seealso("get_render_width")
 #'
 #' @examples
 #' get_render_width()
@@ -774,9 +727,7 @@ get_render_width <- function() {
 #' int GetRenderHeight(void);
 #' ```
 #'
-#' @family height functions
-#' @family render functions
-#' @family get functions
+#' @eval .family_seealso("get_render_height")
 #'
 #' @examples
 #' get_render_height()
@@ -799,9 +750,7 @@ get_render_height <- function() {
 #' int GetMonitorCount(void);
 #' ```
 #'
-#' @family count functions
-#' @family monitor functions
-#' @family get functions
+#' @eval .family_seealso("get_monitor_count")
 #'
 #' @examplesIf FALSE
 #' get_monitor_count()
@@ -824,9 +773,7 @@ get_monitor_count <- function() {
 #' int GetCurrentMonitor(void);
 #' ```
 #'
-#' @family monitor functions
-#' @family current functions
-#' @family get functions
+#' @eval .family_seealso("get_current_monitor")
 #'
 #' @examplesIf FALSE
 #' get_current_monitor()
@@ -850,9 +797,7 @@ get_current_monitor <- function() {
 #' Vector2 GetMonitorPosition(int monitor);
 #' ```
 #'
-#' @family position functions
-#' @family monitor functions
-#' @family get functions
+#' @eval .family_seealso("get_monitor_position")
 #'
 #' @examplesIf FALSE
 #' get_monitor_position(0L)
@@ -877,9 +822,7 @@ get_monitor_position <- function(monitor) {
 #' int GetMonitorWidth(int monitor);
 #' ```
 #'
-#' @family width functions
-#' @family monitor functions
-#' @family get functions
+#' @eval .family_seealso("get_monitor_width")
 #'
 #' @examplesIf FALSE
 #' get_monitor_width(0L)
@@ -904,9 +847,7 @@ get_monitor_width <- function(monitor) {
 #' int GetMonitorHeight(int monitor);
 #' ```
 #'
-#' @family height functions
-#' @family monitor functions
-#' @family get functions
+#' @eval .family_seealso("get_monitor_height")
 #'
 #' @examplesIf FALSE
 #' get_monitor_height(0L)
@@ -931,9 +872,7 @@ get_monitor_height <- function(monitor) {
 #' int GetMonitorPhysicalWidth(int monitor);
 #' ```
 #'
-#' @family width functions
-#' @family monitor functions
-#' @family get functions
+#' @eval .family_seealso("get_monitor_physical_width")
 #'
 #' @examplesIf FALSE
 #' get_monitor_physical_width(0L)
@@ -958,9 +897,7 @@ get_monitor_physical_width <- function(monitor) {
 #' int GetMonitorPhysicalHeight(int monitor);
 #' ```
 #'
-#' @family height functions
-#' @family monitor functions
-#' @family get functions
+#' @eval .family_seealso("get_monitor_physical_height")
 #'
 #' @examplesIf FALSE
 #' get_monitor_physical_height(0L)
@@ -985,9 +922,7 @@ get_monitor_physical_height <- function(monitor) {
 #' int GetMonitorRefreshRate(int monitor);
 #' ```
 #'
-#' @family rate functions
-#' @family monitor functions
-#' @family get functions
+#' @eval .family_seealso("get_monitor_refresh_rate")
 #'
 #' @examplesIf FALSE
 #' get_monitor_refresh_rate(0L)
@@ -1011,9 +946,7 @@ get_monitor_refresh_rate <- function(monitor) {
 #' Vector2 GetWindowPosition(void);
 #' ```
 #'
-#' @family position functions
-#' @family window functions
-#' @family get functions
+#' @eval .family_seealso("get_window_position")
 #'
 #' @examplesIf FALSE
 #' get_window_position()
@@ -1036,9 +969,7 @@ get_window_position <- function() {
 #' Vector2 GetWindowScaleDPI(void);
 #' ```
 #'
-#' @family dpi functions
-#' @family window functions
-#' @family get functions
+#' @eval .family_seealso("get_window_scale_dpi")
 #'
 #' @examplesIf FALSE
 #' get_window_scale_dpi()
@@ -1062,9 +993,7 @@ get_window_scale_dpi <- function() {
 #' const char * GetMonitorName(int monitor);
 #' ```
 #'
-#' @family name functions
-#' @family monitor functions
-#' @family get functions
+#' @eval .family_seealso("get_monitor_name")
 #'
 #' @examplesIf FALSE
 #' get_monitor_name(0L)
@@ -1087,9 +1016,7 @@ get_monitor_name <- function(monitor) {
 #' void SetClipboardText(const char * text);
 #' ```
 #'
-#' @family text functions
-#' @family clipboard functions
-#' @family set functions
+#' @eval .family_seealso("set_clipboard_text")
 #'
 #' @examplesIf FALSE
 #' set_clipboard_text("Hello")
@@ -1113,9 +1040,7 @@ set_clipboard_text <- function(text) {
 #' const char * GetClipboardText(void);
 #' ```
 #'
-#' @family text functions
-#' @family clipboard functions
-#' @family get functions
+#' @eval .family_seealso("get_clipboard_text")
 #'
 #' @examplesIf FALSE
 #' get_clipboard_text()
@@ -1138,9 +1063,7 @@ get_clipboard_text <- function() {
 #' Image GetClipboardImage(void);
 #' ```
 #'
-#' @family image functions
-#' @family clipboard functions
-#' @family get functions
+#' @eval .family_seealso("get_clipboard_image")
 #'
 #' @examplesIf FALSE
 #' get_clipboard_image()
@@ -1161,8 +1084,7 @@ get_clipboard_image <- function() {
 #' void EnableEventWaiting(void);
 #' ```
 #'
-#' @family waiting functions
-#' @family event functions
+#' @eval .family_seealso("enable_event_waiting")
 #'
 #' @examples
 #' enable_event_waiting()
@@ -1183,8 +1105,7 @@ enable_event_waiting <- function() {
 #' void DisableEventWaiting(void);
 #' ```
 #'
-#' @family waiting functions
-#' @family event functions
+#' @eval .family_seealso("disable_event_waiting")
 #'
 #' @examples
 #' disable_event_waiting()
@@ -1205,7 +1126,7 @@ disable_event_waiting <- function() {
 #' void ShowCursor(void);
 #' ```
 #'
-#' @family cursor functions
+#' @eval .family_seealso("show_cursor")
 #'
 #' @examplesIf FALSE
 #' show_cursor()
@@ -1226,7 +1147,7 @@ show_cursor <- function() {
 #' void HideCursor(void);
 #' ```
 #'
-#' @family cursor functions
+#' @eval .family_seealso("hide_cursor")
 #'
 #' @examplesIf FALSE
 #' hide_cursor()
@@ -1249,9 +1170,7 @@ hide_cursor <- function() {
 #' bool IsCursorHidden(void);
 #' ```
 #'
-#' @family hidden functions
-#' @family cursor functions
-#' @family is functions
+#' @eval .family_seealso("is_cursor_hidden")
 #'
 #' @examples
 #' is_cursor_hidden()
@@ -1272,7 +1191,7 @@ is_cursor_hidden <- function() {
 #' void EnableCursor(void);
 #' ```
 #'
-#' @family cursor functions
+#' @eval .family_seealso("enable_cursor")
 #'
 #' @examplesIf FALSE
 #' enable_cursor()
@@ -1293,7 +1212,7 @@ enable_cursor <- function() {
 #' void DisableCursor(void);
 #' ```
 #'
-#' @family cursor functions
+#' @eval .family_seealso("disable_cursor")
 #'
 #' @examplesIf FALSE
 #' disable_cursor()
@@ -1316,9 +1235,7 @@ disable_cursor <- function() {
 #' bool IsCursorOnScreen(void);
 #' ```
 #'
-#' @family screen functions
-#' @family cursor functions
-#' @family is functions
+#' @eval .family_seealso("is_cursor_on_screen")
 #'
 #' @examples
 #' is_cursor_on_screen()
@@ -1340,7 +1257,7 @@ is_cursor_on_screen <- function() {
 #' void ClearBackground(Color color);
 #' ```
 #'
-#' @family background functions
+#' @eval .family_seealso("clear_background")
 #'
 #' @examplesIf FALSE
 #' clear_background("red")
@@ -1362,8 +1279,7 @@ clear_background <- function(color = "white") {
 #' void BeginDrawing(void);
 #' ```
 #'
-#' @family drawing functions
-#' @family begin functions
+#' @eval .family_seealso("begin_drawing")
 #'
 #' @examplesIf FALSE
 #' begin_drawing()
@@ -1384,8 +1300,7 @@ begin_drawing <- function() {
 #' void EndDrawing(void);
 #' ```
 #'
-#' @family drawing functions
-#' @family end functions
+#' @eval .family_seealso("end_drawing")
 #'
 #' @examplesIf FALSE
 #' end_drawing()
@@ -1407,9 +1322,7 @@ end_drawing <- function() {
 #' void BeginMode2D(Camera2D camera);
 #' ```
 #'
-#' @family 2d functions
-#' @family mode functions
-#' @family begin functions
+#' @eval .family_seealso("begin_mode_2d")
 #'
 #' @examplesIf FALSE
 #' begin_mode_2d(camera_2d(c(400, 300), c(0, 0)))
@@ -1431,9 +1344,7 @@ begin_mode_2d <- function(camera) {
 #' void EndMode2D(void);
 #' ```
 #'
-#' @family 2d functions
-#' @family mode functions
-#' @family end functions
+#' @eval .family_seealso("end_mode_2d")
 #'
 #' @examplesIf FALSE
 #' end_mode_2d()
@@ -1455,9 +1366,7 @@ end_mode_2d <- function() {
 #' void BeginMode3D(Camera3D camera);
 #' ```
 #'
-#' @family 3d functions
-#' @family mode functions
-#' @family begin functions
+#' @eval .family_seealso("begin_mode_3d")
 #'
 #' @examplesIf FALSE
 #' begin_mode_3d(camera_3d(c(0, 10, 10)))
@@ -1479,9 +1388,7 @@ begin_mode_3d <- function(camera) {
 #' void EndMode3D(void);
 #' ```
 #'
-#' @family 3d functions
-#' @family mode functions
-#' @family end functions
+#' @eval .family_seealso("end_mode_3d")
 #'
 #' @examplesIf FALSE
 #' end_mode_3d()
@@ -1503,9 +1410,7 @@ end_mode_3d <- function() {
 #' void BeginTextureMode(RenderTexture2D target);
 #' ```
 #'
-#' @family mode functions
-#' @family texture functions
-#' @family begin functions
+#' @eval .family_seealso("begin_texture_mode")
 #'
 #' @examplesIf FALSE
 #' begin_texture_mode(load_render_texture(800, 450))
@@ -1527,9 +1432,7 @@ begin_texture_mode <- function(target) {
 #' void EndTextureMode(void);
 #' ```
 #'
-#' @family mode functions
-#' @family texture functions
-#' @family end functions
+#' @eval .family_seealso("end_texture_mode")
 #'
 #' @examplesIf FALSE
 #' end_texture_mode()
@@ -1551,9 +1454,7 @@ end_texture_mode <- function() {
 #' void BeginShaderMode(Shader shader);
 #' ```
 #'
-#' @family mode functions
-#' @family shader functions
-#' @family begin functions
+#' @eval .family_seealso("begin_shader_mode")
 #'
 #' @examplesIf FALSE
 #' begin_shader_mode(load_shader("", "shader.fs"))
@@ -1575,9 +1476,7 @@ begin_shader_mode <- function(shader) {
 #' void EndShaderMode(void);
 #' ```
 #'
-#' @family mode functions
-#' @family shader functions
-#' @family end functions
+#' @eval .family_seealso("end_shader_mode")
 #'
 #' @examplesIf FALSE
 #' end_shader_mode()
@@ -1599,9 +1498,7 @@ end_shader_mode <- function() {
 #' void BeginBlendMode(int mode);
 #' ```
 #'
-#' @family mode functions
-#' @family blend functions
-#' @family begin functions
+#' @eval .family_seealso("begin_blend_mode")
 #'
 #' @examplesIf FALSE
 #' begin_blend_mode(0L)
@@ -1623,9 +1520,7 @@ begin_blend_mode <- function(mode) {
 #' void EndBlendMode(void);
 #' ```
 #'
-#' @family mode functions
-#' @family blend functions
-#' @family end functions
+#' @eval .family_seealso("end_blend_mode")
 #'
 #' @examplesIf FALSE
 #' end_blend_mode()
@@ -1650,9 +1545,7 @@ end_blend_mode <- function() {
 #' void BeginScissorMode(int x, int y, int width, int height);
 #' ```
 #'
-#' @family mode functions
-#' @family scissor functions
-#' @family begin functions
+#' @eval .family_seealso("begin_scissor_mode")
 #'
 #' @examplesIf FALSE
 #' begin_scissor_mode(100L, 100L, 800L, 450L)
@@ -1677,9 +1570,7 @@ begin_scissor_mode <- function(x, y, width, height) {
 #' void EndScissorMode(void);
 #' ```
 #'
-#' @family mode functions
-#' @family scissor functions
-#' @family end functions
+#' @eval .family_seealso("end_scissor_mode")
 #'
 #' @examplesIf FALSE
 #' end_scissor_mode()
@@ -1701,9 +1592,7 @@ end_scissor_mode <- function() {
 #' void BeginVrStereoMode(VrStereoConfig config);
 #' ```
 #'
-#' @family mode functions
-#' @family vr functions
-#' @family begin functions
+#' @eval .family_seealso("begin_vr_stereo_mode")
 #'
 #' @examplesIf FALSE
 #' begin_vr_stereo_mode(config)
@@ -1725,9 +1614,7 @@ begin_vr_stereo_mode <- function(config) {
 #' void EndVrStereoMode(void);
 #' ```
 #'
-#' @family mode functions
-#' @family vr functions
-#' @family end functions
+#' @eval .family_seealso("end_vr_stereo_mode")
 #'
 #' @examplesIf FALSE
 #' end_vr_stereo_mode()
@@ -1751,9 +1638,7 @@ end_vr_stereo_mode <- function() {
 #' VrStereoConfig LoadVrStereoConfig(VrDeviceInfo device);
 #' ```
 #'
-#' @family config functions
-#' @family vr functions
-#' @family load functions
+#' @eval .family_seealso("load_vr_stereo_config")
 #'
 #' @examplesIf FALSE
 #' load_vr_stereo_config(device)
@@ -1776,9 +1661,7 @@ load_vr_stereo_config <- function(device) {
 #' void UnloadVrStereoConfig(VrStereoConfig config);
 #' ```
 #'
-#' @family config functions
-#' @family vr functions
-#' @family unload functions
+#' @eval .family_seealso("unload_vr_stereo_config")
 #'
 #' @examplesIf FALSE
 #' unload_vr_stereo_config(config)
@@ -1804,8 +1687,7 @@ unload_vr_stereo_config <- function(config) {
 #' Shader LoadShader(const char * vsFileName, const char * fsFileName);
 #' ```
 #'
-#' @family shader functions
-#' @family load functions
+#' @eval .family_seealso("load_shader")
 #'
 #' @examplesIf FALSE
 #' load_shader("file.png", "file.png")
@@ -1832,9 +1714,7 @@ load_shader <- function(vs_file_name = "", fs_file_name) {
 #' Shader LoadShaderFromMemory(const char * vsCode, const char * fsCode);
 #' ```
 #'
-#' @family memory functions
-#' @family shader functions
-#' @family load functions
+#' @eval .family_seealso("load_shader_from_memory")
 #'
 #' @examplesIf FALSE
 #' load_shader_from_memory("text", "text")
@@ -1860,9 +1740,7 @@ load_shader_from_memory <- function(vs_code, fs_code) {
 #' bool IsShaderValid(Shader shader);
 #' ```
 #'
-#' @family valid functions
-#' @family shader functions
-#' @family is functions
+#' @eval .family_seealso("is_shader_valid")
 #'
 #' @examplesIf FALSE
 #' is_shader_valid(load_shader("", "shader.fs"))
@@ -1888,9 +1766,7 @@ is_shader_valid <- function(shader) {
 #' int GetShaderLocation(Shader shader, const char * uniformName);
 #' ```
 #'
-#' @family location functions
-#' @family shader functions
-#' @family get functions
+#' @eval .family_seealso("get_shader_location")
 #'
 #' @examplesIf FALSE
 #' get_shader_location(load_shader("", "shader.fs"), "text")
@@ -1917,9 +1793,7 @@ get_shader_location <- function(shader, uniform_name) {
 #' int GetShaderLocationAttrib(Shader shader, const char * attribName);
 #' ```
 #'
-#' @family attrib functions
-#' @family shader functions
-#' @family get functions
+#' @eval .family_seealso("get_shader_location_attrib")
 #'
 #' @examplesIf FALSE
 #' get_shader_location_attrib(load_shader("", "shader.fs"), "text")
@@ -1945,9 +1819,7 @@ get_shader_location_attrib <- function(shader, attrib_name) {
 #' void SetShaderValueMatrix(Shader shader, int locIndex, Matrix mat);
 #' ```
 #'
-#' @family matrix functions
-#' @family shader functions
-#' @family set functions
+#' @eval .family_seealso("set_shader_value_matrix")
 #'
 #' @examplesIf FALSE
 #' set_shader_value_matrix(load_shader("", "shader.fs"), 0L, diag(4))
@@ -1974,9 +1846,7 @@ set_shader_value_matrix <- function(shader, loc_index, mat) {
 #' void SetShaderValueTexture(Shader shader, int locIndex, Texture2D texture);
 #' ```
 #'
-#' @family texture functions
-#' @family shader functions
-#' @family set functions
+#' @eval .family_seealso("set_shader_value_texture")
 #'
 #' @examplesIf FALSE
 #' set_shader_value_texture(load_shader("", "shader.fs"), 0L, texture(0L, 64L, 64L, 1L, 7L))
@@ -2001,8 +1871,7 @@ set_shader_value_texture <- function(shader, loc_index, texture) {
 #' void UnloadShader(Shader shader);
 #' ```
 #'
-#' @family shader functions
-#' @family unload functions
+#' @eval .family_seealso("unload_shader")
 #'
 #' @examplesIf FALSE
 #' unload_shader(load_shader("", "shader.fs"))
@@ -2028,9 +1897,7 @@ unload_shader <- function(shader) {
 #' Ray GetScreenToWorldRay(Vector2 position, Camera camera);
 #' ```
 #'
-#' @family ray functions
-#' @family screen functions
-#' @family get functions
+#' @eval .family_seealso("get_screen_to_world_ray")
 #'
 #' @examples
 #' get_screen_to_world_ray(c(100, 100), camera_3d(c(0, 10, 10)))
@@ -2059,9 +1926,7 @@ get_screen_to_world_ray <- function(position, camera) {
 #' Ray GetScreenToWorldRayEx(Vector2 position, Camera camera, int width, int height);
 #' ```
 #'
-#' @family ex functions
-#' @family screen functions
-#' @family get functions
+#' @eval .family_seealso("get_screen_to_world_ray_ex")
 #'
 #' @examples
 #' get_screen_to_world_ray_ex(c(100, 100), camera_3d(c(0, 10, 10)), 800L, 450L)
@@ -2090,9 +1955,7 @@ get_screen_to_world_ray_ex <- function(position, camera, width, height) {
 #' Vector2 GetWorldToScreen(Vector3 position, Camera camera);
 #' ```
 #'
-#' @family screen functions
-#' @family world functions
-#' @family get functions
+#' @eval .family_seealso("get_world_to_screen")
 #'
 #' @examples
 #' get_world_to_screen(c(0, 5, 0), camera_3d(c(0, 10, 10)))
@@ -2121,9 +1984,7 @@ get_world_to_screen <- function(position, camera) {
 #' Vector2 GetWorldToScreenEx(Vector3 position, Camera camera, int width, int height);
 #' ```
 #'
-#' @family ex functions
-#' @family world functions
-#' @family get functions
+#' @eval .family_seealso("get_world_to_screen_ex")
 #'
 #' @examples
 #' get_world_to_screen_ex(c(0, 5, 0), camera_3d(c(0, 10, 10)), 800L, 450L)
@@ -2152,9 +2013,7 @@ get_world_to_screen_ex <- function(position, camera, width, height) {
 #' Vector2 GetWorldToScreen2D(Vector2 position, Camera2D camera);
 #' ```
 #'
-#' @family 2d functions
-#' @family world functions
-#' @family get functions
+#' @eval .family_seealso("get_world_to_screen_2d")
 #'
 #' @examples
 #' get_world_to_screen_2d(c(100, 100), camera_2d(c(400, 300), c(0, 0)))
@@ -2181,9 +2040,7 @@ get_world_to_screen_2d <- function(position, camera) {
 #' Vector2 GetScreenToWorld2D(Vector2 position, Camera2D camera);
 #' ```
 #'
-#' @family 2d functions
-#' @family screen functions
-#' @family get functions
+#' @eval .family_seealso("get_screen_to_world_2d")
 #'
 #' @examples
 #' get_screen_to_world_2d(c(100, 100), camera_2d(c(400, 300), c(0, 0)))
@@ -2209,9 +2066,7 @@ get_screen_to_world_2d <- function(position, camera) {
 #' Matrix GetCameraMatrix(Camera camera);
 #' ```
 #'
-#' @family matrix functions
-#' @family camera functions
-#' @family get functions
+#' @eval .family_seealso("get_camera_matrix")
 #'
 #' @examples
 #' get_camera_matrix(camera_3d(c(0, 10, 10)))
@@ -2236,9 +2091,7 @@ get_camera_matrix <- function(camera) {
 #' Matrix GetCameraMatrix2D(Camera2D camera);
 #' ```
 #'
-#' @family 2d functions
-#' @family camera functions
-#' @family get functions
+#' @eval .family_seealso("get_camera_matrix_2d")
 #'
 #' @examples
 #' get_camera_matrix_2d(camera_2d(c(400, 300), c(0, 0)))
@@ -2261,9 +2114,7 @@ get_camera_matrix_2d <- function(camera) {
 #' void SetTargetFPS(int fps);
 #' ```
 #'
-#' @family fps functions
-#' @family target functions
-#' @family set functions
+#' @eval .family_seealso("set_target_fps")
 #'
 #' @examplesIf FALSE
 #' set_target_fps(60L)
@@ -2287,9 +2138,7 @@ set_target_fps <- function(fps = 60L) {
 #' float GetFrameTime(void);
 #' ```
 #'
-#' @family time functions
-#' @family frame functions
-#' @family get functions
+#' @eval .family_seealso("get_frame_time")
 #'
 #' @examples
 #' get_frame_time()
@@ -2312,8 +2161,7 @@ get_frame_time <- function() {
 #' double GetTime(void);
 #' ```
 #'
-#' @family time functions
-#' @family get functions
+#' @eval .family_seealso("get_time")
 #'
 #' @examplesIf FALSE
 #' get_time()
@@ -2336,8 +2184,7 @@ get_time <- function() {
 #' int GetFPS(void);
 #' ```
 #'
-#' @family fps functions
-#' @family get functions
+#' @eval .family_seealso("get_fps")
 #'
 #' @examples
 #' get_fps()
@@ -2358,8 +2205,7 @@ get_fps <- function() {
 #' void SwapScreenBuffer(void);
 #' ```
 #'
-#' @family buffer functions
-#' @family screen functions
+#' @eval .family_seealso("swap_screen_buffer")
 #'
 #' @examplesIf FALSE
 #' swap_screen_buffer()
@@ -2380,8 +2226,7 @@ swap_screen_buffer <- function() {
 #' void PollInputEvents(void);
 #' ```
 #'
-#' @family events functions
-#' @family input functions
+#' @eval .family_seealso("poll_input_events")
 #'
 #' @examplesIf FALSE
 #' poll_input_events()
@@ -2403,7 +2248,7 @@ poll_input_events <- function() {
 #' void WaitTime(double seconds);
 #' ```
 #'
-#' @family time functions
+#' @eval .family_seealso("wait_time")
 #'
 #' @examplesIf FALSE
 #' wait_time(0.0)
@@ -2426,9 +2271,7 @@ wait_time <- function(seconds) {
 #' void SetRandomSeed(unsigned int seed);
 #' ```
 #'
-#' @family seed functions
-#' @family random functions
-#' @family set functions
+#' @eval .family_seealso("set_random_seed")
 #'
 #' @examples
 #' set_random_seed(42L)
@@ -2454,9 +2297,7 @@ set_random_seed <- function(seed) {
 #' int GetRandomValue(int min, int max);
 #' ```
 #'
-#' @family value functions
-#' @family random functions
-#' @family get functions
+#' @eval .family_seealso("get_random_value")
 #'
 #' @examples
 #' get_random_value(0L, 0L)
@@ -2480,7 +2321,7 @@ get_random_value <- function(min, max) {
 #' void TakeScreenshot(const char * fileName);
 #' ```
 #'
-#' @family screenshot functions
+#' @eval .family_seealso("take_screenshot")
 #'
 #' @examplesIf FALSE
 #' take_screenshot("file.png")
@@ -2503,9 +2344,7 @@ take_screenshot <- function(file_name) {
 #' void SetConfigFlags(unsigned int flags);
 #' ```
 #'
-#' @family flags functions
-#' @family config functions
-#' @family set functions
+#' @eval .family_seealso("set_config_flags")
 #'
 #' @examplesIf FALSE
 #' set_config_flags(0L)
@@ -2528,7 +2367,7 @@ set_config_flags <- function(flags) {
 #' void OpenURL(const char * url);
 #' ```
 #'
-#' @family url functions
+#' @eval .family_seealso("open_url")
 #'
 #' @examplesIf FALSE
 #' open_url("https://example.com")
@@ -2551,9 +2390,7 @@ open_url <- function(url) {
 #' void SetTraceLogLevel(int logLevel);
 #' ```
 #'
-#' @family level functions
-#' @family trace functions
-#' @family set functions
+#' @eval .family_seealso("set_trace_log_level")
 #'
 #' @examplesIf FALSE
 #' set_trace_log_level(0L)
@@ -2578,9 +2415,7 @@ set_trace_log_level <- function(log_level) {
 #' char * LoadFileText(const char * fileName);
 #' ```
 #'
-#' @family text functions
-#' @family file functions
-#' @family load functions
+#' @eval .family_seealso("load_file_text")
 #'
 #' @examplesIf FALSE
 #' load_file_text("file.png")
@@ -2606,8 +2441,7 @@ load_file_text <- function(file_name) {
 #' bool SaveFileText(const char * fileName, const char * text);
 #' ```
 #'
-#' @family text functions
-#' @family file functions
+#' @eval .family_seealso("save_file_text")
 #'
 #' @examplesIf FALSE
 #' save_file_text("file.png", "Hello")
@@ -2634,7 +2468,7 @@ save_file_text <- function(file_name, text) {
 #' int FileRename(const char * fileName, const char * fileRename);
 #' ```
 #'
-#' @family rename functions
+#' @eval .family_seealso("file_rename")
 #'
 #' @examplesIf FALSE
 #' file_rename("file.png", "text")
@@ -2660,7 +2494,7 @@ file_rename <- function(file_name, file_rename) {
 #' int FileRemove(const char * fileName);
 #' ```
 #'
-#' @family remove functions
+#' @eval .family_seealso("file_remove")
 #'
 #' @examplesIf FALSE
 #' file_remove("file.png")
@@ -2686,7 +2520,7 @@ file_remove <- function(file_name) {
 #' int FileCopy(const char * srcPath, const char * dstPath);
 #' ```
 #'
-#' @family copy functions
+#' @eval .family_seealso("file_copy")
 #'
 #' @examplesIf FALSE
 #' file_copy("file.png", "file.png")
@@ -2713,7 +2547,7 @@ file_copy <- function(src_path, dst_path) {
 #' int FileMove(const char * srcPath, const char * dstPath);
 #' ```
 #'
-#' @family move functions
+#' @eval .family_seealso("file_move")
 #'
 #' @examplesIf FALSE
 #' file_move("file.png", "file.png")
@@ -2741,8 +2575,7 @@ file_move <- function(src_path, dst_path) {
 #' int FileTextReplace(const char * fileName, const char * search, const char * replacement);
 #' ```
 #'
-#' @family replace functions
-#' @family text functions
+#' @eval .family_seealso("file_text_replace")
 #'
 #' @examplesIf FALSE
 #' file_text_replace("file.png", "text", "text")
@@ -2770,8 +2603,7 @@ file_text_replace <- function(file_name, search, replacement) {
 #' int FileTextFindIndex(const char * fileName, const char * search);
 #' ```
 #'
-#' @family index functions
-#' @family text functions
+#' @eval .family_seealso("file_text_find_index")
 #'
 #' @examplesIf FALSE
 #' file_text_find_index("file.png", "text")
@@ -2797,7 +2629,7 @@ file_text_find_index <- function(file_name, search) {
 #' bool FileExists(const char * fileName);
 #' ```
 #'
-#' @family exists functions
+#' @eval .family_seealso("file_exists")
 #'
 #' @examplesIf FALSE
 #' file_exists("file.png")
@@ -2822,7 +2654,7 @@ file_exists <- function(file_name) {
 #' bool DirectoryExists(const char * dirPath);
 #' ```
 #'
-#' @family exists functions
+#' @eval .family_seealso("directory_exists")
 #'
 #' @examplesIf FALSE
 #' directory_exists("file.png")
@@ -2848,9 +2680,7 @@ directory_exists <- function(dir_path) {
 #' bool IsFileExtension(const char * fileName, const char * ext);
 #' ```
 #'
-#' @family extension functions
-#' @family file functions
-#' @family is functions
+#' @eval .family_seealso("is_file_extension")
 #'
 #' @examplesIf FALSE
 #' is_file_extension("file.png", ".png")
@@ -2876,9 +2706,7 @@ is_file_extension <- function(file_name, ext) {
 #' int GetFileLength(const char * fileName);
 #' ```
 #'
-#' @family length functions
-#' @family file functions
-#' @family get functions
+#' @eval .family_seealso("get_file_length")
 #'
 #' @examplesIf FALSE
 #' get_file_length("file.png")
@@ -2903,9 +2731,7 @@ get_file_length <- function(file_name) {
 #' long GetFileModTime(const char * fileName);
 #' ```
 #'
-#' @family time functions
-#' @family file functions
-#' @family get functions
+#' @eval .family_seealso("get_file_mod_time")
 #'
 #' @examplesIf FALSE
 #' get_file_mod_time("file.png")
@@ -2930,9 +2756,7 @@ get_file_mod_time <- function(file_name) {
 #' const char * GetFileExtension(const char * fileName);
 #' ```
 #'
-#' @family extension functions
-#' @family file functions
-#' @family get functions
+#' @eval .family_seealso("get_file_extension")
 #'
 #' @examplesIf FALSE
 #' get_file_extension("file.png")
@@ -2957,9 +2781,7 @@ get_file_extension <- function(file_name) {
 #' const char * GetFileName(const char * filePath);
 #' ```
 #'
-#' @family name functions
-#' @family file functions
-#' @family get functions
+#' @eval .family_seealso("get_file_name")
 #'
 #' @examplesIf FALSE
 #' get_file_name("file.png")
@@ -2984,9 +2806,7 @@ get_file_name <- function(file_path) {
 #' const char * GetFileNameWithoutExt(const char * filePath);
 #' ```
 #'
-#' @family ext functions
-#' @family file functions
-#' @family get functions
+#' @eval .family_seealso("get_file_name_without_ext")
 #'
 #' @examplesIf FALSE
 #' get_file_name_without_ext("file.png")
@@ -3011,9 +2831,7 @@ get_file_name_without_ext <- function(file_path) {
 #' const char * GetDirectoryPath(const char * filePath);
 #' ```
 #'
-#' @family path functions
-#' @family directory functions
-#' @family get functions
+#' @eval .family_seealso("get_directory_path")
 #'
 #' @examplesIf FALSE
 #' get_directory_path("file.png")
@@ -3038,9 +2856,7 @@ get_directory_path <- function(file_path) {
 #' const char * GetPrevDirectoryPath(const char * dirPath);
 #' ```
 #'
-#' @family path functions
-#' @family prev functions
-#' @family get functions
+#' @eval .family_seealso("get_prev_directory_path")
 #'
 #' @examplesIf FALSE
 #' get_prev_directory_path("file.png")
@@ -3064,9 +2880,7 @@ get_prev_directory_path <- function(dir_path) {
 #' const char * GetWorkingDirectory(void);
 #' ```
 #'
-#' @family directory functions
-#' @family working functions
-#' @family get functions
+#' @eval .family_seealso("get_working_directory")
 #'
 #' @examplesIf FALSE
 #' get_working_directory()
@@ -3089,9 +2903,7 @@ get_working_directory <- function() {
 #' const char * GetApplicationDirectory(void);
 #' ```
 #'
-#' @family directory functions
-#' @family application functions
-#' @family get functions
+#' @eval .family_seealso("get_application_directory")
 #'
 #' @examplesIf FALSE
 #' get_application_directory()
@@ -3115,7 +2927,7 @@ get_application_directory <- function() {
 #' int MakeDirectory(const char * dirPath);
 #' ```
 #'
-#' @family directory functions
+#' @eval .family_seealso("make_directory")
 #'
 #' @examplesIf FALSE
 #' make_directory("file.png")
@@ -3140,7 +2952,7 @@ make_directory <- function(dir_path) {
 #' bool ChangeDirectory(const char * dirPath);
 #' ```
 #'
-#' @family directory functions
+#' @eval .family_seealso("change_directory")
 #'
 #' @examplesIf FALSE
 #' change_directory("file.png")
@@ -3165,9 +2977,7 @@ change_directory <- function(dir_path) {
 #' bool IsPathFile(const char * path);
 #' ```
 #'
-#' @family file functions
-#' @family path functions
-#' @family is functions
+#' @eval .family_seealso("is_path_file")
 #'
 #' @examplesIf FALSE
 #' is_path_file("file.png")
@@ -3192,9 +3002,7 @@ is_path_file <- function(path) {
 #' bool IsFileNameValid(const char * fileName);
 #' ```
 #'
-#' @family valid functions
-#' @family file functions
-#' @family is functions
+#' @eval .family_seealso("is_file_name_valid")
 #'
 #' @examplesIf FALSE
 #' is_file_name_valid("file.png")
@@ -3218,9 +3026,7 @@ is_file_name_valid <- function(file_name) {
 #' bool IsFileDropped(void);
 #' ```
 #'
-#' @family dropped functions
-#' @family file functions
-#' @family is functions
+#' @eval .family_seealso("is_file_dropped")
 #'
 #' @examplesIf FALSE
 #' is_file_dropped()
@@ -3244,9 +3050,7 @@ is_file_dropped <- function() {
 #' unsigned int GetDirectoryFileCount(const char * dirPath);
 #' ```
 #'
-#' @family count functions
-#' @family directory functions
-#' @family get functions
+#' @eval .family_seealso("get_directory_file_count")
 #'
 #' @examplesIf FALSE
 #' get_directory_file_count("file.png")
@@ -3273,9 +3077,7 @@ get_directory_file_count <- function(dir_path) {
 #' unsigned int GetDirectoryFileCountEx(const char * basePath, const char * filter, bool scanSubdirs);
 #' ```
 #'
-#' @family ex functions
-#' @family directory functions
-#' @family get functions
+#' @eval .family_seealso("get_directory_file_count_ex")
 #'
 #' @examplesIf FALSE
 #' get_directory_file_count_ex("file.png", "text", TRUE)
@@ -3300,9 +3102,7 @@ get_directory_file_count_ex <- function(base_path, filter, scan_subdirs) {
 #' void SetAutomationEventBaseFrame(int frame);
 #' ```
 #'
-#' @family frame functions
-#' @family automation functions
-#' @family set functions
+#' @eval .family_seealso("set_automation_event_base_frame")
 #'
 #' @examplesIf FALSE
 #' set_automation_event_base_frame(0L)
@@ -3324,8 +3124,7 @@ set_automation_event_base_frame <- function(frame) {
 #' void StartAutomationEventRecording(void);
 #' ```
 #'
-#' @family recording functions
-#' @family automation functions
+#' @eval .family_seealso("start_automation_event_recording")
 #'
 #' @examplesIf FALSE
 #' start_automation_event_recording()
@@ -3346,9 +3145,7 @@ start_automation_event_recording <- function() {
 #' void StopAutomationEventRecording(void);
 #' ```
 #'
-#' @family recording functions
-#' @family automation functions
-#' @family stop functions
+#' @eval .family_seealso("stop_automation_event_recording")
 #'
 #' @examplesIf FALSE
 #' stop_automation_event_recording()
@@ -3372,9 +3169,7 @@ stop_automation_event_recording <- function() {
 #' bool IsKeyPressed(int key);
 #' ```
 #'
-#' @family pressed functions
-#' @family key functions
-#' @family is functions
+#' @eval .family_seealso("is_key_pressed")
 #'
 #' @examples
 #' is_key_pressed(0L)
@@ -3399,9 +3194,7 @@ is_key_pressed <- function(key) {
 #' bool IsKeyPressedRepeat(int key);
 #' ```
 #'
-#' @family repeat functions
-#' @family key functions
-#' @family is functions
+#' @eval .family_seealso("is_key_pressed_repeat")
 #'
 #' @examples
 #' is_key_pressed_repeat(0L)
@@ -3426,9 +3219,7 @@ is_key_pressed_repeat <- function(key) {
 #' bool IsKeyDown(int key);
 #' ```
 #'
-#' @family down functions
-#' @family key functions
-#' @family is functions
+#' @eval .family_seealso("is_key_down")
 #'
 #' @examples
 #' is_key_down(0L)
@@ -3453,9 +3244,7 @@ is_key_down <- function(key) {
 #' bool IsKeyReleased(int key);
 #' ```
 #'
-#' @family released functions
-#' @family key functions
-#' @family is functions
+#' @eval .family_seealso("is_key_released")
 #'
 #' @examples
 #' is_key_released(0L)
@@ -3480,9 +3269,7 @@ is_key_released <- function(key) {
 #' bool IsKeyUp(int key);
 #' ```
 #'
-#' @family up functions
-#' @family key functions
-#' @family is functions
+#' @eval .family_seealso("is_key_up")
 #'
 #' @examples
 #' is_key_up(0L)
@@ -3506,9 +3293,7 @@ is_key_up <- function(key) {
 #' int GetKeyPressed(void);
 #' ```
 #'
-#' @family pressed functions
-#' @family key functions
-#' @family get functions
+#' @eval .family_seealso("get_key_pressed")
 #'
 #' @examples
 #' get_key_pressed()
@@ -3531,9 +3316,7 @@ get_key_pressed <- function() {
 #' int GetCharPressed(void);
 #' ```
 #'
-#' @family pressed functions
-#' @family char functions
-#' @family get functions
+#' @eval .family_seealso("get_char_pressed")
 #'
 #' @examples
 #' get_char_pressed()
@@ -3557,9 +3340,7 @@ get_char_pressed <- function() {
 #' const char * GetKeyName(int key);
 #' ```
 #'
-#' @family name functions
-#' @family key functions
-#' @family get functions
+#' @eval .family_seealso("get_key_name")
 #'
 #' @examples
 #' get_key_name(0L)
@@ -3582,9 +3363,7 @@ get_key_name <- function(key) {
 #' void SetExitKey(int key);
 #' ```
 #'
-#' @family key functions
-#' @family exit functions
-#' @family set functions
+#' @eval .family_seealso("set_exit_key")
 #'
 #' @examplesIf FALSE
 #' set_exit_key(0L)
@@ -3609,9 +3388,7 @@ set_exit_key <- function(key) {
 #' bool IsGamepadAvailable(int gamepad);
 #' ```
 #'
-#' @family available functions
-#' @family gamepad functions
-#' @family is functions
+#' @eval .family_seealso("is_gamepad_available")
 #'
 #' @examples
 #' is_gamepad_available(0L)
@@ -3636,9 +3413,7 @@ is_gamepad_available <- function(gamepad) {
 #' const char * GetGamepadName(int gamepad);
 #' ```
 #'
-#' @family name functions
-#' @family gamepad functions
-#' @family get functions
+#' @eval .family_seealso("get_gamepad_name")
 #'
 #' @examples
 #' get_gamepad_name(0L)
@@ -3664,9 +3439,7 @@ get_gamepad_name <- function(gamepad) {
 #' bool IsGamepadButtonPressed(int gamepad, int button);
 #' ```
 #'
-#' @family pressed functions
-#' @family gamepad functions
-#' @family is functions
+#' @eval .family_seealso("is_gamepad_button_pressed")
 #'
 #' @examples
 #' is_gamepad_button_pressed(0L, 0L)
@@ -3693,9 +3466,7 @@ is_gamepad_button_pressed <- function(gamepad, button) {
 #' bool IsGamepadButtonDown(int gamepad, int button);
 #' ```
 #'
-#' @family down functions
-#' @family gamepad functions
-#' @family is functions
+#' @eval .family_seealso("is_gamepad_button_down")
 #'
 #' @examples
 #' is_gamepad_button_down(0L, 0L)
@@ -3722,9 +3493,7 @@ is_gamepad_button_down <- function(gamepad, button) {
 #' bool IsGamepadButtonReleased(int gamepad, int button);
 #' ```
 #'
-#' @family released functions
-#' @family gamepad functions
-#' @family is functions
+#' @eval .family_seealso("is_gamepad_button_released")
 #'
 #' @examples
 #' is_gamepad_button_released(0L, 0L)
@@ -3751,9 +3520,7 @@ is_gamepad_button_released <- function(gamepad, button) {
 #' bool IsGamepadButtonUp(int gamepad, int button);
 #' ```
 #'
-#' @family up functions
-#' @family gamepad functions
-#' @family is functions
+#' @eval .family_seealso("is_gamepad_button_up")
 #'
 #' @examples
 #' is_gamepad_button_up(0L, 0L)
@@ -3778,9 +3545,7 @@ is_gamepad_button_up <- function(gamepad, button) {
 #' int GetGamepadButtonPressed(void);
 #' ```
 #'
-#' @family pressed functions
-#' @family gamepad functions
-#' @family get functions
+#' @eval .family_seealso("get_gamepad_button_pressed")
 #'
 #' @examples
 #' get_gamepad_button_pressed()
@@ -3804,9 +3569,7 @@ get_gamepad_button_pressed <- function() {
 #' int GetGamepadAxisCount(int gamepad);
 #' ```
 #'
-#' @family count functions
-#' @family gamepad functions
-#' @family get functions
+#' @eval .family_seealso("get_gamepad_axis_count")
 #'
 #' @examples
 #' get_gamepad_axis_count(0L)
@@ -3832,9 +3595,7 @@ get_gamepad_axis_count <- function(gamepad) {
 #' float GetGamepadAxisMovement(int gamepad, int axis);
 #' ```
 #'
-#' @family movement functions
-#' @family gamepad functions
-#' @family get functions
+#' @eval .family_seealso("get_gamepad_axis_movement")
 #'
 #' @examples
 #' get_gamepad_axis_movement(0L, 0L)
@@ -3860,9 +3621,7 @@ get_gamepad_axis_movement <- function(gamepad, axis) {
 #' int SetGamepadMappings(const char * mappings);
 #' ```
 #'
-#' @family mappings functions
-#' @family gamepad functions
-#' @family set functions
+#' @eval .family_seealso("set_gamepad_mappings")
 #'
 #' @examplesIf FALSE
 #' set_gamepad_mappings("text")
@@ -3888,9 +3647,7 @@ set_gamepad_mappings <- function(mappings) {
 #' void SetGamepadVibration(int gamepad, float leftMotor, float rightMotor, float duration);
 #' ```
 #'
-#' @family vibration functions
-#' @family gamepad functions
-#' @family set functions
+#' @eval .family_seealso("set_gamepad_vibration")
 #'
 #' @examplesIf FALSE
 #' set_gamepad_vibration(0L, 0.0, 0.0, 0.0)
@@ -3918,9 +3675,7 @@ set_gamepad_vibration <- function(gamepad, left_motor, right_motor, duration) {
 #' bool IsMouseButtonPressed(int button);
 #' ```
 #'
-#' @family pressed functions
-#' @family mouse functions
-#' @family is functions
+#' @eval .family_seealso("is_mouse_button_pressed")
 #'
 #' @examples
 #' is_mouse_button_pressed(0L)
@@ -3945,9 +3700,7 @@ is_mouse_button_pressed <- function(button) {
 #' bool IsMouseButtonDown(int button);
 #' ```
 #'
-#' @family down functions
-#' @family mouse functions
-#' @family is functions
+#' @eval .family_seealso("is_mouse_button_down")
 #'
 #' @examples
 #' is_mouse_button_down(0L)
@@ -3972,9 +3725,7 @@ is_mouse_button_down <- function(button) {
 #' bool IsMouseButtonReleased(int button);
 #' ```
 #'
-#' @family released functions
-#' @family mouse functions
-#' @family is functions
+#' @eval .family_seealso("is_mouse_button_released")
 #'
 #' @examples
 #' is_mouse_button_released(0L)
@@ -3999,9 +3750,7 @@ is_mouse_button_released <- function(button) {
 #' bool IsMouseButtonUp(int button);
 #' ```
 #'
-#' @family up functions
-#' @family mouse functions
-#' @family is functions
+#' @eval .family_seealso("is_mouse_button_up")
 #'
 #' @examples
 #' is_mouse_button_up(0L)
@@ -4025,9 +3774,7 @@ is_mouse_button_up <- function(button) {
 #' int GetMouseX(void);
 #' ```
 #'
-#' @family x functions
-#' @family mouse functions
-#' @family get functions
+#' @eval .family_seealso("get_mouse_x")
 #'
 #' @examples
 #' get_mouse_x()
@@ -4050,9 +3797,7 @@ get_mouse_x <- function() {
 #' int GetMouseY(void);
 #' ```
 #'
-#' @family y functions
-#' @family mouse functions
-#' @family get functions
+#' @eval .family_seealso("get_mouse_y")
 #'
 #' @examples
 #' get_mouse_y()
@@ -4075,9 +3820,7 @@ get_mouse_y <- function() {
 #' Vector2 GetMousePosition(void);
 #' ```
 #'
-#' @family position functions
-#' @family mouse functions
-#' @family get functions
+#' @eval .family_seealso("get_mouse_position")
 #'
 #' @examples
 #' get_mouse_position()
@@ -4100,9 +3843,7 @@ get_mouse_position <- function() {
 #' Vector2 GetMouseDelta(void);
 #' ```
 #'
-#' @family delta functions
-#' @family mouse functions
-#' @family get functions
+#' @eval .family_seealso("get_mouse_delta")
 #'
 #' @examples
 #' get_mouse_delta()
@@ -4125,9 +3866,7 @@ get_mouse_delta <- function() {
 #' void SetMousePosition(int x, int y);
 #' ```
 #'
-#' @family position functions
-#' @family mouse functions
-#' @family set functions
+#' @eval .family_seealso("set_mouse_position")
 #'
 #' @examplesIf FALSE
 #' set_mouse_position(100L, 100L)
@@ -4152,9 +3891,7 @@ set_mouse_position <- function(x, y) {
 #' void SetMouseOffset(int offsetX, int offsetY);
 #' ```
 #'
-#' @family offset functions
-#' @family mouse functions
-#' @family set functions
+#' @eval .family_seealso("set_mouse_offset")
 #'
 #' @examplesIf FALSE
 #' set_mouse_offset(0L, 0L)
@@ -4179,9 +3916,7 @@ set_mouse_offset <- function(offset_x, offset_y) {
 #' void SetMouseScale(float scaleX, float scaleY);
 #' ```
 #'
-#' @family scale functions
-#' @family mouse functions
-#' @family set functions
+#' @eval .family_seealso("set_mouse_scale")
 #'
 #' @examplesIf FALSE
 #' set_mouse_scale(1.0, 1.0)
@@ -4206,9 +3941,7 @@ set_mouse_scale <- function(scale_x, scale_y) {
 #' float GetMouseWheelMove(void);
 #' ```
 #'
-#' @family move functions
-#' @family mouse functions
-#' @family get functions
+#' @eval .family_seealso("get_mouse_wheel_move")
 #'
 #' @examples
 #' get_mouse_wheel_move()
@@ -4231,9 +3964,7 @@ get_mouse_wheel_move <- function() {
 #' Vector2 GetMouseWheelMoveV(void);
 #' ```
 #'
-#' @family v functions
-#' @family mouse functions
-#' @family get functions
+#' @eval .family_seealso("get_mouse_wheel_move_v")
 #'
 #' @examples
 #' get_mouse_wheel_move_v()
@@ -4255,9 +3986,7 @@ get_mouse_wheel_move_v <- function() {
 #' void SetMouseCursor(int cursor);
 #' ```
 #'
-#' @family cursor functions
-#' @family mouse functions
-#' @family set functions
+#' @eval .family_seealso("set_mouse_cursor")
 #'
 #' @examplesIf FALSE
 #' set_mouse_cursor(0L)
@@ -4281,9 +4010,7 @@ set_mouse_cursor <- function(cursor) {
 #' int GetTouchX(void);
 #' ```
 #'
-#' @family x functions
-#' @family touch functions
-#' @family get functions
+#' @eval .family_seealso("get_touch_x")
 #'
 #' @examples
 #' get_touch_x()
@@ -4306,9 +4033,7 @@ get_touch_x <- function() {
 #' int GetTouchY(void);
 #' ```
 #'
-#' @family y functions
-#' @family touch functions
-#' @family get functions
+#' @eval .family_seealso("get_touch_y")
 #'
 #' @examples
 #' get_touch_y()
@@ -4332,9 +4057,7 @@ get_touch_y <- function() {
 #' Vector2 GetTouchPosition(int index);
 #' ```
 #'
-#' @family position functions
-#' @family touch functions
-#' @family get functions
+#' @eval .family_seealso("get_touch_position")
 #'
 #' @examples
 #' get_touch_position(0L)
@@ -4359,9 +4082,7 @@ get_touch_position <- function(index) {
 #' int GetTouchPointId(int index);
 #' ```
 #'
-#' @family id functions
-#' @family touch functions
-#' @family get functions
+#' @eval .family_seealso("get_touch_point_id")
 #'
 #' @examples
 #' get_touch_point_id(0L)
@@ -4385,9 +4106,7 @@ get_touch_point_id <- function(index) {
 #' int GetTouchPointCount(void);
 #' ```
 #'
-#' @family count functions
-#' @family touch functions
-#' @family get functions
+#' @eval .family_seealso("get_touch_point_count")
 #'
 #' @examples
 #' get_touch_point_count()
@@ -4409,9 +4128,7 @@ get_touch_point_count <- function() {
 #' void SetGesturesEnabled(unsigned int flags);
 #' ```
 #'
-#' @family enabled functions
-#' @family gestures functions
-#' @family set functions
+#' @eval .family_seealso("set_gestures_enabled")
 #'
 #' @examplesIf FALSE
 #' set_gestures_enabled(0L)
@@ -4436,9 +4153,7 @@ set_gestures_enabled <- function(flags) {
 #' bool IsGestureDetected(unsigned int gesture);
 #' ```
 #'
-#' @family detected functions
-#' @family gesture functions
-#' @family is functions
+#' @eval .family_seealso("is_gesture_detected")
 #'
 #' @examples
 #' is_gesture_detected(0L)
@@ -4462,9 +4177,7 @@ is_gesture_detected <- function(gesture) {
 #' int GetGestureDetected(void);
 #' ```
 #'
-#' @family detected functions
-#' @family gesture functions
-#' @family get functions
+#' @eval .family_seealso("get_gesture_detected")
 #'
 #' @examples
 #' get_gesture_detected()
@@ -4487,9 +4200,7 @@ get_gesture_detected <- function() {
 #' float GetGestureHoldDuration(void);
 #' ```
 #'
-#' @family duration functions
-#' @family gesture functions
-#' @family get functions
+#' @eval .family_seealso("get_gesture_hold_duration")
 #'
 #' @examples
 #' get_gesture_hold_duration()
@@ -4512,9 +4223,7 @@ get_gesture_hold_duration <- function() {
 #' Vector2 GetGestureDragVector(void);
 #' ```
 #'
-#' @family vector functions
-#' @family gesture functions
-#' @family get functions
+#' @eval .family_seealso("get_gesture_drag_vector")
 #'
 #' @examples
 #' get_gesture_drag_vector()
@@ -4537,9 +4246,7 @@ get_gesture_drag_vector <- function() {
 #' float GetGestureDragAngle(void);
 #' ```
 #'
-#' @family angle functions
-#' @family gesture functions
-#' @family get functions
+#' @eval .family_seealso("get_gesture_drag_angle")
 #'
 #' @examples
 #' get_gesture_drag_angle()
@@ -4562,9 +4269,7 @@ get_gesture_drag_angle <- function() {
 #' Vector2 GetGesturePinchVector(void);
 #' ```
 #'
-#' @family vector functions
-#' @family gesture functions
-#' @family get functions
+#' @eval .family_seealso("get_gesture_pinch_vector")
 #'
 #' @examples
 #' get_gesture_pinch_vector()
@@ -4587,9 +4292,7 @@ get_gesture_pinch_vector <- function() {
 #' float GetGesturePinchAngle(void);
 #' ```
 #'
-#' @family angle functions
-#' @family gesture functions
-#' @family get functions
+#' @eval .family_seealso("get_gesture_pinch_angle")
 #'
 #' @examples
 #' get_gesture_pinch_angle()
@@ -4612,9 +4315,7 @@ get_gesture_pinch_angle <- function() {
 #' void SetShapesTexture(Texture2D texture, Rectangle source);
 #' ```
 #'
-#' @family texture functions
-#' @family shapes functions
-#' @family set functions
+#' @eval .family_seealso("set_shapes_texture")
 #'
 #' @examplesIf FALSE
 #' set_shapes_texture(texture(0L, 64L, 64L, 1L, 7L), rectangle(10, 10, 200, 100))
@@ -4639,9 +4340,7 @@ set_shapes_texture <- function(texture, source) {
 #' Texture2D GetShapesTexture(void);
 #' ```
 #'
-#' @family texture functions
-#' @family shapes functions
-#' @family get functions
+#' @eval .family_seealso("get_shapes_texture")
 #'
 #' @examples
 #' get_shapes_texture()
@@ -4664,9 +4363,7 @@ get_shapes_texture <- function() {
 #' Rectangle GetShapesTextureRectangle(void);
 #' ```
 #'
-#' @family rectangle functions
-#' @family shapes functions
-#' @family get functions
+#' @eval .family_seealso("get_shapes_texture_rectangle")
 #'
 #' @examples
 #' get_shapes_texture_rectangle()
@@ -4690,8 +4387,7 @@ get_shapes_texture_rectangle <- function() {
 #' void DrawPixel(int posX, int posY, Color color);
 #' ```
 #'
-#' @family pixel functions
-#' @family draw functions
+#' @eval .family_seealso("draw_pixel")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_pixel(100L, 100L, "red"))
@@ -4725,9 +4421,7 @@ draw_pixel <- function(pos_x, pos_y, color) {
 #' void DrawPixelV(Vector2 position, Color color);
 #' ```
 #'
-#' @family v functions
-#' @family pixel functions
-#' @family draw functions
+#' @eval .family_seealso("draw_pixel_v")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_pixel_v(c(200, 150), "red"))
@@ -4762,8 +4456,7 @@ draw_pixel_v <- function(position, color) {
 #' void DrawLine(int startPosX, int startPosY, int endPosX, int endPosY, Color color);
 #' ```
 #'
-#' @family line functions
-#' @family draw functions
+#' @eval .family_seealso("draw_line")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_line(50L, 250L, 350L, 50L, "red"))
@@ -4802,9 +4495,7 @@ draw_line <- function(start_pos_x, start_pos_y, end_pos_x, end_pos_y, color) {
 #' void DrawLineV(Vector2 startPos, Vector2 endPos, Color color);
 #' ```
 #'
-#' @family v functions
-#' @family line functions
-#' @family draw functions
+#' @eval .family_seealso("draw_line_v")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_line_v(c(200, 150), c(200, 150), "red"))
@@ -4840,9 +4531,7 @@ draw_line_v <- function(start_pos, end_pos, color) {
 #' void DrawLineEx(Vector2 startPos, Vector2 endPos, float thick, Color color);
 #' ```
 #'
-#' @family ex functions
-#' @family line functions
-#' @family draw functions
+#' @eval .family_seealso("draw_line_ex")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_line_ex(c(200, 150), c(200, 150), 3.0, "red"))
@@ -4880,9 +4569,7 @@ draw_line_ex <- function(start_pos, end_pos, thick, color) {
 #' void DrawLineBezier(Vector2 startPos, Vector2 endPos, float thick, Color color);
 #' ```
 #'
-#' @family bezier functions
-#' @family line functions
-#' @family draw functions
+#' @eval .family_seealso("draw_line_bezier")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_line_bezier(c(200, 150), c(200, 150), 3.0, "red"))
@@ -4921,9 +4608,7 @@ draw_line_bezier <- function(start_pos, end_pos, thick, color) {
 #' void DrawLineDashed(Vector2 startPos, Vector2 endPos, int dashSize, int spaceSize, Color color);
 #' ```
 #'
-#' @family dashed functions
-#' @family line functions
-#' @family draw functions
+#' @eval .family_seealso("draw_line_dashed")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_line_dashed(c(200, 150), c(200, 150), 0L, 0L, "red"))
@@ -4963,8 +4648,7 @@ draw_line_dashed <- function(start_pos, end_pos, dash_size, space_size, color) {
 #' void DrawCircle(int centerX, int centerY, float radius, Color color);
 #' ```
 #'
-#' @family circle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_circle")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() {
@@ -5004,9 +4688,7 @@ draw_circle <- function(center_x, center_y, radius, color) {
 #' void DrawCircleV(Vector2 center, float radius, Color color);
 #' ```
 #'
-#' @family v functions
-#' @family circle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_circle_v")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_circle_v(c(200, 150), 80.0, "red"))
@@ -5042,9 +4724,7 @@ draw_circle_v <- function(center, radius, color) {
 #' void DrawCircleGradient(Vector2 center, float radius, Color inner, Color outer);
 #' ```
 #'
-#' @family gradient functions
-#' @family circle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_circle_gradient")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_circle_gradient(c(200, 150), 80.0, "red", "red"))
@@ -5084,9 +4764,7 @@ draw_circle_gradient <- function(center, radius, inner, outer) {
 #' void DrawCircleSector(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color);
 #' ```
 #'
-#' @family sector functions
-#' @family circle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_circle_sector")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_circle_sector(c(200, 150), 80.0, 0.0, 270.0, 36L, "red"))
@@ -5130,9 +4808,7 @@ draw_circle_sector <- function(center, radius, start_angle, end_angle, segments,
 #' void DrawCircleSectorLines(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color);
 #' ```
 #'
-#' @family lines functions
-#' @family circle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_circle_sector_lines")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_circle_sector_lines(
@@ -5181,9 +4857,7 @@ draw_circle_sector_lines <- function(center, radius, start_angle, end_angle, seg
 #' void DrawCircleLines(int centerX, int centerY, float radius, Color color);
 #' ```
 #'
-#' @family lines functions
-#' @family circle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_circle_lines")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_circle_lines(200L, 150L, 80.0, "red"))
@@ -5220,9 +4894,7 @@ draw_circle_lines <- function(center_x, center_y, radius, color) {
 #' void DrawCircleLinesV(Vector2 center, float radius, Color color);
 #' ```
 #'
-#' @family v functions
-#' @family circle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_circle_lines_v")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_circle_lines_v(c(200, 150), 80.0, "red"))
@@ -5259,8 +4931,7 @@ draw_circle_lines_v <- function(center, radius, color) {
 #' void DrawEllipse(int centerX, int centerY, float radiusH, float radiusV, Color color);
 #' ```
 #'
-#' @family ellipse functions
-#' @family draw functions
+#' @eval .family_seealso("draw_ellipse")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_ellipse(200L, 150L, 80.0, 80.0, "red"))
@@ -5300,9 +4971,7 @@ draw_ellipse <- function(center_x, center_y, radius_h, radius_v, color) {
 #' void DrawEllipseV(Vector2 center, float radiusH, float radiusV, Color color);
 #' ```
 #'
-#' @family v functions
-#' @family ellipse functions
-#' @family draw functions
+#' @eval .family_seealso("draw_ellipse_v")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_ellipse_v(c(200, 150), 80.0, 80.0, "red"))
@@ -5341,9 +5010,7 @@ draw_ellipse_v <- function(center, radius_h, radius_v, color) {
 #' void DrawEllipseLines(int centerX, int centerY, float radiusH, float radiusV, Color color);
 #' ```
 #'
-#' @family lines functions
-#' @family ellipse functions
-#' @family draw functions
+#' @eval .family_seealso("draw_ellipse_lines")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_ellipse_lines(200L, 150L, 80.0, 80.0, "red"))
@@ -5383,9 +5050,7 @@ draw_ellipse_lines <- function(center_x, center_y, radius_h, radius_v, color) {
 #' void DrawEllipseLinesV(Vector2 center, float radiusH, float radiusV, Color color);
 #' ```
 #'
-#' @family v functions
-#' @family ellipse functions
-#' @family draw functions
+#' @eval .family_seealso("draw_ellipse_lines_v")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_ellipse_lines_v(c(200, 150), 80.0, 80.0, "red"))
@@ -5426,8 +5091,7 @@ draw_ellipse_lines_v <- function(center, radius_h, radius_v, color) {
 #' void DrawRing(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color);
 #' ```
 #'
-#' @family ring functions
-#' @family draw functions
+#' @eval .family_seealso("draw_ring")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_ring(c(200, 150), 80.0, 80.0, 0.0, 270.0, 36L, "red"))
@@ -5474,9 +5138,7 @@ draw_ring <- function(center, inner_radius, outer_radius, start_angle, end_angle
 #' void DrawRingLines(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color);
 #' ```
 #'
-#' @family lines functions
-#' @family ring functions
-#' @family draw functions
+#' @eval .family_seealso("draw_ring_lines")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_ring_lines(c(200, 150), 80.0, 80.0, 0.0, 270.0, 36L, "red"))
@@ -5521,8 +5183,7 @@ draw_ring_lines <- function(center, inner_radius, outer_radius, start_angle, end
 #' void DrawRectangle(int posX, int posY, int width, int height, Color color);
 #' ```
 #'
-#' @family rectangle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_rectangle")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle(100L, 100L, 200L, 100L, "red"))
@@ -5561,9 +5222,7 @@ draw_rectangle <- function(pos_x, pos_y, width, height, color) {
 #' void DrawRectangleV(Vector2 position, Vector2 size, Color color);
 #' ```
 #'
-#' @family v functions
-#' @family rectangle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_rectangle_v")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_v(c(200, 150), c(200, 150), "red"))
@@ -5597,9 +5256,7 @@ draw_rectangle_v <- function(position, size, color) {
 #' void DrawRectangleRec(Rectangle rec, Color color);
 #' ```
 #'
-#' @family rec functions
-#' @family rectangle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_rectangle_rec")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_rec(rectangle(100, 75, 200, 150), "red"))
@@ -5633,9 +5290,7 @@ draw_rectangle_rec <- function(rec, color) {
 #' void DrawRectanglePro(Rectangle rec, Vector2 origin, float rotation, Color color);
 #' ```
 #'
-#' @family pro functions
-#' @family rectangle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_rectangle_pro")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_pro(
@@ -5680,9 +5335,7 @@ draw_rectangle_pro <- function(rec, origin, rotation, color) {
 #' void DrawRectangleGradientV(int posX, int posY, int width, int height, Color top, Color bottom);
 #' ```
 #'
-#' @family v functions
-#' @family rectangle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_rectangle_gradient_v")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_gradient_v(100L, 100L, 200L, 100L, "red", "red"))
@@ -5726,9 +5379,7 @@ draw_rectangle_gradient_v <- function(pos_x, pos_y, width, height, top, bottom) 
 #' void DrawRectangleGradientH(int posX, int posY, int width, int height, Color left, Color right);
 #' ```
 #'
-#' @family h functions
-#' @family rectangle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_rectangle_gradient_h")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_gradient_h(100L, 100L, 200L, 100L, "red", "red"))
@@ -5771,9 +5422,7 @@ draw_rectangle_gradient_h <- function(pos_x, pos_y, width, height, left, right) 
 #' void DrawRectangleGradientEx(Rectangle rec, Color topLeft, Color bottomLeft, Color bottomRight, Color topRight);
 #' ```
 #'
-#' @family ex functions
-#' @family rectangle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_rectangle_gradient_ex")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_gradient_ex(
@@ -5820,9 +5469,7 @@ draw_rectangle_gradient_ex <- function(rec, top_left, bottom_left, bottom_right,
 #' void DrawRectangleLines(int posX, int posY, int width, int height, Color color);
 #' ```
 #'
-#' @family lines functions
-#' @family rectangle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_rectangle_lines")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_lines(100L, 100L, 200L, 100L, "red"))
@@ -5861,9 +5508,7 @@ draw_rectangle_lines <- function(pos_x, pos_y, width, height, color) {
 #' void DrawRectangleLinesEx(Rectangle rec, float lineThick, Color color);
 #' ```
 #'
-#' @family ex functions
-#' @family rectangle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_rectangle_lines_ex")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_lines_ex(rectangle(100, 75, 200, 150), 3.0, "red"))
@@ -5899,9 +5544,7 @@ draw_rectangle_lines_ex <- function(rec, line_thick, color) {
 #' void DrawRectangleRounded(Rectangle rec, float roundness, int segments, Color color);
 #' ```
 #'
-#' @family rounded functions
-#' @family rectangle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_rectangle_rounded")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_rounded(
@@ -5944,9 +5587,7 @@ draw_rectangle_rounded <- function(rec, roundness, segments, color) {
 #' void DrawRectangleRoundedLines(Rectangle rec, float roundness, int segments, Color color);
 #' ```
 #'
-#' @family lines functions
-#' @family rectangle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_rectangle_rounded_lines")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_rounded_lines(
@@ -5990,9 +5631,7 @@ draw_rectangle_rounded_lines <- function(rec, roundness, segments, color) {
 #' void DrawRectangleRoundedLinesEx(Rectangle rec, float roundness, int segments, float lineThick, Color color);
 #' ```
 #'
-#' @family ex functions
-#' @family rectangle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_rectangle_rounded_lines_ex")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_rectangle_rounded_lines_ex(
@@ -6038,8 +5677,7 @@ draw_rectangle_rounded_lines_ex <- function(rec, roundness, segments, line_thick
 #' void DrawTriangle(Vector2 v1, Vector2 v2, Vector2 v3, Color color);
 #' ```
 #'
-#' @family triangle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_triangle")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_triangle(c(200, 50), c(100, 250), c(300, 250), "red"))
@@ -6077,9 +5715,7 @@ draw_triangle <- function(v1, v2, v3, color) {
 #' void DrawTriangleLines(Vector2 v1, Vector2 v2, Vector2 v3, Color color);
 #' ```
 #'
-#' @family lines functions
-#' @family triangle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_triangle_lines")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_triangle_lines(c(200, 50), c(100, 250), c(300, 250), "red"))
@@ -6118,8 +5754,7 @@ draw_triangle_lines <- function(v1, v2, v3, color) {
 #' void DrawPoly(Vector2 center, int sides, float radius, float rotation, Color color);
 #' ```
 #'
-#' @family poly functions
-#' @family draw functions
+#' @eval .family_seealso("draw_poly")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_poly(c(200, 150), 6L, 80.0, 0.0, "red"))
@@ -6160,9 +5795,7 @@ draw_poly <- function(center, sides, radius, rotation, color) {
 #' void DrawPolyLines(Vector2 center, int sides, float radius, float rotation, Color color);
 #' ```
 #'
-#' @family lines functions
-#' @family poly functions
-#' @family draw functions
+#' @eval .family_seealso("draw_poly_lines")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_poly_lines(c(200, 150), 6L, 80.0, 0.0, "red"))
@@ -6204,9 +5837,7 @@ draw_poly_lines <- function(center, sides, radius, rotation, color) {
 #' void DrawPolyLinesEx(Vector2 center, int sides, float radius, float rotation, float lineThick, Color color);
 #' ```
 #'
-#' @family ex functions
-#' @family poly functions
-#' @family draw functions
+#' @eval .family_seealso("draw_poly_lines_ex")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_poly_lines_ex(c(200, 150), 6L, 80.0, 0.0, 3.0, "red"))
@@ -6248,9 +5879,7 @@ draw_poly_lines_ex <- function(center, sides, radius, rotation, line_thick, colo
 #' void DrawSplineSegmentLinear(Vector2 p1, Vector2 p2, float thick, Color color);
 #' ```
 #'
-#' @family linear functions
-#' @family spline functions
-#' @family draw functions
+#' @eval .family_seealso("draw_spline_segment_linear")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_spline_segment_linear(c(200, 50), c(100, 250), 3.0, "red"))
@@ -6290,9 +5919,7 @@ draw_spline_segment_linear <- function(p1, p2, thick, color) {
 #' void DrawSplineSegmentBasis(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, float thick, Color color);
 #' ```
 #'
-#' @family basis functions
-#' @family spline functions
-#' @family draw functions
+#' @eval .family_seealso("draw_spline_segment_basis")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_spline_segment_basis(
@@ -6343,9 +5970,7 @@ draw_spline_segment_basis <- function(p1, p2, p3, p4, thick, color) {
 #' void DrawSplineSegmentCatmullRom(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, float thick, Color color);
 #' ```
 #'
-#' @family rom functions
-#' @family spline functions
-#' @family draw functions
+#' @eval .family_seealso("draw_spline_segment_catmull_rom")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_spline_segment_catmull_rom(
@@ -6395,9 +6020,7 @@ draw_spline_segment_catmull_rom <- function(p1, p2, p3, p4, thick, color) {
 #' void DrawSplineSegmentBezierQuadratic(Vector2 p1, Vector2 c2, Vector2 p3, float thick, Color color);
 #' ```
 #'
-#' @family quadratic functions
-#' @family spline functions
-#' @family draw functions
+#' @eval .family_seealso("draw_spline_segment_bezier_quadratic")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_spline_segment_bezier_quadratic(
@@ -6445,9 +6068,7 @@ draw_spline_segment_bezier_quadratic <- function(p1, c2, p3, thick, color) {
 #' void DrawSplineSegmentBezierCubic(Vector2 p1, Vector2 c2, Vector2 c3, Vector2 p4, float thick, Color color);
 #' ```
 #'
-#' @family cubic functions
-#' @family spline functions
-#' @family draw functions
+#' @eval .family_seealso("draw_spline_segment_bezier_cubic")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_spline_segment_bezier_cubic(
@@ -6497,9 +6118,7 @@ draw_spline_segment_bezier_cubic <- function(p1, c2, c3, p4, thick, color) {
 #' Vector2 GetSplinePointLinear(Vector2 startPos, Vector2 endPos, float t);
 #' ```
 #'
-#' @family linear functions
-#' @family spline functions
-#' @family get functions
+#' @eval .family_seealso("get_spline_point_linear")
 #'
 #' @examples
 #' get_spline_point_linear(c(100, 100), c(100, 100), 0.0)
@@ -6530,9 +6149,7 @@ get_spline_point_linear <- function(start_pos, end_pos, t) {
 #' Vector2 GetSplinePointBasis(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, float t);
 #' ```
 #'
-#' @family basis functions
-#' @family spline functions
-#' @family get functions
+#' @eval .family_seealso("get_spline_point_basis")
 #'
 #' @examples
 #' get_spline_point_basis(c(100, 100), c(100, 100), c(100, 100), c(100, 100), 0.0)
@@ -6565,9 +6182,7 @@ get_spline_point_basis <- function(p1, p2, p3, p4, t) {
 #' Vector2 GetSplinePointCatmullRom(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, float t);
 #' ```
 #'
-#' @family rom functions
-#' @family spline functions
-#' @family get functions
+#' @eval .family_seealso("get_spline_point_catmull_rom")
 #'
 #' @examples
 #' get_spline_point_catmull_rom(c(100, 100), c(100, 100), c(100, 100), c(100, 100), 0.0)
@@ -6599,9 +6214,7 @@ get_spline_point_catmull_rom <- function(p1, p2, p3, p4, t) {
 #' Vector2 GetSplinePointBezierQuad(Vector2 p1, Vector2 c2, Vector2 p3, float t);
 #' ```
 #'
-#' @family quad functions
-#' @family spline functions
-#' @family get functions
+#' @eval .family_seealso("get_spline_point_bezier_quad")
 #'
 #' @examples
 #' get_spline_point_bezier_quad(c(100, 100), c(100, 100), c(100, 100), 0.0)
@@ -6633,9 +6246,7 @@ get_spline_point_bezier_quad <- function(p1, c2, p3, t) {
 #' Vector2 GetSplinePointBezierCubic(Vector2 p1, Vector2 c2, Vector2 c3, Vector2 p4, float t);
 #' ```
 #'
-#' @family cubic functions
-#' @family spline functions
-#' @family get functions
+#' @eval .family_seealso("get_spline_point_bezier_cubic")
 #'
 #' @examples
 #' get_spline_point_bezier_cubic(c(100, 100), c(100, 100), c(100, 100), c(100, 100), 0.0)
@@ -6665,9 +6276,7 @@ get_spline_point_bezier_cubic <- function(p1, c2, c3, p4, t) {
 #' bool CheckCollisionRecs(Rectangle rec1, Rectangle rec2);
 #' ```
 #'
-#' @family recs functions
-#' @family collision functions
-#' @family check functions
+#' @eval .family_seealso("check_collision_recs")
 #'
 #' @examples
 #' check_collision_recs(rectangle(10, 10, 200, 100), rectangle(10, 10, 200, 100))
@@ -6696,9 +6305,7 @@ check_collision_recs <- function(rec1, rec2) {
 #' bool CheckCollisionCircles(Vector2 center1, float radius1, Vector2 center2, float radius2);
 #' ```
 #'
-#' @family circles functions
-#' @family collision functions
-#' @family check functions
+#' @eval .family_seealso("check_collision_circles")
 #'
 #' @examples
 #' check_collision_circles(c(100, 100), 50.0, c(100, 100), 50.0)
@@ -6728,9 +6335,7 @@ check_collision_circles <- function(center1, radius1, center2, radius2) {
 #' bool CheckCollisionCircleRec(Vector2 center, float radius, Rectangle rec);
 #' ```
 #'
-#' @family rec functions
-#' @family collision functions
-#' @family check functions
+#' @eval .family_seealso("check_collision_circle_rec")
 #'
 #' @examples
 #' check_collision_circle_rec(c(100, 100), 50.0, rectangle(10, 10, 200, 100))
@@ -6760,9 +6365,7 @@ check_collision_circle_rec <- function(center, radius, rec) {
 #' bool CheckCollisionCircleLine(Vector2 center, float radius, Vector2 p1, Vector2 p2);
 #' ```
 #'
-#' @family line functions
-#' @family collision functions
-#' @family check functions
+#' @eval .family_seealso("check_collision_circle_line")
 #'
 #' @examples
 #' check_collision_circle_line(c(100, 100), 50.0, c(100, 100), c(100, 100))
@@ -6791,9 +6394,7 @@ check_collision_circle_line <- function(center, radius, p1, p2) {
 #' bool CheckCollisionPointRec(Vector2 point, Rectangle rec);
 #' ```
 #'
-#' @family rec functions
-#' @family collision functions
-#' @family check functions
+#' @eval .family_seealso("check_collision_point_rec")
 #'
 #' @examples
 #' check_collision_point_rec(c(100, 100), rectangle(10, 10, 200, 100))
@@ -6821,9 +6422,7 @@ check_collision_point_rec <- function(point, rec) {
 #' bool CheckCollisionPointCircle(Vector2 point, Vector2 center, float radius);
 #' ```
 #'
-#' @family circle functions
-#' @family collision functions
-#' @family check functions
+#' @eval .family_seealso("check_collision_point_circle")
 #'
 #' @examples
 #' check_collision_point_circle(c(100, 100), c(100, 100), 50.0)
@@ -6853,9 +6452,7 @@ check_collision_point_circle <- function(point, center, radius) {
 #' bool CheckCollisionPointTriangle(Vector2 point, Vector2 p1, Vector2 p2, Vector2 p3);
 #' ```
 #'
-#' @family triangle functions
-#' @family collision functions
-#' @family check functions
+#' @eval .family_seealso("check_collision_point_triangle")
 #'
 #' @examples
 #' check_collision_point_triangle(c(100, 100), c(100, 100), c(100, 100), c(100, 100))
@@ -6886,9 +6483,7 @@ check_collision_point_triangle <- function(point, p1, p2, p3) {
 #' bool CheckCollisionPointLine(Vector2 point, Vector2 p1, Vector2 p2, int threshold);
 #' ```
 #'
-#' @family line functions
-#' @family collision functions
-#' @family check functions
+#' @eval .family_seealso("check_collision_point_line")
 #'
 #' @examples
 #' check_collision_point_line(c(100, 100), c(100, 100), c(100, 100), 0L)
@@ -6917,9 +6512,7 @@ check_collision_point_line <- function(point, p1, p2, threshold) {
 #' Rectangle GetCollisionRec(Rectangle rec1, Rectangle rec2);
 #' ```
 #'
-#' @family rec functions
-#' @family collision functions
-#' @family get functions
+#' @eval .family_seealso("get_collision_rec")
 #'
 #' @examples
 #' get_collision_rec(rectangle(10, 10, 200, 100), rectangle(10, 10, 200, 100))
@@ -6945,8 +6538,7 @@ get_collision_rec <- function(rec1, rec2) {
 #' Image LoadImage(const char * fileName);
 #' ```
 #'
-#' @family image functions
-#' @family load functions
+#' @eval .family_seealso("load_image")
 #'
 #' @examplesIf FALSE
 #' load_image("file.png")
@@ -6975,9 +6567,7 @@ load_image <- function(file_name) {
 #' Image LoadImageRaw(const char * fileName, int width, int height, int format, int headerSize);
 #' ```
 #'
-#' @family raw functions
-#' @family image functions
-#' @family load functions
+#' @eval .family_seealso("load_image_raw")
 #'
 #' @examplesIf FALSE
 #' load_image_raw("file.png", 800L, 450L, 0L, 32L)
@@ -7006,9 +6596,7 @@ load_image_raw <- function(file_name, width, height, format, header_size) {
 #' Image LoadImageFromTexture(Texture2D texture);
 #' ```
 #'
-#' @family texture functions
-#' @family image functions
-#' @family load functions
+#' @eval .family_seealso("load_image_from_texture")
 #'
 #' @examplesIf FALSE
 #' load_image_from_texture(texture(0L, 64L, 64L, 1L, 7L))
@@ -7032,9 +6620,7 @@ load_image_from_texture <- function(texture) {
 #' Image LoadImageFromScreen(void);
 #' ```
 #'
-#' @family screen functions
-#' @family image functions
-#' @family load functions
+#' @eval .family_seealso("load_image_from_screen")
 #'
 #' @examplesIf FALSE
 #' load_image_from_screen()
@@ -7058,9 +6644,7 @@ load_image_from_screen <- function() {
 #' bool IsImageValid(Image image);
 #' ```
 #'
-#' @family valid functions
-#' @family image functions
-#' @family is functions
+#' @eval .family_seealso("is_image_valid")
 #'
 #' @examples
 #' is_image_valid(gen_image_color(200, 200, "blue"))
@@ -7083,8 +6667,7 @@ is_image_valid <- function(image) {
 #' void UnloadImage(Image image);
 #' ```
 #'
-#' @family image functions
-#' @family unload functions
+#' @eval .family_seealso("unload_image")
 #'
 #' @examplesIf FALSE
 #' unload_image(gen_image_color(200, 200, "blue"))
@@ -7110,8 +6693,7 @@ unload_image <- function(image) {
 #' bool ExportImage(Image image, const char * fileName);
 #' ```
 #'
-#' @family image functions
-#' @family export functions
+#' @eval .family_seealso("export_image")
 #'
 #' @examplesIf FALSE
 #' export_image(gen_image_color(200, 200, "blue"), "file.png")
@@ -7138,9 +6720,7 @@ export_image <- function(image, file_name) {
 #' bool ExportImageAsCode(Image image, const char * fileName);
 #' ```
 #'
-#' @family code functions
-#' @family image functions
-#' @family export functions
+#' @eval .family_seealso("export_image_as_code")
 #'
 #' @examplesIf FALSE
 #' export_image_as_code(gen_image_color(200, 200, "blue"), "file.png")
@@ -7168,8 +6748,7 @@ export_image_as_code <- function(image, file_name) {
 #' Image GenImageColor(int width, int height, Color color);
 #' ```
 #'
-#' @family color functions
-#' @family image functions
+#' @eval .family_seealso("gen_image_color")
 #'
 #' @examples
 #' gen_image_color(800L, 450L, "red")
@@ -7200,8 +6779,7 @@ gen_image_color <- function(width, height, color) {
 #' Image GenImageGradientLinear(int width, int height, int direction, Color start, Color end);
 #' ```
 #'
-#' @family linear functions
-#' @family image functions
+#' @eval .family_seealso("gen_image_gradient_linear")
 #'
 #' @examples
 #' gen_image_gradient_linear(800L, 450L, 0L, "red", "red")
@@ -7234,8 +6812,7 @@ gen_image_gradient_linear <- function(width, height, direction, start, end) {
 #' Image GenImageGradientRadial(int width, int height, float density, Color inner, Color outer);
 #' ```
 #'
-#' @family radial functions
-#' @family image functions
+#' @eval .family_seealso("gen_image_gradient_radial")
 #'
 #' @examples
 #' gen_image_gradient_radial(800L, 450L, 0.0, "red", "red")
@@ -7268,8 +6845,7 @@ gen_image_gradient_radial <- function(width, height, density, inner, outer) {
 #' Image GenImageGradientSquare(int width, int height, float density, Color inner, Color outer);
 #' ```
 #'
-#' @family square functions
-#' @family image functions
+#' @eval .family_seealso("gen_image_gradient_square")
 #'
 #' @examples
 #' gen_image_gradient_square(800L, 450L, 0.0, "red", "red")
@@ -7303,8 +6879,7 @@ gen_image_gradient_square <- function(width, height, density, inner, outer) {
 #' Image GenImageChecked(int width, int height, int checksX, int checksY, Color col1, Color col2);
 #' ```
 #'
-#' @family checked functions
-#' @family image functions
+#' @eval .family_seealso("gen_image_checked")
 #'
 #' @examples
 #' gen_image_checked(800L, 450L, 40L, 40L, "red", "red")
@@ -7338,8 +6913,7 @@ gen_image_checked <- function(width, height, checks_x, checks_y, col1, col2) {
 #' Image GenImageWhiteNoise(int width, int height, float factor);
 #' ```
 #'
-#' @family noise functions
-#' @family image functions
+#' @eval .family_seealso("gen_image_white_noise")
 #'
 #' @examples
 #' gen_image_white_noise(800L, 450L, 0.0)
@@ -7370,8 +6944,7 @@ gen_image_white_noise <- function(width, height, factor) {
 #' Image GenImagePerlinNoise(int width, int height, int offsetX, int offsetY, float scale);
 #' ```
 #'
-#' @family noise functions
-#' @family image functions
+#' @eval .family_seealso("gen_image_perlin_noise")
 #'
 #' @examples
 #' gen_image_perlin_noise(800L, 450L, 0L, 0L, 1.0)
@@ -7402,8 +6975,7 @@ gen_image_perlin_noise <- function(width, height, offset_x, offset_y, scale) {
 #' Image GenImageCellular(int width, int height, int tileSize);
 #' ```
 #'
-#' @family cellular functions
-#' @family image functions
+#' @eval .family_seealso("gen_image_cellular")
 #'
 #' @examples
 #' gen_image_cellular(800L, 450L, 32L)
@@ -7432,8 +7004,7 @@ gen_image_cellular <- function(width, height, tile_size) {
 #' Image GenImageText(int width, int height, const char * text);
 #' ```
 #'
-#' @family text functions
-#' @family image functions
+#' @eval .family_seealso("gen_image_text")
 #'
 #' @examplesIf FALSE
 #' gen_image_text(800L, 450L, "Hello")
@@ -7460,7 +7031,7 @@ gen_image_text <- function(width, height, text) {
 #' Image ImageCopy(Image image);
 #' ```
 #'
-#' @family copy functions
+#' @eval .family_seealso("image_copy")
 #'
 #' @examples
 #' image_copy(gen_image_color(200, 200, "blue"))
@@ -7486,8 +7057,7 @@ image_copy <- function(image) {
 #' Image ImageFromImage(Image image, Rectangle rec);
 #' ```
 #'
-#' @family image functions
-#' @family from functions
+#' @eval .family_seealso("image_from_image")
 #'
 #' @examples
 #' image_from_image(gen_image_color(200, 200, "blue"), rectangle(10, 10, 200, 100))
@@ -7514,8 +7084,7 @@ image_from_image <- function(image, rec) {
 #' Image ImageFromChannel(Image image, int selectedChannel);
 #' ```
 #'
-#' @family channel functions
-#' @family from functions
+#' @eval .family_seealso("image_from_channel")
 #'
 #' @examples
 #' image_from_channel(gen_image_color(200, 200, "blue"), 0L)
@@ -7543,7 +7112,7 @@ image_from_channel <- function(image, selected_channel) {
 #' Image ImageText(const char * text, int fontSize, Color color);
 #' ```
 #'
-#' @family text functions
+#' @eval .family_seealso("image_text")
 #'
 #' @examplesIf FALSE
 #' image_text("Hello", 20L, "red")
@@ -7574,8 +7143,7 @@ image_text <- function(text, font_size, color) {
 #' Image ImageTextEx(Font font, const char * text, float fontSize, float spacing, Color tint);
 #' ```
 #'
-#' @family ex functions
-#' @family text functions
+#' @eval .family_seealso("image_text_ex")
 #'
 #' @examplesIf FALSE
 #' image_text_ex(get_font_default(), "Hello", 1.0, 1.0, "red")
@@ -7605,9 +7173,7 @@ image_text_ex <- function(font, text, font_size, spacing, tint) {
 #' Rectangle GetImageAlphaBorder(Image image, float threshold);
 #' ```
 #'
-#' @family border functions
-#' @family image functions
-#' @family get functions
+#' @eval .family_seealso("get_image_alpha_border")
 #'
 #' @examples
 #' get_image_alpha_border(gen_image_color(200, 200, "blue"), 0.0)
@@ -7635,9 +7201,7 @@ get_image_alpha_border <- function(image, threshold) {
 #' Color GetImageColor(Image image, int x, int y);
 #' ```
 #'
-#' @family color functions
-#' @family image functions
-#' @family get functions
+#' @eval .family_seealso("get_image_color")
 #'
 #' @examples
 #' get_image_color(gen_image_color(200, 200, "blue"), 100L, 100L)
@@ -7664,8 +7228,7 @@ get_image_color <- function(image, x, y) {
 #' Texture2D LoadTexture(const char * fileName);
 #' ```
 #'
-#' @family texture functions
-#' @family load functions
+#' @eval .family_seealso("load_texture")
 #'
 #' @examplesIf FALSE
 #' load_texture("file.png")
@@ -7690,9 +7253,7 @@ load_texture <- function(file_name) {
 #' Texture2D LoadTextureFromImage(Image image);
 #' ```
 #'
-#' @family image functions
-#' @family texture functions
-#' @family load functions
+#' @eval .family_seealso("load_texture_from_image")
 #'
 #' @examplesIf FALSE
 #' load_texture_from_image(gen_image_color(200, 200, "blue"))
@@ -7718,9 +7279,7 @@ load_texture_from_image <- function(image) {
 #' RenderTexture2D LoadRenderTexture(int width, int height);
 #' ```
 #'
-#' @family texture functions
-#' @family render functions
-#' @family load functions
+#' @eval .family_seealso("load_render_texture")
 #'
 #' @examplesIf FALSE
 #' load_render_texture(800L, 450L)
@@ -7746,9 +7305,7 @@ load_render_texture <- function(width, height) {
 #' bool IsTextureValid(Texture2D texture);
 #' ```
 #'
-#' @family valid functions
-#' @family texture functions
-#' @family is functions
+#' @eval .family_seealso("is_texture_valid")
 #'
 #' @examples
 #' is_texture_valid(texture(0L, 64L, 64L, 1L, 7L))
@@ -7771,8 +7328,7 @@ is_texture_valid <- function(texture) {
 #' void UnloadTexture(Texture2D texture);
 #' ```
 #'
-#' @family texture functions
-#' @family unload functions
+#' @eval .family_seealso("unload_texture")
 #'
 #' @examplesIf FALSE
 #' unload_texture(texture(0L, 64L, 64L, 1L, 7L))
@@ -7797,9 +7353,7 @@ unload_texture <- function(texture) {
 #' bool IsRenderTextureValid(RenderTexture2D target);
 #' ```
 #'
-#' @family valid functions
-#' @family render functions
-#' @family is functions
+#' @eval .family_seealso("is_render_texture_valid")
 #'
 #' @examplesIf FALSE
 #' is_render_texture_valid(load_render_texture(800, 450))
@@ -7822,9 +7376,7 @@ is_render_texture_valid <- function(target) {
 #' void UnloadRenderTexture(RenderTexture2D target);
 #' ```
 #'
-#' @family texture functions
-#' @family render functions
-#' @family unload functions
+#' @eval .family_seealso("unload_render_texture")
 #'
 #' @examplesIf FALSE
 #' unload_render_texture(load_render_texture(800, 450))
@@ -7848,9 +7400,7 @@ unload_render_texture <- function(target) {
 #' void SetTextureFilter(Texture2D texture, int filter);
 #' ```
 #'
-#' @family filter functions
-#' @family texture functions
-#' @family set functions
+#' @eval .family_seealso("set_texture_filter")
 #'
 #' @examplesIf FALSE
 #' set_texture_filter(texture(0L, 64L, 64L, 1L, 7L), 0L)
@@ -7875,9 +7425,7 @@ set_texture_filter <- function(texture, filter) {
 #' void SetTextureWrap(Texture2D texture, int wrap);
 #' ```
 #'
-#' @family wrap functions
-#' @family texture functions
-#' @family set functions
+#' @eval .family_seealso("set_texture_wrap")
 #'
 #' @examplesIf FALSE
 #' set_texture_wrap(texture(0L, 64L, 64L, 1L, 7L), 0L)
@@ -7904,8 +7452,7 @@ set_texture_wrap <- function(texture, wrap) {
 #' void DrawTexture(Texture2D texture, int posX, int posY, Color tint);
 #' ```
 #'
-#' @family texture functions
-#' @family draw functions
+#' @eval .family_seealso("draw_texture")
 #'
 #' @examplesIf FALSE
 #' draw_texture(texture(0L, 64L, 64L, 1L, 7L), 100L, 100L, "red")
@@ -7942,9 +7489,7 @@ draw_texture <- function(texture, pos_x, pos_y, tint) {
 #' void DrawTextureV(Texture2D texture, Vector2 position, Color tint);
 #' ```
 #'
-#' @family v functions
-#' @family texture functions
-#' @family draw functions
+#' @eval .family_seealso("draw_texture_v")
 #'
 #' @examplesIf FALSE
 #' draw_texture_v(texture(0L, 64L, 64L, 1L, 7L), c(100, 100), "red")
@@ -7981,9 +7526,7 @@ draw_texture_v <- function(texture, position, tint) {
 #' void DrawTextureEx(Texture2D texture, Vector2 position, float rotation, float scale, Color tint);
 #' ```
 #'
-#' @family ex functions
-#' @family texture functions
-#' @family draw functions
+#' @eval .family_seealso("draw_texture_ex")
 #'
 #' @examplesIf FALSE
 #' draw_texture_ex(texture(0L, 64L, 64L, 1L, 7L), c(100, 100), 0.0, 1.0, "red")
@@ -8023,9 +7566,7 @@ draw_texture_ex <- function(texture, position, rotation, scale, tint) {
 #' void DrawTextureRec(Texture2D texture, Rectangle source, Vector2 position, Color tint);
 #' ```
 #'
-#' @family rec functions
-#' @family texture functions
-#' @family draw functions
+#' @eval .family_seealso("draw_texture_rec")
 #'
 #' @examplesIf FALSE
 #' draw_texture_rec(texture(0L, 64L, 64L, 1L, 7L), rectangle(10, 10, 200, 100), c(100, 100), "red")
@@ -8065,9 +7606,7 @@ draw_texture_rec <- function(texture, source, position, tint) {
 #' void DrawTexturePro(Texture2D texture, Rectangle source, Rectangle dest, Vector2 origin, float rotation, Color tint);
 #' ```
 #'
-#' @family pro functions
-#' @family texture functions
-#' @family draw functions
+#' @eval .family_seealso("draw_texture_pro")
 #'
 #' @examplesIf FALSE
 #' draw_texture_pro(
@@ -8118,9 +7657,7 @@ draw_texture_pro <- function(texture, source, dest, origin, rotation, tint) {
 #' void DrawTextureNPatch(Texture2D texture, NPatchInfo nPatchInfo, Rectangle dest, Vector2 origin, float rotation, Color tint);
 #' ```
 #'
-#' @family patch functions
-#' @family texture functions
-#' @family draw functions
+#' @eval .family_seealso("draw_texture_n_patch")
 #'
 #' @examplesIf FALSE
 #' draw_texture_n_patch(
@@ -8169,8 +7706,7 @@ draw_texture_n_patch <- function(texture, n_patch_info, dest, origin, rotation, 
 #' bool ColorIsEqual(Color col1, Color col2);
 #' ```
 #'
-#' @family equal functions
-#' @family is functions
+#' @eval .family_seealso("color_is_equal")
 #'
 #' @examples
 #' color_is_equal("red", "red")
@@ -8197,6 +7733,7 @@ color_is_equal <- function(col1, col2) {
 #' Color Fade(Color color, float alpha);
 #' ```
 #'
+#' @eval .family_seealso("fade")
 #'
 #' @examples
 #' fade("red", 0.0)
@@ -8222,8 +7759,7 @@ fade <- function(color, alpha) {
 #' int ColorToInt(Color color);
 #' ```
 #'
-#' @family int functions
-#' @family to functions
+#' @eval .family_seealso("color_to_int")
 #'
 #' @examples
 #' color_to_int("red")
@@ -8248,7 +7784,7 @@ color_to_int <- function(color) {
 #' Vector4 ColorNormalize(Color color);
 #' ```
 #'
-#' @family normalize functions
+#' @eval .family_seealso("color_normalize")
 #'
 #' @examples
 #' color_normalize("red")
@@ -8273,8 +7809,7 @@ color_normalize <- function(color) {
 #' Color ColorFromNormalized(Vector4 normalized);
 #' ```
 #'
-#' @family normalized functions
-#' @family from functions
+#' @eval .family_seealso("color_from_normalized")
 #'
 #' @examples
 #' color_from_normalized(c(0, 0, 0, 1))
@@ -8299,8 +7834,7 @@ color_from_normalized <- function(normalized) {
 #' Vector3 ColorToHSV(Color color);
 #' ```
 #'
-#' @family hsv functions
-#' @family to functions
+#' @eval .family_seealso("color_to_hsv")
 #'
 #' @examples
 #' color_to_hsv("red")
@@ -8327,8 +7861,7 @@ color_to_hsv <- function(color) {
 #' Color ColorFromHSV(float hue, float saturation, float value);
 #' ```
 #'
-#' @family hsv functions
-#' @family from functions
+#' @eval .family_seealso("color_from_hsv")
 #'
 #' @examples
 #' color_from_hsv(0.0, 0.0, 0.0)
@@ -8356,7 +7889,7 @@ color_from_hsv <- function(hue, saturation, value) {
 #' Color ColorTint(Color color, Color tint);
 #' ```
 #'
-#' @family tint functions
+#' @eval .family_seealso("color_tint")
 #'
 #' @examples
 #' color_tint("red", "red")
@@ -8383,7 +7916,7 @@ color_tint <- function(color, tint) {
 #' Color ColorBrightness(Color color, float factor);
 #' ```
 #'
-#' @family brightness functions
+#' @eval .family_seealso("color_brightness")
 #'
 #' @examples
 #' color_brightness("red", 0.0)
@@ -8410,7 +7943,7 @@ color_brightness <- function(color, factor) {
 #' Color ColorContrast(Color color, float contrast);
 #' ```
 #'
-#' @family contrast functions
+#' @eval .family_seealso("color_contrast")
 #'
 #' @examples
 #' color_contrast("red", 0.0)
@@ -8437,7 +7970,7 @@ color_contrast <- function(color, contrast) {
 #' Color ColorAlpha(Color color, float alpha);
 #' ```
 #'
-#' @family alpha functions
+#' @eval .family_seealso("color_alpha")
 #'
 #' @examples
 #' color_alpha("red", 0.0)
@@ -8465,8 +7998,7 @@ color_alpha <- function(color, alpha) {
 #' Color ColorAlphaBlend(Color dst, Color src, Color tint);
 #' ```
 #'
-#' @family blend functions
-#' @family alpha functions
+#' @eval .family_seealso("color_alpha_blend")
 #'
 #' @examples
 #' color_alpha_blend("red", "red", "red")
@@ -8495,7 +8027,7 @@ color_alpha_blend <- function(dst, src, tint) {
 #' Color ColorLerp(Color color1, Color color2, float factor);
 #' ```
 #'
-#' @family lerp functions
+#' @eval .family_seealso("color_lerp")
 #'
 #' @examples
 #' color_lerp("red", "red", 0.0)
@@ -8522,8 +8054,7 @@ color_lerp <- function(color1, color2, factor) {
 #' Color GetColor(unsigned int hexValue);
 #' ```
 #'
-#' @family color functions
-#' @family get functions
+#' @eval .family_seealso("get_color")
 #'
 #' @examples
 #' get_color(0L)
@@ -8550,9 +8081,7 @@ get_color <- function(hex_value) {
 #' int GetPixelDataSize(int width, int height, int format);
 #' ```
 #'
-#' @family size functions
-#' @family pixel functions
-#' @family get functions
+#' @eval .family_seealso("get_pixel_data_size")
 #'
 #' @examples
 #' get_pixel_data_size(800L, 450L, 0L)
@@ -8578,9 +8107,7 @@ get_pixel_data_size <- function(width, height, format) {
 #' Font GetFontDefault(void);
 #' ```
 #'
-#' @family default functions
-#' @family font functions
-#' @family get functions
+#' @eval .family_seealso("get_font_default")
 #'
 #' @examples
 #' get_font_default()
@@ -8604,8 +8131,7 @@ get_font_default <- function() {
 #' Font LoadFont(const char * fileName);
 #' ```
 #'
-#' @family font functions
-#' @family load functions
+#' @eval .family_seealso("load_font")
 #'
 #' @examplesIf FALSE
 #' load_font("file.png")
@@ -8632,9 +8158,7 @@ load_font <- function(file_name) {
 #' Font LoadFontFromImage(Image image, Color key, int firstChar);
 #' ```
 #'
-#' @family image functions
-#' @family font functions
-#' @family load functions
+#' @eval .family_seealso("load_font_from_image")
 #'
 #' @examplesIf FALSE
 #' load_font_from_image(gen_image_color(200, 200, "blue"), "red", 0L)
@@ -8661,9 +8185,7 @@ load_font_from_image <- function(image, key, first_char) {
 #' bool IsFontValid(Font font);
 #' ```
 #'
-#' @family valid functions
-#' @family font functions
-#' @family is functions
+#' @eval .family_seealso("is_font_valid")
 #'
 #' @examples
 #' is_font_valid(get_font_default())
@@ -8686,8 +8208,7 @@ is_font_valid <- function(font) {
 #' void UnloadFont(Font font);
 #' ```
 #'
-#' @family font functions
-#' @family unload functions
+#' @eval .family_seealso("unload_font")
 #'
 #' @examplesIf FALSE
 #' unload_font(get_font_default())
@@ -8713,9 +8234,7 @@ unload_font <- function(font) {
 #' bool ExportFontAsCode(Font font, const char * fileName);
 #' ```
 #'
-#' @family code functions
-#' @family font functions
-#' @family export functions
+#' @eval .family_seealso("export_font_as_code")
 #'
 #' @examplesIf FALSE
 #' export_font_as_code(get_font_default(), "file.png")
@@ -8740,8 +8259,7 @@ export_font_as_code <- function(font, file_name) {
 #' void DrawFPS(int posX, int posY);
 #' ```
 #'
-#' @family fps functions
-#' @family draw functions
+#' @eval .family_seealso("draw_fps")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_fps(100L, 100L))
@@ -8776,8 +8294,7 @@ draw_fps <- function(pos_x = 10L, pos_y = 10L) {
 #' void DrawText(const char * text, int posX, int posY, int fontSize, Color color);
 #' ```
 #'
-#' @family text functions
-#' @family draw functions
+#' @eval .family_seealso("draw_text")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot(function() draw_text("Hello", 100L, 100L, 30L, "red"))
@@ -8819,9 +8336,7 @@ draw_text <- function(text, pos_x, pos_y, font_size, color = "black") {
 #' void DrawTextEx(Font font, const char * text, Vector2 position, float fontSize, float spacing, Color tint);
 #' ```
 #'
-#' @family ex functions
-#' @family text functions
-#' @family draw functions
+#' @eval .family_seealso("draw_text_ex")
 #'
 #' @examplesIf FALSE
 #' draw_text_ex(get_font_default(), "Hello", c(100, 100), 1.0, 1.0, "red")
@@ -8867,9 +8382,7 @@ draw_text_ex <- function(font, text, position, font_size, spacing, tint) {
 #' void DrawTextPro(Font font, const char * text, Vector2 position, Vector2 origin, float rotation, float fontSize, float spacing, Color tint);
 #' ```
 #'
-#' @family pro functions
-#' @family text functions
-#' @family draw functions
+#' @eval .family_seealso("draw_text_pro")
 #'
 #' @examplesIf FALSE
 #' draw_text_pro(get_font_default(), "Hello", c(100, 100), c(100, 100), 0.0, 1.0, 1.0, "red")
@@ -8916,9 +8429,7 @@ draw_text_pro <- function(font, text, position, origin, rotation, font_size, spa
 #' void DrawTextCodepoint(Font font, int codepoint, Vector2 position, float fontSize, Color tint);
 #' ```
 #'
-#' @family codepoint functions
-#' @family text functions
-#' @family draw functions
+#' @eval .family_seealso("draw_text_codepoint")
 #'
 #' @examplesIf FALSE
 #' draw_text_codepoint(get_font_default(), 0L, c(100, 100), 1.0, "red")
@@ -8955,9 +8466,7 @@ draw_text_codepoint <- function(font, codepoint, position, font_size, tint) {
 #' void SetTextLineSpacing(int spacing);
 #' ```
 #'
-#' @family spacing functions
-#' @family text functions
-#' @family set functions
+#' @eval .family_seealso("set_text_line_spacing")
 #'
 #' @examples
 #' set_text_line_spacing(0L)
@@ -8983,7 +8492,7 @@ set_text_line_spacing <- function(spacing) {
 #' int MeasureText(const char * text, int fontSize);
 #' ```
 #'
-#' @family text functions
+#' @eval .family_seealso("measure_text")
 #'
 #' @examplesIf FALSE
 #' measure_text("Hello", 20L)
@@ -9012,8 +8521,7 @@ measure_text <- function(text, font_size) {
 #' Vector2 MeasureTextEx(Font font, const char * text, float fontSize, float spacing);
 #' ```
 #'
-#' @family ex functions
-#' @family text functions
+#' @eval .family_seealso("measure_text_ex")
 #'
 #' @examplesIf FALSE
 #' measure_text_ex(get_font_default(), "Hello", 1.0, 1.0)
@@ -9042,9 +8550,7 @@ measure_text_ex <- function(font, text, font_size, spacing) {
 #' int GetGlyphIndex(Font font, int codepoint);
 #' ```
 #'
-#' @family index functions
-#' @family glyph functions
-#' @family get functions
+#' @eval .family_seealso("get_glyph_index")
 #'
 #' @examplesIf FALSE
 #' get_glyph_index(get_font_default(), 0L)
@@ -9071,9 +8577,7 @@ get_glyph_index <- function(font, codepoint) {
 #' GlyphInfo GetGlyphInfo(Font font, int codepoint);
 #' ```
 #'
-#' @family info functions
-#' @family glyph functions
-#' @family get functions
+#' @eval .family_seealso("get_glyph_info")
 #'
 #' @examplesIf FALSE
 #' get_glyph_info(get_font_default(), 0L)
@@ -9100,9 +8604,7 @@ get_glyph_info <- function(font, codepoint) {
 #' Rectangle GetGlyphAtlasRec(Font font, int codepoint);
 #' ```
 #'
-#' @family rec functions
-#' @family glyph functions
-#' @family get functions
+#' @eval .family_seealso("get_glyph_atlas_rec")
 #'
 #' @examplesIf FALSE
 #' get_glyph_atlas_rec(get_font_default(), 0L)
@@ -9128,9 +8630,7 @@ get_glyph_atlas_rec <- function(font, codepoint) {
 #' int GetCodepointCount(const char * text);
 #' ```
 #'
-#' @family count functions
-#' @family codepoint functions
-#' @family get functions
+#' @eval .family_seealso("get_codepoint_count")
 #'
 #' @examplesIf FALSE
 #' get_codepoint_count("Hello")
@@ -9156,8 +8656,7 @@ get_codepoint_count <- function(text) {
 #' bool TextIsEqual(const char * text1, const char * text2);
 #' ```
 #'
-#' @family equal functions
-#' @family is functions
+#' @eval .family_seealso("text_is_equal")
 #'
 #' @examplesIf FALSE
 #' text_is_equal("Hello", "Hello")
@@ -9183,7 +8682,7 @@ text_is_equal <- function(text1, text2) {
 #' unsigned int TextLength(const char * text);
 #' ```
 #'
-#' @family length functions
+#' @eval .family_seealso("text_length")
 #'
 #' @examplesIf FALSE
 #' text_length("Hello")
@@ -9210,7 +8709,7 @@ text_length <- function(text) {
 #' const char * TextSubtext(const char * text, int position, int length);
 #' ```
 #'
-#' @family subtext functions
+#' @eval .family_seealso("text_subtext")
 #'
 #' @examplesIf FALSE
 #' text_subtext("Hello", 0L, 0L)
@@ -9237,8 +8736,7 @@ text_subtext <- function(text, position, length) {
 #' const char * TextRemoveSpaces(const char * text);
 #' ```
 #'
-#' @family spaces functions
-#' @family remove functions
+#' @eval .family_seealso("text_remove_spaces")
 #'
 #' @examplesIf FALSE
 #' text_remove_spaces("Hello")
@@ -9265,9 +8763,7 @@ text_remove_spaces <- function(text) {
 #' char * GetTextBetween(const char * text, const char * begin, const char * end);
 #' ```
 #'
-#' @family between functions
-#' @family text functions
-#' @family get functions
+#' @eval .family_seealso("get_text_between")
 #'
 #' @examplesIf FALSE
 #' get_text_between("Hello", "text", "text")
@@ -9296,7 +8792,7 @@ get_text_between <- function(text, begin, end) {
 #' char * TextReplace(const char * text, const char * search, const char * replacement);
 #' ```
 #'
-#' @family replace functions
+#' @eval .family_seealso("text_replace")
 #'
 #' @examplesIf FALSE
 #' text_replace("Hello", "text", "text")
@@ -9325,8 +8821,7 @@ text_replace <- function(text, search, replacement) {
 #' char * TextReplaceAlloc(const char * text, const char * search, const char * replacement);
 #' ```
 #'
-#' @family alloc functions
-#' @family replace functions
+#' @eval .family_seealso("text_replace_alloc")
 #'
 #' @examplesIf FALSE
 #' text_replace_alloc("Hello", "text", "text")
@@ -9356,8 +8851,7 @@ text_replace_alloc <- function(text, search, replacement) {
 #' char * TextReplaceBetween(const char * text, const char * begin, const char * end, const char * replacement);
 #' ```
 #'
-#' @family between functions
-#' @family replace functions
+#' @eval .family_seealso("text_replace_between")
 #'
 #' @examplesIf FALSE
 #' text_replace_between("Hello", "text", "text", "text")
@@ -9388,8 +8882,7 @@ text_replace_between <- function(text, begin, end, replacement) {
 #' char * TextReplaceBetweenAlloc(const char * text, const char * begin, const char * end, const char * replacement);
 #' ```
 #'
-#' @family alloc functions
-#' @family replace functions
+#' @eval .family_seealso("text_replace_between_alloc")
 #'
 #' @examplesIf FALSE
 #' text_replace_between_alloc("Hello", "text", "text", "text")
@@ -9419,7 +8912,7 @@ text_replace_between_alloc <- function(text, begin, end, replacement) {
 #' char * TextInsert(const char * text, const char * insert, int position);
 #' ```
 #'
-#' @family insert functions
+#' @eval .family_seealso("text_insert")
 #'
 #' @examplesIf FALSE
 #' text_insert("Hello", "text", 0L)
@@ -9448,8 +8941,7 @@ text_insert <- function(text, insert, position) {
 #' char * TextInsertAlloc(const char * text, const char * insert, int position);
 #' ```
 #'
-#' @family alloc functions
-#' @family insert functions
+#' @eval .family_seealso("text_insert_alloc")
 #'
 #' @examplesIf FALSE
 #' text_insert_alloc("Hello", "text", 0L)
@@ -9477,8 +8969,7 @@ text_insert_alloc <- function(text, insert, position) {
 #' int TextFindIndex(const char * text, const char * search);
 #' ```
 #'
-#' @family index functions
-#' @family find functions
+#' @eval .family_seealso("text_find_index")
 #'
 #' @examplesIf FALSE
 #' text_find_index("Hello", "text")
@@ -9504,8 +8995,7 @@ text_find_index <- function(text, search) {
 #' char * TextToUpper(const char * text);
 #' ```
 #'
-#' @family upper functions
-#' @family to functions
+#' @eval .family_seealso("text_to_upper")
 #'
 #' @examplesIf FALSE
 #' text_to_upper("Hello")
@@ -9530,8 +9020,7 @@ text_to_upper <- function(text) {
 #' char * TextToLower(const char * text);
 #' ```
 #'
-#' @family lower functions
-#' @family to functions
+#' @eval .family_seealso("text_to_lower")
 #'
 #' @examplesIf FALSE
 #' text_to_lower("Hello")
@@ -9556,8 +9045,7 @@ text_to_lower <- function(text) {
 #' char * TextToPascal(const char * text);
 #' ```
 #'
-#' @family pascal functions
-#' @family to functions
+#' @eval .family_seealso("text_to_pascal")
 #'
 #' @examplesIf FALSE
 #' text_to_pascal("Hello")
@@ -9582,8 +9070,7 @@ text_to_pascal <- function(text) {
 #' char * TextToSnake(const char * text);
 #' ```
 #'
-#' @family snake functions
-#' @family to functions
+#' @eval .family_seealso("text_to_snake")
 #'
 #' @examplesIf FALSE
 #' text_to_snake("Hello")
@@ -9608,8 +9095,7 @@ text_to_snake <- function(text) {
 #' char * TextToCamel(const char * text);
 #' ```
 #'
-#' @family camel functions
-#' @family to functions
+#' @eval .family_seealso("text_to_camel")
 #'
 #' @examplesIf FALSE
 #' text_to_camel("Hello")
@@ -9634,8 +9120,7 @@ text_to_camel <- function(text) {
 #' int TextToInteger(const char * text);
 #' ```
 #'
-#' @family integer functions
-#' @family to functions
+#' @eval .family_seealso("text_to_integer")
 #'
 #' @examplesIf FALSE
 #' text_to_integer("Hello")
@@ -9660,8 +9145,7 @@ text_to_integer <- function(text) {
 #' float TextToFloat(const char * text);
 #' ```
 #'
-#' @family float functions
-#' @family to functions
+#' @eval .family_seealso("text_to_float")
 #'
 #' @examplesIf FALSE
 #' text_to_float("Hello")
@@ -9686,9 +9170,7 @@ text_to_float <- function(text) {
 #' void DrawLine3D(Vector3 startPos, Vector3 endPos, Color color);
 #' ```
 #'
-#' @family 3d functions
-#' @family line functions
-#' @family draw functions
+#' @eval .family_seealso("draw_line_3d")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_line_3d(c(-1, 0, 0), c(1, 0, 0), "red"))
@@ -9722,9 +9204,7 @@ draw_line_3d <- function(start_pos, end_pos, color) {
 #' void DrawPoint3D(Vector3 position, Color color);
 #' ```
 #'
-#' @family 3d functions
-#' @family point functions
-#' @family draw functions
+#' @eval .family_seealso("draw_point_3d")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_point_3d(c(0, 0, 0), "red"))
@@ -9759,9 +9239,7 @@ draw_point_3d <- function(position, color) {
 #' void DrawCircle3D(Vector3 center, float radius, Vector3 rotationAxis, float rotationAngle, Color color);
 #' ```
 #'
-#' @family 3d functions
-#' @family circle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_circle_3d")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_circle_3d(c(0, 0, 0), 1.0, c(0, 1, 0), 0.0, "red"))
@@ -9801,9 +9279,7 @@ draw_circle_3d <- function(center, radius, rotation_axis, rotation_angle, color)
 #' void DrawTriangle3D(Vector3 v1, Vector3 v2, Vector3 v3, Color color);
 #' ```
 #'
-#' @family 3d functions
-#' @family triangle functions
-#' @family draw functions
+#' @eval .family_seealso("draw_triangle_3d")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_triangle_3d(c(-1, 0, 0), c(1, 0, 0), c(0, 1, 0), "red"))
@@ -9842,8 +9318,7 @@ draw_triangle_3d <- function(v1, v2, v3, color) {
 #' void DrawCube(Vector3 position, float width, float height, float length, Color color);
 #' ```
 #'
-#' @family cube functions
-#' @family draw functions
+#' @eval .family_seealso("draw_cube")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_cube(c(0, 0, 0), 2.0, 2.0, 2.0, "red"))
@@ -9882,9 +9357,7 @@ draw_cube <- function(position, width, height, length, color) {
 #' void DrawCubeV(Vector3 position, Vector3 size, Color color);
 #' ```
 #'
-#' @family v functions
-#' @family cube functions
-#' @family draw functions
+#' @eval .family_seealso("draw_cube_v")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_cube_v(c(0, 0, 0), c(2, 2, 2), "red"))
@@ -9921,9 +9394,7 @@ draw_cube_v <- function(position, size, color) {
 #' void DrawCubeWires(Vector3 position, float width, float height, float length, Color color);
 #' ```
 #'
-#' @family wires functions
-#' @family cube functions
-#' @family draw functions
+#' @eval .family_seealso("draw_cube_wires")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_cube_wires(c(0, 0, 0), 2.0, 2.0, 2.0, "red"))
@@ -9962,9 +9433,7 @@ draw_cube_wires <- function(position, width, height, length, color) {
 #' void DrawCubeWiresV(Vector3 position, Vector3 size, Color color);
 #' ```
 #'
-#' @family v functions
-#' @family cube functions
-#' @family draw functions
+#' @eval .family_seealso("draw_cube_wires_v")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_cube_wires_v(c(0, 0, 0), c(2, 2, 2), "red"))
@@ -9999,8 +9468,7 @@ draw_cube_wires_v <- function(position, size, color) {
 #' void DrawSphere(Vector3 centerPos, float radius, Color color);
 #' ```
 #'
-#' @family sphere functions
-#' @family draw functions
+#' @eval .family_seealso("draw_sphere")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_sphere(c(0, 0, 0), 1.0, "red"))
@@ -10037,9 +9505,7 @@ draw_sphere <- function(center_pos, radius, color) {
 #' void DrawSphereEx(Vector3 centerPos, float radius, int rings, int slices, Color color);
 #' ```
 #'
-#' @family ex functions
-#' @family sphere functions
-#' @family draw functions
+#' @eval .family_seealso("draw_sphere_ex")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_sphere_ex(c(0, 0, 0), 1.0, 16L, 16L, "red"))
@@ -10080,9 +9546,7 @@ draw_sphere_ex <- function(center_pos, radius, rings, slices, color) {
 #' void DrawSphereWires(Vector3 centerPos, float radius, int rings, int slices, Color color);
 #' ```
 #'
-#' @family wires functions
-#' @family sphere functions
-#' @family draw functions
+#' @eval .family_seealso("draw_sphere_wires")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_sphere_wires(c(0, 0, 0), 1.0, 16L, 16L, "red"))
@@ -10124,8 +9588,7 @@ draw_sphere_wires <- function(center_pos, radius, rings, slices, color) {
 #' void DrawCylinder(Vector3 position, float radiusTop, float radiusBottom, float height, int slices, Color color);
 #' ```
 #'
-#' @family cylinder functions
-#' @family draw functions
+#' @eval .family_seealso("draw_cylinder")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_cylinder(c(0, 0, 0), 1.0, 1.0, 2.0, 16L, "red"))
@@ -10169,9 +9632,7 @@ draw_cylinder <- function(position, radius_top, radius_bottom, height, slices, c
 #' void DrawCylinderEx(Vector3 startPos, Vector3 endPos, float startRadius, float endRadius, int sides, Color color);
 #' ```
 #'
-#' @family ex functions
-#' @family cylinder functions
-#' @family draw functions
+#' @eval .family_seealso("draw_cylinder_ex")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_cylinder_ex(c(-1, 0, 0), c(1, 0, 0), 1.0, 1.0, 16L, "red"))
@@ -10215,9 +9676,7 @@ draw_cylinder_ex <- function(start_pos, end_pos, start_radius, end_radius, sides
 #' void DrawCylinderWires(Vector3 position, float radiusTop, float radiusBottom, float height, int slices, Color color);
 #' ```
 #'
-#' @family wires functions
-#' @family cylinder functions
-#' @family draw functions
+#' @eval .family_seealso("draw_cylinder_wires")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_cylinder_wires(c(0, 0, 0), 1.0, 1.0, 2.0, 16L, "red"))
@@ -10261,9 +9720,7 @@ draw_cylinder_wires <- function(position, radius_top, radius_bottom, height, sli
 #' void DrawCylinderWiresEx(Vector3 startPos, Vector3 endPos, float startRadius, float endRadius, int sides, Color color);
 #' ```
 #'
-#' @family ex functions
-#' @family cylinder functions
-#' @family draw functions
+#' @eval .family_seealso("draw_cylinder_wires_ex")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_cylinder_wires_ex(
@@ -10314,8 +9771,7 @@ draw_cylinder_wires_ex <- function(start_pos, end_pos, start_radius, end_radius,
 #' void DrawCapsule(Vector3 startPos, Vector3 endPos, float radius, int slices, int rings, Color color);
 #' ```
 #'
-#' @family capsule functions
-#' @family draw functions
+#' @eval .family_seealso("draw_capsule")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_capsule(c(-1, 0, 0), c(1, 0, 0), 1.0, 16L, 16L, "red"))
@@ -10359,9 +9815,7 @@ draw_capsule <- function(start_pos, end_pos, radius, slices, rings, color) {
 #' void DrawCapsuleWires(Vector3 startPos, Vector3 endPos, float radius, int slices, int rings, Color color);
 #' ```
 #'
-#' @family wires functions
-#' @family capsule functions
-#' @family draw functions
+#' @eval .family_seealso("draw_capsule_wires")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_capsule_wires(
@@ -10409,8 +9863,7 @@ draw_capsule_wires <- function(start_pos, end_pos, radius, slices, rings, color)
 #' void DrawPlane(Vector3 centerPos, Vector2 size, Color color);
 #' ```
 #'
-#' @family plane functions
-#' @family draw functions
+#' @eval .family_seealso("draw_plane")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_plane(c(0, 0, 0), c(4, 4), "red"))
@@ -10444,8 +9897,7 @@ draw_plane <- function(center_pos, size, color) {
 #' void DrawRay(Ray ray, Color color);
 #' ```
 #'
-#' @family ray functions
-#' @family draw functions
+#' @eval .family_seealso("draw_ray")
 #'
 #' @examplesIf FALSE
 #' draw_ray(ray(c(0, 0, 0), c(0, 0, 1)), "red")
@@ -10477,8 +9929,7 @@ draw_ray <- function(ray, color) {
 #' void DrawGrid(int slices, float spacing);
 #' ```
 #'
-#' @family grid functions
-#' @family draw functions
+#' @eval .family_seealso("draw_grid")
 #'
 #' @examplesIf raylibr:::has_display()
 #' raylibr_screenshot_3d(function() draw_grid(16L, 1.0))
@@ -10511,8 +9962,7 @@ draw_grid <- function(slices = 10L, spacing = 1) {
 #' Model LoadModel(const char * fileName);
 #' ```
 #'
-#' @family model functions
-#' @family load functions
+#' @eval .family_seealso("load_model")
 #'
 #' @examplesIf FALSE
 #' load_model("file.png")
@@ -10537,9 +9987,7 @@ load_model <- function(file_name) {
 #' Model LoadModelFromMesh(Mesh mesh);
 #' ```
 #'
-#' @family mesh functions
-#' @family model functions
-#' @family load functions
+#' @eval .family_seealso("load_model_from_mesh")
 #'
 #' @examplesIf FALSE
 #' load_model_from_mesh(gen_mesh_cube(1.0, 1.0, 1.0))
@@ -10564,9 +10012,7 @@ load_model_from_mesh <- function(mesh) {
 #' bool IsModelValid(Model model);
 #' ```
 #'
-#' @family valid functions
-#' @family model functions
-#' @family is functions
+#' @eval .family_seealso("is_model_valid")
 #'
 #' @examplesIf FALSE
 #' is_model_valid(load_model("model.obj"))
@@ -10589,8 +10035,7 @@ is_model_valid <- function(model) {
 #' void UnloadModel(Model model);
 #' ```
 #'
-#' @family model functions
-#' @family unload functions
+#' @eval .family_seealso("unload_model")
 #'
 #' @examplesIf FALSE
 #' unload_model(load_model("model.obj"))
@@ -10615,9 +10060,7 @@ unload_model <- function(model) {
 #' BoundingBox GetModelBoundingBox(Model model);
 #' ```
 #'
-#' @family box functions
-#' @family model functions
-#' @family get functions
+#' @eval .family_seealso("get_model_bounding_box")
 #'
 #' @examplesIf FALSE
 #' get_model_bounding_box(load_model("model.obj"))
@@ -10643,8 +10086,7 @@ get_model_bounding_box <- function(model) {
 #' void DrawModel(Model model, Vector3 position, float scale, Color tint);
 #' ```
 #'
-#' @family model functions
-#' @family draw functions
+#' @eval .family_seealso("draw_model")
 #'
 #' @examplesIf FALSE
 #' draw_model(load_model("model.obj"), c(0, 5, 0), 1.0, "red")
@@ -10684,9 +10126,7 @@ draw_model <- function(model, position, scale, tint) {
 #' void DrawModelEx(Model model, Vector3 position, Vector3 rotationAxis, float rotationAngle, Vector3 scale, Color tint);
 #' ```
 #'
-#' @family ex functions
-#' @family model functions
-#' @family draw functions
+#' @eval .family_seealso("draw_model_ex")
 #'
 #' @examplesIf FALSE
 #' draw_model_ex(load_model("model.obj"), c(0, 5, 0), c(0, 0, 0), 0.0, c(1, 1, 1), "red")
@@ -10728,9 +10168,7 @@ draw_model_ex <- function(model, position, rotation_axis, rotation_angle, scale,
 #' void DrawModelWires(Model model, Vector3 position, float scale, Color tint);
 #' ```
 #'
-#' @family wires functions
-#' @family model functions
-#' @family draw functions
+#' @eval .family_seealso("draw_model_wires")
 #'
 #' @examplesIf FALSE
 #' draw_model_wires(load_model("model.obj"), c(0, 5, 0), 1.0, "red")
@@ -10770,9 +10208,7 @@ draw_model_wires <- function(model, position, scale, tint) {
 #' void DrawModelWiresEx(Model model, Vector3 position, Vector3 rotationAxis, float rotationAngle, Vector3 scale, Color tint);
 #' ```
 #'
-#' @family ex functions
-#' @family model functions
-#' @family draw functions
+#' @eval .family_seealso("draw_model_wires_ex")
 #'
 #' @examplesIf FALSE
 #' draw_model_wires_ex(load_model("model.obj"), c(0, 5, 0), c(0, 0, 0), 0.0, c(1, 1, 1), "red")
@@ -10812,9 +10248,7 @@ draw_model_wires_ex <- function(model, position, rotation_axis, rotation_angle, 
 #' void DrawBoundingBox(BoundingBox box, Color color);
 #' ```
 #'
-#' @family box functions
-#' @family bounding functions
-#' @family draw functions
+#' @eval .family_seealso("draw_bounding_box")
 #'
 #' @examplesIf FALSE
 #' draw_bounding_box(bounding_box(c(-1, -1, -1), c(1, 1, 1)), "red")
@@ -10849,8 +10283,7 @@ draw_bounding_box <- function(box, color) {
 #' void DrawBillboard(Camera camera, Texture2D texture, Vector3 position, float scale, Color tint);
 #' ```
 #'
-#' @family billboard functions
-#' @family draw functions
+#' @eval .family_seealso("draw_billboard")
 #'
 #' @examplesIf FALSE
 #' draw_billboard(camera_3d(c(0, 10, 10)), texture(0L, 64L, 64L, 1L, 7L), c(0, 5, 0), 1.0, "red")
@@ -10892,9 +10325,7 @@ draw_billboard <- function(camera, texture, position, scale, tint) {
 #' void DrawBillboardRec(Camera camera, Texture2D texture, Rectangle source, Vector3 position, Vector2 size, Color tint);
 #' ```
 #'
-#' @family rec functions
-#' @family billboard functions
-#' @family draw functions
+#' @eval .family_seealso("draw_billboard_rec")
 #'
 #' @examplesIf FALSE
 #' draw_billboard_rec(
@@ -10948,9 +10379,7 @@ draw_billboard_rec <- function(camera, texture, source, position, size, tint) {
 #' void DrawBillboardPro(Camera camera, Texture2D texture, Rectangle source, Vector3 position, Vector3 up, Vector2 size, Vector2 origin, float rotation, Color tint);
 #' ```
 #'
-#' @family pro functions
-#' @family billboard functions
-#' @family draw functions
+#' @eval .family_seealso("draw_billboard_pro")
 #'
 #' @examplesIf FALSE
 #' draw_billboard_pro(
@@ -11005,8 +10434,7 @@ draw_billboard_pro <- function(camera, texture, source, position, up, size, orig
 #' void UnloadMesh(Mesh mesh);
 #' ```
 #'
-#' @family mesh functions
-#' @family unload functions
+#' @eval .family_seealso("unload_mesh")
 #'
 #' @examplesIf FALSE
 #' unload_mesh(gen_mesh_cube(1.0, 1.0, 1.0))
@@ -11031,8 +10459,7 @@ unload_mesh <- function(mesh) {
 #' void DrawMesh(Mesh mesh, Material material, Matrix transform);
 #' ```
 #'
-#' @family mesh functions
-#' @family draw functions
+#' @eval .family_seealso("draw_mesh")
 #'
 #' @examplesIf FALSE
 #' draw_mesh(gen_mesh_cube(1.0, 1.0, 1.0), load_material_default(), diag(4))
@@ -11067,9 +10494,7 @@ draw_mesh <- function(mesh, material, transform) {
 #' BoundingBox GetMeshBoundingBox(Mesh mesh);
 #' ```
 #'
-#' @family box functions
-#' @family mesh functions
-#' @family get functions
+#' @eval .family_seealso("get_mesh_bounding_box")
 #'
 #' @examplesIf FALSE
 #' get_mesh_bounding_box(gen_mesh_cube(1.0, 1.0, 1.0))
@@ -11095,8 +10520,7 @@ get_mesh_bounding_box <- function(mesh) {
 #' bool ExportMesh(Mesh mesh, const char * fileName);
 #' ```
 #'
-#' @family mesh functions
-#' @family export functions
+#' @eval .family_seealso("export_mesh")
 #'
 #' @examplesIf FALSE
 #' export_mesh(gen_mesh_cube(1.0, 1.0, 1.0), "file.png")
@@ -11123,9 +10547,7 @@ export_mesh <- function(mesh, file_name) {
 #' bool ExportMeshAsCode(Mesh mesh, const char * fileName);
 #' ```
 #'
-#' @family code functions
-#' @family mesh functions
-#' @family export functions
+#' @eval .family_seealso("export_mesh_as_code")
 #'
 #' @examplesIf FALSE
 #' export_mesh_as_code(gen_mesh_cube(1.0, 1.0, 1.0), "file.png")
@@ -11152,8 +10574,7 @@ export_mesh_as_code <- function(mesh, file_name) {
 #' Mesh GenMeshPoly(int sides, float radius);
 #' ```
 #'
-#' @family poly functions
-#' @family mesh functions
+#' @eval .family_seealso("gen_mesh_poly")
 #'
 #' @examplesIf FALSE
 #' gen_mesh_poly(0L, 50.0)
@@ -11182,8 +10603,7 @@ gen_mesh_poly <- function(sides, radius) {
 #' Mesh GenMeshPlane(float width, float length, int resX, int resZ);
 #' ```
 #'
-#' @family plane functions
-#' @family mesh functions
+#' @eval .family_seealso("gen_mesh_plane")
 #'
 #' @examplesIf FALSE
 #' gen_mesh_plane(200.0, 100.0, 0L, 0L)
@@ -11213,8 +10633,7 @@ gen_mesh_plane <- function(width, length, res_x, res_z) {
 #' Mesh GenMeshCube(float width, float height, float length);
 #' ```
 #'
-#' @family cube functions
-#' @family mesh functions
+#' @eval .family_seealso("gen_mesh_cube")
 #'
 #' @examplesIf FALSE
 #' gen_mesh_cube(200.0, 100.0, 100.0)
@@ -11243,8 +10662,7 @@ gen_mesh_cube <- function(width, height, length) {
 #' Mesh GenMeshSphere(float radius, int rings, int slices);
 #' ```
 #'
-#' @family sphere functions
-#' @family mesh functions
+#' @eval .family_seealso("gen_mesh_sphere")
 #'
 #' @examplesIf FALSE
 #' gen_mesh_sphere(50.0, 8L, 16L)
@@ -11273,8 +10691,7 @@ gen_mesh_sphere <- function(radius, rings, slices) {
 #' Mesh GenMeshHemiSphere(float radius, int rings, int slices);
 #' ```
 #'
-#' @family sphere functions
-#' @family mesh functions
+#' @eval .family_seealso("gen_mesh_hemi_sphere")
 #'
 #' @examplesIf FALSE
 #' gen_mesh_hemi_sphere(50.0, 8L, 16L)
@@ -11303,8 +10720,7 @@ gen_mesh_hemi_sphere <- function(radius, rings, slices) {
 #' Mesh GenMeshCylinder(float radius, float height, int slices);
 #' ```
 #'
-#' @family cylinder functions
-#' @family mesh functions
+#' @eval .family_seealso("gen_mesh_cylinder")
 #'
 #' @examplesIf FALSE
 #' gen_mesh_cylinder(50.0, 100.0, 16L)
@@ -11333,8 +10749,7 @@ gen_mesh_cylinder <- function(radius, height, slices) {
 #' Mesh GenMeshCone(float radius, float height, int slices);
 #' ```
 #'
-#' @family cone functions
-#' @family mesh functions
+#' @eval .family_seealso("gen_mesh_cone")
 #'
 #' @examplesIf FALSE
 #' gen_mesh_cone(50.0, 100.0, 16L)
@@ -11364,8 +10779,7 @@ gen_mesh_cone <- function(radius, height, slices) {
 #' Mesh GenMeshTorus(float radius, float size, int radSeg, int sides);
 #' ```
 #'
-#' @family torus functions
-#' @family mesh functions
+#' @eval .family_seealso("gen_mesh_torus")
 #'
 #' @examplesIf FALSE
 #' gen_mesh_torus(50.0, 1.0, 0L, 0L)
@@ -11396,8 +10810,7 @@ gen_mesh_torus <- function(radius, size, rad_seg, sides) {
 #' Mesh GenMeshKnot(float radius, float size, int radSeg, int sides);
 #' ```
 #'
-#' @family knot functions
-#' @family mesh functions
+#' @eval .family_seealso("gen_mesh_knot")
 #'
 #' @examplesIf FALSE
 #' gen_mesh_knot(50.0, 1.0, 0L, 0L)
@@ -11426,8 +10839,7 @@ gen_mesh_knot <- function(radius, size, rad_seg, sides) {
 #' Mesh GenMeshHeightmap(Image heightmap, Vector3 size);
 #' ```
 #'
-#' @family heightmap functions
-#' @family mesh functions
+#' @eval .family_seealso("gen_mesh_heightmap")
 #'
 #' @examplesIf FALSE
 #' gen_mesh_heightmap(gen_image_color(200, 200, "blue"), c(1, 1, 1))
@@ -11454,8 +10866,7 @@ gen_mesh_heightmap <- function(heightmap, size) {
 #' Mesh GenMeshCubicmap(Image cubicmap, Vector3 cubeSize);
 #' ```
 #'
-#' @family cubicmap functions
-#' @family mesh functions
+#' @eval .family_seealso("gen_mesh_cubicmap")
 #'
 #' @examplesIf FALSE
 #' gen_mesh_cubicmap(gen_image_color(200, 200, "blue"), c(1, 1, 1))
@@ -11480,9 +10891,7 @@ gen_mesh_cubicmap <- function(cubicmap, cube_size) {
 #' Material LoadMaterialDefault(void);
 #' ```
 #'
-#' @family default functions
-#' @family material functions
-#' @family load functions
+#' @eval .family_seealso("load_material_default")
 #'
 #' @examplesIf FALSE
 #' load_material_default()
@@ -11506,9 +10915,7 @@ load_material_default <- function() {
 #' bool IsMaterialValid(Material material);
 #' ```
 #'
-#' @family valid functions
-#' @family material functions
-#' @family is functions
+#' @eval .family_seealso("is_material_valid")
 #'
 #' @examplesIf FALSE
 #' is_material_valid(load_material_default())
@@ -11531,8 +10938,7 @@ is_material_valid <- function(material) {
 #' void UnloadMaterial(Material material);
 #' ```
 #'
-#' @family material functions
-#' @family unload functions
+#' @eval .family_seealso("unload_material")
 #'
 #' @examplesIf FALSE
 #' unload_material(load_material_default())
@@ -11557,9 +10963,7 @@ unload_material <- function(material) {
 #' void UpdateModelAnimation(Model model, ModelAnimation anim, float frame);
 #' ```
 #'
-#' @family animation functions
-#' @family model functions
-#' @family update functions
+#' @eval .family_seealso("update_model_animation")
 #'
 #' @examplesIf FALSE
 #' update_model_animation(load_model("model.obj"), anim, 0.0)
@@ -11589,9 +10993,7 @@ update_model_animation <- function(model, anim, frame) {
 #' void UpdateModelAnimationEx(Model model, ModelAnimation animA, float frameA, ModelAnimation animB, float frameB, float blend);
 #' ```
 #'
-#' @family ex functions
-#' @family model functions
-#' @family update functions
+#' @eval .family_seealso("update_model_animation_ex")
 #'
 #' @examplesIf FALSE
 #' update_model_animation_ex(load_model("model.obj"), anim, 0.0, anim, 0.0, 0.0)
@@ -11622,9 +11024,7 @@ update_model_animation_ex <- function(model, anim_a, frame_a, anim_b, frame_b, b
 #' bool IsModelAnimationValid(Model model, ModelAnimation anim);
 #' ```
 #'
-#' @family valid functions
-#' @family model functions
-#' @family is functions
+#' @eval .family_seealso("is_model_animation_valid")
 #'
 #' @examplesIf FALSE
 #' is_model_animation_valid(load_model("model.obj"), anim)
@@ -11653,9 +11053,7 @@ is_model_animation_valid <- function(model, anim) {
 #' bool CheckCollisionSpheres(Vector3 center1, float radius1, Vector3 center2, float radius2);
 #' ```
 #'
-#' @family spheres functions
-#' @family collision functions
-#' @family check functions
+#' @eval .family_seealso("check_collision_spheres")
 #'
 #' @examples
 #' check_collision_spheres(c(0, 0, 0), 50.0, c(0, 0, 0), 50.0)
@@ -11684,9 +11082,7 @@ check_collision_spheres <- function(center1, radius1, center2, radius2) {
 #' bool CheckCollisionBoxes(BoundingBox box1, BoundingBox box2);
 #' ```
 #'
-#' @family boxes functions
-#' @family collision functions
-#' @family check functions
+#' @eval .family_seealso("check_collision_boxes")
 #'
 #' @examples
 #' check_collision_boxes(
@@ -11717,9 +11113,7 @@ check_collision_boxes <- function(box1, box2) {
 #' bool CheckCollisionBoxSphere(BoundingBox box, Vector3 center, float radius);
 #' ```
 #'
-#' @family sphere functions
-#' @family collision functions
-#' @family check functions
+#' @eval .family_seealso("check_collision_box_sphere")
 #'
 #' @examples
 #' check_collision_box_sphere(bounding_box(c(-1, -1, -1), c(1, 1, 1)), c(0, 0, 0), 50.0)
@@ -11748,9 +11142,7 @@ check_collision_box_sphere <- function(box, center, radius) {
 #' RayCollision GetRayCollisionSphere(Ray ray, Vector3 center, float radius);
 #' ```
 #'
-#' @family sphere functions
-#' @family ray functions
-#' @family get functions
+#' @eval .family_seealso("get_ray_collision_sphere")
 #'
 #' @examples
 #' get_ray_collision_sphere(ray(c(0, 0, 0), c(0, 0, 1)), c(0, 0, 0), 50.0)
@@ -11778,9 +11170,7 @@ get_ray_collision_sphere <- function(ray, center, radius) {
 #' RayCollision GetRayCollisionBox(Ray ray, BoundingBox box);
 #' ```
 #'
-#' @family box functions
-#' @family ray functions
-#' @family get functions
+#' @eval .family_seealso("get_ray_collision_box")
 #'
 #' @examples
 #' get_ray_collision_box(ray(c(0, 0, 0), c(0, 0, 1)), bounding_box(c(-1, -1, -1), c(1, 1, 1)))
@@ -11808,9 +11198,7 @@ get_ray_collision_box <- function(ray, box) {
 #' RayCollision GetRayCollisionMesh(Ray ray, Mesh mesh, Matrix transform);
 #' ```
 #'
-#' @family mesh functions
-#' @family ray functions
-#' @family get functions
+#' @eval .family_seealso("get_ray_collision_mesh")
 #'
 #' @examplesIf FALSE
 #' get_ray_collision_mesh(ray(c(0, 0, 0), c(0, 0, 1)), gen_mesh_cube(1.0, 1.0, 1.0), diag(4))
@@ -11840,9 +11228,7 @@ get_ray_collision_mesh <- function(ray, mesh, transform) {
 #' RayCollision GetRayCollisionTriangle(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3);
 #' ```
 #'
-#' @family triangle functions
-#' @family ray functions
-#' @family get functions
+#' @eval .family_seealso("get_ray_collision_triangle")
 #'
 #' @examples
 #' get_ray_collision_triangle(ray(c(0, 0, 0), c(0, 0, 1)), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0))
@@ -11874,9 +11260,7 @@ get_ray_collision_triangle <- function(ray, p1, p2, p3) {
 #' RayCollision GetRayCollisionQuad(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3, Vector3 p4);
 #' ```
 #'
-#' @family quad functions
-#' @family ray functions
-#' @family get functions
+#' @eval .family_seealso("get_ray_collision_quad")
 #'
 #' @examples
 #' get_ray_collision_quad(
@@ -11908,9 +11292,7 @@ get_ray_collision_quad <- function(ray, p1, p2, p3, p4) {
 #' void InitAudioDevice(void);
 #' ```
 #'
-#' @family device functions
-#' @family audio functions
-#' @family init functions
+#' @eval .family_seealso("init_audio_device")
 #'
 #' @examplesIf FALSE
 #' init_audio_device()
@@ -11931,9 +11313,7 @@ init_audio_device <- function() {
 #' void CloseAudioDevice(void);
 #' ```
 #'
-#' @family device functions
-#' @family audio functions
-#' @family close functions
+#' @eval .family_seealso("close_audio_device")
 #'
 #' @examplesIf FALSE
 #' close_audio_device()
@@ -11956,9 +11336,7 @@ close_audio_device <- function() {
 #' bool IsAudioDeviceReady(void);
 #' ```
 #'
-#' @family ready functions
-#' @family audio functions
-#' @family is functions
+#' @eval .family_seealso("is_audio_device_ready")
 #'
 #' @examplesIf FALSE
 #' is_audio_device_ready()
@@ -11980,9 +11358,7 @@ is_audio_device_ready <- function() {
 #' void SetMasterVolume(float volume);
 #' ```
 #'
-#' @family volume functions
-#' @family master functions
-#' @family set functions
+#' @eval .family_seealso("set_master_volume")
 #'
 #' @examplesIf FALSE
 #' set_master_volume(0.5)
@@ -12006,9 +11382,7 @@ set_master_volume <- function(volume) {
 #' float GetMasterVolume(void);
 #' ```
 #'
-#' @family volume functions
-#' @family master functions
-#' @family get functions
+#' @eval .family_seealso("get_master_volume")
 #'
 #' @examplesIf FALSE
 #' get_master_volume()
@@ -12032,8 +11406,7 @@ get_master_volume <- function() {
 #' Wave LoadWave(const char * fileName);
 #' ```
 #'
-#' @family wave functions
-#' @family load functions
+#' @eval .family_seealso("load_wave")
 #'
 #' @examplesIf FALSE
 #' load_wave("file.png")
@@ -12058,9 +11431,7 @@ load_wave <- function(file_name) {
 #' bool IsWaveValid(Wave wave);
 #' ```
 #'
-#' @family valid functions
-#' @family wave functions
-#' @family is functions
+#' @eval .family_seealso("is_wave_valid")
 #'
 #' @examplesIf FALSE
 #' is_wave_valid(load_wave("sound.wav"))
@@ -12085,8 +11456,7 @@ is_wave_valid <- function(wave) {
 #' Sound LoadSound(const char * fileName);
 #' ```
 #'
-#' @family sound functions
-#' @family load functions
+#' @eval .family_seealso("load_sound")
 #'
 #' @examplesIf FALSE
 #' load_sound("file.png")
@@ -12111,9 +11481,7 @@ load_sound <- function(file_name) {
 #' Sound LoadSoundFromWave(Wave wave);
 #' ```
 #'
-#' @family wave functions
-#' @family sound functions
-#' @family load functions
+#' @eval .family_seealso("load_sound_from_wave")
 #'
 #' @examplesIf FALSE
 #' load_sound_from_wave(load_wave("sound.wav"))
@@ -12138,9 +11506,7 @@ load_sound_from_wave <- function(wave) {
 #' Sound LoadSoundAlias(Sound source);
 #' ```
 #'
-#' @family alias functions
-#' @family sound functions
-#' @family load functions
+#' @eval .family_seealso("load_sound_alias")
 #'
 #' @examplesIf FALSE
 #' load_sound_alias(load_sound("sound.wav"))
@@ -12165,9 +11531,7 @@ load_sound_alias <- function(source) {
 #' bool IsSoundValid(Sound sound);
 #' ```
 #'
-#' @family valid functions
-#' @family sound functions
-#' @family is functions
+#' @eval .family_seealso("is_sound_valid")
 #'
 #' @examplesIf FALSE
 #' is_sound_valid(load_sound("sound.wav"))
@@ -12190,8 +11554,7 @@ is_sound_valid <- function(sound) {
 #' void UnloadWave(Wave wave);
 #' ```
 #'
-#' @family wave functions
-#' @family unload functions
+#' @eval .family_seealso("unload_wave")
 #'
 #' @examplesIf FALSE
 #' unload_wave(load_wave("sound.wav"))
@@ -12214,8 +11577,7 @@ unload_wave <- function(wave) {
 #' void UnloadSound(Sound sound);
 #' ```
 #'
-#' @family sound functions
-#' @family unload functions
+#' @eval .family_seealso("unload_sound")
 #'
 #' @examplesIf FALSE
 #' unload_sound(load_sound("sound.wav"))
@@ -12238,9 +11600,7 @@ unload_sound <- function(sound) {
 #' void UnloadSoundAlias(Sound alias);
 #' ```
 #'
-#' @family alias functions
-#' @family sound functions
-#' @family unload functions
+#' @eval .family_seealso("unload_sound_alias")
 #'
 #' @examplesIf FALSE
 #' unload_sound_alias(load_sound("sound.wav"))
@@ -12266,8 +11626,7 @@ unload_sound_alias <- function(alias) {
 #' bool ExportWave(Wave wave, const char * fileName);
 #' ```
 #'
-#' @family wave functions
-#' @family export functions
+#' @eval .family_seealso("export_wave")
 #'
 #' @examplesIf FALSE
 #' export_wave(load_wave("sound.wav"), "file.png")
@@ -12294,9 +11653,7 @@ export_wave <- function(wave, file_name) {
 #' bool ExportWaveAsCode(Wave wave, const char * fileName);
 #' ```
 #'
-#' @family code functions
-#' @family wave functions
-#' @family export functions
+#' @eval .family_seealso("export_wave_as_code")
 #'
 #' @examplesIf FALSE
 #' export_wave_as_code(load_wave("sound.wav"), "file.png")
@@ -12320,8 +11677,7 @@ export_wave_as_code <- function(wave, file_name) {
 #' void PlaySound(Sound sound);
 #' ```
 #'
-#' @family sound functions
-#' @family play functions
+#' @eval .family_seealso("play_sound")
 #'
 #' @examplesIf FALSE
 #' play_sound(load_sound("sound.wav"))
@@ -12344,8 +11700,7 @@ play_sound <- function(sound) {
 #' void StopSound(Sound sound);
 #' ```
 #'
-#' @family sound functions
-#' @family stop functions
+#' @eval .family_seealso("stop_sound")
 #'
 #' @examplesIf FALSE
 #' stop_sound(load_sound("sound.wav"))
@@ -12368,8 +11723,7 @@ stop_sound <- function(sound) {
 #' void PauseSound(Sound sound);
 #' ```
 #'
-#' @family sound functions
-#' @family pause functions
+#' @eval .family_seealso("pause_sound")
 #'
 #' @examplesIf FALSE
 #' pause_sound(load_sound("sound.wav"))
@@ -12392,8 +11746,7 @@ pause_sound <- function(sound) {
 #' void ResumeSound(Sound sound);
 #' ```
 #'
-#' @family sound functions
-#' @family resume functions
+#' @eval .family_seealso("resume_sound")
 #'
 #' @examplesIf FALSE
 #' resume_sound(load_sound("sound.wav"))
@@ -12418,9 +11771,7 @@ resume_sound <- function(sound) {
 #' bool IsSoundPlaying(Sound sound);
 #' ```
 #'
-#' @family playing functions
-#' @family sound functions
-#' @family is functions
+#' @eval .family_seealso("is_sound_playing")
 #'
 #' @examplesIf FALSE
 #' is_sound_playing(load_sound("sound.wav"))
@@ -12444,9 +11795,7 @@ is_sound_playing <- function(sound) {
 #' void SetSoundVolume(Sound sound, float volume);
 #' ```
 #'
-#' @family volume functions
-#' @family sound functions
-#' @family set functions
+#' @eval .family_seealso("set_sound_volume")
 #'
 #' @examplesIf FALSE
 #' set_sound_volume(load_sound("sound.wav"), 0.5)
@@ -12471,9 +11820,7 @@ set_sound_volume <- function(sound, volume) {
 #' void SetSoundPitch(Sound sound, float pitch);
 #' ```
 #'
-#' @family pitch functions
-#' @family sound functions
-#' @family set functions
+#' @eval .family_seealso("set_sound_pitch")
 #'
 #' @examplesIf FALSE
 #' set_sound_pitch(load_sound("sound.wav"), 1.0)
@@ -12498,9 +11845,7 @@ set_sound_pitch <- function(sound, pitch) {
 #' void SetSoundPan(Sound sound, float pan);
 #' ```
 #'
-#' @family pan functions
-#' @family sound functions
-#' @family set functions
+#' @eval .family_seealso("set_sound_pan")
 #'
 #' @examplesIf FALSE
 #' set_sound_pan(load_sound("sound.wav"), 0.5)
@@ -12526,7 +11871,7 @@ set_sound_pan <- function(sound, pan) {
 #' Wave WaveCopy(Wave wave);
 #' ```
 #'
-#' @family copy functions
+#' @eval .family_seealso("wave_copy")
 #'
 #' @examplesIf FALSE
 #' wave_copy(load_wave("sound.wav"))
@@ -12551,9 +11896,7 @@ wave_copy <- function(wave) {
 #' Music LoadMusicStream(const char * fileName);
 #' ```
 #'
-#' @family stream functions
-#' @family music functions
-#' @family load functions
+#' @eval .family_seealso("load_music_stream")
 #'
 #' @examplesIf FALSE
 #' load_music_stream("file.png")
@@ -12578,9 +11921,7 @@ load_music_stream <- function(file_name) {
 #' bool IsMusicValid(Music music);
 #' ```
 #'
-#' @family valid functions
-#' @family music functions
-#' @family is functions
+#' @eval .family_seealso("is_music_valid")
 #'
 #' @examplesIf FALSE
 #' is_music_valid(load_music_stream("music.mp3"))
@@ -12603,9 +11944,7 @@ is_music_valid <- function(music) {
 #' void UnloadMusicStream(Music music);
 #' ```
 #'
-#' @family stream functions
-#' @family music functions
-#' @family unload functions
+#' @eval .family_seealso("unload_music_stream")
 #'
 #' @examplesIf FALSE
 #' unload_music_stream(load_music_stream("music.mp3"))
@@ -12628,9 +11967,7 @@ unload_music_stream <- function(music) {
 #' void PlayMusicStream(Music music);
 #' ```
 #'
-#' @family stream functions
-#' @family music functions
-#' @family play functions
+#' @eval .family_seealso("play_music_stream")
 #'
 #' @examplesIf FALSE
 #' play_music_stream(load_music_stream("music.mp3"))
@@ -12655,9 +11992,7 @@ play_music_stream <- function(music) {
 #' bool IsMusicStreamPlaying(Music music);
 #' ```
 #'
-#' @family playing functions
-#' @family music functions
-#' @family is functions
+#' @eval .family_seealso("is_music_stream_playing")
 #'
 #' @examplesIf FALSE
 #' is_music_stream_playing(load_music_stream("music.mp3"))
@@ -12680,9 +12015,7 @@ is_music_stream_playing <- function(music) {
 #' void UpdateMusicStream(Music music);
 #' ```
 #'
-#' @family stream functions
-#' @family music functions
-#' @family update functions
+#' @eval .family_seealso("update_music_stream")
 #'
 #' @examplesIf FALSE
 #' update_music_stream(load_music_stream("music.mp3"))
@@ -12705,9 +12038,7 @@ update_music_stream <- function(music) {
 #' void StopMusicStream(Music music);
 #' ```
 #'
-#' @family stream functions
-#' @family music functions
-#' @family stop functions
+#' @eval .family_seealso("stop_music_stream")
 #'
 #' @examplesIf FALSE
 #' stop_music_stream(load_music_stream("music.mp3"))
@@ -12730,9 +12061,7 @@ stop_music_stream <- function(music) {
 #' void PauseMusicStream(Music music);
 #' ```
 #'
-#' @family stream functions
-#' @family music functions
-#' @family pause functions
+#' @eval .family_seealso("pause_music_stream")
 #'
 #' @examplesIf FALSE
 #' pause_music_stream(load_music_stream("music.mp3"))
@@ -12755,9 +12084,7 @@ pause_music_stream <- function(music) {
 #' void ResumeMusicStream(Music music);
 #' ```
 #'
-#' @family stream functions
-#' @family music functions
-#' @family resume functions
+#' @eval .family_seealso("resume_music_stream")
 #'
 #' @examplesIf FALSE
 #' resume_music_stream(load_music_stream("music.mp3"))
@@ -12781,8 +12108,7 @@ resume_music_stream <- function(music) {
 #' void SeekMusicStream(Music music, float position);
 #' ```
 #'
-#' @family stream functions
-#' @family music functions
+#' @eval .family_seealso("seek_music_stream")
 #'
 #' @examplesIf FALSE
 #' seek_music_stream(load_music_stream("music.mp3"), 0.0)
@@ -12807,9 +12133,7 @@ seek_music_stream <- function(music, position) {
 #' void SetMusicVolume(Music music, float volume);
 #' ```
 #'
-#' @family volume functions
-#' @family music functions
-#' @family set functions
+#' @eval .family_seealso("set_music_volume")
 #'
 #' @examplesIf FALSE
 #' set_music_volume(load_music_stream("music.mp3"), 0.5)
@@ -12834,9 +12158,7 @@ set_music_volume <- function(music, volume) {
 #' void SetMusicPitch(Music music, float pitch);
 #' ```
 #'
-#' @family pitch functions
-#' @family music functions
-#' @family set functions
+#' @eval .family_seealso("set_music_pitch")
 #'
 #' @examplesIf FALSE
 #' set_music_pitch(load_music_stream("music.mp3"), 1.0)
@@ -12861,9 +12183,7 @@ set_music_pitch <- function(music, pitch) {
 #' void SetMusicPan(Music music, float pan);
 #' ```
 #'
-#' @family pan functions
-#' @family music functions
-#' @family set functions
+#' @eval .family_seealso("set_music_pan")
 #'
 #' @examplesIf FALSE
 #' set_music_pan(load_music_stream("music.mp3"), 0.5)
@@ -12889,9 +12209,7 @@ set_music_pan <- function(music, pan) {
 #' float GetMusicTimeLength(Music music);
 #' ```
 #'
-#' @family length functions
-#' @family music functions
-#' @family get functions
+#' @eval .family_seealso("get_music_time_length")
 #'
 #' @examplesIf FALSE
 #' get_music_time_length(load_music_stream("music.mp3"))
@@ -12916,9 +12234,7 @@ get_music_time_length <- function(music) {
 #' float GetMusicTimePlayed(Music music);
 #' ```
 #'
-#' @family played functions
-#' @family music functions
-#' @family get functions
+#' @eval .family_seealso("get_music_time_played")
 #'
 #' @examplesIf FALSE
 #' get_music_time_played(load_music_stream("music.mp3"))
@@ -12945,9 +12261,7 @@ get_music_time_played <- function(music) {
 #' AudioStream LoadAudioStream(unsigned int sampleRate, unsigned int sampleSize, unsigned int channels);
 #' ```
 #'
-#' @family stream functions
-#' @family audio functions
-#' @family load functions
+#' @eval .family_seealso("load_audio_stream")
 #'
 #' @examplesIf FALSE
 #' load_audio_stream(0L, 32L, 0L)
@@ -12974,9 +12288,7 @@ load_audio_stream <- function(sample_rate, sample_size, channels) {
 #' bool IsAudioStreamValid(AudioStream stream);
 #' ```
 #'
-#' @family valid functions
-#' @family audio functions
-#' @family is functions
+#' @eval .family_seealso("is_audio_stream_valid")
 #'
 #' @examplesIf FALSE
 #' is_audio_stream_valid(load_audio_stream(44100L, 16L, 1L))
@@ -12999,9 +12311,7 @@ is_audio_stream_valid <- function(stream) {
 #' void UnloadAudioStream(AudioStream stream);
 #' ```
 #'
-#' @family stream functions
-#' @family audio functions
-#' @family unload functions
+#' @eval .family_seealso("unload_audio_stream")
 #'
 #' @examplesIf FALSE
 #' unload_audio_stream(load_audio_stream(44100L, 16L, 1L))
@@ -13026,9 +12336,7 @@ unload_audio_stream <- function(stream) {
 #' bool IsAudioStreamProcessed(AudioStream stream);
 #' ```
 #'
-#' @family processed functions
-#' @family audio functions
-#' @family is functions
+#' @eval .family_seealso("is_audio_stream_processed")
 #'
 #' @examplesIf FALSE
 #' is_audio_stream_processed(load_audio_stream(44100L, 16L, 1L))
@@ -13051,9 +12359,7 @@ is_audio_stream_processed <- function(stream) {
 #' void PlayAudioStream(AudioStream stream);
 #' ```
 #'
-#' @family stream functions
-#' @family audio functions
-#' @family play functions
+#' @eval .family_seealso("play_audio_stream")
 #'
 #' @examplesIf FALSE
 #' play_audio_stream(load_audio_stream(44100L, 16L, 1L))
@@ -13076,9 +12382,7 @@ play_audio_stream <- function(stream) {
 #' void PauseAudioStream(AudioStream stream);
 #' ```
 #'
-#' @family stream functions
-#' @family audio functions
-#' @family pause functions
+#' @eval .family_seealso("pause_audio_stream")
 #'
 #' @examplesIf FALSE
 #' pause_audio_stream(load_audio_stream(44100L, 16L, 1L))
@@ -13101,9 +12405,7 @@ pause_audio_stream <- function(stream) {
 #' void ResumeAudioStream(AudioStream stream);
 #' ```
 #'
-#' @family stream functions
-#' @family audio functions
-#' @family resume functions
+#' @eval .family_seealso("resume_audio_stream")
 #'
 #' @examplesIf FALSE
 #' resume_audio_stream(load_audio_stream(44100L, 16L, 1L))
@@ -13128,9 +12430,7 @@ resume_audio_stream <- function(stream) {
 #' bool IsAudioStreamPlaying(AudioStream stream);
 #' ```
 #'
-#' @family playing functions
-#' @family audio functions
-#' @family is functions
+#' @eval .family_seealso("is_audio_stream_playing")
 #'
 #' @examplesIf FALSE
 #' is_audio_stream_playing(load_audio_stream(44100L, 16L, 1L))
@@ -13153,9 +12453,7 @@ is_audio_stream_playing <- function(stream) {
 #' void StopAudioStream(AudioStream stream);
 #' ```
 #'
-#' @family stream functions
-#' @family audio functions
-#' @family stop functions
+#' @eval .family_seealso("stop_audio_stream")
 #'
 #' @examplesIf FALSE
 #' stop_audio_stream(load_audio_stream(44100L, 16L, 1L))
@@ -13179,9 +12477,7 @@ stop_audio_stream <- function(stream) {
 #' void SetAudioStreamVolume(AudioStream stream, float volume);
 #' ```
 #'
-#' @family volume functions
-#' @family audio functions
-#' @family set functions
+#' @eval .family_seealso("set_audio_stream_volume")
 #'
 #' @examplesIf FALSE
 #' set_audio_stream_volume(load_audio_stream(44100L, 16L, 1L), 0.5)
@@ -13206,9 +12502,7 @@ set_audio_stream_volume <- function(stream, volume) {
 #' void SetAudioStreamPitch(AudioStream stream, float pitch);
 #' ```
 #'
-#' @family pitch functions
-#' @family audio functions
-#' @family set functions
+#' @eval .family_seealso("set_audio_stream_pitch")
 #'
 #' @examplesIf FALSE
 #' set_audio_stream_pitch(load_audio_stream(44100L, 16L, 1L), 1.0)
@@ -13233,9 +12527,7 @@ set_audio_stream_pitch <- function(stream, pitch) {
 #' void SetAudioStreamPan(AudioStream stream, float pan);
 #' ```
 #'
-#' @family pan functions
-#' @family audio functions
-#' @family set functions
+#' @eval .family_seealso("set_audio_stream_pan")
 #'
 #' @examplesIf FALSE
 #' set_audio_stream_pan(load_audio_stream(44100L, 16L, 1L), 0.5)
@@ -13259,9 +12551,7 @@ set_audio_stream_pan <- function(stream, pan) {
 #' void SetAudioStreamBufferSizeDefault(int size);
 #' ```
 #'
-#' @family default functions
-#' @family audio functions
-#' @family set functions
+#' @eval .family_seealso("set_audio_stream_buffer_size_default")
 #'
 #' @examplesIf FALSE
 #' set_audio_stream_buffer_size_default(32L)

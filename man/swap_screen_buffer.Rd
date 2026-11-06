@@ -21,15 +21,15 @@ swap_screen_buffer()
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other screen functions: 
-\code{\link{get_screen_height}()},
-\code{\link{get_screen_to_world_2d}()},
-\code{\link{get_screen_to_world_ray}()},
-\code{\link{get_screen_to_world_ray_ex}()},
-\code{\link{get_screen_width}()},
-\code{\link{get_world_to_screen}()},
-\code{\link{is_cursor_on_screen}()},
-\code{\link{load_image_from_screen}()}
+\ifelse{latex}{The other topics in the Drawing & timing section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Drawing & timing:
+\code{\link{begin_drawing}()},
+\code{\link{clear_background}()},
+\code{\link{draw_fps}()},
+\code{\link{end_drawing}()},
+\code{\link{get_fps}()},
+\code{\link{get_frame_time}()},
+\code{\link{get_time}()},
+\code{\link{poll_input_events}()},
+\code{\link{set_target_fps}()}
 }
-\concept{buffer functions}
-\concept{screen functions}
+}

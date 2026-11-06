@@ -17,6 +17,7 @@ Rscript -e 'roxygen2::roxygenise()'
 Generated files (do not edit by hand):
 - `src/structs.cpp`, `src/{core,shapes,textures,text,models,audio}.cpp`
 - `R/functions.R`, `R/enums.R`, per-struct R files
+- `R/families.R` — the "See also" lists, one per section of the reference index in `_pkgdown.yml` (shown in HTML and text help, not in the PDF manual)
 - `inst/include/raylibr_types.h`
 
 Hand-maintained files:

@@ -29,4 +29,22 @@ This function has been auto-generated from the following Raylib function definit
 color_lerp("red", "red", 0.0)
 
 }
-\concept{lerp functions}
+\seealso{
+\ifelse{latex}{The other topics in the Colors section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Colors:
+\code{\link{as_color}()},
+\code{\link{color}()},
+\code{\link{color_alpha}()},
+\code{\link{color_alpha_blend}()},
+\code{\link{color_brightness}()},
+\code{\link{color_contrast}()},
+\code{\link{color_from_hsv}()},
+\code{\link{color_from_normalized}()},
+\code{\link{color_is_equal}()},
+\code{\link{color_normalize}()},
+\code{\link{color_tint}()},
+\code{\link{color_to_hsv}()},
+\code{\link{color_to_int}()},
+\code{\link{fade}()},
+\code{\link{get_color}()}
+}
+}

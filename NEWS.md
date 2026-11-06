@@ -1,3 +1,15 @@
+# raylibr 6.0.6
+
+* The "See also" section of each help page now lists the other topics in
+  the same section of the reference index on the website, so every topic
+  is in exactly one group. Before, functions were grouped by the words in
+  their names (such as "get functions" or "ex functions"). The rlgl
+  functions have no list.
+
+* These lists are no longer included in the PDF manual, which was too large
+  for R CMD check to build on Linux. They are still shown in HTML and text
+  help and on the website.
+
 # raylibr 6.0.5
 
 * The website moved to <https://raylibr.jeroenjanssens.com/>; DESCRIPTION

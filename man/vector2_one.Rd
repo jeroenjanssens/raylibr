@@ -17,7 +17,7 @@ vector2_one()
 
 }
 \seealso{
-Other vector2 functions: 
+\ifelse{latex}{The other topics in the raymath — Vector2 section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other raymath — Vector2:
 \code{\link{vector2_add}()},
 \code{\link{vector2_add_value}()},
 \code{\link{vector2_angle}()},
@@ -49,4 +49,4 @@ Other vector2 functions:
 \code{\link{vector2_transform}()},
 \code{\link{vector2_zero}()}
 }
-\concept{vector2 functions}
+}

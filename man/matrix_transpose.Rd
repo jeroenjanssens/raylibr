@@ -20,8 +20,7 @@ matrix_transpose(diag(4))
 
 }
 \seealso{
-Other matrix functions: 
-\code{\link{get_camera_matrix}()},
+\ifelse{latex}{The other topics in the raymath — Matrix section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other raymath — Matrix:
 \code{\link{matrix_add}()},
 \code{\link{matrix_compose}()},
 \code{\link{matrix_decompose}()},
@@ -43,7 +42,6 @@ Other matrix functions:
 \code{\link{matrix_scale}()},
 \code{\link{matrix_subtract}()},
 \code{\link{matrix_trace}()},
-\code{\link{matrix_translate}()},
-\code{\link{set_shader_value_matrix}()}
+\code{\link{matrix_translate}()}
 }
-\concept{matrix functions}
+}

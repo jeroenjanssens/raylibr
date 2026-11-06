@@ -27,8 +27,38 @@ load_model_from_mesh(gen_mesh_cube(1.0, 1.0, 1.0))
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other mesh functions: 
+\ifelse{latex}{The other topics in the 3D models & meshes section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other 3D models & meshes:
+\code{\link{draw_billboard}()},
+\code{\link{draw_billboard_pro}()},
+\code{\link{draw_billboard_rec}()},
+\code{\link{draw_bounding_box}()},
+\code{\link{draw_capsule}()},
+\code{\link{draw_capsule_wires}()},
+\code{\link{draw_circle_3d}()},
+\code{\link{draw_cube}()},
+\code{\link{draw_cube_v}()},
+\code{\link{draw_cube_wires}()},
+\code{\link{draw_cube_wires_v}()},
+\code{\link{draw_cylinder}()},
+\code{\link{draw_cylinder_ex}()},
+\code{\link{draw_cylinder_wires}()},
+\code{\link{draw_cylinder_wires_ex}()},
+\code{\link{draw_grid}()},
+\code{\link{draw_line_3d}()},
 \code{\link{draw_mesh}()},
+\code{\link{draw_mesh_instanced}()},
+\code{\link{draw_model}()},
+\code{\link{draw_model_ex}()},
+\code{\link{draw_model_wires}()},
+\code{\link{draw_model_wires_ex}()},
+\code{\link{draw_plane}()},
+\code{\link{draw_point_3d}()},
+\code{\link{draw_ray}()},
+\code{\link{draw_sphere}()},
+\code{\link{draw_sphere_ex}()},
+\code{\link{draw_sphere_wires}()},
+\code{\link{draw_triangle_3d}()},
+\code{\link{draw_triangle_strip_3d}()},
 \code{\link{export_mesh}()},
 \code{\link{export_mesh_as_code}()},
 \code{\link{gen_mesh_cone}()},
@@ -44,48 +74,20 @@ Other mesh functions:
 \code{\link{gen_mesh_tangents}()},
 \code{\link{gen_mesh_torus}()},
 \code{\link{get_mesh_bounding_box}()},
-\code{\link{get_ray_collision_mesh}()},
-\code{\link{unload_mesh}()},
-\code{\link{upload_mesh}()}
-
-Other model functions: 
-\code{\link{draw_model}()},
-\code{\link{draw_model_ex}()},
-\code{\link{draw_model_wires}()},
-\code{\link{draw_model_wires_ex}()},
 \code{\link{get_model_bounding_box}()},
+\code{\link{is_material_valid}()},
 \code{\link{is_model_animation_valid}()},
 \code{\link{is_model_valid}()},
-\code{\link{load_model}()},
-\code{\link{set_model_mesh_material}()},
-\code{\link{set_model_texture}()},
-\code{\link{unload_model}()},
-\code{\link{update_model_animation}()},
-\code{\link{update_model_animation_ex}()}
-
-Other load functions: 
-\code{\link{load_audio_stream}()},
-\code{\link{load_file_text}()},
-\code{\link{load_font}()},
-\code{\link{load_font_from_image}()},
-\code{\link{load_image}()},
-\code{\link{load_image_from_screen}()},
-\code{\link{load_image_from_texture}()},
-\code{\link{load_image_raw}()},
 \code{\link{load_material_default}()},
 \code{\link{load_model}()},
-\code{\link{load_music_stream}()},
-\code{\link{load_render_texture}()},
-\code{\link{load_shader}()},
-\code{\link{load_shader_from_memory}()},
-\code{\link{load_sound}()},
-\code{\link{load_sound_alias}()},
-\code{\link{load_sound_from_wave}()},
-\code{\link{load_texture}()},
-\code{\link{load_texture_from_image}()},
-\code{\link{load_vr_stereo_config}()},
-\code{\link{load_wave}()}
+\code{\link{set_material_texture}()},
+\code{\link{set_model_mesh_material}()},
+\code{\link{set_model_texture}()},
+\code{\link{unload_material}()},
+\code{\link{unload_mesh}()},
+\code{\link{unload_model}()},
+\code{\link{update_model_animation}()},
+\code{\link{update_model_animation_ex}()},
+\code{\link{upload_mesh}()}
 }
-\concept{load functions}
-\concept{mesh functions}
-\concept{model functions}
+}

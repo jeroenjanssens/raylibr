@@ -31,29 +31,32 @@ file_text_replace("file.png", "text", "text")
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other replace functions: 
-\code{\link{text_replace}()},
-\code{\link{text_replace_alloc}()},
-\code{\link{text_replace_between}()},
-\code{\link{text_replace_between_alloc}()}
-
-Other text functions: 
-\code{\link{draw_text}()},
-\code{\link{draw_text_codepoint}()},
-\code{\link{draw_text_ex}()},
-\code{\link{draw_text_pro}()},
+\ifelse{latex}{The other topics in the File system section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other File system:
+\code{\link{change_directory}()},
+\code{\link{directory_exists}()},
+\code{\link{file_copy}()},
+\code{\link{file_exists}()},
+\code{\link{file_move}()},
+\code{\link{file_remove}()},
+\code{\link{file_rename}()},
 \code{\link{file_text_find_index}()},
-\code{\link{gen_image_text}()},
-\code{\link{get_clipboard_text}()},
-\code{\link{get_text_between}()},
-\code{\link{image_text}()},
-\code{\link{image_text_ex}()},
+\code{\link{get_application_directory}()},
+\code{\link{get_directory_file_count}()},
+\code{\link{get_directory_file_count_ex}()},
+\code{\link{get_directory_path}()},
+\code{\link{get_file_extension}()},
+\code{\link{get_file_length}()},
+\code{\link{get_file_mod_time}()},
+\code{\link{get_file_name}()},
+\code{\link{get_file_name_without_ext}()},
+\code{\link{get_prev_directory_path}()},
+\code{\link{get_working_directory}()},
+\code{\link{is_file_dropped}()},
+\code{\link{is_file_extension}()},
+\code{\link{is_file_name_valid}()},
+\code{\link{is_path_file}()},
 \code{\link{load_file_text}()},
-\code{\link{measure_text}()},
-\code{\link{measure_text_ex}()},
-\code{\link{save_file_text}()},
-\code{\link{set_clipboard_text}()},
-\code{\link{set_text_line_spacing}()}
+\code{\link{make_directory}()},
+\code{\link{save_file_text}()}
 }
-\concept{replace functions}
-\concept{text functions}
+}

@@ -34,7 +34,7 @@ jobs:
         run: |
           # roxygen2 must match RoxygenNote in DESCRIPTION; newer versions
           # rewrite every Rd file and would fail the drift check below
-          install.packages(c("jsonlite", "Rcpp", "remotes"))
+          install.packages(c("jsonlite", "Rcpp", "remotes", "yaml"))
           remotes::install_version("roxygen2", "7.3.3", upgrade = "never")
         shell: Rscript {0}
 

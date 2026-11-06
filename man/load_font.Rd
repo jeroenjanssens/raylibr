@@ -27,36 +27,42 @@ load_font("file.png")
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other font functions: 
+\ifelse{latex}{The other topics in the Text & fonts section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Text & fonts:
+\code{\link{draw_text}()},
+\code{\link{draw_text_codepoint}()},
+\code{\link{draw_text_ex}()},
+\code{\link{draw_text_pro}()},
 \code{\link{export_font_as_code}()},
+\code{\link{get_codepoint_count}()},
 \code{\link{get_font_default}()},
+\code{\link{get_glyph_atlas_rec}()},
+\code{\link{get_glyph_index}()},
+\code{\link{get_glyph_info}()},
+\code{\link{get_text_between}()},
 \code{\link{is_font_valid}()},
 \code{\link{load_font_ex}()},
 \code{\link{load_font_from_image}()},
+\code{\link{measure_text}()},
+\code{\link{measure_text_ex}()},
+\code{\link{set_text_line_spacing}()},
+\code{\link{text_find_index}()},
+\code{\link{text_insert}()},
+\code{\link{text_insert_alloc}()},
+\code{\link{text_is_equal}()},
+\code{\link{text_length}()},
+\code{\link{text_remove_spaces}()},
+\code{\link{text_replace}()},
+\code{\link{text_replace_alloc}()},
+\code{\link{text_replace_between}()},
+\code{\link{text_replace_between_alloc}()},
+\code{\link{text_subtext}()},
+\code{\link{text_to_camel}()},
+\code{\link{text_to_float}()},
+\code{\link{text_to_integer}()},
+\code{\link{text_to_lower}()},
+\code{\link{text_to_pascal}()},
+\code{\link{text_to_snake}()},
+\code{\link{text_to_upper}()},
 \code{\link{unload_font}()}
-
-Other load functions: 
-\code{\link{load_audio_stream}()},
-\code{\link{load_file_text}()},
-\code{\link{load_font_from_image}()},
-\code{\link{load_image}()},
-\code{\link{load_image_from_screen}()},
-\code{\link{load_image_from_texture}()},
-\code{\link{load_image_raw}()},
-\code{\link{load_material_default}()},
-\code{\link{load_model}()},
-\code{\link{load_model_from_mesh}()},
-\code{\link{load_music_stream}()},
-\code{\link{load_render_texture}()},
-\code{\link{load_shader}()},
-\code{\link{load_shader_from_memory}()},
-\code{\link{load_sound}()},
-\code{\link{load_sound_alias}()},
-\code{\link{load_sound_from_wave}()},
-\code{\link{load_texture}()},
-\code{\link{load_texture_from_image}()},
-\code{\link{load_vr_stereo_config}()},
-\code{\link{load_wave}()}
 }
-\concept{font functions}
-\concept{load functions}
+}

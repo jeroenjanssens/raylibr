@@ -9,6 +9,8 @@
 #' @examples
 #' is_glyph_info("not a glyph_info")
 #'
+#' @eval .family_seealso("is_glyph_info")
+#'
 #' @export
 is_glyph_info <- function(x) {
   inherits(x, "glyph_info")
@@ -41,7 +43,7 @@ is_glyph_info <- function(x) {
 #'
 #' @rdname glyph_info
 #'
-#' @family glyph_info functions
+#' @eval .family_seealso("glyph_info")
 #'
 #' @examples
 #' gly <- glyph_info(0L, 0L, 0L, 0L, gen_image_color(200, 200, "blue"))

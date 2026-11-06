@@ -7,6 +7,8 @@
 #' @examples
 #' is_material("not a material")
 #'
+#' @eval .family_seealso("is_material")
+#'
 #' @export
 is_material <- function(x) {
   inherits(x, "material")

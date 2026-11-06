@@ -42,26 +42,17 @@ tex$width
 
 }
 \seealso{
-Other texture functions: 
-\code{\link{begin_texture_mode}()},
-\code{\link{draw_texture}()},
-\code{\link{draw_texture_ex}()},
-\code{\link{draw_texture_n_patch}()},
-\code{\link{draw_texture_pro}()},
-\code{\link{draw_texture_rec}()},
-\code{\link{draw_texture_v}()},
-\code{\link{end_texture_mode}()},
-\code{\link{get_shapes_texture}()},
-\code{\link{is_texture_valid}()},
-\code{\link{load_image_from_texture}()},
-\code{\link{load_render_texture}()},
-\code{\link{load_texture}()},
-\code{\link{load_texture_from_image}()},
-\code{\link{set_shader_value_texture}()},
-\code{\link{set_shapes_texture}()},
-\code{\link{set_texture_filter}()},
-\code{\link{set_texture_wrap}()},
-\code{\link{unload_render_texture}()},
-\code{\link{unload_texture}()}
+\ifelse{latex}{The other topics in the Structs section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Structs:
+\code{\link{bounding_box}()},
+\code{\link{camera_2d}()},
+\code{\link{camera_3d}()},
+\code{\link{glyph_info}()},
+\code{\link{material_map}()},
+\code{\link{n_patch_info}()},
+\code{\link{ray}()},
+\code{\link{ray_collision}()},
+\code{\link{raylib_transform}()},
+\code{\link{rectangle}()},
+\code{\link{render_texture}()}
 }
-\concept{texture functions}
+}

@@ -7,6 +7,8 @@
 #' @examples
 #' is_mesh("not a mesh")
 #'
+#' @eval .family_seealso("is_mesh")
+#'
 #' @export
 is_mesh <- function(x) {
   inherits(x, "mesh")

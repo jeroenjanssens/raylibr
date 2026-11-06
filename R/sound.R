@@ -7,6 +7,8 @@
 #' @examples
 #' is_sound("not a sound")
 #'
+#' @eval .family_seealso("is_sound")
+#'
 #' @export
 is_sound <- function(x) {
   inherits(x, "sound")

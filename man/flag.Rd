@@ -40,4 +40,16 @@ flag$window_unfocused
 flag$interlaced_hint
 
 }
+\seealso{
+\ifelse{latex}{The other topics in the Enums & constants section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Enums & constants:
+\code{\link{camera_mode}},
+\code{\link{camera_projection}},
+\code{\link{key}},
+\code{\link{log_level}},
+\code{\link{material_map_index}},
+\code{\link{mouse_button}},
+\code{\link{mouse_cursor}},
+\code{\link{shader_uniform}}
+}
+}
 \keyword{datasets}

@@ -9,6 +9,8 @@
 #' @examples
 #' is_ray_collision("not a ray_collision")
 #'
+#' @eval .family_seealso("is_ray_collision")
+#'
 #' @export
 is_ray_collision <- function(x) {
   inherits(x, "ray_collision")
@@ -39,7 +41,7 @@ is_ray_collision <- function(x) {
 #'
 #' @rdname ray_collision
 #'
-#' @family ray_collision functions
+#' @eval .family_seealso("ray_collision")
 #'
 #' @examples
 #' ray <- ray_collision(TRUE, 1.0, c(0, 0, 0), c(0, 0, 0))

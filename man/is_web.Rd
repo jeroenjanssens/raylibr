@@ -16,3 +16,10 @@ Returns TRUE when running under Emscripten/webR, FALSE otherwise.
 is_web()
 
 }
+\seealso{
+\ifelse{latex}{The other topics in the webR / Emscripten section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other webR / Emscripten:
+\code{\link{eval_js}()},
+\code{\link{export_html}()},
+\code{\link{run_game_loop}()}
+}
+}

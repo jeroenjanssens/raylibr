@@ -21,37 +21,31 @@ end_mode_3d()
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other 3d functions: 
-\code{\link{begin_mode_3d}()},
-\code{\link{draw_circle_3d}()},
-\code{\link{draw_line_3d}()},
-\code{\link{draw_point_3d}()},
-\code{\link{draw_triangle_3d}()}
-
-Other mode functions: 
-\code{\link{begin_blend_mode}()},
+\ifelse{latex}{The other topics in the Camera section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Camera:
 \code{\link{begin_mode_2d}()},
 \code{\link{begin_mode_3d}()},
-\code{\link{begin_scissor_mode}()},
-\code{\link{begin_shader_mode}()},
-\code{\link{begin_texture_mode}()},
-\code{\link{begin_vr_stereo_mode}()},
-\code{\link{end_blend_mode}()},
+\code{\link{camera_move_forward}()},
+\code{\link{camera_move_right}()},
+\code{\link{camera_move_to_target}()},
+\code{\link{camera_move_up}()},
+\code{\link{camera_pitch}()},
+\code{\link{camera_roll}()},
+\code{\link{camera_yaw}()},
 \code{\link{end_mode_2d}()},
-\code{\link{end_scissor_mode}()},
-\code{\link{end_shader_mode}()},
-\code{\link{end_texture_mode}()},
-\code{\link{end_vr_stereo_mode}()}
-
-Other end functions: 
-\code{\link{end_blend_mode}()},
-\code{\link{end_drawing}()},
-\code{\link{end_mode_2d}()},
-\code{\link{end_scissor_mode}()},
-\code{\link{end_shader_mode}()},
-\code{\link{end_texture_mode}()},
-\code{\link{end_vr_stereo_mode}()}
+\code{\link{get_camera_forward}()},
+\code{\link{get_camera_matrix}()},
+\code{\link{get_camera_matrix_2d}()},
+\code{\link{get_camera_projection_matrix}()},
+\code{\link{get_camera_right}()},
+\code{\link{get_camera_up}()},
+\code{\link{get_camera_view_matrix}()},
+\code{\link{get_screen_to_world_2d}()},
+\code{\link{get_screen_to_world_ray}()},
+\code{\link{get_screen_to_world_ray_ex}()},
+\code{\link{get_world_to_screen}()},
+\code{\link{get_world_to_screen_2d}()},
+\code{\link{get_world_to_screen_ex}()},
+\code{\link{update_camera}()},
+\code{\link{update_camera_pro}()}
 }
-\concept{3d functions}
-\concept{end functions}
-\concept{mode functions}
+}

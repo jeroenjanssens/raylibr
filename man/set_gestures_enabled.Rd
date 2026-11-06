@@ -24,48 +24,18 @@ set_gestures_enabled(0L)
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other set functions: 
-\code{\link{set_audio_stream_buffer_size_default}()},
-\code{\link{set_audio_stream_pan}()},
-\code{\link{set_audio_stream_pitch}()},
-\code{\link{set_audio_stream_volume}()},
-\code{\link{set_automation_event_base_frame}()},
-\code{\link{set_clipboard_text}()},
-\code{\link{set_config_flags}()},
-\code{\link{set_exit_key}()},
-\code{\link{set_gamepad_mappings}()},
-\code{\link{set_gamepad_vibration}()},
-\code{\link{set_master_volume}()},
-\code{\link{set_mouse_cursor}()},
-\code{\link{set_mouse_offset}()},
-\code{\link{set_mouse_position}()},
-\code{\link{set_mouse_scale}()},
-\code{\link{set_music_pan}()},
-\code{\link{set_music_pitch}()},
-\code{\link{set_music_volume}()},
-\code{\link{set_random_seed}()},
-\code{\link{set_shader_value_matrix}()},
-\code{\link{set_shader_value_texture}()},
-\code{\link{set_shapes_texture}()},
-\code{\link{set_sound_pan}()},
-\code{\link{set_sound_pitch}()},
-\code{\link{set_sound_volume}()},
-\code{\link{set_target_fps}()},
-\code{\link{set_text_line_spacing}()},
-\code{\link{set_texture_filter}()},
-\code{\link{set_texture_wrap}()},
-\code{\link{set_trace_log_level}()},
-\code{\link{set_window_focused}()},
-\code{\link{set_window_icon}()},
-\code{\link{set_window_max_size}()},
-\code{\link{set_window_min_size}()},
-\code{\link{set_window_monitor}()},
-\code{\link{set_window_opacity}()},
-\code{\link{set_window_position}()},
-\code{\link{set_window_size}()},
-\code{\link{set_window_state}()},
-\code{\link{set_window_title}()}
+\ifelse{latex}{The other topics in the Input — Touch & gestures section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Input — Touch & gestures:
+\code{\link{get_gesture_detected}()},
+\code{\link{get_gesture_drag_angle}()},
+\code{\link{get_gesture_drag_vector}()},
+\code{\link{get_gesture_hold_duration}()},
+\code{\link{get_gesture_pinch_angle}()},
+\code{\link{get_gesture_pinch_vector}()},
+\code{\link{get_touch_point_count}()},
+\code{\link{get_touch_point_id}()},
+\code{\link{get_touch_position}()},
+\code{\link{get_touch_x}()},
+\code{\link{get_touch_y}()},
+\code{\link{is_gesture_detected}()}
 }
-\concept{enabled functions}
-\concept{gestures functions}
-\concept{set functions}
+}

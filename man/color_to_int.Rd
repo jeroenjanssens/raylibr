@@ -26,15 +26,21 @@ color_to_int("red")
 
 }
 \seealso{
-Other to functions: 
+\ifelse{latex}{The other topics in the Colors section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Colors:
+\code{\link{as_color}()},
+\code{\link{color}()},
+\code{\link{color_alpha}()},
+\code{\link{color_alpha_blend}()},
+\code{\link{color_brightness}()},
+\code{\link{color_contrast}()},
+\code{\link{color_from_hsv}()},
+\code{\link{color_from_normalized}()},
+\code{\link{color_is_equal}()},
+\code{\link{color_lerp}()},
+\code{\link{color_normalize}()},
+\code{\link{color_tint}()},
 \code{\link{color_to_hsv}()},
-\code{\link{text_to_camel}()},
-\code{\link{text_to_float}()},
-\code{\link{text_to_integer}()},
-\code{\link{text_to_lower}()},
-\code{\link{text_to_pascal}()},
-\code{\link{text_to_snake}()},
-\code{\link{text_to_upper}()}
+\code{\link{fade}()},
+\code{\link{get_color}()}
 }
-\concept{int functions}
-\concept{to functions}
+}

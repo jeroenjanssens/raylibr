@@ -9,6 +9,8 @@
 #' @examples
 #' is_render_texture("not a render_texture")
 #'
+#' @eval .family_seealso("is_render_texture")
+#'
 #' @export
 is_render_texture <- function(x) {
   inherits(x, "render_texture")
@@ -37,7 +39,7 @@ is_render_texture <- function(x) {
 #'
 #' @rdname render_texture
 #'
-#' @family render_texture functions
+#' @eval .family_seealso("render_texture")
 #'
 #' @examples
 #' ren <- render_texture(0L, texture(0L, 64L, 64L, 1L, 7L), texture(0L, 64L, 64L, 1L, 7L))

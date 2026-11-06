@@ -24,48 +24,20 @@ set_trace_log_level(0L)
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other set functions: 
-\code{\link{set_audio_stream_buffer_size_default}()},
-\code{\link{set_audio_stream_pan}()},
-\code{\link{set_audio_stream_pitch}()},
-\code{\link{set_audio_stream_volume}()},
-\code{\link{set_automation_event_base_frame}()},
+\ifelse{latex}{The other topics in the Utility section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Utility:
+\code{\link{get_clipboard_image}()},
+\code{\link{get_clipboard_text}()},
+\code{\link{get_random_value}()},
+\code{\link{open_url}()},
+\code{\link{raylib_version}()},
+\code{\link{raylibr_resource}()},
+\code{\link{raylibr_screenshot}()},
+\code{\link{raylibr_screenshot_3d}()},
 \code{\link{set_clipboard_text}()},
 \code{\link{set_config_flags}()},
 \code{\link{set_exit_key}()},
-\code{\link{set_gamepad_mappings}()},
-\code{\link{set_gamepad_vibration}()},
-\code{\link{set_gestures_enabled}()},
-\code{\link{set_master_volume}()},
-\code{\link{set_mouse_cursor}()},
-\code{\link{set_mouse_offset}()},
-\code{\link{set_mouse_position}()},
-\code{\link{set_mouse_scale}()},
-\code{\link{set_music_pan}()},
-\code{\link{set_music_pitch}()},
-\code{\link{set_music_volume}()},
 \code{\link{set_random_seed}()},
-\code{\link{set_shader_value_matrix}()},
-\code{\link{set_shader_value_texture}()},
-\code{\link{set_shapes_texture}()},
-\code{\link{set_sound_pan}()},
-\code{\link{set_sound_pitch}()},
-\code{\link{set_sound_volume}()},
-\code{\link{set_target_fps}()},
-\code{\link{set_text_line_spacing}()},
-\code{\link{set_texture_filter}()},
-\code{\link{set_texture_wrap}()},
-\code{\link{set_window_focused}()},
-\code{\link{set_window_icon}()},
-\code{\link{set_window_max_size}()},
-\code{\link{set_window_min_size}()},
-\code{\link{set_window_monitor}()},
-\code{\link{set_window_opacity}()},
-\code{\link{set_window_position}()},
-\code{\link{set_window_size}()},
-\code{\link{set_window_state}()},
-\code{\link{set_window_title}()}
+\code{\link{take_screenshot}()},
+\code{\link{wait_time}()}
 }
-\concept{level functions}
-\concept{set functions}
-\concept{trace functions}
+}

@@ -4,7 +4,7 @@
 #'
 #' Enable gui controls (global state).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_enable")
 #'
 #' @examplesIf FALSE
 #' gui_enable()
@@ -18,7 +18,7 @@ gui_enable <- function() {
 #'
 #' Disable gui controls (global state).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_disable")
 #'
 #' @examplesIf FALSE
 #' gui_disable()
@@ -32,7 +32,7 @@ gui_disable <- function() {
 #'
 #' Lock gui controls (global state).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_lock")
 #'
 #' @examplesIf FALSE
 #' gui_lock()
@@ -46,7 +46,7 @@ gui_lock <- function() {
 #'
 #' Unlock gui controls (global state).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_unlock")
 #'
 #' @examplesIf FALSE
 #' gui_unlock()
@@ -62,7 +62,7 @@ gui_unlock <- function() {
 #'
 #' @return A logical
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_is_locked")
 #'
 #' @examples
 #' gui_is_locked()
@@ -78,7 +78,7 @@ gui_is_locked <- function() {
 #'
 #' @param alpha A number.
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_set_alpha")
 #'
 #' @examplesIf FALSE
 #' gui_set_alpha(0.0)
@@ -95,7 +95,7 @@ gui_set_alpha <- function(alpha) {
 #'
 #' @param state An integer.
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_set_state")
 #'
 #' @examplesIf FALSE
 #' gui_set_state(0L)
@@ -112,7 +112,7 @@ gui_set_state <- function(state) {
 #'
 #' @return An integer
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_get_state")
 #'
 #' @examples
 #' gui_get_state()
@@ -128,7 +128,7 @@ gui_get_state <- function() {
 #'
 #' @param font A font.
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_set_font")
 #'
 #' @examplesIf FALSE
 #' gui_set_font(get_font_default())
@@ -145,7 +145,7 @@ gui_set_font <- function(font) {
 #'
 #' @return A font
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_get_font")
 #'
 #' @examples
 #' gui_get_font()
@@ -163,7 +163,7 @@ gui_get_font <- function() {
 #' @param property An integer.
 #' @param value An integer.
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_set_style")
 #'
 #' @examples
 #' gui_set_style(0L, 0L, 0L)
@@ -185,7 +185,7 @@ gui_set_style <- function(control, property, value) {
 #'
 #' @return An integer
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_get_style")
 #'
 #' @examples
 #' gui_get_style(0L, 0L)
@@ -203,7 +203,7 @@ gui_get_style <- function(control, property) {
 #'
 #' @param file_name A string.
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_load_style")
 #'
 #' @examplesIf FALSE
 #' gui_load_style("file.png")
@@ -218,7 +218,7 @@ gui_load_style <- function(file_name) {
 #'
 #' Load style default over global style.
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_load_style_default")
 #'
 #' @examplesIf FALSE
 #' gui_load_style_default()
@@ -232,7 +232,7 @@ gui_load_style_default <- function() {
 #'
 #' Enable gui tooltips (global state).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_enable_tooltip")
 #'
 #' @examplesIf FALSE
 #' gui_enable_tooltip()
@@ -246,7 +246,7 @@ gui_enable_tooltip <- function() {
 #'
 #' Disable gui tooltips (global state).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_disable_tooltip")
 #'
 #' @examplesIf FALSE
 #' gui_disable_tooltip()
@@ -262,7 +262,7 @@ gui_disable_tooltip <- function() {
 #'
 #' @param tooltip A string.
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_set_tooltip")
 #'
 #' @examplesIf FALSE
 #' gui_set_tooltip("text")
@@ -279,7 +279,7 @@ gui_set_tooltip <- function(tooltip) {
 #'
 #' @param scale An integer.
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_set_icon_scale")
 #'
 #' @examples
 #' gui_set_icon_scale(0L)
@@ -300,7 +300,7 @@ gui_set_icon_scale <- function(scale) {
 #' @param pixel_size An integer.
 #' @param color A color.
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_draw_icon")
 #'
 #' @examplesIf FALSE
 #' gui_draw_icon(0L, 100L, 100L, 32L, "red")
@@ -323,7 +323,7 @@ gui_draw_icon <- function(icon_id, pos_x, pos_y, pixel_size, color) {
 #'
 #' @return An integer
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_get_text_width")
 #'
 #' @examplesIf FALSE
 #' gui_get_text_width("Hello")
@@ -343,7 +343,7 @@ gui_get_text_width <- function(text) {
 #'
 #' @return An integer
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_window_box")
 #'
 #' @examplesIf FALSE
 #' gui_window_box(rectangle(10, 10, 200, 100), "My Window")
@@ -364,7 +364,7 @@ gui_window_box <- function(bounds, title) {
 #'
 #' @return An integer
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_group_box")
 #'
 #' @examplesIf FALSE
 #' gui_group_box(rectangle(10, 10, 200, 100), "Hello")
@@ -385,7 +385,7 @@ gui_group_box <- function(bounds, text) {
 #'
 #' @return An integer
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_line")
 #'
 #' @examplesIf FALSE
 #' gui_line(rectangle(10, 10, 200, 100), "Hello")
@@ -406,7 +406,7 @@ gui_line <- function(bounds, text) {
 #'
 #' @return An integer
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_panel")
 #'
 #' @examplesIf FALSE
 #' gui_panel(rectangle(10, 10, 200, 100), "Hello")
@@ -427,7 +427,7 @@ gui_panel <- function(bounds, text) {
 #'
 #' @return An integer
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_label")
 #'
 #' @examplesIf FALSE
 #' gui_label(rectangle(10, 10, 200, 100), "Hello")
@@ -448,7 +448,7 @@ gui_label <- function(bounds, text) {
 #'
 #' @return An integer
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_button")
 #'
 #' @examplesIf FALSE
 #' gui_button(rectangle(10, 10, 200, 100), "Hello")
@@ -469,7 +469,7 @@ gui_button <- function(bounds, text) {
 #'
 #' @return An integer
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_label_button")
 #'
 #' @examplesIf FALSE
 #' gui_label_button(rectangle(10, 10, 200, 100), "Hello")
@@ -491,7 +491,7 @@ gui_label_button <- function(bounds, text) {
 #'
 #' @return A list with \code{result} (integer), \code{active} (logical).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_toggle")
 #'
 #' @examplesIf FALSE
 #' gui_toggle(rectangle(10, 10, 200, 100), "Hello", TRUE)
@@ -514,7 +514,7 @@ gui_toggle <- function(bounds, text, active) {
 #'
 #' @return A list with \code{result} (integer), \code{active} (integer).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_toggle_group")
 #'
 #' @examplesIf FALSE
 #' gui_toggle_group(rectangle(10, 10, 200, 100), "Hello", 0L)
@@ -537,7 +537,7 @@ gui_toggle_group <- function(bounds, text, active) {
 #'
 #' @return A list with \code{result} (integer), \code{active} (integer).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_toggle_slider")
 #'
 #' @examplesIf FALSE
 #' gui_toggle_slider(rectangle(10, 10, 200, 100), "Hello", 0L)
@@ -560,7 +560,7 @@ gui_toggle_slider <- function(bounds, text, active) {
 #'
 #' @return A list with \code{result} (integer), \code{checked} (logical).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_check_box")
 #'
 #' @examplesIf FALSE
 #' gui_check_box(rectangle(10, 10, 200, 100), "Hello", TRUE)
@@ -583,7 +583,7 @@ gui_check_box <- function(bounds, text, checked) {
 #'
 #' @return A list with \code{result} (integer), \code{active} (integer).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_combo_box")
 #'
 #' @examplesIf FALSE
 #' gui_combo_box(rectangle(10, 10, 200, 100), "Hello", 0L)
@@ -607,7 +607,7 @@ gui_combo_box <- function(bounds, text, active) {
 #'
 #' @return A list with \code{result} (integer), \code{active} (integer).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_dropdown_box")
 #'
 #' @examplesIf FALSE
 #' gui_dropdown_box(rectangle(10, 10, 200, 100), "Hello", 0L, TRUE)
@@ -634,7 +634,7 @@ gui_dropdown_box <- function(bounds, text, active, edit_mode) {
 #'
 #' @return A list with \code{result} (integer), \code{value} (integer).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_spinner")
 #'
 #' @examplesIf FALSE
 #' gui_spinner(rectangle(10, 10, 200, 100), "Hello", 0L, 0L, 0L, TRUE)
@@ -663,7 +663,7 @@ gui_spinner <- function(bounds, text, value, min_value, max_value, edit_mode) {
 #'
 #' @return A list with \code{result} (integer), \code{value} (integer).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_value_box")
 #'
 #' @examplesIf FALSE
 #' gui_value_box(rectangle(10, 10, 200, 100), "Hello", 0L, 0L, 0L, TRUE)
@@ -692,7 +692,7 @@ gui_value_box <- function(bounds, text, value, min_value, max_value, edit_mode) 
 #'
 #' @return A list with \code{result} (integer), \code{value} (number).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_slider")
 #'
 #' @examplesIf FALSE
 #' gui_slider(rectangle(10, 10, 200, 100), "Hello", "Hello", 0.0, 0.0, 0.0)
@@ -721,7 +721,7 @@ gui_slider <- function(bounds, text_left, text_right, value, min_value, max_valu
 #'
 #' @return A list with \code{result} (integer), \code{value} (number).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_slider_bar")
 #'
 #' @examplesIf FALSE
 #' gui_slider_bar(rectangle(10, 10, 200, 100), "Hello", "Hello", 0.0, 0.0, 0.0)
@@ -750,7 +750,7 @@ gui_slider_bar <- function(bounds, text_left, text_right, value, min_value, max_
 #'
 #' @return A list with \code{result} (integer), \code{value} (number).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_progress_bar")
 #'
 #' @examplesIf FALSE
 #' gui_progress_bar(rectangle(10, 10, 200, 100), "Hello", "Hello", 0.0, 0.0, 0.0)
@@ -775,7 +775,7 @@ gui_progress_bar <- function(bounds, text_left, text_right, value, min_value, ma
 #'
 #' @return An integer
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_status_bar")
 #'
 #' @examplesIf FALSE
 #' gui_status_bar(rectangle(10, 10, 200, 100), "Hello")
@@ -796,7 +796,7 @@ gui_status_bar <- function(bounds, text) {
 #'
 #' @return An integer
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_dummy_rec")
 #'
 #' @examplesIf FALSE
 #' gui_dummy_rec(rectangle(10, 10, 200, 100), "Hello")
@@ -820,7 +820,7 @@ gui_dummy_rec <- function(bounds, text) {
 #'
 #' @return A list with \code{result} (integer), \code{mouse_cell} (numeric vector of length 2).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_grid")
 #'
 #' @examplesIf FALSE
 #' gui_grid(rectangle(10, 10, 200, 100), "Hello", 1.0, 0L, c(100, 100))
@@ -846,7 +846,7 @@ gui_grid <- function(bounds, text, spacing, subdivs, mouse_cell) {
 #'
 #' @return A list with \code{result} (integer), \code{scroll_index} (integer), \code{active} (integer).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_list_view")
 #'
 #' @examplesIf FALSE
 #' gui_list_view(rectangle(10, 10, 200, 100), "Hello", 0L, 0L)
@@ -871,7 +871,7 @@ gui_list_view <- function(bounds, text, scroll_index, active) {
 #'
 #' @return A list with \code{result} (integer), \code{hscroll} (integer), \code{active} (integer).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_tab_bar")
 #'
 #' @examplesIf FALSE
 #' gui_tab_bar(rectangle(10, 10, 200, 100), "Hello", 0L, 0L)
@@ -897,7 +897,7 @@ gui_tab_bar <- function(bounds, text, hscroll, active) {
 #'
 #' @return A list with \code{result} (integer), \code{btn_active} (integer).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_message_box")
 #'
 #' @examplesIf FALSE
 #' gui_message_box(rectangle(10, 10, 200, 100), "My Window", "Hello", "Hello", 0L)
@@ -922,7 +922,7 @@ gui_message_box <- function(bounds, title, message, btn_text, btn_active) {
 #'
 #' @return A list with \code{result} (integer), \code{color} (color).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_color_picker")
 #'
 #' @examplesIf FALSE
 #' gui_color_picker(rectangle(10, 10, 200, 100), "Hello", "red")
@@ -945,7 +945,7 @@ gui_color_picker <- function(bounds, text, color) {
 #'
 #' @return A list with \code{result} (integer), \code{color} (color).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_color_panel")
 #'
 #' @examplesIf FALSE
 #' gui_color_panel(rectangle(10, 10, 200, 100), "Hello", "red")
@@ -968,7 +968,7 @@ gui_color_panel <- function(bounds, text, color) {
 #'
 #' @return A list with \code{result} (integer), \code{alpha} (number).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_color_bar_alpha")
 #'
 #' @examplesIf FALSE
 #' gui_color_bar_alpha(rectangle(10, 10, 200, 100), "Hello", 0.0)
@@ -991,7 +991,7 @@ gui_color_bar_alpha <- function(bounds, text, alpha) {
 #'
 #' @return A list with \code{result} (integer), \code{value} (number).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_color_bar_hue")
 #'
 #' @examplesIf FALSE
 #' gui_color_bar_hue(rectangle(10, 10, 200, 100), "Hello", 0.0)
@@ -1014,7 +1014,7 @@ gui_color_bar_hue <- function(bounds, text, value) {
 #'
 #' @return A list with \code{result} (integer), \code{color_hsv} (numeric vector of length 3).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_color_picker_hsv")
 #'
 #' @examplesIf FALSE
 #' gui_color_picker_hsv(rectangle(10, 10, 200, 100), "Hello", c(0, 0, 0))
@@ -1037,7 +1037,7 @@ gui_color_picker_hsv <- function(bounds, text, color_hsv) {
 #'
 #' @return A list with \code{result} (integer), \code{color_hsv} (numeric vector of length 3).
 #'
-#' @family gui functions
+#' @eval .family_seealso("gui_color_panel_hsv")
 #'
 #' @examplesIf FALSE
 #' gui_color_panel_hsv(rectangle(10, 10, 200, 100), "Hello", c(0, 0, 0))

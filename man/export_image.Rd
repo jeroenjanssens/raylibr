@@ -29,7 +29,13 @@ export_image(gen_image_color(200, 200, "blue"), "file.png")
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other image functions: 
+\ifelse{latex}{The other topics in the Textures & images section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Textures & images:
+\code{\link{draw_texture}()},
+\code{\link{draw_texture_ex}()},
+\code{\link{draw_texture_n_patch}()},
+\code{\link{draw_texture_pro}()},
+\code{\link{draw_texture_rec}()},
+\code{\link{draw_texture_v}()},
 \code{\link{export_image_as_code}()},
 \code{\link{gen_image_cellular}()},
 \code{\link{gen_image_checked}()},
@@ -40,28 +46,30 @@ Other image functions:
 \code{\link{gen_image_perlin_noise}()},
 \code{\link{gen_image_text}()},
 \code{\link{gen_image_white_noise}()},
-\code{\link{get_clipboard_image}()},
 \code{\link{get_image_alpha_border}()},
 \code{\link{get_image_color}()},
+\code{\link{get_pixel_data_size}()},
+\code{\link{image_copy}()},
 \code{\link{image_draw_line_ex}()},
 \code{\link{image_draw_triangle}()},
+\code{\link{image_from_channel}()},
 \code{\link{image_from_image}()},
+\code{\link{image_text}()},
+\code{\link{image_text_ex}()},
 \code{\link{is_image_valid}()},
-\code{\link{load_font_from_image}()},
+\code{\link{is_render_texture_valid}()},
+\code{\link{is_texture_valid}()},
 \code{\link{load_image}()},
 \code{\link{load_image_from_screen}()},
 \code{\link{load_image_from_texture}()},
 \code{\link{load_image_raw}()},
+\code{\link{load_render_texture}()},
+\code{\link{load_texture}()},
 \code{\link{load_texture_from_image}()},
-\code{\link{unload_image}()}
-
-Other export functions: 
-\code{\link{export_font_as_code}()},
-\code{\link{export_image_as_code}()},
-\code{\link{export_mesh}()},
-\code{\link{export_mesh_as_code}()},
-\code{\link{export_wave}()},
-\code{\link{export_wave_as_code}()}
+\code{\link{set_texture_filter}()},
+\code{\link{set_texture_wrap}()},
+\code{\link{unload_image}()},
+\code{\link{unload_render_texture}()},
+\code{\link{unload_texture}()}
 }
-\concept{export functions}
-\concept{image functions}
+}

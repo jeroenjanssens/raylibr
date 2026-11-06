@@ -39,19 +39,17 @@ rec$y
 
 }
 \seealso{
-Other rectangle functions: 
-\code{\link{draw_rectangle}()},
-\code{\link{draw_rectangle_gradient_ex}()},
-\code{\link{draw_rectangle_gradient_h}()},
-\code{\link{draw_rectangle_gradient_v}()},
-\code{\link{draw_rectangle_lines}()},
-\code{\link{draw_rectangle_lines_ex}()},
-\code{\link{draw_rectangle_pro}()},
-\code{\link{draw_rectangle_rec}()},
-\code{\link{draw_rectangle_rounded}()},
-\code{\link{draw_rectangle_rounded_lines}()},
-\code{\link{draw_rectangle_rounded_lines_ex}()},
-\code{\link{draw_rectangle_v}()},
-\code{\link{get_shapes_texture_rectangle}()}
+\ifelse{latex}{The other topics in the Structs section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Structs:
+\code{\link{bounding_box}()},
+\code{\link{camera_2d}()},
+\code{\link{camera_3d}()},
+\code{\link{glyph_info}()},
+\code{\link{material_map}()},
+\code{\link{n_patch_info}()},
+\code{\link{ray}()},
+\code{\link{ray_collision}()},
+\code{\link{raylib_transform}()},
+\code{\link{render_texture}()},
+\code{\link{texture}()}
 }
-\concept{rectangle functions}
+}

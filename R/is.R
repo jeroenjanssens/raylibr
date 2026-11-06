@@ -24,6 +24,8 @@ is_unsigned_int <- function(x) {
 #' is_vector_2(c(100, 200))
 #' is_vector_2(42)
 #'
+#' @eval .family_seealso("is_vector_2")
+#'
 #' @export
 is_vector_2 <- function(x) {
   is.numeric(x) && length(x) == 2
@@ -38,6 +40,8 @@ is_vector_2 <- function(x) {
 #' @examples
 #' is_vector_3(c(1, 2, 3))
 #' is_vector_3(c(1, 2))
+#'
+#' @eval .family_seealso("is_vector_3")
 #'
 #' @export
 is_vector_3 <- function(x) {
@@ -54,6 +58,8 @@ is_vector_3 <- function(x) {
 #' is_vector_4(c(0, 0, 0, 1))
 #' is_vector_4(c(1, 2, 3))
 #'
+#' @eval .family_seealso("is_vector_4")
+#'
 #' @export
 is_vector_4 <- function(x) {
   is.numeric(x) && length(x) == 4
@@ -68,6 +74,8 @@ is_vector_4 <- function(x) {
 #' @examples
 #' is_raylib_matrix(diag(4))
 #' is_raylib_matrix(matrix(1:9, 3, 3))
+#'
+#' @eval .family_seealso("is_raylib_matrix")
 #'
 #' @export
 is_raylib_matrix <- function(x) {

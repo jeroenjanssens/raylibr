@@ -7,6 +7,8 @@
 #' @examples
 #' is_image("not a image")
 #'
+#' @eval .family_seealso("is_image")
+#'
 #' @export
 is_image <- function(x) {
   inherits(x, "image")

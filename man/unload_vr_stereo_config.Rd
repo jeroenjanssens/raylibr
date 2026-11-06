@@ -24,30 +24,15 @@ unload_vr_stereo_config(config)
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other config functions: 
-\code{\link{load_vr_stereo_config}()},
-\code{\link{set_config_flags}()}
-
-Other vr functions: 
+\ifelse{latex}{The other topics in the Rendering modes section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Rendering modes:
+\code{\link{begin_blend_mode}()},
+\code{\link{begin_scissor_mode}()},
+\code{\link{begin_texture_mode}()},
 \code{\link{begin_vr_stereo_mode}()},
+\code{\link{end_blend_mode}()},
+\code{\link{end_scissor_mode}()},
+\code{\link{end_texture_mode}()},
 \code{\link{end_vr_stereo_mode}()},
 \code{\link{load_vr_stereo_config}()}
-
-Other unload functions: 
-\code{\link{unload_audio_stream}()},
-\code{\link{unload_font}()},
-\code{\link{unload_image}()},
-\code{\link{unload_material}()},
-\code{\link{unload_mesh}()},
-\code{\link{unload_model}()},
-\code{\link{unload_music_stream}()},
-\code{\link{unload_render_texture}()},
-\code{\link{unload_shader}()},
-\code{\link{unload_sound}()},
-\code{\link{unload_sound_alias}()},
-\code{\link{unload_texture}()},
-\code{\link{unload_wave}()}
 }
-\concept{config functions}
-\concept{unload functions}
-\concept{vr functions}
+}

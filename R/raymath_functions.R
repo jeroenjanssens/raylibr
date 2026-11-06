@@ -8,7 +8,7 @@
 #'
 #' @return A number
 #'
-#' @family float functions
+#' @eval .family_seealso("float_clamp")
 #'
 #' @examples
 #' float_clamp(0.0, 0.0, 0.0)
@@ -29,7 +29,7 @@ float_clamp <- function(value, min, max) {
 #'
 #' @return A number
 #'
-#' @family float functions
+#' @eval .family_seealso("float_lerp")
 #'
 #' @examples
 #' float_lerp(0.0, 0.0, 0.0)
@@ -50,7 +50,7 @@ float_lerp <- function(start, end, amount) {
 #'
 #' @return A number
 #'
-#' @family float functions
+#' @eval .family_seealso("float_normalize")
 #'
 #' @examples
 #' float_normalize(0.0, 0.0, 0.0)
@@ -73,7 +73,7 @@ float_normalize <- function(value, start, end) {
 #'
 #' @return A number
 #'
-#' @family float functions
+#' @eval .family_seealso("float_remap")
 #'
 #' @examples
 #' float_remap(0.0, 0.0, 0.0, 0.0, 0.0)
@@ -96,7 +96,7 @@ float_remap <- function(value, input_start, input_end, output_start, output_end)
 #'
 #' @return A number
 #'
-#' @family float functions
+#' @eval .family_seealso("float_wrap")
 #'
 #' @examples
 #' float_wrap(0.0, 0.0, 0.0)
@@ -116,7 +116,7 @@ float_wrap <- function(value, min, max) {
 #'
 #' @return An integer
 #'
-#' @family float functions
+#' @eval .family_seealso("float_equals")
 #'
 #' @examples
 #' float_equals(0.0, 0.0)
@@ -132,7 +132,7 @@ float_equals <- function(x, y) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_zero")
 #'
 #' @examples
 #' vector2_zero()
@@ -146,7 +146,7 @@ vector2_zero <- function() {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_one")
 #'
 #' @examples
 #' vector2_one()
@@ -163,7 +163,7 @@ vector2_one <- function() {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_add")
 #'
 #' @examples
 #' vector2_add(c(100, 100), c(100, 100))
@@ -182,7 +182,7 @@ vector2_add <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_add_value")
 #'
 #' @examples
 #' vector2_add_value(c(100, 100), 0.0)
@@ -201,7 +201,7 @@ vector2_add_value <- function(v, add) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_subtract")
 #'
 #' @examples
 #' vector2_subtract(c(100, 100), c(100, 100))
@@ -220,7 +220,7 @@ vector2_subtract <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_subtract_value")
 #'
 #' @examples
 #' vector2_subtract_value(c(100, 100), 0.0)
@@ -238,7 +238,7 @@ vector2_subtract_value <- function(v, sub) {
 #'
 #' @return A number
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_length")
 #'
 #' @examples
 #' vector2_length(c(100, 100))
@@ -255,7 +255,7 @@ vector2_length <- function(v) {
 #'
 #' @return A number
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_length_sqr")
 #'
 #' @examples
 #' vector2_length_sqr(c(100, 100))
@@ -273,7 +273,7 @@ vector2_length_sqr <- function(v) {
 #'
 #' @return A number
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_dot_product")
 #'
 #' @examples
 #' vector2_dot_product(c(100, 100), c(100, 100))
@@ -292,7 +292,7 @@ vector2_dot_product <- function(v1, v2) {
 #'
 #' @return A number
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_cross_product")
 #'
 #' @examples
 #' vector2_cross_product(c(100, 100), c(100, 100))
@@ -311,7 +311,7 @@ vector2_cross_product <- function(v1, v2) {
 #'
 #' @return A number
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_distance")
 #'
 #' @examples
 #' vector2_distance(c(100, 100), c(100, 100))
@@ -330,7 +330,7 @@ vector2_distance <- function(v1, v2) {
 #'
 #' @return A number
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_distance_sqr")
 #'
 #' @examples
 #' vector2_distance_sqr(c(100, 100), c(100, 100))
@@ -349,7 +349,7 @@ vector2_distance_sqr <- function(v1, v2) {
 #'
 #' @return A number
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_angle")
 #'
 #' @examples
 #' vector2_angle(c(100, 100), c(100, 100))
@@ -368,7 +368,7 @@ vector2_angle <- function(v1, v2) {
 #'
 #' @return A number
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_line_angle")
 #'
 #' @examples
 #' vector2_line_angle(c(100, 100), c(100, 100))
@@ -387,7 +387,7 @@ vector2_line_angle <- function(start, end) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_scale")
 #'
 #' @examples
 #' vector2_scale(c(100, 100), 1.0)
@@ -406,7 +406,7 @@ vector2_scale <- function(v, scale) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_multiply")
 #'
 #' @examples
 #' vector2_multiply(c(100, 100), c(100, 100))
@@ -424,7 +424,7 @@ vector2_multiply <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_negate")
 #'
 #' @examples
 #' vector2_negate(c(100, 100))
@@ -442,7 +442,7 @@ vector2_negate <- function(v) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_divide")
 #'
 #' @examples
 #' vector2_divide(c(100, 100), c(100, 100))
@@ -460,7 +460,7 @@ vector2_divide <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_normalize")
 #'
 #' @examples
 #' vector2_normalize(c(100, 100))
@@ -478,7 +478,7 @@ vector2_normalize <- function(v) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_transform")
 #'
 #' @examples
 #' vector2_transform(c(100, 100), diag(4))
@@ -498,7 +498,7 @@ vector2_transform <- function(v, mat) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_lerp")
 #'
 #' @examples
 #' vector2_lerp(c(100, 100), c(100, 100), 0.0)
@@ -518,7 +518,7 @@ vector2_lerp <- function(v1, v2, amount) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_reflect")
 #'
 #' @examples
 #' vector2_reflect(c(100, 100), c(100, 100))
@@ -537,7 +537,7 @@ vector2_reflect <- function(v, normal) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_min")
 #'
 #' @examples
 #' vector2_min(c(100, 100), c(100, 100))
@@ -556,7 +556,7 @@ vector2_min <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_max")
 #'
 #' @examples
 #' vector2_max(c(100, 100), c(100, 100))
@@ -575,7 +575,7 @@ vector2_max <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_rotate")
 #'
 #' @examples
 #' vector2_rotate(c(100, 100), 0.0)
@@ -595,7 +595,7 @@ vector2_rotate <- function(v, angle) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_move_towards")
 #'
 #' @examples
 #' vector2_move_towards(c(100, 100), c(100, 100), 0.0)
@@ -614,7 +614,7 @@ vector2_move_towards <- function(v, target, max_distance) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_invert")
 #'
 #' @examples
 #' vector2_invert(c(100, 100))
@@ -633,7 +633,7 @@ vector2_invert <- function(v) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_clamp")
 #'
 #' @examples
 #' vector2_clamp(c(100, 100), c(100, 100), c(100, 100))
@@ -654,7 +654,7 @@ vector2_clamp <- function(v, min, max) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_clamp_value")
 #'
 #' @examples
 #' vector2_clamp_value(c(100, 100), 0.0, 0.0)
@@ -674,7 +674,7 @@ vector2_clamp_value <- function(v, min, max) {
 #'
 #' @return An integer
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_equals")
 #'
 #' @examples
 #' vector2_equals(c(100, 100), c(100, 100))
@@ -694,7 +694,7 @@ vector2_equals <- function(p, q) {
 #'
 #' @return A numeric vector of length 2
 #'
-#' @family vector2 functions
+#' @eval .family_seealso("vector2_refract")
 #'
 #' @examples
 #' vector2_refract(c(100, 100), c(100, 100), 0.0)
@@ -711,7 +711,7 @@ vector2_refract <- function(v, n, r) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_zero")
 #'
 #' @examples
 #' vector3_zero()
@@ -725,7 +725,7 @@ vector3_zero <- function() {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_one")
 #'
 #' @examples
 #' vector3_one()
@@ -742,7 +742,7 @@ vector3_one <- function() {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_add")
 #'
 #' @examples
 #' vector3_add(c(0, 0, 0), c(0, 0, 0))
@@ -761,7 +761,7 @@ vector3_add <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_add_value")
 #'
 #' @examples
 #' vector3_add_value(c(0, 0, 0), 0.0)
@@ -780,7 +780,7 @@ vector3_add_value <- function(v, add) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_subtract")
 #'
 #' @examples
 #' vector3_subtract(c(0, 0, 0), c(0, 0, 0))
@@ -799,7 +799,7 @@ vector3_subtract <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_subtract_value")
 #'
 #' @examples
 #' vector3_subtract_value(c(0, 0, 0), 0.0)
@@ -818,7 +818,7 @@ vector3_subtract_value <- function(v, sub) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_scale")
 #'
 #' @examples
 #' vector3_scale(c(0, 0, 0), 0.0)
@@ -837,7 +837,7 @@ vector3_scale <- function(v, scalar) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_multiply")
 #'
 #' @examples
 #' vector3_multiply(c(0, 0, 0), c(0, 0, 0))
@@ -856,7 +856,7 @@ vector3_multiply <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_cross_product")
 #'
 #' @examples
 #' vector3_cross_product(c(0, 0, 0), c(0, 0, 0))
@@ -874,7 +874,7 @@ vector3_cross_product <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_perpendicular")
 #'
 #' @examples
 #' vector3_perpendicular(c(0, 0, 0))
@@ -891,7 +891,7 @@ vector3_perpendicular <- function(v) {
 #'
 #' @return A number
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_length")
 #'
 #' @examples
 #' vector3_length(c(0, 0, 0))
@@ -908,7 +908,7 @@ vector3_length <- function(v) {
 #'
 #' @return A number
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_length_sqr")
 #'
 #' @examples
 #' vector3_length_sqr(c(0, 0, 0))
@@ -926,7 +926,7 @@ vector3_length_sqr <- function(v) {
 #'
 #' @return A number
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_dot_product")
 #'
 #' @examples
 #' vector3_dot_product(c(0, 0, 0), c(0, 0, 0))
@@ -945,7 +945,7 @@ vector3_dot_product <- function(v1, v2) {
 #'
 #' @return A number
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_distance")
 #'
 #' @examples
 #' vector3_distance(c(0, 0, 0), c(0, 0, 0))
@@ -964,7 +964,7 @@ vector3_distance <- function(v1, v2) {
 #'
 #' @return A number
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_distance_sqr")
 #'
 #' @examples
 #' vector3_distance_sqr(c(0, 0, 0), c(0, 0, 0))
@@ -983,7 +983,7 @@ vector3_distance_sqr <- function(v1, v2) {
 #'
 #' @return A number
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_angle")
 #'
 #' @examples
 #' vector3_angle(c(0, 0, 0), c(0, 0, 0))
@@ -1001,7 +1001,7 @@ vector3_angle <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_negate")
 #'
 #' @examples
 #' vector3_negate(c(0, 0, 0))
@@ -1019,7 +1019,7 @@ vector3_negate <- function(v) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_divide")
 #'
 #' @examples
 #' vector3_divide(c(0, 0, 0), c(0, 0, 0))
@@ -1037,7 +1037,7 @@ vector3_divide <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_normalize")
 #'
 #' @examples
 #' vector3_normalize(c(0, 0, 0))
@@ -1055,7 +1055,7 @@ vector3_normalize <- function(v) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_project")
 #'
 #' @examples
 #' vector3_project(c(0, 0, 0), c(0, 0, 0))
@@ -1074,7 +1074,7 @@ vector3_project <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_reject")
 #'
 #' @examples
 #' vector3_reject(c(0, 0, 0), c(0, 0, 0))
@@ -1093,7 +1093,7 @@ vector3_reject <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_transform")
 #'
 #' @examples
 #' vector3_transform(c(0, 0, 0), diag(4))
@@ -1112,7 +1112,7 @@ vector3_transform <- function(v, mat) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_rotate_by_quaternion")
 #'
 #' @examples
 #' vector3_rotate_by_quaternion(c(0, 0, 0), c(0, 0, 0, 1))
@@ -1132,7 +1132,7 @@ vector3_rotate_by_quaternion <- function(v, q) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_rotate_by_axis_angle")
 #'
 #' @examples
 #' vector3_rotate_by_axis_angle(c(0, 0, 0), c(0, 0, 0), 0.0)
@@ -1153,7 +1153,7 @@ vector3_rotate_by_axis_angle <- function(v, axis, angle) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_move_towards")
 #'
 #' @examples
 #' vector3_move_towards(c(0, 0, 0), c(0, 0, 0), 0.0)
@@ -1174,7 +1174,7 @@ vector3_move_towards <- function(v, target, max_distance) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_lerp")
 #'
 #' @examples
 #' vector3_lerp(c(0, 0, 0), c(0, 0, 0), 0.0)
@@ -1197,7 +1197,7 @@ vector3_lerp <- function(v1, v2, amount) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_cubic_hermite")
 #'
 #' @examples
 #' vector3_cubic_hermite(c(0, 0, 0), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0), 0.0)
@@ -1219,7 +1219,7 @@ vector3_cubic_hermite <- function(v1, tangent1, v2, tangent2, amount) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_reflect")
 #'
 #' @examples
 #' vector3_reflect(c(0, 0, 0), c(0, 0, 0))
@@ -1238,7 +1238,7 @@ vector3_reflect <- function(v, normal) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_min")
 #'
 #' @examples
 #' vector3_min(c(0, 0, 0), c(0, 0, 0))
@@ -1257,7 +1257,7 @@ vector3_min <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_max")
 #'
 #' @examples
 #' vector3_max(c(0, 0, 0), c(0, 0, 0))
@@ -1278,7 +1278,7 @@ vector3_max <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_barycenter")
 #'
 #' @examples
 #' vector3_barycenter(c(0, 0, 0), c(0, 0, 0), c(0, 0, 0), c(0, 0, 0))
@@ -1300,7 +1300,7 @@ vector3_barycenter <- function(p, a, b, c) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_unproject")
 #'
 #' @examples
 #' vector3_unproject(c(0, 0, 0), diag(4), diag(4))
@@ -1319,7 +1319,7 @@ vector3_unproject <- function(source, projection, view) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_invert")
 #'
 #' @examples
 #' vector3_invert(c(0, 0, 0))
@@ -1338,7 +1338,7 @@ vector3_invert <- function(v) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_clamp")
 #'
 #' @examples
 #' vector3_clamp(c(0, 0, 0), c(0, 0, 0), c(0, 0, 0))
@@ -1359,7 +1359,7 @@ vector3_clamp <- function(v, min, max) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_clamp_value")
 #'
 #' @examples
 #' vector3_clamp_value(c(0, 0, 0), 0.0, 0.0)
@@ -1379,7 +1379,7 @@ vector3_clamp_value <- function(v, min, max) {
 #'
 #' @return An integer
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_equals")
 #'
 #' @examples
 #' vector3_equals(c(0, 0, 0), c(0, 0, 0))
@@ -1399,7 +1399,7 @@ vector3_equals <- function(p, q) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family vector3 functions
+#' @eval .family_seealso("vector3_refract")
 #'
 #' @examples
 #' vector3_refract(c(0, 0, 0), c(0, 0, 0), 0.0)
@@ -1416,7 +1416,7 @@ vector3_refract <- function(v, n, r) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_zero")
 #'
 #' @examples
 #' vector4_zero()
@@ -1430,7 +1430,7 @@ vector4_zero <- function() {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_one")
 #'
 #' @examples
 #' vector4_one()
@@ -1447,7 +1447,7 @@ vector4_one <- function() {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_add")
 #'
 #' @examples
 #' vector4_add(c(0, 0, 0, 1), c(0, 0, 0, 1))
@@ -1466,7 +1466,7 @@ vector4_add <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_add_value")
 #'
 #' @examples
 #' vector4_add_value(c(0, 0, 0, 1), 0.0)
@@ -1485,7 +1485,7 @@ vector4_add_value <- function(v, add) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_subtract")
 #'
 #' @examples
 #' vector4_subtract(c(0, 0, 0, 1), c(0, 0, 0, 1))
@@ -1504,7 +1504,7 @@ vector4_subtract <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_subtract_value")
 #'
 #' @examples
 #' vector4_subtract_value(c(0, 0, 0, 1), 0.0)
@@ -1522,7 +1522,7 @@ vector4_subtract_value <- function(v, add) {
 #'
 #' @return A number
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_length")
 #'
 #' @examples
 #' vector4_length(c(0, 0, 0, 1))
@@ -1539,7 +1539,7 @@ vector4_length <- function(v) {
 #'
 #' @return A number
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_length_sqr")
 #'
 #' @examples
 #' vector4_length_sqr(c(0, 0, 0, 1))
@@ -1557,7 +1557,7 @@ vector4_length_sqr <- function(v) {
 #'
 #' @return A number
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_dot_product")
 #'
 #' @examples
 #' vector4_dot_product(c(0, 0, 0, 1), c(0, 0, 0, 1))
@@ -1576,7 +1576,7 @@ vector4_dot_product <- function(v1, v2) {
 #'
 #' @return A number
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_distance")
 #'
 #' @examples
 #' vector4_distance(c(0, 0, 0, 1), c(0, 0, 0, 1))
@@ -1595,7 +1595,7 @@ vector4_distance <- function(v1, v2) {
 #'
 #' @return A number
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_distance_sqr")
 #'
 #' @examples
 #' vector4_distance_sqr(c(0, 0, 0, 1), c(0, 0, 0, 1))
@@ -1614,7 +1614,7 @@ vector4_distance_sqr <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_scale")
 #'
 #' @examples
 #' vector4_scale(c(0, 0, 0, 1), 1.0)
@@ -1633,7 +1633,7 @@ vector4_scale <- function(v, scale) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_multiply")
 #'
 #' @examples
 #' vector4_multiply(c(0, 0, 0, 1), c(0, 0, 0, 1))
@@ -1651,7 +1651,7 @@ vector4_multiply <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_negate")
 #'
 #' @examples
 #' vector4_negate(c(0, 0, 0, 1))
@@ -1669,7 +1669,7 @@ vector4_negate <- function(v) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_divide")
 #'
 #' @examples
 #' vector4_divide(c(0, 0, 0, 1), c(0, 0, 0, 1))
@@ -1687,7 +1687,7 @@ vector4_divide <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_normalize")
 #'
 #' @examples
 #' vector4_normalize(c(0, 0, 0, 1))
@@ -1705,7 +1705,7 @@ vector4_normalize <- function(v) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_min")
 #'
 #' @examples
 #' vector4_min(c(0, 0, 0, 1), c(0, 0, 0, 1))
@@ -1724,7 +1724,7 @@ vector4_min <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_max")
 #'
 #' @examples
 #' vector4_max(c(0, 0, 0, 1), c(0, 0, 0, 1))
@@ -1744,7 +1744,7 @@ vector4_max <- function(v1, v2) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_lerp")
 #'
 #' @examples
 #' vector4_lerp(c(0, 0, 0, 1), c(0, 0, 0, 1), 0.0)
@@ -1765,7 +1765,7 @@ vector4_lerp <- function(v1, v2, amount) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_move_towards")
 #'
 #' @examples
 #' vector4_move_towards(c(0, 0, 0, 1), c(0, 0, 0, 1), 0.0)
@@ -1784,7 +1784,7 @@ vector4_move_towards <- function(v, target, max_distance) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_invert")
 #'
 #' @examples
 #' vector4_invert(c(0, 0, 0, 1))
@@ -1802,7 +1802,7 @@ vector4_invert <- function(v) {
 #'
 #' @return An integer
 #'
-#' @family vector4 functions
+#' @eval .family_seealso("vector4_equals")
 #'
 #' @examples
 #' vector4_equals(c(0, 0, 0, 1), c(0, 0, 0, 1))
@@ -1820,7 +1820,7 @@ vector4_equals <- function(p, q) {
 #'
 #' @return A number
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_determinant")
 #'
 #' @examples
 #' matrix_determinant(diag(4))
@@ -1837,7 +1837,7 @@ matrix_determinant <- function(mat) {
 #'
 #' @return A number
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_trace")
 #'
 #' @examples
 #' matrix_trace(diag(4))
@@ -1854,7 +1854,7 @@ matrix_trace <- function(mat) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_transpose")
 #'
 #' @examples
 #' matrix_transpose(diag(4))
@@ -1871,7 +1871,7 @@ matrix_transpose <- function(mat) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_invert")
 #'
 #' @examples
 #' matrix_invert(diag(4))
@@ -1886,7 +1886,7 @@ matrix_invert <- function(mat) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_identity")
 #'
 #' @examples
 #' matrix_identity()
@@ -1903,7 +1903,7 @@ matrix_identity <- function() {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_add")
 #'
 #' @examples
 #' matrix_add(diag(4), diag(4))
@@ -1922,7 +1922,7 @@ matrix_add <- function(left, right) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_subtract")
 #'
 #' @examples
 #' matrix_subtract(diag(4), diag(4))
@@ -1941,7 +1941,7 @@ matrix_subtract <- function(left, right) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_multiply")
 #'
 #' @examples
 #' matrix_multiply(diag(4), diag(4))
@@ -1960,7 +1960,7 @@ matrix_multiply <- function(left, right) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_multiply_value")
 #'
 #' @examples
 #' matrix_multiply_value(diag(4), 0.0)
@@ -1980,7 +1980,7 @@ matrix_multiply_value <- function(left, value) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_translate")
 #'
 #' @examples
 #' matrix_translate(0.0, 0.0, 0.0)
@@ -2000,7 +2000,7 @@ matrix_translate <- function(x, y, z) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_rotate")
 #'
 #' @examples
 #' matrix_rotate(c(0, 0, 0), 0.0)
@@ -2018,7 +2018,7 @@ matrix_rotate <- function(axis, angle) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_rotate_x")
 #'
 #' @examples
 #' matrix_rotate_x(0.0)
@@ -2035,7 +2035,7 @@ matrix_rotate_x <- function(angle) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_rotate_y")
 #'
 #' @examples
 #' matrix_rotate_y(0.0)
@@ -2052,7 +2052,7 @@ matrix_rotate_y <- function(angle) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_rotate_z")
 #'
 #' @examples
 #' matrix_rotate_z(0.0)
@@ -2069,7 +2069,7 @@ matrix_rotate_z <- function(angle) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_rotate_xyz")
 #'
 #' @examples
 #' matrix_rotate_xyz(c(0, 0, 0))
@@ -2086,7 +2086,7 @@ matrix_rotate_xyz <- function(angle) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_rotate_zyx")
 #'
 #' @examples
 #' matrix_rotate_zyx(c(0, 0, 0))
@@ -2105,7 +2105,7 @@ matrix_rotate_zyx <- function(angle) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_scale")
 #'
 #' @examples
 #' matrix_scale(0.0, 0.0, 0.0)
@@ -2129,7 +2129,7 @@ matrix_scale <- function(x, y, z) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_frustum")
 #'
 #' @examples
 #' matrix_frustum(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
@@ -2154,7 +2154,7 @@ matrix_frustum <- function(left, right, bottom, top, near_plane, far_plane) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_perspective")
 #'
 #' @examples
 #' matrix_perspective(70.0, 1.78, 0.0, 0.0)
@@ -2179,7 +2179,7 @@ matrix_perspective <- function(fov_y, aspect, near_plane, far_plane) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_ortho")
 #'
 #' @examples
 #' matrix_ortho(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
@@ -2203,7 +2203,7 @@ matrix_ortho <- function(left, right, bottom, top, near_plane, far_plane) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_look_at")
 #'
 #' @examples
 #' matrix_look_at(c(0, 0, 0), c(0, 0, 0), c(0, 1, 0))
@@ -2223,7 +2223,7 @@ matrix_look_at <- function(eye, target, up) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_add")
 #'
 #' @examples
 #' quaternion_add(c(0, 0, 0, 1), c(0, 0, 0, 1))
@@ -2242,7 +2242,7 @@ quaternion_add <- function(q1, q2) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_add_value")
 #'
 #' @examples
 #' quaternion_add_value(c(0, 0, 0, 1), 0.0)
@@ -2261,7 +2261,7 @@ quaternion_add_value <- function(q, add) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_subtract")
 #'
 #' @examples
 #' quaternion_subtract(c(0, 0, 0, 1), c(0, 0, 0, 1))
@@ -2280,7 +2280,7 @@ quaternion_subtract <- function(q1, q2) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_subtract_value")
 #'
 #' @examples
 #' quaternion_subtract_value(c(0, 0, 0, 1), 0.0)
@@ -2296,7 +2296,7 @@ quaternion_subtract_value <- function(q, sub) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_identity")
 #'
 #' @examples
 #' quaternion_identity()
@@ -2312,7 +2312,7 @@ quaternion_identity <- function() {
 #'
 #' @return A number
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_length")
 #'
 #' @examples
 #' quaternion_length(c(0, 0, 0, 1))
@@ -2329,7 +2329,7 @@ quaternion_length <- function(q) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_normalize")
 #'
 #' @examples
 #' quaternion_normalize(c(0, 0, 0, 1))
@@ -2346,7 +2346,7 @@ quaternion_normalize <- function(q) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_invert")
 #'
 #' @examples
 #' quaternion_invert(c(0, 0, 0, 1))
@@ -2364,7 +2364,7 @@ quaternion_invert <- function(q) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_multiply")
 #'
 #' @examples
 #' quaternion_multiply(c(0, 0, 0, 1), c(0, 0, 0, 1))
@@ -2383,7 +2383,7 @@ quaternion_multiply <- function(q1, q2) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_scale")
 #'
 #' @examples
 #' quaternion_scale(c(0, 0, 0, 1), 0.0)
@@ -2402,7 +2402,7 @@ quaternion_scale <- function(q, mul) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_divide")
 #'
 #' @examples
 #' quaternion_divide(c(0, 0, 0, 1), c(0, 0, 0, 1))
@@ -2422,7 +2422,7 @@ quaternion_divide <- function(q1, q2) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_lerp")
 #'
 #' @examples
 #' quaternion_lerp(c(0, 0, 0, 1), c(0, 0, 0, 1), 0.0)
@@ -2443,7 +2443,7 @@ quaternion_lerp <- function(q1, q2, amount) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_nlerp")
 #'
 #' @examples
 #' quaternion_nlerp(c(0, 0, 0, 1), c(0, 0, 0, 1), 0.0)
@@ -2464,7 +2464,7 @@ quaternion_nlerp <- function(q1, q2, amount) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_slerp")
 #'
 #' @examples
 #' quaternion_slerp(c(0, 0, 0, 1), c(0, 0, 0, 1), 0.0)
@@ -2487,7 +2487,7 @@ quaternion_slerp <- function(q1, q2, amount) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_cubic_hermite_spline")
 #'
 #' @examples
 #' quaternion_cubic_hermite_spline(c(0, 0, 0, 1), c(0, 0, 0, 1), c(0, 0, 0, 1), c(0, 0, 0, 1), 0.0)
@@ -2509,7 +2509,7 @@ quaternion_cubic_hermite_spline <- function(q1, out_tangent1, q2, in_tangent2, t
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_from_vector3_to_vector3")
 #'
 #' @examples
 #' quaternion_from_vector3_to_vector3(c(0, 0, 0), c(0, 0, 0))
@@ -2527,7 +2527,7 @@ quaternion_from_vector3_to_vector3 <- function(from, to) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_from_matrix")
 #'
 #' @examples
 #' quaternion_from_matrix(diag(4))
@@ -2544,7 +2544,7 @@ quaternion_from_matrix <- function(mat) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_to_matrix")
 #'
 #' @examples
 #' quaternion_to_matrix(c(0, 0, 0, 1))
@@ -2562,7 +2562,7 @@ quaternion_to_matrix <- function(q) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_from_axis_angle")
 #'
 #' @examples
 #' quaternion_from_axis_angle(c(0, 0, 0), 0.0)
@@ -2582,7 +2582,7 @@ quaternion_from_axis_angle <- function(axis, angle) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_from_euler")
 #'
 #' @examples
 #' quaternion_from_euler(1.0, 0.0, 0.0)
@@ -2601,7 +2601,7 @@ quaternion_from_euler <- function(pitch, yaw, roll) {
 #'
 #' @return A numeric vector of length 3
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_to_euler")
 #'
 #' @examples
 #' quaternion_to_euler(c(0, 0, 0, 1))
@@ -2619,7 +2619,7 @@ quaternion_to_euler <- function(q) {
 #'
 #' @return A numeric vector of length 4
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_transform")
 #'
 #' @examples
 #' quaternion_transform(c(0, 0, 0, 1), diag(4))
@@ -2638,7 +2638,7 @@ quaternion_transform <- function(q, mat) {
 #'
 #' @return An integer
 #'
-#' @family quaternion functions
+#' @eval .family_seealso("quaternion_equals")
 #'
 #' @examples
 #' quaternion_equals(c(0, 0, 0, 1), c(0, 0, 0, 1))
@@ -2658,7 +2658,7 @@ quaternion_equals <- function(p, q) {
 #'
 #' @return A 4x4 numeric matrix
 #'
-#' @family matrix functions
+#' @eval .family_seealso("matrix_compose")
 #'
 #' @examples
 #' matrix_compose(c(0, 0, 0), c(0, 0, 0, 1), c(1, 1, 1))

@@ -33,13 +33,17 @@ ray$direction
 
 }
 \seealso{
-Other ray functions: 
-\code{\link{draw_ray}()},
-\code{\link{get_ray_collision_box}()},
-\code{\link{get_ray_collision_mesh}()},
-\code{\link{get_ray_collision_quad}()},
-\code{\link{get_ray_collision_sphere}()},
-\code{\link{get_ray_collision_triangle}()},
-\code{\link{get_screen_to_world_ray}()}
+\ifelse{latex}{The other topics in the Structs section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Structs:
+\code{\link{bounding_box}()},
+\code{\link{camera_2d}()},
+\code{\link{camera_3d}()},
+\code{\link{glyph_info}()},
+\code{\link{material_map}()},
+\code{\link{n_patch_info}()},
+\code{\link{ray_collision}()},
+\code{\link{raylib_transform}()},
+\code{\link{rectangle}()},
+\code{\link{render_texture}()},
+\code{\link{texture}()}
 }
-\concept{ray functions}
+}

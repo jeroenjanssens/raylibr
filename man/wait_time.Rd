@@ -24,9 +24,20 @@ wait_time(0.0)
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other time functions: 
-\code{\link{get_file_mod_time}()},
-\code{\link{get_frame_time}()},
-\code{\link{get_time}()}
+\ifelse{latex}{The other topics in the Utility section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Utility:
+\code{\link{get_clipboard_image}()},
+\code{\link{get_clipboard_text}()},
+\code{\link{get_random_value}()},
+\code{\link{open_url}()},
+\code{\link{raylib_version}()},
+\code{\link{raylibr_resource}()},
+\code{\link{raylibr_screenshot}()},
+\code{\link{raylibr_screenshot_3d}()},
+\code{\link{set_clipboard_text}()},
+\code{\link{set_config_flags}()},
+\code{\link{set_exit_key}()},
+\code{\link{set_random_seed}()},
+\code{\link{set_trace_log_level}()},
+\code{\link{take_screenshot}()}
 }
-\concept{time functions}
+}

@@ -20,5 +20,16 @@ This function has been auto-generated from the following Raylib function definit
 poll_input_events()
 \dontshow{\}) # examplesIf}
 }
-\concept{events functions}
-\concept{input functions}
+\seealso{
+\ifelse{latex}{The other topics in the Drawing & timing section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Drawing & timing:
+\code{\link{begin_drawing}()},
+\code{\link{clear_background}()},
+\code{\link{draw_fps}()},
+\code{\link{end_drawing}()},
+\code{\link{get_fps}()},
+\code{\link{get_frame_time}()},
+\code{\link{get_time}()},
+\code{\link{set_target_fps}()},
+\code{\link{swap_screen_buffer}()}
+}
+}

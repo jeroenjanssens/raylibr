@@ -21,12 +21,8 @@ start_automation_event_recording()
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other recording functions: 
-\code{\link{stop_automation_event_recording}()}
-
-Other automation functions: 
+\ifelse{latex}{The other topics in the Automation events section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Automation events:
 \code{\link{set_automation_event_base_frame}()},
 \code{\link{stop_automation_event_recording}()}
 }
-\concept{automation functions}
-\concept{recording functions}
+}

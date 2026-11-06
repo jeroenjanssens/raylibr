@@ -24,42 +24,47 @@ unload_texture(texture(0L, 64L, 64L, 1L, 7L))
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other texture functions: 
-\code{\link{begin_texture_mode}()},
+\ifelse{latex}{The other topics in the Textures & images section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Textures & images:
 \code{\link{draw_texture}()},
 \code{\link{draw_texture_ex}()},
 \code{\link{draw_texture_n_patch}()},
 \code{\link{draw_texture_pro}()},
 \code{\link{draw_texture_rec}()},
 \code{\link{draw_texture_v}()},
-\code{\link{end_texture_mode}()},
-\code{\link{get_shapes_texture}()},
+\code{\link{export_image}()},
+\code{\link{export_image_as_code}()},
+\code{\link{gen_image_cellular}()},
+\code{\link{gen_image_checked}()},
+\code{\link{gen_image_color}()},
+\code{\link{gen_image_gradient_linear}()},
+\code{\link{gen_image_gradient_radial}()},
+\code{\link{gen_image_gradient_square}()},
+\code{\link{gen_image_perlin_noise}()},
+\code{\link{gen_image_text}()},
+\code{\link{gen_image_white_noise}()},
+\code{\link{get_image_alpha_border}()},
+\code{\link{get_image_color}()},
+\code{\link{get_pixel_data_size}()},
+\code{\link{image_copy}()},
+\code{\link{image_draw_line_ex}()},
+\code{\link{image_draw_triangle}()},
+\code{\link{image_from_channel}()},
+\code{\link{image_from_image}()},
+\code{\link{image_text}()},
+\code{\link{image_text_ex}()},
+\code{\link{is_image_valid}()},
+\code{\link{is_render_texture_valid}()},
 \code{\link{is_texture_valid}()},
+\code{\link{load_image}()},
+\code{\link{load_image_from_screen}()},
 \code{\link{load_image_from_texture}()},
+\code{\link{load_image_raw}()},
 \code{\link{load_render_texture}()},
 \code{\link{load_texture}()},
 \code{\link{load_texture_from_image}()},
-\code{\link{set_shader_value_texture}()},
-\code{\link{set_shapes_texture}()},
 \code{\link{set_texture_filter}()},
 \code{\link{set_texture_wrap}()},
-\code{\link{texture}()},
-\code{\link{unload_render_texture}()}
-
-Other unload functions: 
-\code{\link{unload_audio_stream}()},
-\code{\link{unload_font}()},
 \code{\link{unload_image}()},
-\code{\link{unload_material}()},
-\code{\link{unload_mesh}()},
-\code{\link{unload_model}()},
-\code{\link{unload_music_stream}()},
-\code{\link{unload_render_texture}()},
-\code{\link{unload_shader}()},
-\code{\link{unload_sound}()},
-\code{\link{unload_sound_alias}()},
-\code{\link{unload_vr_stereo_config}()},
-\code{\link{unload_wave}()}
+\code{\link{unload_render_texture}()}
 }
-\concept{texture functions}
-\concept{unload functions}
+}

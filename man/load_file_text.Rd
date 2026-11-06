@@ -27,59 +27,32 @@ load_file_text("file.png")
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other text functions: 
-\code{\link{draw_text}()},
-\code{\link{draw_text_codepoint}()},
-\code{\link{draw_text_ex}()},
-\code{\link{draw_text_pro}()},
+\ifelse{latex}{The other topics in the File system section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other File system:
+\code{\link{change_directory}()},
+\code{\link{directory_exists}()},
+\code{\link{file_copy}()},
+\code{\link{file_exists}()},
+\code{\link{file_move}()},
+\code{\link{file_remove}()},
+\code{\link{file_rename}()},
 \code{\link{file_text_find_index}()},
 \code{\link{file_text_replace}()},
-\code{\link{gen_image_text}()},
-\code{\link{get_clipboard_text}()},
-\code{\link{get_text_between}()},
-\code{\link{image_text}()},
-\code{\link{image_text_ex}()},
-\code{\link{measure_text}()},
-\code{\link{measure_text_ex}()},
-\code{\link{save_file_text}()},
-\code{\link{set_clipboard_text}()},
-\code{\link{set_text_line_spacing}()}
-
-Other file functions: 
+\code{\link{get_application_directory}()},
+\code{\link{get_directory_file_count}()},
+\code{\link{get_directory_file_count_ex}()},
+\code{\link{get_directory_path}()},
 \code{\link{get_file_extension}()},
 \code{\link{get_file_length}()},
 \code{\link{get_file_mod_time}()},
 \code{\link{get_file_name}()},
 \code{\link{get_file_name_without_ext}()},
+\code{\link{get_prev_directory_path}()},
+\code{\link{get_working_directory}()},
 \code{\link{is_file_dropped}()},
 \code{\link{is_file_extension}()},
 \code{\link{is_file_name_valid}()},
 \code{\link{is_path_file}()},
+\code{\link{make_directory}()},
 \code{\link{save_file_text}()}
-
-Other load functions: 
-\code{\link{load_audio_stream}()},
-\code{\link{load_font}()},
-\code{\link{load_font_from_image}()},
-\code{\link{load_image}()},
-\code{\link{load_image_from_screen}()},
-\code{\link{load_image_from_texture}()},
-\code{\link{load_image_raw}()},
-\code{\link{load_material_default}()},
-\code{\link{load_model}()},
-\code{\link{load_model_from_mesh}()},
-\code{\link{load_music_stream}()},
-\code{\link{load_render_texture}()},
-\code{\link{load_shader}()},
-\code{\link{load_shader_from_memory}()},
-\code{\link{load_sound}()},
-\code{\link{load_sound_alias}()},
-\code{\link{load_sound_from_wave}()},
-\code{\link{load_texture}()},
-\code{\link{load_texture_from_image}()},
-\code{\link{load_vr_stereo_config}()},
-\code{\link{load_wave}()}
 }
-\concept{file functions}
-\concept{load functions}
-\concept{text functions}
+}

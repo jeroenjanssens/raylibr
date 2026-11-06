@@ -7,6 +7,8 @@
 #' @examples
 #' is_font("not a font")
 #'
+#' @eval .family_seealso("is_font")
+#'
 #' @export
 is_font <- function(x) {
   inherits(x, "font")

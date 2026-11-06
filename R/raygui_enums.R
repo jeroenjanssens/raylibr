@@ -16,6 +16,8 @@
 #' gui_result$pressed
 #' gui_result$tab_close
 #'
+#' @eval .family_seealso("gui_result")
+#'
 #' @export
 gui_result <- list(
   none = 0L,
@@ -40,6 +42,8 @@ gui_result <- list(
 #' gui_state$focused
 #' gui_state$disabled
 #'
+#' @eval .family_seealso("gui_state")
+#'
 #' @export
 gui_state <- list(
   normal = 0L,
@@ -63,6 +67,8 @@ gui_state <- list(
 #' gui_text_alignment$center
 #' gui_text_alignment$right
 #'
+#' @eval .family_seealso("gui_text_alignment")
+#'
 #' @export
 gui_text_alignment <- list(
   left = 0L,
@@ -85,6 +91,8 @@ gui_text_alignment <- list(
 #' gui_text_alignment_vertical$middle
 #' gui_text_alignment_vertical$bottom
 #'
+#' @eval .family_seealso("gui_text_alignment_vertical")
+#'
 #' @export
 gui_text_alignment_vertical <- list(
   top = 0L,
@@ -106,6 +114,8 @@ gui_text_alignment_vertical <- list(
 #' gui_text_wrap_mode$none
 #' gui_text_wrap_mode$char
 #' gui_text_wrap_mode$word
+#'
+#' @eval .family_seealso("gui_text_wrap_mode")
 #'
 #' @export
 gui_text_wrap_mode <- list(
@@ -141,6 +151,8 @@ gui_text_wrap_mode <- list(
 #' gui_control$default
 #' gui_control$combobox
 #' gui_control$statusbar
+#'
+#' @eval .family_seealso("gui_control")
 #'
 #' @export
 gui_control <- list(
@@ -190,6 +202,8 @@ gui_control <- list(
 #' gui_control_property$base_color_pressed
 #' gui_control_property$baseprop16
 #'
+#' @eval .family_seealso("gui_control_property")
+#'
 #' @export
 gui_control_property <- list(
   border_color_normal = 0L,
@@ -230,6 +244,8 @@ gui_control_property <- list(
 #' gui_default_property$background_color
 #' gui_default_property$extprop08
 #'
+#' @eval .family_seealso("gui_default_property")
+#'
 #' @export
 gui_default_property <- list(
   text_size = 16L,
@@ -255,6 +271,8 @@ gui_default_property <- list(
 #' gui_toggle_property$group_padding
 #' gui_toggle_property$group_width_full
 #'
+#' @eval .family_seealso("gui_toggle_property")
+#'
 #' @export
 gui_toggle_property <- list(
   group_padding = 16L,
@@ -274,6 +292,8 @@ gui_toggle_property <- list(
 #' gui_slider_property$slider_width
 #' gui_slider_property$slider_padding
 #'
+#' @eval .family_seealso("gui_slider_property")
+#'
 #' @export
 gui_slider_property <- list(
   slider_width = 16L,
@@ -292,6 +312,8 @@ gui_slider_property <- list(
 #' @examples
 #' gui_progress_bar_property$progress_padding
 #' gui_progress_bar_property$progress_side
+#'
+#' @eval .family_seealso("gui_progress_bar_property")
 #'
 #' @export
 gui_progress_bar_property <- list(
@@ -317,6 +339,8 @@ gui_progress_bar_property <- list(
 #' gui_scroll_bar_property$scroll_slider_padding
 #' gui_scroll_bar_property$scroll_speed
 #'
+#' @eval .family_seealso("gui_scroll_bar_property")
+#'
 #' @export
 gui_scroll_bar_property <- list(
   arrows_size = 16L,
@@ -338,6 +362,8 @@ gui_scroll_bar_property <- list(
 #' @examples
 #' gui_check_box_property$check_padding
 #'
+#' @eval .family_seealso("gui_check_box_property")
+#'
 #' @export
 gui_check_box_property <- list(
   check_padding = 16L
@@ -355,6 +381,8 @@ gui_check_box_property <- list(
 #' @examples
 #' gui_combo_box_property$combo_button_width
 #' gui_combo_box_property$combo_button_spacing
+#'
+#' @eval .family_seealso("gui_combo_box_property")
 #'
 #' @export
 gui_combo_box_property <- list(
@@ -378,6 +406,8 @@ gui_combo_box_property <- list(
 #' gui_dropdown_box_property$dropdown_items_spacing
 #' gui_dropdown_box_property$dropdown_roll_up
 #'
+#' @eval .family_seealso("gui_dropdown_box_property")
+#'
 #' @export
 gui_dropdown_box_property <- list(
   arrow_padding = 16L,
@@ -397,6 +427,8 @@ gui_dropdown_box_property <- list(
 #' @examples
 #' gui_text_box_property$text_readonly
 #'
+#' @eval .family_seealso("gui_text_box_property")
+#'
 #' @export
 gui_text_box_property <- list(
   text_readonly = 16L
@@ -414,6 +446,8 @@ gui_text_box_property <- list(
 #' @examples
 #' gui_value_box_property$spinner_button_width
 #' gui_value_box_property$spinner_button_spacing
+#'
+#' @eval .family_seealso("gui_value_box_property")
 #'
 #' @export
 gui_value_box_property <- list(
@@ -435,6 +469,8 @@ gui_value_box_property <- list(
 #' gui_tab_bar_property$tab_items_width
 #' gui_tab_bar_property$tab_close_button
 #' gui_tab_bar_property$tab_line_side
+#'
+#' @eval .family_seealso("gui_tab_bar_property")
 #'
 #' @export
 gui_tab_bar_property <- list(
@@ -460,6 +496,8 @@ gui_tab_bar_property <- list(
 #' gui_list_view_property$list_items_height
 #' gui_list_view_property$scrollbar_width
 #' gui_list_view_property$list_items_border_width
+#'
+#' @eval .family_seealso("gui_list_view_property")
 #'
 #' @export
 gui_list_view_property <- list(
@@ -487,6 +525,8 @@ gui_list_view_property <- list(
 #' gui_color_picker_property$color_selector_size
 #' gui_color_picker_property$huebar_padding
 #' gui_color_picker_property$huebar_selector_overflow
+#'
+#' @eval .family_seealso("gui_color_picker_property")
 #'
 #' @export
 gui_color_picker_property <- list(
@@ -765,6 +805,8 @@ gui_color_picker_property <- list(
 #' gui_icon$none
 #' gui_icon$cross_small
 #' gui_icon$filetype_icon
+#'
+#' @eval .family_seealso("gui_icon")
 #'
 #' @export
 gui_icon <- list(

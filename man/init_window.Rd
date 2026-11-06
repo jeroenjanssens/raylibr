@@ -28,9 +28,24 @@ init_window(800L, 450L, "My Window")
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other window functions: 
+\ifelse{latex}{The other topics in the Window management section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Window management:
 \code{\link{clear_window_state}()},
 \code{\link{close_window}()},
+\code{\link{disable_event_waiting}()},
+\code{\link{enable_event_waiting}()},
+\code{\link{get_current_monitor}()},
+\code{\link{get_monitor_count}()},
+\code{\link{get_monitor_height}()},
+\code{\link{get_monitor_name}()},
+\code{\link{get_monitor_physical_height}()},
+\code{\link{get_monitor_physical_width}()},
+\code{\link{get_monitor_position}()},
+\code{\link{get_monitor_refresh_rate}()},
+\code{\link{get_monitor_width}()},
+\code{\link{get_render_height}()},
+\code{\link{get_render_width}()},
+\code{\link{get_screen_height}()},
+\code{\link{get_screen_width}()},
 \code{\link{get_window_position}()},
 \code{\link{get_window_scale_dpi}()},
 \code{\link{is_window_focused}()},
@@ -53,10 +68,9 @@ Other window functions:
 \code{\link{set_window_position}()},
 \code{\link{set_window_size}()},
 \code{\link{set_window_state}()},
-\code{\link{set_window_title}()}
-
-Other init functions: 
-\code{\link{init_audio_device}()}
+\code{\link{set_window_title}()},
+\code{\link{toggle_borderless_windowed}()},
+\code{\link{toggle_fullscreen}()},
+\code{\link{window_should_close}()}
 }
-\concept{init functions}
-\concept{window functions}
+}

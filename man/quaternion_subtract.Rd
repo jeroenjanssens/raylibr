@@ -22,7 +22,7 @@ quaternion_subtract(c(0, 0, 0, 1), c(0, 0, 0, 1))
 
 }
 \seealso{
-Other quaternion functions: 
+\ifelse{latex}{The other topics in the raymath — Quaternion section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other raymath — Quaternion:
 \code{\link{quaternion_add}()},
 \code{\link{quaternion_add_value}()},
 \code{\link{quaternion_cubic_hermite_spline}()},
@@ -47,4 +47,4 @@ Other quaternion functions:
 \code{\link{quaternion_to_matrix}()},
 \code{\link{quaternion_transform}()}
 }
-\concept{quaternion functions}
+}

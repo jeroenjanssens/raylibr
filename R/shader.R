@@ -7,6 +7,8 @@
 #' @examples
 #' is_shader("not a shader")
 #'
+#' @eval .family_seealso("is_shader")
+#'
 #' @export
 is_shader <- function(x) {
   inherits(x, "shader")

@@ -19,3 +19,37 @@ Test if object is a wave
 is_wave("not a wave")
 
 }
+\seealso{
+\ifelse{latex}{The other topics in the Type checking section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Type checking:
+\code{\link{is_audio_stream}()},
+\code{\link{is_bone_info}()},
+\code{\link{is_bounding_box}()},
+\code{\link{is_camera_2d}()},
+\code{\link{is_camera_3d}()},
+\code{\link{is_color}()},
+\code{\link{is_font}()},
+\code{\link{is_glyph_info}()},
+\code{\link{is_image}()},
+\code{\link{is_material}()},
+\code{\link{is_material_map}()},
+\code{\link{is_mesh}()},
+\code{\link{is_model}()},
+\code{\link{is_model_animation}()},
+\code{\link{is_music}()},
+\code{\link{is_n_patch_info}()},
+\code{\link{is_ray}()},
+\code{\link{is_ray_collision}()},
+\code{\link{is_raylib_matrix}()},
+\code{\link{is_raylib_transform}()},
+\code{\link{is_rectangle}()},
+\code{\link{is_render_texture}()},
+\code{\link{is_shader}()},
+\code{\link{is_sound}()},
+\code{\link{is_texture}()},
+\code{\link{is_vector_2}()},
+\code{\link{is_vector_3}()},
+\code{\link{is_vector_4}()},
+\code{\link{is_vr_device_info}()},
+\code{\link{is_vr_stereo_config}()}
+}
+}

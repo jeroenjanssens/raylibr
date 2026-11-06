@@ -21,12 +21,11 @@ disable_cursor()
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other cursor functions: 
+\ifelse{latex}{The other topics in the Input — Cursor section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Input — Cursor:
 \code{\link{enable_cursor}()},
 \code{\link{hide_cursor}()},
 \code{\link{is_cursor_hidden}()},
 \code{\link{is_cursor_on_screen}()},
-\code{\link{set_mouse_cursor}()},
 \code{\link{show_cursor}()}
 }
-\concept{cursor functions}
+}

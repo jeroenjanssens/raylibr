@@ -21,7 +21,49 @@ toggle_fullscreen()
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other fullscreen functions: 
-\code{\link{is_window_fullscreen}()}
+\ifelse{latex}{The other topics in the Window management section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Window management:
+\code{\link{clear_window_state}()},
+\code{\link{close_window}()},
+\code{\link{disable_event_waiting}()},
+\code{\link{enable_event_waiting}()},
+\code{\link{get_current_monitor}()},
+\code{\link{get_monitor_count}()},
+\code{\link{get_monitor_height}()},
+\code{\link{get_monitor_name}()},
+\code{\link{get_monitor_physical_height}()},
+\code{\link{get_monitor_physical_width}()},
+\code{\link{get_monitor_position}()},
+\code{\link{get_monitor_refresh_rate}()},
+\code{\link{get_monitor_width}()},
+\code{\link{get_render_height}()},
+\code{\link{get_render_width}()},
+\code{\link{get_screen_height}()},
+\code{\link{get_screen_width}()},
+\code{\link{get_window_position}()},
+\code{\link{get_window_scale_dpi}()},
+\code{\link{init_window}()},
+\code{\link{is_window_focused}()},
+\code{\link{is_window_fullscreen}()},
+\code{\link{is_window_hidden}()},
+\code{\link{is_window_maximized}()},
+\code{\link{is_window_minimized}()},
+\code{\link{is_window_ready}()},
+\code{\link{is_window_resized}()},
+\code{\link{is_window_state}()},
+\code{\link{maximize_window}()},
+\code{\link{minimize_window}()},
+\code{\link{restore_window}()},
+\code{\link{set_window_focused}()},
+\code{\link{set_window_icon}()},
+\code{\link{set_window_max_size}()},
+\code{\link{set_window_min_size}()},
+\code{\link{set_window_monitor}()},
+\code{\link{set_window_opacity}()},
+\code{\link{set_window_position}()},
+\code{\link{set_window_size}()},
+\code{\link{set_window_state}()},
+\code{\link{set_window_title}()},
+\code{\link{toggle_borderless_windowed}()},
+\code{\link{window_should_close}()}
 }
-\concept{fullscreen functions}
+}

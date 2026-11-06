@@ -24,7 +24,7 @@ unload_shader(load_shader("", "shader.fs"))
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other shader functions: 
+\ifelse{latex}{The other topics in the Shaders section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Shaders:
 \code{\link{begin_shader_mode}()},
 \code{\link{end_shader_mode}()},
 \code{\link{get_shader_location}()},
@@ -35,21 +35,5 @@ Other shader functions:
 \code{\link{set_shader_value}()},
 \code{\link{set_shader_value_matrix}()},
 \code{\link{set_shader_value_texture}()}
-
-Other unload functions: 
-\code{\link{unload_audio_stream}()},
-\code{\link{unload_font}()},
-\code{\link{unload_image}()},
-\code{\link{unload_material}()},
-\code{\link{unload_mesh}()},
-\code{\link{unload_model}()},
-\code{\link{unload_music_stream}()},
-\code{\link{unload_render_texture}()},
-\code{\link{unload_sound}()},
-\code{\link{unload_sound_alias}()},
-\code{\link{unload_texture}()},
-\code{\link{unload_vr_stereo_config}()},
-\code{\link{unload_wave}()}
 }
-\concept{shader functions}
-\concept{unload functions}
+}

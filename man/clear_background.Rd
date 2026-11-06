@@ -23,4 +23,16 @@ This function has been auto-generated from the following Raylib function definit
 clear_background("red")
 \dontshow{\}) # examplesIf}
 }
-\concept{background functions}
+\seealso{
+\ifelse{latex}{The other topics in the Drawing & timing section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Drawing & timing:
+\code{\link{begin_drawing}()},
+\code{\link{draw_fps}()},
+\code{\link{end_drawing}()},
+\code{\link{get_fps}()},
+\code{\link{get_frame_time}()},
+\code{\link{get_time}()},
+\code{\link{poll_input_events}()},
+\code{\link{set_target_fps}()},
+\code{\link{swap_screen_buffer}()}
+}
+}

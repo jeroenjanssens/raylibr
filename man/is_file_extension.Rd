@@ -29,70 +29,32 @@ is_file_extension("file.png", ".png")
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other extension functions: 
-\code{\link{get_file_extension}()}
-
-Other file functions: 
+\ifelse{latex}{The other topics in the File system section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other File system:
+\code{\link{change_directory}()},
+\code{\link{directory_exists}()},
+\code{\link{file_copy}()},
+\code{\link{file_exists}()},
+\code{\link{file_move}()},
+\code{\link{file_remove}()},
+\code{\link{file_rename}()},
+\code{\link{file_text_find_index}()},
+\code{\link{file_text_replace}()},
+\code{\link{get_application_directory}()},
+\code{\link{get_directory_file_count}()},
+\code{\link{get_directory_file_count_ex}()},
+\code{\link{get_directory_path}()},
 \code{\link{get_file_extension}()},
 \code{\link{get_file_length}()},
 \code{\link{get_file_mod_time}()},
 \code{\link{get_file_name}()},
 \code{\link{get_file_name_without_ext}()},
+\code{\link{get_prev_directory_path}()},
+\code{\link{get_working_directory}()},
 \code{\link{is_file_dropped}()},
 \code{\link{is_file_name_valid}()},
 \code{\link{is_path_file}()},
 \code{\link{load_file_text}()},
+\code{\link{make_directory}()},
 \code{\link{save_file_text}()}
-
-Other is functions: 
-\code{\link{color_is_equal}()},
-\code{\link{is_audio_device_ready}()},
-\code{\link{is_audio_stream_playing}()},
-\code{\link{is_audio_stream_processed}()},
-\code{\link{is_audio_stream_valid}()},
-\code{\link{is_cursor_hidden}()},
-\code{\link{is_cursor_on_screen}()},
-\code{\link{is_file_dropped}()},
-\code{\link{is_file_name_valid}()},
-\code{\link{is_font_valid}()},
-\code{\link{is_gamepad_available}()},
-\code{\link{is_gamepad_button_down}()},
-\code{\link{is_gamepad_button_pressed}()},
-\code{\link{is_gamepad_button_released}()},
-\code{\link{is_gamepad_button_up}()},
-\code{\link{is_gesture_detected}()},
-\code{\link{is_image_valid}()},
-\code{\link{is_key_down}()},
-\code{\link{is_key_pressed}()},
-\code{\link{is_key_pressed_repeat}()},
-\code{\link{is_key_released}()},
-\code{\link{is_key_up}()},
-\code{\link{is_material_valid}()},
-\code{\link{is_model_animation_valid}()},
-\code{\link{is_model_valid}()},
-\code{\link{is_mouse_button_down}()},
-\code{\link{is_mouse_button_pressed}()},
-\code{\link{is_mouse_button_released}()},
-\code{\link{is_mouse_button_up}()},
-\code{\link{is_music_stream_playing}()},
-\code{\link{is_music_valid}()},
-\code{\link{is_path_file}()},
-\code{\link{is_render_texture_valid}()},
-\code{\link{is_shader_valid}()},
-\code{\link{is_sound_playing}()},
-\code{\link{is_sound_valid}()},
-\code{\link{is_texture_valid}()},
-\code{\link{is_wave_valid}()},
-\code{\link{is_window_focused}()},
-\code{\link{is_window_fullscreen}()},
-\code{\link{is_window_hidden}()},
-\code{\link{is_window_maximized}()},
-\code{\link{is_window_minimized}()},
-\code{\link{is_window_ready}()},
-\code{\link{is_window_resized}()},
-\code{\link{is_window_state}()},
-\code{\link{text_is_equal}()}
 }
-\concept{extension functions}
-\concept{file functions}
-\concept{is functions}
+}

@@ -21,17 +21,15 @@ begin_drawing()
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other drawing functions: 
-\code{\link{end_drawing}()}
-
-Other begin functions: 
-\code{\link{begin_blend_mode}()},
-\code{\link{begin_mode_2d}()},
-\code{\link{begin_mode_3d}()},
-\code{\link{begin_scissor_mode}()},
-\code{\link{begin_shader_mode}()},
-\code{\link{begin_texture_mode}()},
-\code{\link{begin_vr_stereo_mode}()}
+\ifelse{latex}{The other topics in the Drawing & timing section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Drawing & timing:
+\code{\link{clear_background}()},
+\code{\link{draw_fps}()},
+\code{\link{end_drawing}()},
+\code{\link{get_fps}()},
+\code{\link{get_frame_time}()},
+\code{\link{get_time}()},
+\code{\link{poll_input_events}()},
+\code{\link{set_target_fps}()},
+\code{\link{swap_screen_buffer}()}
 }
-\concept{begin functions}
-\concept{drawing functions}
+}

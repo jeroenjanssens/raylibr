@@ -30,7 +30,7 @@ set_gamepad_vibration(0L, 0.0, 0.0, 0.0)
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other gamepad functions: 
+\ifelse{latex}{The other topics in the Input — Gamepad section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Input — Gamepad:
 \code{\link{get_gamepad_axis_count}()},
 \code{\link{get_gamepad_axis_movement}()},
 \code{\link{get_gamepad_button_pressed}()},
@@ -41,49 +41,5 @@ Other gamepad functions:
 \code{\link{is_gamepad_button_released}()},
 \code{\link{is_gamepad_button_up}()},
 \code{\link{set_gamepad_mappings}()}
-
-Other set functions: 
-\code{\link{set_audio_stream_buffer_size_default}()},
-\code{\link{set_audio_stream_pan}()},
-\code{\link{set_audio_stream_pitch}()},
-\code{\link{set_audio_stream_volume}()},
-\code{\link{set_automation_event_base_frame}()},
-\code{\link{set_clipboard_text}()},
-\code{\link{set_config_flags}()},
-\code{\link{set_exit_key}()},
-\code{\link{set_gamepad_mappings}()},
-\code{\link{set_gestures_enabled}()},
-\code{\link{set_master_volume}()},
-\code{\link{set_mouse_cursor}()},
-\code{\link{set_mouse_offset}()},
-\code{\link{set_mouse_position}()},
-\code{\link{set_mouse_scale}()},
-\code{\link{set_music_pan}()},
-\code{\link{set_music_pitch}()},
-\code{\link{set_music_volume}()},
-\code{\link{set_random_seed}()},
-\code{\link{set_shader_value_matrix}()},
-\code{\link{set_shader_value_texture}()},
-\code{\link{set_shapes_texture}()},
-\code{\link{set_sound_pan}()},
-\code{\link{set_sound_pitch}()},
-\code{\link{set_sound_volume}()},
-\code{\link{set_target_fps}()},
-\code{\link{set_text_line_spacing}()},
-\code{\link{set_texture_filter}()},
-\code{\link{set_texture_wrap}()},
-\code{\link{set_trace_log_level}()},
-\code{\link{set_window_focused}()},
-\code{\link{set_window_icon}()},
-\code{\link{set_window_max_size}()},
-\code{\link{set_window_min_size}()},
-\code{\link{set_window_monitor}()},
-\code{\link{set_window_opacity}()},
-\code{\link{set_window_position}()},
-\code{\link{set_window_size}()},
-\code{\link{set_window_state}()},
-\code{\link{set_window_title}()}
 }
-\concept{gamepad functions}
-\concept{set functions}
-\concept{vibration functions}
+}

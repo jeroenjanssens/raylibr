@@ -7,6 +7,8 @@
 #' @examples
 #' is_model_animation("not a model_animation")
 #'
+#' @eval .family_seealso("is_model_animation")
+#'
 #' @export
 is_model_animation <- function(x) {
   inherits(x, "model_animation")

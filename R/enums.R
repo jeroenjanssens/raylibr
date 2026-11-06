@@ -26,6 +26,8 @@
 #' flag$window_unfocused
 #' flag$interlaced_hint
 #'
+#' @eval .family_seealso("flag")
+#'
 #' @export
 flag <- list(
   vsync_hint = 64,
@@ -65,6 +67,8 @@ flag <- list(
 #' log_level$all
 #' log_level$info
 #' log_level$none
+#'
+#' @eval .family_seealso("log_level")
 #'
 #' @export
 log_level <- list(
@@ -199,6 +203,8 @@ log_level <- list(
 #' key$right
 #' key$volume_down
 #'
+#' @eval .family_seealso("key")
+#'
 #' @export
 key <- list(
   apostrophe = 39,
@@ -331,6 +337,8 @@ key <- list(
 #' mouse_button$side
 #' mouse_button$back
 #'
+#' @eval .family_seealso("mouse_button")
+#'
 #' @export
 mouse_button <- list(
   left = 0,
@@ -364,6 +372,8 @@ mouse_button <- list(
 #' mouse_cursor$default
 #' mouse_cursor$resize_ew
 #' mouse_cursor$not_allowed
+#'
+#' @eval .family_seealso("mouse_cursor")
 #'
 #' @export
 mouse_cursor <- list(
@@ -402,6 +412,8 @@ mouse_cursor <- list(
 #' material_map_index$albedo
 #' material_map_index$emission
 #' material_map_index$brdf
+#'
+#' @eval .family_seealso("material_map_index")
 #'
 #' @export
 material_map_index <- list(
@@ -443,6 +455,8 @@ material_map_index <- list(
 #' shader_uniform$ivec3
 #' shader_uniform$sampler2d
 #'
+#' @eval .family_seealso("shader_uniform")
+#'
 #' @export
 shader_uniform <- list(
   float = 0,
@@ -477,6 +491,8 @@ shader_uniform <- list(
 #' camera_mode$orbital
 #' camera_mode$third_person
 #'
+#' @eval .family_seealso("camera_mode")
+#'
 #' @export
 camera_mode <- list(
   custom = 0,
@@ -498,6 +514,8 @@ camera_mode <- list(
 #' @examples
 #' camera_projection$perspective
 #' camera_projection$orthographic
+#'
+#' @eval .family_seealso("camera_projection")
 #'
 #' @export
 camera_projection <- list(

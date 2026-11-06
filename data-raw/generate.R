@@ -683,25 +683,138 @@ build_original_c_sig <- function(func_row) {
   paste0(func_row$returnType, " ", func_row$name, "(", param_str, ");")
 }
 
-get_families <- function(func_name, params, return_type) {
-  families <- character(0)
-  snake <- pascal_to_snake(func_name)
-  parts <- strsplit(snake, "_")[[1]]
-  if (length(parts) >= 2) {
-    families <- c(families, paste(parts[length(parts)], "functions"))
-  }
-  if (length(parts) >= 3) {
-    families <- c(families, paste(parts[2], "functions"))
-  }
-  if (length(parts) >= 1) {
-    action <- parts[1]
-    if (action %in% c("draw", "load", "unload", "init", "close", "begin",
-                       "end", "set", "get", "is", "check", "update",
-                       "play", "stop", "pause", "resume", "export")) {
-      families <- c(families, paste(action, "functions"))
+# Families (the "See also" lists in the help pages) are the sections of the
+# reference page in _pkgdown.yml, so each topic belongs to exactly one, and
+# rlgl topics get none.
+#
+# The lists are shown in HTML and text help and on the website, but not in
+# the PDF manual. Lists of long function names make LaTeX report thousands
+# of overfull lines, and R's Rd2pdf passes all of texi2dvi's output to one
+# message() call, which overflowed the C stack on CRAN's Debian check. So
+# instead of roxygen's @family, each block has
+# `@eval .family_seealso("<topic>")`, which adds
+# `@seealso \ifelse{latex}{<short note>}{<list>}`; R/families.R (written at
+# the end of this script) holds the lists.
+reference_sections <- yaml::read_yaml("_pkgdown.yml")$reference
+no_family_sections <- "rlgl (low-level OpenGL)"
+
+# Does `topic` match one pkgdown contents entry: a name or starts_with("x")?
+reference_entry_matches <- function(entry, topic) {
+  m <- regmatches(entry, regexec('^starts_with\\("([^"]*)"\\)$', entry))[[1]]
+  if (length(m)) startsWith(topic, m[2]) else identical(entry, topic)
+}
+
+# The title of the first reference section containing `topic`, following
+# pkgdown's rules: entries are applied in order, and "-entry" removes topics
+# selected by earlier entries.
+reference_section <- function(topic) {
+  for (section in reference_sections) {
+    selected <- FALSE
+    for (entry in unlist(section$contents)) {
+      if (startsWith(entry, "-")) {
+        if (reference_entry_matches(substring(entry, 2), topic)) selected <- FALSE
+      } else if (reference_entry_matches(entry, topic)) {
+        selected <- TRUE
+      }
     }
+    if (selected) return(section$title)
   }
-  unique(families)
+  NA_character_
+}
+
+# The section of `topic`, or an error if _pkgdown.yml doesn't list it.
+topic_section <- function(topic) {
+  section <- reference_section(topic)
+  if (is.na(section)) stop("Topic `", topic, "` is in no reference section of _pkgdown.yml")
+  section
+}
+
+# The roxygen lines that add the family list to the help page of `topic`, or
+# nothing for topics without a family.
+family_lines <- function(topic) {
+  if (topic_section(topic) %in% no_family_sections) return(character(0))
+  c(paste0("#' @eval .family_seealso(\"", topic, "\")"), "#'")
+}
+
+# The help topics with their sections, read from the roxygen blocks in R/
+# (without loading the package): every exported block with a title or an
+# @rdname documents a topic. Run after all R files have been written.
+collect_topics <- function() {
+  blocks <- roxygen2::parse_package(".", env = NULL)
+  rows <- lapply(blocks, function(b) {
+    if (!roxygen2::block_has_tags(b, "export")) return(NULL)
+    rdname <- roxygen2::block_get_tag_value(b, "rdname")
+    if (is.null(rdname) && !roxygen2::block_has_tags(b, "title")) return(NULL)
+    call <- b$call
+    assigned <- is.call(call) && length(call) == 3 && as.character(call[[1]]) %in% c("<-", "=")
+    name <- roxygen2::block_get_tag_value(b, "name")
+    topic <- if (!is.null(rdname)) rdname else if (!is.null(name)) name
+             else if (assigned) as.character(call[[2]])
+    if (is.null(topic)) stop("Can't tell the topic of the block at ", b$file, ":", b$line)
+    # Functions are linked as `name()`, like roxygen does
+    is_function <- assigned && identical(as.character(call[[2]]), topic) &&
+      is.call(call[[3]]) && identical(call[[3]][[1]], as.name("function"))
+    data.frame(topic = topic, is_function = is_function)
+  })
+  d <- do.call(rbind, rows)
+  d <- d[order(d$topic, !d$is_function), ]
+  d <- d[!duplicated(d$topic), ]
+  d$section <- vapply(d$topic, topic_section, "")
+  d[!d$section %in% no_family_sections, ]
+}
+
+write_families_r <- function(path = "R/families.R") {
+  d <- collect_topics()
+  d <- d[order(d$topic, method = "radix"), ]
+  links <- paste0("\\code{\\link{", d$topic, "}", ifelse(d$is_function, "()", ""), "}")
+  sections <- split(setNames(links, d$topic), d$section)
+  sections <- sections[order(names(sections), method = "radix")]
+  # An R string literal: backslashes escaped, and non-ASCII characters (the
+  # em dashes in section titles) as \u escapes, since R code must be ASCII
+  r_string <- function(x) {
+    vapply(gsub("\\\\", "\\\\\\\\", x), function(s) {
+      cp <- utf8ToInt(s)
+      chars <- ifelse(cp > 127, sprintf("\\u%04x", cp), intToUtf8(cp, multiple = TRUE))
+      paste0('"', paste(chars, collapse = ""), '"')
+    }, "", USE.NAMES = FALSE)
+  }
+  entry <- function(s) {
+    paste0("  ", r_string(s), " = c(\n",
+           paste0("    ", r_string(names(sections[[s]])), " = ",
+                  r_string(sections[[s]]), collapse = ",\n"),
+           "\n  )")
+  }
+  lines <- c(
+    "# Do not edit by hand. Written by data-raw/generate.R from the reference",
+    "# sections in _pkgdown.yml.",
+    "",
+    "# The links shown under \"See also\" on each help page: the other topics in",
+    "# the same reference section, by section.",
+    ".family_links <- list(",
+    paste(vapply(names(sections), entry, ""), collapse = ",\n"),
+    ")",
+    "",
+    "# Used by roxygen through `@eval .family_seealso(\"<topic>\")`. The PDF",
+    "# manual gets a short note instead of the list: these lists of long",
+    "# function names made LaTeX's output too large for R CMD check.",
+    ".family_seealso <- function(topic) {",
+    "  for (section in names(.family_links)) {",
+    "    links <- .family_links[[section]]",
+    "    if (topic %in% names(links)) {",
+    "      others <- links[names(links) != topic]",
+    "      if (!length(others)) return(character())",
+    "      note <- paste0(\"The other topics in the \", section, \" section are listed \",",
+    "                     \"in the HTML help and at \",",
+    "                     \"\\\\url{https://raylibr.jeroenjanssens.com/reference/}.\")",
+    "      return(paste0(\"@seealso \\\\ifelse{latex}{\", note, \"}{Other \", section, \":\\n\",",
+    "                    paste(others, collapse = \",\\n\"), \"\\n}\"))",
+    "    }",
+    "  }",
+    "  stop(\"No family for topic `\", topic, \"`\")",
+    "}"
+  )
+  writeLines(lines, path)
+  cat(sprintf("  Wrote %s (%d topics in %d families)\n", path, nrow(d), length(sections)))
 }
 
 
@@ -929,12 +1042,8 @@ generate_function_r <- function(func_row) {
   lines <- c(lines, "#' ```")
   lines <- c(lines, "#'")
 
-  # Family tags
-  families <- get_families(name, params, ret_type)
-  for (fam in families) {
-    lines <- c(lines, paste0("#' @family ", fam))
-  }
-  lines <- c(lines, "#'")
+  # Family tag
+  lines <- c(lines, family_lines(snake))
 
   # Examples
   example_file <- file.path("man", "examples", paste0(snake, ".R"))
@@ -1084,6 +1193,7 @@ generate_struct_r <- function(struct_row) {
       "#'",
       example_lines,
       "#'",
+      family_lines(paste0("is_", snake)),
       paste0("#' @export"),
       paste0("is_", snake, " <- function(x) {"),
       paste0('  inherits(x, "', snake, '")'),
@@ -1110,6 +1220,7 @@ generate_struct_r <- function(struct_row) {
   lines <- c(lines, "#' @examples")
   lines <- c(lines, paste0("#' is_", snake, '("not a ', snake, '")'))
   lines <- c(lines, "#'")
+  lines <- c(lines, family_lines(paste0("is_", snake)))
   lines <- c(lines, "#' @export")
   lines <- c(lines, paste0("is_", snake, " <- function(x) {"))
   lines <- c(lines, paste0('  inherits(x, "', snake, '")'))
@@ -1155,8 +1266,7 @@ generate_struct_r <- function(struct_row) {
   lines <- c(lines, "#'")
   lines <- c(lines, paste0("#' @rdname ", snake))
   lines <- c(lines, "#'")
-  lines <- c(lines, paste0("#' @family ", snake, " functions"))
-  lines <- c(lines, "#'")
+  lines <- c(lines, family_lines(snake))
 
   # Per-field defaults for specific structs (needed for examples too)
   field_defaults <- list(
@@ -1388,6 +1498,7 @@ generate_enums_r <- function(enums) {
       all_lines <- c(all_lines, paste0("#' ", r_name, "$", short_names[idx]))
     }
     all_lines <- c(all_lines, "#'")
+    all_lines <- c(all_lines, family_lines(r_name))
     all_lines <- c(all_lines, "#' @export")
     all_lines <- c(all_lines, paste0(r_name, " <- list("))
 
@@ -1691,8 +1802,6 @@ if (file.exists(rlgl_api_file)) {
       lines <- c(lines, "#'")
     }
 
-    lines <- c(lines, "#' @family rlgl functions")
-    lines <- c(lines, "#'")
 
     # Examples
     rlgl_param_types <- if (is.null(params) || nrow(params) == 0) character(0) else params$type
@@ -1762,14 +1871,6 @@ if (file.exists(raymath_api_file)) {
     pascal_to_snake(name)
   }
 
-  raymath_family <- function(name) {
-    if (grepl("^Vector2", name)) return("vector2 functions")
-    if (grepl("^Vector3", name)) return("vector3 functions")
-    if (grepl("^Vector4", name)) return("vector4 functions")
-    if (grepl("^Matrix", name)) return("matrix functions")
-    if (grepl("^Quaternion", name)) return("quaternion functions")
-    "float functions"
-  }
 
   can_wrap_raymath <- function(func_row) {
     if (func_row$name %in% raymath_skip) return(FALSE)
@@ -1826,7 +1927,6 @@ if (file.exists(raymath_api_file)) {
     snake <- raymath_to_snake(name)
     ret_type <- f$returnType
     params <- f$params[[1]]
-    family <- raymath_family(name)
 
     lines <- character(0)
     title_words <- strsplit(snake, "_")[[1]]
@@ -1852,8 +1952,7 @@ if (file.exists(raymath_api_file)) {
       lines <- c(lines, "#'")
     }
 
-    lines <- c(lines, paste0("#' @family ", family))
-    lines <- c(lines, "#'")
+    lines <- c(lines, family_lines(snake))
 
     # Examples
     lines <- c(lines, "#' @examples")
@@ -2144,8 +2243,7 @@ if (file.exists(raygui_api_file)) {
       lines <- c(lines, "#'")
     }
 
-    lines <- c(lines, "#' @family gui functions")
-    lines <- c(lines, "#'")
+    lines <- c(lines, family_lines(snake))
 
     # Examples
     gui_param_types <- if (is.null(params) || nrow(params) == 0) character(0) else params$type
@@ -2272,6 +2370,7 @@ if (file.exists(raygui_api_file)) {
         enum_lines <- c(enum_lines, paste0("#' ", r_name, example_names[idx]))
       }
       enum_lines <- c(enum_lines, "#'")
+      enum_lines <- c(enum_lines, family_lines(r_name))
       enum_lines <- c(enum_lines, "#' @export")
       enum_lines <- c(enum_lines, paste0(r_name, " <- list("))
 
@@ -2284,6 +2383,10 @@ if (file.exists(raygui_api_file)) {
                 sum(raygui_enums$name %in% names(raygui_enum_map))))
   }
 }
+
+# --- Family lists (needs all R files written above) ---------------------------
+
+write_families_r()
 
 cat("\nDone! Now run:\n")
 cat("  Rcpp::compileAttributes()\n")

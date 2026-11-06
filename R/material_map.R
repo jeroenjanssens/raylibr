@@ -9,6 +9,8 @@
 #' @examples
 #' is_material_map("not a material_map")
 #'
+#' @eval .family_seealso("is_material_map")
+#'
 #' @export
 is_material_map <- function(x) {
   inherits(x, "material_map")
@@ -37,7 +39,7 @@ is_material_map <- function(x) {
 #'
 #' @rdname material_map
 #'
-#' @family material_map functions
+#' @eval .family_seealso("material_map")
 #'
 #' @examples
 #' mat <- material_map(texture(0L, 64L, 64L, 1L, 7L), "red", 0.0)

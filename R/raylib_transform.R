@@ -9,6 +9,8 @@
 #' @examples
 #' is_raylib_transform("not a raylib_transform")
 #'
+#' @eval .family_seealso("is_raylib_transform")
+#'
 #' @export
 is_raylib_transform <- function(x) {
   inherits(x, "raylib_transform")
@@ -42,7 +44,7 @@ is_raylib_transform <- function(x) {
 #'
 #' @rdname raylib_transform
 #'
-#' @family raylib_transform functions
+#' @eval .family_seealso("raylib_transform")
 #'
 #' @examples
 #' ray <- raylib_transform(c(0, 0, 0), c(0, 0, 0, 1), c(1, 1, 1))

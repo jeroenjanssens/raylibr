@@ -21,34 +21,15 @@ end_blend_mode()
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other mode functions: 
+\ifelse{latex}{The other topics in the Rendering modes section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Rendering modes:
 \code{\link{begin_blend_mode}()},
-\code{\link{begin_mode_2d}()},
-\code{\link{begin_mode_3d}()},
 \code{\link{begin_scissor_mode}()},
-\code{\link{begin_shader_mode}()},
 \code{\link{begin_texture_mode}()},
 \code{\link{begin_vr_stereo_mode}()},
-\code{\link{end_mode_2d}()},
-\code{\link{end_mode_3d}()},
 \code{\link{end_scissor_mode}()},
-\code{\link{end_shader_mode}()},
 \code{\link{end_texture_mode}()},
-\code{\link{end_vr_stereo_mode}()}
-
-Other blend functions: 
-\code{\link{begin_blend_mode}()},
-\code{\link{color_alpha_blend}()}
-
-Other end functions: 
-\code{\link{end_drawing}()},
-\code{\link{end_mode_2d}()},
-\code{\link{end_mode_3d}()},
-\code{\link{end_scissor_mode}()},
-\code{\link{end_shader_mode}()},
-\code{\link{end_texture_mode}()},
-\code{\link{end_vr_stereo_mode}()}
+\code{\link{end_vr_stereo_mode}()},
+\code{\link{load_vr_stereo_config}()},
+\code{\link{unload_vr_stereo_config}()}
 }
-\concept{blend functions}
-\concept{end functions}
-\concept{mode functions}
+}

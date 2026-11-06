@@ -9,6 +9,8 @@
 #' @examples
 #' is_camera_3d("not a camera_3d")
 #'
+#' @eval .family_seealso("is_camera_3d")
+#'
 #' @export
 is_camera_3d <- function(x) {
   inherits(x, "camera_3d")
@@ -41,7 +43,7 @@ is_camera_3d <- function(x) {
 #'
 #' @rdname camera_3d
 #'
-#' @family camera_3d functions
+#' @eval .family_seealso("camera_3d")
 #'
 #' @examples
 #' cam <- camera_3d(c(0, 5, 0))

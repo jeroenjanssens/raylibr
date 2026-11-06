@@ -22,12 +22,11 @@ float_equals(0.0, 0.0)
 
 }
 \seealso{
-Other float functions: 
+\ifelse{latex}{The other topics in the raymath — Float section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other raymath — Float:
 \code{\link{float_clamp}()},
 \code{\link{float_lerp}()},
 \code{\link{float_normalize}()},
 \code{\link{float_remap}()},
-\code{\link{float_wrap}()},
-\code{\link{text_to_float}()}
+\code{\link{float_wrap}()}
 }
-\concept{float functions}
+}

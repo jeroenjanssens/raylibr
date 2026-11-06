@@ -27,29 +27,13 @@ load_image_from_texture(texture(0L, 64L, 64L, 1L, 7L))
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other texture functions: 
-\code{\link{begin_texture_mode}()},
+\ifelse{latex}{The other topics in the Textures & images section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Textures & images:
 \code{\link{draw_texture}()},
 \code{\link{draw_texture_ex}()},
 \code{\link{draw_texture_n_patch}()},
 \code{\link{draw_texture_pro}()},
 \code{\link{draw_texture_rec}()},
 \code{\link{draw_texture_v}()},
-\code{\link{end_texture_mode}()},
-\code{\link{get_shapes_texture}()},
-\code{\link{is_texture_valid}()},
-\code{\link{load_render_texture}()},
-\code{\link{load_texture}()},
-\code{\link{load_texture_from_image}()},
-\code{\link{set_shader_value_texture}()},
-\code{\link{set_shapes_texture}()},
-\code{\link{set_texture_filter}()},
-\code{\link{set_texture_wrap}()},
-\code{\link{texture}()},
-\code{\link{unload_render_texture}()},
-\code{\link{unload_texture}()}
-
-Other image functions: 
 \code{\link{export_image}()},
 \code{\link{export_image_as_code}()},
 \code{\link{gen_image_cellular}()},
@@ -61,43 +45,29 @@ Other image functions:
 \code{\link{gen_image_perlin_noise}()},
 \code{\link{gen_image_text}()},
 \code{\link{gen_image_white_noise}()},
-\code{\link{get_clipboard_image}()},
 \code{\link{get_image_alpha_border}()},
 \code{\link{get_image_color}()},
+\code{\link{get_pixel_data_size}()},
+\code{\link{image_copy}()},
 \code{\link{image_draw_line_ex}()},
 \code{\link{image_draw_triangle}()},
+\code{\link{image_from_channel}()},
 \code{\link{image_from_image}()},
+\code{\link{image_text}()},
+\code{\link{image_text_ex}()},
 \code{\link{is_image_valid}()},
-\code{\link{load_font_from_image}()},
+\code{\link{is_render_texture_valid}()},
+\code{\link{is_texture_valid}()},
 \code{\link{load_image}()},
 \code{\link{load_image_from_screen}()},
 \code{\link{load_image_raw}()},
-\code{\link{load_texture_from_image}()},
-\code{\link{unload_image}()}
-
-Other load functions: 
-\code{\link{load_audio_stream}()},
-\code{\link{load_file_text}()},
-\code{\link{load_font}()},
-\code{\link{load_font_from_image}()},
-\code{\link{load_image}()},
-\code{\link{load_image_from_screen}()},
-\code{\link{load_image_raw}()},
-\code{\link{load_material_default}()},
-\code{\link{load_model}()},
-\code{\link{load_model_from_mesh}()},
-\code{\link{load_music_stream}()},
 \code{\link{load_render_texture}()},
-\code{\link{load_shader}()},
-\code{\link{load_shader_from_memory}()},
-\code{\link{load_sound}()},
-\code{\link{load_sound_alias}()},
-\code{\link{load_sound_from_wave}()},
 \code{\link{load_texture}()},
 \code{\link{load_texture_from_image}()},
-\code{\link{load_vr_stereo_config}()},
-\code{\link{load_wave}()}
+\code{\link{set_texture_filter}()},
+\code{\link{set_texture_wrap}()},
+\code{\link{unload_image}()},
+\code{\link{unload_render_texture}()},
+\code{\link{unload_texture}()}
 }
-\concept{image functions}
-\concept{load functions}
-\concept{texture functions}
+}

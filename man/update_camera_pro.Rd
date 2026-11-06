@@ -25,7 +25,9 @@ update_camera_pro(cam, c(0, 0, 0), c(0, 0, 0), 1.0)
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other camera functions: 
+\ifelse{latex}{The other topics in the Camera section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other Camera:
+\code{\link{begin_mode_2d}()},
+\code{\link{begin_mode_3d}()},
 \code{\link{camera_move_forward}()},
 \code{\link{camera_move_right}()},
 \code{\link{camera_move_to_target}()},
@@ -33,6 +35,8 @@ Other camera functions:
 \code{\link{camera_pitch}()},
 \code{\link{camera_roll}()},
 \code{\link{camera_yaw}()},
+\code{\link{end_mode_2d}()},
+\code{\link{end_mode_3d}()},
 \code{\link{get_camera_forward}()},
 \code{\link{get_camera_matrix}()},
 \code{\link{get_camera_matrix_2d}()},
@@ -40,6 +44,12 @@ Other camera functions:
 \code{\link{get_camera_right}()},
 \code{\link{get_camera_up}()},
 \code{\link{get_camera_view_matrix}()},
+\code{\link{get_screen_to_world_2d}()},
+\code{\link{get_screen_to_world_ray}()},
+\code{\link{get_screen_to_world_ray_ex}()},
+\code{\link{get_world_to_screen}()},
+\code{\link{get_world_to_screen_2d}()},
+\code{\link{get_world_to_screen_ex}()},
 \code{\link{update_camera}()}
 }
-\concept{camera functions}
+}

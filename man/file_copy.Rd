@@ -29,8 +29,32 @@ file_copy("file.png", "file.png")
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other copy functions: 
-\code{\link{image_copy}()},
-\code{\link{wave_copy}()}
+\ifelse{latex}{The other topics in the File system section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other File system:
+\code{\link{change_directory}()},
+\code{\link{directory_exists}()},
+\code{\link{file_exists}()},
+\code{\link{file_move}()},
+\code{\link{file_remove}()},
+\code{\link{file_rename}()},
+\code{\link{file_text_find_index}()},
+\code{\link{file_text_replace}()},
+\code{\link{get_application_directory}()},
+\code{\link{get_directory_file_count}()},
+\code{\link{get_directory_file_count_ex}()},
+\code{\link{get_directory_path}()},
+\code{\link{get_file_extension}()},
+\code{\link{get_file_length}()},
+\code{\link{get_file_mod_time}()},
+\code{\link{get_file_name}()},
+\code{\link{get_file_name_without_ext}()},
+\code{\link{get_prev_directory_path}()},
+\code{\link{get_working_directory}()},
+\code{\link{is_file_dropped}()},
+\code{\link{is_file_extension}()},
+\code{\link{is_file_name_valid}()},
+\code{\link{is_path_file}()},
+\code{\link{load_file_text}()},
+\code{\link{make_directory}()},
+\code{\link{save_file_text}()}
 }
-\concept{copy functions}
+}

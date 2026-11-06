@@ -27,4 +27,28 @@ gui_text_wrap_mode$char
 gui_text_wrap_mode$word
 
 }
+\seealso{
+\ifelse{latex}{The other topics in the raygui — Enums section are listed in the HTML help and at \url{https://raylibr.jeroenjanssens.com/reference/}.}{Other raygui — Enums:
+\code{\link{gui_check_box_property}},
+\code{\link{gui_color_picker_property}},
+\code{\link{gui_combo_box_property}},
+\code{\link{gui_control}},
+\code{\link{gui_control_property}},
+\code{\link{gui_default_property}},
+\code{\link{gui_dropdown_box_property}},
+\code{\link{gui_icon}},
+\code{\link{gui_list_view_property}},
+\code{\link{gui_progress_bar_property}},
+\code{\link{gui_result}},
+\code{\link{gui_scroll_bar_property}},
+\code{\link{gui_slider_property}},
+\code{\link{gui_state}},
+\code{\link{gui_tab_bar_property}},
+\code{\link{gui_text_alignment}},
+\code{\link{gui_text_alignment_vertical}},
+\code{\link{gui_text_box_property}},
+\code{\link{gui_toggle_property}},
+\code{\link{gui_value_box_property}}
+}
+}
 \keyword{datasets}
