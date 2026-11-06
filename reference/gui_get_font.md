@@ -39,7 +39,7 @@ Other raygui — State & style:
 
 ``` r
 gui_get_font()
-#> <pointer: 0x56110070c2f0>
+#> <pointer: 0x55baf1cfb3b0>
 #> attr(,"class")
 #> [1] "font"
 ```

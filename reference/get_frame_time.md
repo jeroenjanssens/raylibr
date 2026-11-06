@@ -36,5 +36,5 @@ Other Drawing & timing:
 
 ``` r
 get_frame_time()
-#> [1] 0.000430809
+#> [1] 0.000625777
 ```
