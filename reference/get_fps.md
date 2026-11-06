@@ -36,5 +36,5 @@ Other Drawing & timing:
 
 ``` r
 get_fps()
-#> [1] 44885
+#> [1] 72423
 ```
