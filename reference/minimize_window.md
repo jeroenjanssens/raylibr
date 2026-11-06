@@ -17,9 +17,24 @@ definition:
 
 ## See also
 
-Other window functions:
+Other Window management:
 [`clear_window_state()`](https://raylibr.jeroenjanssens.com/reference/clear_window_state.md),
 [`close_window()`](https://raylibr.jeroenjanssens.com/reference/close_window.md),
+[`disable_event_waiting()`](https://raylibr.jeroenjanssens.com/reference/disable_event_waiting.md),
+[`enable_event_waiting()`](https://raylibr.jeroenjanssens.com/reference/enable_event_waiting.md),
+[`get_current_monitor()`](https://raylibr.jeroenjanssens.com/reference/get_current_monitor.md),
+[`get_monitor_count()`](https://raylibr.jeroenjanssens.com/reference/get_monitor_count.md),
+[`get_monitor_height()`](https://raylibr.jeroenjanssens.com/reference/get_monitor_height.md),
+[`get_monitor_name()`](https://raylibr.jeroenjanssens.com/reference/get_monitor_name.md),
+[`get_monitor_physical_height()`](https://raylibr.jeroenjanssens.com/reference/get_monitor_physical_height.md),
+[`get_monitor_physical_width()`](https://raylibr.jeroenjanssens.com/reference/get_monitor_physical_width.md),
+[`get_monitor_position()`](https://raylibr.jeroenjanssens.com/reference/get_monitor_position.md),
+[`get_monitor_refresh_rate()`](https://raylibr.jeroenjanssens.com/reference/get_monitor_refresh_rate.md),
+[`get_monitor_width()`](https://raylibr.jeroenjanssens.com/reference/get_monitor_width.md),
+[`get_render_height()`](https://raylibr.jeroenjanssens.com/reference/get_render_height.md),
+[`get_render_width()`](https://raylibr.jeroenjanssens.com/reference/get_render_width.md),
+[`get_screen_height()`](https://raylibr.jeroenjanssens.com/reference/get_screen_height.md),
+[`get_screen_width()`](https://raylibr.jeroenjanssens.com/reference/get_screen_width.md),
 [`get_window_position()`](https://raylibr.jeroenjanssens.com/reference/get_window_position.md),
 [`get_window_scale_dpi()`](https://raylibr.jeroenjanssens.com/reference/get_window_scale_dpi.md),
 [`init_window()`](https://raylibr.jeroenjanssens.com/reference/init_window.md),
@@ -42,7 +57,10 @@ Other window functions:
 [`set_window_position()`](https://raylibr.jeroenjanssens.com/reference/set_window_position.md),
 [`set_window_size()`](https://raylibr.jeroenjanssens.com/reference/set_window_size.md),
 [`set_window_state()`](https://raylibr.jeroenjanssens.com/reference/set_window_state.md),
-[`set_window_title()`](https://raylibr.jeroenjanssens.com/reference/set_window_title.md)
+[`set_window_title()`](https://raylibr.jeroenjanssens.com/reference/set_window_title.md),
+[`toggle_borderless_windowed()`](https://raylibr.jeroenjanssens.com/reference/toggle_borderless_windowed.md),
+[`toggle_fullscreen()`](https://raylibr.jeroenjanssens.com/reference/toggle_fullscreen.md),
+[`window_should_close()`](https://raylibr.jeroenjanssens.com/reference/window_should_close.md)
 
 ## Examples
 

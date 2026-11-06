@@ -34,14 +34,18 @@ definition:
 
 ## See also
 
-Other ray functions:
-[`draw_ray()`](https://raylibr.jeroenjanssens.com/reference/draw_ray.md),
-[`get_ray_collision_box()`](https://raylibr.jeroenjanssens.com/reference/get_ray_collision_box.md),
-[`get_ray_collision_mesh()`](https://raylibr.jeroenjanssens.com/reference/get_ray_collision_mesh.md),
-[`get_ray_collision_quad()`](https://raylibr.jeroenjanssens.com/reference/get_ray_collision_quad.md),
-[`get_ray_collision_sphere()`](https://raylibr.jeroenjanssens.com/reference/get_ray_collision_sphere.md),
-[`get_ray_collision_triangle()`](https://raylibr.jeroenjanssens.com/reference/get_ray_collision_triangle.md),
-[`get_screen_to_world_ray()`](https://raylibr.jeroenjanssens.com/reference/get_screen_to_world_ray.md)
+Other Structs:
+[`bounding_box()`](https://raylibr.jeroenjanssens.com/reference/bounding_box.md),
+[`camera_2d()`](https://raylibr.jeroenjanssens.com/reference/camera_2d.md),
+[`camera_3d()`](https://raylibr.jeroenjanssens.com/reference/camera_3d.md),
+[`glyph_info()`](https://raylibr.jeroenjanssens.com/reference/glyph_info.md),
+[`material_map()`](https://raylibr.jeroenjanssens.com/reference/material_map.md),
+[`n_patch_info()`](https://raylibr.jeroenjanssens.com/reference/n_patch_info.md),
+[`ray_collision()`](https://raylibr.jeroenjanssens.com/reference/ray_collision.md),
+[`raylib_transform()`](https://raylibr.jeroenjanssens.com/reference/raylib_transform.md),
+[`rectangle()`](https://raylibr.jeroenjanssens.com/reference/rectangle.md),
+[`render_texture()`](https://raylibr.jeroenjanssens.com/reference/render_texture.md),
+[`texture()`](https://raylibr.jeroenjanssens.com/reference/texture.md)
 
 ## Examples
 

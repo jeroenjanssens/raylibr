@@ -14,7 +14,7 @@ A numeric vector of length 2
 
 ## See also
 
-Other vector2 functions:
+Other raymath — Vector2:
 [`vector2_add()`](https://raylibr.jeroenjanssens.com/reference/vector2_add.md),
 [`vector2_add_value()`](https://raylibr.jeroenjanssens.com/reference/vector2_add_value.md),
 [`vector2_angle()`](https://raylibr.jeroenjanssens.com/reference/vector2_angle.md),

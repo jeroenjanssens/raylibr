@@ -20,7 +20,7 @@ A number
 
 ## See also
 
-Other vector4 functions:
+Other raymath — Vector4:
 [`vector4_add()`](https://raylibr.jeroenjanssens.com/reference/vector4_add.md),
 [`vector4_add_value()`](https://raylibr.jeroenjanssens.com/reference/vector4_add_value.md),
 [`vector4_distance()`](https://raylibr.jeroenjanssens.com/reference/vector4_distance.md),

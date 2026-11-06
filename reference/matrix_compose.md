@@ -28,8 +28,7 @@ A 4x4 numeric matrix
 
 ## See also
 
-Other matrix functions:
-[`get_camera_matrix()`](https://raylibr.jeroenjanssens.com/reference/get_camera_matrix.md),
+Other raymath — Matrix:
 [`matrix_add()`](https://raylibr.jeroenjanssens.com/reference/matrix_add.md),
 [`matrix_decompose()`](https://raylibr.jeroenjanssens.com/reference/matrix_decompose.md),
 [`matrix_determinant()`](https://raylibr.jeroenjanssens.com/reference/matrix_determinant.md),
@@ -51,8 +50,7 @@ Other matrix functions:
 [`matrix_subtract()`](https://raylibr.jeroenjanssens.com/reference/matrix_subtract.md),
 [`matrix_trace()`](https://raylibr.jeroenjanssens.com/reference/matrix_trace.md),
 [`matrix_translate()`](https://raylibr.jeroenjanssens.com/reference/matrix_translate.md),
-[`matrix_transpose()`](https://raylibr.jeroenjanssens.com/reference/matrix_transpose.md),
-[`set_shader_value_matrix()`](https://raylibr.jeroenjanssens.com/reference/set_shader_value_matrix.md)
+[`matrix_transpose()`](https://raylibr.jeroenjanssens.com/reference/matrix_transpose.md)
 
 ## Examples
 

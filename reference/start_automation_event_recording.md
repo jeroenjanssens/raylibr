@@ -17,10 +17,7 @@ definition:
 
 ## See also
 
-Other recording functions:
-[`stop_automation_event_recording()`](https://raylibr.jeroenjanssens.com/reference/stop_automation_event_recording.md)
-
-Other automation functions:
+Other Automation events:
 [`set_automation_event_base_frame()`](https://raylibr.jeroenjanssens.com/reference/set_automation_event_base_frame.md),
 [`stop_automation_event_recording()`](https://raylibr.jeroenjanssens.com/reference/stop_automation_event_recording.md)
 

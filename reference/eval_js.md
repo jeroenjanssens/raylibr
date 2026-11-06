@@ -18,6 +18,13 @@ eval_js(script)
 
 Character string result.
 
+## See also
+
+Other webR / Emscripten:
+[`export_html()`](https://raylibr.jeroenjanssens.com/reference/export_html.md),
+[`is_web()`](https://raylibr.jeroenjanssens.com/reference/is_web.md),
+[`run_game_loop()`](https://raylibr.jeroenjanssens.com/reference/run_game_loop.md)
+
 ## Examples
 
 ``` r

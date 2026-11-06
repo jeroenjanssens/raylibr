@@ -24,7 +24,7 @@ A numeric vector of length 3
 
 ## See also
 
-Other vector3 functions:
+Other raymath — Vector3:
 [`vector3_add()`](https://raylibr.jeroenjanssens.com/reference/vector3_add.md),
 [`vector3_angle()`](https://raylibr.jeroenjanssens.com/reference/vector3_angle.md),
 [`vector3_barycenter()`](https://raylibr.jeroenjanssens.com/reference/vector3_barycenter.md),

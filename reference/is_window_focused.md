@@ -21,12 +21,24 @@ definition:
 
 ## See also
 
-Other focused functions:
-[`set_window_focused()`](https://raylibr.jeroenjanssens.com/reference/set_window_focused.md)
-
-Other window functions:
+Other Window management:
 [`clear_window_state()`](https://raylibr.jeroenjanssens.com/reference/clear_window_state.md),
 [`close_window()`](https://raylibr.jeroenjanssens.com/reference/close_window.md),
+[`disable_event_waiting()`](https://raylibr.jeroenjanssens.com/reference/disable_event_waiting.md),
+[`enable_event_waiting()`](https://raylibr.jeroenjanssens.com/reference/enable_event_waiting.md),
+[`get_current_monitor()`](https://raylibr.jeroenjanssens.com/reference/get_current_monitor.md),
+[`get_monitor_count()`](https://raylibr.jeroenjanssens.com/reference/get_monitor_count.md),
+[`get_monitor_height()`](https://raylibr.jeroenjanssens.com/reference/get_monitor_height.md),
+[`get_monitor_name()`](https://raylibr.jeroenjanssens.com/reference/get_monitor_name.md),
+[`get_monitor_physical_height()`](https://raylibr.jeroenjanssens.com/reference/get_monitor_physical_height.md),
+[`get_monitor_physical_width()`](https://raylibr.jeroenjanssens.com/reference/get_monitor_physical_width.md),
+[`get_monitor_position()`](https://raylibr.jeroenjanssens.com/reference/get_monitor_position.md),
+[`get_monitor_refresh_rate()`](https://raylibr.jeroenjanssens.com/reference/get_monitor_refresh_rate.md),
+[`get_monitor_width()`](https://raylibr.jeroenjanssens.com/reference/get_monitor_width.md),
+[`get_render_height()`](https://raylibr.jeroenjanssens.com/reference/get_render_height.md),
+[`get_render_width()`](https://raylibr.jeroenjanssens.com/reference/get_render_width.md),
+[`get_screen_height()`](https://raylibr.jeroenjanssens.com/reference/get_screen_height.md),
+[`get_screen_width()`](https://raylibr.jeroenjanssens.com/reference/get_screen_width.md),
 [`get_window_position()`](https://raylibr.jeroenjanssens.com/reference/get_window_position.md),
 [`get_window_scale_dpi()`](https://raylibr.jeroenjanssens.com/reference/get_window_scale_dpi.md),
 [`init_window()`](https://raylibr.jeroenjanssens.com/reference/init_window.md),
@@ -49,56 +61,10 @@ Other window functions:
 [`set_window_position()`](https://raylibr.jeroenjanssens.com/reference/set_window_position.md),
 [`set_window_size()`](https://raylibr.jeroenjanssens.com/reference/set_window_size.md),
 [`set_window_state()`](https://raylibr.jeroenjanssens.com/reference/set_window_state.md),
-[`set_window_title()`](https://raylibr.jeroenjanssens.com/reference/set_window_title.md)
-
-Other is functions:
-[`color_is_equal()`](https://raylibr.jeroenjanssens.com/reference/color_is_equal.md),
-[`is_audio_device_ready()`](https://raylibr.jeroenjanssens.com/reference/is_audio_device_ready.md),
-[`is_audio_stream_playing()`](https://raylibr.jeroenjanssens.com/reference/is_audio_stream_playing.md),
-[`is_audio_stream_processed()`](https://raylibr.jeroenjanssens.com/reference/is_audio_stream_processed.md),
-[`is_audio_stream_valid()`](https://raylibr.jeroenjanssens.com/reference/is_audio_stream_valid.md),
-[`is_cursor_hidden()`](https://raylibr.jeroenjanssens.com/reference/is_cursor_hidden.md),
-[`is_cursor_on_screen()`](https://raylibr.jeroenjanssens.com/reference/is_cursor_on_screen.md),
-[`is_file_dropped()`](https://raylibr.jeroenjanssens.com/reference/is_file_dropped.md),
-[`is_file_extension()`](https://raylibr.jeroenjanssens.com/reference/is_file_extension.md),
-[`is_file_name_valid()`](https://raylibr.jeroenjanssens.com/reference/is_file_name_valid.md),
-[`is_font_valid()`](https://raylibr.jeroenjanssens.com/reference/is_font_valid.md),
-[`is_gamepad_available()`](https://raylibr.jeroenjanssens.com/reference/is_gamepad_available.md),
-[`is_gamepad_button_down()`](https://raylibr.jeroenjanssens.com/reference/is_gamepad_button_down.md),
-[`is_gamepad_button_pressed()`](https://raylibr.jeroenjanssens.com/reference/is_gamepad_button_pressed.md),
-[`is_gamepad_button_released()`](https://raylibr.jeroenjanssens.com/reference/is_gamepad_button_released.md),
-[`is_gamepad_button_up()`](https://raylibr.jeroenjanssens.com/reference/is_gamepad_button_up.md),
-[`is_gesture_detected()`](https://raylibr.jeroenjanssens.com/reference/is_gesture_detected.md),
-[`is_image_valid()`](https://raylibr.jeroenjanssens.com/reference/is_image_valid.md),
-[`is_key_down()`](https://raylibr.jeroenjanssens.com/reference/is_key_down.md),
-[`is_key_pressed()`](https://raylibr.jeroenjanssens.com/reference/is_key_pressed.md),
-[`is_key_pressed_repeat()`](https://raylibr.jeroenjanssens.com/reference/is_key_pressed_repeat.md),
-[`is_key_released()`](https://raylibr.jeroenjanssens.com/reference/is_key_released.md),
-[`is_key_up()`](https://raylibr.jeroenjanssens.com/reference/is_key_up.md),
-[`is_material_valid()`](https://raylibr.jeroenjanssens.com/reference/is_material_valid.md),
-[`is_model_animation_valid()`](https://raylibr.jeroenjanssens.com/reference/is_model_animation_valid.md),
-[`is_model_valid()`](https://raylibr.jeroenjanssens.com/reference/is_model_valid.md),
-[`is_mouse_button_down()`](https://raylibr.jeroenjanssens.com/reference/is_mouse_button_down.md),
-[`is_mouse_button_pressed()`](https://raylibr.jeroenjanssens.com/reference/is_mouse_button_pressed.md),
-[`is_mouse_button_released()`](https://raylibr.jeroenjanssens.com/reference/is_mouse_button_released.md),
-[`is_mouse_button_up()`](https://raylibr.jeroenjanssens.com/reference/is_mouse_button_up.md),
-[`is_music_stream_playing()`](https://raylibr.jeroenjanssens.com/reference/is_music_stream_playing.md),
-[`is_music_valid()`](https://raylibr.jeroenjanssens.com/reference/is_music_valid.md),
-[`is_path_file()`](https://raylibr.jeroenjanssens.com/reference/is_path_file.md),
-[`is_render_texture_valid()`](https://raylibr.jeroenjanssens.com/reference/is_render_texture_valid.md),
-[`is_shader_valid()`](https://raylibr.jeroenjanssens.com/reference/is_shader_valid.md),
-[`is_sound_playing()`](https://raylibr.jeroenjanssens.com/reference/is_sound_playing.md),
-[`is_sound_valid()`](https://raylibr.jeroenjanssens.com/reference/is_sound_valid.md),
-[`is_texture_valid()`](https://raylibr.jeroenjanssens.com/reference/is_texture_valid.md),
-[`is_wave_valid()`](https://raylibr.jeroenjanssens.com/reference/is_wave_valid.md),
-[`is_window_fullscreen()`](https://raylibr.jeroenjanssens.com/reference/is_window_fullscreen.md),
-[`is_window_hidden()`](https://raylibr.jeroenjanssens.com/reference/is_window_hidden.md),
-[`is_window_maximized()`](https://raylibr.jeroenjanssens.com/reference/is_window_maximized.md),
-[`is_window_minimized()`](https://raylibr.jeroenjanssens.com/reference/is_window_minimized.md),
-[`is_window_ready()`](https://raylibr.jeroenjanssens.com/reference/is_window_ready.md),
-[`is_window_resized()`](https://raylibr.jeroenjanssens.com/reference/is_window_resized.md),
-[`is_window_state()`](https://raylibr.jeroenjanssens.com/reference/is_window_state.md),
-[`text_is_equal()`](https://raylibr.jeroenjanssens.com/reference/text_is_equal.md)
+[`set_window_title()`](https://raylibr.jeroenjanssens.com/reference/set_window_title.md),
+[`toggle_borderless_windowed()`](https://raylibr.jeroenjanssens.com/reference/toggle_borderless_windowed.md),
+[`toggle_fullscreen()`](https://raylibr.jeroenjanssens.com/reference/toggle_fullscreen.md),
+[`window_should_close()`](https://raylibr.jeroenjanssens.com/reference/window_should_close.md)
 
 ## Examples
 

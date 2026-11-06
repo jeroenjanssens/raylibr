@@ -17,15 +17,16 @@ definition:
 
 ## See also
 
-Other screen functions:
-[`get_screen_height()`](https://raylibr.jeroenjanssens.com/reference/get_screen_height.md),
-[`get_screen_to_world_2d()`](https://raylibr.jeroenjanssens.com/reference/get_screen_to_world_2d.md),
-[`get_screen_to_world_ray()`](https://raylibr.jeroenjanssens.com/reference/get_screen_to_world_ray.md),
-[`get_screen_to_world_ray_ex()`](https://raylibr.jeroenjanssens.com/reference/get_screen_to_world_ray_ex.md),
-[`get_screen_width()`](https://raylibr.jeroenjanssens.com/reference/get_screen_width.md),
-[`get_world_to_screen()`](https://raylibr.jeroenjanssens.com/reference/get_world_to_screen.md),
-[`is_cursor_on_screen()`](https://raylibr.jeroenjanssens.com/reference/is_cursor_on_screen.md),
-[`load_image_from_screen()`](https://raylibr.jeroenjanssens.com/reference/load_image_from_screen.md)
+Other Drawing & timing:
+[`begin_drawing()`](https://raylibr.jeroenjanssens.com/reference/begin_drawing.md),
+[`clear_background()`](https://raylibr.jeroenjanssens.com/reference/clear_background.md),
+[`draw_fps()`](https://raylibr.jeroenjanssens.com/reference/draw_fps.md),
+[`end_drawing()`](https://raylibr.jeroenjanssens.com/reference/end_drawing.md),
+[`get_fps()`](https://raylibr.jeroenjanssens.com/reference/get_fps.md),
+[`get_frame_time()`](https://raylibr.jeroenjanssens.com/reference/get_frame_time.md),
+[`get_time()`](https://raylibr.jeroenjanssens.com/reference/get_time.md),
+[`poll_input_events()`](https://raylibr.jeroenjanssens.com/reference/poll_input_events.md),
+[`set_target_fps()`](https://raylibr.jeroenjanssens.com/reference/set_target_fps.md)
 
 ## Examples
 

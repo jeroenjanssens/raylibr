@@ -98,6 +98,13 @@ script. The JavaScript keyboard handler includes a single-character
 fallback so letter, digit, and punctuation keys work without explicit
 map entries.
 
+## See also
+
+Other webR / Emscripten:
+[`eval_js()`](https://raylibr.jeroenjanssens.com/reference/eval_js.md),
+[`is_web()`](https://raylibr.jeroenjanssens.com/reference/is_web.md),
+[`run_game_loop()`](https://raylibr.jeroenjanssens.com/reference/run_game_loop.md)
+
 ## Examples
 
 ``` r

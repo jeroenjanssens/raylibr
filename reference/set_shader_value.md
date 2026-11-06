@@ -24,7 +24,7 @@ set_shader_value(shader, loc_index, value)
 
 ## See also
 
-Other shader functions:
+Other Shaders:
 [`begin_shader_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_shader_mode.md),
 [`end_shader_mode()`](https://raylibr.jeroenjanssens.com/reference/end_shader_mode.md),
 [`get_shader_location()`](https://raylibr.jeroenjanssens.com/reference/get_shader_location.md),

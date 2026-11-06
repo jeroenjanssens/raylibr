@@ -24,7 +24,7 @@ A list with elements `v1` and `v2`, both numeric vectors of length 3.
 
 ## See also
 
-Other vector3 functions:
+Other raymath — Vector3:
 [`vector3_add()`](https://raylibr.jeroenjanssens.com/reference/vector3_add.md),
 [`vector3_add_value()`](https://raylibr.jeroenjanssens.com/reference/vector3_add_value.md),
 [`vector3_angle()`](https://raylibr.jeroenjanssens.com/reference/vector3_angle.md),

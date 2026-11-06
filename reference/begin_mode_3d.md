@@ -23,36 +23,32 @@ definition:
 
 ## See also
 
-Other 3d functions:
-[`draw_circle_3d()`](https://raylibr.jeroenjanssens.com/reference/draw_circle_3d.md),
-[`draw_line_3d()`](https://raylibr.jeroenjanssens.com/reference/draw_line_3d.md),
-[`draw_point_3d()`](https://raylibr.jeroenjanssens.com/reference/draw_point_3d.md),
-[`draw_triangle_3d()`](https://raylibr.jeroenjanssens.com/reference/draw_triangle_3d.md),
-[`end_mode_3d()`](https://raylibr.jeroenjanssens.com/reference/end_mode_3d.md)
-
-Other mode functions:
-[`begin_blend_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_blend_mode.md),
+Other Camera:
 [`begin_mode_2d()`](https://raylibr.jeroenjanssens.com/reference/begin_mode_2d.md),
-[`begin_scissor_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_scissor_mode.md),
-[`begin_shader_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_shader_mode.md),
-[`begin_texture_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_texture_mode.md),
-[`begin_vr_stereo_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_vr_stereo_mode.md),
-[`end_blend_mode()`](https://raylibr.jeroenjanssens.com/reference/end_blend_mode.md),
+[`camera_move_forward()`](https://raylibr.jeroenjanssens.com/reference/camera_move_forward.md),
+[`camera_move_right()`](https://raylibr.jeroenjanssens.com/reference/camera_move_right.md),
+[`camera_move_to_target()`](https://raylibr.jeroenjanssens.com/reference/camera_move_to_target.md),
+[`camera_move_up()`](https://raylibr.jeroenjanssens.com/reference/camera_move_up.md),
+[`camera_pitch()`](https://raylibr.jeroenjanssens.com/reference/camera_pitch.md),
+[`camera_roll()`](https://raylibr.jeroenjanssens.com/reference/camera_roll.md),
+[`camera_yaw()`](https://raylibr.jeroenjanssens.com/reference/camera_yaw.md),
 [`end_mode_2d()`](https://raylibr.jeroenjanssens.com/reference/end_mode_2d.md),
 [`end_mode_3d()`](https://raylibr.jeroenjanssens.com/reference/end_mode_3d.md),
-[`end_scissor_mode()`](https://raylibr.jeroenjanssens.com/reference/end_scissor_mode.md),
-[`end_shader_mode()`](https://raylibr.jeroenjanssens.com/reference/end_shader_mode.md),
-[`end_texture_mode()`](https://raylibr.jeroenjanssens.com/reference/end_texture_mode.md),
-[`end_vr_stereo_mode()`](https://raylibr.jeroenjanssens.com/reference/end_vr_stereo_mode.md)
-
-Other begin functions:
-[`begin_blend_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_blend_mode.md),
-[`begin_drawing()`](https://raylibr.jeroenjanssens.com/reference/begin_drawing.md),
-[`begin_mode_2d()`](https://raylibr.jeroenjanssens.com/reference/begin_mode_2d.md),
-[`begin_scissor_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_scissor_mode.md),
-[`begin_shader_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_shader_mode.md),
-[`begin_texture_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_texture_mode.md),
-[`begin_vr_stereo_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_vr_stereo_mode.md)
+[`get_camera_forward()`](https://raylibr.jeroenjanssens.com/reference/get_camera_forward.md),
+[`get_camera_matrix()`](https://raylibr.jeroenjanssens.com/reference/get_camera_matrix.md),
+[`get_camera_matrix_2d()`](https://raylibr.jeroenjanssens.com/reference/get_camera_matrix_2d.md),
+[`get_camera_projection_matrix()`](https://raylibr.jeroenjanssens.com/reference/get_camera_projection_matrix.md),
+[`get_camera_right()`](https://raylibr.jeroenjanssens.com/reference/get_camera_right.md),
+[`get_camera_up()`](https://raylibr.jeroenjanssens.com/reference/get_camera_up.md),
+[`get_camera_view_matrix()`](https://raylibr.jeroenjanssens.com/reference/get_camera_view_matrix.md),
+[`get_screen_to_world_2d()`](https://raylibr.jeroenjanssens.com/reference/get_screen_to_world_2d.md),
+[`get_screen_to_world_ray()`](https://raylibr.jeroenjanssens.com/reference/get_screen_to_world_ray.md),
+[`get_screen_to_world_ray_ex()`](https://raylibr.jeroenjanssens.com/reference/get_screen_to_world_ray_ex.md),
+[`get_world_to_screen()`](https://raylibr.jeroenjanssens.com/reference/get_world_to_screen.md),
+[`get_world_to_screen_2d()`](https://raylibr.jeroenjanssens.com/reference/get_world_to_screen_2d.md),
+[`get_world_to_screen_ex()`](https://raylibr.jeroenjanssens.com/reference/get_world_to_screen_ex.md),
+[`update_camera()`](https://raylibr.jeroenjanssens.com/reference/update_camera.md),
+[`update_camera_pro()`](https://raylibr.jeroenjanssens.com/reference/update_camera_pro.md)
 
 ## Examples
 

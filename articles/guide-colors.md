@@ -32,7 +32,7 @@ for (i in seq_along(colors)) {
 }
 ```
 
-![Image rendered by raylibr](file5aa365268193.png)
+![Image rendered by raylibr](file5b7d1683db3e.png)
 
 This includes all of
 [`colors()`](https://rdrr.io/r/grDevices/colors.html) from base R —
@@ -77,7 +77,7 @@ draw_circle(280L, 290L, 125.0, color_alpha("mediumseagreen", 0.5))
 draw_circle(360L, 290L, 125.0, color_alpha("orchid", 0.5))
 ```
 
-![Image rendered by raylibr](file5aa3415b5404.png)
+![Image rendered by raylibr](file5b7d3abe26b9.png)
 
 [`fade()`](https://raylibr.jeroenjanssens.com/reference/fade.md) does
 the same thing as
@@ -119,7 +119,7 @@ for (i in 0:9) {
 }
 ```
 
-![Image rendered by raylibr](file5aa31e9d2f3a.png)
+![Image rendered by raylibr](file5b7d1234b2e5.png)
 
 - `color_brightness(color, factor)` — lighten (positive) or darken
   (negative)
@@ -156,7 +156,7 @@ for (i in 0:(n - 1L)) {
 }
 ```
 
-![Image rendered by raylibr](file5aa3300fcc00.png)
+![Image rendered by raylibr](file5b7d54345bc8.png)
 
 Convert back with
 [`color_to_hsv()`](https://raylibr.jeroenjanssens.com/reference/color_to_hsv.md):
@@ -203,7 +203,7 @@ for (i in 0:(n - 1L)) {
 }
 ```
 
-![Image rendered by raylibr](file5aa332640388.png)
+![Image rendered by raylibr](file5b7d723a3086.png)
 
 [`color_alpha_blend()`](https://raylibr.jeroenjanssens.com/reference/color_alpha_blend.md)
 blends a foreground color over a background, respecting the foreground’s

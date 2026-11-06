@@ -26,6 +26,18 @@ An object of class `list` of length 8.
 | `fatal`   | 6     |
 | `none`    | 7     |
 
+## See also
+
+Other Enums & constants:
+[`camera_mode`](https://raylibr.jeroenjanssens.com/reference/camera_mode.md),
+[`camera_projection`](https://raylibr.jeroenjanssens.com/reference/camera_projection.md),
+[`flag`](https://raylibr.jeroenjanssens.com/reference/flag.md),
+[`key`](https://raylibr.jeroenjanssens.com/reference/key.md),
+[`material_map_index`](https://raylibr.jeroenjanssens.com/reference/material_map_index.md),
+[`mouse_button`](https://raylibr.jeroenjanssens.com/reference/mouse_button.md),
+[`mouse_cursor`](https://raylibr.jeroenjanssens.com/reference/mouse_cursor.md),
+[`shader_uniform`](https://raylibr.jeroenjanssens.com/reference/shader_uniform.md)
+
 ## Examples
 
 ``` r

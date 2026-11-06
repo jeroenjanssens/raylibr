@@ -31,6 +31,24 @@ An image object. On HiDPI displays the framebuffer is captured at full
 pixel density (e.g., 1280x960 for a 640x480 window at 2x scale); knitr
 still displays it at `width` x `height`.
 
+## See also
+
+Other Utility:
+[`get_clipboard_image()`](https://raylibr.jeroenjanssens.com/reference/get_clipboard_image.md),
+[`get_clipboard_text()`](https://raylibr.jeroenjanssens.com/reference/get_clipboard_text.md),
+[`get_random_value()`](https://raylibr.jeroenjanssens.com/reference/get_random_value.md),
+[`open_url()`](https://raylibr.jeroenjanssens.com/reference/open_url.md),
+[`raylib_version()`](https://raylibr.jeroenjanssens.com/reference/raylib_version.md),
+[`raylibr_resource()`](https://raylibr.jeroenjanssens.com/reference/raylibr_resource.md),
+[`raylibr_screenshot()`](https://raylibr.jeroenjanssens.com/reference/raylibr_screenshot.md),
+[`set_clipboard_text()`](https://raylibr.jeroenjanssens.com/reference/set_clipboard_text.md),
+[`set_config_flags()`](https://raylibr.jeroenjanssens.com/reference/set_config_flags.md),
+[`set_exit_key()`](https://raylibr.jeroenjanssens.com/reference/set_exit_key.md),
+[`set_random_seed()`](https://raylibr.jeroenjanssens.com/reference/set_random_seed.md),
+[`set_trace_log_level()`](https://raylibr.jeroenjanssens.com/reference/set_trace_log_level.md),
+[`take_screenshot()`](https://raylibr.jeroenjanssens.com/reference/take_screenshot.md),
+[`wait_time()`](https://raylibr.jeroenjanssens.com/reference/wait_time.md)
+
 ## Examples
 
 ``` r

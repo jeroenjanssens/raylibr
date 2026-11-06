@@ -28,6 +28,13 @@ run_game_loop(update_fn, init_fn = NULL, cleanup_fn = NULL)
   Optional function called after the loop ends (e.g., to call
   [`close_window()`](https://raylibr.jeroenjanssens.com/reference/close_window.md)).
 
+## See also
+
+Other webR / Emscripten:
+[`eval_js()`](https://raylibr.jeroenjanssens.com/reference/eval_js.md),
+[`export_html()`](https://raylibr.jeroenjanssens.com/reference/export_html.md),
+[`is_web()`](https://raylibr.jeroenjanssens.com/reference/is_web.md)
+
 ## Examples
 
 ``` r

@@ -56,6 +56,21 @@ definition:
         int projection;        // Camera projection: CAMERA_PERSPECTIVE or CAMERA_ORTHOGRAPHIC
     } Camera3D;
 
+## See also
+
+Other Structs:
+[`bounding_box()`](https://raylibr.jeroenjanssens.com/reference/bounding_box.md),
+[`camera_2d()`](https://raylibr.jeroenjanssens.com/reference/camera_2d.md),
+[`glyph_info()`](https://raylibr.jeroenjanssens.com/reference/glyph_info.md),
+[`material_map()`](https://raylibr.jeroenjanssens.com/reference/material_map.md),
+[`n_patch_info()`](https://raylibr.jeroenjanssens.com/reference/n_patch_info.md),
+[`ray()`](https://raylibr.jeroenjanssens.com/reference/ray.md),
+[`ray_collision()`](https://raylibr.jeroenjanssens.com/reference/ray_collision.md),
+[`raylib_transform()`](https://raylibr.jeroenjanssens.com/reference/raylib_transform.md),
+[`rectangle()`](https://raylibr.jeroenjanssens.com/reference/rectangle.md),
+[`render_texture()`](https://raylibr.jeroenjanssens.com/reference/render_texture.md),
+[`texture()`](https://raylibr.jeroenjanssens.com/reference/texture.md)
+
 ## Examples
 
 ``` r

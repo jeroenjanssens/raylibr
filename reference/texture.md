@@ -49,27 +49,18 @@ definition:
 
 ## See also
 
-Other texture functions:
-[`begin_texture_mode()`](https://raylibr.jeroenjanssens.com/reference/begin_texture_mode.md),
-[`draw_texture()`](https://raylibr.jeroenjanssens.com/reference/draw_texture.md),
-[`draw_texture_ex()`](https://raylibr.jeroenjanssens.com/reference/draw_texture_ex.md),
-[`draw_texture_n_patch()`](https://raylibr.jeroenjanssens.com/reference/draw_texture_n_patch.md),
-[`draw_texture_pro()`](https://raylibr.jeroenjanssens.com/reference/draw_texture_pro.md),
-[`draw_texture_rec()`](https://raylibr.jeroenjanssens.com/reference/draw_texture_rec.md),
-[`draw_texture_v()`](https://raylibr.jeroenjanssens.com/reference/draw_texture_v.md),
-[`end_texture_mode()`](https://raylibr.jeroenjanssens.com/reference/end_texture_mode.md),
-[`get_shapes_texture()`](https://raylibr.jeroenjanssens.com/reference/get_shapes_texture.md),
-[`is_texture_valid()`](https://raylibr.jeroenjanssens.com/reference/is_texture_valid.md),
-[`load_image_from_texture()`](https://raylibr.jeroenjanssens.com/reference/load_image_from_texture.md),
-[`load_render_texture()`](https://raylibr.jeroenjanssens.com/reference/load_render_texture.md),
-[`load_texture()`](https://raylibr.jeroenjanssens.com/reference/load_texture.md),
-[`load_texture_from_image()`](https://raylibr.jeroenjanssens.com/reference/load_texture_from_image.md),
-[`set_shader_value_texture()`](https://raylibr.jeroenjanssens.com/reference/set_shader_value_texture.md),
-[`set_shapes_texture()`](https://raylibr.jeroenjanssens.com/reference/set_shapes_texture.md),
-[`set_texture_filter()`](https://raylibr.jeroenjanssens.com/reference/set_texture_filter.md),
-[`set_texture_wrap()`](https://raylibr.jeroenjanssens.com/reference/set_texture_wrap.md),
-[`unload_render_texture()`](https://raylibr.jeroenjanssens.com/reference/unload_render_texture.md),
-[`unload_texture()`](https://raylibr.jeroenjanssens.com/reference/unload_texture.md)
+Other Structs:
+[`bounding_box()`](https://raylibr.jeroenjanssens.com/reference/bounding_box.md),
+[`camera_2d()`](https://raylibr.jeroenjanssens.com/reference/camera_2d.md),
+[`camera_3d()`](https://raylibr.jeroenjanssens.com/reference/camera_3d.md),
+[`glyph_info()`](https://raylibr.jeroenjanssens.com/reference/glyph_info.md),
+[`material_map()`](https://raylibr.jeroenjanssens.com/reference/material_map.md),
+[`n_patch_info()`](https://raylibr.jeroenjanssens.com/reference/n_patch_info.md),
+[`ray()`](https://raylibr.jeroenjanssens.com/reference/ray.md),
+[`ray_collision()`](https://raylibr.jeroenjanssens.com/reference/ray_collision.md),
+[`raylib_transform()`](https://raylibr.jeroenjanssens.com/reference/raylib_transform.md),
+[`rectangle()`](https://raylibr.jeroenjanssens.com/reference/rectangle.md),
+[`render_texture()`](https://raylibr.jeroenjanssens.com/reference/render_texture.md)
 
 ## Examples
 

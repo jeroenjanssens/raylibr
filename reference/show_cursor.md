@@ -17,13 +17,12 @@ definition:
 
 ## See also
 
-Other cursor functions:
+Other Input — Cursor:
 [`disable_cursor()`](https://raylibr.jeroenjanssens.com/reference/disable_cursor.md),
 [`enable_cursor()`](https://raylibr.jeroenjanssens.com/reference/enable_cursor.md),
 [`hide_cursor()`](https://raylibr.jeroenjanssens.com/reference/hide_cursor.md),
 [`is_cursor_hidden()`](https://raylibr.jeroenjanssens.com/reference/is_cursor_hidden.md),
-[`is_cursor_on_screen()`](https://raylibr.jeroenjanssens.com/reference/is_cursor_on_screen.md),
-[`set_mouse_cursor()`](https://raylibr.jeroenjanssens.com/reference/set_mouse_cursor.md)
+[`is_cursor_on_screen()`](https://raylibr.jeroenjanssens.com/reference/is_cursor_on_screen.md)
 
 ## Examples
 

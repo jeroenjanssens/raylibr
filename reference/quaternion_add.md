@@ -24,7 +24,7 @@ A numeric vector of length 4
 
 ## See also
 
-Other quaternion functions:
+Other raymath — Quaternion:
 [`quaternion_add_value()`](https://raylibr.jeroenjanssens.com/reference/quaternion_add_value.md),
 [`quaternion_cubic_hermite_spline()`](https://raylibr.jeroenjanssens.com/reference/quaternion_cubic_hermite_spline.md),
 [`quaternion_divide()`](https://raylibr.jeroenjanssens.com/reference/quaternion_divide.md),

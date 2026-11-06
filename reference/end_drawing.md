@@ -17,17 +17,16 @@ definition:
 
 ## See also
 
-Other drawing functions:
-[`begin_drawing()`](https://raylibr.jeroenjanssens.com/reference/begin_drawing.md)
-
-Other end functions:
-[`end_blend_mode()`](https://raylibr.jeroenjanssens.com/reference/end_blend_mode.md),
-[`end_mode_2d()`](https://raylibr.jeroenjanssens.com/reference/end_mode_2d.md),
-[`end_mode_3d()`](https://raylibr.jeroenjanssens.com/reference/end_mode_3d.md),
-[`end_scissor_mode()`](https://raylibr.jeroenjanssens.com/reference/end_scissor_mode.md),
-[`end_shader_mode()`](https://raylibr.jeroenjanssens.com/reference/end_shader_mode.md),
-[`end_texture_mode()`](https://raylibr.jeroenjanssens.com/reference/end_texture_mode.md),
-[`end_vr_stereo_mode()`](https://raylibr.jeroenjanssens.com/reference/end_vr_stereo_mode.md)
+Other Drawing & timing:
+[`begin_drawing()`](https://raylibr.jeroenjanssens.com/reference/begin_drawing.md),
+[`clear_background()`](https://raylibr.jeroenjanssens.com/reference/clear_background.md),
+[`draw_fps()`](https://raylibr.jeroenjanssens.com/reference/draw_fps.md),
+[`get_fps()`](https://raylibr.jeroenjanssens.com/reference/get_fps.md),
+[`get_frame_time()`](https://raylibr.jeroenjanssens.com/reference/get_frame_time.md),
+[`get_time()`](https://raylibr.jeroenjanssens.com/reference/get_time.md),
+[`poll_input_events()`](https://raylibr.jeroenjanssens.com/reference/poll_input_events.md),
+[`set_target_fps()`](https://raylibr.jeroenjanssens.com/reference/set_target_fps.md),
+[`swap_screen_buffer()`](https://raylibr.jeroenjanssens.com/reference/swap_screen_buffer.md)
 
 ## Examples
 

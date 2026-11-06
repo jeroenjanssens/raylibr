@@ -44,20 +44,18 @@ definition:
 
 ## See also
 
-Other rectangle functions:
-[`draw_rectangle()`](https://raylibr.jeroenjanssens.com/reference/draw_rectangle.md),
-[`draw_rectangle_gradient_ex()`](https://raylibr.jeroenjanssens.com/reference/draw_rectangle_gradient_ex.md),
-[`draw_rectangle_gradient_h()`](https://raylibr.jeroenjanssens.com/reference/draw_rectangle_gradient_h.md),
-[`draw_rectangle_gradient_v()`](https://raylibr.jeroenjanssens.com/reference/draw_rectangle_gradient_v.md),
-[`draw_rectangle_lines()`](https://raylibr.jeroenjanssens.com/reference/draw_rectangle_lines.md),
-[`draw_rectangle_lines_ex()`](https://raylibr.jeroenjanssens.com/reference/draw_rectangle_lines_ex.md),
-[`draw_rectangle_pro()`](https://raylibr.jeroenjanssens.com/reference/draw_rectangle_pro.md),
-[`draw_rectangle_rec()`](https://raylibr.jeroenjanssens.com/reference/draw_rectangle_rec.md),
-[`draw_rectangle_rounded()`](https://raylibr.jeroenjanssens.com/reference/draw_rectangle_rounded.md),
-[`draw_rectangle_rounded_lines()`](https://raylibr.jeroenjanssens.com/reference/draw_rectangle_rounded_lines.md),
-[`draw_rectangle_rounded_lines_ex()`](https://raylibr.jeroenjanssens.com/reference/draw_rectangle_rounded_lines_ex.md),
-[`draw_rectangle_v()`](https://raylibr.jeroenjanssens.com/reference/draw_rectangle_v.md),
-[`get_shapes_texture_rectangle()`](https://raylibr.jeroenjanssens.com/reference/get_shapes_texture_rectangle.md)
+Other Structs:
+[`bounding_box()`](https://raylibr.jeroenjanssens.com/reference/bounding_box.md),
+[`camera_2d()`](https://raylibr.jeroenjanssens.com/reference/camera_2d.md),
+[`camera_3d()`](https://raylibr.jeroenjanssens.com/reference/camera_3d.md),
+[`glyph_info()`](https://raylibr.jeroenjanssens.com/reference/glyph_info.md),
+[`material_map()`](https://raylibr.jeroenjanssens.com/reference/material_map.md),
+[`n_patch_info()`](https://raylibr.jeroenjanssens.com/reference/n_patch_info.md),
+[`ray()`](https://raylibr.jeroenjanssens.com/reference/ray.md),
+[`ray_collision()`](https://raylibr.jeroenjanssens.com/reference/ray_collision.md),
+[`raylib_transform()`](https://raylibr.jeroenjanssens.com/reference/raylib_transform.md),
+[`render_texture()`](https://raylibr.jeroenjanssens.com/reference/render_texture.md),
+[`texture()`](https://raylibr.jeroenjanssens.com/reference/texture.md)
 
 ## Examples
 

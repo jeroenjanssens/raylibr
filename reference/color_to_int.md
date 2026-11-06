@@ -27,15 +27,22 @@ definition:
 
 ## See also
 
-Other to functions:
+Other Colors:
+[`as_color()`](https://raylibr.jeroenjanssens.com/reference/as_color.md),
+[`color()`](https://raylibr.jeroenjanssens.com/reference/color.md),
+[`color_alpha()`](https://raylibr.jeroenjanssens.com/reference/color_alpha.md),
+[`color_alpha_blend()`](https://raylibr.jeroenjanssens.com/reference/color_alpha_blend.md),
+[`color_brightness()`](https://raylibr.jeroenjanssens.com/reference/color_brightness.md),
+[`color_contrast()`](https://raylibr.jeroenjanssens.com/reference/color_contrast.md),
+[`color_from_hsv()`](https://raylibr.jeroenjanssens.com/reference/color_from_hsv.md),
+[`color_from_normalized()`](https://raylibr.jeroenjanssens.com/reference/color_from_normalized.md),
+[`color_is_equal()`](https://raylibr.jeroenjanssens.com/reference/color_is_equal.md),
+[`color_lerp()`](https://raylibr.jeroenjanssens.com/reference/color_lerp.md),
+[`color_normalize()`](https://raylibr.jeroenjanssens.com/reference/color_normalize.md),
+[`color_tint()`](https://raylibr.jeroenjanssens.com/reference/color_tint.md),
 [`color_to_hsv()`](https://raylibr.jeroenjanssens.com/reference/color_to_hsv.md),
-[`text_to_camel()`](https://raylibr.jeroenjanssens.com/reference/text_to_camel.md),
-[`text_to_float()`](https://raylibr.jeroenjanssens.com/reference/text_to_float.md),
-[`text_to_integer()`](https://raylibr.jeroenjanssens.com/reference/text_to_integer.md),
-[`text_to_lower()`](https://raylibr.jeroenjanssens.com/reference/text_to_lower.md),
-[`text_to_pascal()`](https://raylibr.jeroenjanssens.com/reference/text_to_pascal.md),
-[`text_to_snake()`](https://raylibr.jeroenjanssens.com/reference/text_to_snake.md),
-[`text_to_upper()`](https://raylibr.jeroenjanssens.com/reference/text_to_upper.md)
+[`fade()`](https://raylibr.jeroenjanssens.com/reference/fade.md),
+[`get_color()`](https://raylibr.jeroenjanssens.com/reference/get_color.md)
 
 ## Examples
 
