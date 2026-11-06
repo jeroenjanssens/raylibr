@@ -60,7 +60,10 @@ GUI controls.
 * R-hub: linux (R-devel), macos-arm64 (R-devel), windows (R-devel), gcc16,
   clang23, clang-ubsan, gcc-asan, lto, nosuggests.
 * win-builder: R-devel (2026-11-05 r90840 ucrt) and R-release (4.6.2).
-* Local: macOS (R 4.5.1), `R CMD check --as-cran`.
+* Local: macOS (R 4.5.1), `R CMD check --as-cran`, including the PDF
+  manual.
+* Debian container (R 4.6.2, TeX Live): `R CMD Rd2pdf`, to check the PDF
+  manual that failed in the 6.0.5 pre-test.
 
 ## R CMD check results
 
@@ -72,4 +75,4 @@ All R-hub platforms, including the sanitizer builds (clang-ubsan, gcc-asan),
 report Status: OK.
 
 win-builder (R-devel and R-release) reports 1 NOTE, "New submission", and
-nothing else.
+nothing else; "checking PDF version of manual" is OK on both.
