@@ -1,6 +1,6 @@
 Package: raylibr
 Title: R Wrapper for 'Raylib'
-Version: 6.0.4
+Version: 6.0.5
 Authors@R: c(
     person("Jeroen", "Janssens", email = "jeroen@jeroenjanssens.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-5878-8924")),
@@ -24,7 +24,7 @@ Authors@R: c(
     person("The Khronos Group Inc.", role = "cph", comment = "OpenGL API definitions in glad")
   )
 Description: Wraps 'Raylib' (<https://www.raylib.com/>), a simple and easy-to-use
-    C library for videogames programming. Provides R functions for 2D/3D
+    C library for video game programming. Provides R functions for 2D/3D
     rendering, audio, input handling, and GUI via 'raygui'.
 License: MIT + file LICENSE
 Copyright: See file inst/COPYRIGHTS for the bundled libraries.

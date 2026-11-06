@@ -1,3 +1,8 @@
+# raylibr 6.0.5
+
+* The website moved to <https://raylibr.jeroenjanssens.com/>; DESCRIPTION
+  and the package help page now point there.
+
 # raylibr 6.0.4
 
 * On Linux, installation now checks for the X11 and OpenGL development

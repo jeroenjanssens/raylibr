@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 
-This R package wraps [Raylib 6.0](https://www.raylib.com/), a simple and easy-to-use library to enjoy videogames programming. It includes webR/WASM support for running Raylib games in the browser.
+This R package wraps [Raylib 6.0](https://www.raylib.com/), a simple and easy-to-use library to enjoy video game programming. It includes webR/WASM support for running Raylib games in the browser.
 
 
 ## Installation
