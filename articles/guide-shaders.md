@@ -139,7 +139,7 @@ Without a shader, the scene looks like this:
 draw_scene()
 ```
 
-![Image rendered by raylibr](file5daa4154bb6.png)
+![Image rendered by raylibr](file5edf576c287d.png)
 
 raylibr ships with a collection of post-processing shaders from the
 Raylib examples, which you can find with
@@ -156,7 +156,7 @@ shader <- load_shader("", raylibr_resource("model/grayscale.fs"))
 post_process(shader)
 ```
 
-![Image rendered by raylibr](file5daa7edc754.png)
+![Image rendered by raylibr](file5edf25599482.png)
 
 ### Pixelation
 
@@ -171,7 +171,7 @@ set_shader_value(shader, get_shader_location(shader, "pixelHeight"), 10)
 post_process(shader)
 ```
 
-![Image rendered by raylibr](file5daa211b15f3.png)
+![Image rendered by raylibr](file5edf43da5a3c.png)
 
 ### Edge detection
 
@@ -183,7 +183,7 @@ shader <- load_shader("", raylibr_resource("model/sobel.fs"))
 post_process(shader)
 ```
 
-![Image rendered by raylibr](file5daa4a770b56.png)
+![Image rendered by raylibr](file5edfcc57d6d.png)
 
 ### Thermal vision
 
@@ -195,7 +195,7 @@ shader <- load_shader("", raylibr_resource("model/predator.fs"))
 post_process(shader)
 ```
 
-![Image rendered by raylibr](file5daa7f4df1f8.png)
+![Image rendered by raylibr](file5edf79bcbcf3.png)
 
 ### Fisheye
 
@@ -208,7 +208,7 @@ shader <- load_shader("", raylibr_resource("model/fisheye.fs"))
 post_process(shader)
 ```
 
-![Image rendered by raylibr](file5daa992deec.png)
+![Image rendered by raylibr](file5edf417c1ea3.png)
 
 ### Writing your own
 
@@ -232,7 +232,7 @@ shader <- load_shader_from_memory("", fs_code)
 post_process(shader)
 ```
 
-![Image rendered by raylibr](file5daa34baeff6.png)
+![Image rendered by raylibr](file5edfd6f8ae7.png)
 
 In a real program, load shaders once before the game loop and free them
 with
