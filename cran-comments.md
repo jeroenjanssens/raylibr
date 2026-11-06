@@ -43,7 +43,7 @@ GUI controls.
   software OpenGL (Mesa llvmpipe / Xvfb).
 * R-hub: linux (R-devel), macos-arm64 (R-devel), windows (R-devel), gcc16,
   clang23, clang-ubsan, gcc-asan, lto, nosuggests.
-* win-builder: R-devel and R-release.
+* win-builder: R-devel (2026-11-05 r90840 ucrt) and R-release (4.6.2).
 * Local: macOS (R 4.5.1), `R CMD check --as-cran`.
 
 ## R CMD check results
@@ -55,5 +55,5 @@ GUI controls.
 All R-hub platforms, including the sanitizer builds (clang-ubsan, gcc-asan),
 report Status: OK.
 
-TODO before submitting: replace this line with the win-builder results from
-the email (R-devel and R-release).
+win-builder (R-devel and R-release) reports 1 NOTE, "New submission", and
+nothing else.
