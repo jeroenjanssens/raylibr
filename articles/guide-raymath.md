@@ -78,7 +78,7 @@ draw_line_ex(c(ox, oy), c(ox + ab[1]*s, oy - ab[2]*s), 5.0, "green")
 draw_text("a+b", as.integer(ox + ab[1]*s + 8), as.integer(oy - ab[2]*s), 30L, "green")
 ```
 
-![Image rendered by raylibr](file5da6546e59e8.png)
+![Image rendered by raylibr](file5d5c3a2692f3.png)
 
 Other useful Vector2 functions:
 [`vector2_scale()`](https://raylibr.jeroenjanssens.com/reference/vector2_scale.md),
@@ -121,7 +121,7 @@ draw_cube(pos, 1, 1, 1, "blue")
 draw_line_3d(c(0, 0.5, 0), pos, "yellow")
 ```
 
-![Image rendered by raylibr](file5da66e8f18b0.png)
+![Image rendered by raylibr](file5d5c728232ad.png)
 
 Other key functions:
 [`vector3_rotate_by_axis_angle()`](https://raylibr.jeroenjanssens.com/reference/vector3_rotate_by_axis_angle.md),
