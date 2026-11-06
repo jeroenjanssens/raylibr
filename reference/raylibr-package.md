@@ -1,7 +1,7 @@
 # raylibr: R Wrapper for 'Raylib'
 
 Wraps 'Raylib' (<https://www.raylib.com/>), a simple and easy-to-use C
-library for videogames programming. Provides R functions for 2D/3D
+library for video game programming. Provides R functions for 2D/3D
 rendering, audio, input handling, and GUI via 'raygui'.
 
 ## Resource management

@@ -132,7 +132,7 @@ Other get functions:
 
 ``` r
 get_font_default()
-#> <pointer: 0x56139c0f6fe0>
+#> <pointer: 0x55f7dea05000>
 #> attr(,"class")
 #> [1] "font"
 ```
