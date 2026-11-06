@@ -63,7 +63,7 @@ Other Text & fonts:
 
 ``` r
 get_font_default()
-#> <pointer: 0x55baf308b000>
+#> <pointer: 0x56189e9d55e0>
 #> attr(,"class")
 #> [1] "font"
 ```
